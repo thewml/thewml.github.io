@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 15 Jun 2000 17:39:03 +0200 (MET DST) -->
+<!--X-Message-Id: 20000615174058.A5000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200006141352.PAA12042@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01717">Date Index</a>][<a href="thrd35.shtml#01717">Thread Index</a>]<br>
+[<A HREF="msg01716.shtml">Date Prev</A>][<A HREF="msg01718.shtml">Date Next</A>][<A HREF="msg01715.shtml">Thread Prev</A>][<A HREF="msg01718.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 15 Jun 2000 17:40:58 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 14, 2000 at 03:52:32PM +0200, middelink@polyware.nl wrote:
+
+&gt; Problem Description:
+&gt; | The following does not compile, but did under 1.7.2:
+&gt; | ===========================
+&gt; | #use wml::std::grid
+&gt; | #use wml::std::href
+&gt; | 
+&gt; | &lt;grid layout="1x1"&gt;
+&gt; | &lt;cell&gt;
+&gt; | &lt;href url="info@myisp.nl"&gt;
+&gt; | &lt;/cell&gt;
+&gt; | &lt;/grid&gt;
+&gt; | ============================
+&gt; | Is seems the href is interpreted in the wrong context?
+
+This is indeed a bug, but against wml::std::grid.  It is fixed in wml-SNAP.
+Thanx for your help.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01715" HREF="msg01715.shtml">[BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</A></strong>, <em>From:</em> middelink</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01716.shtml">Re: problems with the wml site</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01718.shtml">[LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01715.shtml">[BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01718.shtml">[LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01717"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01717"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.2 (22&#45;Jun&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 28 Aug 2000 13:07:52 +0200 (MET DST) -->
+<!--X-Message-Id: 20000828131054.B10931@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000827231316.A1060@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01912">Date Index</a>][<a href="thrd37.shtml#01912">Thread Index</a>]<br>
+[<A HREF="msg01911.shtml">Date Prev</A>][<A HREF="msg01913.shtml">Date Next</A>][<A HREF="msg01909.shtml">Thread Prev</A>][<A HREF="msg01910.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 28 Aug 2000 13:10:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Aug 27, 2000 at 11:13:16PM -0100, Werner Heuser wrote:
+
+&gt; Hi,
+&gt; 
+&gt; the NEWS file contains:
+&gt; 
+&gt;           New automatic variables are provided to ease generation of
+&gt;           diaporamas (automatic references to previous and next files).
+&gt; 
+&gt; But I couldn't find a documentation about these variables,
+&gt; though I grepped the wml package  for 'slide' and 'diaporama'.
+
+They are roughly described in wml_p1_ipp(1), and Franz Knipp has an
+example online at <A  HREF="http://www.knipp.org/wml/slideshow.html">http://www.knipp.org/wml/slideshow.html</A>
+(but i cannot reach it now)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01909" HREF="msg01909.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01911.shtml">Re: [BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01913.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01909.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01910.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01912"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01912"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

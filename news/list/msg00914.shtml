@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10 -->
+<!--X-From-R13: Qenvt Eznyy <pfznyyNfpbbgre.rlr&#45;arg.pbz.nh> -->
+<!--X-Date: Tue, 31 Aug 1999 08:18:26 +0200 (MET DST) -->
+<!--X-Message-Id: E11Lajy&#45;0005fG&#45;00@scooter.eye&#45;net.com.au -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87g1111uxw.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00914">Date Index</a>][<a href="thrd19.shtml#00914">Thread Index</a>]<br>
+[<A HREF="msg00913.shtml">Date Prev</A>][<A HREF="msg00915.shtml">Date Next</A>][<A HREF="msg00910.shtml">Thread Prev</A>][<A HREF="msg00898.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Craig Small &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 31 Aug 1999 09:21:30 +1000 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Florian Hars said:
+&gt; This bug has been fixed by the W3C a week after it was reported. As of
+&gt; HTML 4.01 (<A  HREF="http://www.w3.org/TR/html40/">http://www.w3.org/TR/html40/</A>) img has a name attribute.
+&gt; 
+&gt; Change your DOCTYPE daclarations to one of:
+&gt;     &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+&gt;             "<A  HREF="http://www.w3.org/TR/html40/loose.dtd">http://www.w3.org/TR/html40/loose.dtd</A>"&gt;
+Legendary stuff! 
+
+ No errors found!
+
+ Congratulations, this document validates as HTML 4.01 Transitional! 
+
+Thanks for that.
+
+  - Craig
+
+-- 
+Craig Small VK2XLZ, PGP: AD 8D D8 63 6E BF C3 C7  47 41 B1 A2 1F 46 EC 90
+Eye-Net Consulting <A  HREF="http://www.eye-net.com.au/">http://www.eye-net.com.au/</A>     &lt;csmall@eye-net.com.au&gt;
+MIEEE &lt;csmall@ieee.org&gt;              Debian developer &lt;csmall@debian.org&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00909" HREF="msg00909.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00913.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00915.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00910.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00898.shtml">New include files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00914"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00914"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

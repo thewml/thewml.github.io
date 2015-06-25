@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Wish list -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 1 Mar 1999 11:35:28 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990301100927.8849C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36D2DC43.25FE0BED@irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00412">Date Index</a>][<a href="thrd10.shtml#00412">Thread Index</a>]<br>
+[<A HREF="msg00411.shtml">Date Prev</A>][<A HREF="msg00413.shtml">Date Next</A>][<A HREF="msg00401.shtml">Thread Prev</A>][<A HREF="msg00402.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Wish list</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Mar 1999 11:07:26 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 23 Feb 1999, Frederic Le Mouel wrote:
+
+&gt; Here are little suggestions : 
+
+Thanks for your report, Frederic
+
+&gt; - I take the snapshot and tried to install it, but, in 
+&gt;   /wml_SNAP/wml_backend/p2_mhc/config.h, the compilation failed
+&gt;   in including arch/solaris/prototypes.h (I work on Solaris :),
+&gt;   after commenting this line, it passed, bug ?
+
+Sure! It's mine. It will be fixed.
+
+&gt; - It will be cool that the clean method of the wml_test/Makefile
+&gt;   erase the TEST.root directory,
+
+Seems meaningful.
+
+&gt; - I notice that following installed files don't have the good
+&gt;   permissions for group and others:
+[...]
+
+The perl modules come directly from CPAN, we do not modify them.
+So if something is wrong, it is either this module or your perl
+installation. As these modules work fine for everyone except you, i
+presume the latter is the right answer.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00401" HREF="msg00401.shtml">Re: Wish list</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00411.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00413.shtml">Re: Pb with gfont</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00401.shtml">Re: Wish list</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00402.shtml">gfont and truetype ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00412"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00412"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

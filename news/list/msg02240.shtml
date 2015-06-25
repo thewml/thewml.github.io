@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: presentation example with WML -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 15 May 2001 21:25:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20010515213337.D29951@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3AFF8F5D.AA1599FE@snafu.de -->
+<!--X-Reference: 3AFFDACB.F94677B3@snafu.de -->
+<!--X-Reference: 20010514174814.L10422@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010515120433.A18565@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 3B0166A7.8A7D3BD4@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02240">Date Index</a>][<a href="thrd45.shtml#02240">Thread Index</a>]<br>
+[<A HREF="msg02239.shtml">Date Prev</A>][<A HREF="msg02241.shtml">Date Next</A>][<A HREF="msg02239.shtml">Thread Prev</A>][<A HREF="msg02241.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: presentation example with WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 15 May 2001 21:33:37 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, May 15, 2001 at 07:25:59PM +0200, Werner Heuser wrote:
+&gt; ..
+&gt; &gt; There was a little typo in my last mail...
+&gt; Hi Axel,
+&gt; 
+&gt; I have corrected this by myself already, it works (not yet
+&gt; online), but thank you again.
+&gt; 
+&gt; But now I have another question at my slides
+&gt; <A  HREF="http://mobilix.org/wml_slides/">http://mobilix.org/wml_slides/</A>
+&gt; 
+&gt; I use the #PREV# and #NEXT# diversion in the navigation bar,
+&gt; this works fine :)
+&gt; 
+&gt; But I want to have a separate navigation bar just containing,
+&gt; the PREV and NEXT buttons is there an easy way to achieve this.
+&gt; 
+&gt; I fiddled a little with a construction like this.
+&gt; {:
+&gt; [[s/"unwanted navbar buttons"//g]]
+&gt; &lt;navbar:render name=$(name) select=$(select)&gt;
+&gt; :}
+&gt; 
+&gt; Though it works, I'm looking for a simpler solution.
+
+Hi Werner,
+
+did you try with &lt;navbar:filter&gt;?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02241" HREF="msg02241.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02228" HREF="msg02228.shtml">presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02231" HREF="msg02231.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02233" HREF="msg02233.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02237" HREF="msg02237.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02239" HREF="msg02239.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02239.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02241.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02239.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02241.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02240"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02240"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

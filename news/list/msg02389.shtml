@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: configure does not find installed Perl modules -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 10 Sep 2001 00:19:27 +0200 (MET DST) -->
+<!--X-Message-Id: 20010910002826.A32052@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3B8EA9E9.BF001676@orcaware.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02389">Date Index</a>][<a href="thrd48.shtml#02389">Thread Index</a>]<br>
+[<A HREF="msg02388.shtml">Date Prev</A>][<A HREF="msg02390.shtml">Date Next</A>][<A HREF="msg02387.shtml">Thread Prev</A>][<A HREF="msg02390.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: configure does not find installed Perl modules</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 10 Sep 2001 00:28:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Aug 30, 2001 at 02:02:33PM -0700, Blair Zajac wrote:
+&gt; When I use WML 2.0.7 configure with the --with-openworld option to
+&gt; search for already installed Perl modules that WML needs, it does not
+&gt; properly find them.
+[...]
+&gt; --- ../wml-2.0.7-orig/config/aclocal.m4	Sun Jun 17 15:44:29 2001
+&gt; +++ ./config/aclocal.m4	Thu Aug 30 13:47:01 2001
+&gt; @@ -69,12 +69,12 @@
+&gt;  TMPFILE=$tmpdir/ac.$$
+&gt;  rm -f $TMPFILE
+&gt;  cat &gt;$TMPFILE &lt;&lt;'EOT'
+&gt; -eval {
+&gt; -    require $1;
+&gt; -    if ('$2' ne 'ANY') {
+&gt; -        $1-&gt;require_version('$2');
+&gt; -    }
+&gt; -};
+&gt; +my $string = 'use $1';
+&gt; +if ('$2' ne 'ANY') {
+&gt; +    $string .= ' $2';
+&gt; +}
+&gt; +$string .= ';';
+&gt; +eval $string;
+&gt;  if ([$]@) {
+&gt;      print "failed";
+&gt;  } else {
+[...]
+
+Hi Blair,
+
+unless you tell it does not work, I will use m4 `ifelse':
+   eval { require $1 ifelse($2, ANY, , $2); };
+And also clean up some other constructs in config files.
+
+Thanks for your report
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02390" HREF="msg02390.shtml">Re: configure does not find installed Perl modules</A></strong>, <em>From:</em> Blair Zajac</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02387" HREF="msg02387.shtml">configure does not find installed Perl modules</A></strong>, <em>From:</em> Blair Zajac</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02388.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02390.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02387.shtml">configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02390.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02389"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02389"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

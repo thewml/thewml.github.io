@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: A question [FWD] -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sat, 8 Aug 1998 16:47:29 +0200 (CEST) -->
+<!--X-Message-Id: 19980808164727.B20368@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980808164401.A20368@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00184">Date Index</a>][<a href="thrd5.shtml#00184">Thread Index</a>]<br>
+[<A HREF="msg00183.shtml">Date Prev</A>][<A HREF="msg00185.shtml">Date Next</A>][<A HREF="msg00183.shtml">Thread Prev</A>][<A HREF="msg00187.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: A question [FWD]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 Aug 1998 16:47:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Aug 08, 1998, Ralf S. Engelschall wrote:
+
+&gt; What do I need to do or miss? 
+&gt; 
+&gt; [15:17][p3/9][/var/db/pkg] # wml      
+&gt; /usr/libexec/ld.so: warning: /usr/lib/libc.so.3.0: minor version 0 older than expected 1, using it anyway
+&gt; Can't load '/usr/local/lib/wml/perl/lib/site_perl/i386-freebsd/auto/IO/IO.so' for module IO: Undefined symbol 
+&gt; "_Perl_stack_base" 
+&gt; in perl:/usr/local/lib/wml/perl/lib/site_perl/i386-freebsd/auto/IO/IO.so at 
+&gt; /usr/local/lib/perl5/5.00501/i386-freebsd/DynaLoader.pm line 168.
+&gt; 
+&gt;  at /usr/local/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241
+&gt; BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241.
+&gt; BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/Seekable.pm line 51.
+&gt; BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/File.pm line 112.
+&gt; BEGIN failed--compilation aborted at /usr/local/bin/wml line 55.
+&gt; 
+&gt; -- -  -
+&gt; Geir Eivind Mork - drmoijk@online.no - <A  HREF="http://home.sol.no/~drmoijk">http://home.sol.no/~drmoijk</A>
+&gt; ----- End forwarded message -----
+
+Seems like ePerl has some problems on your FreeBSD box with the
+dynamic shared object stuff of Perl 5.005_01. Hmmm... Can you
+please test if a simple and real Perl script
+
+  #!/usr/local/bin/perl5
+  use IO;
+  1;
+
+works on your system correctly? If yes, could you then please provide me with
+your Config.pm which stays under /usr/local/lib/perl5/5.00501/i386-freebsd/?
+I've to check the entries there with the things ePerl uses from it.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00183" HREF="msg00183.shtml">A question [FWD]</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00183.shtml">A question [FWD]</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00185.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00183.shtml">A question [FWD]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00187.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00184"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00184"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

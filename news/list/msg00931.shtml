@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Mon, 6 Sep 1999 02:32:57 +0200 (MET DST) -->
+<!--X-Message-Id: 199909060032.JAA24073@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199909052250.HAA16172@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00931">Date Index</a>][<a href="thrd20.shtml#00931">Thread Index</a>]<br>
+[<A HREF="msg00930.shtml">Date Prev</A>][<A HREF="msg00932.shtml">Date Next</A>][<A HREF="msg00930.shtml">Thread Prev</A>][<A HREF="msg00933.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 6 Sep 1999 09:32:38 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi,
+I'll write detail about my own bug report.
+
+  I am trying WML. I found it very useful.
+It'll help me a lot. Thank you very much.
+
+  Then, I found a little trouble.
+Macro __FILE__ does not work as described in manual wml_p1_ipp(1).
+It is replaced by empty string.
+It works well ONLY at the first line of the file.
+
+  I made patch for ipp. But It is not perfect.
+1. I didn't care about directory.
+2. By wml command, the first level file appears as a temporary file.
+   ( By ipp command it works well. )
+Could you help me?
+
+---------
+
+  I have an idea about macor __????__.
+Would you mind changing these macros into tag-format?
+
+  If __FILE__ is a macro, it is difficult to write __FILE__ in html.
+Tag &lt;protect&gt; is powerless for it.
+This is the way I thought of. There may be other better ways.
+
+  &lt;define-tag FI&gt;__FI&lt;/define-tag&gt;
+  &lt;define-tag LE&gt;LE__&lt;/define-tag&gt;
+  &lt;FI&gt;&lt;LE&gt;
+
+  If &lt;__FILE__&gt; is a macro, it is easy to write &lt;__FILE__&gt; in html.
+Just &amp;lt;__FILE__&amp;gt;.
+
+  I think &lt;__FILE__&gt; is better.
+
+Best regards,
+--  Nobuyuki Tsuchimura
+
+
+----------- begin "ipp.patch" ---------
+--- /usr/local/lib/wml/exec/wml_p1_ipp	Mon Aug 30 18:07:48 1999
++++ wml_p1_ipp	Mon Sep  6 04:35:49 1999
+@@ -202,7 +202,7 @@
+ }
+ 
+ sub ProcessFile {
+-    my ($mode, $delimiter, $file, $level, $noid, %arg) = @_;
++    my ($mode, $delimiter, $file, $filename, $level, $noid, %arg) = @_;
+     my ($in, $found, $line, $type, %argO, $out, $store);
+ 
+     #
+@@ -279,7 +279,7 @@
+         $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+)\)/$1.$arg{$2}/ge;
+         #   Implicit Variables
+         $l =~ s|__LINE__|$line|g;
+-        $l =~ s|__FILE__|$file|g;
++        $l =~ s|__FILE__|$filename|g;
+         #   remove one preceding backslash
+         $l =~ s/\\(\$\([a-zA-Z0-9_]+.*?\))/$1/g;
+ 
+@@ -310,7 +310,7 @@
+             }
+ 
+             #   now recurse down
+-            $out .= &amp;ProcessFile($cmd, $type, $file, $level+1, 0, %arg);
++            $out .= &amp;ProcessFile($cmd, $type, $file, $file, $level+1, 0, %arg);
+ 
+             #   reset arguments
+             %arg = %argO;
+@@ -396,7 +396,7 @@
+     }
+ }
+ $tmp-&gt;close();
+-$outbuf .= &amp;ProcessFile('include', "'", $tmpfile, 0, 1, %arg);
++$outbuf .= &amp;ProcessFile('include', "'", $tmpfile, "", 0, 1, %arg);
+ unlink($tmpfile);
+ 
+ #
+@@ -433,7 +433,7 @@
+     }
+ 
+     #   process file via IPP filter
+-    $outbuf .= &amp;ProcessFile('include', "'", $tmpfile, 0, 1, %arg);
++    $outbuf .= &amp;ProcessFile('include', "'", $tmpfile, $file, 0, 1, %arg);
+ 
+     #   cleanup
+     unlink($tmpfile);
+----------- end "ipp.patch" ---------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00933" HREF="msg00933.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00930" HREF="msg00930.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00930.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00932.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00930.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00933.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00931"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00931"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

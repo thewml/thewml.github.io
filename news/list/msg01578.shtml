@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: there's still a bug in wml::des::navbar -->
+<!--X-From-R13: Ureq [nvre <treq.znvreNtzk.arg> -->
+<!--X-Date: Fri, 19 May 2000 11:02:44 +0200 (MET DST) -->
+<!--X-Message-Id: 20000519110200.A1712@lux.planet.earth -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01578">Date Index</a>][<a href="thrd33.shtml#01578">Thread Index</a>]<br>
+[<A HREF="msg01577.shtml">Date Prev</A>][<A HREF="msg01579.shtml">Date Next</A>][<A HREF="msg01579.shtml">Thread Prev</A>][<A HREF="msg01591.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>there's still a bug in wml::des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerd Maier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 19 May 2000 11:02:01 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+In WML 2.0.0 there still is a bug in the navbar-module, I know from the
+wml-package in Debian slink (wml 1.6.something):
+the target set in &lt;navbar:define&gt; isn't used, or -more exact- it is
+overwritten by either the target set in &lt;navbar:button&gt; (which is normal)
+or an empty string, if there's no target in &lt;navbar:button&gt;.
+
+Gerd.
+
+I appended a patch, which corrects this bug. I hope this is the right place
+for it, but as even "wmb" sends its bugreports here, I think it is.
+
+</PRE>
+<PRE>
+--- navbar.wml.orig	Thu May 18 16:06:36 2000
++++ navbar.wml	Fri May 19 09:40:55 2000
+@@ -402,7 +402,6 @@
+     my @imgstar  = split(':', $CFG-&gt;{IMGSTAR});
+     my $imgbase  = $CFG-&gt;{IMGBASE};
+     my $urlbase  = $CFG-&gt;{URLBASE};
+-    my $target   = $CFG-&gt;{TARGET};
+     my $urlopts  = $CFG-&gt;{URLOPTS};
+     $txtcol_n    = $CFG-&gt;{TXTCOL_N} if $txtcol_n eq '';
+     $txtcol_s    = $CFG-&gt;{TXTCOL_S} if $txtcol_s eq '';
+@@ -432,7 +431,7 @@
+         my $alt    = $B-&gt;{ALT};
+         my @img    = split(':', $B-&gt;{IMG});
+         my $url    = $B-&gt;{URL};
+-        my $target = $B-&gt;{TARGET};
++        my $target = ($B-&gt;{TARGET} eq '') ? $CFG-&gt;{TARGET} : $B-&gt;{TARGET};
+         my $hint   = $B-&gt;{HINT};
+         my $menu   = $B-&gt;{MENU};
+ 
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01591" HREF="msg01591.shtml">Re: there's still a bug in wml::des::navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01577.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01579.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01579.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01591.shtml">Re: there's still a bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01578"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01578"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

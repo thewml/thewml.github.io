@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: a suggestion: <css> </css> tag -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNsfo.ue> -->
+<!--X-Date: Tue, 6 Apr 1999 21:25:23 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9904061806050.1954&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00550">Date Index</a>][<a href="thrd13.shtml#00550">Thread Index</a>]<br>
+[<A HREF="msg00549.shtml">Date Prev</A>][<A HREF="msg00551.shtml">Date Next</A>][<A HREF="msg00549.shtml">Thread Prev</A>][<A HREF="msg00570.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>a suggestion: &lt;css&gt; &lt;/css&gt; tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 6 Apr 1999 18:13:16 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+       hello.
+
+       well, just a small suggestion: i think &lt;css&gt;..&lt;/css&gt; tag
+       should be included in the next version of wml, just like
+       &lt;javascript&gt;.
+
+       yes, i know that making my own css tag is very easy to do, but
+       it should be there by default.
+
+       it should protect the content of &lt;style&gt;&lt;!--   --&gt;&lt;/style&gt; tag
+       especially when #id definitions are given, since pass 1 (i
+       guess) tries to interpret #myIdDefinition and strips hash
+       marks '#' from the beginning. (must use &lt;protect&gt; to avoid
+       that)
+
+       &lt;css&gt; -&gt; &lt;style type="text/css"&gt;&lt;!-- ....  --&gt;&lt;/style&gt;
+
+-- 
+      v
+Davor Cengija
+Davor.Cengija@fsb.hr
+---------------------------------
+"The Remorse Of The Sugar Junkie"
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00570" HREF="msg00570.shtml">Re: a suggestion: &lt;css&gt; &lt;/css&gt; tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00549.shtml">Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00551.shtml">I like this navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00549.shtml">Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00570.shtml">Re: a suggestion: &lt;css&gt; &lt;/css&gt; tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00550"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00550"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

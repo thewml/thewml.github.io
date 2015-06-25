@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML by example -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 9 Oct 2001 22:50:20 +0200 (MET DST) -->
+<!--X-Message-Id: 20011009230047.A31767@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011003140431.A321@wanadoo.es -->
+<!--X-Reference: 20011009204809.A7853@tomk32.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02399">Date Index</a>][<a href="thrd49.shtml#02399">Thread Index</a>]<br>
+[<A HREF="msg02398.shtml">Date Prev</A>][<A HREF="msg02400.shtml">Date Next</A>][<A HREF="msg02398.shtml">Thread Prev</A>][<A HREF="msg02397.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML by example</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 9 Oct 2001 23:00:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Oct 09, 2001 at 08:48:09PM +0200, Thomas R. Koll wrote:
+[...]
+&gt; &gt; - wml with xml ?
+&gt; never mixed both :(
+
+For XML, I do not have examples, but it quite easy to be XHTML 1.0
+compliant, see for instance <A  HREF="http://www.engelschall.com/sw/mp4h/">http://www.engelschall.com/sw/mp4h/</A>
+You only have to take care to trailing slashes in your empty elements,
+and add -W2,--expansion=0 in your toplevel .wmlrc
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02395" HREF="msg02395.shtml">WML by example</A></strong>, <em>From:</em> Horacio</li>
+<li><strong><A NAME="02398" HREF="msg02398.shtml">Re: WML by example</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02398.shtml">Re: WML by example</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02400.shtml">Line numbers</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02398.shtml">Re: WML by example</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02397.shtml">Problems with using &lt;gfont&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02399"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02399"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

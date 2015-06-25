@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: apache SSI vs wml -->
+<!--X-From-R13: Hvbery Oatury <inatNryl.yrnqre.eb> -->
+<!--X-Date: Tue, 26 May 1998 11:53:45 +0200 (CEST) -->
+<!--X-Message-Id: 19980526110618.44574@zeus.advatech.ro -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00123">Date Index</a>][<a href="thrd3.shtml#00123">Thread Index</a>]<br>
+[<A HREF="msg00122.shtml">Date Prev</A>][<A HREF="msg00124.shtml">Date Next</A>][<A HREF="msg00122.shtml">Thread Prev</A>][<A HREF="msg00124.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>apache SSI vs wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Viorel Anghel &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 May 1998 11:06:18 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Apache SSI vs WML -- my 2 cents tip ;-)
+
+
+One of the main reasons for which I use wml is that i can replace the apache
+server-side-include with WML constructs, reducing the server loading (the
+documents are "compiled" by WML, not "interpreted" by httpd).
+
+- including files like headers and footers are clear (#include etc)
+- LAST_MODIFIED date is  &lt;get-var WML_GEN_ISOTIME&gt;
+- DOCUMENT_URI is &lt;info:document-url&gt;
+- flastmod (last modified for another file) and 
+fsize (the size for a file) can be simulated like this:
+
+------------ cut here ;-) -------------------
+File &lt;a href="SOME-FILE.html"&gt;SOME FILE&lt;/a&gt; 
+was last modified on 
+&lt;: 
+($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+$atime,$mtime,$ctime,$blksize,$blocks)
+= stat("SOME-FILE.html");
+$mod = localtime($mtime);
+print "$mod.\n";
+print "and has $size bytes.\n";
+:&gt;
+---------------------------------------------
+
+
+Best regards,
+-- 
+        ___
+       &lt;o-o&gt;    Viorel ANGHEL &lt;vang AT leader DOT ro&gt;
+       [`-']    <A  HREF="http://www.leader.ro/~vang/">http://www.leader.ro/~vang/</A>
+       -"-"-    
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00122.shtml">Some Problems</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00124.shtml">Every Active Member Deserves A Paycheck!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00122.shtml">Some Problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00124.shtml">Every Active Member Deserves A Paycheck!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00123"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00123"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

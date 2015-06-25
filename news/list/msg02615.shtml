@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml locale problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 19 Jun 2002 23:06:27 +0200 (MET DST) -->
+<!--X-Message-Id: 20020619211504.GA832@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.44.0206172018470.1722&#45;100000@hal.saar.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02615">Date Index</a>][<a href="thrd53.shtml#02615">Thread Index</a>]<br>
+[<A HREF="msg02614.shtml">Date Prev</A>][<A HREF="msg02616.shtml">Date Next</A>][<A HREF="msg02614.shtml">Thread Prev</A>][Thread Next]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml locale problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Jun 2002 23:15:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jun 17, 2002 at 08:28:43PM +0200, Michael Kress wrote:
+&gt; kHello,
+&gt; 
+&gt; I'm trying wml 2.0.8 under perl 5.6.1-34 (RH 7.2 upgraded to 7.3)
+&gt; but I'm getting trouble with the compilation of pages in pass 3:
+&gt; 
+&gt; -----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+&gt; /usr/bin/wml -n '-o(ALL-LANG_*)+LANG_EN:en.photos_1.shtml' 
+&gt; '-o(ALL-LANG_*)+LANG_DE:de.photos_1.shtml' photos_1.wml
+&gt; ePerl:Error: Perl parsing error (interpreter rc=22)
+&gt; 
+&gt; ---- Contents of STDERR channel: ---------
+&gt; perl: warning: Setting locale failed.
+&gt; perl: warning: Please check that your locale settings:
+&gt; LC_ALL = "0",
+&gt;  line 40    are supported and installed on your system.
+[...]
+
+&gt; Can you please help me out ?
+
+Hi,
+
+you have to guess why LC_ALL is set to 0 before pass 3.
+
+&gt; Maybe my pages are the reason for not working  - they used to work under 
+&gt; 1.7.0 which was my long time working version but with newer redhat 
+&gt; environments it doesn't work anymore. OK, so I decided to upgrade to 2.0.8 
+&gt; which doesn't work either (but @ least compiles).
+&gt; 
+&gt; The header of a page looks like this: 
+&gt; -----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+&gt; #!wml -o(ALL-LANG_*)+LANG_EN:en.photos_1.shtml 
+&gt; -o(ALL-LANG_*)+LANG_DE:de.photos_1.shtml
+&gt; 
+&gt; #use wml::mk area=photos page=self IMG=img SNB_RC=photos.wmlsnb
+&gt; 
+&gt; &lt;title&gt;Homepage &lt;de: von&gt;&lt;en: of&gt; Michael Kress - Photos&lt;/title&gt;
+&gt; ...etc.
+&gt; -----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+&gt; 
+&gt; in mk.wml I use:
+&gt; -----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+&gt; #use wml::std::tags
+&gt; #use wml::std::info
+&gt; #use wml::std::lang
+&gt; #use wml::des::navbar
+&gt; #use wml::des::space
+&gt; 
+&gt; &lt;lang:new id=en short&gt;
+&gt; &lt;lang:new id=de short&gt;
+&gt; ...etc.
+&gt; -----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+&gt; 
+&gt; I can't understand this
+[...]
+
+Neiher do I.  Do you have the same error when running
+   wml -p3 photos_1.wml
+?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02614" HREF="msg02614.shtml">wml locale problem</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02614.shtml">wml locale problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02616.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02614.shtml">wml locale problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02615"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02615"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

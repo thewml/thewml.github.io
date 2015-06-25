@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Tue, 14 Aug 2001 08:55:09 +0200 (MET DST) -->
+<!--X-Message-Id: 3B78CC18.10207@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.33.0108091226190.24746&#45;100000@nova.ee.ethz.ch -->
+<!--X-Reference: 3B73EDDE.1A2DFBE1@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02361">Date Index</a>][<a href="thrd48.shtml#02361">Thread Index</a>]<br>
+[<A HREF="msg02360.shtml">Date Prev</A>][<A HREF="msg02362.shtml">Date Next</A>][<A HREF="msg02358.shtml">Thread Prev</A>][<A HREF="msg02356.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Aug 2001 06:58:32 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+While tinkering with the vertical alignment
+I noticed that Netscape 6.1 does not
+need the "transitional" when all images in tables layouts
+are giving the align="top" parameter, since otherwise
+a different default alignment is obviously used.
+
+What I wasn't able to do is get this align="top" parameter
+into the navigation bar code, i.e. making sure all GIFs
+referenced in the navigation bar carry this parameter.
+
+Any idea how do to this without resorting to navbar:filter
+constructs?
+
+Stephan
+
+-- 
+
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+ &gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+ &gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02355" HREF="msg02355.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="02358" HREF="msg02358.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02360.shtml">Re: WML Roadmap or TODO-List</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02362.shtml">Creating both frames and non-frames versions of a website?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02358.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02356.shtml">Re: 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02361"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02361"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

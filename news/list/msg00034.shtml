@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Sat, 10 Jan 1998 17:10:56 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980110090239.28669B&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980106185509.27807@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00034">Date Index</a>][<a href="thread.shtml#00034">Thread Index</a>]<br>
+[<A HREF="msg00033.shtml">Date Prev</A>][<A HREF="msg00035.shtml">Date Next</A>][<A HREF="msg00032.shtml">Thread Prev</A>][<A HREF="msg00035.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 10 Jan 1998 09:06:05 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 6 Jan 1998, Stefan `Sec` Zehl wrote:
+
+&gt; This is too much to type for every case where i would put some text. I
+&gt; also find it confusing to put the text inside the &lt;&gt;'s - i would then
+&gt; prefer
+&gt; &lt;lang en&gt;Welcome&lt;/lang&gt;
+&gt; &lt;lang de&gt;Willkommen&lt;/lang&gt;
+&gt; 
+&gt; but all in all, i like #1 more.
+
+Hi. New to the list, so I can't say my opinions spring from using wml for
+long. =) But, I kinda like the &lt;lang&gt;&lt;/lang&gt; version! =)
+
+
+&gt; Now this gets a bit off-topic, but is it possible to tell wml to default
+&gt; it's output to ${file%.wml}.html (i.e. ".wml" stripped and ".html" added)
+&gt; 
+&gt; right now, i have to add
+&gt; #!/usr/local/bin/wml -oALL:index.html
+&gt; 
+&gt; on top of my index.wml files. I have to change the filename there every
+&gt; time i rename the file...
+
+Perhaps I misunderstand what you want, but doesn't wmk do that for you?
+Try wmk index.wml and you should get an index.html file without having any
+#! line at the top. At least I do!
+
+Best,
+Jim 
+
+jhebert@compu-aid.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00032" HREF="msg00032.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00033.shtml">ML Archive fixed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00035.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00032.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00035.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00034"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00034"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multiple outputs, one input -->
+<!--X-From-R13: "Oyoreg DSW@SD" <nervareNgcu.ghjvra.np.ng> -->
+<!--X-Date: Sat, 23 Dec 2000 22:22:07 +0100 (MET) -->
+<!--X-Message-Id: 20001223191039.A4741@frithjof -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0012230028550.1824&#45;100000@sg2.dedicatedco&#45;host.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02094">Date Index</a>][<a href="thrd42.shtml#02094">Thread Index</a>]<br>
+[<A HREF="msg02093.shtml">Date Prev</A>][<A HREF="msg02095.shtml">Date Next</A>][<A HREF="msg02093.shtml">Thread Prev</A>][<A HREF="msg02095.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multiple outputs, one input</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Albert REINER&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 23 Dec 2000 19:10:39 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Dec 23, 2000 at 12:47:56AM -0500, Philip Mak wrote:
+&gt; Hello,
+&gt; 
+...
+&gt; My question is, can I do something similar in WML? Obviously I do not want
+&gt; to have to create 35 pages when it should all be doable with 1.
+
+Of course you can generate the 35 pages from a single source file
+(*.wml). However, unless you want to mess around with the order of the
+passes etc. I think you will have to run wml 35 times (or wmk).  I
+have had a similar problem (though on a non-commercial, much
+smaller-scale project), and what I did was basically the following:
+
+I have one source file (which reads in templates etc.), and I use a
+wrapper script to repeatedly call wml on that sourcefile. The script
+is basically:
+
+,----[ w.sh ]
+| #!/bin/sh
+| 
+| force=$1                # should be -f or void
+| wml=wmk
+| 
+| for n in *.wml
+| do
+|   if [ -r $n ]
+|   then
+|     l=${n%.wml}
+|     for m in "" .c .ct .h .l3
+|     do
+| 	  $wml $force -P "wml-parify.pl --esperanto" \
+| 	       -DDOSIERO=$l -DKODO=$m -o $l$m.html $n
+|     done
+|   fi
+| done
+`----
+
+with some extra work to generate indices etc. The *.wml-files have
+(Perl) code checking for the variables DOSIERO and KODO (I am
+concerned with encodings of Esperanto) and use that information to
+generate the related file.
+
+&gt; I would want to be able to use evangelion.wml to generate:
+&gt; index.html (thumbnail pages)
+&gt; index-2.html
+&gt; index-3.html
+&gt; index-4.html
+&gt; index-5.html
+&gt; image-1.html (full-sized image pages)
+&gt; image-2.html
+&gt; ...
+&gt; image-30.html
+
+So your wrapper script would
+
+- have to compute the numbers (5 and 30)
+
+- set two variables, e.g. WHAT (set to index or image) and
+  NUMBER (set to 0 for index.html, 1..5 for index-N.html, 1..30
+  for image-N.html)
+
+- set the corresponding output file name
+
+- call wmk with those definitions.
+
+Should be easy.
+
+Albert.
+
+
+-- 
+
+--------------------------------------------------------------------------
+Albert Reiner                                   &lt;areiner@tph.tuwien.ac.at&gt;
+Deutsch       *       English       *       Esperanto       *       Latine
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02092" HREF="msg02092.shtml">Multiple outputs, one input</A></strong>, <em>From:</em> Philip Mak</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02093.shtml">Re: Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02095.shtml">Best practices for creating multi-lingual documents</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02093.shtml">Re: Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02095.shtml">Best practices for creating multi-lingual documents</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02094"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02094"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

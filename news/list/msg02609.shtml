@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: WML under Windows... -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNenqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Sun, 9 Jun 2002 12:48:24 +0200 (MET DST) -->
+<!--X-Message-Id: 003001c20fa2$f4ec4a40$4601a8c0@DELL8000 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020608204023.GA4108@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02609">Date Index</a>][<a href="thrd53.shtml#02609">Thread Index</a>]<br>
+[<A HREF="msg02608.shtml">Date Prev</A>][<A HREF="msg02610.shtml">Date Next</A>][<A HREF="msg02608.shtml">Thread Prev</A>][<A HREF="msg02611.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Jun 2002 20:46:43 +1000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Sorry... The editor copied more than I thought... Anyway I am getting
+the following errors...
+
+I have got gFont, and with a slight modification I have got all the
+other passes to run. P3 is the one that will not run. 
+
+$ make
+gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -fno-strict-aliasing
+-I/usr/local/include
+-I/usr/lib/perl5/5.6.1/cygwin-multi/CORE -I. -c eperl_perl5.c
+eperl_perl5.c: In function `Perl5_XSInit':
+eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+eperl_perl5.c:58: (Each undeclared identifier is reported only once
+eperl_perl5.c:58: for each function it appears in.)
+eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+incompatible point
+er type
+eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+eperl_perl5.c:73: `my_perl' undeclared (first use in this function)
+eperl_perl5.c: In function `Perl5_SetScalar':
+eperl_perl5.c:104: `my_perl' undeclared (first use in this function)
+make: *** [eperl_perl5.o] Error 1
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$
+
+Any help would be appreciated
+
+Darryl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au  
+
+-----Original Message-----
+From: owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>]
+On Behalf Of Denis Barbier
+Sent: Sunday, 9 June 2002 6:40 AM
+To: sw-wml@engelschall.com
+Subject: Re: WML under Windows...
+
+
+On Sat, Jun 08, 2002 at 06:02:42PM +1000, Darryl Smith wrote:
+&gt; Further to this... I just downloaded CYGWIN (www.CYGWIN.COM) that sort
+
+&gt; of allows what I want. I am compiling up the WML and I get
+
+Get what? ;)
+As far as I can tell, WML has never been tested on MS-Windows.  After
+installing Perl and Cygwin, you could try to compile wml_p3_eperl,
+everything else should work without much trouble.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02611" HREF="msg02611.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02616" HREF="msg02616.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02608" HREF="msg02608.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02608.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02610.shtml">make errors - curses.h not found &amp; problem resolved..</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02608.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02611.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02609"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02609"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

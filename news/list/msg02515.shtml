@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: bug in href or toc? -->
+<!--X-From-R13: Ireare Vrhfre <jreare.urhfreNjro.qr> -->
+<!--X-Date: Tue, 12 Feb 2002 07:10:12 +0100 (MET) -->
+<!--X-Message-Id: 3C684C38.8F1E9663@web.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C66F1DB.7050CB49@web.de -->
+<!--X-Reference: 20020211121000.GA2156@tomk32.de -->
+<!--X-Reference: 20020211181204.A16345@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02515">Date Index</a>][<a href="thrd51.shtml#02515">Thread Index</a>]<br>
+[<A HREF="msg02514.shtml">Date Prev</A>][<A HREF="msg02516.shtml">Date Next</A>][<A HREF="msg02510.shtml">Thread Prev</A>][<A HREF="msg02516.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: bug in href or toc?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 11 Feb 2002 23:56:56 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+...
+&gt;  &lt;h3&gt;&lt;a name="ToC4"&gt;&lt;/a&gt;&lt;a href="<A  HREF="http://www.fujitsu-siemens.de">http://www.fujitsu-siemens.de</A>"&gt;Fujitsu&lt;/a&gt;:
+&gt;  Lifebook Biblo B-2130&lt;/h3&gt;
+&gt; 
+&gt; IIRC this construct (i.e. an empty &lt;a&gt; tag) was avoided because older
+&gt; Netscape did not recognize them as anchors.
+&gt; Maybe it is time to leave such workarounds behind and deal with decent
+&gt; browsers.  Comments?
+For me I just have removed this constructs ;-)
+&gt;From my stats Netscape &lt;= 4.x isn't used very much (app. 7%).
+What about filling the empty &lt;a&gt; tag with &amp;nbsp; ? As used
+in table cells to avoid some ugly looking empty cells.
+
+Werner
+-- 
+|=| Werner Heuser = Keplerstr. 11A = D-10589 Berlin = Germany
+|=| &lt;wehe_AT_mobilix.org&gt;      T. 0049 - (0)30 - 349 53 86
+|=| <A  HREF="http://MobiliX.org">http://MobiliX.org</A>         How to Use UniX on Mobile Computers
+|=| <A  HREF="http://Xtops.DE">http://Xtops.DE</A>            Laptops+PDAs pre-installed with UniX
+|*| This is no time for phony rhetoric -- Lou Reed
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02516" HREF="msg02516.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02502" HREF="msg02502.shtml">bug in href or toc?</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02504" HREF="msg02504.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Thomas R. Koll</li>
+<li><strong><A NAME="02505" HREF="msg02505.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02514.shtml">Re: nested navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02516.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02510.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02516.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02515"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02515"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

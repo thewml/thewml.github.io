@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: Vbjneq Oyrknaqre ZnVheernh <nyrkqjNybpy.arg> -->
+<!--X-Date: Wed, 31 May 2000 17:45:20 +0200 (MET DST) -->
+<!--X-Message-Id: 20000531103805.A18719@locl.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000530235206.A7808@locl.net -->
+<!--X-Reference: Pine.LNX.3.96.1000531104009.29323A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01673">Date Index</a>][<a href="thrd34.shtml#01673">Thread Index</a>]<br>
+[<A HREF="msg01672.shtml">Date Prev</A>][<A HREF="msg01674.shtml">Date Next</A>][<A HREF="msg01669.shtml">Thread Prev</A>][<A HREF="msg01690.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Howard Alexander LaHurreau &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 31 May 2000 10:38:05 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, May 31, 2000 at 11:43:02AM +0200, Denis Barbier wrote:
+&gt; On Tue, 30 May 2000, Howard Alexander LaHurreau wrote:
+&gt; &gt; I'm having a problem with wml::fmt::verbatim, specifically the
+&gt; &gt; &lt;verbatim-file&gt; tag.  If the file contains lines beginning with
+&gt; &gt; the '#' character, those lines will be stripped out.  Using
+&gt; &gt; wml's -p option I was able to determine that the lines starting
+&gt; &gt; with '#' were present all the way up until pass eight (HTMLstrip).
+&gt; &gt; I know that wml::fmt::verbatim uses &lt;protect pass=7-9&gt;, but it
+&gt; &gt; doesn't seem to be working. :-)  Thanks!
+
+Just noticed that &lt;verbatim-file&gt; doesn't use the &lt;verbatim&gt; tag at
+all and uses &amp;wml_fmt_verbaim()...
+
+&gt; You are right, this is due to nested &lt;protect&gt; tags. You can replace
+&gt; in wml::fmt::verbatim
+&gt;   return "&lt;protect pass=4-9&gt;...&lt;/protect&gt;";
+&gt; by
+&gt;   return "&lt;"."protect pass=4-9&gt;...&lt;"."/protect&gt;";
+
+This works wonderfully.  Thanks!  :-)
+ 
+&gt; This problem is not related to current discussions about mp4h, because
+&gt; the &lt;protect&gt; tag is used by wml to replace some portions of text by
+&gt; an identifier before each pass, and replace this identifier by original
+&gt; text after. With current implementation, these tags cannot be nested.
+
+Just a quick question: would it actually be useful to have nested
+&lt;protect&gt; tags, or is it more trouble than it's worth?  (Simpler to
+do things like the above?)
+
+-- 
+AlexDW &lt;alexdw@locl.net&gt; -- KB9SYM -- DOCTOR WHO FOREVER
+'Tis more blessed to give than receive; for example, wedding presents.
+		-- H.L. Mencken
+Visit The Home of AlexDW at <A  HREF="http://www.locl.net/homes/alexdw/">http://www.locl.net/homes/alexdw/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01690" HREF="msg01690.shtml">Re: [wml] nested &lt;protect&gt; tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01668" HREF="msg01668.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Howard Alexander LaHurreau</li>
+<li><strong><A NAME="01669" HREF="msg01669.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01672.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01674.shtml">Strange ePerl behavior: $LANG</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01669.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01690.shtml">Re: [wml] nested &lt;protect&gt; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01673"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01673"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

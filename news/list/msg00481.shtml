@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Minor bug in wml::des::navbar -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Sun, 14 Mar 1999 21:46:18 +0100 (MET) -->
+<!--X-Message-Id: 87r9qrpzpf.fsf@rechner.none -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00481">Date Index</a>][<a href="thrd11.shtml#00481">Thread Index</a>]<br>
+[<A HREF="msg00479.shtml">Date Prev</A>][<A HREF="msg00480.shtml">Date Next</A>][<A HREF="msg00463.shtml">Thread Prev</A>][<A HREF="msg00480.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Minor bug in wml::des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 14 Mar 1999 21:45:48 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+wml::des::navbar contains the statement $hint = $txt if ($hint eq '');
+which lets Netscape choke on the result of
+
+#use wml::des::navbar
+&lt;navbar:define name=foo txtcol_normal="#000000"&gt;
+&lt;navbar:button id=foo url=foo.html img=foo.gif txt=foo&gt;
+&lt;/navbar:define&gt;
+&lt;navbar:render name=foo&gt;
+
+with 
+
+JavaScript Error: <A  HREF="http://.../test.html">http://.../test.html</A>, line 1:
+
+unterminated string literal.
+
+self.status = '&lt;font color=
+..............^
+
+I think the $txt cleanup should be moved into the $txtonly rendering
+part and the $img cleanup into the else part of that statement.
+
+See also the code mentioned in my other posting.
+
+Yours, Florian.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00479.shtml">Re: [patch] Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00480.shtml">Sliced, folded navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00463.shtml">Change: mailing list delivery location</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00480.shtml">Sliced, folded navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00481"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00481"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

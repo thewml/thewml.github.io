@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Anyone doing XML&#45;style stuff? -->
+<!--X-From-R13: Yra [pUybguyra <zptyxNnegybtvk.pbz> -->
+<!--X-Date: Sat, 20 Jan 2001 03:07:22 +0100 (MET) -->
+<!--X-Message-Id: 87snmfj7sp.fsf@ralf.artlogix.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02115">Date Index</a>][<a href="thrd43.shtml#02115">Thread Index</a>]<br>
+[<A HREF="msg02114.shtml">Date Prev</A>][<A HREF="msg02116.shtml">Date Next</A>][<A HREF="msg02114.shtml">Thread Prev</A>][<A HREF="msg02117.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Anyone doing XML-style stuff?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ken McGlothlen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 19 Jan 2001 18:07:02 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+First, I've been using Perl to parse files like
+
+	&lt;database&gt;
+	 &lt;name&gt;narble&lt;/name&gt;
+	 &lt;record&gt;
+	  &lt;field3&gt;stuff3&lt;/field3&gt;
+	  &lt;field2&gt;stuff2&lt;/field2&gt;
+	  &lt;field1&gt;stuff1&lt;/field1&gt;
+	 &lt;/record&gt;
+	 &lt;record&gt;
+	  &lt;field1&gt;stuff4&lt;/field1&gt;
+	  &lt;field2&gt;stuff5&lt;/field2&gt;
+	  &lt;field3&gt;stuff6&lt;/field3&gt;
+	 &lt;/record&gt;
+	 &lt;record&gt;
+	  &lt;field3&gt;stuff9&lt;/field3&gt;
+	  &lt;field2&gt;stuff8&lt;/field2&gt;
+	  &lt;field1&gt;stuff7&lt;/field1&gt;
+	 &lt;/record&gt;
+	 &lt;record&gt;
+	  &lt;field1&gt;stuffa&lt;/field1&gt;
+	  &lt;field2&gt;stuffb&lt;/field2&gt;
+	  &lt;field3&gt;stuffc&lt;/field3&gt;
+	 &lt;/record&gt;
+	&lt;/database&gt;
+
+and produce something like
+
+	&lt;table&gt;
+	&lt;tr&gt;
+	&lt;td&gt;&lt;b&gt;field1&lt;/b&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;b&gt;field2&lt;/b&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;b&gt;field3&lt;/b&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	&lt;td&gt;stuff1&lt;/td&gt;
+	&lt;td&gt;stuff2&lt;/td&gt;
+	&lt;td&gt;stuff3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	&lt;td&gt;stuff4&lt;/td&gt;
+	&lt;td&gt;stuff5&lt;/td&gt;
+	&lt;td&gt;stuff6&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	&lt;td&gt;stuff7&lt;/td&gt;
+	&lt;td&gt;stuff8&lt;/td&gt;
+	&lt;td&gt;stuff9&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	&lt;td&gt;stuffa&lt;/td&gt;
+	&lt;td&gt;stuffb&lt;/td&gt;
+	&lt;td&gt;stuffc&lt;/td&gt;
+	&lt;/tr&gt;
+
+I'd like to do this in WML instead (simpler), but this means that I need to be
+able to define &lt;field1&gt;, &lt;field2&gt; and &lt;field3&gt; to save their values, and the
+&lt;record&gt; tag to dump the data in the right way. . . .
+
+Has anyone been doing a lot of this?  If so, what method has been the most
+successful for you?
+
+							---Ken
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02114.shtml">&lt;cell&gt; 'valign' and 'align'  bug report (and correction)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02116.shtml">RE: Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02114.shtml">&lt;cell&gt; 'valign' and 'align'  bug report (and correction)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02117.shtml">global variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02115"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02115"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

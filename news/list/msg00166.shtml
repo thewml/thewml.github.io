@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml&#45;mode for (X)Emacs ? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Wed, 15 Jul 1998 14:38:29 +0200 (CEST) -->
+<!--X-Message-Id: 19980715143826.A13241@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980713210950.07075@hades.rz.uni&#45;wuppertal.de -->
+<!--X-Reference: 19980714110522.B24299@engelschall.com -->
+<!--X-Reference: m1zpebh5yi.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00166">Date Index</a>][<a href="thrd4.shtml#00166">Thread Index</a>]<br>
+[<A HREF="msg00165.shtml">Date Prev</A>][<A HREF="msg00167.shtml">Date Next</A>][<A HREF="msg00165.shtml">Thread Prev</A>][<A HREF="msg00168.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml-mode for (X)Emacs ?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 15 Jul 1998 14:38:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jul 15, 1998, Fritz Zaucker wrote:
+
+&gt; &gt; &gt; just a quick question: Has anybody written a wml-mode for (X)Emacs ?
+&gt; &gt; &gt; The html-mode unfortunately doesn't know about eperl and the other
+&gt; &gt; &gt; wml-goodies, and I don't know jack about lisp, so writing it myself
+&gt; &gt; &gt; is out of the question (too busy understanding wml fully, thanks Ralf
+&gt; &gt; &gt; for such a great tool !)
+&gt;  
+&gt; &gt; Is such an Emacs wml-mode just syntax highlighting of WML-Tags or is
+&gt; &gt; it really more like tag expansion, etc?
+&gt; 
+&gt; I think syntax-highlighting would be what's needed. Why would one want
+&gt; to expand wml-tags, a job wml itself is doing??? The idea of WML is
+&gt; "abstraction" (for me at least) and the last thing I'd do is expand
+&gt; the tags in the editor to HTML.
+
+By "expanding" I meant auto-expanding the name like in a shell.  For instance
+type "&lt;info:doc" and this gets expanded to "&lt;info:document-url&gt;" immdediately.
+Or "&lt;info:document-uri&gt;" is automatically fixed to "&lt;info:document-url&gt;", etc.
+
+&gt; &gt; If its pure tag highligthing it should be trivial as for Vim (just a
+&gt; &gt; few regex).
+&gt; 
+&gt; Trivial? Including handling embedded perl-code? 
+&gt;
+&gt; Even the better perl-modes for Emacs don't handle all Perl-constructs
+&gt; correctly. Which is not surprising, as only Perl understands Perl
+&gt; correctly. Same as for TeX/LaTeX. Perhaps somebody cares to implement
+&gt; Perl and TeX in Emacs-Lisp? Wouldn't that be some nice little summer
+&gt; project for bored CS students?  ;-)
+
+I didn't say the Perl-code itself is trivial to highlight. But the Perl is not
+part of WML. I just think the WML-defined Tags can be highlighted trivially or
+at least easy. In other words: For Perl blocks the complete block itself is
+highlighted in a color identifying it as a Perl block. I personally think this
+is enough, isn't it?
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00168" HREF="msg00168.shtml">Re: wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00162" HREF="msg00162.shtml">wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Alexander Graefe</li>
+<li><strong><A NAME="00163" HREF="msg00163.shtml">Re: wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00165" HREF="msg00165.shtml">Re: wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00165.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00167.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00165.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00168.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00166"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00166"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

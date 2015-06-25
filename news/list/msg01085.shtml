@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New WML feature for pass 6 &#45; Area Substitution (patch) -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Fri, 22 Oct 1999 09:32:42 +0200 (MET DST) -->
+<!--X-Message-Id: 19991021151034.A21513@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991020165406.A18563@Aramis.kennesaw.edu -->
+<!--X-Reference: Pine.LNX.3.96.991021094355.10652B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01085">Date Index</a>][<a href="thrd22.shtml#01085">Thread Index</a>]<br>
+[<A HREF="msg01084.shtml">Date Prev</A>][<A HREF="msg01086.shtml">Date Next</A>][<A HREF="msg01083.shtml">Thread Prev</A>][<A HREF="msg01082.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New WML feature for pass 6 - Area Substitution (patch)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 21 Oct 1999 15:10:34 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis,
+
+On Thu, Oct 21, 1999 at 10:00:21AM +0200, barbier@imacs.polytechnique.fr wrote:
+&gt; Another way to define this is:
+&gt; &lt;define-container noasub&gt;
+&gt; &lt;protect pass=6&gt;%body&lt;/protect&gt;
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; &gt; That's it.... Let me know if you find this useful or have any
+&gt; &gt; questions...  Denis, any chance of this making it into the next
+&gt; &gt; release? I have found this tag extremely useful and it seems a logical
+&gt; &gt; extension to pass 6...
+&gt; 
+&gt; I have 2 objections:
+&gt; - pass 6 is not HTML-oriented, so it is strange to define this tag in
+&gt;   asubst.src
+&gt; - the &lt;protect&gt; tag does a good job, why not use it?
+&gt; 
+
+	Well... it's been a while since I've needed to be
+	told to RTFM :) The &lt;protect pass=6&gt;...&lt;/protect&gt;
+	ability is just what I was looking for and renders
+	my additions a little redundant... still it was good
+	to get into the internals for a while... I was under
+	the mistaken impression that the &lt;protect&gt; flag
+	couldn't be used for specific passes... Now that I
+	know... I agree... there is no reason to add a
+	feature that already exists...
+
+Thanks,
+
+
+Thomas
+-- 
+
+---------------------------------------------------------------
+Thomas Akin                       Kennesaw State University
+Networking Instructor             Continuing Education
+CNX, CSA, ICS                     1000 Chastain Road
+takin@kennesaw.edu                Kennesaw, GA 30144-5591
+---------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01081" HREF="msg01081.shtml">New WML feature for pass 6 - Area Substitution (patch)</A></strong>, <em>From:</em> Thomas Akin</li>
+<li><strong><A NAME="01083" HREF="msg01083.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01084.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01086.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01083.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01082.shtml">New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01085"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01085"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

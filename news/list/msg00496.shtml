@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Piece of news -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 17 Mar 1999 18:27:46 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990317125849.19739A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00496">Date Index</a>][<a href="thrd12.shtml#00496">Thread Index</a>]<br>
+[<A HREF="msg00495.shtml">Date Prev</A>][<A HREF="msg00497.shtml">Date Next</A>][<A HREF="msg00499.shtml">Thread Prev</A>][<A HREF="msg00498.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Piece of news</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Mar 1999 18:22:24 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all WMLers,
+
+among other things, here are features included in the most recent
+wml-SNAP (i.e. wml-SNAP-199903171800.tar.gz)
+* An undefined slice reports a warning instead of an error
+* A ``make clean'' deletes wml_test/TEST.root
+* The m4 stuff has been fixed to allow &lt;symbol donald "donald.jpg"&gt;
+* A variable can be defined without value, e.g. -DVAR or -DVAR=""
+
+and as a guest-star
+* Easier multi-lingual interface
+
+The sense of ``easier'' is that you can process this file
+
+#use wml::std::lang
+#use wml::std::page
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=fr short&gt;
+
+&lt;page&gt;
+&lt;fr&gt;Salut&lt;/fr&gt;
+&lt;en&gt;Hello&lt;/en&gt;
+##EOF##
+
+without any command-line options or shebang lines. A foo.wml file will
+generate in this case foo.en.html and foo.fr.html. This default can be
+overriden by putting a &lt;lang:star:slice:&gt; tag anywhere in your files,
+e.g. &lt;lang:star:slice: %BASE.html.*&gt; will produce foo.html.en and
+foo.html.fr
+The star in the filename is replaced by every language identifier, as in
+other language related starred forms. 
+If you like more complex combinations :
+#!wml -o (ALL-LANG_*)+LANG_EN+FOO:foo.en.html \
+      -o (ALL-LANG_*)+LANG_FR+FOO:foo.fr.html \
+      -o (ALL-LANG_*)+LANG_EN+BAR:bar.en.html \
+      -o (ALL-LANG_*)+LANG_FR+BAR:bar.fr.html
+can be replaced by
+#!wml -o (ALL-LANG_*)+LANG_**+FOO:foo.*.html \
+      -o (ALL-LANG_*)+LANG_**+BAR:bar.*.html
+Why this double-starred form? Because a star in the slice names has yet
+a special meaning.
+
+A final word to thank Paul Sponagl, his suggestion on &lt;subst-in-page&gt;
+was really helpful.
+
+   Denis
+
+P.S. : Concerning the navbars, i have downloaded your suggestions.
+       Will think about it.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00495.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00497.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00499.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00498.shtml">Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00496"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00496"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

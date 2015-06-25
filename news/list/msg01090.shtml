@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: y_znegvaNznvy.jbeyqarg.se -->
+<!--X-Date: Fri, 22 Oct 1999 23:12:33 +0200 (MET DST) -->
+<!--X-Message-Id: 199910221656.SAA25310@achille.worldnet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01090">Date Index</a>][<a href="thrd22.shtml#01090">Thread Index</a>]<br>
+[<A HREF="msg01089.shtml">Date Prev</A>][<A HREF="msg01091.shtml">Date Next</A>][<A HREF="msg01101.shtml">Thread Prev</A>][<A HREF="msg01109.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 22 Oct 1999 18:56:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From: Laurent Martin    
+Reply-To: l_martin@worldnet.fr
+
+PROBLEM DESCRIPTION:
+The following file :
+
+--- file starts ---
+#use wml::fmt::verbatim
+
+&lt;verbatim&gt;
+;; -*- Mode: Emacs -*-
+&lt;/verbatim&gt;
+--- file ends ---
+
+produce a strange output :
+
+-- output begins ---
+&lt;pre&gt;{:[[s|&amp;|&amp;amp;|sg]][[s|&lt;|&amp;lt;|sg]]
+    [[s|&gt;|&amp;gt;|sg]][[s|\n+\s*$||s]];; -*- Mode: Emacs-Lisp -*-:}&lt;/pre&gt;
+--- output ends ---
+
+just like it didn't go through pass 6.
+
+Laurent.
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i686-pc-linux-gnu2
+    Perl: 5.004_04 (/usr/local/bin/perl)
+    User: lfm@achille.worldnet.fr
+    Date: 14-Oct-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration:
+  Platform:
+    osname=linux, osvers=2.0.34, archname=i386-linux
+    uname='linux porky.redhat.com 2.0.34 #1 thu may 7 10:17:44 edt 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=y useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=2.7.2.3
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=undef, doublesize=undef
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Locally applied patches:
+  	MAINT_TRIAL_4 - 5.004_05 maintenance trial 4
+  Built under linux
+  Compiled at Sep 10 1998 02:16:22
+  @INC:
+    /usr/lib/perl5/i386-linux/5.00404
+    /usr/lib/perl5
+    /usr/lib/perl5/site_perl/i386-linux
+    /usr/lib/perl5/site_perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01089.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01091.shtml">Domain Name</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01101.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01109.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01090"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01090"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

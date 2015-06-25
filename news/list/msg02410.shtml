@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: our wmk/wml broke with perl (5.6.1) upgrade &#45;&#45; help! -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 23 Oct 2001 23:18:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20011023232750.A13038@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 15315.53472.545565.750564@gargle.gargle.HOWL -->
+<!--X-Reference: 20011023101805.A9828@imacs.polytechnique.fr -->
+<!--X-Reference: 15317.14876.967718.630718@gargle.gargle.HOWL -->
+<!--X-Reference: 1003852050.3bd59112b60cd@www.irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02410">Date Index</a>][<a href="thrd49.shtml#02410">Thread Index</a>]<br>
+[<A HREF="msg02409.shtml">Date Prev</A>][<A HREF="msg02411.shtml">Date Next</A>][<A HREF="msg02409.shtml">Thread Prev</A>][<A HREF="msg02415.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Oct 2001 23:27:50 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Oct 23, 2001 at 05:47:30PM +0200, Frederic.Lemouel@irisa.fr wrote:
+&gt; 
+&gt; Quoting Martin Maechler &lt;maechler@stat.math.ethz.ch&gt;:
+&gt; &gt;
+&gt; &gt; No, it was different: A colleague here found the solution :
+&gt; &gt; actually in the archives of *your* mailing list :
+&gt; &gt; 
+&gt; &gt; 	 <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg02290.shtml">http://www.engelschall.com/sw/wml/news/list/msg02290.shtml</A>
+&gt; &gt; 
+&gt; &gt; As soon as we deactivated the LC_ALL environment variable
+&gt; &gt; everything worked :
+&gt; 
+&gt; Hello,
+&gt; 
+&gt; I also recently (yesterday :-) installed WML on a computer
+&gt; with the Mandrake distribution and I had the same problem.
+&gt; The desactivation of LC_* environment variables was necessary
+&gt; but not sufficient, I also had to desactivate the LANG variable.
+&gt; 
+&gt; Hopefully helping,
+
+I am unable to reproduce this bug on my box, sorry.
+Here is the tail of `perl -V':
+   Characteristics of this binary (from libperl): 
+     Compile-time options: USE_LARGE_FILES
+     Built under linux
+     Compiled at Jun 22 2001 18:52:37
+     @INC:
+       /usr/local/lib/perl/5.6.1
+       /usr/local/share/perl/5.6.1
+       /usr/lib/perl5
+       /usr/share/perl5
+       /usr/lib/perl/5.6.1
+       /usr/share/perl/5.6.1
+       /usr/local/lib/site_perl
+       /usr/local/lib/perl/5.6.0
+       /usr/lib/perl5/5.6
+       /usr/lib/perl5/5.005
+       .
+
+The /usr/lib/wml/include/sys/bootp3.wml file contains
+      unshift @INC, qw(
+          /usr/lib/wml/perl/lib
+          /usr/lib/wml/perl/lib/i386-linux
+      );
+and IO shared object is located at
+  /usr/lib/wml/perl/lib/i386-linux/auto/IO/IO.so
+
+Could you compare these values to yours?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02405" HREF="msg02405.shtml">our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+<li><strong><A NAME="02407" HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02408" HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+<li><strong><A NAME="02409" HREF="msg02409.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Frederic.Lemouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02409.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02411.shtml">attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02409.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02415.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02410"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02410"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

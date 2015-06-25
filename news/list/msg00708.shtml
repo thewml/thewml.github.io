@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: <wrss.pbirlNcbobk.pbz> -->
+<!--X-Date: Sun, 30 May 1999 15:19:03 +0200 (MET DST) -->
+<!--X-Message-Id: 14161.14557.955623.57970@plaything.smart.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9905232212090.5707&#45;100000@hal.saar.de -->
+<!--X-Reference: Pine.LNX.3.96.990525095917.3744A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00708">Date Index</a>][<a href="thrd14.shtml#00708">Thread Index</a>]<br>
+[<A HREF="msg00707.shtml">Date Prev</A>][<A HREF="msg00709.shtml">Date Next</A>][<A HREF="msg00692.shtml">Thread Prev</A>][<A HREF="msg00710.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 30 May 1999 09:13:59 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt;&gt;&gt;&gt;&gt; "Denis" == Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+    Michael&gt; Where can I find a version that compiles under RedHat 6.0
+    Michael&gt; with perl 5.005 ?
+
+    Denis&gt; Oops, my disk crashed. You can find it at
+    Denis&gt; <A  HREF="http://www.cmap.polytechnique.fr/~barbier/wml-1.6.8-2.src.rpm">http://www.cmap.polytechnique.fr/~barbier/wml-1.6.8-2.src.rpm</A>
+
+i have a clean redhat 6.0 install, and i ran rpm --rebuild on the
+above source rpm.  it died with this:
+
+/usr/bin/install -c -s -m 755 wml_backend/p3_eperl/eperl /var/tmp/wml-root/usr/lib/wml/exec/wml_p3_eperl
+/usr/bin/install: wml_backend/p3_eperl/eperl: No such file or directory
+make: *** [install] Error 1
+Bad exit status from /var/tmp/rpm-tmp.89430 (%install)
+
+*why* is it so hard to get this software installed???
+
+jeff "been trying for weeks now" covey
+
+-- 
+|----------------------------------------------------------------------------|
+| jeff covey jeff.covey@pobox.com <A  HREF="http://pobox.com/~jeff.covey/">http://pobox.com/~jeff.covey/</A> 410-669-4926 |
+|----------------------------------------------------------------------------|
+|                    all composite things are impermanent.                   |
+|----------------------------------------------------------------------------|
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00710" HREF="msg00710.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00683" HREF="msg00683.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Michael Kress</li>
+<li><strong><A NAME="00686" HREF="msg00686.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00707.shtml">Re: m4 under WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00709.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00692.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00710.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00708"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00708"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

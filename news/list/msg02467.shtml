@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: m4 und divert -->
+<!--X-From-R13: "Enaqvc Punggnpuneln" <fnaqvcNzvaqfj.pbz> -->
+<!--X-Date: Wed, 19 Dec 2001 07:04:08 +0100 (MET) -->
+<!--X-Message-Id: 1523.203.195.140.82.1008741793.squirrel@www.webyarn.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 000801c186ee$27d39280$3300a8c0@TOnline -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02467">Date Index</a>][<a href="thrd50.shtml#02467">Thread Index</a>]<br>
+[<A HREF="msg02466.shtml">Date Prev</A>][<A HREF="msg02468.shtml">Date Next</A>][<A HREF="msg02466.shtml">Thread Prev</A>][<A HREF="msg02472.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: m4 und divert</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Sandip Bhattacharya&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Dec 2001 11:33:13 +0530 (IST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Can you keep _adding_ to a m4 definition? I dont know m4 at all.
+
+Multiple {#TEST#: STUFF :#TEST#} statements keep adding to the value of
+{#TEST#} where STUFF can change any time.
+
+I love how I can keep adding to the content of a template region any number
+of times.
+
+How could you do this in m4?
+
+I generally have a site wide template with a menu area with {#MENU#} down
+there. now depending upon the section of the web site where the page lies,
+the number of context menus change. I simply add to the contents of the
+MENU area from section to section.
+
+How can you add to a template after it has been defined?
+
+How would you implement the &lt;page&gt; macro otherwise?
+
+Regards,
+
+- Sandip
+
+&gt; Could someone gibe me an example, why I should use divert and m4?
+&gt;
+&gt; Here my example, why I ask
+&gt;
+&gt; with divert:
+&gt; {#TEST#:lalala:##}
+&gt;
+&gt; Ausgabe: {#TEST#}
+&gt;
+&gt; with m4:
+&gt; m4_define(TEST, lalala)
+&gt;
+&gt; Ausgabe: TEST
+&gt;
+&gt; I mean where is the different? In my opinion everything I can realize
+&gt; with m4 I also can realize with divert...
+&gt;
+&gt; Please explain me the different
+&gt;
+&gt; thx Philipp
+
+
+-- 
+Sandip Bhattacharya
+sandip @ mindsw.com
+Mindframe Software
+<A  HREF="http://www.mindsw.com">http://www.mindsw.com</A>
+----------------------------------------------
+Mindframe Software ..... going the extra mile
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02465" HREF="msg02465.shtml">m4 und divert</A></strong>, <em>From:</em> Philipp Meisen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02466.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02468.shtml">Bug report</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02466.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02472.shtml">Strange bug in mp4h parsing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02467"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02467"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

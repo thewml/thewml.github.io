@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <preserve notypo> causing problems??? -->
+<!--X-From-R13: Pehab Pbrggpure <oobrggNrez1.h&#45;fgenfot.se> -->
+<!--X-Date: Tue, 22 Jun 1999 18:12:25 +0200 (MET DST) -->
+<!--X-Message-Id: 19990622163054.C31632@erm1.u&#45;strasbg.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990622104406.B23634@erm1.u&#45;strasbg.fr -->
+<!--X-Reference: Pine.LNX.3.96.990622125543.15605E&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00788">Date Index</a>][<a href="thrd17.shtml#00788">Thread Index</a>]<br>
+[<A HREF="msg00787.shtml">Date Prev</A>][<A HREF="msg00789.shtml">Date Next</A>][<A HREF="msg00784.shtml">Thread Prev</A>][<A HREF="msg00790.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;preserve notypo&gt; causing problems???</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Bruno Boettcher &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Jun 1999 16:30:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+found a thing that perturbed my browser:
+just after the body tag there's a &lt;preserve notypo&gt; and just beofre the end
+tag:
+&lt;restore notypo&gt; and that's causing the occultation of the first header (but
+there's still a problem, it is not in strong....)
+
+so what are these tags? and should they be there?
+
+-- 
+ciao bboett
+==============================================================
+bboett@earthling.net
+<A  HREF="http://erm6.u-strasbg.fr/~bboett">http://erm6.u-strasbg.fr/~bboett</A>
+===============================================================
+the total amount of intelligence on earth is constant.
+human population is growing....
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00790" HREF="msg00790.shtml">Re: &lt;preserve notypo&gt; causing problems???</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00782" HREF="msg00782.shtml">help, completely lost....</A></strong>, <em>From:</em> Bruno Boettcher</li>
+<li><strong><A NAME="00784" HREF="msg00784.shtml">Re: help, completely lost....</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00787.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00789.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00784.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00790.shtml">Re: &lt;preserve notypo&gt; causing problems???</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00788"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00788"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

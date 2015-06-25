@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 21 May 1999 11:06:15 +0200 (MET DST) -->
+<!--X-Message-Id: 199905210905.LAA24054@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00680">Date Index</a>][<a href="thrd9.shtml#00680">Thread Index</a>]<br>
+[<A HREF="msg00679.shtml">Date Prev</A>][<A HREF="msg00681.shtml">Date Next</A>][<A HREF="msg00666.shtml">Thread Prev</A>][<A HREF="msg00681.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 21 May 1999 11:05:54 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Tobias Oetiker
+Reply-To: oetiker@engelberg.ethz.ch
+
+PROBLEM DESCRIPTION:
+
+I have a -E option in the .wmlrc file. For some reason the program I wanted
+wml to execute did not have the executable bit set. Interestingly enough wml
+does not seem care ... I think it should complain if something like this
+happens ...
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sparc-sun-solaris2.5.1
+    Perl: 5.005_03 (/usr/sepp/bin/perl)
+    User: local@engelberg.ethz.ch
+    Date: 15-Apr-1999
+Built Location:
+    Prefix: /usr/pack/wml-19990414-to
+    BinDir: /usr/pack/wml-19990414-to/bin
+    LibDir: /usr/pack/wml-19990414-to/lib
+    ManDir: /usr/pack/wml-19990414-to/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=solaris, osvers=2.5.1, archname=sun4-solaris
+    uname='sunos zinal.ee.ethz.ch 5.5.1 generic_103640-19 sun4u sparc sunw,ultra-enterprise '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O', gccversion=2.7.2
+    cppflags='-I/usr/local/include -I/usr/gnu/include'
+    ccflags ='-I/usr/local/include -I/usr/gnu/include'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib -L/usr/gnu/lib'
+    libpth=/usr/local/lib /usr/gnu/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -lgdbm -ldb -ldl -lm -lc -lcrypt
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G -L/usr/local/lib -L/usr/gnu/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at May 20 1999 11:39:17
+  @INC:
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503
+    /usr/pack/perl-solaris251-5.00503-ak/lib/site_perl/5.005/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/site_perl/5.005
+    .
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00679.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00681.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00666.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00681.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00680"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00680"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

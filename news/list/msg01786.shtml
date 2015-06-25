@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Idea how not to need future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Wed, 5 Jul 2000 10:04:30 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007050932140.6672&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200007050649.IAA02606@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01786">Date Index</a>][<a href="thrd32.shtml#01786">Thread Index</a>]<br>
+[<A HREF="msg01785.shtml">Date Prev</A>][<A HREF="msg01787.shtml">Date Next</A>][<A HREF="msg01785.shtml">Thread Prev</A>][<A HREF="msg01787.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Idea how not to need future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 5 Jul 2000 09:56:09 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Jan!
+
+On Wed, 5 Jul 2000, Jan Holler wrote:
+&gt; &gt; Another point of view: Imagine three different styles for your web-page: a
+&gt; &gt; text-only-version, a compact graphical version and an extensive graphical
+&gt; &gt; version... You want to write the content only once, with normal text,
+&gt; I "solved" this by using different templates for each
+&gt; subversion and switch between them via .wmlrc
+
+Ok - this would be a solution for your this case - but I want to use
+different environments at one page!
+
+&gt; I may misunderstand you, but I'd rather like to have a
+&gt; (central-)definition file in which I predefine the styles.
+
+Yes, of course, you can define all environments at one place, in one file
+;-)
+
+&gt; What is with your idea when you've got a 200-pages-site and
+&gt; want to _add_ a "new" environment (or style) to it?
+
+Ok - I see, that now everyone thinks in page styles :-(
+
+&gt; Have a look at CSS. The concept with wml could be similar.
+
+Yes - I think that my idea is something like that with another syntax...
+
+I'll give another example which I programmed yet:
+
+&lt;ptable&gt; is a container for a table made of photos and text.
+&lt;ptable:text&gt; is used to put text in one of this cells.
+&lt;ptable:pic&gt; is used to put a picture in one of this cells.
+
+I didn't want to define simple &lt;text&gt; and &lt;pic&gt; tags, because these names
+are to general (and I used them in another `environment´ too)...
+
+Now, a page using &lt;ptable&gt; looks in this way: (real-world example ;-) )
+
+&lt;ptable&gt;
+&lt;ptable:text row="3" col="2"&gt;
+&lt;P&gt;
+Im April organisierte ich eine Reise f&amp;uuml;r insgesamt &lt;B&gt;40
+Personen&lt;/B&gt; der &lt;B&gt;IAESTE Austria&lt;/B&gt; nach Spanien, genauer Barcelona
+und Valencia.
+&lt;/P&gt;
+&lt;/ptable:text&gt;
+&lt;ptable:pic row="1" col="2" src="iaeste/09_01.jpg"&gt;
+...aus der N&amp;auml;he betrachtet...&lt;/ptable:pic&gt;
+&lt;ptable:pic row="2" col="2" src="iaeste/09_02.jpg"&gt;
+...noch ganz jung.&lt;/ptable:pic&gt;
+&lt;ptable:pic row="1-2" col="1" src="iaeste/09_03.jpg"&gt;
+Ein Teil der Gruppe...&lt;/ptable:pic&gt;
+&lt;ptable:pic row="3" col="1" src="iaeste/09_14.jpg"&gt;
+Auch ein Besuch in meinem Reiseb&amp;uuml;ro stand am Programm&lt;/ptable:pic&gt;
+&lt;/ptable&gt;
+
+... and a more simplific version would be:
+
+&lt;ptable&gt;
+&lt;text&gt;Text&lt;/text&gt;
+&lt;pic&gt;Picture&lt;/pic&gt;
+&lt;pic&gt;Another picture&lt;/pic&gt;
+&lt;/ptable&gt;
+
+A simple &lt;ptable:text&gt; out of a &lt;ptable&gt; container doesn't make sense
+(absolutely no sense), therefore environments would enforce that by using
+&lt;text&gt; and &lt;pic&gt; ;-)
+
+Another idea was, that I want to make a kind of module of this picture
+table, which should co-exist with another modules which use similar &lt;text&gt;
+and &lt;pic&gt; tags, and I don't want to overwrite their definitions...
+
+Another example would be the new &lt;perl&gt; tags: inside of &lt;perl&gt;&lt;/perl&gt; the
+tag &lt;perl:print&gt; could be substituted by &lt;print&gt;, the same for
+&lt;perl:print:&gt;, &lt;perl:assign&gt;, etc. This is shorter to write ;-)
+
+But, as I stated in the last mail: I've got this idea in the pre-mp4h era,
+now I can solve these problems by using &lt;let&gt; ;-)
+
+Thanx for reading that much!
+
+Nice greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                       Mobil: +43 676 485 95 50
+A-1180 Wien, Gentzgasse 129/1/5, Austria            TEL: +43  1  478 18 01
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01787" HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01785" HREF="msg01785.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01785.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01785.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01786"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01786"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

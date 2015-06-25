@@ -1,0 +1,174 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ISOTIME should have ISO format... -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.eurva.qr> -->
+<!--X-Date: Sat, 18 Mar 2000 19:59:11 +0100 (MET) -->
+<!--X-Message-Id: 20000318182800.O844@spinnaker.rhein.de -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01442">Date Index</a>][<a href="thrd30.shtml#01442">Thread Index</a>]<br>
+[<A HREF="msg01440.shtml">Date Prev</A>][<A HREF="msg01444.shtml">Date Next</A>][<A HREF="msg01446.shtml">Thread Prev</A>][<A HREF="msg01454.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ISOTIME should have ISO format...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 18 Mar 2000 18:28:00 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I noted, that the so called ISOTIME in WML has the format 
+ dd-mm-yyyy hh:mm:ss
+
+As far as I know, the "official" ISO time format is 
+ yyyy-mm-dd hh:mm:ss
+
+The attached patch changes this in WML.
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+</PRE>
+<PRE>
+diff -urN wml-1.7.4-6.1/debian/changelog wml-1.7.4/debian/changelog
+--- wml-1.7.4-6.1/debian/changelog	Sat Mar  4 19:07:13 2000
++++ wml-1.7.4/debian/changelog	Sat Mar  4 19:42:58 2000
+@@ -1,3 +1,10 @@
++wml (1.7.4-6.2) unstable; urgency=low
++
++  * Non maintainer version.
++  * Change date in ISOTIME from DD-MM-YYYY to YYYY-MM-DD
++
++ -- Roland Rosenfeld &lt;roland@debian.org&gt;  Sat,  4 Mar 2000 19:42:57 +0100
++
+ wml (1.7.4-6.1) unstable; urgency=low
+ 
+   * Non maintainer version.
+diff -urN wml-1.7.4-6.1/wml_backend/p3_eperl/eperl.pod wml-1.7.4/wml_backend/p3_eperl/eperl.pod
+--- wml-1.7.4-6.1/wml_backend/p3_eperl/eperl.pod	Tue Jun  8 11:53:38 1999
++++ wml-1.7.4/wml_backend/p3_eperl/eperl.pod	Sat Mar  4 19:42:20 2000
+@@ -851,7 +851,7 @@
+ 
+ =item C&lt;SCRIPT_SRC_MODIFIED_ISOTIME&gt;
+ 
+-The last modification time of the script, in ISO format (``DD-MM-YYYY
++The last modification time of the script, in ISO format (``YYYY-MM-DD
+ HH:MM'').
+ 
+ =item C&lt;SCRIPT_SRC_OWNER&gt;
+diff -urN wml-1.7.4-6.1/wml_backend/p3_eperl/eperl_sys.c wml-1.7.4/wml_backend/p3_eperl/eperl_sys.c
+--- wml-1.7.4-6.1/wml_backend/p3_eperl/eperl_sys.c	Mon Sep 20 15:12:18 1999
++++ wml-1.7.4/wml_backend/p3_eperl/eperl_sys.c	Sat Mar  4 19:41:46 2000
+@@ -244,8 +244,8 @@
+     char timestr[128];
+ 
+     tm = localtime(t);
+-    sprintf(timestr, "%02d-%02d-%04d %02d:%02d",
+-                      tm-&gt;tm_mday, tm-&gt;tm_mon+1, tm-&gt;tm_year+1900,
++    sprintf(timestr, "%04d-%02d-%02d %02d:%02d",
++                      tm-&gt;tm_year+1900, tm-&gt;tm_mon+1, tm-&gt;tm_mday,
+                       tm-&gt;tm_hour, tm-&gt;tm_min);
+     return strdup(timestr);
+ }
+diff -urN wml-1.7.4-6.1/wml_docs/wml_intro.pod wml-1.7.4/wml_docs/wml_intro.pod
+--- wml-1.7.4-6.1/wml_docs/wml_intro.pod	Mon Sep 20 15:12:29 1999
++++ wml-1.7.4/wml_docs/wml_intro.pod	Sat Mar  4 19:41:27 2000
+@@ -142,8 +142,8 @@
+   
+       my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = 
+           localtime($time);
+-      my ($str) = sprintf("%02d-%02d-%04d %02d:%02d:%02d",
+-           $mday, $mon+1, $year+1900, $hour, $min, $sec);
++      my ($str) = sprintf("%04d-%02d-%02d %02d:%02d:%02d",
++           $year+1900, $mon+1, $mday, $hour, $min, $sec);
+       return $str;
+   }
+   &lt;/perl&gt;
+diff -urN wml-1.7.4-6.1/wml_frontend/wml.src wml-1.7.4/wml_frontend/wml.src
+--- wml-1.7.4-6.1/wml_frontend/wml.src	Sat Mar  4 18:46:48 2000
++++ wml-1.7.4/wml_frontend/wml.src	Sat Mar  4 19:45:42 2000
+@@ -66,8 +66,8 @@
+   
+     my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = 
+         localtime($time);
+-    my ($str) = sprintf("%02d-%02d-%04d %02d:%02d:%02d",
+-         $mday, $mon+1, $year+1900, $hour, $min, $sec);
++    my ($str) = sprintf("%04d-%02d-%02d %02d:%02d:%02d",
++         $year+1900, $mon+1, $mday, $hour, $min, $sec);
+     return $str;
+ }
+ 
+@@ -1527,7 +1527,7 @@
+ 
+ =item WML_SRC_ISOTIME
+ 
+-The last modification time of I&lt;inputfile&gt; in ISO C&lt;dd-mm-yyyy hh:mm:ss&gt; format.
++The last modification time of I&lt;inputfile&gt; in ISO C&lt;yyyy-mm-dd hh:mm:ss&gt; format.
+ Useful inside footers include files.
+ 
+ =item WML_SRC_USERNAME
+@@ -1545,7 +1545,7 @@
+ 
+ =item WML_GEN_ISOTIME
+ 
+-The current time of generation in ISO C&lt;dd-mm-yyyy hh:mm:ss&gt; format.
++The current time of generation in ISO C&lt;yyyy-mm-dd hh:mm:ss&gt; format.
+ Useful inside footers include files.
+ 
+ =item WML_GEN_USERNAME
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01454" HREF="msg01454.shtml">Re: ISOTIME should have ISO format...</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01440.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01444.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01446.shtml">Re: [BUG REPORT] WML 1.99.0, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01454.shtml">Re: ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01442"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01442"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

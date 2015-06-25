@@ -1,0 +1,152 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [HELP] Replacement of wml_p2_mhc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 3 Dec 1999 21:14:11 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991203205043.6130C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912031826.TAA19685@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01185">Date Index</a>][<a href="thrd24.shtml#01185">Thread Index</a>]<br>
+[<A HREF="msg01186.shtml">Date Prev</A>][<A HREF="msg01189.shtml">Date Next</A>][<A HREF="msg01181.shtml">Thread Prev</A>][<A HREF="msg01190.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [HELP] Replacement of wml_p2_mhc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 3 Dec 1999 21:17:17 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 3 Dec 1999, Jan Holler wrote:
+
+&gt; Hi Denis
+
+Hi Jan,
+
+&gt; great, things are still progressing.
+
+indeed.
+
+&gt; Thu, 2 Dec 1999 09:27:24 +0100 (CET), you wrote:
+&gt; 
+&gt; &gt; help to develop and maintain it.  Here is my TODO list on this project:
+&gt; &gt;   a priority.  I believe now that it is best to have a robust and easy
+&gt; &gt;   to learn syntax.
+&gt; 
+&gt; i would go for the robustness first. who tells us what easy
+&gt; means.
+&gt; 
+&gt; &gt;  Compatibility with older templates within WML is
+&gt; &gt;   done via wml::sys::bootmhc.
+&gt; 
+&gt; did i miss something? i thought i had read about wml 2.x.
+&gt; is your work part of it?
+
+Hmmm, to be honest, Ralf wrote some words about WML 2.x in the FAQ, but
+i do not know what he had in mind. My vision of WML 2.0 is
+* better documentation
+* better support for HTML 4.0, XML, CSS, ....
+* replace MH by mp4h
+* test the recursive calls of ePerl commands i wrote some weeks ago
+
+&gt; &gt; * Write documentation. My version does not include documentation yet,
+&gt; &gt;   it's why there is no URL in this post.
+&gt; 
+&gt; what is missing?
+
+Almost everything :(
+
+&gt; &gt; * Enhance C portability (mp4h has been tested on Linux and SunOS 5.6)
+&gt; 
+&gt; release it! others may take care of that.
+
+I know you're right. Ok, let's go:
+    <A  HREF="http://imacs.polytechnique.fr/~barbier/mp4h/">http://imacs.polytechnique.fr/~barbier/mp4h/</A>
+
+Some words of explanation: to use it within WML, you have to
+* download a recent version of WML (recent means no more than 1 day)
+* compile mp4h and install it in the same directory than wml_p2_mhc,
+  rename it to wml_p2_mp4h.
+* with the -z flag, wml uses wml_p2_mp4h. Without it, wml_p2_mhc is
+  used.
+
+This is still experimental, improvements of any kind are welcome.
+
+&gt; &gt; * If needed, write a converter to ease upgrading template files.
+&gt; &gt; * Enhance wml::sys::bootmhc for maximum backward compatibility.
+&gt; 
+&gt; what are the main differences?
+
+In my mind, the former is to continue to use previous templates whereas
+the latter is to convert them from old to new syntax. It's not exactly
+the same goal.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01190" HREF="msg01190.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01193" HREF="msg01193.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01181" HREF="msg01181.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01186.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01189.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01181.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01190.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01185"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01185"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

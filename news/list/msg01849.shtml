@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ePerl and language&#45;dependent output -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Tue, 18 Jul 2000 14:04:45 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007181405340.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000718134122.A13786@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01849">Date Index</a>][<a href="thrd37.shtml#01849">Thread Index</a>]<br>
+[<A HREF="msg01848.shtml">Date Prev</A>][<A HREF="msg01850.shtml">Date Next</A>][<A HREF="msg01848.shtml">Thread Prev</A>][<A HREF="msg01850.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ePerl and language-dependent output</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 14:12:21 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+&gt; &gt; But not when the call to &lt;perl_get_current_lang&gt; is *outside* of any
+&gt; &gt; language-dependent section, right? I mean,
+&gt; &gt; 
+&gt; &gt; &lt;body&gt;
+&gt; &gt; &lt;perl_get_current_lang&gt;
+&gt; &gt; &lt;/body&gt;
+&gt; &gt; 
+&gt; &gt; won't work, at least according to my experiments, and what (little) I
+&gt; &gt; understand of wml passes :-)
+&gt; 
+&gt; But 
+&gt;   &lt;body&gt;
+&gt;   &lt;get_current_lang&gt;
+&gt;   &lt;/body&gt;
+&gt; will produce the same output.
+
+Now I'm stumped! :-) But that's basically how I use it (with a proper
+call to wml like "wml myfile.wml --include=include-2.0   
+-o '(ALL-LANG_*)uLANG_E:myfile_e.html' -o '(ALL-LANG_*)uLANG_D:myfile_d.html'",
+of course)...
+
+Did you really try it out? If I just use &lt;perl_get_current_lang&gt;, the
+output will be the same in both html files, independent of the actual
+language. If I use &lt;get_current_lang&gt;, and thus branch off into the
+various languages, it works fine...
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01850" HREF="msg01850.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01848" HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01850.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01850.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01849"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01849"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

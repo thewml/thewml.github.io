@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML SNAP, Any -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 27 Aug 2000 01:34:03 +0200 (MET DST) -->
+<!--X-Message-Id: 20000827013709.A20858@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200008080919.LAA28483@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01902">Date Index</a>][<a href="thrd38.shtml#01902">Thread Index</a>]<br>
+[<A HREF="msg01901.shtml">Date Prev</A>][<A HREF="msg01903.shtml">Date Next</A>][<A HREF="msg01885.shtml">Thread Prev</A>][<A HREF="msg01886.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML SNAP, Any</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 27 Aug 2000 01:37:09 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Aug 08, 2000 at 11:19:50AM +0200, duenki@isi.ee.ethz.ch wrote:
+
+&gt; Problem Description:
+&gt; | Hi,
+&gt; | 
+&gt; | While compiling wml_common/bitvector you can get
+&gt; | into trouble, if your perl is of version prior to
+&gt; | 5.005. According to the INSTALL.txt (this file is
+&gt; | missing in the wml distribution) of Bit-Vector-5.8
+&gt; | a small change is needed:
+&gt; | 
+&gt; | Preliminary steps for use with Perl prior to version 5.005:
+&gt; | -----------------------------------------------------------
+&gt; | 
+&gt; | Edit the file "Vector.xs" and change all occurrences (just two)
+&gt; | of "PL_na" into "na".
+&gt; | 
+&gt; | 
+&gt; | If your perl is even prior to version 5.002, more changes are required.
+
+Hi,
+
+previous version of Bit::Vector was hacked to compile well under all
+recent Perl versions, by adding these 3 lines
+
+  #if (PERL_VERSION &lt; 4) || ((PERL_VERSION == 4) &amp;&amp; (PERL_SUBVERSION &lt;= 5))
+  #      define PL_na            na
+  #endif
+
+I will fix Bit::Vector ASAP, thanks for your help.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01885" HREF="msg01885.shtml">[BUG REPORT] WML SNAP, Any</A></strong>, <em>From:</em> duenki</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01901.shtml">Re: Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01903.shtml">Re: Problems with href</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01885.shtml">[BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01886.shtml">wml don't compile on NetBSD</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01902"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01902"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

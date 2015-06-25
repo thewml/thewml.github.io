@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Daily Snapshot as .tar.gz -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Thu, 8 Apr 1999 13:29:04 +0200 (MET DST) -->
+<!--X-Message-Id: 87yak31hex.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990408042123.26832B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00555">Date Index</a>][<a href="thrd13.shtml#00555">Thread Index</a>]<br>
+[<A HREF="msg00554.shtml">Date Prev</A>][<A HREF="msg00556.shtml">Date Next</A>][<A HREF="msg00554.shtml">Thread Prev</A>][<A HREF="msg00558.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Daily Snapshot as .tar.gz</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 08 Apr 1999 13:27:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; In <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A> you have a pointer to the
+&gt; latest snapshot (wml-SNAP-[0-9]*.tar.gz) so i don't understand the
+&gt; subject of your post.
+
+I think do understand it:
+
+Florian got <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A> through a proxy
+and got a page that still contained a link to an obsolete
+wml-SNAP-*.tar.gz (note that he tried to get the 1999-04-07T06:00
+snapshot at 1999-04-08T01:15).
+
+Maybe the server should set an appropriate Expires: header for
+<A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>.
+
+Yours, Florian.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00558" HREF="msg00558.shtml">Re: Daily Snapshot as .tar.gz</A></strong>, <em>From:</em> Florian Kuehnert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00554" HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00556.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00558.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00555"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00555"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

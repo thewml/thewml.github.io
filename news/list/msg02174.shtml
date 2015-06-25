@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG&#45;REPORT WML 2.1a1: .wmlrc ignored? -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Thu, 15 Mar 2001 17:18:33 +0100 (MET) -->
+<!--X-Message-Id: 20010312005421.B19639@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010311013751.A18320@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02174">Date Index</a>][<a href="thrd44.shtml#02174">Thread Index</a>]<br>
+[<A HREF="msg02173.shtml">Date Prev</A>][<A HREF="msg02175.shtml">Date Next</A>][<A HREF="msg02165.shtml">Thread Prev</A>][<A HREF="msg02176.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG-REPORT WML 2.1a1: .wmlrc ignored?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Mar 2001 00:54:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Denis Barbier wrote:
+&gt; WML 2.1a1 is out, this is the first unstable release since the
+&gt; discussion about having stable and unstable branches.
+
+OK, and here's the first bug report:
+
+WML 2.1a1 seems to ignore all .wmlrc files. Neither my -I directives
+nor --verbose are noticed when appearing inside a .wmlrc file in the
+same directory as the wml file is located as well as inside .wmlrc
+files somewhere else between / and that directory.
+
+Oh, and here's the systems data: 
+
+1107/0 axel@kathrin:pts/6 0:52 [~/source] &gt; /opt/test/bin/wml -V
+This is WML Version 2.1a1 (10-Mar-2001)
+Copyright (c) 1996-2000 Ralf S. Engelschall.
+Copyright (c) 1999-2000 Denis Barbier.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+1108/0 axel@kathrin:pts/6 0:52 [~/source] &gt; uname -a
+SunOS kathrin 5.7 Generic sun4u sparc
+1109/0 axel@kathrin:pts/6 0:52 [~/source] &gt; perl -v
+
+This is perl, v5.6.0 built for sun4-solaris
+
+Copyright 1987-2000, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5.0 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using `man perl' or `perldoc perl'.  If you have access to the
+Internet, point your browser at <A  HREF="http://www.perl.com/">http://www.perl.com/</A>, the Perl Home Page.
+
+1110/0 axel@kathrin:pts/6 0:53 [~/source] &gt; 
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02176" HREF="msg02176.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02165" HREF="msg02165.shtml">[wml] New release (unstable)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02173.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02175.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02165.shtml">[wml] New release (unstable)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02176.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02174"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02174"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

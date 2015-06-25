@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.4.11 :&#45;( -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 31 Dec 1997 11:00:37 +0100 (MET) -->
+<!--X-Message-Id: 199712311000.LAA16462@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00016">Date Index</a>][<a href="thread.shtml#00016">Thread Index</a>]<br>
+[<A HREF="msg00015.shtml">Date Prev</A>][<A HREF="msg00017.shtml">Date Next</A>][<A HREF="msg00015.shtml">Thread Prev</A>][<A HREF="msg00017.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.4.11 :-(</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 31 Dec 1997 11:00:33 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Shit happens, so after just one day of release 1.4.10:
+
+Website META Language, Version 1.4.11
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+
+  Changes between 1.4.10 and 1.4.11:
+      971231 - Upgraded to ePerl 2.2.12: This fixes a nasty
+               syntax error in ePerl 2.2.11's configure script.
+               The result was that ePerl failed to build when
+               your Perl version was not of type 5.00X_YZ :-(
+
+But if your Perl version read exactly 5.00X_YZ you are lucky:
+No upgrade necessary, because 1.4.10 build correctly for this case...
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00015.shtml">ANNOUNCE: WML 1.4.10</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00017.shtml">RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00015.shtml">ANNOUNCE: WML 1.4.10</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00017.shtml">RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00016"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00016"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

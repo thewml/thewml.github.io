@@ -1,0 +1,158 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: p7_htmlfix sugguestion -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Wed, 12 Jul 2000 16:34:24 +0200 (MET DST) -->
+<!--X-Message-Id: 200007121434.QAA13449@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000712164146.A19485@skater.htu.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01807">Date Index</a>][<a href="thrd37.shtml#01807">Thread Index</a>]<br>
+[<A HREF="msg01806.shtml">Date Prev</A>][<A HREF="msg01808.shtml">Date Next</A>][<A HREF="msg01806.shtml">Thread Prev</A>][<A HREF="msg01808.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: p7_htmlfix sugguestion</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed 12 Jul 2000 16:33:54 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Wed, 12 Jul 2000 16:41:46 +0200, Gerfried Fuchs wrote:
+
+&gt;  If you are referencing a picture, you have to use a relative path if
+&gt; you want wml_p7_htmlfix to add it's width and height-argument
+&gt; automatically. That can be a PITA if you are using the same pictures in
+&gt; different pages around your site.
+&gt; 
+&gt;  I tried to fix it, and produced the following diff to clearify what I
+&gt; meant: What I was trying to achieve is that I define e.g. -D
+&gt; DOC_ROOT=/home/alfie/WWW at the start, and that each image that has a
+&gt; leading / in it's reference will be searched starting from that
+
+There is IMHO an easier way to achieve the same benefits:
+
+In .wmlrc I define e.g.
+
+-D ROOTIMG~./images
+
+In the wml-files I use:
+
+&lt;img src="$(ROOTIMG)/foo.gif"&gt;
+
+Bye, cheers!
+ -jan
+
+
+
+&gt; directory. The only problem I am faced is that I didn't find out how to
+&gt; pass that argument along to wml_p7_htmlfix. I hope that this a
+&gt; interesting sugguestion and helps also someone else than me :-)
+&gt; 
+&gt; ----------------------------------------------------------------------
+&gt; --- wml_p7_htmlfix.orig Sat Jun 24 07:45:18 2000
+&gt; +++ wml_p7_htmlfix      Wed Jul 12 11:10:00 2000
+&gt; @@ -122,8 +122,12 @@
+&gt;          }
+&gt;          if ($width  eq '*' or $width  == -1 or
+&gt;              $height eq '*' or $height == -1   ) {
+&gt; -            if (-f $image) {
+&gt; -                ($Pwidth, $Pheight) = Image::Size::imgsize($image);
+&gt; +#  Changed on 2000-07-11 by Gerfried Fuchs &lt;alfie@debian.org&gt;
+&gt; +            $foo = (substr($image, 0, 1) eq "/")
+&gt; +                   ? $DOC_ROOT.$image :
+&gt; +                   $image;
+&gt; +            if (-f $foo) {
+&gt; +                ($Pwidth, $Pheight) = Image::Size::imgsize($foo);
+&gt; 
+&gt;                  #    width given, height needs completed
+&gt;                  if ((not ($width  eq '*' or $width  == -1)) and
+&gt; ----------------------------------------------------------------------
+&gt; 
+&gt;  I hope that I did make myself clear a little bit?  It would be great if
+&gt; something like this could find it's way into the next release.
+&gt; 
+&gt;  This fix would also have a nice side-effect: If that variable is also
+&gt; available in the eperl-part you can quite easily produce the URL of the
+&gt; current file by simply substituting $DOC_ROOT with <A  HREF="http://what.ever">http://what.ever</A> :)
+&gt; 
+&gt;  Have fun!
+&gt; Alfie
+&gt; -- 
+&gt; "There are some micro-organisms that exhibit characteristics of both
+&gt; plants and animals.  When exposed to light they undergo photosynthesis;
+&gt; and when the lights go out, they turn into animals.  But then again,
+&gt; don't we all?"
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+
+
+-- 
+  Holler iNetCom
+  <A  HREF="http://www.inetcom.ch/">http://www.inetcom.ch/</A>
+  tel: +41 31 9916185, bern, schweiz
+  Pubkey: <A  HREF="http://wwwkeys.ch.pgp.net:11371/pks/lookup?op=index&amp;search=jh@inetcom.ch">http://wwwkeys.ch.pgp.net:11371/pks/lookup?op=index&amp;search=jh@inetcom.ch</A>
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01806" HREF="msg01806.shtml">p7_htmlfix sugguestion</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01806.shtml">p7_htmlfix sugguestion</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01808.shtml">Anyone Here</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01806.shtml">p7_htmlfix sugguestion</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01808.shtml">Anyone Here</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01807"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01807"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

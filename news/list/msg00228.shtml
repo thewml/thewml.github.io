@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [WML 1.6.7] boot.wml patch -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Thu, 29 Oct 1998 18:35:13 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.4.03.9810290908460.32015&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19981029145225.B3678@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00228">Date Index</a>][<a href="thrd5.shtml#00228">Thread Index</a>]<br>
+[<A HREF="msg00227.shtml">Date Prev</A>][<A HREF="msg00229.shtml">Date Next</A>][<A HREF="msg00227.shtml">Thread Prev</A>][<A HREF="msg00229.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [WML 1.6.7] boot.wml patch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Oct 1998 09:24:36 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 29 Oct 1998, Ralf S. Engelschall wrote:
+
+&gt; &gt; Can you please consider including a modified boot.wml file to
+&gt; &gt; the next WML distribution?
+&gt; 
+&gt; Sure. There are already a few patches available. These days I'm busy with
+&gt; releasing mod_ssl 2.1b but then I'll try to find a little time to assemble a
+&gt; WML 1.6.8 for us. And I'll include your patch, too. Thanks for your effort.
+
+or better yet, someone else can collect up the availible patches and start
+a "WML 1.6.8xxpre1" where xx might be the person's initials. This is
+inspired by linux, where alan cox has pre-patches that he works on, but
+they aren't necessarily going to be blessed and placed into the next
+kernel. This would be the same way: Ralf could provide some minimal
+guidance to things but other people could do the maintaining via
+patchkits. Patches and alread-patched source tarballs can be made
+availible on the person's web page, etc. When Ralf gets some time free,
+and see's that we're at 1.n.nxxpre6 or something and decides the stuff
+that was added in pre1 and pre2 has now been tweaked out and is ready for
+prime time, he can wave the wand and release a 1.n.n+1, which might be a
+carbon copy of pre6 or it might be just SOME of the patches involved...
+Maintaining a good set of patches so that Ralf can pick and choose which
+mods should make it into the next stable release is important, especialy
+because Ralf may make changes in his own wml-current tree and will need a
+good patch to be able to apply cleanly over potentially altered sources.
+
+Some of the posts in the last few days have been very "cathedral" centric,
+and I'm hoping to talk y'all out of that into a more bazaar-like model
+where the development effort doesn't have to flow through Ralf all the
+time. (www.opensource.org might have pointers to the paper regarding this
+distinction) So if you've got a suggestion, post it, but addressed to
+everyone who might be able to code it, not just Ralf. And if you've got
+code, don't be shy, post a pointer to it, or if it's short, just post it!
+Learn to use patch if you haven't already, to post patches of existing wml
+sources, and so forth. Or post to the list if you're hvaing trouble making
+a patch: some one will hel you.
+
+And if you've got a suggestion but no code, give serious thought to diving
+in and writing some. You might think "hey, who the hell am I? I can't
+possibly be the right person to code this idea" but people like you garner
+up the courage to do some hacking and come up with something. Even if you
+don't get it to work right, sometimes half-baked code that is in the
+direction of what you want will do MUCH more to spark other hackers to
+work on coding that feature with you than a simple suggestion posted to
+the list, and you'll usually end up smarter at the end of the day because
+people will so often spend gobs of time helping you learn.
+
+Go forth and hack on it! =)
+
+jim
+who hasn't even used wml for many months, and is embroiled in a bazaar
+free software project of his own.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00229" HREF="msg00229.shtml">Re: [WML 1.6.7] boot.wml patch</A></strong>, <em>From:</em> Michael McNamara</li>
+<li><strong><A NAME="00231" HREF="msg00231.shtml">RE: [WML 1.6.7] boot.wml patch</A></strong>, <em>From:</em> David Harris</li>
+<li><strong><A NAME="00232" HREF="msg00232.shtml">Installation failed</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00227" HREF="msg00227.shtml">Re: [WML 1.6.7] boot.wml patch</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00227.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00229.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00227.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00229.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00228"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00228"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,152 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: including files depending on language -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNsfo.ue> -->
+<!--X-Date: Tue, 16 Feb 1999 20:55:25 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.4.04.9902161933250.4278&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 99021221191800.10911@apo.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00395">Date Index</a>][<a href="thrd3.shtml#00395">Thread Index</a>]<br>
+[<A HREF="msg00394.shtml">Date Prev</A>][<A HREF="msg00396.shtml">Date Next</A>][<A HREF="msg00394.shtml">Thread Prev</A>][<A HREF="msg00396.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>including files depending on language</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 16 Feb 1999 20:01:27 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+       I'm quite new to this, so.... (if there is a mailing list
+       archive, it would help me a lot... anyone?)
+
+       is it possible to make something like this (i know this won't
+       work; this is just the easiest way to explain):
+
+#use wml::std::lang
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+
+&lt;lang:star: 
+
+#include incl.*.wml
+
+&gt;
+
+       incl.de.wml and incl.en.wml already exist.
+
+       Or (very short): how to include different files, depending on
+       language?
+
+
+
+       Longer explanation
+       ------------------
+
+       Let's say we have to build a page in three different languages
+       (en, de, fr) but material in French is not ready yet. So, we
+       create some 'modules' in order to easy add French language,
+       like this:
+
+#use wml::std::lang
+#include 'language.list.wml'
+
+&lt;lang:star:
+#include headers/header1.*.wml
+&gt;
+
+&lt;lang:star:
+#include toolbars/toolbar.*.wml
+&gt;
+
+etc etc
+
+       File 'language.list.wml' looks like this:
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+
+       ...and directories 'toolbars' and 'headers' are fulfilled with
+       files called header1.de.wml, header1.en.wml, toolbar.de.wml,
+       toolbar.en.wml etc... each with appropriate content.
+
+       The pages are generated with -o option (there is no shebang
+       line on the beginning of the file).
+
+       After finishing French lang. material, we just add the files
+       into the appropriate directories, add &lt;lang:new id=fr short&gt;
+       to 'language.list.wml' and 'recompile' the pages for French
+       language.
+
+       Maybe #include command can be somehow emulated (with perl or
+       m4)?
+-- 
+      v
+Davor Cengija
+Davor.Cengija@fsb.hr
+-------------------------------------------------
+Doktore, malo sam neodlu&ccaron;an... a mo&zcaron;da i nisam...
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00396" HREF="msg00396.shtml">Re: including files depending on language</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00394" HREF="msg00394.shtml">Re: wml::std::lang</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00394.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00396.shtml">Re: including files depending on language</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00394.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00396.shtml">Re: including files depending on language</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00395"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00395"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

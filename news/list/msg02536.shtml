@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: breadcrumb navigation trail -->
+<!--X-From-R13: Oaqref Rvafra <naqrefNqvafra.arg> -->
+<!--X-Date: Sun, 3 Mar 2002 22:20:23 +0100 (MET) -->
+<!--X-Message-Id: Pine.NEB.4.33.0203032203580.19171&#45;100000@kvik.lan.dinsen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87n0xs8vm0.fsf@pcdh91.cern.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02536">Date Index</a>][<a href="thrd51.shtml#02536">Thread Index</a>]<br>
+[<A HREF="msg02535.shtml">Date Prev</A>][<A HREF="msg02537.shtml">Date Next</A>][<A HREF="msg02535.shtml">Thread Prev</A>][<A HREF="msg02586.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: breadcrumb navigation trail</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anders Dinsen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 3 Mar 2002 22:18:35 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Tibor
+
+I'd like to suggest another solution in which every document's title and
+description headers can be referenced from other documents. A directory's
+title is the title of the index-document of that directory.
+
+&gt;From that, the bread crumb trail can be constructed.
+
+I've implemented this on my site <A  HREF="http://dinsen.net/">http://dinsen.net/</A>, but it's not made
+with WML, im afraid, but a similar system that I call PMCMS which is based
+around the macro processor that goes in WML: mp4h.
+
+Here's what I do: When a document is referenced in a hyperlink, the source
+file (in this case it would be the WML file) is looked up and used if it's
+found to extract the meta information of the document (title and
+description). If the WML source isn't available, then the HTML document is
+looked up and used instead.
+
+I use a simple mp4h script to extract the meta information from the
+doucment. The source can be viewed on:
+
+<A  HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/pmcms/pmcms/mp4h/getmetainfo.mp4hp?rev=1.4">http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/pmcms/pmcms/mp4h/getmetainfo.mp4hp?rev=1.4</A>
+
+(It's part of PMCMS).
+
+To extract the meta information from a file, I do:
+
+mp4h getmetainfo.mp4hp &lt;file&gt;
+
+This produces an output like:
+
+&lt;set-var title="the title in the file"&gt;
+&lt;set-var description="the description in the file"&gt;
+
+which is fed into the script processing the file that needs the
+information by:
+
+&lt;preserve title description /&gt;
+&lt;include command="mp4h getmetainfo.mp4h &lt;get-var file /&gt;" /&gt;
+Use the title and description somehow, e.g. to construct a link
+&lt;restore title description /&gt;
+
+I use this methon in PMCMS to construct TITLE attributes on hyperlinks
+too.
+
+I hope that this can serve as inspiration.
+
+Cheers,
+- Anders
+
+On Fri, 1 Mar 2002, Tibor Simko wrote:
+
+&gt; Hello
+&gt;
+&gt; Has anybody created a template for automatic creation of the
+&gt; breadcrump navigation trail[1] for websites containing many nested
+&gt; subdirs?
+&gt;
+&gt; For the CERN chess site[2] I'm currently using a simple and plain
+&gt; approach, where the trail links to parent dirs are specified verbatim
+&gt; in a template file in each subdir.  This would become impractical to
+&gt; maintain if the site contains many nested subdirs and if one has to
+&gt; rename subdirs or to move them along, etc.
+&gt;
+&gt; It's relatively easy to make a script to create this trail
+&gt; automatically, based on the dir structure and a config file with
+&gt; desired link names, but perhaps somebody has done that already, so I
+&gt; thought of asking here in order not to reinvent the wheel :-).  TIA.
+&gt;
+&gt; Tibor
+&gt;
+&gt; Footnotes:
+&gt; [1] For definition, see &lt;<A  HREF="http://www.useit.com/alertbox/991114.html">http://www.useit.com/alertbox/991114.html</A>&gt;.
+&gt; [2] See for example the orange-coloured navigation trail on the page:
+&gt;     &lt;<A  HREF="http://chess.cern.ch/ratings/elocalc.en.shtml">http://chess.cern.ch/ratings/elocalc.en.shtml</A>&gt;.
+&gt;
+&gt;
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt;
+
+-- 
+Anders Dinsen
+anders@dinsen.net
+<A  HREF="http://dinsen.net/anders/">http://dinsen.net/anders/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02586" HREF="msg02586.shtml">Re: breadcrumb navigation trail</A></strong>, <em>From:</em> Tibor Simko</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02535" HREF="msg02535.shtml">breadcrumb navigation trail</A></strong>, <em>From:</em> Tibor Simko</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02535.shtml">breadcrumb navigation trail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02537.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02535.shtml">breadcrumb navigation trail</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02586.shtml">Re: breadcrumb navigation trail</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02536"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02536"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

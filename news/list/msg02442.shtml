@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: publish output files via FTP 'economically' -->
+<!--X-From-R13: Oyivfr Prybggv <nyivfrNyrggrer.havcq.vg> -->
+<!--X-Date: Tue, 20 Nov 2001 09:41:09 +0100 (MET) -->
+<!--X-Message-Id: 20011120093947.A11646@fedro.lettere.unipd.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E1666AO&#45;0007Gu&#45;00@sand7.global.net.uk -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02442">Date Index</a>][<a href="thrd49.shtml#02442">Thread Index</a>]<br>
+[<A HREF="msg02441.shtml">Date Prev</A>][<A HREF="msg02443.shtml">Date Next</A>][<A HREF="msg02441.shtml">Thread Prev</A>][<A HREF="msg02443.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: publish output files via FTP 'economically'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alvise Belotti &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Nov 2001 09:39:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+[Tue, Nov 20, 2001 at 08:17:37AM -0000] - Sebastian Brosig scrive:
+&gt; wml leaves its output files intermingled with input files, but in one's
+&gt; DocumentRoot one wants just the data that is needed to render the pages, not
+&gt; .wml and include files. Has anyone out there a convenient solution to keep a
+&gt; remote Webserver in sync with the locally developed html code, the only
+&gt; administrative access to the server being  ftp? 
+Maybe something like this is what you are looking for?
+
+a) put all generated html files elsewhere in your home
+   cat .wmkrc
+   -o ../some_directory/out_of_your_wml/working_dir/%BASE.html
+(%BASE is the filename of the source file without any extension)
+
+b) cd ../some_directory/out_of_your_wml/working_dir/
+   lftp your.server
+   lftp :~&gt;mirror -R -n
+   man lftp for more
+
+Ciao, Alvise
+--
+| Alvise Belotti                     |   /"\  .  ASCII Ribbon Campaign .
+| E-mail:   alvise@laventa.it        |   \ /  .- NO HTML/RTF in e-mail .
+| La Venta: <A  HREF="http://www.laventa.it">http://www.laventa.it</A>    |    X   .- NO Word docs in e-mail.
+| E-mail:   info@laventa.it          |   / \  .. . . . . . . . . . . . .
+| PGP Key fingerprint = AD 85 93 92 A9 9C 93 14  9C 6B 3B 15 52 79 B8 BD
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02441" HREF="msg02441.shtml">publish output files via FTP 'economically'</A></strong>, <em>From:</em> Sebastian Brosig</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02441.shtml">publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02443.shtml">Re: [wml] publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02441.shtml">publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02443.shtml">Re: [wml] publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02442"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02442"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

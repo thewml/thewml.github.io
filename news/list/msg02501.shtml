@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: xtable and mp4h error -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 10 Feb 2002 21:45:25 +0100 (MET) -->
+<!--X-Message-Id: 20020210215426.A12142@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 1013354869.32542.6.camel@tomk32 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02501">Date Index</a>][<a href="thrd51.shtml#02501">Thread Index</a>]<br>
+[<A HREF="msg02500.shtml">Date Prev</A>][<A HREF="msg02502.shtml">Date Next</A>][<A HREF="msg02500.shtml">Thread Prev</A>][<A HREF="msg02502.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: xtable and mp4h error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 10 Feb 2002 21:54:26 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Feb 10, 2002 at 04:27:49PM +0100, Thomas R. Koll wrote:
+&gt; Hi there,
+&gt; First how can I get rid of these lines when using &lt;xtable&gt;?
+&gt; ####snip####
+&gt; &lt;!-- WARNING: The following table was produced by freetable. --&gt;
+&gt; &lt;!-- Unless know what you are doing, you should not edit it here, --&gt;
+&gt; &lt;!-- but edit sources and then run freetable to rebuild this table --&gt;
+&gt; ####snap####
+
+IIRC, freetable's author changed the meaning of the -w flag, and I
+forgot to remove this flag from its command line.
+It has just been fixed in CVS, thanks.
+
+You could edit .../include/fmt/xtable.wml and remove the -w flag when
+calling freetable.
+
+&gt; Second I get a lot of warnings with mp4h
+&gt; ####snip####
+&gt; 16:25:09 Sun Feb 10  $ wmk
+&gt; /usr/bin/wml -n '-o(ALL-LANG_*)+LANG_EN:/var/www/tomk32/en/about.php'
+&gt; '-o(ALL-LANG_*)+LANG_DE:/var/www/tomk32/de/about.php' about.wml
+&gt; /usr/lib/wml/exec/wml_p2_mp4h: WARNING:about.wml:0: variable stack not
+&gt; empty, it means &lt;preserve&gt; pushed more items than &lt;restore&gt; popped
+&gt; ####snap####
+&gt; 
+&gt; the site complies but both is annoying me a bit
+
+In order to preserve variable contents, a stack can be used to push and
+pop values.  This message tells you that you pushed more items than
+popped, so check your &lt;preserve&gt;/&lt;restore&gt; tags.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02500" HREF="msg02500.shtml">xtable and mp4h error</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02500.shtml">xtable and mp4h error</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02502.shtml">bug in href or toc?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02500.shtml">xtable and mp4h error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02502.shtml">bug in href or toc?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02501"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02501"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

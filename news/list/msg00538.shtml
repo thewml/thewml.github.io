@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested navbars -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 1 Apr 1999 19:34:51 +0200 (MET DST) -->
+<!--X-Message-Id: 19990401193415.A66910@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990401183246.6462A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00538">Date Index</a>][<a href="thrd3.shtml#00538">Thread Index</a>]<br>
+[<A HREF="msg00537.shtml">Date Prev</A>][<A HREF="msg00539.shtml">Date Next</A>][<A HREF="msg00537.shtml">Thread Prev</A>][<A HREF="msg00539.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Apr 1999 19:34:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Apr 01, 1999, Denis Barbier wrote:
+
+&gt; i have investigated how to nest navbars. The aim is to write a navbar.wml
+&gt; which allows any level of nesting in an elegant way.
+&gt; I am not sure my solution is elegant, but it provides easy unlimited
+&gt; nesting. An example has been put to
+&gt;    <A  HREF="http://www.engelschall.com/sw/wml/test/gimp/">http://www.engelschall.com/sw/wml/test/gimp/</A>
+&gt; with the authorization of the gimp's website designer.
+&gt; 
+&gt; Well it's not finished yet, but maybe you have meaningful comments.
+
+The idea of the navbar="menu1" attribute is elegant and really neat.
+Great work, Denis.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00536" HREF="msg00536.shtml">Nested navbars</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00537.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00539.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00537.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00539.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00538"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00538"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

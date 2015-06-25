@@ -1,0 +1,148 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: some typos in help -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 25 Feb 2002 22:37:02 +0100 (MET) -->
+<!--X-Message-Id: 20020225224327.A6033@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C7A5158.9020902@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02528">Date Index</a>][<a href="thrd51.shtml#02528">Thread Index</a>]<br>
+[<A HREF="msg02527.shtml">Date Prev</A>][<A HREF="msg02529.shtml">Date Next</A>][<A HREF="msg02525.shtml">Thread Prev</A>][<A HREF="msg02532.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: some typos in help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Feb 2002 22:43:27 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Feb 25, 2002 at 03:59:36PM +0100, Veres Ferenc wrote:
+&gt; Hi!
+&gt; 
+&gt; First I want to say thanks for the very cool system, WML.
+&gt; I am new to it, not made anything, just learning the things
+&gt; and trying some examples and my works since 1.5 weeks.
+&gt; I decided to send the errors in help system. Later I will have
+&gt; questions. (I had a lot, but I always switch to new parts of
+&gt; the system to have an overall view first, and always forget
+&gt; the problems. :-)
+&gt; 
+&gt; in documentation of wmd::des::navbar
+&gt; 
+&gt; s/one point fot the/one point for the/
+
+Ok.
+
+&gt; s/There are two possible/There are three possible/
+
+Ok.
+
+&gt; s/my ($mycode, /my ($mycode);\nmy (/
+
+Not ok, but there is an error few lines above, it should be:
+    $markup_code = &amp;{$func}($markup_code, $CFG, $select);
+
+&gt; Will mail questions later. And some more errors in
+&gt; documentation if you like. Please check these and fix
+&gt; if you agree. (hope they are understandable)
+
+Sure, all fixes are welcome.
+
+&gt; Congratulations for the great system, Mr. Engelshcall!
+&gt; 
+&gt; Two question, what may pop up for beginners, so did
+&gt; for me as well:
+&gt; 
+&gt; 1. This is used to convert ONE wml file to one-or-more
+&gt; (pass9) html files.
+
+Right.
+
+&gt; This is not clear in the first seek, please state it more clearly,
+
+Patches are welcome ;)
+
+&gt; and if this is true, please state that I have to make a little script
+&gt; or makefile to have all my pages processed. Currently I made a little
+&gt; shell script: for i in *.wml; do; wml $i; done. Is this the way?
+
+No, you may either try wmk or use Makefiles.
+In any case, did you try wmd?  It helps a lot browsing documentation.
+
+[...]
+&gt; While if it was documented better, it would be
+&gt; easier for "beginners". Hope you agree.
+
+Sure, Ralf did write very nice documentation, but I must say I did not 
+try to improve it, because I feel unable to write good documentation.
+And I believe that documentation is much more useful when it is written
+by users and not developers (this is true for programs I develop, and is
+of course wrong with the ones I am using ;o)).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02532" HREF="msg02532.shtml">Re: some typos in help</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02524" HREF="msg02524.shtml">some typos in help</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02527.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02529.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02525.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02532.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02528"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02528"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

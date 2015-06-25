@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Can you explain the behaviour of the following? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 20 Feb 2001 00:56:00 +0100 (MET) -->
+<!--X-Message-Id: 20010220010241.A8208@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.31.0101281830360.25254&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02138">Date Index</a>][<a href="thrd43.shtml#02138">Thread Index</a>]<br>
+[<A HREF="msg02137.shtml">Date Prev</A>][<A HREF="msg02139.shtml">Date Next</A>][<A HREF="msg02119.shtml">Thread Prev</A>][<A HREF="msg02120.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Can you explain the behaviour of the following?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 01:02:41 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jan 28, 2001 at 06:35:11PM +0100, Fritz Zaucker wrote:
+&gt; The three following constructs give different results when run through
+&gt; 
+&gt;     wml -DLaTeX -p1-7,9  (exclude pass 8 for better readability of output)
+&gt; 
+&gt; &lt;if &lt;get-var LaTeX /&gt; &lt;group
+&gt; \ifx\pdfoutput\undefined % We're not running pdftex
+&gt; \documentclass[dvips,a4paper,german,11pt]{article}
+&gt; \else
+&gt; \documentclass[pdftex,a4paper,german]{article}
+&gt; \fi
+&gt; \thispagestyle{empty}
+&gt; \begin{document}
+&gt; Bla bla
+&gt; \end{document}
+&gt; &gt;
+&gt; /&gt;
+&gt; 
+&gt; &lt;define-tag document endtag=required&gt;
+&gt; \ifx\pdfoutput\undefined % We're not running pdftex
+&gt; \documentclass[dvips,a4paper,german,11pt]{article}
+&gt; \else
+&gt; \documentclass[pdftex,a4paper,german]{article}
+&gt; \fi
+&gt; \thispagestyle{empty}
+&gt; \begin{document}
+&gt; %body
+&gt; \end{document}
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;document&gt;Bla bla
+&gt; &lt;/document&gt;
+&gt; 
+&gt; &lt;if &lt;get-var LaTeX /&gt; &lt;group
+&gt; &lt;document&gt;Bla bla
+&gt; &lt;/document&gt;
+&gt; /&gt;
+&gt; /&gt;
+&gt; 
+&gt; Can someone explain? Obviously I'd like the second result, but need
+&gt; the if-statement somehow.
+
+Hi Fritz,
+
+there are 2 problemsa here:
+  a) I can't remember why &lt;group&gt; concatenates all input without any
+     whitespace; this is different from WML 1.7.4, i have to check
+     if there is a good reason for such a behaviour
+  b) But even if i decide to change it, it won't work because mp4h
+     does not keep track of spaces within attributes, so in this case
+     you may have a space-separated list of words, which is not what you
+     want.
+
+A workaround is to replace simple tags by container tags, e.g.
+  &lt;if &lt;get-var LaTeX /&gt; &lt;compound&gt;
+  \ifx\pdfoutput\undefined % We're not running pdftex
+  \documentclass[dvips,a4paper,german,11pt]{article}
+  \else
+  ...
+  &lt;/compound&gt; /&gt;
+or
+  &lt;when &lt;get-var LaTeX /&gt;&gt;
+  \ifx\pdfoutput\undefined % We're not running pdftex
+  \documentclass[dvips,a4paper,german,11pt]{article}
+  \else
+  ...
+  &lt;/when&gt;
+
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02119" HREF="msg02119.shtml">Can you explain the behaviour of the following?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02137.shtml">Re: Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02139.shtml">I am back ;)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02119.shtml">Can you explain the behaviour of the following?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02120.shtml">My last message concerned WML 2.0.6 ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02138"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02138"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

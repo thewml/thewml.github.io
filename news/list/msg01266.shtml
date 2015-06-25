@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <rollover> question -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Wed, 5 Jan 2000 14:01:02 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10001051348380.6521&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01266">Date Index</a>][<a href="thrd26.shtml#01266">Thread Index</a>]<br>
+[<A HREF="msg01265.shtml">Date Prev</A>][<A HREF="msg01267.shtml">Date Next</A>][<A HREF="msg01261.shtml">Thread Prev</A>][<A HREF="msg01267.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;rollover&gt; question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 5 Jan 2000 14:01:02 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi everybody,
+
+I tried using the rollover tag the other day, referencing it like this:
+
+&lt;rollover name="ecfp2" src="img/ecfp2.gif" overscr="img/ecfp2_a.gif"&gt;
+
+WML (V1.7.4, Linux 2.2.5 i686) creates the following code:
+
+[...]
+&lt;script type="text/javascript" language="JavaScript"&gt;
+
+&lt;!-- Hiding the code
+function ro_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_n.src");
+        self.status = '';
+    }
+}
+function ro_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_o.src");
+        self.status = descript;
+    }
+}
+// done hiding --&gt;
+
+&lt;/script&gt;
+&lt;script type="text/javascript" language="JavaScript"&gt;
+
+&lt;!-- Hiding the code
+if (document.images) {
+    ro_img_ecfp2_n = new Image();
+    ro_img_ecfp2_n.src = "img/ecfp2.gif";
+    ro_img_ecfp2_o = new Image();
+    ro_img_ecfp2_o.src = "";
+}
+// done hiding --&gt;
+
+&lt;/script&gt;
+&lt;a href=""
+   onMouseOver="ro_imgOver('ro_img_ecfp2', ''); return true"
+   onMouseOut="ro_imgNormal('ro_img_ecfp2'); return true"
+&gt;&lt;img name="ro_img_ecfp2" src="img/ecfp2.gif" alt="" width="640" height="60" border="0"&gt;&lt;/a&gt;
+   &lt;/tr&gt;
+
+[...]
+
+
+The problem: since there's no rollover image referenced in the line
+
+ro_img_ecfp2_o.src = "";
+
+the rollover effect doesn't work.
+
+Am I using the rollover tag incorrectly, or what could be the reason for
+this?
+
+The image *does* exist on disk, if I edit the html code manually to
+
+ro_img_ecfp2_o.src = "img/ecfp2_a.gif";
+
+it works...
+
+
+
+Also, is there away to avoid having a link associated with the rollover? I
+just want to have the effect, but no link. As a workaround it's possible
+to link to the same page, but is there a more elegant way?
+
+All the best,
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01267" HREF="msg01267.shtml">Re: &lt;rollover&gt; question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01265.shtml">Re: BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01267.shtml">Re: &lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01261.shtml">Re: Bug in wml::std::href</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01267.shtml">Re: &lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01266"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01266"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

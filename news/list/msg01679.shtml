@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug in wml::std::lang -->
+<!--X-From-R13: Qbefva Rrphegvaf <pbefvaNfghqrag.rgum.pu> -->
+<!--X-Date: Thu, 1 Jun 2000 19:15:45 +0200 (MET DST) -->
+<!--X-Message-Id: 3934C9AB.8A0B811C@student.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01679">Date Index</a>][<a href="thrd35.shtml#01679">Thread Index</a>]<br>
+[<A HREF="msg01676.shtml">Date Prev</A>][<A HREF="msg01681.shtml">Date Next</A>][<A HREF="msg01675.shtml">Thread Prev</A>][<A HREF="msg01677.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug in wml::std::lang</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Corsin Decurtins &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 31 May 2000 10:13:31 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I'm using wml-2.0.1 and I have a problem with wml::std::lang.
+
+Here's an example:
+
+  #use wml::std::lang
+
+  &lt;lang:new id="de" short&gt;
+  &lt;lang:new id="en" short&gt;
+
+  &lt;lang:star:slice: index.*.html&gt;
+
+  &lt;a href="&lt;lang:star: index.*.html&gt;"&gt;Link&lt;/a&gt;
+
+If I try to run wml, I get this error message:
+
+  Bad regular expression `*': Invalid preceding regular expression
+
+There is no error, if the wildcard is set to "%":
+
+  &lt;lang:set-wildcard "%"&gt;
+
+Corsin
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01676.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01681.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01675.shtml">Re: Strange ePerl behavior: $LANG</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01677.shtml">Re: BUG</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01679"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01679"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,155 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 24 May 2000 00:46:17 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000524002925.31178E&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000523155859.A8797@locl.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01602">Date Index</a>][<a href="thrd34.shtml#01602">Thread Index</a>]<br>
+[<A HREF="msg01601.shtml">Date Prev</A>][<A HREF="msg01603.shtml">Date Next</A>][<A HREF="msg01601.shtml">Thread Prev</A>][<A HREF="msg01603.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 24 May 2000 00:46:10 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 23 May 2000, Howard Alexander LaHurreau wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; I'm having problems with the migration from 2.0.0 to 2.0.1.
+&gt; It appears that when mp4h reaches an unknown tag, it treats
+&gt; it as if it had been defined with whitespace=delete.
+
+No, it parses attributes and writes them in a space separated list.
+
+&gt; The problem I'm having with this is that this code:
+&gt; ---------------8&lt; cut here 8&lt;---------------
+&gt;         print &lt;&lt;"END IMGLINK";
+&gt; &lt;a href="$rss-&gt;{'image'}-&gt;{'link'}"&gt;&lt;img src="$rss-&gt;{'image'}-&gt;{'url'}"
+&gt;  alt="$rss-&gt;{'image'}-&gt;{'title'}" border="0" align="right"
+&gt; END IMGLINK
+&gt;         print " width=\"$rss-&gt;{'image'}-&gt;{'width'}\""
+&gt;                 if $rss-&gt;{'image'}-&gt;{'width'};
+&gt;         print " height=\"$rss-&gt;{'image'}-&gt;{'height'}\""
+&gt;                 if $rss-&gt;{'image'}-&gt;{'height'};
+&gt;         print " /&gt;&lt;/a&gt;\n";
+&gt; ---------------8&lt; cut here 8&lt;---------------
+
+Let me try to explain what happens:
+  Input     Interpretation
+  print           string
+   &lt;&lt;             these &lt; delimiters can not begin a tag, because they
+                  are followed by invalid characters (resp. &lt; and ")
+  "END IMGLINK";  string
+  &lt;a              beginning of an undefined tag.  We are looking for
+                  attributes and a right angle bracket.
+    href="$rss-&gt;{'image'}-&gt;{'link'}"  first attribute
+  &gt;               end of unknown tag
+  &lt;img            beginning of an undefined tag.  Below is the list of
+                  attributes:
+1    src="$rss-&gt;{'image'}-&gt;{'url'}"
+2    alt="$rss-&gt;{'image'}-&gt;{'title'}"
+3    border="0"
+4    align="right"
+5    END IMGLINK
+6    print
+7    " width=\"$rss-&gt;{'image'}-&gt;{'width'}\""
+8    if
+9    $rss-
+  &gt;               end of unknown tag (img)
+  
+  {'image'}-&gt;{'width'};   string, etc.
+
+&gt; gets turned into this code:
+&gt; ---------------8&lt; cut here 8&lt;---------------
+&gt;         print &lt;&lt;"END IMGLINK";
+&gt; &lt;a href="$rss-&gt;{'image'}-&gt;{'link'}"&gt;&lt;img src="$rss-&gt;{'image'}-&gt;{'url'}" alt="$rss-&gt;{'image'}-&gt;{'title'}" border="0" align="right" END IMGLINK print " width="$rss-&gt;{'image'}-&gt;{'width'}"" if $rss-&gt;{'image'}-&gt;{'width'};
+&gt;         print " height=\"$rss-&gt;{'image'}-&gt;{'height'}\""
+&gt;                 if $rss-&gt;{'image'}-&gt;{'height'};
+&gt;         print " /&gt;&lt;/a&gt;\n";
+&gt; ---------------8&lt; cut here 8&lt;---------------
+
+Indeed concatenate attributes of the img tag and you obtain the code
+above.  The solution is to prevent parsing &lt;img&gt; tag, e.g. with
+
+        print &lt;&lt;"END IMGLINK";
+&lt;a href="$rss-&gt;{'image'}-&gt;{'link'}"&gt;&lt;&lt;suck&gt;img src="$rss-&gt;{'image'}-&gt;{'url'}"
+ alt="$rss-&gt;{'image'}-&gt;{'title'}" border="0" align="right"
+END IMGLINK
+
+The &lt;suck&gt; tag prevents scanning by mp4h, and is automatically removed
+in pass 8.
+Another solution is to enclose your ePerl code with
+&lt;protect pass=2&gt;...&lt;/protect&gt; whenever possible.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01603" HREF="msg01603.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Howard Alexander LaHurreau</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01601" HREF="msg01601.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Howard Alexander LaHurreau</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01601.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01603.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01601.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01603.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01602"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01602"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML This is WML Version 1.6.8 (12&#45;01&#45;1999), SunOS ursa 5.5.1 Generic_103640&#45;24 sun4u sparc SUNW,Ultra&#45;2 -->
+<!--X-From-R13: eiovwy39Npnyiva.rqh -->
+<!--X-Date: Wed, 17 Mar 1999 09:05:21 +0100 (MET) -->
+<!--X-Message-Id: 199903162103.WAA17781@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00486">Date Index</a>][<a href="thrd11.shtml#00486">Thread Index</a>]<br>
+[<A HREF="msg00485.shtml">Date Prev</A>][<A HREF="msg00487.shtml">Date Next</A>][<A HREF="msg00482.shtml">Thread Prev</A>][<A HREF="msg00490.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML This is WML Version 1.6.8 (12-01-1999), SunOS ursa 5.5.1 Generic_103640-24 sun4u sparc SUNW,Ultra-2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 16 Mar 1999 22:03:12 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML This is WML Version 1.6.8 (12-01-1999)
+Operating System: SunOS ursa 5.5.1 Generic_103640-24 sun4u sparc SUNW,Ultra-2 
+
+Problem Description:
+| I wanted to embed variable A as the default value for
+| variable B. When filled in, it didn't work properly. 
+| (thus the bug report ;)
+| 
+| Basically, i'm using WML to import a standard header 
+| and footer to put up an intro, set up the body
+| of the html, put a menu, etc.
+| 
+| In the head, i want to have 2 variable, one being
+| the title of the document, the other being what goes
+| to the &lt;TITLE&gt;&lt;/TITLE&gt; tags.
+| 
+| I use $(TITLE) to be the title  of the document
+| (displayed in a nice big font (gfont isn't installed
+| on my school's computer)). I use $(TITLE_BAR) as
+| the variable to go into the title bar. So in my
+| head file, i have:
+| 
+| &lt;HEAD&gt;
+|   &lt;META...&gt;
+|   &lt;TITLE&gt;$(TITLE_BAR:-$(TITLE))&lt;/TITLE&gt;
+| &lt;/HEAD&gt;
+| ...
+| 
+| 
+| Then, i include it like:
+|    #include "head.wml" TITLE="foo" TITLE_BAR="bar"
+| The title bar has, without the quotes: "bar)".
+| 
+| When i have
+|    #include "head.wml" TITLE="foo"
+| it works fine.
+| 
+| 
+| One other thing which i was looking for, was a way
+| to insert the date of the file (or the compile date,
+| or something like that. Or both?). It would make the
+| last changed date a lot easier to do.  Insertable in
+| various date formats would be good too, IMO.
+| 
+| Other than that, i love WML! 
+| 
+| Thanks,
+| 
+| Ryan
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00490" HREF="msg00490.shtml">Re: [BUG REPORT] WML</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00485.shtml">Re: WML example sites ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00487.shtml">Re: WML example sites ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00482.shtml">Re: Sliced, folded navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00490.shtml">Re: [BUG REPORT] WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00486"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00486"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

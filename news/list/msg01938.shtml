@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Thu, 14 Sep 2000 13:14:20 +0200 (MET DST) -->
+<!--X-Message-Id: 20000914122559.L409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00091400152400.01026@fidius -->
+<!--X-Reference: 20000914113744.A14577@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01938">Date Index</a>][<a href="thrd39.shtml#01938">Thread Index</a>]<br>
+[<A HREF="msg01937.shtml">Date Prev</A>][<A HREF="msg01939.shtml">Date Next</A>][<A HREF="msg01937.shtml">Thread Prev</A>][<A HREF="msg01939.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Sep 2000 12:25:59 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 14 Sep 2000, Denis Barbier wrote:
+
+&gt; &gt; since I updated my Installation to 2.0.3 &lt;table&gt; is changed 
+&gt; &gt; to &lt;table summary=""&gt;. 
+
+&gt; Hi Axel, this is a feature documented in
+&gt;     <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog</A>
+&gt; (search for 03-Aug-2000 entries)
+
+|    *) Add `summary' attribute in tables (03-Aug-2000):
+|       This tag is automatically added by wml_p7_htmlfix, because
+|       it helps rendering by non-graphical browser, exactly like
+|       ALT attribute for &lt;img&gt;.
+|       [Stephan Petersen]
+
+But is it really a feature or a bug?  I'm not completely sure, about
+this, because &lt;table summary=""&gt; isn't defined in HTML 3.2 but only in
+HTML 4, which results in the effect, that tidy converts my DOCTYPE
+entry from 
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;
+
+to
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+
+But I usually try to avoid HTML 4 features to be backward compatible
+to older browsers.  This simple summary="", which is added to my main
+layout-table.
+
+I agree, that the summary attribute for all is a good idea (the HTML 4
+specification says, that it there to explain the purpose/structure of
+a table for non-visual output like speech or Braille).  But does
+summary="" make much sense?  What about adding this empty attribute
+only when DOCTYPE defines HTML 4?
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01939" HREF="msg01939.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01940" HREF="msg01940.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01943" HREF="msg01943.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01936" HREF="msg01936.shtml">2.0.3 - bug or feature</A></strong>, <em>From:</em> axel</li>
+<li><strong><A NAME="01937" HREF="msg01937.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01937.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01939.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01937.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01939.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01938"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01938"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

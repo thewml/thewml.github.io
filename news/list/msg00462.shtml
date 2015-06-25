@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML wml::std::lang questions -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 12 Mar 1999 10:51:22 +0100 (MET) -->
+<!--X-Message-Id: Pine.GSO.4.10.9903121048301.26489&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990312090550.704C&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00462">Date Index</a>][<a href="thrd10.shtml#00462">Thread Index</a>]<br>
+[<A HREF="msg00461.shtml">Date Prev</A>][<A HREF="msg00463.shtml">Date Next</A>][<A HREF="msg00461.shtml">Thread Prev</A>][<A HREF="msg00468.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML wml::std::lang questions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 12 Mar 1999 10:51:14 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding Re: WML wml::std::lang questions:
+
+*&gt; On 11 Mar 1999, Fritz Zaucker wrote:
+*&gt; 
+*&gt; &gt;The problem is that we are talking about REALLY non-technical people.
+*&gt; 
+*&gt; I am very interested in your solution, because I am involved in
+*&gt; several cooperative projects with people using different kinds of
+*&gt; HTML-Programs and with people without HTML-knowledge. So I would be
+*&gt; glad, if you could describe your approach to me. Is WML the only
+*&gt; programm you use or do you use a database-program oder a
+*&gt; editing-suite either?
+
+the plan (!) to have the non-tech people edit the wml files,
+using a small set of html tags (maybe 10 or so) using what ever editor they
+like. Preferably one which does html syntax highlighting ...
+
+then they run 
+
+wmk -a 
+
+on the server ... and thats it ..
+
+they love it, because they can see that it is realy simple for them to
+maintain the pages without having to learn yet another gui ... the 10 tags
+are relay simple to leran ... 
+
+obviously they wont be doint table and such but that does not matter and one
+can learn to do tables if needs be ...
+
+cheers
+tobi
+*&gt; 
+*&gt; Ciao!
+*&gt; juh
+*&gt; 
+*&gt; 
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1194  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00461" HREF="msg00461.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00461.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00463.shtml">Change: mailing list delivery location</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00461.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00468.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00462"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00462"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

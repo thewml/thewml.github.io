@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: eperl: redefinition of `union semun' -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 29 Mar 2000 12:27:53 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000329121558.21374A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00032907594700.00354@tower -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01496">Date Index</a>][<a href="thrd31.shtml#01496">Thread Index</a>]<br>
+[<A HREF="msg01495.shtml">Date Prev</A>][<A HREF="msg01497.shtml">Date Next</A>][<A HREF="msg01492.shtml">Thread Prev</A>][<A HREF="msg01495.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: eperl: redefinition of `union semun'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Mar 2000 12:27:49 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 29 Mar 2000, Michael Müller wrote:
+
+&gt; Hi,
+&gt; 
+&gt; after the announce of Denis I have download WML 1.99.4 because I have
+&gt; problems with compiling WML 1.99.3. But I get the same error:
+&gt; 
+&gt; make[2]: Entering directory
+&gt; `/home/mm/_neu/+Eingang/WML/wml-1.99.4/wml_backend/p3_eperl'
+&gt; cc -O2 -pipe -Dbool=char -DHAS_BOOL -I/usr/local/include
+&gt; -I/usr/lib/perl5/5.00503/i586-linux/CORE -I. -c eperl_main.c
+&gt; In file included from eperl_perl5.h:42,
+&gt;                   from eperl_main.c:40:
+&gt; /usr/lib/perl5/5.00503/i586-linux/CORE/perl.h:2546: redefinition of
+&gt; `union semun'
+&gt; make[2]: *** [eperl_main.o] Error 1
+
+It looks like a problem with your Perl configuration.
+Try to add -DHAS_UNION_SEMUN to the list of flags.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01492" HREF="msg01492.shtml">eperl: redefinition of `union semun'</A></strong>, <em>From:</em> Michael Müller</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01495.shtml">f*ck them: wappies-owner@egroups.com</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01497.shtml">Re: f*ck them: wappies-owner@egroups.com</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01492.shtml">eperl: redefinition of `union semun'</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01495.shtml">f*ck them: wappies-owner@egroups.com</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01496"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01496"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

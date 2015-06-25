@@ -1,0 +1,182 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Just some thoughts on WML and type maps / meta files -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Thu, 19 Jul 2001 17:57:16 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.33.0107191753440.20145&#45;300000@nova.ee.ethz.ch -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20010719172000.F419@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02311">Date Index</a>][<a href="thrd47.shtml#02311">Thread Index</a>]<br>
+[<A HREF="msg02310.shtml">Date Prev</A>][<A HREF="msg02312.shtml">Date Next</A>][<A HREF="msg02308.shtml">Thread Prev</A>][<A HREF="msg02319.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Just some thoughts on WML and type maps / meta files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 19 Jul 2001 17:56:19 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+As attachments find .wmkrc and langset.inc (the latter to be included
+into your template file(s)) for creation of var-files.
+
+Credit due to Tobias Oetiker (oetiker@ee.ethz.ch)
+
+Cheers,
+Fritz
+
+&gt; Just a weird idea I'm actually playing around a little bit:
+&gt;
+&gt; Would it be useful to add to wml::std::lang the possibility to create
+&gt; also meta data files for each output file, e.g. type maps for static
+&gt; content negotiation instead of MultiViews (regarding Apache
+&gt; mod_negotiation) or meta files for addtional headers with Apache
+&gt; mod_cern_meta or CERN HTTPd?
+&gt;
+&gt; Example: Instead of only outputting index.en.html and index.en.html,
+&gt; we also output index.var (type map) or index.en.html.meta and
+&gt; index.en.html.meta (meta files).
+&gt;
+&gt; index.wml:
+&gt;  1| #use wml::std:lang
+&gt;  2|
+&gt;  3| &lt;lang:new id=de short meta&gt;
+&gt;  4| &lt;lang:new id=en short meta&gt;
+&gt;  5| &lt;lang:star:slice: index.*.html&gt;
+&gt;  6|
+&gt;  7| Everywhere
+&gt;  8| &lt;EN&gt;Foobar&lt;/EN&gt;\
+&gt;  9| &lt;DE&gt;Schwachfug&lt;/DE&gt;
+&gt; 10| # Ok, there are more useful HTTP headers to add or modify
+&gt; 11| &lt;META:EN&gt;Last-Modification: Wed, 18 Jul 2001 21:49:17 GMT&lt;/META:EN&gt;
+&gt; 12| &lt;META:DE&gt;Last-Modification: Thu, 19 Jul 2001 21:49:17 GMT&lt;/META:DE&gt;
+&gt;
+&gt; index.en.html:
+&gt;  1| Everywhere
+&gt;  2| Foobar
+&gt;
+&gt; index.de.html:
+&gt;  1| Everywhere
+&gt;  2| Schwachfug
+&gt;
+&gt; index.en.html.meta:
+&gt;  1| Last-Modification: Wed, 18 Jul 2001 21:49:17 GMT
+&gt;
+&gt; index.de.html.meta:
+&gt;  1| Last-Modification: Thu, 19 Jul 2001 12:34:11 GMT
+&gt;
+&gt; This is useful for SSI documents, of which usually the Apache don't
+&gt; send Last-Modification header if you don't the "XBitHack full"
+&gt; directive. And I can control the sending of additional headers in the
+&gt; source file... :-)
+&gt;
+&gt; Any comments? Useful? Totally crazy? :-)
+&gt;
+&gt; BTW: I actually implemented the .meta-Version for working with Apache
+&gt; mod_cern_meta using "MetaDir ." and "MetaSuffix .meta". If anyone has
+&gt; interest in that version...
+&gt;
+&gt; 		Regards, Axel
+&gt;
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, CH-8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://people.ee.ethz.ch/~zaucker/">http://people.ee.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+</PRE>
+<PRE>
+-o LANG_VAR:%BASE.var
+-o (ALL-LANG_*)+LANG_EN:%BASE.en.html@u+x
+-o (ALL-LANG_*)+LANG_DE:%BASE.de.html@u+x
+</PRE>
+<PRE>
+#
+#
+# all definitions in the include rely on the existence of $LANG 
+#
+#
+###############################################################################
+# define base languages of the document
+###############################################################################
+#use wml::std::lang
+&lt;set-var lntmp=&lt;downcase "$(LANGS)"&gt; /&gt;
+&lt;while &lt;match &lt;get-var lntmp /&gt; "[a-z][a-z]"&gt;&gt;
+  &lt;set-var lan=&lt;match &lt;get-var lntmp /&gt; "[a-z][a-z]" action=extract&gt; /&gt;
+  &lt;set-var lntmp=&lt;match &lt;get-var lntmp /&gt; "[a-z][a-z]" action=delete&gt; /&gt;
+  &lt;lang:new id=&lt;get-var lan /&gt; short&gt;
+&lt;/while&gt;
+
+###############################################################################
+## creates .var file for automatic language selection 
+###############################################################################
+[LANG_VAR:
+URI: $(WML_SRC_BASENAME)
+&lt;set-var lntmp=&lt;downcase "$(LANGS)"&gt; /&gt;
+&lt;while &lt;match &lt;get-var lntmp /&gt; "[a-z][a-z]"&gt;&gt;
+  &lt;set-var lan=&lt;match &lt;get-var lntmp /&gt; "[a-z][a-z]" action=extract&gt; /&gt;
+  &lt;set-var lntmp=&lt;match &lt;get-var lntmp /&gt; "[a-z][a-z]" action=delete&gt; /&gt;
+&lt;protect&gt;&lt;/protect&gt;
+URI: $(WML_SRC_BASENAME).&lt;get-var lan /&gt;.html
+Content-type: text/html
+Content-language: &lt;get-var lan /&gt;
+&lt;/while&gt;
+&lt;protect&gt;&lt;/protect&gt;
+URI: $(WML_SRC_BASENAME).en.html
+Content-type: text/html
+:LANG_VAR]
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02308" HREF="msg02308.shtml">Just some thoughts on WML and type maps / meta files</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02310.shtml">Re: Grid question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02312.shtml">Re: Grid question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02308.shtml">Just some thoughts on WML and type maps / meta files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02319.shtml">&lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02311"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02311"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

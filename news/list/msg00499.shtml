@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: dependeny dump for wml_p1_ipp -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 18 Mar 1999 18:08:29 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990318125546.27313A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36F08B17.A18E157A@informatik.uni&#45;freiburg.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00499">Date Index</a>][<a href="thrd12.shtml#00499">Thread Index</a>]<br>
+[<A HREF="msg00498.shtml">Date Prev</A>][<A HREF="msg00500.shtml">Date Next</A>][<A HREF="msg00497.shtml">Thread Prev</A>][<A HREF="msg00496.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: dependeny dump for wml_p1_ipp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 18 Mar 1999 17:59:32 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 18 Mar 1999, Andreas Hofmeister wrote:
+
+&gt; Ok, here it is. I did not  change  the dokumentation (because of my poor
+&gt; english ) , so i think you need some additional infos.  I  modified the
+&gt; preprocessor to output something like
+&gt; 
+&gt; abc.html : abc.wml \
+&gt;     my-tags.wml \
+&gt;    ...
+&gt; 
+&gt; on  STDOUT.
+
+Thanks Andreas,
+
+it is a really nice idea, and your patch is included in the current
+release at <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP">http://www.engelschall.com/sw/wml/distrib/wml-SNAP</A>
+I have renamed your `-d' option to `-M', as for gcc, and it accepts the
+forms -MM, -MD and -MMD.
+The files wml_frontend/wml.src and wml_backend/ipp.src are modified.
+
+Enjoy it ;o)
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00497" HREF="msg00497.shtml">Re: dependeny dump for wml_p1_ipp</A></strong>, <em>From:</em> Andreas Hofmeister</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00498.shtml">Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00500.shtml">Re: Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00497.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00496.shtml">Piece of news</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00499"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00499"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

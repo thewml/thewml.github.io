@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Still no .wmlrc on my system... -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Wed, 26 Jan 2000 02:43:06 +0100 (MET) -->
+<!--X-Message-Id: 14478.19884.726310.191016@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01300">Date Index</a>][<a href="thrd27.shtml#01300">Thread Index</a>]<br>
+[<A HREF="msg01299.shtml">Date Prev</A>][<A HREF="msg01301.shtml">Date Next</A>][<A HREF="msg01299.shtml">Thread Prev</A>][<A HREF="msg01301.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Still no .wmlrc on my system...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 26 Jan 2000 02:39:47 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I still cant use a single .wmlrc (beside a .wmlrc in my
+home-dir!). Today I cloned my debian 2.1 to a new HD, and made an
+upgrade to debian 2.2, but there it still doesn´t work....
+
+It works on a fresh 2.2 debian....
+
+I can´t figure out what the difference is. As root it reads all .wmlrc 
+ok, as user not. I put two strace logs up to:
+
+<A  HREF="http://www.blenderbuch.de/test/wml.root.gz">http://www.blenderbuch.de/test/wml.root.gz</A>
+<A  HREF="http://www.blenderbuch.de/test/wml.user.gz">http://www.blenderbuch.de/test/wml.user.gz</A>
+
+maybe anyone can see what the problem is. Under the same url without
+the filenames (or test/index.html) is also a raw version of my site,
+done with wml, including the source so far. All comments are very
+welcome, but don´t expect working links or real content.
+
+Especially I need an idea how to sort the news-table ("Neuigkeiten",
+site is in german)....
+
+Furthermore I´m searching for a Makefile template for doing a
+recursive wmk on a directory structure. 
+
+Thanks,
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01301" HREF="msg01301.shtml">Re: Still no .wmlrc on my system...</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01299.shtml">Re: defining tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01301.shtml">Re: Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01299.shtml">Re: defining tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01301.shtml">Re: Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01300"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01300"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

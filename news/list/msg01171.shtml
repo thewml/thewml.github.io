@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: GIFs, LZW, gd, and gFont again... -->
+<!--X-From-R13: Drzpb ina qra Pret <DiqPretNqfr.ay> -->
+<!--X-Date: Thu, 2 Dec 1999 01:06:47 +0100 (MET) -->
+<!--X-Message-Id: 199912012143.WAA10657@jupiter.strijp.Ehv.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991130204537.A30399@locl.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01171">Date Index</a>][<a href="thrd25.shtml#01171">Thread Index</a>]<br>
+[<A HREF="msg01170.shtml">Date Prev</A>][<A HREF="msg01172.shtml">Date Next</A>][<A HREF="msg01166.shtml">Thread Prev</A>][<A HREF="msg01174.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: GIFs, LZW, gd, and gFont again...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Dec 1999 22:43:16 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; 
+&gt; On Tue, Nov 30, 1999 at 08:18:33AM +0100, Ralf S. Engelschall wrote:
+&gt; &gt; On Mon, Nov 29, 1999, Stephan Petersen wrote:
+&gt; &gt; What actually should be done is to perhaps move from this old gd library to
+&gt; &gt; the recent one, but only if GIFs can be still generated for backward
+&gt; &gt; compatibility.
+&gt; 
+&gt; I thought that I heard of some patches that were floating around to add
+&gt; GIF support to the newer versions of GD.  (Sorry, I don't have any URLs) :-(
+
+I did that for the webbutton program :-)
+Was very easy actually. Just download an old GD and a new GD release and
+merge them together. No patches needed in the source code, just hack
+the Makefile.am files to put the extra objects in the library.
+
+Have a look at <A  HREF="http://www.dse.nl/rvdberg/software/webbutton/">http://www.dse.nl/rvdberg/software/webbutton/</A>
+The GD library is part of the webbutton tar file.
+
+I'm not sure if there is LZW support in it...
+
+-Remco
+
+-- 
+----------------------------------------------------------------------------
+    Remco van den Berg                           Admin/SO/helpdesk DSE      
+      ICQ: 47514668         rvdberg@dse.nl         <A  HREF="http://www.dse.nl/">http://www.dse.nl/</A>       
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01166" HREF="msg01166.shtml">Re: GIFs, LZW, gd, and gFont again...</A></strong>, <em>From:</em> Howard Alexander LaHurreau</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01170.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01172.shtml">Re: Suggestions for wml::std::logo</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01166.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01174.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01171"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01171"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

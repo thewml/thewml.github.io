@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: replacement of gfont using TrueType fonts -->
+<!--X-From-R13: Drzpb ina qra Pret <eiqoretNrui.fp.cuvyvcf.pbz> -->
+<!--X-Date: Thu, 28 Oct 1999 08:43:06 +0200 (MET DST) -->
+<!--X-Message-Id: 199910272102.XAA12780@psv.ehv.sc.philips.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991027100950.1556A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01102">Date Index</a>][<a href="thrd23.shtml#01102">Thread Index</a>]<br>
+[<A HREF="msg01101.shtml">Date Prev</A>][<A HREF="msg01103.shtml">Date Next</A>][<A HREF="msg01098.shtml">Thread Prev</A>][<A HREF="msg01100.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: replacement of gfont using TrueType fonts</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Oct 1999 23:02:52 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+barbier@imacs.polytechnique.fr wrote:
+&gt; 
+&gt; Hi Remco,
+&gt; 
+&gt; here are some comments (i didn't try it yet):
+&gt; * You could take the documentation from wml::des::gfont
+&gt;   (and also put a line in ttfont.wml to say it is derived from
+&gt;   gfont.wml ;)
+
+I agree... :-)
+
+&gt; * The TrueType directory is hardcoded in ttfont.wml, it's a bad
+&gt;   idea. Determine it at configure time.
+
+It's also hard coded in webbutton! I know, it's not nice. But for
+the time being, it works... :-)
+Is there somebody who knows how to detect the font directory using
+autoconf/automake?
+Otherwise I make a global config.h file with the local settings.
+
+&gt; * Same thing in the configure script.
+
+What's wrong with the configure script? It's auto generated.
+
+&gt; * I already wanted to add some borders to gFONT generated images.
+&gt;   You had one kind of border in ttfont, but sometimes one wants
+&gt;   shaded effects.
+&gt;   Do you think it should be done by the logo generator or by a
+&gt;   call to another program (ImageMagick?)
+
+I also thought about that (of course :-). There are several solutions.
+Two you already mentioned, but another idee is to put text on some
+template image and tell webbutton where the template image is on disk.
+
+&gt; * Could ttfont write PNG files too ?
+
+Yes, either patch the webbutton.c file (very easy, just look at the code
+and have a look at de gd-1.6.3-patched/index.html). Or even better, make
+it dependent on the image file-extension, so that it works automatically.
+But that's my job then. Perhaps an extra option could be included too to
+force a file type.
+
+Thanks,
+
+I'll work on these things...
+
+Regards,
+
+-Remco
+
+----------------------------------------------------------------------------
+Philips Semiconductors B.V.  tel:(+31 40 27)22031   fax:22764   Room: BE-345
+<A  HREF="mailto:Remco.vdBerg@ehv.sc.philips.com">mailto:Remco.vdBerg@ehv.sc.philips.com</A>                  seri: rvdberg@nlsce1
+home Email: RvdBerg@dse.nl  (non Philips related)              ICQ: 47514668
+----------------------------------------------------------------------------
+ Microsoft and Lotus Notes free.  Please don't send me any Microsoft files.
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01098" HREF="msg01098.shtml">Re: replacement of gfont using TrueType fonts</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01101.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01103.shtml">My previous patch...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01098.shtml">Re: replacement of gfont using TrueType fonts</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01100.shtml">added PNG support to webbutton</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01102"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01102"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG: <PROTECT> does not accept uppercase PASS parameters: -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 17 Jul 2001 00:45:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20010717005327.B16137@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010716230453.K30077@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010716234233.A15696@imacs.polytechnique.fr -->
+<!--X-Reference: 20010716235320.M30077@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02304">Date Index</a>][<a href="thrd47.shtml#02304">Thread Index</a>]<br>
+[<A HREF="msg02303.shtml">Date Prev</A>][<A HREF="msg02305.shtml">Date Next</A>][<A HREF="msg02303.shtml">Thread Prev</A>][<A HREF="msg02305.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 17 Jul 2001 00:53:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 16, 2001 at 11:53:20PM +0200, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; Denis Barbier wrote:
+&gt; &gt; On Mon, Jul 16, 2001 at 11:04:53PM +0200, Axel Beckert wrote:
+&gt; &gt; &gt; There is a little bug in WML: &lt;PROTECT&gt; does not accept uppercase PASS
+&gt; &gt; &gt; parameters:
+&gt; &gt; But attributes are case sensitive, so there is no reason to have a
+&gt; &gt; special behaviour for this one.
+&gt; 
+&gt; Couldn't find the position in the doceumentation (of mp4h(1) and
+&gt; wml(1)), where this is mentioned. But I found this in mp4h(1): "As
+&gt; with HTML, macro names are case insensitive." In HTML attribute names
+&gt; are case insensitive, too. (Exception: XHTML, but in XHTML, there are
+&gt; no upper case tags or attribute names at all, IIRC.)
+&gt; 
+&gt; And my uppercase test example knows nothing about case sensitivity:
+&gt; 
+&gt; Input:
+&gt; 1| &lt;define-tag foo whitespace=delete&gt;
+&gt; 2|   &lt;preserve foo FOO&gt;
+&gt; 3|   &lt;set-var %attributes&gt;
+&gt; 4| foo=&lt;get-var foo&gt;
+&gt; 5| FOO=&lt;get-var FOO&gt;
+&gt; 6|   &lt;restore foo FOO&gt;
+&gt; 7| &lt;/define-tag&gt;
+&gt; 8|
+&gt; 9| &lt;foo foo=bar FOO=baz&gt;
+&gt; 
+&gt; Output:
+&gt; 1| foo=baz
+&gt; 2| FOO=baz
+&gt; 
+&gt; And BTW: Why should there be a difference between &lt;protect pass=2&gt; and
+&gt; &lt;PROTECT PASS=2&gt;?
+
+Alright, I was lying, you could have trusted me without checking ;)
+So indeed you are right, PASS attribute has to be case-insensitive.
+Your patch will be applied, thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02300" HREF="msg02300.shtml">BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02302" HREF="msg02302.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02303" HREF="msg02303.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02303.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02305.shtml">xtable bug</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02303.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02305.shtml">xtable bug</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02304"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02304"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

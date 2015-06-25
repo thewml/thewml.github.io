@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: mp4h warning in 2.0.8 -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Tue, 6 Nov 2001 10:16:23 +0100 (MET) -->
+<!--X-Message-Id: 3BE7A9D2.ECB3115B@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02429">Date Index</a>][<a href="thrd49.shtml#02429">Thread Index</a>]<br>
+[<A HREF="msg02428.shtml">Date Prev</A>][<A HREF="msg02430.shtml">Date Next</A>][<A HREF="msg02435.shtml">Thread Prev</A>][<A HREF="msg02431.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>mp4h warning in 2.0.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 06 Nov 2001 10:13:54 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+when using new WML 2.0.8 I get this warning:
+
+wml -DTEMPLATE=template_li.wml -O2 -o
+/dos/d/home/html_public/howtos.html howtos.wml
+/usr/lib/wml/exec/wml_p2_mp4h: WARNING:howtos.wml:0: variable stack not
+empty, it means &lt;preserve&gt; pushed more items than &lt;restore&gt; popped
+
+Finally I found out it is caused by:
+
+&lt;ul&gt;
+#use wml::std::toc style=ul
+&lt;define-tag toc_section endtag=required whitespace=delete&gt;
+&lt;when &lt;eq %0 2&gt;&gt;
+%body
+&lt;/when&gt;
+&lt;/define-tag&gt;
+
+{:
+[[s/\n\n+/\n/g]]
+[[s/&lt;strong&gt;//g]]
+[[s/&lt;\/strong&gt;//g]]
+
+[[s/&lt;a href/&lt;li&gt;&lt;a href/g]]
+[[s/&lt;\/a&gt;/&lt;\/a&gt;&lt;\/li&gt;/g]]
+&lt;toc&gt;
+:}
+&lt;/ul&gt;
+
+This construct (programmed with help from Denis) builds a toc
+from &lt;h2&gt; tags only. It worked without warning in 2.0.7. I have
+looked up the WML source toc.wml, to solve the problem, but
+this is to much for me. The generated HTML code works well,
+so it's not a problem for me. But it may be of interest anyway.
+
+Werner
+
+-- 
+|=| Werner Heuser = Keplerstr. 11A = D-10589 Berlin = Germany
+|=| &lt;wehe_AT_mobilix.org&gt;      T. 0049 - (0)30 - 349 53 86
+|=| <A  HREF="http://MobiliX.org">http://MobiliX.org</A>         UniX on Mobile Systems: HOWTOs,Software
+|=| <A  HREF="http://Xtops.DE">http://Xtops.DE</A>            Laptops+PDAs pre-installed with UniX
+|*| This is no time for phony rhetoric -- Lou Reed
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02431" HREF="msg02431.shtml">Re: mp4h warning in 2.0.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02428.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02430.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02435.shtml">Re: name of generated output-file</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02431.shtml">Re: mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02429"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02429"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

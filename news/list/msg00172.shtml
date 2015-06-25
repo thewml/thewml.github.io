@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problem with wml::std::grid -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 30 Jul 1998 15:18:55 +0200 (CEST) -->
+<!--X-Message-Id: 19980730151853.B3884@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00172">Date Index</a>][<a href="thrd4.shtml#00172">Thread Index</a>]<br>
+[<A HREF="msg00171.shtml">Date Prev</A>][<A HREF="msg00173.shtml">Date Next</A>][<A HREF="msg00171.shtml">Thread Prev</A>][<A HREF="msg00173.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problem with wml::std::grid</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Jul 1998 15:18:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I've to forward this to the list because Torsten posted to it before you was
+suceessfully subscribed. And you know, because of the anti-spamming issue
+non-subscribers are no longer allowed to post.
+
+Torsten: You're now successfully subcribed, so that was
+         just a problem from this first message which
+         was a little bit too fast for Majordomo ;-)
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+
+----- Forwarded message from owner-sw-wml@engelschall.com -----
+From: Torsten Naumann &lt;Torsten.Naumann@Informatik.TU-Chemnitz.DE&gt;
+Reply-To: TNaumann@gmx.de
+To: sw-wml@engelschall.com
+Subject: Problem with wml::std::grid
+
+Hi,
+
+I have a problem with the wml::std::grid.
+
+Here comes my test wml file:
+--------------------------------------
+#use wml::std::grid
+
+&lt;grid layout="1x1" width="100%" padding="0" spacing="0" bglocor="000000"&gt;
+&lt;cell&gt;
+ &lt;grid layout="1x1" width="100%" padding="5" spacing"0" bgcolor="ffffff"&gt;
+ &lt;cell&gt;
+ This is a test!
+ &lt;/cell&gt;
+ &lt;/grid&gt;
+&lt;/cell&gt;
+&lt;/grid&gt;
+--------------------------------------
+
+And here comes the output of
+wml -O2 -o test.html test.wml
+--------------------------------------
+&lt;table width="100%" border="0" cellspacing="0" cellpadding="5"&gt;
+  &lt;tr&gt;
+    &lt;td align="left" valign="top"&gt;
+    &lt;table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#ffffff"&gt;
+      &lt;tr&gt;
+        &lt;td align="left" valign="top"&gt; This is a test!
+ &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+--------------------------------------
+
+As you can see there is a wrong value cellpadding in the inner table
+altough the wml file say at this value 0 instead of 5 !!!
+
+You can try it also with interchanging the values inner p=0, s=0 and
+outer p=0, s=1 and so on. Every changing shows a different behavior.
+
+Has anybody the same problem, any solutions or ideas?
+
+--
+Torsten
+ ________________________________________________________________
+/_ \ Torsten Naumann  Chemnitz University of Technology, Germany \
+\@)_\         Email:  Torsten.Naumann@informatik.tu-chemnitz.de   \__
+     \        Phone:  +49-371-5614295   Mobile: +49-177-2382319    \(@\
+      \_____________________________________________________________\_/
+
+----- End forwarded message -----
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00171.shtml">Re: wml-error</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00173.shtml">Re: Problem with wml::std::grid</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00171.shtml">Re: wml-error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00173.shtml">Re: Problem with wml::std::grid</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00172"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00172"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

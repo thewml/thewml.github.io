@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I'm trying to use wml in a cgi... -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Wed, 11 Feb 1998 07:09:10 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980210192832.12068A&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199802081509.QAA18255@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00088">Date Index</a>][<a href="thrd2.shtml#00088">Thread Index</a>]<br>
+[<A HREF="msg00087.shtml">Date Prev</A>][<A HREF="msg00089.shtml">Date Next</A>][<A HREF="msg00081.shtml">Thread Prev</A>][<A HREF="msg00082.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I'm trying to use wml in a cgi...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 10 Feb 1998 19:30:20 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Sorry this is so long in coming...
+
+I unset the content length (yes, it was a post) and that solved _a_
+problem. It just let m find the next one. e-Perl woulc complain about not
+wanting to work over a file in /tmp with the wrong extension.
+
+On a hunch, I nuked all the CGI related environment before invoking wml,
+and that solved that. Sorry, I haven't done an exhaustive investigation, I
+just know one or more of those vars was the culprit, since it works now.
+
+Best,
+jim
+
+-- 
+[L]inux has an installed base conservatively estimated at around 3 million
+users.... [V]endors say that most of the top companies in the US have bought
+the OS - but that few will readily admit to running their multimillion-dollar
+corporations on code put together by a band of software idealists. -- _Wired_
+
+On Sun, 8 Feb 1998, Ralf S. Engelschall wrote:
+
+&gt; Hello Jim Hebert, in a previous mail you wrote:
+&gt; 
+&gt; &gt; I've got a cgi that receives a file, writes it out to disk. One of the
+&gt; &gt; post processing measures I want to do is pass it through wml (security
+&gt; &gt; implications aside, for the moment -- those will be handled later).
+&gt; &gt; 
+&gt; &gt; One of the passes kept hanging (pass 2) but didn't when I ran the same
+&gt; &gt; command on the command line. I broke the relevant stuff out to a shell
+&gt; &gt; script (for readibility, in part) which I can run on the command line just
+&gt; &gt; fine, but not in the cgi.
+&gt; &gt; 
+&gt; &gt; Note: the web server runs as me -- meaning it's not a permission thing.
+&gt; &gt;[...]}
+&gt; &gt; When I turned off pass 2 (with -p 345678) it didn't hang.
+&gt; &gt; 
+&gt; &gt; Perl 5.004_04 on solaris 2.5.1 with apache 1.2.5 and CGI.pm 2.36.
+&gt; &gt; 
+&gt; &gt; Any thoughts?
+&gt; 
+&gt; Hmmm... you already found that Meta-HTML is the bad guy here, so I've poked
+&gt; around its sources and found that under a CGI environment it tries to
+&gt; automatically import this. Actually the CONTENT_LENGTH variable is inspected.
+&gt; Because you say that your CGI-script received some stuff and then wants to
+&gt; process it via WML, I'm right when I'm assume that your CGI script is invoked
+&gt; via POST method?  
+&gt; 
+&gt; If yes, then the error is clear. As a workaround you had to remove or clear
+&gt; the CONTENT_LENGTH environment variable before running WML to avoid a
+&gt; re-import if it in Meta-HTML. Just add ``CONTENT_LENGTH='' in front of the WML
+&gt; call. When it then never hangs I can clear these variables in WML 1.6.1 per
+&gt; default.
+&gt; 
+&gt; Greetings,
+&gt;                                        Ralf S. Engelschall
+&gt;                                        rse@engelschall.com
+&gt;                                        www.engelschall.com
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00081" HREF="msg00081.shtml">Re: I'm trying to use wml in a cgi...</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00087.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00089.shtml">pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00081.shtml">Re: I'm trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00082.shtml">ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00088"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00088"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

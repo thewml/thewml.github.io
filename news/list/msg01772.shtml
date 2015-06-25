@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Idea of future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 29 Jun 2000 22:59:59 +0200 (MET DST) -->
+<!--X-Message-Id: 20000629230120.A980@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000624001600.B1869@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.LNX.4.21.0006251109520.12703&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01772">Date Index</a>][<a href="thrd32.shtml#01772">Thread Index</a>]<br>
+[<A HREF="msg01771.shtml">Date Prev</A>][<A HREF="msg01773.shtml">Date Next</A>][<A HREF="msg01756.shtml">Thread Prev</A>][<A HREF="msg01778.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Idea of future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Jun 2000 23:01:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jun 25, 2000 at 11:29:56AM +0200, Franz Knipp wrote:
+
+&gt; On Sat, 24 Jun 2000, Denis Barbier wrote:
+&gt; &gt; i do not like this idea, because it is very confusing. And i could not
+&gt; &gt; imagine the benefits of this approach. Could you send a nice example?
+&gt; 
+&gt; Ok - I'll try:
+[...]
+&gt; This way we can offer a syntax more like OOP - the name of the `methods´
+&gt; (&lt;box&gt;, &lt;text&gt;, &lt;picture&gt;) remains to be the same in different `objects´
+&gt; (&lt;red&gt;, &lt;blue&gt;).
+&gt; 
+&gt; Do you get the idea? I see a lot of benefits (smarter writing, changed
+&gt; behaviour depending on the context, ...) and no disadvantages (because it
+&gt; is fully backward compatible).
+
+The disadvantage is that one function has different behaviours depending
+on the context, which may be confusing.
+
+Anyway you can do it right now a la LaTeX:
+   &lt;define-tag red:text&gt;...&lt;/define-tag&gt;
+   &lt;define-tag blue:text&gt;...&lt;/define-tag&gt;
+   &lt;define-tag default:text&gt;...&lt;/define-tag&gt;
+   &lt;define-tag red endtag=required whitespace=delete&gt;
+     &lt;let text=red:text&gt;
+     %body
+     &lt;let text=default:text&gt;
+   &lt;/define-tag&gt;
+   &lt;define-tag blue endtag=required whitespace=delete&gt;
+     &lt;let text=blue:text&gt;
+     %body
+     &lt;let text=default:text&gt;
+   &lt;/define-tag&gt;
+
+Maybe we could merge this discussion with the one on namespaces, i
+believe they are very similar.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01746" HREF="msg01746.shtml">Re: Idea of future enhancement of WML - Environment</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01756" HREF="msg01756.shtml">Re: Idea of future enhancement of WML - Environment</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01771.shtml">Re: Any way to make XHTML work with WML2.0.2/MP4H1.0.2 ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01773.shtml">Re: [wml] CSS support and XML namespaces</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01756.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01778.shtml">Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01772"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01772"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,192 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [Patch wml::des::imgbg] Gradients -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 30 Dec 1998 15:04:29 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981230102115.15306C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00287">Date Index</a>][<a href="thrd7.shtml#00287">Thread Index</a>]<br>
+[<A HREF="msg00286.shtml">Date Prev</A>][<A HREF="msg00288.shtml">Date Next</A>][<A HREF="msg00286.shtml">Thread Prev</A>][<A HREF="msg00288.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[Patch wml::des::imgbg] Gradients</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 30 Dec 1998 10:28:28 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Here is the third patch i wrote.
+It draws gradient colors ; the new specification of ``contents'' is a
+comma separated list of 
+  pixels:#rrggbb[:#rrggbb[[:number]]
+Square brackets mean optional arguments ; if a second color is
+specified, a gradient will be drawn from the first color to the second.
+Total number of colors used in this gradient is ``number'' (default 10).
+
+Feel free to modify what youy want.
+
+Greetings
+
+   Denis
+
+--- wml-1.6.7/wml_include/des/imgbg.src	Fri Jan 16 17:22:23 1998
++++ wml-1.6.7/wml_include/des/imgbg.src	Wed Dec 30 08:54:58 1998
+@@ -12,7 +12,9 @@
+ #   general function for creating the image
+ sub imgbg {
+     my ($base, $direction, $content) = @_;;
+-    my ($file, $id, @C, $size, $im, $c, $r, $g, $b, $col, $w, $x, $y);
++    my ($file, $id, @C, $size, $im, $c, $r, $g, $b, $col, $w, $x);
++    my ($nbcol, $bcol, $ecol, $rmin, $gmin, $bmin, $rmax, $gmax, $bmax);
++    my ($i, $dx, $dy);
+     local (*FP);
+ 
+     #   determine filename
+@@ -35,31 +37,42 @@
+         $size += $1 if ($c =~ m|^(\d+):.+|);
+     }
+ 
+-    #   create GIF image if still not exits
++    #   create GIF image if still not exists
+     if (not -f $file) {
++        $x = 0;
+         if ($direction eq 'h') {
+             #   horizontal image
+             $im = new GD::Image($size, 1);
+-            $x = 0;
+-            foreach $c (@C) {
+-                ($w, $col) = ($c =~ m|^(\d+):(.+)$|);
+-                ($r, $g, $b) = &amp;triple2rgb($col);
+-                $col = $im-&gt;colorAllocate($r, $g, $b);
+-                $im-&gt;rectangle($x, 0, $x+$w, 1, $col);
+-                $x += $w;
+-            }
+-        }
+-        else {
++            $dx = 1;
++            $dy = 0;
++        } else {
+             #   vertical image
+             $im = new GD::Image(1, $size);
+-            $y = 0;
+-            foreach $c (@C) {
+-                ($w, $col) = ($c =~ m|^(\d+):(.+)$|);
+-                ($r, $g, $b) = &amp;triple2rgb($col);
++            $dx = 0;
++            $dy = 1;
++        }
++        foreach $c (@C) {
++            ($w, $bcol, $ecol, $nbcol) =
++                ($c =~ m|^(\d+):([^:]+)(?::)?([^:]+)?(?::)?(\d+)?$|);
++            if ($ecol eq '' ) {
++                ($ecol, $nbcol) = ($bcol, 1);
++            } elsif ($nbcol eq '' ) {
++                $nbcol = 10;
++            }
++            ($rmin, $gmin, $bmin) = &amp;triple2rgb($bcol);
++            ($rmax, $gmax, $bmax) = &amp;triple2rgb($ecol);
++            for ($i=1; $i&lt;=$nbcol; $i++) {
++                $r = $rmin + ($rmax-$rmin)*$i/$nbcol;
++                $g = $gmin + ($gmax-$gmin)*$i/$nbcol;
++                $b = $bmin + ($bmax-$bmin)*$i/$nbcol;
+                 $col = $im-&gt;colorAllocate($r, $g, $b);
+-                $im-&gt;rectangle(0, $y, 1, $y+$w, $col);
+-                $y += $w;
++                $im-&gt;line($dx*($x+$w*($i-1)/$nbcol),
++                          $dy*($x+$w*($i-1)/$nbcol),
++                          $dx*($x+$w*$i/$nbcol),
++                          $dy*($x+$w*$i/$nbcol),
++                          $col);
+             }
++            $x += $w;
+         }
+         open(FP, "&gt;$file");
+         print FP $im-&gt;gif;
+@@ -73,7 +86,7 @@
+ &lt;preserve base&gt;
+ &lt;preserve direction&gt;
+ &lt;preserve content&gt;
+-&lt;set-var %0 %1 %2 %3 %4 %5 %6 %7 %8 %9&gt;
++&lt;set-var %attributes&gt;
+ &lt;:
+     #   import attributes to ePerl 
+     $base      = qq|&lt;get-var base&gt;|;
+@@ -153,10 +166,17 @@
+ 
+ =item C&lt;content&gt;
+ 
+-This is a comma-separated list of size/color pairs. The syntax of these pairs
+-is ``I&lt;pixels&gt;C&lt;:#&gt;I&lt;rrggbb&gt;''. To get a backround with two columns, a black
+-one with 150 point in size and a white one which fills the rest of the page
+-use ``C&lt;150:#000000,1200:#ffffff&gt;''. 
++This is a comma-separated list of size/color specifications. The syntax
++is ``I&lt;pixels&gt;C&lt;:#&gt;I&lt;rrggbb&gt;C&lt;[:#&gt;I&lt;rrggbb&gt;C&lt;[:&gt;I&lt;number&gt;C&lt;]]&gt;''.
++``I&lt;pixels&gt;'' is the width of this line of color.
++When olny one color is used, it is the color of this line.
++If a second color is used, a gradient will be drawn from
++the former to the latter colors. The number of colors used in this
++gradient is ``I&lt;number&gt;'' (default=10).
++To get a backround with two columns, a black one with 150 point in size
++and a white one which fills the rest of the page use
++``C&lt;150:#000000,1200:#ffffff&gt;''.  To have a nice gradient-grey, use
++``C&lt;70:#000000,80:#000000:#ffffff:40,1200:#ffffff&gt;''.
+ 
+ =back
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00286.shtml">[Patch wml::des::gfont]</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00288.shtml">[Patch] Borders again with gfont</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00286.shtml">[Patch wml::des::gfont]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00288.shtml">[Patch] Borders again with gfont</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00287"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00287"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,265 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1 -->
+<!--X-From-R13: Ayvire Epunqr <bfNyf&#45;yn.arg> -->
+<!--X-Date: Tue, 23 Apr 2002 07:10:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0204222027010.9161&#45;200000@tun.mbi&#45;berlin.de -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20020422011949.A10608@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02597">Date Index</a>][<a href="thrd52.shtml#02597">Thread Index</a>]<br>
+[<A HREF="msg02596.shtml">Date Prev</A>][<A HREF="msg02598.shtml">Date Next</A>][<A HREF="msg02595.shtml">Thread Prev</A>][<A HREF="msg02596.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Oliver Schade &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Apr 2002 20:28:31 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Denis,
+
+On Mon, 22 Apr 2002, Denis Barbier wrote:
+&gt; &gt; | aSubstError: invalid number of opening and closing delimiters
+
+&gt; this means that {: and :} did not match. Maybe these delimiters are used
+&gt; in some of your input files?
+
+Yes, they are (see in the attached wml-file). Is there a way to escape
+these delimiters and to transform the included files before they are
+interpreted by WML?
+
+&gt; It would indeed help.  If it is large, send it to me by private e-mail.
+
+Thanks for your help,
+
+Bye, Oliver
+</PRE>
+<PRE>
+#!wml -o(ALL-LANG_*)+LANG_EN:%BASE.en.html -o(ALL-LANG_*)+LANG_DE:%BASE.de.html
+#use wml::all
+
+  &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+
+  &lt;lang:new id=en short&gt;
+  &lt;lang:new id=de short&gt;
+
+  &lt;page bgcolor="#000000" title="[99 Bottles of Beer] - Section 0-9" 
+        text="#000000"&gt;
+
+    &lt;table border="0" width="850" cellspacing="1"
+           align="center" bgcolor="#ffffff"&gt;
+      &lt;tr&gt;
+        &lt;td colspan="16"&gt;&lt;gfont size="4" face="Helvetica" color="#333366"&gt;99 Bottles of Beer&lt;/gfont&gt;&lt;br&gt;
+            &lt;de&gt;&lt;gfont size="1" face="Helvetica" color="#000000"&gt;Ein Programm in 242 Programmiersprachen&lt;/gfont&gt;&lt;/de&gt;
+            &lt;en&gt;&lt;gfont size="1" face="Helvetica" color="#000000"&gt;One program in 242 languages&lt;/gfont&gt;&lt;/en&gt;&lt;/td&gt;
+        &lt;td colspan="11" align="center"&gt;&lt;!--#include virtual="/cgi-bin/banner.cgi" --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&lt;td colspan="27"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+
+      &lt;tr&gt;&lt;td bgcolor="#cccccc"&gt;&amp;nbsp;&lt;/td&gt;
+          &lt;td bgcolor="#333366" colspan="25"&gt;&amp;nbsp;&lt;/td&gt;
+          &lt;td bgcolor="#cccccc"&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td align="center" bgcolor="#ffffff" colspan="27"&gt;
+         [&lt;a href="<A  HREF="mailto:new99bottles@ls-la.net">mailto:new99bottles@ls-la.net</A>"&gt;&lt;de&gt;Neues Beispiel beitragen&lt;/de&gt;&lt;en&gt;Submit new example&lt;/en&gt;&lt;/a&gt;]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+         [&lt;de&gt;G&amp;auml;stebuch&lt;/de&gt;&lt;en&gt;Guestbook&lt;/en&gt;]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+         [&lt;de&gt;Hintergrund&lt;/de&gt;&lt;en&gt;History&lt;/en&gt;]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+         [&lt;de&gt;Links&lt;/de&gt;&lt;en&gt;Links&lt;/en&gt;]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+         [&lt;a href="<A  HREF="http://www.amazon.de/exec/obidos/wishlist/BIJFWBBZQMU7/ref%3Dwl%5Fs%5F3/028-5423608-9369323">http://www.amazon.de/exec/obidos/wishlist/BIJFWBBZQMU7/ref%3Dwl%5Fs%5F3/028-5423608-9369323</A>"&gt;&lt;de&gt;Danke, Oliver&lt;/de&gt;&lt;en&gt;Thanks, Oliver&lt;/en&gt;&lt;/a&gt;]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+       &lt;/td&gt;
+     &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td align="left" bgcolor="#333366" 
+            colspan="27"&gt;&lt;font 
+                     color="#ffffff"&gt;&lt;de&gt;Programmiersprachen mit Anfangsbuchstaben:&lt;/de&gt;&lt;en&gt;Choose languages starting with letter:&lt;/en&gt;&lt;/font&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td width="31" align="center" bgcolor="#ffffff"&gt;&lt;a href="0-9.html"&gt;0-9&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="a.html"&gt;A&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="b.html"&gt;B&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="c.html"&gt;C&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="d.html"&gt;D&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="e.html"&gt;E&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="f.html"&gt;F&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="g.html"&gt;G&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="h.html"&gt;H&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="i.html"&gt;I&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="j.html"&gt;J&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="k.html"&gt;K&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="l.html"&gt;L&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="m.html"&gt;M&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="n.html"&gt;N&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="o.html"&gt;O&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="p.html"&gt;P&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="q.html"&gt;Q&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="r.html"&gt;R&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="s.html"&gt;S&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="t.html"&gt;T&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="u.html"&gt;U&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="v.html"&gt;V&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="w.html"&gt;W&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="x.html"&gt;X&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="y.html"&gt;Y&lt;/a&gt;&lt;/td&gt;
+          &lt;td width="31" align="center" bgcolor="#cccccc"&gt;&lt;a href="z.html"&gt;Z&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td colspan="27"&gt;
+&lt;a href="#00Babbage's-analytical-machine"&gt;00Babbage's&amp;nbsp;analytical&amp;nbsp;machine&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00BASIC"&gt;00BASIC&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00BC-for-unix"&gt;00BC&amp;nbsp;for&amp;nbsp;unix&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00BCPL"&gt;00BCPL&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00BefDC"&gt;00BefDC&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00Befunge"&gt;00Befunge&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00Beta"&gt;00Beta&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#00Blank"&gt;00Blank&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#4DOS-Batch"&gt;4DOS&amp;nbsp;Batch&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+&lt;a href="#4Test"&gt;4Test&lt;/a&gt;&amp;nbsp;&amp;nbsp;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+&lt;tr bgcolor&gt;&lt;td colspan=27&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr bgcolor=#cccccc&gt;
+       &lt;td bgcolor="#333366"&gt;&amp;nbsp;&lt;/td&gt;
+       &lt;td colspan="26"&gt;&lt;de&gt;Programmiersprache:&lt;/de&gt;&lt;en&gt;Programming language:&lt;/en&gt; &lt;a name="00Babbage's-analytical-machine"&gt;00Babbage's&amp;nbsp;analytical&amp;nbsp;machine&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td bgcolor="#cccccc"&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td colspan="26"&gt;&lt;tt&gt; 
+This is a custom language project.  The compiler is available at &amp;lt;a href=<A  HREF="http://www.sound.net/~aturley/blank.htm&amp;gt;http://www.sound.net/~aturley/blank.htm&amp;lt;/a&amp;gt">http://www.sound.net/~aturley/blank.htm&amp;gt;http://www.sound.net/~aturley/blank.htm&amp;lt;/a&amp;gt</A>;
+99 Bottles of Beer
+Written in Blank
+by Andrew Turley
+
+[99] bottles of beer
+{#} pop the last calling cell
+[20]{&amp;gt;} call &amp;quot;x bottles of beer on the wall,&amp;quot;
+[65]{&amp;gt;} call &amp;quot;x bottles of beer.&amp;quot;
+[98]{&amp;gt;} call &amp;quot;Take one down, pass it around,&amp;quot;
+{:}[1]{-}{!}[7]{\}{|} if bottles of beer is not 1
+[124]{&amp;gt;} call &amp;quot;x-1 bottles of beer on the wall!&amp;quot;
+{?}[19]{-}{&amp;gt;} go back to the beginning of the program
+
+[157]{&amp;gt;} otherwise goto &amp;quot;No bottles of beer on the wall!&amp;quot;
+
+&amp;quot;x bottles of beer on the wall,&amp;quot; :36+11
+{:}{.} print bottles of beer
+[0] string termination
+[10] &amp;quot;\n&amp;quot;
+[44][108][108][97][119][32][101][104][116][32][110][111][32] &amp;quot;,llaw
+eht no &amp;quot; [114][101][101][98][32][102][111][32] &amp;quot;reeb fo &amp;quot;
+[24]{^}[1]{-}[4]{\}{!}{|} [115] &amp;quot;s&amp;quot; [1]{&amp;gt;}{#}
+[101][108][116][116][111][98][32] &amp;quot;elttob &amp;quot; [34]{&amp;gt;} call the printing
+part of the program {&amp;lt;} return to calling cell
+
+&amp;quot;x bottles of beer.&amp;quot; :24+11
+{:}{.} print bottles of beer
+[0] string termination
+[10] &amp;quot;\n&amp;quot;
+[46][114][101][101][98][32][102][111][32] &amp;quot;.reeb fo &amp;quot;
+[12]{^}[1]{-}[4]{\}{!}{|}
+[115] &amp;quot;s&amp;quot;
+[1]{&amp;gt;}{#}
+[101][108][116][116][111][98][32] &amp;quot;elttob &amp;quot;
+[34]{&amp;gt;} call the printing part of the program
+{&amp;lt;} return to calling cell
+
+&amp;quot;Take one down, pass it around&amp;quot; :35
+[0] string termination
+[10] &amp;quot;\n&amp;quot;
+[44][100][110][117][111][114][97][32][116][105][32] &amp;quot;,dnuora ti &amp;quot;
+[115][115][97][112][32][44][110][119][111][100][32] &amp;quot;ssap ,nwod &amp;quot;
+[101][110][111][32][101][107][97][84] &amp;quot;eno ekaT&amp;quot; [38]{&amp;gt;} goto the
+printing part of the program {&amp;lt;} return to calling cell
+
+&amp;quot;x-1 bottles of beer on the wall!&amp;quot; :38
+[1]{-}{:}{.} (print bottles of beer)-1
+[0] string termination
+[10] &amp;quot;\n&amp;quot;
+[10] &amp;quot;\n&amp;quot;
+[33][108][108][97][119][32][101][104][116][32][110][111][32] &amp;quot;!llaw
+eht no &amp;quot; [114][101][101][98][32][102][111][32] &amp;quot;reeb fo &amp;quot;
+[115][101][108][116][116][111][98][32] &amp;quot;selttob &amp;quot; [38]{&amp;gt;} goto the
+printing part of the program {&amp;lt;} return to calling cell
+
+
+&amp;quot;No bottles of beer on the wall!&amp;quot;, terminating part of program :36 [0]
+string termination [10] &amp;quot;\n&amp;quot;
+[33][108][108][97][119][32][101][104][116][32][110][111][32] &amp;quot;!llaw
+eht no &amp;quot; [114][101][101][98][32][102][111][32] &amp;quot;reeb fo &amp;quot;
+[115][101][108][116][116][111][98][32][111][78] &amp;quot;selttob oN&amp;quot; [9]{&amp;gt;}
+goto the printing part of the program {@} exit program
+
+printing part of the program :13
+
+{:}[7]{\}{!}{|}{#}{,}{?}[10]{-}{&amp;gt;} print the top of the stack until 0
+{#} ppop the call {#} ppop the if {$} pop the 0 {&amp;lt;} return to calling
+cell
+
+
+&lt;/tt&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr bgcolor&gt;&lt;td colspan=27&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02596" HREF="msg02596.shtml">Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02595" HREF="msg02595.shtml">Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02596.shtml">Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02598.shtml">gfont + png ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02595.shtml">Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02596.shtml">Re: [BUG REPORT] WML 2.0.8, Linux Mandrake 8.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02597"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02597"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

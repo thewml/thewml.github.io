@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 10 Sep 1999 12:08:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990910120002.25069A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990910002851.A7518@intra.dhs.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00962">Date Index</a>][<a href="thrd20.shtml#00962">Thread Index</a>]<br>
+[<A HREF="msg00961.shtml">Date Prev</A>][<A HREF="msg00963.shtml">Date Next</A>][<A HREF="msg00961.shtml">Thread Prev</A>][<A HREF="msg00936.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 10 Sep 1999 12:02:38 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 10 Sep 1999 scratch@ace.ulyssis.student.kuleuven.ac.be wrote:
+
+&gt; Here's a quick patch to a bug in wml itself, that caused '~' variable inter-
+&gt; polation with one-charactered directories go wrong (I've broken my head on 
+&gt; this for a long time, please take a look at it! :))
+
+Thanx, it's committed in the CVS repository. I patched wmk too.
+Is scratch@ace.ulyssis.student.kuleuven.ac.be your real mail address?
+Just to show in the changeLog who sent this bug fix.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00961" HREF="msg00961.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> scratch</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00961.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00963.shtml">Bug in &lt;url&gt; (was Re: your mail)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00961.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00936.shtml">Binaries</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00962"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00962"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: One&#45;line patch for navbar.wml in WML 2.0.4 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 2 Oct 2000 10:28:24 +0200 (MET DST) -->
+<!--X-Message-Id: 20001002103016.B22270@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001001201103.A4868@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02008">Date Index</a>][<a href="thrd41.shtml#02008">Thread Index</a>]<br>
+[<A HREF="msg02007.shtml">Date Prev</A>][<A HREF="msg02009.shtml">Date Next</A>][<A HREF="msg02007.shtml">Thread Prev</A>][<A HREF="msg02011.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: One-line patch for navbar.wml in WML 2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Oct 2000 10:30:16 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Oct 01, 2000 at 08:11:03PM -0600, Anthony Fok wrote:
+&gt; Hello Denis,
+&gt; 
+&gt; Please apply the following patch to navbar.wml in WML 2.0.4, otherwise
+&gt; $menumode is left undefined, with the resulting behaviour of
+&gt; menumode=outer even when menumode=inner is set explicitly.
+
+Hi Anthony,
+
+this is indeed very annoying, your patch has been applied.
+Thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02007" HREF="msg02007.shtml">One-line patch for navbar.wml in WML 2.0.4</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02007.shtml">One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02009.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02007.shtml">One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02011.shtml">Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02008"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02008"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

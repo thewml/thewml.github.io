@@ -1,0 +1,176 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 26 May 2000 22:13:18 +0200 (MET DST) -->
+<!--X-Message-Id: 20000526221353.A489@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200005260755.JAA25504@ns.inetcom.loc -->
+<!--X-Reference: Pine.GSO.4.21.0005261009030.7374&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Reference: 20000526142924.A937@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01626">Date Index</a>][<a href="thrd33.shtml#01626">Thread Index</a>]<br>
+[<A HREF="msg01625.shtml">Date Prev</A>][<A HREF="msg01627.shtml">Date Next</A>][<A HREF="msg01621.shtml">Thread Prev</A>][<A HREF="msg01631.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 26 May 2000 22:13:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, May 26, 2000 at 02:29:24PM +0200, Stefan `Sec` Zehl wrote:
+
+&gt; On Fri, May 26, 2000 at 10:20:21AM +0200, Tobias Oetiker wrote:
+&gt; &gt; lets have an example .... &lt;BLA&gt;&lt;/BLA&gt; and &lt;BLB&gt;&lt;/BLB&gt; are complex
+&gt; &gt; tags both defined in mp4h:
+&gt; 
+&gt; I'll try.
+
+Some expressions below are called either valid or invalid. This has
+nothing to do with HTML or SGML syntax, it is just my idea of mp4h
+syntax.
+
+&gt; &gt; 1) &lt;H1&gt;hello&lt;BLA&gt;hello&lt;/H1&gt;&lt;/BLA&gt;
+&gt; 
+&gt; Expand BLA and interpret H1 as text.
+
+Agree.
+
+&gt; &gt; 2) &lt;BLB&gt;hello&lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; 
+&gt; Expand BLB, and don't expand BLB. Alternatively, print an error because
+&gt; BLA is not terminated within BLB.
+
+&lt;comment&gt;
+Hey Stefan, you have only one choice ;-)  Otherwise grammar will be
+somewhat obfuscated.
+&lt;/comment&gt;
+
+Invalid: `&lt;/BLB&gt; found where &lt;/BLA&gt; is expected'
+I believe that allowing wrong-nested tags does not help, it just makes
+debugging harder.
+
+&gt; &gt; 3) &lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; 
+&gt; Error. BLB has no opening. Alternatively, interpret BLB as text.
+
+Invalid: `&lt;/BLB&gt; found where &lt;/BLA&gt; is expected'
+I would also suggest that
+  &lt;/BLB&gt;
+reports an error.
+
+&gt; &gt; 4) &lt;BLA&gt;&lt;perl&gt;print "&lt;BLB&gt;"&lt;/perl&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; 
+&gt; Because perl is run after mhc, I'd either make &lt;perl&gt;&lt;/perl&gt; protect its
+&gt; interior from mhc, thus resulting in example 3. If you make
+&gt; perl-non-protecting, you expand both of them. &lt;BLB&gt; then has "&lt;/perl&gt; as
+&gt; %body.
+
+I do not like the idea of &lt;perl&gt;...&lt;/perl&gt; protecting against expansion,
+i worked hard to make Perl commands nestable ;-)
+So i would say that this expression is invalid.
+
+&gt; &gt; 5) &lt;BLA&gt;&lt;BLA&gt;&lt;perl&gt;print "&lt;/BLA&gt;"&lt;/perl&gt;&lt;/BLA&gt;
+&gt; 
+&gt; same as above. Either you have one unclosed &lt;BLA&gt; or you get strange
+&gt; results %)
+&gt; 
+&gt; &gt; 6) &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt; or &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; 
+&gt; expand BLA with argument &lt;BLB&gt; and %body &lt;/BLB&gt;&gt;
+
+&lt;comment&gt;
+No, &lt;BLB&gt; alone does not make sense.
+&lt;/comment&gt;
+
+&lt;BLA&gt; has one attribute which is &lt;BLB&gt;&gt;&lt;/BLB&gt; and an empty body.
+
+&gt; and
+&gt; expand BLA with argument &lt;BLB&gt; and %body &lt;/BLB&gt;
+
+Invalid: EOF when reading attributes af &lt;BLA&gt;
+
+&gt; both behave essentially the sames as (3)
+
+Not really, as you see we do not have the same idea on how it must be
+processed.
+
+&gt; &gt; 7) &lt;BLA &lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt;
+&gt; 
+&gt; Just pass "&lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;" as parameter.
+
+&lt;comment&gt;
+Huh, in 3 you say this expression is invalid.
+&lt;/comment&gt;
+
+Invalid: `&lt;/BLA&gt; found where &lt;/BLB&gt; is expected'
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01631" HREF="msg01631.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01616" HREF="msg01616.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01617" HREF="msg01617.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="01621" HREF="msg01621.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01625.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01627.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01621.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01631.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01626"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01626"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

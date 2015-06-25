@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: prob with language&#45;tags when opening a file with EPerl -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 12 Mar 2001 10:55:11 +0100 (MET) -->
+<!--X-Message-Id: 20010312110435.A15844@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010218232527.E31715@tomk32.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02168">Date Index</a>][<a href="thrd44.shtml#02168">Thread Index</a>]<br>
+[<A HREF="msg02167.shtml">Date Prev</A>][<A HREF="msg02169.shtml">Date Next</A>][<A HREF="msg02164.shtml">Thread Prev</A>][<A HREF="msg02170.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: prob with language-tags when opening a file with EPerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Mar 2001 11:04:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Feb 18, 2001 at 11:25:27PM +0100, Thomas R. Koll wrote:
+&gt; I'm opening a file through (I know I could do it in WML with #include, but would be much much more work) which contains language tags like &lt;en&gt;&lt;/en&gt;. my problem is now that WML ignores these tags :(
+&gt;
+&gt; ------- the WML file with EPerl code --------
+&gt; 
+&gt; 	$tmp =  $ddir.$images[$count][0].".desc";
+&gt; 	open (DESCFILE, "&lt;$tmp");
+&gt; 	while (&lt;DESCFILE&gt;) {
+&gt; 			print $_;
+&gt; 	}
+&gt; 	close (DESCFILE);
+&gt; 
+&gt; 
+&gt; ------------ the description file ------------
+&gt; &lt;en&gt;altachum - The old watchtower at the westcoast during sunset.&lt;br&gt;
+&gt; 	A motiv I'm still painting sometimes.&lt;/en&gt;
+&gt; &lt;de&gt;altachum - Der Wachturm and der Westküste bei Sonnenuntergang.&lt;br&gt;
+&gt; 	Ein Motiv dass mich auch heute noch beschäftigt.&lt;/de&gt;
+
+Hi Thomas,
+
+these tags are expanded during pass 2, and ePerl is run in pass 3 so it
+won't work. Furthermore lang slices are processed during the last pass.
+So if you want to include these files with ePerl, you have to make these
+tags understandable by wml_p9_slice, try something like:
+
+ 	while (&lt;DESCFILE&gt;) {
+ 			s#&lt;[eE][nN]&gt;#\[LANG_EN:#g;
+ 			s#&lt;/[eE][nN]&gt;#:LANG_EN\]#g;
+ 			s#&lt;[dD][eE]&gt;#\[LANG_DE:#g;
+ 			s#&lt;/[dD][eE]&gt;#:LANG_DE\]#g;
+ 			print;
+ 	}
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02170" HREF="msg02170.shtml">Re: prob with language-tags when opening a file with EPerl</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02164" HREF="msg02164.shtml">prob with language-tags when opening a file with EPerl</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02167.shtml">Re: Is there a syntax-file for vim?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02169.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02164.shtml">prob with language-tags when opening a file with EPerl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02170.shtml">Re: prob with language-tags when opening a file with EPerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02168"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02168"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

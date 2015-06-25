@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: eperl&#45;mode for (X)Emacs -->
+<!--X-From-R13: Dnsnry Znobvffvrer <ensnryNvpc.vact.se> -->
+<!--X-Date: Thu, 23 Nov 2000 15:30:06 +0100 (MET) -->
+<!--X-Message-Id: 20001123152931.O22569@icp.inpg.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001122123230.C22569@icp.inpg.fr -->
+<!--X-Reference: 20001122194828.A18725@tomk32.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02069">Date Index</a>][<a href="thrd42.shtml#02069">Thread Index</a>]<br>
+[<A HREF="msg02068.shtml">Date Prev</A>][<A HREF="msg02070.shtml">Date Next</A>][<A HREF="msg02067.shtml">Thread Prev</A>][<A HREF="msg02070.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: eperl-mode for (X)Emacs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rafael Laboissiere &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 23 Nov 2000 15:29:31 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Nov 22, 2000 at 07:48:28PM +0100, Thomas R. Koll wrote:
+
+&gt; I don't know much about settip up emacs, so I want to know where to install
+&gt; the files, I tried /usr/share/emacs/20.7/lisp but it didn't work. (My
+&gt; system is debian) I hope you can help me
+
+First of all, my eperl-mode.el will not work in FSF Emacs, because it uses
+extents.  It may be possible to use an overlay  compatibility library, but I
+do not have time to do it right now.
+
+I think that your problem is even more fundamental than that, as you do not
+seem how to install add-on packages for (X)Emacs.  Just put the files in
+some directory (say /path/to/dir/) and put that in your ~/.emacs:
+
+    (load-file "/path/to/dir/eperl-mode")
+
+Then, when visiting a buffer with ePerl constructs, just type
+
+    M-x eperl-mode
+
+and you are in business.    
+ 
+-- 
+Rafael
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02066" HREF="msg02066.shtml">eperl-mode for (X)Emacs</A></strong>, <em>From:</em> Rafael Laboissiere</li>
+<li><strong><A NAME="02067" HREF="msg02067.shtml">Re: eperl-mode for (X)Emacs</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02068.shtml">RE: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02070.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02067.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02070.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02069"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02069"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Change: mailing list delivery location -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Fri, 12 Mar 1999 10:52:32 +0100 (MET) -->
+<!--X-Message-Id: 19990312105216.A79175@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00463">Date Index</a>][<a href="thrd11.shtml#00463">Thread Index</a>]<br>
+[<A HREF="msg00462.shtml">Date Prev</A>][<A HREF="msg00464.shtml">Date Next</A>][<A HREF="msg00470.shtml">Thread Prev</A>][<A HREF="msg00481.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Change: mailing list delivery location</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 12 Mar 1999 10:52:16 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I've now finally moved the expansion location for the sw-wml@engelschall.com
+mailing list from my development machine here at home (which has only
+on-demand Internet connectivity) to opensource.ee.ethz.ch which has a good and
+permanent Internet connection. Actually this mailing list is now served by the
+same machine which also delivers openssl-xxx@openssl.org,
+sw-mod-ssl@engelschall.com, etc.  ;-)
+
+NOTHING HAS TO BE CHANGED BY YOU, OF COURSE!
+
+The result is just that the expansion and delivery of postings is now
+processed immediately within a few minutes while in the past a usual delay
+between 2 and 8 hours was common.  I think this is in your interest because it
+makes discussion flows faster.
+
+In case of any problems or inconsistencies with this list,
+please drop me a note.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00462.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00464.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00470.shtml">Re: Another WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00481.shtml">Minor bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00463"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00463"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

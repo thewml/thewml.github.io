@@ -1,0 +1,299 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New WML features for gif generation (patch) -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Thu, 28 Oct 1999 08:43:06 +0200 (MET DST) -->
+<!--X-Message-Id: 19991027183646.A10257@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991026152009.A15527@Aramis.kennesaw.edu -->
+<!--X-Reference: Pine.LNX.3.96.991027095433.1496B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01101">Date Index</a>][<a href="thrd22.shtml#01101">Thread Index</a>]<br>
+[<A HREF="msg01100.shtml">Date Prev</A>][<A HREF="msg01102.shtml">Date Next</A>][<A HREF="msg01099.shtml">Thread Prev</A>][<A HREF="msg01090.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New WML features for gif generation (patch)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Oct 1999 18:36:46 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis,
+
+On Wed, Oct 27, 1999 at 10:02:56AM +0200, barbier@imacs.polytechnique.fr wrote:
+&gt; 
+&gt; This time, I fully agree ;-)
+&gt; 
+&gt; If you want to write patches, they are welcome.
+&gt; Thanks
+&gt; 
+&gt; On Tue, 26 Oct 1999, Thomas Akin wrote:
+&gt; 
+
+	Here is the patch file to make the changes mentioned
+	in my previous email.... There ended up being
+	minimal changes to the code--much cleaner than my
+	earlier solution....
+
+	Let me know how it works...
+
+Thanks,
+
+
+Thomas
+-- 
+
+---------------------------------------------------------------
+Thomas Akin                       Kennesaw State University
+Networking Instructor             Continuing Education
+CNX, CSA, ICS                     1000 Chastain Road
+takin@kennesaw.edu                Kennesaw, GA 30144-5591
+---------------------------------------------------------------
+
+
+--------------------- cut here --------------------------------
+
+Index: wml-1.7.4/wml_include/des/gfont.src
+*** wml-1.7.4/wml_include/des/gfont.src	Tue Sep 21 09:37:55 1999
+--- wml-1.7.4.1/wml_include/des/gfont.src	Wed Oct 27 17:55:08 1999
+***************
+*** 29,40 ****
+  &lt;set-var notag=*&gt;
+  &lt;set-var %attributes&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var GFONT_BASE&gt;
+!        &lt;match &lt;get-var WML_SRC_FILENAME&gt;
+!               "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;&gt;
+  &lt;:
+  {
+      #   import attributes to ePerl 
+      my $base    = "&lt;get-var base&gt;";
+      my $color   = "&lt;get-var color&gt;";
+      my $bgcolor = "&lt;get-var bgcolor&gt;";
+--- 29,43 ----
+  &lt;set-var notag=*&gt;
+  &lt;set-var %attributes&gt;
++ &lt;defvar srcfile &lt;match &lt;get-var WML_SRC_FILENAME&gt;
++ 		       "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var GFONT_BASE&gt;
+!        &lt;or &lt;get-var IMGBASE&gt;
+!            &lt;get-var srcfile&gt;&gt;&gt;&gt;
+  &lt;:
+  {
+      #   import attributes to ePerl 
+      my $base    = "&lt;get-var base&gt;";
++     my $srcfile = "&lt;get-var srcfile&gt;";
+      my $color   = "&lt;get-var color&gt;";
+      my $bgcolor = "&lt;get-var bgcolor&gt;";
+***************
+*** 53,57 ****
+      #   create the output filename
+      if ($base ne '') {
+!         $base .= '/' if (-d $base);
+      }
+      if ($file eq '') {
+--- 56,60 ----
+      #   create the output filename
+      if ($base ne '') {
+!         $base .= "/$srcfile" if (-d $base);
+      }
+      if ($file eq '') {
+
+Index: wml-1.7.4/wml_include/des/imgbg.src
+*** wml-1.7.4/wml_include/des/imgbg.src	Mon Sep 20 09:12:33 1999
+--- wml-1.7.4.1/wml_include/des/imgbg.src	Wed Oct 27 17:56:30 1999
+***************
+*** 88,98 ****
+  &lt;preserve content&gt;
+  &lt;set-var %attributes&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var BGIMG_BASE&gt;
+!        &lt;match &lt;get-var WML_SRC_FILENAME&gt;
+!               "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;&gt;
+  &lt;:
+      #   import attributes to ePerl 
+      $base      = qq|&lt;get-var base&gt;|;
+      $direction = qq|&lt;get-var direction&gt;|;
+      $content   = qq|&lt;get-var content&gt;|;
+--- 88,101 ----
+  &lt;preserve content&gt;
+  &lt;set-var %attributes&gt;
++ &lt;defvar srcfile &lt;match &lt;get-var WML_SRC_FILENAME&gt;
++ 		       "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var BGIMG_BASE&gt;
+!        &lt;or &lt;get-var IMGBASE&gt;
+! 	   &lt;get-var srcfile&gt;&gt;&gt;&gt;
+  &lt;:
+      #   import attributes to ePerl 
+      $base      = qq|&lt;get-var base&gt;|;
++     $srcfile   = qq|&lt;get-var srcfile&gt;|;
+      $direction = qq|&lt;get-var direction&gt;|;
+      $content   = qq|&lt;get-var content&gt;|;
+***************
+*** 100,104 ****
+      #   determine parameter values
+      if ($base ne '') {
+!         $base .= '/' if (-d $base);
+      }
+      $direction = 'h' if ($direction eq '');
+--- 103,107 ----
+      #   determine parameter values
+      if ($base ne '') {
+!         $base .= "/$srcfile" if (-d $base);
+      }
+      $direction = 'h' if ($direction eq '');
+
+Index: wml-1.7.4/wml_include/des/imgdot.src
+*** wml-1.7.4/wml_include/des/imgdot.src	Mon Sep 20 09:12:33 1999
+--- wml-1.7.4.1/wml_include/des/imgdot.src	Wed Oct 27 17:36:48 1999
+***************
+*** 44,54 ****
+  &lt;set-var noscale=*&gt;
+  &lt;set-var %attributes&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var IMGDOT_BASE&gt;
+!        &lt;match &lt;get-var WML_SRC_FILENAME&gt;
+!               "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;&gt;
+  &lt;:
+      #   import attributes to ePerl 
+      $base    = qq|&lt;get-var base&gt;|;
+      $width   = qq|&lt;get-var width&gt;|;
+      $height  = qq|&lt;get-var height&gt;|;
+--- 44,57 ----
+  &lt;set-var noscale=*&gt;
+  &lt;set-var %attributes&gt;
++ &lt;defvar srcfile &lt;match &lt;get-var WML_SRC_FILENAME&gt;
++ 		       "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var IMGDOT_BASE&gt;
+!        &lt;or &lt;get-var IMGBASE&gt;
+! 	   &lt;get-var srcfile&gt;&gt;&gt;&gt;
+  &lt;:
+      #   import attributes to ePerl 
+      $base    = qq|&lt;get-var base&gt;|;
++     $srcfile = qq|&lt;get-var srcfile&gt;|;
+      $width   = qq|&lt;get-var width&gt;|;
+      $height  = qq|&lt;get-var height&gt;|;
+***************
+*** 76,81 ****
+      #   create the actual GIF image file
+      if ($base ne '') {
+!         $base .= '/' if (-d $base);
+      }
+      $file = &amp;imgdot($base, $x, $y, $c, $r, $g, $b, $transp);
+  
+--- 79,85 ----
+      #   create the actual GIF image file
+      if ($base ne '') {
+!         $base .= "/$srcfile" if (-d $base);
+      }
++     print "base = $base\n";
+      $file = &amp;imgdot($base, $x, $y, $c, $r, $g, $b, $transp);
+ 
+ 
+Index: wml-1.7.4/wml_include/std/logo.src
+*** wml-1.7.4/wml_include/std/logo.src	Tue Sep 28 05:27:43 1999
+--- wml-1.7.4.1/wml_include/std/logo.src	Wed Oct 27 17:58:03 1999
+***************
+*** 16,26 ****
+  &lt;set-var %attributes&gt;
+  &lt;defvar name wml&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var LOGO_BASE&gt;
+!        &lt;match &lt;get-var WML_SRC_FILENAME&gt;
+!               "\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;&gt;
+  &lt;: 
+      my $name   = "&lt;get-var name&gt;";
+      my $base   = "&lt;get-var base&gt;";
+      my $file   = "&lt;get-var file&gt;";
+      my $target = "&lt;get-var target&gt;";
+--- 16,29 ----
+  &lt;set-var %attributes&gt;
+  &lt;defvar name wml&gt;
++ &lt;defvar srcfile &lt;match &lt;get-var WML_SRC_FILENAME&gt;
++ 		"\\.[a-zA-Z0-9]+$" action=delete&gt;&gt;
+  &lt;defvar base
+     &lt;or &lt;get-var LOGO_BASE&gt;
+!        &lt;or &lt;get-var IMGBASE&gt;
+! 	   &lt;get-var srcfile&gt;&gt;&gt;&gt;
+  &lt;: 
+      my $name   = "&lt;get-var name&gt;";
+      my $base   = "&lt;get-var base&gt;";
++     my $srcfile= "&lt;get-var srcfile&gt;";
+      my $file   = "&lt;get-var file&gt;";
+      my $target = "&lt;get-var target&gt;";
+***************
+*** 38,42 ****
+      if ($file eq '') {
+          if ($base ne '') {
+!             $base .= '/' if (-d $base);
+          }
+          $file = sprintf("%s.logo-%s.gif", $base, $name);
+--- 41,45 ----
+      if ($file eq '') {
+          if ($base ne '') {
+!             $base .= "/$srcfile" if (-d $base);
+          }
+          $file = sprintf("%s.logo-%s.gif", $base, $name);
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01096" HREF="msg01096.shtml">Re: New WML features for gif generation (patch)</A></strong>, <em>From:</em> Thomas Akin</li>
+<li><strong><A NAME="01099" HREF="msg01099.shtml">Re: New WML features for gif generation (patch)</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01100.shtml">added PNG support to webbutton</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01102.shtml">Re: replacement of gfont using TrueType fonts</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01099.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01090.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01101"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01101"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

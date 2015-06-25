@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: #include oddness. -->
+<!--X-From-R13: Yra [pUybguyra <zptyxNnegybtvk.pbz> -->
+<!--X-Date: Sun, 3 Feb 2002 03:28:07 +0100 (MET) -->
+<!--X-Message-Id: 87wuxvjo4v.fsf@ralf.artlogix.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87665gmkvo.fsf@ralf.artlogix.com -->
+<!--X-Reference: 20020202212746.A20081@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02490">Date Index</a>][<a href="thrd50.shtml#02490">Thread Index</a>]<br>
+[<A HREF="msg02489.shtml">Date Prev</A>][<A HREF="msg02491.shtml">Date Next</A>][<A HREF="msg02489.shtml">Thread Prev</A>][<A HREF="msg02491.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: #include oddness.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ken McGlothlen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 02 Feb 2002 18:27:28 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+| I do not clearly understand your bug report, but you could try compiling
+| with `wml -v9' to see which files are included and thus have a better
+| idea on what's happening there.
+
+I guess I need to (a) start using a larger font, and (b) not work so much.
+This turned out to be due to a typo that I overlooked during three hours of
+debugging, that I found in about two minutes once I got some rest.
+
+Of the last four times I've asked about WML's behavior, three have been
+entirely my problem.  I should stop submitting questions.  :)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02488" HREF="msg02488.shtml">#include oddness.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+<li><strong><A NAME="02489" HREF="msg02489.shtml">Re: #include oddness.</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02489.shtml">Re: #include oddness.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02491.shtml">Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02489.shtml">Re: #include oddness.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02491.shtml">Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02490"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02490"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

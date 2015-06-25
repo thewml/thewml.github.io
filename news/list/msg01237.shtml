@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Downstripped meta&#45;html -->
+<!--X-From-R13: Ayvire Bnhxfgnqg <cfgnqgNfghq.su&#45;urvyoebaa.qr> -->
+<!--X-Date: Tue, 28 Dec 1999 12:11:08 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.05.9912281206470.17491&#45;100000@lara.stud.fh&#45;heilbronn.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991228093305.7452A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01237">Date Index</a>][<a href="thrd26.shtml#01237">Thread Index</a>]<br>
+[<A HREF="msg01236.shtml">Date Prev</A>][<A HREF="msg01238.shtml">Date Next</A>][<A HREF="msg01235.shtml">Thread Prev</A>][<A HREF="msg01241.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Downstripped meta-html</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Oliver Paukstadt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Dec 1999 12:10:44 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 28 Dec 1999, Denis Barbier wrote:
+
+&gt; On Mon, 27 Dec 1999, Oliver Paukstadt wrote:
+&gt; &gt; I need to include all files in a special directory during the mhtml-pass
+&gt; &gt; because all defined tags in those files should be parsed.
+&gt; 
+&gt; Doing this with mhtml is not trivial.
+;-) Got it ;-) 
+
+&lt;set-var ndir=/a/path/to/a/dir &gt;
+&lt;directory-contents &lt;get-var ndir&gt; dirlist &gt;
+&lt;unset-var dirlist::. &gt;
+&lt;unset-var dirlist::.. &gt;
+&lt;set-var files[]=&lt;package-vars dirlist &gt; &gt;
+&lt;foreach file files&gt;
+&lt;set-var full=&lt;alist-get-var &lt;get-var file&gt; FULL-NAME&gt; &gt;
+&lt;include &lt;get-var full&gt;&gt;
+&lt;/foreach&gt;
+
+a bad thing is that the &lt;thisdir&gt;-Function doesn't work in the WML-mhtml,
+but I'm happy now ;-)
+
+BYtE Oli
+
++++Microsoft is not the answer +++++++++++++++++++++++++++++++++++++++++++
++++it's the question and the answer is NO! +++++++++++++++++++++++++++++++
++++oliver@paukstadt.de+++<A  HREF="http://www.paukstadt.de/">http://www.paukstadt.de/</A> ++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01235" HREF="msg01235.shtml">Re: Downstripped meta-html</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01236.shtml">Re: [BUG REPORT] WML 1.7.4, Solaris</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01238.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01235.shtml">Re: Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01241.shtml">An &quot;@&quot; in the sliceterm makes wml fail?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01237"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01237"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

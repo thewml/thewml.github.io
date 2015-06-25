@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.1 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Sun, 15 Feb 1998 17:02:24 +0100 (MET) -->
+<!--X-Message-Id: 199802151602.RAA25866@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00096">Date Index</a>][<a href="thrd2.shtml#00096">Thread Index</a>]<br>
+[<A HREF="msg00095.shtml">Date Prev</A>][<A HREF="msg00097.shtml">Date Next</A>][<A HREF="msg00095.shtml">Thread Prev</A>][<A HREF="msg00097.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Sun, 15 Feb 1998 17:02:22 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now available:
+
+Website META Language, Version 1.6.1
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+ <A  HREF="ftp://ftp.engelschall.com/sw/wml/">ftp://ftp.engelschall.com/sw/wml/</A>
+
+ChangeLog Entry:
+
+  Changes between 1.6.0 and 1.6.1:
+      980210 - added hints for "make test" to INSTALL file
+             - changed misspelled word: "Divertion" -&gt; "Diversion"
+             - made the determination of the WML_GEN_REALNAME and
+               WML_GEN_USERNAME variables more robust
+      980211 - now wml::sys::boot is only preloaded when actually
+               using Pass 3 (ePerl) because it exists only for
+               this.  This way "wml -p1" can be a useful command
+               for its own.  [Thanks to Jim Hebert
+               &lt;jhebert@compu-aid.com&gt; for hint]
+             - now the control frontend clears the CGI/1.1
+               environment variables to avoid confusion of Pass 2
+               and Pass 3 which try to determine their operation
+               mode from it.  [Thanks to Jim Hebert
+               &lt;jhebert@compu-aid.com&gt; for hint]
+      980214 - changed attribute name "interword" to "interchar"
+               for tag &lt;spaced&gt; of wml::des::typography, because
+               it is actually a inter-character spacing.
+               [Thanks to Christian Reiber for hint]
+      980215 - added missing wml_misc subdir to Makefile.in
+               so this subdir is used on all targets, too.
+               [Thanks to the Debian ports diff-file from Anthony
+               Fok &lt;foka@debian.org&gt; for hint]
+             - Ops, for 1.6.0 I already wanted to removed
+               wml_contrib because it is not useful for the end
+               user (only for the porters), but I forgot to do..
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00097" HREF="msg00097.shtml">Nested navbars</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00095.shtml">Re: web site troubles\?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00097.shtml">Nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00095.shtml">Re: web site troubles\?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00097.shtml">Nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00096"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00096"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

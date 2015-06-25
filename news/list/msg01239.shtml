@@ -1,0 +1,177 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Recursive #include problem -->
+<!--X-From-R13: Uvyyrf Znzveny <ynzvenyNznvy.qbgpbz.se> -->
+<!--X-Date: Tue, 28 Dec 1999 20:26:26 +0100 (MET) -->
+<!--X-Message-Id: 3868F706.1D6FED03@mail.dotcom.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991228132925.8347A&#45;200000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01239">Date Index</a>][<a href="thrd26.shtml#01239">Thread Index</a>]<br>
+[<A HREF="msg01238.shtml">Date Prev</A>][<A HREF="msg01240.shtml">Date Next</A>][<A HREF="msg01238.shtml">Thread Prev</A>][<A HREF="msg01240.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Recursive #include problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gilles Lamiral &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Dec 1999 18:44:38 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+
+
+&gt; Phase 1 is more than the cpp job, because prolog filters may be applied.
+&gt; A patch is attached. It will go under CVS after some checks.
+
+Sorry to have told you Phase 1 is more than the cpp job. 
+
+Thanks for the patch.
+
+In fact I won't use this feature for my current need. 
+But you consider it a bug, don't you ? Be careful because some
+people may have used it like a feature.
+
+My need is to extend the navigation bar and build a navigation square.
+I didn't succeed in building it with wml.
+So, I wrote entirely a new tool in perl. It can be use with wml or sdf. 
+I will make a distribution when time will come or if someone else
+is interested right now. I give you the README file.
+
+
+==========================================================================
+This is the README file of NavSquare
+
+Author  : Gilles Lamiral 
+contact : lamiral@mail.dotcom.fr
+
+
+This software is  under the GPL, the GNU  Public License Version 2, in
+order to avoid  to  be oust from it  but  I really doubt  a commercial
+enterprise can be interested one day. You can find this licence in the 
+./doc directory.
+
+NavSquare uses wwwtable which is not under the GPL license. See the file
+wwwtable.txt in the wwwtable distribution.
+
+To see what's new, read the CHANGELOG file.
+
+What is it ?
+============
+
+NavSquare is juste a tool to generate navigation squares. A navigation 
+square is like a navigation bar except it displays information in
+two dimensions instead of one. 
+
+Informations are :
+  - where you are.
+  - where you're from.
+  - where you can go.
+
+Navquare allow to consctuct a hierachical web site and maintain a
+coherent navigation tool on each page. symbolic link over
+directories are not treated yet.
+
+What do you need ?
+==================
+
+ - Perl 5.  I use 5.004_03 but earlier releases are good too.
+ - Perl module Tree::DAG_Node; You can find it on CPAN or in the
+   directory tools/.
+ - wwwtable. A perl script to construct HTML tables easily. You 
+   can find it in the directory tools/.
+
+ - optionnaly, you can use wml with navsquare.
+
+
+Bugs:
+=====
+
+No known bug.
+Any unknown bug may be corrected when found and sent to the author.
+
+
+
+How to use it ?
+===============
+
+navquare recursively goes down through the directory where you run it.
+it searches for files named ".myname".  Those files contain an alternative
+name of the directory where they are. If the ".myname" file does not exist
+then the directory will not be shown in the square.
+
+So before running navsquare.pl, you have to create the ".myname" files in
+each directory you want to see the navigation square.
+
+The script myname.sh does this job for you.
+
+See a example in the test/ directory
+==========================================================================
+
+-- 
+au revoir,
+Gilles Lamiral. France, Rennes (35).
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01240" HREF="msg01240.shtml">Re: Recursive #include problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01238" HREF="msg01238.shtml">Re: Recursive #include problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01238.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01240.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01238.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01240.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01239"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01239"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

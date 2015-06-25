@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 2.0.1 -->
+<!--X-From-R13: [ngguvnf Preauneqg <zngguoNthkuntra.arg> -->
+<!--X-Date: Sat, 27 May 2000 19:40:48 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.10005261505460.505&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0005251630210.29542&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01634">Date Index</a>][<a href="thrd34.shtml#01634">Thread Index</a>]<br>
+[<A HREF="msg01633.shtml">Date Prev</A>][<A HREF="msg01635.shtml">Date Next</A>][<A HREF="msg01625.shtml">Thread Prev</A>][<A HREF="msg01642.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Matthias Bernhardt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 26 May 2000 15:27:00 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 25 May 2000, Franz Knipp wrote:
+
+FK&gt; &gt;   * Undefined tags are now parsed like defined tags, it means that it is
+FK&gt; 
+FK&gt; IMO undefined tags shouldn't be parsed and altered at all. If there's a
+FK&gt; mp4h command inside, this should be expanded as usual, but nothing else.
+
+In order to not altering the tags it is reqired to parse them,
+how else should one now where the tag ends!?
+
+
+FK&gt; A tag ends with a right angle bracket - nested tags have to be possible
+FK&gt; (of course).
+
+Especially to support this, a good parser is _essential_.
+
+
+FK&gt; &gt;   * This implies that left angle brackets inside ePerl code must be
+FK&gt; &gt;     protected.
+FK&gt; 
+FK&gt; This shouldn't be necessary at all. I like WML because of its
+FK&gt; transparency in the sense, that it leaves the files untouched where
+FK&gt; there's no WML construct (especially in pass 1-4) - this philosophy has to
+FK&gt; take place in all passes! 
+FK&gt; 
+FK&gt; So, therefore I've the following suggestion: let's us speak about the
+FK&gt; grammar of mp4h before producing three other versions in sequence with
+FK&gt; changing syntax...
+FK&gt; 
+FK&gt; This will also simplify the job of Denis Barbier who has to check all the
+FK&gt; include files before publishing a new version.
+FK&gt; 
+FK&gt; What do you think about it?
+
+You are right, as it's obvious now, that this is a serious flaw
+in the current version of mp4h, it should be discussed first,
+and then implemented. Already too bad, that 2.0.0 is `buggy',
+one should try to fix that in not too many new versions.
+
+To me it appears very desirable, if it was not necessary
+to tamper ePerl code in WML files by protecting brackets.
+
+To get rid of the need to protect brackets, I suggest to
+implement the &lt;: and :&gt; tags into the mp4h Parser, so ePerl
+code would not be evaluated except constants, which is 
+everything in "" quotes or in so-called "here" documents (&lt;&lt;).
+
+On the other hand I see that it's a Problem that Perl-Semantics
+would get into the mp4h parser, which is not desirable if mp4h
+shall be usable as a standalone product or if, unlikely enough,
+Perl should ever change the ways of using constants.
+
+Denis and the others, do you think, that approach is worth
+any further thoughts?
+
+regards, Matthias
+
+
+----------------------------------------------------------------
+<A  HREF="http://www.guxhagen.net/matthb/">http://www.guxhagen.net/matthb/</A>       <A  HREF="mailto:matthb@guxhagen.net">mailto:matthb@guxhagen.net</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01642" HREF="msg01642.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01611" HREF="msg01611.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01633.shtml">a) or b)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01635.shtml">c) or d)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01625.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01642.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01634"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01634"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

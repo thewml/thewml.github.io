@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RegExp, Double Quotes and ^E -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 20 Feb 2001 23:36:06 +0100 (MET) -->
+<!--X-Message-Id: 20010220234242.A13891@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20010219231141.A24595@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010220001349.A8016@imacs.polytechnique.fr -->
+<!--X-Reference: 20010220102135.A9799@imacs.polytechnique.fr -->
+<!--X-Reference: 20010220122117.A7139@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010220164710.A4928@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010220233718.A13690@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02146">Date Index</a>][<a href="thrd43.shtml#02146">Thread Index</a>]<br>
+[<A HREF="msg02145.shtml">Date Prev</A>][<A HREF="msg02147.shtml">Date Next</A>][<A HREF="msg02145.shtml">Thread Prev</A>][<A HREF="msg02163.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RegExp, Double Quotes and ^E</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 23:42:42 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 20, 2001 at 11:37:18PM +0100, Denis Barbier wrote:
+[...]
+&gt; The right solution is to use a new &lt;disjoin&gt; function (patch attached).
+[...]
+
+Here is the patch, sorry.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: src/builtin.c
+===================================================================
+RCS file: /home/barbier/cvslocal/mp4h/src/builtin.c,v
+retrieving revision 1.82
+diff -u -u -r1.82 builtin.c
+--- src/builtin.c	2001/02/14 20:59:55	1.82
++++ src/builtin.c	2001/02/20 22:04:58
+@@ -75,6 +75,7 @@
+   /*  flow functions  */
+ DECLARE (mp4h_group);
+ DECLARE (mp4h_compound);
++DECLARE (mp4h_disjoin);
+ DECLARE (mp4h_noexpand);
+ DECLARE (mp4h_expand);
+ DECLARE (mp4h_if);
+@@ -220,6 +221,7 @@
+       /*  flow functions  */
+   { "group",            FALSE,    TRUE,   mp4h_group },
+   { "compound",          TRUE,    TRUE,   mp4h_compound },
++  { "disjoin",          FALSE,    TRUE,   mp4h_disjoin },
+   { "noexpand",         FALSE,    FALSE,  mp4h_noexpand },
+   { "expand",           FALSE,    TRUE,   mp4h_expand },
+   { "if",               FALSE,    FALSE,  mp4h_if },
+@@ -1426,6 +1428,15 @@
+   dump_args (obs, argc, argv, separator);
+   obstack_grow (obs, ARGBODY, strlen (ARGBODY));
+   obstack_1grow (obs, CHAR_EGROUP);
++}
++
++
++static void
++mp4h_disjoin (MP4H_BUILTIN_ARGS)
++{
++  obstack_1grow (obs, CHAR_EGROUP);
++  obstack_grow (obs, ARG(1), strlen (ARG(1)));
++  obstack_1grow (obs, CHAR_BGROUP);
+ }
+ 
+ /*-------------------------------------------.
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02134" HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02136" HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02140" HREF="msg02140.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02141" HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02144" HREF="msg02144.shtml">RegExp, Double Quotes and ^E (was: Why does &lt;set-var %body&gt; not work?)</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02145" HREF="msg02145.shtml">Re: RegExp, Double Quotes and ^E</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02145.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02147.shtml">Re: bug report : &lt;page_end&gt; definition in wml::std::page</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02145.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02163.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02146"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02146"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

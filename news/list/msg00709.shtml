@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 31 May 1999 12:42:58 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990531113655.4643A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199905281647.SAA05884@kanta.smece.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00709">Date Index</a>][<a href="thrd8.shtml#00709">Thread Index</a>]<br>
+[<A HREF="msg00708.shtml">Date Prev</A>][<A HREF="msg00710.shtml">Date Next</A>][<A HREF="msg00704.shtml">Thread Prev</A>][<A HREF="msg00766.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 31 May 1999 12:37:02 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 28 May 1999, Davor Cengija wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt;        when nesting navbars recursivelly, eperl eats up all the memory 
+&gt;        (as expected)
+[snisp]
+
+Hi Davor,
+
+i failed writing a robust test for this kind of recursion.
+The wml-1.7.0 will be shipped asis, and i hope this problem is fixed in
+wml-1.7.1
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00704" HREF="msg00704.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00708.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00710.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00704.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00766.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00709"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00709"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

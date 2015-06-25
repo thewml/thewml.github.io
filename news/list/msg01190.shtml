@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [HELP] Replacement of wml_p2_mhc -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Sat, 4 Dec 1999 06:00:22 +0100 (MET) -->
+<!--X-Message-Id: 199912040018.BAA20247@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991203205043.6130C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01190">Date Index</a>][<a href="thrd24.shtml#01190">Thread Index</a>]<br>
+[<A HREF="msg01189.shtml">Date Prev</A>][<A HREF="msg01188.shtml">Date Next</A>][<A HREF="msg01185.shtml">Thread Prev</A>][<A HREF="msg01193.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [HELP] Replacement of wml_p2_mhc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 4 Dec 1999 01:18:29 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+Fri, 3 Dec 1999 21:17:17 +0100 (CET), you wrote:
+
+&gt; * replace MH by mp4h
+
+o.k. besides speed and the fact that the person taking care
+and built the code and knows best of it, what are the big
+advantages?
+
+&gt; * test the recursive calls of ePerl commands i wrote some weeks ago
+
+sorry, i regret, i do not have the time to take a look at
+such goodies.
+
+&gt;&gt; what is missing?
+&gt; 
+&gt; Almost everything :(
+
+com'on. you took care of wml for quite a while (where do
+you take the time for it?) there is quite a lot there
+already. we do know what we want: automatism. that's why we
+use wml.
+
+&gt;&gt; &gt; * Enhance C portability (mp4h has been tested on Linux and SunOS 5.6)
+&gt;&gt; 
+&gt;&gt; release it! others may take care of that.
+&gt; 
+&gt; I know you're right. Ok, let's go:
+&gt;     <A  HREF="http://imacs.polytechnique.fr/~barbier/mp4h/">http://imacs.polytechnique.fr/~barbier/mp4h/</A>
+
+yes. it compiled smoothly here. (glibc 2.1.2pre2)
+
+&gt; Some words of explanation: to use it within WML, you have to
+&gt; * download a recent version of WML (recent means no more than 1 day)
+
+that's very recent.
+i guess that's not possible for me at the moment. (no
+time, no free computer to test) i run wml 1.7.a305 which i
+built around july/august this year.
+ 
+i took a short look at the documentation. seems there is
+every tag defined i know. can't you take a look at the
+parser of the original Meta-HTML to get rid of that bug you
+write about at the end of the file? out of my mind: finish
+the parsing of the token as soon as you got the first
+matching result or when you get the first whitespace.
+..but what do i tell you?
+
+bye
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01185" HREF="msg01185.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01189.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01188.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01185.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01193.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01190"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01190"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

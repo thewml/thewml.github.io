@@ -1,0 +1,161 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: [nex Vbrorxr <zuNrorar.wbhl.vaen.se> -->
+<!--X-Date: Thu, 1 Jun 2000 19:15:40 +0200 (MET DST) -->
+<!--X-Message-Id: 200005301521.RAA18488@ebene.jouy.inra.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01676">Date Index</a>][<a href="thrd34.shtml#01676">Thread Index</a>]<br>
+[<A HREF="msg01675.shtml">Date Prev</A>][<A HREF="msg01679.shtml">Date Next</A>][<A HREF="msg01690.shtml">Thread Prev</A>][<A HREF="msg01688.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Mark Hoebeke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 17:21:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.1 (23-May-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Mark Hoebeke
+Reply-To: mh@jouy.inra.fr
+
+PROBLEM DESCRIPTION:
+Embedding Perl commands in grid cells doesn't seem to work.
+Here's an example :
+
+	#use wml::std::grid
+	#use wml::std::tags
+
+	&lt;page&gt;
+	&lt;grid&gt;
+	&lt;cell&gt;Here comes some Perl code&lt;/cell&gt;
+	&lt;cell&gt;&lt;: print "Hello" :&gt;&lt;/cell&gt;
+	&lt;/grid&gt;
+	&lt;/page&gt;
+
+The output of its compilation gives :
+$ wml perlcell.wml -o perlcell.html    
+ePerl:Error: Perl parsing error (interpreter rc=255)
+
+---- Contents of STDERR channel: ---------
+In string, @ALIGNS now must be written as \@ALIGNS at /tmp/wml.18474.tmp1.wml line 238, near "$align   eq '');
+    @ALIGNS"
+In string, @VALIGNS now must be written as \@VALIGNS at /tmp/wml.18474.tmp1.wml line 238, near "$valign  eq '');
+    @VALIGNS"
+Execution of /tmp/wml.18474.tmp1.wml aborted due to compilation errors.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i686-pc-linux-gnu2
+    Perl: 5.005 (/usr/bin/perl5)
+    User: mh@ebene.jouy.inra.fr
+    Date: 30-May-2000
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.2.9-chmou1, archname=i386-linux
+    uname='linux kenobi.mandrakesoft.com 2.2.9-chmou1 #13 smp wed jul 7 17:05:22 cest 1999 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=pgcc-2.91.66 19990314 (egcs-1.1.2 release)
+    cppflags='-Dbool=char -DHAS_BOOL'
+    ccflags ='-Dbool=char -DHAS_BOOL'
+    stdchar='char', d_stdstdio=undef, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Jul 12 1999 15:35:18
+  @INC:
+    /usr/lib/perl5/5.00503/i386-linux
+    /usr/lib/perl5/5.00503
+    /usr/lib/perl5/site_perl/5.005/i386-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01688" HREF="msg01688.shtml">Re: embedding ePerl commands in grid cells</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01675.shtml">Re: Strange ePerl behavior: $LANG</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01679.shtml">Bug in wml::std::lang</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01690.shtml">Re: [wml] nested &lt;protect&gt; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01688.shtml">Re: embedding ePerl commands in grid cells</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01676"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01676"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Pb with gfont -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 1 Mar 1999 15:02:07 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990301121912.9275A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36DA5DF6.1F1F0FE7@irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00413">Date Index</a>][<a href="thrd10.shtml#00413">Thread Index</a>]<br>
+[<A HREF="msg00412.shtml">Date Prev</A>][<A HREF="msg00414.shtml">Date Next</A>][<A HREF="msg00410.shtml">Thread Prev</A>][<A HREF="msg00416.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Pb with gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Mar 1999 12:51:50 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 1 Mar 1999, Frederic Le Mouel wrote:
+
+&gt; Hello,
+&gt; 
+&gt; I'm fighting at the moment with gfont, and I'm loosing :(
+&gt; Here are my problems :
+&gt; - when I use a Computer Modern Family gdf file of the package,
+&gt;   no problems, but when I use another font, the gdf file is
+&gt;   apparently well-generated via gfont_mkgdf, but gfont "Still
+&gt;   can not load XXX font", does anybody have Times.gdf.gz file
+&gt;   for me to test, or is gdf format depending of others include
+&gt;   files ?
+
+Could you send an example of how you invoke gfont?
+
+&gt; - in my wml file, I'm trying something like this :
+&gt;   &lt;gfont ...&gt;
+&gt; 	&lt;lang:en: English_Blabla&gt;&lt;lang:fr: French_Blabla&gt;
+&gt;   &lt;/gfont&gt;
+&gt;   but it generates a beautiful gif file with exactly my tags :)
+
+Right, because language expansions are handled in the last pass.
+You have to define the 2 gif files
+&lt;gfont file="blabla-en.gif" notag&gt;English_Blabla&lt;/gfont&gt;
+&lt;gfont file="blabla-fr.gif" notag&gt;French_Blabla&lt;/gfont&gt;
+
+After that, you insert images with &lt;lang:star: blabla-*.gif&gt; for
+example.
+
+   Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00410" HREF="msg00410.shtml">Pb with gfont</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00412.shtml">Re: Wish list</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00414.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00410.shtml">Pb with gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00416.shtml">Install problem on Debian</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00413"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00413"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

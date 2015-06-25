@@ -1,0 +1,20 @@
+16a17
+> <preserve align>
+26c27,28
+<        bgcolor="<get-var bdcolor>" border=0>
+---
+>        bgcolor="<get-var bdcolor>" border=0
+>        <if <get-var align> "align=\"<get-var align>\""> >
+54c56,57
+< <table border=0 cellpadding=0 cellspacing=0>
+---
+> <table border=0 cellpadding=0 cellspacing=0
+>        <if <get-var align> "align=\"<get-var align>\""> >
+87a91
+> <restore align>
+155a160,164
+> 
+> =item C<align>
+> 
+> This specifies the horizontal placement of the box within in the window. 
+> Allowed values are LEFT, CENTER and RIGHT. B<Depracated in HTML 4.0>

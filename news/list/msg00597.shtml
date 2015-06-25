@@ -1,0 +1,82 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: gfont in navbars -->
+<!--X-From-R13: Xbua Frevyyn <grevyynNzngu.hap.rqh> -->
+<!--X-Date: Sun, 2 May 1999 12:17:48 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.SOL.3.96.990502024056.19246A&#45;100000@gandalf.math.unc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00597">Date Index</a>][<a href="thrd14.shtml#00597">Thread Index</a>]<br>
+[<A HREF="msg00596.shtml">Date Prev</A>][<A HREF="msg00598.shtml">Date Next</A>][<A HREF="msg01033.shtml">Thread Prev</A>][<A HREF="msg00598.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>gfont in navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: John Terilla &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 2 May 1999 03:04:58 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi everyone,
+
+Just discovered wml-1.6.8 and am trying to get cozy with it before I have
+a go at wmlizing my pages.  My question is about navigation bars: 
+
+I was trying to use something like this
+
+#use wml::des::gfont 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00596.shtml">Hello</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00598.shtml">slices inside slices?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01033.shtml">Re: hello</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00598.shtml">slices inside slices?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00597"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00597"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

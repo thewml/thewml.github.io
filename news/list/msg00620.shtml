@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Running WML from WML? -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Fri, 7 May 1999 10:38:24 +0200 (MET DST) -->
+<!--X-Message-Id: 199905070838.KAA21226@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00620">Date Index</a>][<a href="thrd12.shtml#00620">Thread Index</a>]<br>
+[<A HREF="msg00619.shtml">Date Prev</A>][<A HREF="msg00621.shtml">Date Next</A>][<A HREF="msg00617.shtml">Thread Prev</A>][<A HREF="msg00622.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Running WML from WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 07 May 1999 10:38:16 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thursday 6 May 1999, at 18 h 2, the keyboard of Denis Barbier 
+&lt;barbier@imacs.polytechnique.fr&gt; wrote:
+
+&gt; Below is a quick workaround ; there are 3 or 4 other memory allocations
+&gt; without checks. I will fix them later, unless someone volunteer?
+&gt; Stéphane, could you check if it solves your problem, please.
+
+Your last patch (the longest) works fine with wml (Digital Unix 4, patch applied on clean WML 1.6.8, the bug is perfectly reproducable before the patch). Thanks a lot, I can drop the wrapper.
+
+Someone should do it for ePerl, too...
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00622" HREF="msg00622.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00619.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00621.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00617.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00622.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00620"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00620"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 1.7.1 Compilation Problems -->
+<!--X-From-R13: Rnivq Oygraohet <nygraoheNapfn.hvhp.rqh> -->
+<!--X-Date: Wed, 16 Jun 1999 17:31:05 +0200 (MET DST) -->
+<!--X-Message-Id: 4.1.19990616102839.00ac5480@pop.ncsa.uiuc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 4.1.19990615135819.00abbd60@pop.ncsa.uiuc.edu -->
+<!--X-Reference: Pine.LNX.3.96.990616130537.8356B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00775">Date Index</a>][<a href="thrd17.shtml#00775">Thread Index</a>]<br>
+[<A HREF="msg00774.shtml">Date Prev</A>][<A HREF="msg00776.shtml">Date Next</A>][<A HREF="msg00774.shtml">Thread Prev</A>][<A HREF="msg00778.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 1.7.1 Compilation Problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: David Altenburg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 16 Jun 1999 10:29:41 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+At 01:09 PM 6/16/99 +0200, you wrote:
+
+Thanks!  I'll do that (as soon as I get home).
+
+David
+
+
+&lt;SNIP&gt;
+
+&gt;No, i successfully compiled wml-1.7.1 yesterday on a RH 5.2.
+&gt;Could you try this ?
+&gt;
+&gt;prompt&gt; make distclean
+&gt;prompt&gt; ( ./configure; make ) 2&gt;&amp;1 | tee log
+&gt;prompt&gt; mail barbier@imacs.polytechnique.fr &lt; log
+&gt;
+&gt;I will compare with my output. I couldn't perform it before Monday,
+&gt;sorry.
+&gt;
+&gt;Denis
+&gt;
+&gt;______________________________________________________________________
+&gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt;Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00772" HREF="msg00772.shtml">1.7.1 Compilation Problems</A></strong>, <em>From:</em> David Altenburg</li>
+<li><strong><A NAME="00774" HREF="msg00774.shtml">Re: 1.7.1 Compilation Problems</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00774.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00776.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00774.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00778.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00775"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00775"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

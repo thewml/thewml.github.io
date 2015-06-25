@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: order of #include 'xxx' -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Tue, 1 Feb 2000 17:09:57 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000131131400.30809A&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14483.14336.740182.924450@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01311">Date Index</a>][<a href="thrd27.shtml#01311">Thread Index</a>]<br>
+[<A HREF="msg01310.shtml">Date Prev</A>][<A HREF="msg01313.shtml">Date Next</A>][<A HREF="msg01306.shtml">Thread Prev</A>][<A HREF="msg01321.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: order of #include 'xxx'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 31 Jan 2000 13:19:07 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+On Sat, 29 Jan 2000, Carsten Wartmann wrote:
+&gt; Yes, this was my first problem, but it dissapeared while using
+&gt; DDMMYYYY_Description.dat as filenames, they get sorted well.
+
+I disagree, on my system the files are really unsorted, it depends on the
+file creation and maybe you'd luck.
+
+&gt; I also decided against the filedates, because the sortorder gets
+&gt; messed if I have to edit a file later (because of a typo eg.). But a
+&gt; parameter more could not hurt ;-)
+
+I will send my solution in a few minutes ;-)
+
+&gt; Nice idea! So far I have a oldnews/ directory in which I move old
+&gt; news. I was thinking of a perl-code which moves newsfiles to this
+&gt; dir. 
+
+With the proposed INCLUDE_MAX parameter this could be done without the
+script.
+
+&gt; I think this would be great. My capabilities in programming are very
+&gt; limited, so I wouldn´t try to programm this for a bigger community ;-)
+
+I don't think that my capabilities are really more. And this is my first
+try to support the open source community with a piece of code. Don't fear!
+
+Greetings from an Austrian living in Spain
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01321" HREF="msg01321.shtml">Re: order of #include 'xxx'</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01306" HREF="msg01306.shtml">Re: order of #include 'xxx'</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01310.shtml">Re: typos</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01313.shtml">Proposed modification of the #include '' directive</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01306.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01321.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01311"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01311"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Remove duplicate mails using procmail [was: Re: New Vim Syntax File!] -->
+<!--X-From-R13: "Xnzrf O. Fernpl" <gernplNqrovna.bet> -->
+<!--X-Date: Wed, 1 Mar 2000 23:11:10 +0100 (MET) -->
+<!--X-Message-Id: 20000301134044.B7494@landru.home.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000229075738.A27468@skater.priv.at -->
+<!--X-Reference: 200002291032.LAA05723@ezili.sis.pasteur.fr -->
+<!--X-Reference: 20000301120506.A20306@skater.priv.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01400">Date Index</a>][<a href="thrd29.shtml#01400">Thread Index</a>]<br>
+[<A HREF="msg01399.shtml">Date Prev</A>][<A HREF="msg01401.shtml">Date Next</A>][<A HREF="msg01395.shtml">Thread Prev</A>][<A HREF="msg01401.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;James A. Treacy&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Mar 2000 13:40:44 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Mar 01, 2000 at 12:05:06PM +0100, Gerfried Fuchs wrote:
+&gt; 
+&gt;  Pretty please, Stephane: No need to reply _both_ in mail and to the
+&gt; list. I am subscribed to it, so please leave it on the list and don't
+&gt; load my mailbox twice. TIA!
+&gt; 
+Please, let's not start the all to common war about reply vs. reply-to
+here. :)
+
+What I do suggest is that you use procmail. The following in your
+.procmailrc will get rid of the double mail problem forever (as
+long as the Message-ID of the mails are the same):
+
+:0 Wh: msgid.lock
+| formail -D 8192 msgid.cache
+
+-- 
+James (Jay) Treacy
+treacy@debian.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01401" HREF="msg01401.shtml">Re: Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01387" HREF="msg01387.shtml">New Vim Syntax File!</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="01388" HREF="msg01388.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+<li><strong><A NAME="01395" HREF="msg01395.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01399.shtml">Re: Confusion (was RE: WAP)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01401.shtml">Re: Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01395.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01401.shtml">Re: Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01400"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01400"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

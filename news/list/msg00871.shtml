@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: html2wml -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Mon, 26 Jul 1999 11:48:27 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990726112811.4051I&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00871">Date Index</a>][<a href="thrd18.shtml#00871">Thread Index</a>]<br>
+[<A HREF="msg00870.shtml">Date Prev</A>][<A HREF="msg00872.shtml">Date Next</A>][<A HREF="msg00868.shtml">Thread Prev</A>][<A HREF="msg00874.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>html2wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Jul 1999 11:47:42 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+a very tedious work is the reorganization of old sites into
+a wml-generated.
+
+Is there a skript which converts html-files into wml-files? It
+should cut away all inside the &lt;head&gt;-area leaving the body
+untouched and should convert the &lt;keywords&gt; and &lt;description&gt; tags
+either into a &lt;keywords "foo, bar"&gt; - construction, 
+or directly into an info-tag. 
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Literatur und Satire per E-Mail
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00874" HREF="msg00874.shtml">Re: html2wml</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00870.shtml">Re: filenames/directories</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00872.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00868.shtml">ePerl substitions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00874.shtml">Re: html2wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00871"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00871"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

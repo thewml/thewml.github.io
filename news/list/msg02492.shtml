@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Reverse engineer a website? -->
+<!--X-From-R13: Euybzv Tvfu <fuybzvsNivcr.grpuavba.np.vy> -->
+<!--X-Date: Fri, 8 Feb 2002 08:13:06 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.33L2.0202080821030.24973&#45;100000@vipe.technion.ac.il -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: sc62e1c6.098@mandtbank.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02492">Date Index</a>][<a href="thrd50.shtml#02492">Thread Index</a>]<br>
+[<A HREF="msg02491.shtml">Date Prev</A>][<A HREF="msg02493.shtml">Date Next</A>][<A HREF="msg02491.shtml">Thread Prev</A>][<A HREF="msg02494.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Reverse engineer a website?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Shlomi Fish &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 8 Feb 2002 08:27:53 +0200 (IST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 7 Feb 2002, Paul C. Williamson wrote:
+
+&gt; Is it possible to reverse engineer a website?  I have a website that
+&gt; another person designed, but has now left our company.  I have
+&gt; been asked to take over the support of it, and I'd like to use wml,
+&gt; but I don't want to have to rebuild the site from the ground up.
+&gt; If I do, I guess I will.  I'd rather start with the existing site
+&gt; and make small changes via wml.
+&gt;
+
+I you pass an HTML file through the wml interpreter you'd most likely get
+the same HTML file or a similar one as output. You can start with the
+case, that all files are their own input, and start wml'ing the site by
+using scripts, and modifications by hand. Eventually, you'll get a fully
+WMLized site.
+
+Re-designing the entire site from the ground up is another option, which
+some people, especially Joel Spolsky consider a very bad idea. Refer to:
+
+<A  HREF="http://www.joelonsoftware.com/articles/fog0000000348.html">http://www.joelonsoftware.com/articles/fog0000000348.html</A>
+
+and
+
+<A  HREF="http://www.joelonsoftware.com/articles/fog0000000069.html">http://www.joelonsoftware.com/articles/fog0000000069.html</A>
+
+Of course, IMO, there are some cases, where you switch to another
+language, and/or another GUI library, and possibly completely re-design
+the program - where re-writing from scratch (while still referring to the
+old code) may be useful.
+
+With what was the old site designed in the first place? Was it maintained
+as raw HTML (which of course never scales)?
+
+Regards,
+
+	Shlomi Fish
+
+&gt; Thanks,
+&gt; Paul
+&gt;
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt;
+
+-- 
+
+
+----------------------------------------------------------------------
+Shlomi Fish        shlomif@vipe.technion.ac.il
+Home Page:         <A  HREF="http://t2.technion.ac.il/~shlomif/">http://t2.technion.ac.il/~shlomif/</A>
+Home E-mail:       shlomif@techie.com
+
+He who re-invents the wheel, understands much better how a wheel works.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02491" HREF="msg02491.shtml">Reverse engineer a website?</A></strong>, <em>From:</em> Paul C. Williamson</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02491.shtml">Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02493.shtml">Re: Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02491.shtml">Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02494.shtml">Re: Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02492"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02492"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

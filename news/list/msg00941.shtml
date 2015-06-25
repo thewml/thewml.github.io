@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Mime&#45;Types and WML source files -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 7 Sep 1999 11:33:57 +0200 (MET DST) -->
+<!--X-Message-Id: m1aeqzhxqp.fsf_&#45;_@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00941">Date Index</a>][<a href="thrd20.shtml#00941">Thread Index</a>]<br>
+[<A HREF="msg00940.shtml">Date Prev</A>][<A HREF="msg00942.shtml">Date Next</A>][<A HREF="msg00951.shtml">Thread Prev</A>][<A HREF="msg00942.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Mime-Types and WML source files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 07 Sep 1999 11:33:34 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi,
+
+today I received a request to add the following Mime Types to our
+Web-Server configuration:
+
+text/vnd.wap.wml	wml
+text/vnd.wap.wmlscript	wmlscript wmls
+image/wbmp			wbmp
+
+There seems to be an evolving standard for wireless applications (see
+<A  HREF="http://www.wapforum.org">http://www.wapforum.org</A>).
+
+
+This was in conflict with our server setting 
+
+AddType text/plain .wml
+
+for displaying WML source files as text/plain.
+
+Any comments (for example by Ralf)? Should the WML community move to a
+different filename extension?
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00940.shtml">Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00942.shtml">[BUG REPORT] WML 1.7.2, Solaris 2.5.1, 2.7</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00951.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00942.shtml">[BUG REPORT] WML 1.7.2, Solaris 2.5.1, 2.7</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00941"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00941"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

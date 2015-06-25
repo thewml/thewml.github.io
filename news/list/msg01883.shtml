@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Praise and a question -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 5 Aug 2000 11:08:52 +0200 (MET DST) -->
+<!--X-Message-Id: 20000805110917.A4951@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0008041703270.4307&#45;100000@joeysmith.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01883">Date Index</a>][<a href="thrd38.shtml#01883">Thread Index</a>]<br>
+[<A HREF="msg01882.shtml">Date Prev</A>][<A HREF="msg01884.shtml">Date Next</A>][<A HREF="msg01882.shtml">Thread Prev</A>][<A HREF="msg01884.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Praise and a question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 5 Aug 2000 11:09:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Aug 04, 2000 at 05:11:53PM -0600, Joey Smith wrote:
+[...]
+&gt; I want to do something like:
+&gt; $(some_var:-"$php_var")
+
+Are you sure you need these quotes?
+
+&gt; ie, if some_var is not set from WML, I want it to default to a string
+&gt; containing a $, but this just seems to hang WML indefinitely...I'm
+&gt; resonably sure it's trying to resolve the php_var part.
+&gt; 
+&gt; Is there any way to do this? It does not seem to be honoring the
+&gt; backslash escape...
+
+Here is the patch i applied to wml_p1_ipp:
+
+--- wml_backend/p1_ipp/ipp.src	2000/08/02 20:23:53	1.33
++++ wml_backend/p1_ipp/ipp.src	2000/08/05 09:03:15
+@@ -423,7 +423,7 @@
+                 }
+                 #   Escape special characters
+                 $op =~ s/([?+*])/\\$1/;
+-                my $subst = '((?!\\\\).|^)\\$\\(' . $name . $op . $str . '\\)';
++                my $subst = '((?!\\\\).|^)\\$\\(' . $name . $op . '(?:[^()]*)\\)';
+ 
+                 if ($op eq '=') {
+                     #   Assign
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01884" HREF="msg01884.shtml">Re: Praise and a question</A></strong>, <em>From:</em> Joey Smith</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01880" HREF="msg01880.shtml">Praise and a question</A></strong>, <em>From:</em> Joey Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01882.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01884.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01882.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01884.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01883"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01883"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

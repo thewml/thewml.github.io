@@ -1,0 +1,189 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Sat, 27 May 2000 12:17:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20000527121742.B10271@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200005260755.JAA25504@ns.inetcom.loc -->
+<!--X-Reference: Pine.GSO.4.21.0005261009030.7374&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Reference: 20000526142924.A937@matrix.42.org -->
+<!--X-Reference: 20000526221353.A489@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01631">Date Index</a>][<a href="thrd33.shtml#01631">Thread Index</a>]<br>
+[<A HREF="msg01630.shtml">Date Prev</A>][<A HREF="msg01632.shtml">Date Next</A>][<A HREF="msg01626.shtml">Thread Prev</A>][<A HREF="msg01635.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 27 May 2000 12:17:42 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, May 26, 2000 at 10:13:53PM +0200, Denis Barbier wrote:
+&gt; Some expressions below are called either valid or invalid. This has
+&gt; nothing to do with HTML or SGML syntax, it is just my idea of mp4h
+&gt; syntax.
+
+Yep, I agree.
+
+&gt; &gt; &gt; 1) &lt;H1&gt;hello&lt;BLA&gt;hello&lt;/H1&gt;&lt;/BLA&gt;
+&gt; &gt; Expand BLA and interpret H1 as text.
+&gt; Agree.
+
+&gt; &gt; &gt; 2) &lt;BLB&gt;hello&lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; &gt; Expand BLB, and don't expand BLB. Alternatively, print an error because
+&gt; &gt; BLA is not terminated within BLB.
+&gt; &lt;comment&gt;
+&gt; Hey Stefan, you have only one choice ;-)  Otherwise grammar will be
+&gt; somewhat obfuscated.
+&gt; &lt;/comment&gt;
+
+Yes. I was just trying to differentiate between 'best-effort' parsing.
+I.e. what should happen if we try to make it fool-proof.
+
+&gt; Invalid: `&lt;/BLB&gt; found where &lt;/BLA&gt; is expected'
+&gt; I believe that allowing wrong-nested tags does not help, it just makes
+&gt; debugging harder.
+
+I'm completely okay with outputting an Error. It probably makes mp4h a
+lot cleaner :)
+
+&gt; &gt; &gt; 3) &lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; &gt; Error. BLB has no opening. Alternatively, interpret BLB as text.
+&gt; Invalid: `&lt;/BLB&gt; found where &lt;/BLA&gt; is expected'
+&gt; I would also suggest that
+&gt;   &lt;/BLB&gt;
+&gt; reports an error.
+
+yes.
+
+&gt; &gt; &gt; 4) &lt;BLA&gt;&lt;perl&gt;print "&lt;BLB&gt;"&lt;/perl&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; &gt; Because perl is run after mhc, I'd either make &lt;perl&gt;&lt;/perl&gt; protect its
+&gt; &gt; interior from mhc, thus resulting in example 3. If you make
+&gt; &gt; perl-non-protecting, you expand both of them. &lt;BLB&gt; then has "&lt;/perl&gt; as
+&gt; &gt; %body.
+&gt; I do not like the idea of &lt;perl&gt;...&lt;/perl&gt; protecting against expansion,
+&gt; i worked hard to make Perl commands nestable ;-)
+&gt; So i would say that this expression is invalid.
+
+Yep. It might surprise a few people, but I think it's better that way.
+We might add an option to protect perl from pass2 just in case someone
+wants it :)
+
+&gt; &gt; &gt; 6) &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt; or &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+&gt; &gt; expand BLA with argument &lt;BLB&gt; and %body &lt;/BLB&gt;&gt;
+&gt; 
+&gt; &lt;comment&gt;
+&gt; No, &lt;BLB&gt; alone does not make sense.
+&gt; &lt;/comment&gt;
+&gt; 
+&gt; &lt;BLA&gt; has one attribute which is &lt;BLB&gt;&gt;&lt;/BLB&gt; and an empty body.
+
+I don't think so. It would be violating POLA. A tag should close with
+the first 'available' &gt;.
+&lt;BLA &lt;BLB&gt;&gt; Is clearly BLA with attribute &lt;BLB&gt; no matter what follows.
+Only &gt;'s at the 'top level' are allowed to represent literal &gt;'s.
+IMHO you should print a warning for these cases anyway.
+
+&gt; &gt; and
+&gt; &gt; expand BLA with argument &lt;BLB&gt; and %body &lt;/BLB&gt;
+&gt; 
+&gt; Invalid: EOF when reading attributes af &lt;BLA&gt;
+
+I think you mean &lt;BLB&gt; here, don't you ?
+
+But yes, this line should always produce an error.
+
+&gt; &gt; both behave essentially the sames as (3)
+&gt; Not really, as you see we do not have the same idea on how it must be
+&gt; processed.
+
+I'd say, keep it clean and simple. This will make things a great deal
+easier IMHO :)
+
+&gt; &gt; &gt; 7) &lt;BLA &lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt;
+&gt; &gt; Just pass "&lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;" as parameter.
+&gt; 
+&gt; &lt;comment&gt;
+&gt; Huh, in 3 you say this expression is invalid.
+&gt; &lt;/comment&gt;
+&gt; 
+&gt; Invalid: `&lt;/BLA&gt; found where &lt;/BLB&gt; is expected'
+
+Oh, I was thinking of doing no further expansion inside &lt;&gt;. I'm not sure
+if we can do this or if we need that somewhere, but it would make things
+a great deal simpler. IMHO of course.
+
+CU,
+    Sec
+-- 
+Remember, all software sucks. Some sucks more, and some sucks less.
+But it sucks regardless. If I want to see something elegant I go
+look for a piece of art.                                  -- Wietse
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01635" HREF="msg01635.shtml">c) or d)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01616" HREF="msg01616.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01617" HREF="msg01617.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="01621" HREF="msg01621.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="01626" HREF="msg01626.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01630.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01632.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01626.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01635.shtml">c) or d)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01631"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01631"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

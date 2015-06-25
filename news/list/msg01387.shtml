@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: New Vim Syntax File! -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Tue, 29 Feb 2000 07:59:18 +0100 (MET) -->
+<!--X-Message-Id: 20000229075738.A27468@skater.priv.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01387">Date Index</a>][<a href="thrd29.shtml#01387">Thread Index</a>]<br>
+[<A HREF="msg01386.shtml">Date Prev</A>][<A HREF="msg01388.shtml">Date Next</A>][<A HREF="msg01385.shtml">Thread Prev</A>][<A HREF="msg01397.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>New Vim Syntax File!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 29 Feb 2000 07:57:38 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+        Hi!
+
+ First of all, all my best wishes to you, Ralf and Daniela! May your
+married life be as nice as mine :)
+
+ And now I have a little announcement to make. I don't know if you
+remember but I asked quite a while ago about a wml.vim file on this
+list. Lot of thanks again to the person who sent me the URL.
+
+ I've loaded it down and changed it a little here and there. I think
+it's quite useful at the moment. If you are interested it is available
+through the URL &lt;<A  HREF="http://alfie.ist.org/vim/syntax/wml.vim">http://alfie.ist.org/vim/syntax/wml.vim</A>&gt;. If you load
+it you might notice that I'm the current somewhat official maintainer of
+the file. Craig gave me the permission to do so and he will send me
+patches, if he do any further improvements.
+
+ And so can you. If you have any comments or improvements or just
+questions, feel free to mail me about it. But please - don't flood me
+with questions that are handled in the help files of vim :-)  Not that
+I don't want to help you with that - but I don't have the time, right ;)
+
+ One piece in advance: NO, I won't do an emacs mode for I'm not using
+that operating system ;-P
+
+ Oh, btw, the file will be included in the next release of vim (don't
+ask me when that will be ;). It will be associated with *.wml files and
+files that have #*wml in the first line.
+
+ Have fun!
+Alfie
+-- 
+The United States is like the guy at the party who gives cocaine to
+everybody and still nobody likes him.
+                -- Jim Samuels
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01397" HREF="msg01397.shtml">Help with wml::std::href</A></strong>, <em>From:</em> Bruno Boettcher</li>
+<li><strong><A NAME="01413" HREF="msg01413.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01386.shtml">Re: Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01388.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01385.shtml">RE: WAP</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01397.shtml">Help with wml::std::href</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01387"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01387"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

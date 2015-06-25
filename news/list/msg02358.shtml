@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Fri, 10 Aug 2001 16:17:18 +0200 (MET DST) -->
+<!--X-Message-Id: 3B73EDDE.1A2DFBE1@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.33.0108091226190.24746&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02358">Date Index</a>][<a href="thrd48.shtml#02358">Thread Index</a>]<br>
+[<A HREF="msg02357.shtml">Date Prev</A>][<A HREF="msg02359.shtml">Date Next</A>][<A HREF="msg02355.shtml">Thread Prev</A>][<A HREF="msg02361.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 10 Aug 2001 16:21:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; 
+&gt; www.ee.ethz.ch and opensource.ee.ethz.ch/ethz.html use similar layout
+&gt; features as you od and they look fine in Mozilla 0.93 under Solaris.
+
+Thanks to 
+s<A  HREF="news://secnews.netscape.com/3B73D770.8000901%40rubble.com">news://secnews.netscape.com/3B73D770.8000901%40rubble.com</A>
+I'm getting close to the reason!
+
+You're using &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;,
+I'm using &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+
+If I switch to a "transitional" doctype too, I have no problems
+either :-)
+
+I've been using "tidy" with --doctype strict, with causes tidy
+to use my regular doctype entry. Using --doctype loose 
+results in the "transitional" doctype.
+
+I'll still fiddle with the vertical alignment, to see
+if NS 6.1 really needs the "traditional".
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02361" HREF="msg02361.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02355" HREF="msg02355.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02357.shtml">wml website docs: tidy missing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02359.shtml">WML Roadmap or TODO-List</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02355.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02361.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02358"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02358"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

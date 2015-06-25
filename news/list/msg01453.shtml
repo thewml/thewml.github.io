@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: align (1.99.1) -->
+<!--X-From-R13: Xbret Byngr <XbretNByngr.pk> -->
+<!--X-Date: Sun, 19 Mar 2000 19:55:46 +0100 (MET) -->
+<!--X-Message-Id: 87itykugbm.fsf@psyche.kn&#45;bremen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 878zzg8y66.fsf@psyche.kn&#45;bremen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01453">Date Index</a>][<a href="thrd30.shtml#01453">Thread Index</a>]<br>
+[<A HREF="msg01452.shtml">Date Prev</A>][<A HREF="msg01455.shtml">Date Next</A>][<A HREF="msg01443.shtml">Thread Prev</A>][<A HREF="msg01438.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: align (1.99.1)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Joerg Plate &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 18 Mar 2000 22:19:25 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+__        ___  __ _
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.99.1 (16-Mar-2000)
+  \ V  V /| |  | | |___
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Joerg Plate
+Reply-To: plate@psyche.kn-bremen.de
+
+PROBLEM DESCRIPTION:
+
+  'align' and 'valign' in &lt;grid&gt; are always empty.
+  (see other e-mail)
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu2
+    Perl: 5.005_03 (/usr/bin/perl)
+    User: plate@psyche.kn-bremen.de
+    Date: 17-Mar-2000
+Built Location:
+    Prefix: /usr/local/stow/wml
+    BinDir: /usr/local/stow/wml/bin
+    LibDir: /usr/local/stow/wml/lib
+    ManDir: /usr/local/stow/wml/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.2.14, archname=i386-linux
+    uname='linux perv 2.2.14 #1 sat jan 15 20:48:59 pst 2000 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2 ', gccversion=2.95.2 20000220 (Debian GNU/Linux)
+    cppflags='-Dbool=char -DHAS_BOOL -D_REENTRANT -DDEBIAN -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -D_REENTRANT -DDEBIAN -I/usr/local/include'
+    stdchar='char', d_stdstdio=undef, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fPIC', lddlflags='-shared -L/usr/local/lib'
+
+Characteristics of this binary (from libperl):
+  Built under linux
+  Compiled at Feb 29 2000 07:31:36
+  @INC:
+    /usr/lib/perl5/5.005/i386-linux
+    /usr/lib/perl5/5.005
+    /usr/local/lib/site_perl/i386-linux
+    /usr/local/lib/site_perl
+    /usr/lib/perl5
+    .
+
+-- 
+PGP&amp;GPG  "I'm working on it."  "There should be more math. This could be mathier."
+&lt;<A  HREF="http://www.psyche.cx/">http://www.psyche.cx/</A>&gt; "I haven't been a nerd for a very long time."
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01439" HREF="msg01439.shtml">align (1.99.1)</A></strong>, <em>From:</em> Joerg Plate</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01452.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01455.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01443.shtml">Re: align (1.99.1)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01438.shtml">BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01453"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01453"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

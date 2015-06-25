@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: My navbars broken with wml&#45;2.0.3 and wml&#45;2.0.4 -->
+<!--X-From-R13: wsuNwsu00.sreahav&#45;untra.qr -->
+<!--X-Date: Mon, 25 Sep 2000 21:23:49 +0200 (MET DST) -->
+<!--X-Message-Id: uf8zsgl8nd.fsf@jfh00.fernuni&#45;hagen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01980">Date Index</a>][<a href="thrd40.shtml#01980">Thread Index</a>]<br>
+[<A HREF="msg01979.shtml">Date Prev</A>][<A HREF="msg01981.shtml">Date Next</A>][<A HREF="msg01979.shtml">Thread Prev</A>][<A HREF="msg01981.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>My navbars broken with wml-2.0.3 and wml-2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: 25 Sep 2000 18:48:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+compare the file created with wml-2.0.2 in
+<A  HREF="http://www.ice-bachelor.fernuni-hagen.de/bachelor/misc/misc-bib.html.de">http://www.ice-bachelor.fernuni-hagen.de/bachelor/misc/misc-bib.html.de</A>
+
+with
+
+the file created with wml-2.0.4
+<A  HREF="http://132.176.7.61/misc/misc-bib.html.de">http://132.176.7.61/misc/misc-bib.html.de</A>
+
+There is some javascript functionality missing due to missing javascript
+code sections.
+
+The wml code is identical (i use my own navbar.inc). I also experimented
+with the original navbar.wml. But there are alwas functions missing. The
+whole webside would be broken with the new wml's.
+
+-- 
+Fritz Heinrichmeyer <A  HREF="mailto:fritz.heinrichmeyer@fernuni-hagen.de">mailto:fritz.heinrichmeyer@fernuni-hagen.de</A>
+FernUniversitaet Hagen, LG ES, 58084 Hagen (Germany)
+tel:+49 2331/987-1166 fax:987-355 <A  HREF="http://www-es.fernuni-hagen.de/~jfh">http://www-es.fernuni-hagen.de/~jfh</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01981" HREF="msg01981.shtml">Re: My navbars broken with wml-2.0.3 and wml-2.0.4</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01982" HREF="msg01982.shtml">Re: [wml] My navbars broken with wml-2.0.3 and wml-2.0.4</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="01983" HREF="msg01983.shtml">Re: My navbars broken with wml-2.0.3 and wml-2.0.4</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01979.shtml">Re: [BUG REPORT] WML 2.0.4, Debian Woody</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01981.shtml">Re: My navbars broken with wml-2.0.3 and wml-2.0.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01979.shtml">Re: [BUG REPORT] WML 2.0.4, Debian Woody</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01981.shtml">Re: My navbars broken with wml-2.0.3 and wml-2.0.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01980"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01980"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

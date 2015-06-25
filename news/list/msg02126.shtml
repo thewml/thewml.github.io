@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <define&#45;tag in combination with <navbar:define -->
+<!--X-From-R13: Xrna&#45;[vpury Enhintr <wrna&#45;zvpury.fnhintrNpyho&#45;vagrearg.se> -->
+<!--X-Date: Sat, 3 Feb 2001 18:54:20 +0100 (MET) -->
+<!--X-Message-Id: 3A7C44D1.3050108@club&#45;internet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3A7A7185.F993E9D1@qis&#45;systemhaus.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02126">Date Index</a>][<a href="thrd43.shtml#02126">Thread Index</a>]<br>
+[<A HREF="msg02125.shtml">Date Prev</A>][<A HREF="msg02127.shtml">Date Next</A>][<A HREF="msg02125.shtml">Thread Prev</A>][<A HREF="msg02127.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;define-tag in combination with &lt;navbar:define</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jean-Michel Sauvage &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 03 Feb 2001 18:50:09 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Karl-Heinz Marbaise wrote:
+
+&gt; Hi there,
+ Hello,
+
+ 
+&gt; I have some problemes using the &lt;define-tag in combination with the
+&gt; &lt;navbar:define.
+&gt; 
+&gt; The problem is that I can't define a navigation bar using the
+&gt; &lt;define-tag...&gt; thing, cause
+&gt; &lt;define-tag seemed to vanish the name of the bar.
+&gt; 
+&gt; Example:
+&gt; 
+&gt; &lt;define-tag mnb endtag=required&gt;
+&gt;   &lt;navbar:define name=&lt;get-var name&gt; imgbase="img/" urlbase="$(ROOT)"
+&gt;           txtcol_normal="#000000" txtcol_select="#ffffff"&gt;
+&gt;
+&lt;define-tag mnb endtag=required&gt;
+&lt;preserve name /&gt;
+&lt;set-var %attributes /&gt;
+&lt;navbar:define name=&lt;get-var name/&gt; ;;; etc
+
+and when you call &lt;mnb&gt; macro :
+
+&lt;mnb name="mynavbar" &gt;
+some stuff
+&lt;mnb/&gt;
+
+(you migth read all /usr/lib/wml/includes/???/*wml files : these are 
+very useful examples)
+
+
+&gt; 
+&gt; BTW: WML seemed to be a vary powerful tool. Thanks to the developers.
+I agree with you
+
+jms
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02125" HREF="msg02125.shtml">&lt;define-tag in combination with &lt;navbar:define</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02125.shtml">&lt;define-tag in combination with &lt;navbar:define</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02127.shtml">Javascript missing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02125.shtml">&lt;define-tag in combination with &lt;navbar:define</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02127.shtml">Javascript missing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02126"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02126"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

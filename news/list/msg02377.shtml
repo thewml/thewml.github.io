@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML Roadmap or TODO&#45;List -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 27 Aug 2001 11:08:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20010827111738.A4485@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.33.0108131842110.32400&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02377">Date Index</a>][<a href="thrd48.shtml#02377">Thread Index</a>]<br>
+[<A HREF="msg02376.shtml">Date Prev</A>][<A HREF="msg02378.shtml">Date Next</A>][<A HREF="msg02360.shtml">Thread Prev</A>][<A HREF="msg02362.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML Roadmap or TODO-List</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 11:17:38 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Aug 13, 2001 at 06:57:25PM +0200, Wolfgang Dautermann wrote:
+&gt; Hi,
+&gt; 
+&gt; I wonder, if there is a TODO-List or a "roadmap" for wml? There is
+&gt; none, right?
+
+Hi Wolfgang,
+
+here is a second reply, more detailed ;)
+
+&gt; Of course, we are fixing bugs or add some new features to some tags. But
+&gt; I believe, that adding new features happens rather uncoordinated (well,
+&gt; of course, Denis has to "approve" patches) and I fear that WML will become
+&gt; more and more complex...
+
+In fact, only Ralf and I do commit changes, so WML has a very cenralized
+development model.
+
+&gt; Where should WML be in in one, two, five or ten years?
+
+Good question.
+Many people do also certainly wonder whether it is worth maintaining WML 
+when XML is under spotlights.
+
+My opinion is that WML is still a very useful tool.  If you compare with
+XML+DTD+XSLT, it is much easier to learn and extend (at least for a Perl
+developer).  When XML tools become standard and allow embedded
+scripting, there will be no need for WML anymore.
+So I will try to let WML evolve to ease migration to XML, i.e. adopt a
+syntax compatible with well established XML components.  I do not want
+to replace mp4h by an XML parser, but to allow parsing XML documents,
+which is slightly different.
+
+This is not trivial since I lost my cristall bowl.  For instance, will
+DTD or Schemas be the standard for document type definitions?  No idea,
+so it is quite hard to know which road to go on.
+
+The only unavoidable components IMO are XML base (I mean its tag syntax)
+and namespaces.
+Today WML can deal with XML tags (elements would be more adequate).  So
+I have to concentrate on namespaces, it should not be hard to manage.
+Next I would like to improve mp4h to let it parse all kind of XML
+documents.  Currently it could give strange results if there are spaces
+around equal sign in ``name=value'' attribute pairs.  There may be other
+constructs that do cause problems and I am not aware of.
+
+Here is a reasonable roadmap for mp4h:
+  1. Add a &lt;define-entity&gt; tag and replace all &amp;name; entities in source
+     input
+  2. Add namespace support
+  3. Improve mp4h parser to allow parsing of both current WML source
+     file and XML elements
+
+About other WML parts, I only see improvements in wml_p7_htmlfix, it could
+for instance adapt attribute pairs to XML syntax name="value".
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02359" HREF="msg02359.shtml">WML Roadmap or TODO-List</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02376.shtml">Problem with including files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02378.shtml">RE: Problem with including files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02360.shtml">Re: WML Roadmap or TODO-List</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02362.shtml">Creating both frames and non-frames versions of a website?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02377"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02377"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

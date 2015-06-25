@@ -1,0 +1,147 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: moving from m4 -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Thu, 27 May 1999 16:53:51 +0200 (MET DST) -->
+<!--X-Message-Id: 19990527144010.A598@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990524202629.A2463@meu.debian -->
+<!--X-Reference: Pine.LNX.3.96.990525140015.8351A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00701">Date Index</a>][<a href="thrd15.shtml#00701">Thread Index</a>]<br>
+[<A HREF="msg00700.shtml">Date Prev</A>][<A HREF="msg00702.shtml">Date Next</A>][<A HREF="msg00688.shtml">Thread Prev</A>][<A HREF="msg00702.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: moving from m4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 27 May 1999 14:40:11 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Tue, May 25, 1999 at 02:46:05PM +0200, Denis Barbier contaba:
+
+&gt;Please keep in mind that macros are written by developers whereas
+&gt;webpages might be written by everyone.
+&gt;The &lt;m4&gt; tag in wml::std::tag will be defined by
+
+Probably I did not mention. I am using:
+
+-------------------------------------------------------------
+This is WML Version 1.6.4 (23-03-1998)
+Copyright (c) 1996,1997,1998 Ralf S. Engelschall.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+---------------------------------------------------------------
+
+Maybe is a bit old. 
+
+&gt;In your case, you could replace all occurences of quotes (` and ') by
+&gt;&lt;` and '&gt; respectively, and define another macro
+&gt;&lt;define-container mym4&gt;
+&gt;&lt;m4 quotes="&lt;`,'&gt;"&gt;
+&gt;%body
+&gt;&lt;/m4&gt;
+&gt;&lt;/define-container&gt;
+
+So far, I understand the new &lt;m4&gt; allows you to choose which
+characters to use for `quotes'.  A very good idea.
+
+While working with m4 I had already thought in changin the quote
+chars to different ones. This idea is good. 
+
+Now I only need to change all my `quoted' files to this new format.
+
+&gt;Few people use this m4 pass, so any feedback is really helpful.
+
+Well, in my current version, something strange happens. When I use
+the macros you wrote me, it leaves the code full of `m4_dnl'.
+
+The problem comes from:
+
+    m4_quotes()m4_dnl
+    m4_noquotes()m4_dnl
+
+Something strange happens that make `gm4' to proper understand this
+macros. It leaves this result:
+
+    m4_dnl
+    m4_dnl
+
+Probably it is related with such macros (m4_quotes) and
+(m4_noquotes). They are not builtin macros. Where are they defined?
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+05/27	First joint meeting of U.S. and European ALGOL definition cte., 1958
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00702" HREF="msg00702.shtml">Re: moving from m4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00687" HREF="msg00687.shtml">moving from m4</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="00688" HREF="msg00688.shtml">Re: moving from m4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00700.shtml">Re: shebang line with filename-variable</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00702.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00688.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00702.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00701"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00701"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,160 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML 2.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 12 May 2000 00:15:16 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000512001359.4314A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01566">Date Index</a>][<a href="thrd32.shtml#01566">Thread Index</a>]<br>
+[<A HREF="msg01565.shtml">Date Prev</A>][<A HREF="msg01567.shtml">Date Next</A>][<A HREF="msg01565.shtml">Thread Prev</A>][<A HREF="msg01570.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML 2.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 12 May 2000 00:15:11 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+All right, here is the announcement i did not have time to post yesterday.
+
+I usually show changes between 1.x.y and 1.x.(y+1) as documented in the
+ChangeLog file, but this time you have an excerpt of the NEWS file which
+exhibits major changes between WML 1.7 and WML 2.0.
+Of course, lots of bugfixes and other improvements have been
+incorporated.
+
+      - Several improvements in wml_p1_ipp:
+          The -S and -I flags are now processed in right-to-left order
+          so that these flags in .wmlrc files have precedence over
+          .wmlrc files in upper directories.
+
+          Variable substitutions can now be nested and new constructs
+          have been added. The only restriction is that parenthesis
+          inside variable expansion are forbidden in inner expressions.
+
+          New automatic variables are provided to ease generation of
+          diaporamas (automatic references to previous and next files).
+
+          Block comments are no more supported by wml_p1_ipp.
+
+      - Meta-HTML is replaced by mp4h for Pass 2: the new parser has a
+        syntax very similar to the one of Meta-HTML, and tags have been
+        defined to ensure maximum compatibility.  Please read
+        README.mp4h and the wml_p2_mp4h documentation for details on how
+        to migrate from Meta-HTML to mp4h.
+
+      - Allow nesting of wml_p3_eperl commands: this is one of the
+        biggest challenge of WML 2.0 whereas it is entirely transparent
+        for end users.  Read the wml_macros(7) manpage for details on
+        how to write nestable macros.
+
+      - Promote alternate syntax in wml_p5_divert: until wml-1.7.0,
+        pass 5 used expressions containing angle characters.  In many
+        situations this could confuse pass 2, and so an alternate form
+        without angle characters is preferred.  Old syntax is still
+        valid but should be avoided.
+
+      - New include files:
+          wml::std::label implements labels and references
+          wml::mod::version ensures that a recent enough WML is run
+          wml::mod::MakeMaker is to help writing portable WML modules
+
+      - Wwwtable is replaced by freetable, a GPL replacement.  Syntax
+        is very similar and input files should work without changes.
+
+      - Support for both GIF and PNG formats.
+        Logos are shipped in both formats, and generated images may be
+        written in GIF (without the patented LZW algorithm) or PNG (if
+        PNG library and headers are found) formats.
+        Modified versions of libgd and GD are used to support both
+        formats.
+
+      - Change format of ISO dates
+        Format was previously dd-mm-yyyy and it has been changed to
+        yyyy-mm-dd to conform to ISO standards.
+
+      - A global base name may be used for generated images: instead of
+        defining IMGB_BASE, IMGDOT_BASE,... it is now possible to define
+        IMAGE_BASE and all generated images will refer to this variable.
+
+      - Better processing on files in other directories: the main goal
+        is to allow use of the VPATH feature of GNU make to build
+        webpages into a test area before compiling webpages.  This
+        does only apply to the wml binary, since there is no reason
+        to mix WMk and Makefiles.
+
+Detailed description of individual changes is available at
+    <A  HREF="http://www.engelschall.com/sw/wml/distrib/latest/ChangeLog">http://www.engelschall.com/sw/wml/distrib/latest/ChangeLog</A>
+
+I would like to sincerely thank all contributors to this mailing-list
+and to WML in general.  Your suggestions are essential to make WML even
+better.
+
+Hope you will enjoy this new release ;-)
+
+Kind regards
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01570" HREF="msg01570.shtml">Re: VPATH (was: [ANNOUNCE] WML 2.0)</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01565.shtml">Re: Suggestion about documentation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01567.shtml">Todo list</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01565.shtml">Re: Suggestion about documentation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01570.shtml">Re: VPATH (was: [ANNOUNCE] WML 2.0)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01566"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01566"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

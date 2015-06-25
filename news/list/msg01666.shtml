@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: feature query -->
+<!--X-From-R13: Fbz Uvyoreg <tvyoreggNyvahkoevg.pb.hx> -->
+<!--X-Date: Wed, 31 May 2000 00:36:59 +0200 (MET DST) -->
+<!--X-Message-Id: 20000530233513.G1905@ummagumma -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000528141741.D30017@ummagumma -->
+<!--X-Reference: Pine.LNX.4.05.10005300933420.2251&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01666">Date Index</a>][<a href="thrd35.shtml#01666">Thread Index</a>]<br>
+[<A HREF="msg01665.shtml">Date Prev</A>][<A HREF="msg01667.shtml">Date Next</A>][<A HREF="msg01663.shtml">Thread Prev</A>][<A HREF="msg01674.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: feature query</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tom Gilbert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 23:35:13 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+* Matthias Bernhardt (matthb@guxhagen.net) wrote:
+&gt; On Sun, 28 May 2000, Tom Gilbert wrote:
+&gt; 
+&gt; TG&gt; Right now, I can bring this stuff in, but either have to mark it up
+&gt; TG&gt; previously, or pull it into a file, run that through a separate wml
+&gt; TG&gt; process and then import the result (messy).
+&gt; 
+&gt; You could use a Makefile if you want, eg.
+ 
+[ snip nice Makefile example ]
+ 
+&gt; The Makefile would keep you from forgetting to do it manually.
+&gt; Sorry, that I'm so keen on Make, but since I use it anyway, so
+&gt; in my environment it wouldn't be much of a change. You may as
+&gt; well prefer Denis' more universal solution.
+
+That is indeed exactly as I was doing it :-) I regarded the intermediate
+file an un-clean solution :) But only 'cos I am fussy, and an
+#include `fortune`
+is quite intuitive to me (it's C-like crossed with shell-like).
+
+I'm using Denis' solution, 'cos once I've stuck -P wml-import.pl into my
+$(WML_OPTS) in my Makefile, I can just #include `whatever` and not worry
+about it :-)
+
+The results (for what they're worth) can be seen at
+<A  HREF="http://www.linuxbrit.co.uk">http://www.linuxbrit.co.uk</A> and I put the source online at
+<A  HREF="http://www.linuxbrit.co.uk/wml.html">http://www.linuxbrit.co.uk/wml.html</A> too.
+
+I only discovered WML last Saturday, and I have lots more to learn,
+(I am simultaneously learning perl, which I've always put off until now)
+but so far I'm thrilled at the power WML gives me.
+
+*Finally I can TRULY separate design from content*
+
+*YAY*
+
+Cheers guys,
+
+Tom.
+-- 
+            .------------------------------------------------------.
+    .^.     | Tom Gilbert, England | <A  HREF="http://www.linuxbrit.co.uk">http://www.linuxbrit.co.uk</A>    |
+    /V\     |----------------------| gilbertt@linuxbrit.co.uk      |
+   // \\    | Sites I recommend:   `-------------------------------|
+  /(   )\   | www.freshmeat.net www.enlightenment.org slashdot.org |
+   ^^-^^    `------------------------------------ vim: set tw=72: -'
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01641" HREF="msg01641.shtml">feature query</A></strong>, <em>From:</em> Tom Gilbert</li>
+<li><strong><A NAME="01663" HREF="msg01663.shtml">Re: feature query</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01665.shtml">Re: Too complex (was: e) or f) : unknown tags parsing)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01667.shtml">Re: different behaviour ;-)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01663.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01674.shtml">Strange ePerl behavior: $LANG</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01666"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01666"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

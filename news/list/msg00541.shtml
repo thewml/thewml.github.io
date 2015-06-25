@@ -1,0 +1,152 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: any chance to se PHP incorporated in wml? -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNsfo.ue> -->
+<!--X-Date: Fri, 2 Apr 1999 16:20:41 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9904021402130.3612&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9904010248350.3032&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00541">Date Index</a>][<a href="thrd12.shtml#00541">Thread Index</a>]<br>
+[<A HREF="msg00540.shtml">Date Prev</A>][<A HREF="msg00542.shtml">Date Next</A>][<A HREF="msg00535.shtml">Thread Prev</A>][<A HREF="msg00542.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: any chance to se PHP incorporated in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 2 Apr 1999 14:22:45 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 1 Apr 1999, Jim Hebert wrote:
+
+&gt;Well, how you implement this largely depends on which pass you'd like php3
+&gt;to be. We'll assume that somewhere in the neighborhood of 3 is good, since
+&gt;you mention ePerl.
+
+       just after 3rd pass, maybe pass 3a or instead of perl in 3rd
+       pass. 
+
+&gt;I have no idea how the php3 interpreter is used/invoked/whatever, but
+&gt;let's assume I can just feed it code on the stdin and get results on the
+&gt;stdout. *shrug*
+
+       it works just like the perl interpreter.
+
+&gt;&lt;perl&gt;
+&gt;open PHP, "|/usr/local/bin/php &gt; /home/me/tmp/php-tmp$$"; # watch for races!
+&gt;print PHP &lt;&lt;END_OF_PHP;
+&gt;php3 code goes here
+&gt;END_OF_PHP
+&gt;close PHP;
+&gt;open PHP, "&lt;/home/me/tmp/php-tmp$$";
+&gt;print &lt;PHP&gt;;
+&gt;close PHP;
+&gt;&lt;/perl&gt;
+
+       actually, this works! but with one big limitation: i have to
+       escape every special character, since php uses the same way of
+       variable naming, $variable, as perl.
+
+       that means this:
+&lt;perl&gt;
+open PHP, "|/usr/local/bin/php &gt; /home/me/tmp/php-tmp$$"; # watch for races!
+print PHP &lt;&lt;END_OF_PHP;
+
+something out of PHP
+
+&lt;?php
+
+echo "This line doesn't contain any variables, and it will be
+interpreted correctly, even if it's spred over two lines";
+
+$this_variable = "will cause a parse error in PHP, since perl will interpret";
+$another_line = "the dollar signs and PHP will get just  this_variable";
+
+\$but_this_variable = "will be interpreted correctly even in PHP";
+\$line_2 = "because perl will deliver the dollar sign";
+
+?&gt;
+
+Out of PHP, again
+
+
+END_OF_PHP
+close PHP;
+open PHP, "&lt;/home/me/tmp/php-tmp$$";
+print &lt;PHP&gt;;
+close PHP;
+&lt;/perl&gt;
+
+       so.... can i somehow tell to the perl 'dont interpret
+       anything, just deliver it to the PHP, it will do the rest'?
+
+-- 
+      v
+Davor Cengija
+Davor.Cengija@fsb.hr
+-------------------------------------------------
+Doktore, malo sam neodlu&ccaron;an... a mo&zcaron;da i nisam...
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00542" HREF="msg00542.shtml">Re: any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00535" HREF="msg00535.shtml">Re: any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00540.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00542.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00535.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00542.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00541"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00541"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

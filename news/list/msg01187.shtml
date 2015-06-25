@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slicing and not&#45;slicing but using the same template(s). -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 3 Dec 1999 21:14:04 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991203203702.6130A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912031814.TAA19673@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01187">Date Index</a>][<a href="thrd24.shtml#01187">Thread Index</a>]<br>
+[<A HREF="msg01184.shtml">Date Prev</A>][<A HREF="msg01186.shtml">Date Next</A>][<A HREF="msg01183.shtml">Thread Prev</A>][<A HREF="msg01189.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slicing and not-slicing but using the same template(s).</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 3 Dec 1999 21:17:09 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 3 Dec 1999, Jan Holler wrote:
+
+&gt; Wed, 01 Dec 1999 14:37:21 +0100, Andreas wrote:
+&gt; 
+&gt; &gt;&gt; &lt;if &lt;if &lt;string-eq &lt;get-var foo&gt; "francais"&gt;
+&gt; 
+&gt; &gt; I needed something similar to this too - I then solved this problem
+&gt; &gt; (without elegance) by defining a variable for the preprocessor on the
+&gt; &gt; commandline. With this your example would look like
+&gt; [...]
+&gt; &gt; As I said, not very elegant but it works.
+&gt; 
+&gt; yes, that works - in your case. i do have to evaluate the
+&gt; contents of some variable defined in some include-file.
+&gt; 
+&gt; i have some work around, but that leads to have lots of
+&gt; parts of the code in two versions. i wanted to avoid that.
+
+Do you have an URL where we could have a look on your work?
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01189" HREF="msg01189.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01183" HREF="msg01183.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01184.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01186.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01183.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01189.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01187"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01187"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

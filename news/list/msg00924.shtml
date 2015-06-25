@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: GIFs and PNGs -->
+<!--X-From-R13: Drzpb ina qra Pret <eiqoretNrui.fp.cuvyvcf.pbz> -->
+<!--X-Date: Fri, 3 Sep 1999 13:36:39 +0200 (MET DST) -->
+<!--X-Message-Id: 199909021338.PAA16276@psv.ehv.sc.philips.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990902084251.16887B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00924">Date Index</a>][<a href="thrd19.shtml#00924">Thread Index</a>]<br>
+[<A HREF="msg00925.shtml">Date Prev</A>][<A HREF="msg00926.shtml">Date Next</A>][<A HREF="msg00922.shtml">Thread Prev</A>][<A HREF="msg00926.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: GIFs and PNGs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 2 Sep 1999 15:38:04 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan Ulrich Hasecke wrote:
+&gt; 
+&gt; Hello,
+&gt; 
+&gt; there are some rumours around concerning Unisys and Gifs.
+&gt; --&gt; www.burnallgifs.org
+&gt; 
+&gt; So perhaps it is better to use png.
+&gt; 
+&gt; Can I use wml with png's? Or are there restrictions?
+&gt; 
+&gt; Will it be possible to create pngs with gFONT? 
+&gt; 
+&gt; And what is the best png-converter? gif2png?
+&gt; 
+&gt; Ciao!
+
+I can inform you about the fact that I wrote a small programm just like
+gfont called "webbutton" which has the same functionality as gfont
+but uses the TTF (truetype font) library and a patched gd-library so that
+both PNG as well as GIF images can be generated.
+I also wrote a patched version of wml::des:gfont called ttfont which
+can be used in (nearly) the same way as gfont.
+
+So if somebody is interested I could make a nice tar package out of it
+and distribute it.
+
+-Remco
+
+- Remco van den Berg
+  
+----------------------------------------------------------------------------
+Philips Semiconductors B.V.  tel:(+31 40 27)22031   fax:22764   Room: BE-345
+<A  HREF="mailto:Remco.vdBerg@ehv.sc.philips.com">mailto:Remco.vdBerg@ehv.sc.philips.com</A>                  seri: rvdberg@nlsce1
+
+home Email: RvdBerg@dse.nl  (non Philips related)              ICQ: 47514668
+                 
+----------------------------------------------------------------------------
+ Microsoft and Lotus Notes free.   Don't send me any Microsoft attachments.
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00926" HREF="msg00926.shtml">Re: GIFs and PNGs</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00917" HREF="msg00917.shtml">GIFs and PNGs</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00925.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00926.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00922.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00926.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00924"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00924"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

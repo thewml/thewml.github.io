@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WML 2.0.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 23 May 2000 17:50:30 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000523164832.29786A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01600">Date Index</a>][<a href="thrd33.shtml#01600">Thread Index</a>]<br>
+[<A HREF="msg01599.shtml">Date Prev</A>][<A HREF="msg01601.shtml">Date Next</A>][<A HREF="msg01597.shtml">Thread Prev</A>][<A HREF="msg01611.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 May 2000 17:50:14 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i just uploaded WML 2.0.1
+
+This release fixes all bugs reported against WML 2.0.0, and i will not
+answer to each bug report separately.  So if your problem persist, please
+file another one.
+
+There have been numerous other bug fixes too.
+
+In short main points are:
+
+  * Undefined tags are now parsed like defined tags, it means that it is
+    possible to write
+       &lt;ifeq 0 0 &lt;img src="&lt;get-var file&gt;"&gt;&gt;
+    or
+       &lt;lang:en: &lt;b&gt;Hello, world!&lt;/b&gt;&gt;
+
+  * This implies that left angle brackets inside ePerl code must be
+    protected.
+
+I did not yet document why these problems occur and how to solve them,
+so here is a brief note.
+Consider
+    &lt;: print "&lt;img src=\"foo.png\"&gt;"; :&gt;
+It is expanded to
+    &lt;: print "&lt;img src="foo.png"&gt;"; :&gt;
+by wml_p2_mp4h, and ePerl crashes.
+
+The solution is to prevent expansion of &lt;img&gt;.  In this case, it could
+be done with
+    &lt;: print "&lt;"."img src=\"foo.png\"&gt;"; :&gt;
+because a valid macro name cannot begin with double quotes.
+
+A less intuitive problem was caused by (in wml::fmt::xtable)
+    &lt;:... ;
+      open (FH_XTABLE_IN, "wml_aux_freetable -w $tmpfile &lt;/dev/null |");
+ ... :&gt;
+In this case, wml_p2_mp4h believes that &lt;/dev is an end tag which is not
+closed, and an error is reported.  A workaround is to write
+      open (FH_XTABLE_IN, "wml_aux_freetable -w $tmpfile &lt; /dev/null |");
+
+A third alternative is in wml::std::logo
+        &lt;perl:print&gt;\
+           #   The a tag begins here
+           &lt;a href="$url" \
+              onMouseOver="self.status='$hint';return true" \
+              onMouseOut="self.status='';return true"\
+        &lt;/perl:print&gt;
+        if ($target ne '') {
+          &lt;perl:print&gt; target="$target"&lt;/perl:print&gt;
+        }
+        &lt;perl:print&gt;\
+           #   and ends here
+           &gt;&lt;img src="$file" alt="$alt" border=0&gt;&lt;/a&gt;\
+        &lt;/perl:print&gt;
+In this case i put &lt;suck&gt; between '&lt;' and 'a'.
+
+So there are many solutions, the problem is to understand why some
+constructs cause trouble, and i will write something on this ASAP.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01611" HREF="msg01611.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01599.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01601.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01597.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01611.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01600"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01600"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

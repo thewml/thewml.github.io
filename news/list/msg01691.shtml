@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG][WML] Mp4h parsing: summary -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 3 Jun 2000 01:07:09 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000603004636.2605B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000602162912.1898A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01691">Date Index</a>][<a href="thrd35.shtml#01691">Thread Index</a>]<br>
+[<A HREF="msg01690.shtml">Date Prev</A>][<A HREF="msg01692.shtml">Date Next</A>][<A HREF="msg01687.shtml">Thread Prev</A>][<A HREF="msg01692.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG][WML] Mp4h parsing: summary</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 3 Jun 2000 01:05:51 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+For those who want to give it a try, i will put some mp4h snapshots at
+   <A  HREF="http://www.engelschall.com/sw/mp4h/distrib/">http://www.engelschall.com/sw/mp4h/distrib/</A>
+
+Tonight release is mp4h-0.9a601.tar.gz
+It implements the different choices given in the previous post with the
+--expansion=NUMBER command line option, where NUMBER is a bit sum of
+
+  1  do not parse unknown tags
+  2  unknown tags are assumed being complex
+  4  an unknown tag whose name ends with a star is assumed simple
+
+Roughly speaking,
+  case A =&gt; 1
+  case B =&gt; 0
+  case C =&gt; 6
+
+On the other hand, i played with quoting mechanism, and it is awfully
+broken in this release.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01687" HREF="msg01687.shtml">[LONG][WML] Mp4h parsing: summary</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01690.shtml">Re: [wml] nested &lt;protect&gt; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01692.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01687.shtml">[LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01692.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01691"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01691"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

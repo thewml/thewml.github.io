@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: lost javascript code for navbar -->
+<!--X-From-R13: Drzpb ina qra Pret <DiqPretNqfr.ay> -->
+<!--X-Date: Wed, 17 Jan 2001 23:06:17 +0100 (MET) -->
+<!--X-Message-Id: 20010117230556.A3439@jupiter.strijp.Ehv.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02111">Date Index</a>][<a href="thrd43.shtml#02111">Thread Index</a>]<br>
+[<A HREF="msg02110.shtml">Date Prev</A>][<A HREF="msg02112.shtml">Date Next</A>][<A HREF="msg02110.shtml">Thread Prev</A>][<A HREF="msg02112.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>lost javascript code for navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Jan 2001 23:05:56 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+After upgrading to wml-2.0.x I miss the following java script code in
+my HTML output files:
+
+function nb_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_n.src");
+        self.status = '';
+    }
+}
+function nb_imgSelect(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_s.src");
+        self.status = '';
+    }
+}
+function nb_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_o.src");
+        self.status = descript;
+    }
+}
+
+Has somebody experienced the same problem?
+If so, what's going wrong, and what's the solution?
+
+Thanks,
+
+-Remco
+
+PS I found my solution for the the &lt;prog&gt; in &lt;compound&gt;
+   But why is the &lt;prog&gt; gone in wml-2.0.x?
+
+-- 
+----------------------------------------------------------------------------
+    Remco van den Berg                           Admin/SO/helpdesk DSE      
+      ICQ: 47514668         rvdberg@dse.nl         <A  HREF="http://www.dse.nl/">http://www.dse.nl/</A>       
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02112" HREF="msg02112.shtml">Re: lost javascript code for navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02110.shtml">what is the new synthax for this...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02112.shtml">Re: lost javascript code for navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02110.shtml">what is the new synthax for this...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02112.shtml">Re: lost javascript code for navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02111"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02111"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

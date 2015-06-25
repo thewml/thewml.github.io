@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problems moving from 1.7.4 to 2.0.1 (resent) -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Mon, 10 Jul 2000 11:31:51 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007101134170.497&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000707223321.A23214@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01798">Date Index</a>][<a href="thrd37.shtml#01798">Thread Index</a>]<br>
+[<A HREF="msg01797.shtml">Date Prev</A>][<A HREF="msg01799.shtml">Date Next</A>][<A HREF="msg01795.shtml">Thread Prev</A>][<A HREF="msg01801.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problems moving from 1.7.4 to 2.0.1 (resent)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 10 Jul 2000 11:39:04 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Denis,
+
+thanks for your reply.
+
+&gt; &gt; I'm not sure why I get them, I assume they relate to the move to mp4h and
+&gt; &gt; specifically the inclusion of /usr/local/lib/wml/include/sys/bootp2.wml,
+&gt; &gt; but I don't know why I get them.
+&gt; 
+&gt; The problem is that wml::sys::bootp2 is no more shipped with WML.
+&gt; Unfortunately, it will be loaded by wml if it exists.
+&gt; 
+&gt; So you have to remove this file.
+
+I doesn't seem to be that simple :-) When I remove the file, I get this:
+
+
+wml about.wml --include=include-2.0   -o '(ALL-LANG_*)uLANG_E:about_e.html' -o '(ALL-LANG_*)uLANG_D:about_d.html'
+ePerl:Error: Perl runtime error (interpreter rc=1)
+ 
+---- Contents of STDERR channel: ---------
+** wml::des::ttfont:
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+make: *** [about_e.html] Error 1
+
+
+Right now it only works with the file bootp2.wml present.
+
+&gt; &gt; (i.e. escape the quotes), is that a side-effect of the change to mp4h
+&gt; &gt; too, or is that due to an updated ePerl?
+&gt; 
+&gt; ???
+&gt; If ePerl complains, this means that &lt;aspemail&gt; is used within some ePerl
+&gt; commands. Could you send a more complete example?
+
+I checked my code again, and couldn't find a reason why wml would think
+this code is inside an ePerl section. I tinkered around with it and
+suddenly noticed that the problem is gone with the latest
+wml-SNAP. Whatever it was, it must have been solved sometime since 2.0.1
+was released.
+
+All the best,
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01801" HREF="msg01801.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01795" HREF="msg01795.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01797.shtml">[wml] Handling unknown attributes</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01799.shtml">Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01795.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01801.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01798"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01798"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

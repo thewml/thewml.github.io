@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Oyrknaqre Uenrsr <jn0191Nfghq.hav&#45;jhccregny.qr> -->
+<!--X-Date: Tue, 8 Jun 1999 18:39:40 +0200 (MET DST) -->
+<!--X-Message-Id: 19990608183541.A567@ganymede -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00755">Date Index</a>][<a href="thrd16.shtml#00755">Thread Index</a>]<br>
+[<A HREF="msg00754.shtml">Date Prev</A>][<A HREF="msg00756.shtml">Date Next</A>][<A HREF="msg00756.shtml">Thread Prev</A>][<A HREF="msg00758.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alexander Graefe &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 8 Jun 1999 18:35:41 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.1 (05-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Alexander Graefe
+Reply-To: wa0191@stud.uni-wuppertal.de
+
+PROBLEM DESCRIPTION:
+wmk doesn't check dependency information. If I #include a template file,
+run wmk, change the template file and re-run wmk, all files are skipped
+instead of being processed.
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.005_03 (/usr/bin/perl)
+    User: root@ganymede
+    Date: 05-Jun-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.2.9, archname=i586-linux
+    uname='linux ganymede 2.2.9 #2 thu may 27 06:08:58 mest 1999 i586 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O6 -mamdk6 -march=amdk6 -mcpu=amdk6 -mstack-align-double -fomit-frame-pointer -malign-jumps=4 -malign-loops=4 -malign-functions=4', gccversion=pgcc-2.91.60 19981201 (egcs-1.1.1 release)
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Jun  5 1999 12:45:49
+  @INC:
+    /usr/lib/perl5/5.00503/i586-linux
+    /usr/lib/perl5/5.00503
+    /usr/lib/perl5/site_perl/5.005/i586-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00758" HREF="msg00758.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00754.shtml">Re: [BUG REPORT] WML 1.7.1, Linux</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00756.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00756.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00758.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00755"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00755"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

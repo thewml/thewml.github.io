@@ -1,0 +1,180 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: "wmk &#45;a" and auto&#45;adjusted variables? -->
+<!--X-From-R13: cybaxnNqbvg.jvfp.rqh -->
+<!--X-Date: Fri, 9 Jul 1999 15:54:59 +0200 (MET DST) -->
+<!--X-Message-Id: 19990709085453.61858@doit.wisc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990708173807.26393@doit.wisc.edu -->
+<!--X-Reference: Pine.LNX.3.96.990709090510.31869A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00849">Date Index</a>][<a href="thrd18.shtml#00849">Thread Index</a>]<br>
+[<A HREF="msg00848.shtml">Date Prev</A>][<A HREF="msg00850.shtml">Date Next</A>][<A HREF="msg00845.shtml">Thread Prev</A>][<A HREF="msg00850.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &quot;wmk -a&quot; and auto-adjusted variables?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 9 Jul 1999 08:54:53 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jul 09, 1999 at 09:52:09AM +0200, Denis Barbier wrote:
+&gt; On Thu, 8 Jul 1999 plonka@doit.wisc.edu wrote:
+&gt; 
+&gt; [...]
+&gt; &gt; In this instance however, it's less desirable than being able to use just
+&gt; &gt; command-line switches.  Since I'm invoking wmk from another Makefile, I'd
+&gt; &gt; like that Makefile to be self-contained (i.e. not to be reliant on the
+&gt; &gt; content of the ".wmlrc").
+&gt; 
+&gt; Write a rule like
+&gt; .wmlrc:
+&gt; 	echo '-DIMG~images' &gt;$@
+
+Great^H^H^H^H^HCreative minds think alike. ;^)
+
+&gt; &gt; It's surprising that putting "-DIMG~images" on the wmk command line is
+&gt; &gt; different than putting it in the ".wmlrc" file.  No?
+&gt; 
+&gt; No!
+&gt; As i said before, -D is not an option of wmk, but wml. It makes all the
+&gt; difference.
+
+I do understand that "-D" is a wml option.
+
+To rephrase the inconsistency that I see: using "-D~value" on the wmk
+command-line (to have it propogated down to wml) does not always have
+the same effect as passing "-D~value" on the wml command-line.
+
+This is because, even though (as you were quick to point out) "-D" is only
+a wml switch, wmk changes its current working directory before invoking
+wml, and therefore (as a side-effect) changes the resulting value of
+auto-adjusted variables.
+
+&gt; &gt; I'm thinking that perhaps:
+&gt; &gt; 1) wmk should not chdir around as it invokes wml, or should have a new
+&gt; &gt;    mode that causes it not to chdir.
+&gt; 
+&gt; Certainly not.
+
+Fine.
+
+&gt; &gt; - or -
+&gt; &gt; 2) The wmk man page should document the issue that "-D~value" on the
+&gt; &gt;    wmk command-line won't have the same effect as passing it to wml
+&gt; &gt;    directly (if wml had been invoked from the same dir) or specifying
+&gt; &gt;    it in an rc file.
+&gt; 
+&gt; Reread the wmk manpage, it does not document the -D option. So i believe
+&gt; such a warning would be obfuscated.
+
+The wmk man-page does say:
+
+     All WML-options directly correspond to their counterparts in
+     wml(1) because they are just forwarded by wmk except the -n
+     and -o options which are implicitly created by wmk for each
+     wml invocation.
+
+I took "directly correspond to" to mean "have the same effect as".
+Just because the WML-options "are just forwarded [to wml] by wmk",
+doesn't mean they will have the same effect - specifically since the
+auto-adjusted variables are externally influenced by wml's current
+working directory, which is sometimes changed before wml is invoked by
+wmk (unbeknownst to the wmk user).
+
+As I said, personally, I liked the idea of adding a wmk switch that causes
+it to remain in the same directory in which it was invoked because that's
+the easiest way I can think of to get the "wmk -DNAME~PATH sub-dir" to work
+as desired.  However, since you don't care for that, perhaps the wmk
+man-page could read:
+
+CAVEAT
+
+   Auto-adjusted variables specfied as "-DNAME~PATH" on the wmk command-
+   line will not necessarily have the same effect as a similar definition
+   in a "./.wmlrc" file.  This is because, when processing sub-directories,
+   wmk changes its working directory to each of those directories, which
+   can influence the interpolation of such auto-adjusted variables.
+   When specified on the command line, such variables are interpolated
+   with respect to wml's current working directory at the time of its
+   invocation.  So, if you wish such variables to be interpolated relative
+   to wmk's current working directory at the time of its invocation, one
+   can work-around this issue by specifying "-DNAME~PATH" in a ".wmlrc"
+   in that directory rather than specifying it on the wmk command-line.
+
+Without such a warning, the only way I could find an explanation of the
+behavior I observed was to read the wmk source (and see the chdir(2) calls).
+
+Anyway, thanks for your thoughts Denis...
+
+I don't need to pursue this thread any longer since I don't think that
+we're mis-understanding each other.
+
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00850" HREF="msg00850.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00844" HREF="msg00844.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> plonka</li>
+<li><strong><A NAME="00845" HREF="msg00845.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00848.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00850.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00845.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00850.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00849"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00849"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

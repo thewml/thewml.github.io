@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question regarding dependencies with wmk -->
+<!--X-From-R13: Fbznfm Qubyrjb <gwpuby01Nnvib.fcq.ybhvfivyyr.rqh> -->
+<!--X-Date: Fri, 26 Jun 1998 07:25:12 +0200 (CEST) -->
+<!--X-Message-Id: 13714.40888.732443.235037@mecca.spd.louisville.edu -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 19980625125038.B2699@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00141">Date Index</a>][<a href="thrd4.shtml#00141">Thread Index</a>]<br>
+[<A HREF="msg00140.shtml">Date Prev</A>][<A HREF="msg00142.shtml">Date Next</A>][<A HREF="msg00138.shtml">Thread Prev</A>][<A HREF="msg00139.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question regarding dependencies with wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tomasz Cholewo &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 15:06:32 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; Has anybody already experiences on this topic? How do others run WMk
+&gt; or WML?
+
+I am using GNU make which also allows specifying explicit dependencies
+between files.  Each source directory of my web site contains a Makefile
+which includes definitions from a common file make-wml.defs.  Only the
+names of the .wml files (FILES=...) and source subdirectories
+(SUBDIRS=...)  have to be specified in most cases.
+
+This for example is my top-level Makefile:
+</PRE>
+<PRE>
+FILES = index pubs
+SUBDIRS = cv software photos nn
+
+include $(HOME)/include/make-wml.defs
+
+index.html: index.wml cv.html
+pubs.html: pubs.wml publications.html
+
+linklint:
+	linklint -error -warn -doc .linklint/ -root $(WWWROOT) -host ci.uofl.edu /tom/@
+
+</PRE>
+<PRE>
+In my main directory I have index.wml and pubs.wml.  cv.html and
+publications.html are generated from TeX sources and are included by
+index.wml and pubs.wml.  There are also subdirectories into which make
+descends recursively.  `make' allows to take the advantage of parallel
+building on multiprocessor machines when the `-j' option is used.
+
+</PRE>
+<PRE>
+# -*- makefile -*-
+# definitions for WML (June 25, 1998; Tomasz Cholewo &lt;t.cholewo@ieee.org&gt;)
+
+HTML = $(patsubst %,%.html,$(FILES))
+
+#DEBUG = -DDEBUG=1
+WMLFLAGS = $(DEBUG) -I$(HOME)/include -q -Eweblint  #-O3
+
+WML_EXEC = /usr/contrib/lib/wml/exec/wml_aux_
+
+%.html: %.wml
+	wml $(WMLFLAGS) -o $@ $&lt;
+
+ALL_SUBDIRS = $(addprefix all-,$(SUBDIRS))
+WEBLINT_SUBDIRS = $(addprefix weblint-,$(SUBDIRS))
+HTMLINFO_SUBDIRS = $(addprefix htmlinfo-,$(SUBDIRS))
+CLEAN_SUBDIRS = $(addprefix clean-,$(SUBDIRS))
+
+$(ALL_SUBDIRS) $(WEBLINT_SUBDIRS) $(HTMLINFO_SUBDIRS) $(CLEAN_SUBDIRS):
+	@target=`echo $@ | sed 's/-.*//'`; \
+	dir=`echo $@ | sed 's/[^-]*-//'`; \
+	echo "Making $$target in " `pwd`/"$$dir"; \
+	$(MAKE) -C $$dir $$target
+
+all: $(HTML) $(ALL_SUBDIRS)
+
+clean: $(CLEAN_SUBDIRS)
+	-rm $(HTML)
+
+weblint: $(WEBLINT_SUBDIRS)
+	$(WML_EXEC)weblint $(HTML)
+
+htmlinfo: $(HTMLINFO_SUBDIRS)
+	@for X in $(HTML); do \
+	   echo '=============================================='; \
+	   echo `pwd`/"$$X"; \
+	   $(WML_EXEC)htmlinfo "$$X"; \
+	done
+
+tags TAGS:
+	-rm TAGS
+	find . -name '*.wml' -o -name Makefile -o -name .wmlrc | xargs etags -a -l none
+
+.PHONY: tags TAGS clean weblint htmlinfo \
+	$(ALL_SUBDIRS) $(WEBLINT_SUBDIRS) $(HTMLINFO_SUBDIRS) $(CLEAN_SUBDIRS)
+
+</PRE>
+<PRE>
+
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00135" HREF="msg00135.shtml">Re: question regarding dependencies with wmk</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00140.shtml">Re: a few questions on using wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00142.shtml">XML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00138.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00139.shtml">RE: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00141"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00141"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

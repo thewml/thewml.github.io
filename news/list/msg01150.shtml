@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Suggestions for wml::std::logo -->
+<!--X-From-R13: Ibystnat Rnhgreznaa <qnhgvNbru.gh&#45;tenm.np.ng> -->
+<!--X-Date: Sun, 21 Nov 1999 17:41:35 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.9911211704210.7955&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01150">Date Index</a>][<a href="thrd24.shtml#01150">Thread Index</a>]<br>
+[<A HREF="msg01149.shtml">Date Prev</A>][<A HREF="msg01151.shtml">Date Next</A>][<A HREF="msg01149.shtml">Thread Prev</A>][<A HREF="msg01172.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Suggestions for wml::std::logo</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wolfgang Dautermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 21 Nov 1999 17:41:29 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+I would suggest some modifications for wml::std::logo - 
+
+First the Linux-Logo has got a white (not a transparent) background,
+you can see a result at: 
+<A  HREF="http://oeh.tu-graz.ac.at/~dauti/wml-suggestion/">http://oeh.tu-graz.ac.at/~dauti/wml-suggestion/</A> (compare it with:
+<A  HREF="http://oeh.tu-graz.ac.at/~dauti/wml-suggestion/index2.html">http://oeh.tu-graz.ac.at/~dauti/wml-suggestion/index2.html</A>)
+
+A slightly modified logo (with transparent background) can be found at 
+<A  HREF="http://oeh.tu-graz.ac.at/~dauti/wml-suggestion/tmpl/logo-linux-neu.gif">http://oeh.tu-graz.ac.at/~dauti/wml-suggestion/tmpl/logo-linux-neu.gif</A>
+
+The second question is, if we should add logos for some other (GPL-)
+Projects which are useful for generating websites, for example (things I
+often use):
+
+ht://Dig
+(Logo availiable at <A  HREF="http://www.htdig.org/htdig.gif">http://www.htdig.org/htdig.gif</A>, the logo-htdig.info
+file could contain:
+----------------- cut here ------------------
+ht://Dig
+ht://Dig -- Internet search engine software
+<A  HREF="http://www.htdig.org/">http://www.htdig.org/</A>
+----------------- cut here -----------------
+
+
+php3 (logos available at <A  HREF="http://www.php.net/download-logos.php3">http://www.php.net/download-logos.php3</A>), data
+for a logo-php3.info - file: 
+----------------- cut here ------------------
+php3
+PHP3 Hypertext Preprocessor 
+<A  HREF="http://www.php.net/">http://www.php.net/</A>
+----------------- cut here -----------------
+
+and gimp (logos available at <A  HREF="http://www.gimp.org/logos.html">http://www.gimp.org/logos.html</A> (I would
+suggest <A  HREF="http://www.gimp.org/icons/gfx_by_gimp.gif">http://www.gimp.org/icons/gfx_by_gimp.gif</A>), data for a
+logo-gimp.info -file:
+----------------- cut here ------------------
+gimp
+GNU Image Manipulation Program
+<A  HREF="http://www.gimp.org/">http://www.gimp.org/</A>
+----------------- cut here -----------------
+ 
+Bye, Wolfgang
+
+--
+Diese Mail kommt von: Wolfgang Dautermann
+WWW-Homepage: <A  HREF="http://oeh.tu-graz.ac.at/~dauti/">http://oeh.tu-graz.ac.at/~dauti/</A>
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01172" HREF="msg01172.shtml">Re: Suggestions for wml::std::logo</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01149.shtml">Re: Using META tags with WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01151.shtml">wml installation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01149.shtml">Re: Using META tags with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01172.shtml">Re: Suggestions for wml::std::logo</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01150"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01150"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: creating meta tags from wmlrc variables -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 9 Dec 2001 21:03:24 +0100 (MET) -->
+<!--X-Message-Id: 20011209211243.A31156@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011209192859.GA88788@keyslapper.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02450">Date Index</a>][<a href="thrd50.shtml#02450">Thread Index</a>]<br>
+[<A HREF="msg02449.shtml">Date Prev</A>][<A HREF="msg02451.shtml">Date Next</A>][<A HREF="msg02449.shtml">Thread Prev</A>][<A HREF="msg02452.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: creating meta tags from wmlrc variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Dec 2001 21:12:44 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Dec 09, 2001 at 02:29:00PM -0500, Louis LeBlanc wrote:
+&gt; I don't know if anyone else is on this list, but here goes.
+
+There are ;)
+
+&gt; I'm trying to set up a series of meta tags for a site.
+&gt; Right now, I'm defining them in the site root .wmlrc file as follows:
+&gt; 
+&gt; -D PR_DISTRIBUTION="Global"
+&gt; -D PR_ROBOTS="ALL"
+&gt; -D PR_REVISIT-AFTER="30 days"
+&gt; etc.
+&gt; 
+&gt; What I want to do is construct a meta tag for each one as follows:
+&gt; &lt;meta name=distribution content="Global"&gt;
+&gt; &lt;meta name="revisit-after" content="30 days"&gt;
+&gt; &lt;meta name="robots" Content="ALL"&gt;
+
+  &lt;meta name=distribution content="$(PR_DISTRIBUTION)"&gt;
+  &lt;meta name="revisit-after" content="$(PR_ROBOTS)"&gt;
+  &lt;meta name="robots" Content="$(PR_REVISIT-AFTER)"&gt;
+
+&gt; You probably get the picture.  How do I turn these into headers?
+&gt; 
+&gt; If there is a better way to define the header values, or if this is
+&gt; the proper way, I'd be interested in knowing.
+
+The proper way is to define a template file for all pages.  Then you
+may either hardcode these values into this template, or put them in
+a global .wmlrc file as you did.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02452" HREF="msg02452.shtml">Re: creating meta tags from wmlrc variables</A></strong>, <em>From:</em> Louis LeBlanc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02449" HREF="msg02449.shtml">creating meta tags from wmlrc variables</A></strong>, <em>From:</em> Louis LeBlanc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02449.shtml">creating meta tags from wmlrc variables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02451.shtml">Re: Archives pointer?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02449.shtml">creating meta tags from wmlrc variables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02452.shtml">Re: creating meta tags from wmlrc variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02450"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02450"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

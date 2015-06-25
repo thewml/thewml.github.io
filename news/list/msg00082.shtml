@@ -1,0 +1,233 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.0 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 9 Feb 1998 11:57:05 +0100 (MET) -->
+<!--X-Message-Id: 199802091057.LAA12810@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00082">Date Index</a>][<a href="thrd2.shtml#00082">Thread Index</a>]<br>
+[<A HREF="msg00081.shtml">Date Prev</A>][<A HREF="msg00083.shtml">Date Next</A>][<A HREF="msg00088.shtml">Thread Prev</A>][<A HREF="msg00083.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 9 Feb 1998 11:57:02 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+After a long period of hacking now its time for a new release...
+
+  Website META Language, Version 1.6.0
+  <A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+   <A  HREF="ftp://ftp.engelschall.com/sw/wml/">ftp://ftp.engelschall.com/sw/wml/</A>
+
+The entry from the NEWS file:
+
+  Major changes between 1.5 and 1.6:
+
+      - Big source and installation tree cleanup: the configure
+        option --enable-compat was removed, the files
+        wml_include/OBSOLETE* were removed, the wml_p*/ subdirs
+        were moved to wml_backend/wml_p*/, etc.  pp. And in
+        addition to this reorganization the backends and
+        auxilliary programs are now installed in PREFIX/lib/exec/
+        instead of PREFIX/bin/.
+
+      - Cleanup of include files: tag names were renamed
+        (especially in wml::des::navbar) to avoid namespace
+        conflicts, tags were merged (especially in
+        wml::std::box), tags were generalized (especially the new
+        wml::std::logo), double-defined tags were removed
+        (especially wml::sup::stack and wml::usr::rse), etc. pp.
+
+      - Revised a wrong design decision of the early days:
+        Comments are now supported in Pass 1 and not in Pass 8
+        and they are now supported in a more general way:
+        EOL-mode (#) and Block-mode (/*...*/) comments.  This
+        pass shift was done to get rid of comments as quick as
+        possible. This way we now really can comment out _any_
+        stuff and as a side effect processing is a little bit
+        faster.
+
+      - A new manpage was introduced: wml_tags(7), a permuted
+        index of all defined WML meta-tags.
+
+      - A lot of minor stuff was fixed, added or at least
+        generalized: the WML -p, -V and -P options, RC-File
+        parsing, HTMLfix quotation parsing, slice errors, etc.
+
+The entry from the ChangeLog file:
+
+  Changes between 1.5.1 and 1.6.0:
+      980116 - removed configure --enable-compat option
+               and wml_include/OBSOLETE* stuff
+             - Merged the &lt;box&gt; and &lt;rect&gt; tags from
+               wml::std::box into a new full-featured single tag
+               named &lt;box&gt;
+      980118 - Fixed temporary file usage: /tmp/wml.$$.tmp4 was
+               not removed.  [Thanks to Stefan `Sec` Zehl
+               &lt;sec@42.org&gt; for hint]
+             - Upgraded IO 1.1803 -&gt; 1.1804
+             - Upgraded GD 1.16 -&gt; 1.17
+             - removed some unnecessary stuff from
+               wml_p2_mhc/configure.in
+      980119 - recreated the "generated via WML" GIF image
+             - added more logos to wml_misc/
+             - added new wml::std::logo to insert the logos
+             - removed wml::sup::stack because its functionality
+               is already in wml::std::tags
+             - added domainname attribute to wml::std::info which
+               overrides the usage of WML_SRC_HOSTNAME
+             - removed wml::usr::rse because no one can use it
+               except RSE ;_).
+             - added hint to wml_faq.pod on how to setup a useful
+               $HOME/.wmlrc and $HOME/.wml
+             - fixed WML option -v which needs pre-processing as
+               option -r
+             - fixed RC file parsing for $HOME/.wmlrc
+             - now WML uses the homedir in passwd instead of
+               $ENV{HOME}
+      980120 - fixed tag recognition in HTMLfix:
+               ``&lt;I&gt;foo=bar&lt;/I&gt;'' was incorrectly "fixed" to
+               ``&lt;I&gt;foo="bar&lt;/I"&gt;''. [Thanks to Tetsuya Furukawa
+               &lt;tetsuya@secom-sis.co.jp&gt; for patch]
+             - enhanced the -p option syntax: Now you can use the
+               more readable and shorter -p1-7,9 instead of
+               -p12345679 for all passes except Pass 8.
+             - added details about $HOME/.wmlrc setups to
+               wml_faq.pod
+             - Some WML tags were renamed to avoid namespace
+               conflicts:
+               wml::des::navbar &lt;navbar&gt;     -&gt; &lt;navbar:define&gt;
+               wml::des::navbar &lt;navdebug&gt;   -&gt; &lt;navbar:debug&gt;
+               wml::des::navbar &lt;navrender&gt;  -&gt; &lt;navbar:render&gt;
+               wml::des::navbar &lt;nb_header&gt;  -&gt; &lt;navbar:header&gt;
+               wml::des::navbar &lt;nb_footer&gt;  -&gt; &lt;navbar:footer&gt;
+               wml::des::navbar &lt;nb_prolog&gt;  -&gt; &lt;navbar:prolog&gt;
+               wml::des::navbar &lt;nb_epilog&gt;  -&gt; &lt;navbar:epilog&gt;
+               wml::des::navbar &lt;nb_filter&gt;  -&gt; &lt;navbar:filter&gt;
+               wml::std::case   &lt;uppercase&gt;  -&gt; &lt;case:upper&gt;
+               wml::std::case   &lt;lowercase&gt;  -&gt; &lt;case:lower&gt;
+               wml::std::tags   &lt;array-size&gt; -&gt; &lt;array:size&gt;
+               wml::std::tags   &lt;push&gt;       -&gt; &lt;array:push&gt;
+               wml::std::tags   &lt;pop&gt;        -&gt; &lt;array:pop&gt;
+               wml::std::tags   &lt;show&gt;       -&gt; &lt;array:show&gt;
+               wml::std::info &lt;generated-via-wml&gt; -&gt; &lt;logo name="wml"&gt;
+      980124 - added new "wmu" frontend
+             - added wml_common/termreadkey/
+      980126 - moved wml_pX_XXX to wml_backend/pX_XXX
+             - added wml_common/delimmatch/
+             - fixed DelimMatch version from 1.01 to 1.03
+             - expanded "distclean" target in wml_common/Makefile.in
+             - added EOL-mode (#) and Block-mode (/*...*/)
+               comment support to Pass 1 (IPP) to get rid of
+               comments as quick as possible. This way we now
+               really can comment out any stuff and as a side
+               effect processing is a little bit faster.
+             - added wml_common/blockparser/
+             - fixed tempfile remove again. This time for the
+               case where WML breaks because of a pass error.
+             - created the WML test suite and a first t/01-plain.t
+      980128 - added -P option to IPP for running prolog programs
+             - Upgraded GD 1.17 -&gt; 1.18
+             - now the &lt;lowsrc&gt; tag from wml::des::lowsrc skips
+               the creation when the xxx.lowsrc.gif already
+               exists and has a higher timestamp.
+             - now WML uses the new Term::ReadKey at -v3
+             - Upgraded to Slice 1.3.1 which fixes Slice
+               errors
+             - Now all wml_pX_YYY and wml_aux_XXX scripts
+               and binaries are installed in LIBDIR/exec/
+               instead of BINDIR/.
+             - Fixed WMd: Now the ftp:// link works and also runs
+               Lynx.
+             - Fixed generation of WML command in WMk
+      980202 - Now the -V option of all frontends run wml -V..
+             - Fixed WMb message generation
+             - added new wml_tags.pod manual page
+      980204 - Added &lt;lang:star:&gt; tag to wml::std::lang
+             - Fixed wml::std::logo
+             - Added &lt;say&gt; tag for debugging to wml::std::tags
+             - Adjusted PORTING.test for new "make test" approach
+      980205 - Fixed wml::std::all because wml::std::case was
+               missing [Thanks to Alvise Belotti
+               &lt;alvise@lettere.unipd.it&gt; for hint]
+      980207 - Renamed --with-cc to --with-forced-cc and added
+               a new --with-cc configure option which doesn't
+               force CC for Meta-HTML and ePerl to avoid
+               conflicts under HP-UX and simular braindead
+               systems.
+             - Added more info about multi-lingual pages to
+               wml_tutorial.pod
+             - Fixed built_date determination in configure
+      980208 - Adjusted NEWS file
+             - Fixed "make test" again
+             - Now "make install" automatically runs "make all"
+               when it was not run already.
+      980209 - Fixed WMu again.
+             - Upgraded IO 1.1804 -&gt; 1.19
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00083" HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> vang</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00081.shtml">Re: I'm trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00088.shtml">Re: I'm trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00082"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00082"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

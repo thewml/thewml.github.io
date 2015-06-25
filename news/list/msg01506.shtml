@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3 -->
+<!--X-From-R13: "Hnyragva i. Erttrea" <yhvfkviNtzk.arg> -->
+<!--X-Date: Sun, 2 Apr 2000 14:08:26 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.10003281648360.28942&#45;100000@aleph.balcor.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000328194046.H2002@spinnaker.rhein.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01506">Date Index</a>][<a href="thrd31.shtml#01506">Thread Index</a>]<br>
+[<A HREF="msg01511.shtml">Date Prev</A>][<A HREF="msg01504.shtml">Date Next</A>][<A HREF="msg01518.shtml">Thread Prev</A>][<A HREF="msg01489.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Valentin v. Seggern&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Mar 2000 16:55:35 -0600 (CST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hey Roland
+I guess it is the difference between a development version (1.9.3) and the
+stable version (1.020) at least that is what Neil says on
+<A  HREF="http://www.weblint.org">http://www.weblint.org</A>. I use debian unstable myself, but I prefer to
+see stable versions of toolkits like wml to ship with stable versions of
+3rd party software (if you can call it this way in this case). I guess the
+unstable version of wml could (should?) have the unstable version of
+weblint included. 1.99.4 is supposed to become wml 2 which is supposed to
+be stable (I hope I got that right) so I guess no unstable software should
+be put into these packages. 
+This is just IMHO
+Ciao
+Valentin
+
+- --
+  _/      _/            _/ Valentin v. Seggern &lt;luisxiv@gmx.net&gt;
+ _/      _/    _/_/_/  _/ Flames are redirected to /dev/null
+_/      _/  _/    _/  _/ <A  HREF="http://theclap.nipplepalooza.com/~luisxiv/">http://theclap.nipplepalooza.com/~luisxiv/</A>
+ _/  _/    _/    _/  _/ {g,p}pg-key 0x89D865CB stuff/luisxiv.gpg
+  _/        _/_/_/  _/ No, I'm not fat, I'm horizontally challenged!
+
+
+On Tue, 28 Mar 2000, Roland Rosenfeld wrote:
+
+&gt; WML 1.99.4 comes with a quite old version of weblint (1.020, copyright
+&gt; 1997).  Debian delivers a much newer version (1.9.3, copyright 1999),
+&gt; which should be available from <A  HREF="ftp://ftp.weblint.org/pub/weblint/devel/">ftp://ftp.weblint.org/pub/weblint/devel/</A>
+&gt; 
+&gt; I'd like to see this upgraded.
+&gt; 
+&gt; Tschoeeee
+&gt; 
+&gt;         Roland
+&gt; 
+&gt; -- 
+&gt;  * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+&gt; 
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.0.1 (GNU/Linux)
+Comment: For info see <A  HREF="http://www.gnupg.org">http://www.gnupg.org</A>
+
+iD8DBQE44ThqH7dVvInYZcsRAjESAJ9fG/Mr6AmGq1Ng9nQxqi2+5qKXUACfRb1L
+9iAWbgeW04IX3T2YPlSU2Mg=
+=HEi9
+-----END PGP SIGNATURE-----
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01487" HREF="msg01487.shtml">[1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01511.shtml">[BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181-17 sun4u sparc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01504.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01518.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01489.shtml">[1.99.4] Bug Report: continuation shebang printed to body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01506"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01506"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

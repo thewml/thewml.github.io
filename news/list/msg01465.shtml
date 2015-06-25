@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: return and subst&#45;in&#45;page -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 21 Mar 2000 01:28:25 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000320221303.579C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00032003553300.16225@abakus -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01465">Date Index</a>][<a href="thrd30.shtml#01465">Thread Index</a>]<br>
+[<A HREF="msg01464.shtml">Date Prev</A>][<A HREF="msg01466.shtml">Date Next</A>][<A HREF="msg01461.shtml">Thread Prev</A>][<A HREF="msg01466.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: return and subst-in-page</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 21 Mar 2000 01:28:11 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 20 Mar 2000, Uwe Mindrup wrote:
+
+&gt; I am just trying to convert the pages made with wml-1.7.4 to the new format,
+&gt; eg. 1.99.2.
+&gt; But a couple of functions do not work:
+&gt; 1. I am missing the &lt;return&gt;-Statement to leave a definition. I use it
+&gt; often to test the incoming parameters like
+&gt;    &lt;define-tag test&gt;
+&gt;    &lt;ifeq %0 0 &lt;return&gt;&gt; 
+&gt;    [the real work]
+&gt;    &lt;/define-tag&gt;
+
+Indeed, i believed this tag was useless.  It will be back in WML 1.99.4
+
+&gt;  2. I am missing also the &lt;subst-in-page ...&gt;. Is it only forgotten in
+&gt; wml-1.99.x or exist a replacement for this? In the documentation I found
+&gt; nothing appropriate. 
+
+This one has no chance to come back because mp4h does not remember text
+processed.  There is surely a workaround with pass 4 or 6.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01466" HREF="msg01466.shtml">Re: return and subst-in-page</A></strong>, <em>From:</em> Uwe Mindrup</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01461" HREF="msg01461.shtml">return and subst-in-page</A></strong>, <em>From:</em> Uwe Mindrup</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01464.shtml">Re: WML 1.99.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01466.shtml">Re: return and subst-in-page</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01461.shtml">return and subst-in-page</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01466.shtml">Re: return and subst-in-page</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01465"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01465"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

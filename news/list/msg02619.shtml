@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: WML under Windows... -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNenqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Thu, 20 Jun 2002 09:17:13 +0200 (MET DST) -->
+<!--X-Message-Id: 000001c2182a$6d81a060$4601a8c0@DELL8000 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020620070452.GA3960@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02619">Date Index</a>][<a href="thrd53.shtml#02619">Thread Index</a>]<br>
+[<A HREF="msg02618.shtml">Date Prev</A>][<A HREF="msg02620.shtml">Date Next</A>][<A HREF="msg02618.shtml">Thread Prev</A>][<A HREF="msg02620.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 17:16:42 +1000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+G'Day
+
+I believe they turn :: into . so that we have things like
+	/usr/man/man3/File.Spec.Mac.3
+
+Which I believe is similar to 
+	/usr/local/man/man3/File::Spec::Mac.3 on my unix box
+
+Perldoc File::Spec::Mac does work. I do not know how, or where to look
+
+Darryl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au  
+
+-----Original Message-----
+From: owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>]
+On Behalf Of Denis Barbier
+Sent: Thursday, 20 June 2002 5:05 PM
+To: sw-wml@engelschall.com
+Subject: Re: WML under Windows...
+
+
+On Thu, Jun 20, 2002 at 11:01:50AM +1000, Darryl Smith wrote:
+&gt; Dennis
+&gt; 
+&gt; Thanks. This helped me compile WML with ePERL under Cygwin under 
+&gt; Windows. There was a problem with STRIP not being able to find the 
+&gt; file (Compiled programs have an EXE extension which is hidden most of 
+&gt; the time. Strip does not know this and will not find the file. 
+&gt; Commenting out worked).
+&gt; 
+&gt; Now the issue is the WML_INCLUDE. Files such as wml::des::imgbg.pod 
+&gt; cannot be created since the ":" cannot be in the filename even under 
+&gt; CYGWIN. Any ideas
+
+Manpages for Perl modules also contain colons, which workaround is used
+then?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02620" HREF="msg02620.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02618" HREF="msg02618.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02618.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02620.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02618.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02620.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02619"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02619"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

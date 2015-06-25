@@ -1,0 +1,226 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: QVevfgvna @vff <puevfNgbcvgzntvp.qr> -->
+<!--X-Date: Mon, 18 Jan 1999 15:02:42 +0100 (CET) -->
+<!--X-Message-Id: 36A31669.70C548FE@topitmagic.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A06357.3A7CFBDA@topitmagic.de -->
+<!--X-Reference: 36A1DFBA.AD006C5E@topitmagic.de -->
+<!--X-Reference: 19990117152514.A160@engelschall.com -->
+<!--X-Reference: 36A200B2.891AAC0A@topitmagic.de -->
+<!--X-Reference: 36A2FC1B.CD73BA96@topitmagic.de -->
+<!--X-Reference: 19990118102946.A755@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00350">Date Index</a>][<a href="thrd8.shtml#00350">Thread Index</a>]<br>
+[<A HREF="msg00349.shtml">Date Prev</A>][<A HREF="msg00351.shtml">Date Next</A>][<A HREF="msg00347.shtml">Thread Prev</A>][<A HREF="msg00351.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: CHristian Niss &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Jan 1999 12:09:29 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Ralf,
+
+&gt; &gt; So, now I even know where the error cause is located, after installing
+&gt; &gt; and
+&gt; &gt; running WML in verbose mode this errorlog appeared ...
+&gt; &gt;
+&gt; &gt; topitmagic/wml&gt; /local/wml/bin/wml -v9 -p=1-9 zeitschriften.wml &gt;
+&gt;                                            ^^
+&gt; &gt; zeitschriften.html
+&gt; &gt; ** WML:Verbose: Reading RC file: /home/chris/.wmlrc
+&gt; &gt; ** WML:Verbose: Reading RC file: /usr/local/home/chris/.wmlrc
+&gt; &gt; ** WML:Verbose: PASS =:
+&gt;                        ^^
+&gt; &gt; cannot load /tmp/wml.6017.tmp2 for unprotection at /local/wml/bin/wml
+&gt; &gt; line 604.
+&gt; 
+&gt; A equal char? The syntax is just -p1-9 or -p 1-9 but equal chars are only used
+&gt; on GNU getopt long options. Ok, it's WML's fault that it doesn't complain
+&gt; (should be fixed), but when you change it to -p1-9 it should be fine (btw, 1-9
+&gt; is the default, of course).
+
+O.K. I have changed the command, but I get still errors ...
+Here is the new log ...
+
+topitmagic/wml&gt; /local/wml/bin/wml -v9 zeitschriften.wml &gt;
+zeitschriften.html
+** WML:Verbose: Reading RC file: /home/chris/.wmlrc
+** WML:Verbose: Reading RC file: /usr/local/home/chris/.wmlrc
+** WML:Verbose: PASS 1:
+** WML:Verbose: source: /local/wml/lib/exec/wml_p1_ipp 
+"-DWML_VERSION=1.6.8" "-DWML_LOC_MANDIR=/local/wml/man"
+"-DWML_LOC_LIBDIR=/local/wml/lib" "-DWML_LOC_BINDIR=/local/wml/bin"
+"-DWML_LOC_PREFIX=/local/wml" "-DWML_GEN_HOSTNAME=blackstone"
+"-DWML_GEN_REALNAME=Christian Niss" "-DWML_GEN_USERNAME=chris"
+"-DWML_GEN_ISOTIME=18-01-1999 12:00:35" "-DWML_GEN_CTIME=Mon Jan 18
+12:00:35 1999" "-DWML_SRC_REALNAME=Christian Niss"
+"-DWML_SRC_USERNAME=chris" "-DWML_SRC_ISOTIME=17-01-1999 15:05:50"
+"-DWML_SRC_CTIME=Sun Jan 17 15:05:50 1999"
+"-DWML_SRC_BASENAME=zeitschriften"
+"-DWML_SRC_FILENAME=zeitschriften.wml"
+"-DWML_SRC_DIRNAME=/usr/local/home/chris/html/topitmagic/wml"
+"-DHOME=../../../../../../../home/chris" "-DWML_GEN_REALNAME=CHristian
+Niss" "-DWML_GEN_username=chris" "-DWML_GEN_HOSTNAME=topitmagic.de"
+"-DHOME=../../.." "-DWML_GEN_REALNAME=CHristian Niss"
+"-DWML_GEN_username=chris" "-DWML_GEN_HOSTNAME=topitmagic.de" -v -S
+/local/wml/lib/include/  -I ../../../../../../../home/chris/.wml -I
+../../../.wml  -s 'sys/boot.wml'  -o /tmp/wml.11406.tmp2
+/tmp/wml.11406.tmp1
+** WML:Verbose: loading: /local/wml/lib/exec/wml_p1_ipp
+** WML:Verbose: loading: succeeded with /local/wml/lib/exec/wml_p1_ipp
+(11324 bytes)
+** WML:Verbose: precompiling script: pkgname=wml_p1_ipp
+** WML:Verbose: precompiling script: succeeded
+** WML:Verbose: splitting from args:  "-DWML_VERSION=1.6.8"
+"-DWML_LOC_MANDIR=/local/wml/man" "-DWML_LOC_LIBDIR=/local/wml/lib"
+"-DWML_LOC_BINDIR=/local/wml/bin" "-DWML_LOC_PREFIX=/local/wml"
+"-DWML_GEN_HOSTNAME=blackstone" "-DWML_GEN_REALNAME=Christian Niss"
+"-DWML_GEN_USERNAME=chris" "-DWML_GEN_ISOTIME=18-01-1999 12:00:35"
+"-DWML_GEN_CTIME=Mon Jan 18 12:00:35 1999" "-DWML_SRC_REALNAME=Christian
+Niss" "-DWML_SRC_USERNAME=chris" "-DWML_SRC_ISOTIME=17-01-1999 15:05:50"
+"-DWML_SRC_CTIME=Sun Jan 17 15:05:50 1999"
+"-DWML_SRC_BASENAME=zeitschriften"
+"-DWML_SRC_FILENAME=zeitschriften.wml"
+"-DWML_SRC_DIRNAME=/usr/local/home/chris/html/topitmagic/wml"
+"-DHOME=../../../../../../../home/chris" "-DWML_GEN_REALNAME=CHristian
+Niss" "-DWML_GEN_username=chris" "-DWML_GEN_HOSTNAME=topitmagic.de"
+"-DHOME=../../.." "-DWML_GEN_REALNAME=CHristian Niss"
+"-DWML_GEN_username=chris" "-DWML_GEN_HOSTNAME=topitmagic.de" -v -S
+/local/wml/lib/include/  -I ../../../../../../../home/chris/.wml -I
+../../../.wml  -s 'sys/boot.wml'  -o /tmp/wml.11406.tmp2
+/tmp/wml.11406.tmp1
+** WML:Verbose: splitting to argv:
+-DWML_VERSION=1.6.8|-DWML_LOC_MANDIR=/local/wml/man|-DWML_LOC_LIBDIR=/local/wml/lib|-DWML_LOC_BINDIR=/local/wml/bin|-DWML_LOC_PREFIX=/local/wml|-DWML_GEN_HOSTNAME=blackstone|-DWML_GEN_REALNAME=Christian
+Niss|-DWML_GEN_USERNAME=chris|-DWML_GEN_ISOTIME=18-01-1999
+12:00:35|-DWML_GEN_CTIME=Mon Jan 18 12:00:35 1999|-DWML_SRC_REALNAME=Ch
+ristian Niss|-DWML_SRC_USERNAME=chris|-DWML_SRC_ISOTIME=17-01-1999
+15:05:50|-DWML_SRC_CTIME=Sun Jan 17 15:05:50
+1999|-DWML_SRC_BASENAME=zeitschriften|-DWML_SRC_FILENAME=zeitschriften.wml|-DWML_SRC_DIRNAME=/usr/local/home/chris/html/topitmagic/wml|-DHOME=../../../../../../../home/chris|-DWML_GEN_REALNAME=CHristian
+Niss|-DWML_GEN_username=chris|-DWML_GEN_HOSTNAME=topitmagic.de|-DHOME=../../..|-DWML_GEN_REALNAME=CHristian
+Niss|-DWML_GEN_username=chris|-DWML_GEN_HOSTNAME=topitmagic.de|-v|-S|/local/wml/lib/include/|-I|../../../../../../../home/chris/.wml|-I|../../../.wml|-s|sys/boot.wml|-o|/tmp/wml.11406.tmp2|/tmp/wml.11406.tmp1
+** WML:Verbose: running script
+|
++-- /tmp/ipp.11406.tmp
+  |
+  +-- /local/wml/lib/include//sys/boot.wml
+|
++-- /tmp/ipp.11406.tmp
+  |
+  +-- ./topitinfo_template.wml
+    |
+    +-- /local/wml/lib/include//fmt/isolatin.wml
+    |
+    +-- /local/wml/lib/include//std/info.wml
+      |
+      +-- /local/wml/lib/include//std/tags.wml
+      |
+      +-- /local/wml/lib/include//sup/path.wml
+    |
+    +--
+../../../.wml/../../../../../../../home/chris/.wml/home/topit.wml
+** WML:Verbose: running script: rc=0
+Want to see result after Pass1 [yNq]:
+** WML:Verbose: PASS 2:
+** WML:Verbose: system: /local/wml/lib/exec/wml_p2_mhc  --set
+"WML_VERSION" "1.6.8" --set "WML_LOC_MANDIR" "/local/wml/man" --set
+"WML_LOC_LIBDIR" "/local/wml/lib" --set "WML_LOC_BINDIR"
+"/local/wml/bin" --set "WML_LOC_PREFIX" "/local/wml" --set
+"WML_GEN_HOSTNAME" "blackstone" --set "WML_GEN_REALNAME" "Christian
+Niss" --set "WML_GEN_USERNAME" "chris" --set "WML_GEN_ISOTIME"
+"18-01-1999 12:00:35" --set "WML_GEN_CTIME" "Mon Jan 18 12:00:35 1999"
+--set "WML_SRC_REALNAME" "Christian Niss" --set "WML_SRC_USERNAME"
+"chris" --set "WML_SRC_ISOTIME" "17-01-1999 15:05:50" --set
+"WML_SRC_CTIME" "Sun Jan 17 15:05:50 1999" --set "WML_SRC_BASENAME"
+"zeitschriften" --set "WML_SRC_FILENAME" "zeitschriften.wml" --set
+"WML_SRC_DIRNAME" "/usr/local/home/chris/html/topitmagic/wml" --set
+"HOME" "../../../../../../../home/chris" --set "WML_GEN_REALNAME"
+"CHristian Niss" --set "WML_GEN_username" "chris" --set
+"WML_GEN_HOSTNAME" "topitmagic.de" --set "HOME" "../../.." --set
+"WML_GEN_REALNAME" "CHristian Niss" --set "WML_GEN_username" "chris"
+--set "WML_GEN_HOSTNAME" "topitmagic.de" --set mhtml::relative-prefix
+'/usr/local/home/chris/html/topitmagic/wml' /tmp/wml.11406.tmp2
+&gt;/tmp/wml.11406.tmp3
+** WML:Break: Error in Pass 2 (rc=139).
+
+
+
+/tmp/wml.11406.tmp2 doesn´t exist in the tmp-folder, but 
+/tmp/wml.11406.tmp1 does ????
+
+I guess the missing of *.tmp2 leads to the error, but what could be 
+the cause for that ??
+
+CHristian
+
+--------------------------------------------------------------------
+CHRISTIAN NISS     computer science student @ FAU Erlangen Nuremberg
+                        eMail: cnniss@cip.informatik.uni-erlangen.de 
+<A  HREF="http://www.topitmagic.de">http://www.topitmagic.de</A>  -  DAS Online-Magazin fuer Zauberkuenstler
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00332" HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00338" HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00339" HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00340" HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00346" HREF="msg00346.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00347" HREF="msg00347.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00349.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00351.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00347.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00351.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00350"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00350"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

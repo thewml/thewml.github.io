@@ -1,0 +1,85 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [RFC] New document for writing macros -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 8 May 2000 18:29:08 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000508181200.21856A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01559">Date Index</a>][<a href="thrd32.shtml#01559">Thread Index</a>]<br>
+[<A HREF="msg01558.shtml">Date Prev</A>][<A HREF="msg01560.shtml">Date Next</A>][<A HREF="msg01558.shtml">Thread Prev</A>][<A HREF="msg01560.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[RFC] New document for writing macros</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 8 May 2000 18:29:01 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I have written wml_macros, which explains how to build ePerl nestable
+macros  This paper is available at
+  <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_docs/wml_macros.pod">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_docs/wml_macros.pod</A>
+
+Any comments or improvements are welcome.
+This was the last item on my TODO list, so i will release WML 2.0 after
+a final check, it may take few days.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01558.shtml">Re: A bit long: What is the right way to add extensions to wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01560.shtml">wml::std::page</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01558.shtml">Re: A bit long: What is the right way to add extensions to wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01560.shtml">wml::std::page</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01559"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01559"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

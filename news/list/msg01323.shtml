@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: New #include tag &#45; changes to <box> -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Wed, 2 Feb 2000 18:05:23 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000202112552.25646A&#45;101000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: src00002.src -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01323">Date Index</a>][<a href="thrd27.shtml#01323">Thread Index</a>]<br>
+[<A HREF="msg01322.shtml">Date Prev</A>][<A HREF="msg01324.shtml">Date Next</A>][<A HREF="msg01342.shtml">Thread Prev</A>][<A HREF="msg01325.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>New #include tag - changes to &lt;box&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 2 Feb 2000 11:35:25 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+first I want to introduce a page where you can `wonder' about the
+extensions to the #include tag ;-) There's more to come, furthermore there
+will be a few more extensions to this directive. But I'm on the way to
+produce the "eierlegende Wollmichsau" (I don't know a translation,
+sorry) which can solve all your problems ;-)))))))
+
+Ok, not really, but you'll see...
+
+... click to <A  HREF="http://www.knipp.org/wml/">http://www.knipp.org/wml/</A>
+
+Furthermore, I attached a little patch to extend the &lt;box&gt; tag with an
+align parameter as I used it on this demo page. To me it seems real useful
+and almost better than nesting the box in another table more. As usual, I
+documented the new tag in the documentation part ;-)
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+</PRE>
+<P><A HREF="src00002.src" >diff.box.src</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01325" HREF="msg01325.shtml">Re: New #include tag - changes to &lt;box&gt;</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01322.shtml">Re: Proposed modification of the #include '' directive - new patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01324.shtml">BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01342.shtml">setting output dir in .wmlrc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01325.shtml">Re: New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01323"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01323"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

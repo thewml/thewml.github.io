@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: "wmk &#45;a" and auto&#45;adjusted variables? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 9 Jul 1999 09:58:22 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990709090510.31869A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990708173807.26393@doit.wisc.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00845">Date Index</a>][<a href="thrd18.shtml#00845">Thread Index</a>]<br>
+[<A HREF="msg00844.shtml">Date Prev</A>][<A HREF="msg00846.shtml">Date Next</A>][<A HREF="msg00844.shtml">Thread Prev</A>][<A HREF="msg00849.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &quot;wmk -a&quot; and auto-adjusted variables?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Jul 1999 09:52:09 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 8 Jul 1999 plonka@doit.wisc.edu wrote:
+
+[...]
+&gt; In this instance however, it's less desirable than being able to use just
+&gt; command-line switches.  Since I'm invoking wmk from another Makefile, I'd
+&gt; like that Makefile to be self-contained (i.e. not to be reliant on the
+&gt; content of the ".wmlrc").
+
+Write a rule like
+.wmlrc:
+	echo '-DIMG~images' &gt;$@
+
+&gt; It's surprising that putting "-DIMG~images" on the wmk command line is
+&gt; different than putting it in the ".wmlrc" file.  No?
+
+No!
+As i said before, -D is not an option of wmk, but wml. It makes all the
+difference.
+
+&gt; I'm thinking that perhaps:
+&gt; 1) wmk should not chdir around as it invokes wml, or should have a new
+&gt;    mode that causes it not to chdir.
+
+Certainly not.
+
+&gt; - or -
+&gt; 2) The wmk man page should document the issue that "-D~value" on the
+&gt;    wmk command-line won't have the same effect as passing it to wml
+&gt;    directly (if wml had been invoked from the same dir) or specifying
+&gt;    it in an rc file.
+
+Reread the wmk manpage, it does not document the -D option. So i believe
+such a warning would be obfuscated.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00849" HREF="msg00849.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> plonka</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00844" HREF="msg00844.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> plonka</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00844.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00846.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00844.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00849.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00845"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00845"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

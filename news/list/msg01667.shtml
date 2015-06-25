@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: different behaviour ;&#45;) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 31 May 2000 00:39:05 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000531000746.15628B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.10005300942350.2251&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01667">Date Index</a>][<a href="thrd34.shtml#01667">Thread Index</a>]<br>
+[<A HREF="msg01666.shtml">Date Prev</A>][<A HREF="msg01668.shtml">Date Next</A>][<A HREF="msg01662.shtml">Thread Prev</A>][<A HREF="msg01649.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: different behaviour ;-)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 31 May 2000 00:38:59 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 30 May 2000, Matthias Bernhardt wrote:
+
+&gt; On Sun, 28 May 2000, Denis Barbier wrote:
+&gt; 
+&gt; DB&gt; &gt; [...] `buggy', [...]
+&gt; DB&gt; 
+&gt; DB&gt; With politically correct words, i would rather say that pass 2 in WML
+&gt; DB&gt; 2.0.0 had a ``different behaviour''  ;-)
+&gt; 
+&gt; Sorry, I didn't want to blame you, I just think, that there
+&gt; shouldn't be too much "different behaviour" between 2.0.x
+&gt; versions on the one hand, but it should become as usable as
+&gt; possible in a version number as small as possible. While Numbers
+&gt; like 1.99.x _imply_ that things change a lot, one doesn't expect
+&gt; that from 2.0.x versions ... I fear WMLs reputation could be
+&gt; affected seriously if people start saying that you can't risk
+&gt; to use even a "stable" version unless your reading the mailing
+&gt; list on a daily base.
+
+You're right, but thinking that version x.0.0 is stable does not make
+sense. Of course, it must become stable very quickly.
+
+&gt; DB&gt; Some people use WML to generate pages which are processed through PHP,
+&gt; DB&gt; ASP, ePerl, ... by the web server.  And you do not know which delimiter
+&gt; DB&gt; is used (see options -B and -E of ePerl).
+&gt; 
+&gt; Wouldn't such a -B and -E, if given, also be available to Pass 2
+&gt; for evaluation?
+
+No, this is not the problem.  Take a look at source code (most stupid
+example i found) of <A  HREF="http://www.axa-conseil.fr/">http://www.axa-conseil.fr/</A>
+
+   ...
+    document.write('&lt;OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ');
+    document.write('codebase="<A  HREF="http://active.macromedia.com/flash2/cabs/swflash.cab#version=3,0,0,0">http://active.macromedia.com/flash2/cabs/swflash.cab#version=3,0,0,0</A>" ');
+    document.write('ID="axa" WIDTH=770 HEIGHT=440&gt; ');
+   ...
+
+How to parse this &lt;object&gt; tag?
+
+What i was trying to tell in previous post is that you cannot ensure
+that a WML document respects a given syntax, nor that compiled file is a
+valid HTML file.  It may contain some instructions processed by the
+server on delivery, or client-side programming constructs, or both.
+
+So do not believe that mp4h could handle all cases.  Human
+interventation is mandatory to help it parse these silly expressions,
+how to do it best is discussed in other threads.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01662" HREF="msg01662.shtml">different behaviour ;-)</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01666.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01668.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01662.shtml">different behaviour ;-)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01649.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01667"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01667"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

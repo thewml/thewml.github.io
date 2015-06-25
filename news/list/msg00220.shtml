@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Ralf, are you there? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Wed, 28 Oct 1998 20:51:19 +0100 (CET) -->
+<!--X-Message-Id: 19981028205117.A4570@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19981028173003.A6471@bcnartdirecte.com -->
+<!--X-Reference: 000301be02a6$50317dc0$0500a8c0@delf -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00220">Date Index</a>][<a href="thrd5.shtml#00220">Thread Index</a>]<br>
+[<A HREF="msg00219.shtml">Date Prev</A>][<A HREF="msg00221.shtml">Date Next</A>][<A HREF="msg00219.shtml">Thread Prev</A>][<A HREF="msg00221.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Ralf, are you there?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 28 Oct 1998 20:51:17 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Oct 28, 1998, David Harris wrote:
+
+&gt; &gt; By the way, is this list dead? Or is it that too few people have
+&gt; &gt; discovered this wonderful tool?
+&gt; 
+&gt; I also wonder why there is very little posting on the list. I seem to
+&gt; remember that a year ago there was much more traffic.
+&gt; 
+&gt; In addition to wondering where the list members and wml users have gone, I
+&gt; wonder where our WML author has gone. I remember in early September I
+&gt; postied some code modifications to the list which significantly increased
+&gt; the efficiency of pass one and improved the TOC tag, but they have not been
+&gt; applied to the "in development" source tree. I've sent a few e-mails to Ralf
+&gt; about this and another issue with ePerl and SFIO, but received no response.
+&gt; Oh, I also remember asking to the list and private when WML 2.0 was
+&gt; expected. Nothing heard from him on anything.
+&gt; 
+&gt; When I was a member of the list briefly a year ago, I remember a different
+&gt; Ralf. He was taking bug fixes and producing code patches and actively
+&gt; working with the community. I think everyone felt his guidance and
+&gt; development efforts.
+&gt; 
+&gt; So, Ralf, are you still there? Is WML 2.0 still a priority? If so, when will
+&gt; it be out. I know you are still active in software, because you were at
+&gt; ApacheCon 98. Please reply to this e-mail. You have a responsibility to tell
+&gt; the WML community that you are bowing out, if that is your intention.
+
+No, the list is not dead. It's just no traffic there currently because I'm
+120% busy with Apache and my latest Apache-related projects: mod_ssl
+(<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>) and the Apache book I'm writing for
+Addison Wesley USA. Such projects (as WML in it's origin) consumes really
+_ALL_ of my time. The ePerl and WML postings are still in my folders, but I'm
+these months such flooded with Apache traffic that I currently find really no
+free time for the older projects. At the begin of October I hoped the
+situation would chance, but then in October ApacheCon'98 happended (where I
+gave a mod_ssl presentation) and now the Apache problems are again at the
+maximum level. I'm really online 10 hours per day and 7 days per week for
+hacking, but there is more to do than a single hacker can do.
+
+So, sorry that there is currently no development of WML and no highlights on
+sw-wml. But WML is at least stable (although lacks performance), so I was
+focused on the other projects where bigger problems exists. Actually what my
+situation forces is the need for co-developers and co-maintainers for ePerl
+and WML. I've already thought about making an invitation to other hackers to
+contribute to the ePerl and WML projects are even overtake them for some time.
+Does anybody thing this makes sense?  Or is there even anybody who wants to be
+the maintainer for the next months (at least until I've finished the Apache
+book and the mod_ssl project is settled)? I could establish write access to
+the sources, the websites, etc. That's no problem. What is needed is just
+someone who has knowledge of Perl and HTML, is already a WML user and wants to
+drive the WML development for the next months.
+
+Any other opinions how we can make sure the WML development and maintainance
+doesn't stand idle for more time?
+
+Please understand my situation. It's not a lost of interest or other reasons:
+I've these months just really _NO_ more free time because of the large amount
+of projects I'm already involved.
+
+So, please help me and stand up as the developer/maintainer. At least for the
+next 4 months, but it's also possible to get the job for longer. At least
+after this time I can focus on WML myself again and work together with you.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00217" HREF="msg00217.shtml">Creating Thumbnails</A></strong>, <em>From:</em> Rafael Cordones Marcos</li>
+<li><strong><A NAME="00219" HREF="msg00219.shtml">Ralf, are you there?</A></strong>, <em>From:</em> David Harris</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00219.shtml">Ralf, are you there?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00221.shtml">Re: Ralf, are you there?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00219.shtml">Ralf, are you there?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00221.shtml">Re: Ralf, are you there?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00220"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00220"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

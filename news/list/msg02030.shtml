@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WML: WMK Help -->
+<!--X-From-R13: "=?WEA&#45;8859&#45;1?C?Quevfgvna=20Vbsfg=S4qgyre?=" <puevfgvnaNubsfgnrqgyre.pbz> -->
+<!--X-Date: Mon, 16 Oct 2000 17:43:24 +0200 (MET DST) -->
+<!--X-Message-Id: s9eb267a.043@icc&#45;demo.hofstaedtler.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02030">Date Index</a>][<a href="thrd41.shtml#02030">Thread Index</a>]<br>
+[<A HREF="msg02029.shtml">Date Prev</A>][<A HREF="msg02031.shtml">Date Next</A>][<A HREF="msg02027.shtml">Thread Prev</A>][<A HREF="msg02031.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WML: WMK Help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Christian Hofstädtler&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 16 Oct 2000 16:01:36 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+This is about the WMK frontend for WML.
+
+You've described a way to make multi-language files. Just put some #!wml ... in the file and ok, but, how to do this for the whole website?
+I'm using wmk to build my site, but I didn't find out how to:
+  - substituate defined (-D xxx in .wmkrc) variables in the -o option nor in another -D
+  (
+
+  I've tried:
+     -D LOCALPATH=/home/websites/s1
+     -D LOCALTMPLPATH=$LOCALPATH/templates
+   ... ?
+  and: I must pass a -o option to wml, same problem ...
+
+  )
+
+
+Cause having the same problem, I couldn't find out, how to get the name of the source file. (WML_SRC_BASENAME).
+
+
+Thanks,
+
+
+
+with best regards
+mit freundlichen Grüßen
+
+Christian Hofstädtler
+Hofstaedtler IE GmbH
+Zemendorfergasse 7
+A-2700 Wr. Neustadt
+Austria
+Tel: +43-2622-215500
+Fax: +43-2622-215505
+www.hofstaedtler.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02031" HREF="msg02031.shtml">Re: WML: WMK Help</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02029.shtml">Re: Bug in gfont</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02031.shtml">Re: WML: WMK Help</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02027.shtml">[OT] About bug reports (was Re: Bug in gfont)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02031.shtml">Re: WML: WMK Help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02030"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02030"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

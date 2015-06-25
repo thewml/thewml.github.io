@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Creating a new tag -->
+<!--X-From-R13: [nypbyz Sqjneqf <znypbyzNnpnl.pbz.nh> -->
+<!--X-Date: Sun, 16 Jul 2000 06:17:05 +0200 (MET DST) -->
+<!--X-Message-Id: 397134CE.EE707BF8@acay.com.au -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 396F2D1F.2C1D6AE2@acay.com.au -->
+<!--X-Reference: 20000714183815.A841@frithjof -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01814">Date Index</a>][<a href="thrd37.shtml#01814">Thread Index</a>]<br>
+[<A HREF="msg01813.shtml">Date Prev</A>][<A HREF="msg01815.shtml">Date Next</A>][<A HREF="msg01813.shtml">Thread Prev</A>][<A HREF="msg01817.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Creating a new tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Malcolm Edwards &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 16 Jul 2000 14:06:38 +1000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Albert REINER wrote:
+&gt; 
+&gt; Why don't you use perl's split? I think it should work easily in a way
+&gt; similar to this:
+&gt; 
+&gt; &lt;:{my @s;
+&gt; @s = split("\n","%body");
+&gt; print "&lt;table&gt;\n";
+&gt; foreach (@s) {
+&gt;     print "&lt;tr&gt;&lt;td&gt;" . join("&lt;/td&gt;&lt;td&gt;", split(",",$_)) . "&lt;/td&gt;&lt;/tr&gt;\n";
+&gt; }
+&gt; print "&lt;/table&gt;\n";
+&gt; }:&gt;
+
+Thanks, that works well.
+
+Malcolm
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01812" HREF="msg01812.shtml">Creating a new tag</A></strong>, <em>From:</em> Malcolm Edwards</li>
+<li><strong><A NAME="01813" HREF="msg01813.shtml">Re: Creating a new tag</A></strong>, <em>From:</em> Albert REINER</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01813.shtml">Re: Creating a new tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01815.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01813.shtml">Re: Creating a new tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01817.shtml">Question about nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01814"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01814"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

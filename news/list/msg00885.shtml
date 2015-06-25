@@ -1,0 +1,178 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: gfont SEGV, patch -->
+<!--X-From-R13: Rnir Bybaxn <cybaxnNqbvg.jvfp.rqh> -->
+<!--X-Date: Tue, 3 Aug 1999 00:46:50 +0200 (MET DST) -->
+<!--X-Message-Id: 19990802174644.A17014@doit.wisc.edu -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00885">Date Index</a>][<a href="thrd19.shtml#00885">Thread Index</a>]<br>
+[<A HREF="msg00884.shtml">Date Prev</A>][<A HREF="msg00886.shtml">Date Next</A>][<A HREF="msg00879.shtml">Thread Prev</A>][<A HREF="msg00889.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>gfont SEGV, patch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Dave Plonka &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Aug 1999 17:46:44 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Denis &amp; WML users,
+
+gfont gets SEGV if the directory in which the output file would be
+written does not exist.  This is most likely to happen when gfont is used
+with wml where it is common to write the images to a directory specified
+by a variable as in "-DIMG~./images".
+[Just FYI, I submitted this as a bug on the gfont web page as well.]
+
+Attached is a fairly trivial patch to "gfont_main.c".  It fixes gfont
+so that it checks to be sure that fopen(3) of the output file works
+before trying to write to the resultant file pointer.  While seemingly
+trivial, this bug caused me a nasty problem when my output image directory
+didn't exist... gfont ignored and did not report the failure of open(2)
+with ENOENT, then got SEGV when it used a bad FILE pointer.  wml reported
+the SEGV error from gfont, but it was less than obvious as to what was the
+root cause.
+
+Additionally, to better conform with ANSI/ISO C, the patched version uses
+strchr(3) rather than the unprototyped index(3) (this also eliminated a
+compiler warning under Solaris) and uses exit(3) rather than "return" from
+main().  I used my "headers" utility
+("<A  HREF="http://net.doit.wisc.edu/~plonka/headers/">http://net.doit.wisc.edu/~plonka/headers/</A>") to generate the set of
+include directives.
+
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+</PRE>
+<PRE>
+*** gfont_main.c_djp	Tue Sep 16 03:09:22 1997
+--- gfont_main.c	Mon Aug  2 17:02:06 1999
+***************
+*** 35,44 ****
+  **  gfont_main.c -- main program
+  */
+  
+! #include &lt;stdio.h&gt;
+! #include &lt;stdlib.h&gt;
+! #include &lt;string.h&gt;
+! #include &lt;stdarg.h&gt;
+  
+  #include "gfont_gd.h"
+  #include "gfont_gdfontl.h"
+--- 35,46 ----
+  **  gfont_main.c -- main program
+  */
+  
+! #include &lt;errno.h&gt; /* errno */
+! #include &lt;stdarg.h&gt; /* va_list, va_start, va_end */
+! #include &lt;stddef.h&gt; /* NULL */
+! #include &lt;stdio.h&gt; /* vsprintf, fprintf, stderr, stdout, FILE, sprintf, fopen, fclose */
+! #include &lt;stdlib.h&gt; /* atoi, exit, getenv, system, abs */
+! #include &lt;string.h&gt; /* strcpy, strchr, strlen, strerror */
+  
+  #include "gfont_gd.h"
+  #include "gfont_gdfontl.h"
+***************
+*** 95,101 ****
+      char *cp;
+  
+      strcpy(spec, str);
+!     if ((cp = index(spec, 'x')) == NULL)
+          return 1;
+      *cp++ = '\0';
+      xspec = spec;
+--- 97,103 ----
+      char *cp;
+  
+      strcpy(spec, str);
+!     if ((cp = strchr(spec, 'x')) == NULL)
+          return 1;
+      *cp++ = '\0';
+      xspec = spec;
+***************
+*** 503,508 ****
+--- 505,515 ----
+  
+      Verbose("Exporting image to GIF file: ");
+      fp = fopen(outputfile, "w");
++     if ((FILE *)0 == fp) {
++        fprintf(stderr,
++ 	       "fopen \"%s\", \"w\": %s\n", outputfile, strerror(errno));
++        exit(1);
++     }
+      gdImageGif(ip, fp);
+      fclose(fp);
+      Verbose("Done\n");
+***************
+*** 511,517 ****
+      gdImageDestroy(ip);
+      Verbose("Done\n");
+  
+!     return 0;
+  }
+  
+  /*EOF*/
+--- 518,524 ----
+      gdImageDestroy(ip);
+      Verbose("Done\n");
+  
+!     exit(0);
+  }
+  
+  /*EOF*/
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00889" HREF="msg00889.shtml">Re: gfont SEGV, patch</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00884.shtml">./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00886.shtml">My submenus...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00879.shtml">Re: Small bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00889.shtml">Re: gfont SEGV, patch</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00885"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00885"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

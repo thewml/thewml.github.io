@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: invoking wml in current perl interpreter? -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 4 Mar 1998 12:30:18 +0100 (MET) -->
+<!--X-Message-Id: 199803041130.MAA26624@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.980228165650.7880A&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00110">Date Index</a>][<a href="thrd3.shtml#00110">Thread Index</a>]<br>
+[<A HREF="msg00109.shtml">Date Prev</A>][<A HREF="msg00111.shtml">Date Next</A>][<A HREF="msg00104.shtml">Thread Prev</A>][<A HREF="msg00107.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: invoking wml in current perl interpreter?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 4 Mar 1998 12:30:15 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Jim Hebert, in a previous mail you wrote:
+
+&gt; Sorry if this is a little off topic... It's marginal, but I know RSE has
+&gt; already hurdled this when running each pass out of the control script.
+&gt; 
+&gt; I have a perl script that is going to do some stuff, then run wml and send
+&gt; the output to the stdout. Right now it does something cheesy like "print
+&gt; `wml ...`."
+&gt; 
+&gt; I'd like to speed this up somewhat by using the current perl interpreter.
+&gt; It's the last thing the script does, so I don't even need to worry about
+&gt; trashing anything in the variable namespaces...
+&gt; 
+&gt; I tried reading the source but wasn't sure what I was looking for in the
+&gt; first place. =)
+
+Hmmm... I think you can directly replace the 
+
+   print `wml $args`;
+
+command with
+
+    @ARGV = ();
+    while ($args) {
+        redo if $args =~ s|^\s*(-[a-zA-Z0-9]\S+)|push(@ARGV, $1), ''|iges;
+        redo if $args =~ s|^\s*(-[a-zA-Z0-9])|push(@ARGV, $1), ''|iges;
+        redo if $args =~ s|^\s*"([^"]*)"|push(@ARGV, $1), ''|iges;
+        redo if $args =~ s|^\s*'([^']*)'|push(@ARGV, $1), ''|iges;
+        redo if $args =~ s|^\s*(\S+)|push(@ARGV, $1), ''|iges;
+        redo if $args =~ s|^\s+$|''|iges;
+    }
+    require '/path/to/wml';
+
+I've not tried it, but theory says it should work ;-). If it doesn't work then
+extract WML's dosource() function and use this one in your program.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00104" HREF="msg00104.shtml">invoking wml in current perl interpreter?</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00109.shtml">Webdesign Magnifying Glass</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00111.shtml">ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00104.shtml">invoking wml in current perl interpreter?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00107.shtml">minor buglet</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00110"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00110"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

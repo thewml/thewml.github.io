@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG: <PROTECT> does not accept uppercase PASS parameters: -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Mon, 16 Jul 2001 23:18:27 +0200 (MET DST) -->
+<!--X-Message-Id: 20010716230453.K30077@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02300">Date Index</a>][<a href="thrd47.shtml#02300">Thread Index</a>]<br>
+[<A HREF="msg02299.shtml">Date Prev</A>][<A HREF="msg02301.shtml">Date Next</A>][<A HREF="msg02299.shtml">Thread Prev</A>][<A HREF="msg02301.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 16 Jul 2001 23:04:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+There is a little bug in WML: &lt;PROTECT&gt; does not accept uppercase PASS
+parameters:
+
+ 1| &lt;protect pass=2&gt;
+ 2| &lt;define-tag foo&gt;
+ 3| &lt;: print "foo\n"; :&gt;
+ 4| &lt;/define-tag&gt;
+ 5| &lt;/protect&gt;
+ 6|
+ 7| &lt;protect PASS=2&gt;
+ 8| &lt;define-tag bar&gt;
+ 9| &lt;: print "bar\n"; :&gt;
+10| &lt;/define-tag&gt;
+11| &lt;/protect&gt;
+
+results in
+
+1| &lt;define-tag foo&gt;
+2| foo
+3| &lt;/define-tag&gt;
+4|
+5| &lt;define-tag bar&gt;
+6| &lt;: print "bar\n"; :&gt;
+7| &lt;/define-tag&gt;      
+
+Tested with WML 2.0.7 on Solaris 2.7, PERL 5.6.1:
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02301" HREF="msg02301.shtml">Patch: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02302" HREF="msg02302.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02299.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02301.shtml">Patch: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02299.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02301.shtml">Patch: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02300"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02300"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

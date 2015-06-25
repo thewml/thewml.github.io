@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: rollover and slice -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 5 Aug 1999 23:17:50 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990805225802.2577C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990729193535.843H&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00887">Date Index</a>][<a href="thrd19.shtml#00887">Thread Index</a>]<br>
+[<A HREF="msg00888.shtml">Date Prev</A>][<A HREF="msg00889.shtml">Date Next</A>][<A HREF="msg00890.shtml">Thread Prev</A>][<A HREF="msg00891.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: rollover and slice</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 5 Aug 1999 23:17:06 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 29 Jul 1999, Jan Ulrich Hasecke wrote:
+
+&gt; BTW: Where can I learn more about the filter-function?
+
+In the navbar manpage.
+Applying your own filter is really simple if you know Perl.
+Tell me if you have problems.
+
+&gt; I always use tidy after wml, but this makes the files bigger. Is
+&gt; there a possibility to use tidy before htmlstrip eliminates the
+&gt; blank lines? Or shall I use html-clean as final-final cleanup?
+
+I don't understand your first question. What is the advantage of
+calling tidy before htmlstrip? Anyway, it's impossible, so....
+After html-clean, files are unreadable by humans, but smaller
+(about 10-20% smaller with my tests).
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00891" HREF="msg00891.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00882" HREF="msg00882.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00888.shtml">Re: ./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00889.shtml">Re: gfont SEGV, patch</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00890.shtml">Re: ./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00891.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00887"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00887"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

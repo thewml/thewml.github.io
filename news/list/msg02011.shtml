@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Script to upgrade from WML 1.x to 2.x -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 3 Oct 2000 00:06:49 +0200 (MET DST) -->
+<!--X-Message-Id: 20001003000829.A25004@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02011">Date Index</a>][<a href="thrd41.shtml#02011">Thread Index</a>]<br>
+[<A HREF="msg02010.shtml">Date Prev</A>][<A HREF="msg02012.shtml">Date Next</A>][<A HREF="msg02008.shtml">Thread Prev</A>][<A HREF="msg02012.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Script to upgrade from WML 1.x to 2.x</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 3 Oct 2000 00:08:29 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i eventually wrote a script to help upgrading to WML 2.x.
+It is available at
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_contrib/wml1to2">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_contrib/wml1to2</A>
+
+Its syntax is very simple:
+   wml1to2 filename
+replaces old constructs by newer ones in `filename'.  See
+   perldoc wml1to2
+for a detailed list of operations.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02012" HREF="msg02012.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02010.shtml">Re: Mehrsprachiger Navigationbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02012.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02008.shtml">Re: One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02012.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02011"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02011"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

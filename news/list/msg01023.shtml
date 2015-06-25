@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Upload Tool (was: Ouput directory other than source directory) -->
+<!--X-From-R13: Fvzb @rhznaa <wnzrfNhav&#45;uburaurvz.qr> -->
+<!--X-Date: Sun, 3 Oct 1999 14:31:08 +0200 (MET DST) -->
+<!--X-Message-Id: 19991003105510.A674@uni&#45;hohenheim.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991001145241.C202@uni&#45;hohenheim.de -->
+<!--X-Reference: Pine.LNX.3.96.991002112141.4770B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01023">Date Index</a>][<a href="thrd21.shtml#01023">Thread Index</a>]<br>
+[<A HREF="msg01022.shtml">Date Prev</A>][<A HREF="msg01024.shtml">Date Next</A>][<A HREF="msg01020.shtml">Thread Prev</A>][<A HREF="msg01028.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Upload Tool (was: Ouput directory other than source directory)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Timo Neumann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 3 Oct 1999 10:55:10 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Oct 02, 1999 at 02:51:37PM +0200, Jan Ulrich Hasecke wrote:
+ 
+&gt; I now installed mirror, but mirror is a download-tool, which can
+&gt; also upload, but the whole design is for downloading. So I am
+&gt; testing in the moment. Do you know a better tool?
+
+I use sitecopy. It allows you to sync your remote tree with the
+local one, can do excludes and use different protocols. You can
+choose between a shell-interface and a windowed version based on
+gnome. I think it's quite nice.
+
+I don't have the URL at hand but you should easily find it at
+freshmeat.
+
+cheers,
+
+Timo
+
+-- 
+Timo Neumann      -- GUS#2 --        '95-'96  Suzuki GS500E 11.2 Mm
+<A  HREF="http://www.uni-hohenheim.de/~james/">http://www.uni-hohenheim.de/~james/</A>  '96-'99  Honda  CB750  32.3 Mm
+PGP: 1024/0792BF9D 18 07 12 F7 E4 2C 3A 66  BD 74 2D 60 81 45 02 DA
+--------------  Do you know where your towel is?  -----------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01019" HREF="msg01019.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Timo Neumann</li>
+<li><strong><A NAME="01020" HREF="msg01020.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01022.shtml">BUG REPORT: Website META Language 1.7.3 (30-Sep-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01024.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01020.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01028.shtml">mirror-sw for uploading (Re: Ouput directory other than source directory)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01023"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01023"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Home of WML and other stuff -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 10 Mar 1999 14:42:10 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990310141906.27596A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990310125958.A1245@luna.office.acmedia.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00445">Date Index</a>][<a href="thrd10.shtml#00445">Thread Index</a>]<br>
+[<A HREF="msg00444.shtml">Date Prev</A>][<A HREF="msg00446.shtml">Date Next</A>][<A HREF="msg00444.shtml">Thread Prev</A>][<A HREF="msg00446.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Home of WML and other stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 10 Mar 1999 14:35:31 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 10 Mar 1999, Paul Sponagl wrote:
+
+&gt; Hi,
+&gt; as you're talking of wml-generated sites i want to mention the Site
+&gt; <A  HREF="http://www.freeware.de">http://www.freeware.de</A>.
+&gt; 
+&gt; Heiko, our office neighbor and the maintainer/owner of this Site
+&gt; asked us to help him with the redesign. First we thought of using
+&gt; PHP-Mysql, but then we decided to use WML :-)
+
+Hi, Paul
+what are the name and email of Heiko? I need these to update the
+database.
+
+Concerning your suggestion, you will be unhappy to learn that
+the meta-html &lt;subst-in-page&gt; has disappeared from the development branch
+of WML. I saw no reason to use this tag, and i presume you can perform your
+substitutions with wml_p6_asubst.
+
+On the other hand, this routine can painless be reintroduced, so it will be.
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00446" HREF="msg00446.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="00450" HREF="msg00450.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Paul Sponagl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00444" HREF="msg00444.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Paul Sponagl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00444.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00446.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00444.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00446.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00445"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00445"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

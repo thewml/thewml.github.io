@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: My previous patch... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 3 Nov 1999 15:48:15 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991103154859.6357B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991102133425.A2417@Aramis.kennesaw.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01117">Date Index</a>][<a href="thrd23.shtml#01117">Thread Index</a>]<br>
+[<A HREF="msg01116.shtml">Date Prev</A>][<A HREF="msg01118.shtml">Date Next</A>][<A HREF="msg01116.shtml">Thread Prev</A>][<A HREF="msg01119.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: My previous patch...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 3 Nov 1999 15:57:55 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 2 Nov 1999, Thomas Akin wrote:
+
+&gt; 	I made the change so that if $base was set to a
+&gt; 	directory then the image file would be created as
+&gt; 	$base/filename.imgdot.gif rather than the previous
+&gt; 	$base/.imgdot.gif
+&gt; 
+&gt; 	I'm not sure I understand why it would only apply to
+&gt; 	gfont? Why only gfont?
+
+Because when you create multiple images with gfont, you have to specify
+a unique file name for each string. With other include files (logo,
+imgbg, imgdot) the situation is different. I see no reason to have
+file1.logo-wml.gif file2.logo-wml.gif file3.logo-wml.gif ...
+because all these files are identical, so why not just "logo-wml.gif" ?
+
+So i think the current implementation of these include files is wrong.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01119" HREF="msg01119.shtml">Re: My previous patch...</A></strong>, <em>From:</em> Thomas Akin</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01116" HREF="msg01116.shtml">Re: My previous patch...</A></strong>, <em>From:</em> Thomas Akin</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01116.shtml">Re: My previous patch...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01118.shtml">Re: [RFC] Nested ePerl tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01116.shtml">Re: My previous patch...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01119.shtml">Re: My previous patch...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01117"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01117"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

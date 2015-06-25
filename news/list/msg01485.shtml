@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Implicit variables: Meta&#45;HTML vs. Mp4h -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Tue, 28 Mar 2000 11:00:13 +0200 (MET DST) -->
+<!--X-Message-Id: 200003280847.KAA11510@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01485">Date Index</a>][<a href="thrd30.shtml#01485">Thread Index</a>]<br>
+[<A HREF="msg01484.shtml">Date Prev</A>][<A HREF="msg01486.shtml">Date Next</A>][<A HREF="msg01484.shtml">Thread Prev</A>][<A HREF="msg01490.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Implicit variables: Meta-HTML vs. Mp4h</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Mar 2000 10:47:48 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+The changes from 1.7.x to 1.99.x are not that severe  for
+users, most of the changes are just minor, but there is one
+which I personally think is a pain. Is there really no way
+to solve this in a compatible way?
+
+In <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/README.mp4h">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/README.mp4h</A>
+we find:
+
+There are two cases where ``&lt;get-var i&gt;'' could be replaced
+by ``i'' with Meta-HTML: inside arithmetic expression (e.g. &lt;add
+i j 10&gt;) and array indices (e.g. &lt;get-var foo[i]&gt;). Mp4h does
+not recognize these shortcuts, and &lt;get-var&gt; must be used
+in these cases.
+
+So a &lt;get-var foo[i]&gt; is going to be: &lt;get-var foo[&lt;get-var i&gt;]&gt;
+
+Cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01490" HREF="msg01490.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01484.shtml">[ANNOUNCE] WML 1.99.4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01486.shtml">[1.99.4] BUG REPORT: system(3pl) doesn't return exit value</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01484.shtml">[ANNOUNCE] WML 1.99.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01490.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01485"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01485"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

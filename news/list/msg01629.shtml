@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 27 May 2000 11:25:58 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000527110050.15045A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0005270116370.14337&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01629">Date Index</a>][<a href="thrd34.shtml#01629">Thread Index</a>]<br>
+[<A HREF="msg01628.shtml">Date Prev</A>][<A HREF="msg01630.shtml">Date Next</A>][<A HREF="msg01628.shtml">Thread Prev</A>][<A HREF="msg01630.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 27 May 2000 11:25:51 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+What to do with HTML tags?
+
+Consider
+   &lt;ifneq 0 0 &lt;img src="foo.png"&gt;&gt;
+
+I see 2 ways to parse this expression:
+   a) `&lt;img' is not defined, and thus expanded as a string. So previous
+      expression is
+        &lt;ifneq
+            0              1st attribute
+            0              2nd attr.
+            &lt;img           3rd attr.
+            src="foo.png"  4th attr.
+        &gt;                  end of the `ifneq' tag
+        &gt;
+   b) `&lt;img' is not defined, but is parsed as a valid tag.
+        &lt;ifneq
+            0                    1st attribute
+            0                    2nd attr.
+            &lt;img src="foo.png"&gt;  3th attr.
+        &gt;                        end of the `ifneq' tag
+
+Of course it is possible to make case (a) work by quoting the &lt;img&gt; tag.
+
+WML 2.0.0 implemented case (a), and i quickly switched to case (b)
+in WML 2.0.1 because of the numerous bug reports, which mean either that
+case (a) is not intuitive, or that documentation was unclear.
+
+So it would be nice to have a consensus on this issue.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01630" HREF="msg01630.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="01639" HREF="msg01639.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01628" HREF="msg01628.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01628.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01630.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01628.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01630.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01629"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01629"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

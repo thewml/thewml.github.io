@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: How to do if..then..elsif -->
+<!--X-From-R13: eitNperngb.bet -->
+<!--X-Date: Mon, 20 Aug 2001 11:24:23 +0200 (MET DST) -->
+<!--X-Message-Id: 200108200930.f7K9UMv01586@powai.creato.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02371">Date Index</a>][<a href="thrd48.shtml#02371">Thread Index</a>]<br>
+[<A HREF="msg02370.shtml">Date Prev</A>][<A HREF="msg02372.shtml">Date Next</A>][<A HREF="msg02368.shtml">Thread Prev</A>][<A HREF="msg02372.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>How to do if..then..elsif</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 20 Aug 2001 15:00:22 +0530</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi,
+
+My problem is that I would like to define a WML macro that is modelled as an
+if .. then .. elseif .. else ...
+
+I read the docs at 
+<A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mp4h.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mp4h.html</A>
+but could not find any convenient way of doing this.
+
+I am trying to write a macro to represent a bid in bridge : something
+like &lt;bid 1C&gt; where the legal values for the bid are represented by the
+regexp [1-7][C|D|H|C|NT]
+
+Depending on the bid I would like to show the appropriate suit symbol in the
+output.  I would also like to have a default error handling clause at the 
+end.
+
+Can someone help?
+
+Thanks,
+Rajendra Gokhale (rvg@creato.org)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02372" HREF="msg02372.shtml">RE: How to do if..then..elsif</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02370.shtml">Re: [wml] RE: Creating both frames and non-frames versions of a</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02372.shtml">RE: How to do if..then..elsif</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02368.shtml">Re: Docs on asterisk versions, like &lt;head*&gt; ?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02372.shtml">RE: How to do if..then..elsif</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02371"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02371"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

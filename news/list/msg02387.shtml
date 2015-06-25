@@ -1,0 +1,235 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: configure does not find installed Perl modules -->
+<!--X-From-R13: Pynve Lnwnp <oynveNbepnjner.pbz> -->
+<!--X-Date: Thu, 30 Aug 2001 23:03:25 +0200 (MET DST) -->
+<!--X-Message-Id: 3B8EA9E9.BF001676@orcaware.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02387">Date Index</a>][<a href="thrd48.shtml#02387">Thread Index</a>]<br>
+[<A HREF="msg02386.shtml">Date Prev</A>][<A HREF="msg02388.shtml">Date Next</A>][<A HREF="msg02386.shtml">Thread Prev</A>][<A HREF="msg02389.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>configure does not find installed Perl modules</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Blair Zajac &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Aug 2001 14:02:33 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+When I use WML 2.0.7 configure with the --with-openworld option to
+search for already installed Perl modules that WML needs, it does not
+properly find them.
+
+This happens to me on Perl 5.6.1.  Configure uses the Perl module's
+require_version that comes from Exporter.  This doesn't work on all
+of the modules, such as Bit::Vector 6.0 which is installed in my
+Perl:
+
+% perl -w -e 'require Bit::Vector; Bit::Vector-&gt;require_version(3)'
+Can't locate auto/Bit/Vector/require_ver.al in @INC (@INC contains:
+/opt/i386-linux/installed/perl-5.6.1/lib/5.6.1/i386-linux
+/opt/i386-linux/installed/perl-5.6.1/lib/5.6.1
+/opt/i386-linux/installed/perl-5.6.1/lib/site_perl/5.6.1/i386-linux
+/opt/i386-linux/installed/perl-5.6.1/lib/site_perl/5.6.1
+/opt/i386-linux/installed/perl-5.6.1/lib/site_perl .) at -e line 1
+
+Attached is a patch that uses Perl's normal 'use MODULE_NAME VERSION'
+method with a check to see if the version is ANY.
+
+Best,
+Blair</PRE>
+<PRE>
+diff -ru ../wml-2.0.7-orig/config/aclocal.m4 ./config/aclocal.m4
+--- ../wml-2.0.7-orig/config/aclocal.m4	Sun Jun 17 15:44:29 2001
++++ ./config/aclocal.m4	Thu Aug 30 13:47:01 2001
+@@ -69,12 +69,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require $1;
+-    if ('$2' ne 'ANY') {
+-        $1-&gt;require_version('$2');
+-    }
+-};
++my $string = 'use $1';
++if ('$2' ne 'ANY') {
++    $string .= ' $2';
++}
++$string .= ';';
++eval $string;
+ if ([$]@) {
+     print "failed";
+ } else {
+diff -ru ../wml-2.0.7-orig/configure ./configure
+--- ../wml-2.0.7-orig/configure	Sun Jun 17 15:44:29 2001
++++ ./configure	Thu Aug 30 13:48:02 2001
+@@ -1083,12 +1083,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require Getopt::Long;
+-    if ('2.16' ne 'ANY') {
+-        Getopt::Long-&gt;require_version('2.16');
+-    }
+-};
++my $string = 'use Getopt::Long';
++if ('2.16' ne 'ANY') {
++    $string .= ' 2.16';
++}
++$string .= ';';
++eval $string;
+ if ($@) {
+     print "failed";
+ } else {
+@@ -1111,12 +1111,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require Bit::Vector;
+-    if ('5.2' ne 'ANY') {
+-        Bit::Vector-&gt;require_version('5.2');
+-    }
+-};
++my $string = 'use Bit::Vector';
++if ('5.2' ne 'ANY') {
++    $string .= ' 5.2';
++}
++$string .= ';';
++eval $string;
+ if ($@) {
+     print "failed";
+ } else {
+@@ -1139,12 +1139,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require File::PathConvert;
+-    if ('ANY' ne 'ANY') {
+-        File::PathConvert-&gt;require_version('ANY');
+-    }
+-};
++my $string = 'use File::PathConvert';
++if ('ANY' ne 'ANY') {
++    $string .= ' ANY';
++}
++$string .= ';';
++eval $string;
+ if ($@) {
+     print "failed";
+ } else {
+@@ -1167,12 +1167,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require Image::Size;
+-    if ('2.6' ne 'ANY') {
+-        Image::Size-&gt;require_version('2.6');
+-    }
+-};
++my $string = 'use Image::Size';
++if ('2.6' ne 'ANY') {
++    $string .= ' 2.6';
++}
++$string .= ';';
++eval $string;
+ if ($@) {
+     print "failed";
+ } else {
+@@ -1195,12 +1195,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require IO::File;
+-    if ('1.07' ne 'ANY') {
+-        IO::File-&gt;require_version('1.07');
+-    }
+-};
++my $string = 'use IO::File';
++if ('1.07' ne 'ANY') {
++    $string .= ' 1.07';
++}
++$string .= ';';
++eval $string;
+ if ($@) {
+     print "failed";
+ } else {
+@@ -1223,12 +1223,12 @@
+ TMPFILE=$tmpdir/ac.$$
+ rm -f $TMPFILE
+ cat &gt;$TMPFILE &lt;&lt;'EOT'
+-eval {
+-    require Term::ReadKey;
+-    if ('2.11' ne 'ANY') {
+-        Term::ReadKey-&gt;require_version('2.11');
+-    }
+-};
++my $string = 'use Term::ReadKey';
++if ('2.11' ne 'ANY') {
++    $string .= ' 2.11';
++}
++$string .= ';';
++eval $string;
+ if ($@) {
+     print "failed";
+ } else {
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02389" HREF="msg02389.shtml">Re: configure does not find installed Perl modules</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02386.shtml">Re: Documentation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02388.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02386.shtml">Re: Documentation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02389.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02387"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02387"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

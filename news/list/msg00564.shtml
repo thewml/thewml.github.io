@@ -1,0 +1,184 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUGREPORT: Umlaute in gfont -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Mon, 12 Apr 1999 09:34:53 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990412090633.730A&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00564">Date Index</a>][<a href="thrd13.shtml#00564">Thread Index</a>]<br>
+[<A HREF="msg00563.shtml">Date Prev</A>][<A HREF="msg00565.shtml">Date Next</A>][<A HREF="msg00562.shtml">Thread Prev</A>][<A HREF="msg00565.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUGREPORT: Umlaute in gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Apr 1999 09:34:37 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello! 
+Sorry I could not manage wmb,
+so this a non conformistic bug-report
+
+PROBLEM DESCRIPTION:
+
+it's crazy! 
+
+I use gfont to generate Headlines in this way:
+
+in template.wml:
+&lt;define-tag kapitelname&gt; 
+&lt;gfont face=CMRoman size=2 color=#000000&gt;%0&lt;/gfont&gt; 
+&lt;/define-tag&gt;
+
+in the text-file inside a lang-environment &lt;de&gt;:
+&lt;kapitelname "HEADLINE"&gt;
+
+When I use no Umlaut, everything works fine.
+When I use a o-Umlaut it works,
+but with a- and u-Umlaut the PASS 3 fails as mentioned.
+
+When I use the A-Umlaut I get a "broken" image.
+
+When I use the O-Umlaut gfont never stopps and uses all the
+CPU-resources.
+
+I did not tried the U-Umlaut. 
+
+This is my teTex-config:
+
+binaries found by searching $PATH
+tex:  /opt/teTeX/bin/i586-pc-linux-gnulibc1/tex
+etex:  /opt/teTeX/bin/i586-pc-linux-gnulibc1/etex 
+pdftex: /opt/teTeX/bin/i586-pc-linux-gnulibc1/pdftex 
+omega: /opt/teTeX/bin/i586-pc-linux-gnulibc1/omega 
+mf: /opt/teTeX/bin/i586-pc-linux-gnulibc1/mf 
+mpost: /opt/teTeX/bin/i586-pc-linux-gnulibc1/mpost 
+dialog: /usr/bin/dialog
+dvips:  /opt/teTeX/bin/i586-pc-linux-gnulibc1/dvips 
+xdvi: /opt/teTeX/bin/i586-pc-linux-gnulibc1/xdvi 
+kpsewhich: /opt/teTeX/bin/i586-pc-linux-gnulibc1/kpsewhich 
+mktexpk: /opt/teTeX/bin/i586-pc-linux-gnulibc1/mktexpk 
+mktextfm: /opt/teTeX/bin/i586-pc-linux-gnulibc1/mktextfm
+
+Kpathsea variables
+TEXMF=/opt/teTeX/share/texmf
+TEXMFMAIN=/opt/teTeX/share/texmf
+
+environment variables (ok if no output here)
+
+PLATFORM CHARACTERISTICS:  Used WML System:  Built Environment: 
+    Host: i586-pc-linux-gnu
+    Perl: 5.004_03 (/usr/bin/perl) 
+    User: juh@hasecke.hasecke
+    Date: 15-Jan-1999 Built Location: 
+    Prefix: /opt/wml
+    BinDir: /opt/wml/bin  
+ LibDir: /opt/wml/lib
+    ManDir: /opt/wml/man
+
+Used Perl System:  Summary of my perl5 (5.0 patchlevel 4 subversion 3)
+configuration: 
+  Platform: 
+    osname=linux, osvers=2.0.33, archname=i386-linux
+    uname='linux buildmeister.caldera.com 2.0.33 #1 thu mar 12
+20:36:04 mst 1998
+ i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler: 
+    cc='cc', optimize='-O6 -m486 -fomit-frame-pointer -pipe',
+gccversion=2.7.2.3
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, randbits=31
+  Linker and Libraries: 
+    ld='cc', ldflags =''
+    libpth=/lib /usr/lib
+    libs=-lgdbm -ldb -ldl -lm -lc      
+ libc=/lib/libc.so.5.4.38, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking: 
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef,
+ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared'
+
+Characteristics of this binary (from libperl): 
+  Locally applied patches: 
+        COL_SECURITY1 - 'perl -e'-tmp-race fix (by Theo de Raadt/Todd
+Miller) 
+  Built under linux
+  Compiled at Mar 20 1998 09:33:50
+  @INC: 
+    /usr/lib/perl5/i386-linux/5.00403
+    /usr/lib/perl5
+    /usr/lib/perl5/site-perl/i386-linux
+    /usr/lib/perl5/site-perl
+    .                          
+
+What did I wrong?
+
+Ciao!
+juh
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00565" HREF="msg00565.shtml">Re: BUGREPORT: Umlaute in gfont</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00563.shtml">Re: bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00565.shtml">Re: BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00562.shtml">Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00565.shtml">Re: BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00564"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00564"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

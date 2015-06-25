@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML as a top&#45;down replacement for XSLT -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 10 May 2002 11:20:34 +0200 (MET DST) -->
+<!--X-Message-Id: 20020510093044.GA22727@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.33L2.0205090807490.21705&#45;100000@vipe.technion.ac.il -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02604">Date Index</a>][<a href="thrd53.shtml#02604">Thread Index</a>]<br>
+[<A HREF="msg02603.shtml">Date Prev</A>][<A HREF="msg02605.shtml">Date Next</A>][<A HREF="msg02602.shtml">Thread Prev</A>][<A HREF="msg02606.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML as a top-down replacement for XSLT</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 10 May 2002 11:30:44 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, May 09, 2002 at 08:10:39AM +0300, Shlomi Fish wrote:
+&gt; 
+&gt; Would it be eventually possible to use WML as a top-down replacement for
+&gt; XSLT? XSLT seems very awkward to work with, and I actually like WML. Is
+&gt; the next version of WML going to be made more compliant with XML, so it
+&gt; would be possible?
+&gt; 
+&gt; For the time being, I may need to use DocBook XML with either DSSSL or
+&gt; XSLT. Both will require some tweaking to manage, and neither seem too
+&gt; straightforward to work with.
+
+Hi,
+
+indeed WML must be able to process XML files.  Anders Dinsen already
+had a similar request, and we implemented some features in recent mp4h
+versions.
+There are several problems:
+  * Encoding.
+    I am not sure that all WML passes accept UTF-8 input, and even if so
+    I heard Perl support was far from perfect.  (Is it still true?)
+  * Elements and attributes.
+    WML should not have problems with elements from XML files.  But
+    many mp4h primitives have a non-XML syntax and thus most macros in
+    WML include files are not XML compliant.  I am reluctant to change
+    them in order not to break backward compatibility, and because
+    a strict XML compliance would make code looks like XSLT ;)
+  * Entities.
+    Entity support is minimal (see mp4h manpage) and should follow XML
+    standard more closely.  
+  * Other XML constructs are not processed.
+
+So if your pages only contain XML data, and processing instructions have
+been put in separate files, I believe that WML could be used as an XML
+processor.  You ``only'' have to write Makefiles and/or .wmkrc files,
+and some macros.  I am interested in helping you to see how difficult
+it is.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02602" HREF="msg02602.shtml">WML as a top-down replacement for XSLT</A></strong>, <em>From:</em> Shlomi Fish</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02603.shtml">Re: Template tarball</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02605.shtml">Re: Template tarball</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02602.shtml">WML as a top-down replacement for XSLT</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02606.shtml">WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02604"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02604"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

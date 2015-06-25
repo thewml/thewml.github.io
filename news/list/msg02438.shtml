@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Include problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 19 Nov 2001 12:04:32 +0100 (MET) -->
+<!--X-Message-Id: 20011119121447.A24162@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011119112639.C18325@fedro.lettere.unipd.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02438">Date Index</a>][<a href="thrd49.shtml#02438">Thread Index</a>]<br>
+[<A HREF="msg02437.shtml">Date Prev</A>][<A HREF="msg02439.shtml">Date Next</A>][<A HREF="msg02437.shtml">Thread Prev</A>][<A HREF="msg02439.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Include problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 19 Nov 2001 12:14:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Nov 19, 2001 at 11:26:39AM +0100, Alvise Belotti wrote:
+&gt; Hi all,
+&gt; I hope my bad english will be understandable.
+&gt; 
+&gt; I have a problem with include files. 
+&gt; 
+&gt; Basically I want include a file -if it exist- otherwise include a
+&gt; default file
+&gt; #include file.inc (if it exist) else include default.inc
+&gt; (the name of the file to be included has to be defined run-time)
+&gt; 
+&gt; &gt;From wml_p1_ipp
+&gt; 
+&gt; $(name:-string)
+&gt; `Use Default String': The standard interpolation with
+&gt; a default value.
+&gt; 
+&gt;  if (exists(name))
+&gt;      expandto(valueof(name))
+&gt;  else
+&gt;      expandto(string)
+&gt; But
+&gt; 
+&gt; #include "$($(WML_SRC_BASENAME).inc:-default.inc)"
+&gt; 
+&gt; include default.inc all the time (also if $(WML_SRC_BASENAME).inc
+&gt; exist)
+&gt; It seems $(WML_SRC_BASENAME).inc inside $(name:-string) will be expanded 
+&gt; to nothing.
+&gt; 
+&gt; what i am doing wrong, here?
+
+Hi Alvise,
+
+here is how wml_p1_ipp works with your example, assuming input file
+is `foo.wml':
+  0: #include "$($(WML_SRC_BASENAME).inc:-default.inc)"
+  1: #include "$(foo.inc:-default.inc)"
+  2: #include "default.inc"
+  3: file default.inc included
+
+Step 1-&gt;2 is done this way because the foo.inc _variable_ (and not file)
+is not defined.
+
+The only solution to your problem is to pass filename via a variable to
+your file.
+
+A smarter solution would be to add a parameter to the #include scheme to
+prevent wml_p1_ipp from aborting, then define a variable in this file
+and conditionnally include default.inc if this variable is not set.
+Example:
+   #include "foo.inc" IPP_NOABORT
+   $(HAVE_FOO_INC:+# )$(HAVE_FOO_INC:*#)include "default.inc"
+and add $(HAVE_FOO_INC=1) at top of foo.inc.
+I will implement the IPP_NOABORT parameter soon, sounds like a good idea.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02439" HREF="msg02439.shtml">Re: Include problem</A></strong>, <em>From:</em> Alvise Belotti</li>
+<li><strong><A NAME="02440" HREF="msg02440.shtml">Re: Include problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02437" HREF="msg02437.shtml">Include problem</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02437.shtml">Include problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02439.shtml">Re: Include problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02437.shtml">Include problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02439.shtml">Re: Include problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02438"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02438"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

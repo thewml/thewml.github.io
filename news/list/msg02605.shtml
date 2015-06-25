@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Template tarball -->
+<!--X-From-R13: Oyrknaqre Zrvqvatre <OyrknaqreNZrvqvatre.arg> -->
+<!--X-Date: Sun, 12 May 2002 18:42:24 +0200 (MET DST) -->
+<!--X-Message-Id: 200205121224.g4CCOE4F002955@Magelan.Leidinger.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020509114313.A2630@bangel.demon.co.uk -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02605">Date Index</a>][<a href="thrd53.shtml#02605">Thread Index</a>]<br>
+[<A HREF="msg02604.shtml">Date Prev</A>][<A HREF="msg02606.shtml">Date Next</A>][<A HREF="msg02603.shtml">Thread Prev</A>][<A HREF="msg02602.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Template tarball</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alexander Leidinger &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 May 2002 14:24:14 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On  9 Mai, William Morris wrote:
+
+&gt;&gt; &gt; Also, I don't see a Makefile.  I know that wmk exists, but is standard
+&gt;&gt; &gt; make not used in the build process?
+&gt;&gt; .wmkrc is what you search, but if you would read the man-page first....
+&gt; 
+&gt; I was really refering to the explicit use of make in addition to wmk.
+&gt; For example, it would be nice to "make clean" or "make depend" as
+&gt; one might in a C source tree.  Alternatively it would be nice to
+&gt; generate the html files and the images in a separate directory (tree)
+&gt; so that the source tree remains clean.  I thought 'make' might be in
+&gt; normal use to this end.
+
+At <A  HREF="http://www.leidinger.net/FreeBSD/scripts/wml:Makefile.inc">http://www.leidinger.net/FreeBSD/scripts/wml:Makefile.inc</A> I have a
+small framework for POSIX make (it doesn't work with GNU make) which
+handles "make" and "make clean" (for my own files). It should be very
+easy to add support to keep the source tree clean. Maybe it's of use for
+you.
+
+Bye,
+Alexaander.
+
+-- 
+                  Weird enough for government work.
+
+<A  HREF="http://www.Leidinger.net">http://www.Leidinger.net</A>                       Alexander @ Leidinger.net
+  GPG fingerprint = C518 BC70 E67F 143F BE91  3365 79E2 9C60 B006 3FE7
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02603" HREF="msg02603.shtml">Re: Template tarball</A></strong>, <em>From:</em> William Morris</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02604.shtml">Re: WML as a top-down replacement for XSLT</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02606.shtml">WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02603.shtml">Re: Template tarball</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02602.shtml">WML as a top-down replacement for XSLT</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02605"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02605"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: A question [FWD] -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sat, 8 Aug 1998 16:44:03 +0200 (CEST) -->
+<!--X-Message-Id: 19980808164401.A20368@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00183">Date Index</a>][<a href="thrd5.shtml#00183">Thread Index</a>]<br>
+[<A HREF="msg00182.shtml">Date Prev</A>][<A HREF="msg00184.shtml">Date Next</A>][<A HREF="msg00192.shtml">Thread Prev</A>][<A HREF="msg00184.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>A question [FWD]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 Aug 1998 16:44:01 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Forward of mail because it was posted not from the address
+the poster is subscribed to sw-wml.
+
+----- Forwarded message from owner-sw-wml@engelschall.com -----
+From: "Geir Eivind Mork" &lt;drmoijk@online.no&gt;
+To: "sw-wml@engelschall.com" &lt;sw-wml@engelschall.com&gt;
+Date: Sat, 08 Aug 1998 15:34:39 +0200
+Reply-To: "Geir Eivind Mork" &lt;drmoijk@online.no&gt;
+Priority: Normal
+X-Mailer: PMMail 98 Standard (2.01.1600) For Windows NT (4.0.1381;3)
+MIME-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Subject: A question
+
+What do I need to do or miss? 
+
+[15:17][p3/9][/var/db/pkg] # wml      
+/usr/libexec/ld.so: warning: /usr/lib/libc.so.3.0: minor version 0 older than expected 1, using it anyway
+Can't load '/usr/local/lib/wml/perl/lib/site_perl/i386-freebsd/auto/IO/IO.so' for module IO: Undefined symbol 
+"_Perl_stack_base" 
+in perl:/usr/local/lib/wml/perl/lib/site_perl/i386-freebsd/auto/IO/IO.so at 
+/usr/local/lib/perl5/5.00501/i386-freebsd/DynaLoader.pm line 168.
+
+ at /usr/local/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /usr/local/bin/wml line 55.
+
+-- -  -
+Geir Eivind Mork - drmoijk@online.no - <A  HREF="http://home.sol.no/~drmoijk">http://home.sol.no/~drmoijk</A>
+----- End forwarded message -----
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00184" HREF="msg00184.shtml">Re: A question [FWD]</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00182.shtml">RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00184.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00192.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00184.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00183"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00183"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

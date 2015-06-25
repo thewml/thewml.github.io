@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] ideas on multi site maintnance -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 16 Jul 2001 12:56:31 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.33.0107161253080.6576&#45;100000@nova.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15LdHx&#45;0000my&#45;00@braindead.automatedproperties.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02299">Date Index</a>][<a href="thrd46.shtml#02299">Thread Index</a>]<br>
+[<A HREF="msg02298.shtml">Date Prev</A>][<A HREF="msg02300.shtml">Date Next</A>][<A HREF="msg02298.shtml">Thread Prev</A>][<A HREF="msg02300.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] ideas on multi site maintnance</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 16 Jul 2001 12:55:19 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+You could use
+
+$(BINDIR)/contact.html
+
+and define $BINDIR in the site-specific .wmlrc file:
+
+-DBINDIR~what_ever_place_you_want
+
+Cheers,
+Fritz
+
+On Sun, 15 Jul 2001, Warren Turkal wrote:
+
+&gt; I must be retarded. :)
+&gt; Oh well, I have another problem revolving around the same idea though.
+&gt; Each of my sites has a cgi-bin script that handles mailing forms.  When
+&gt; this script is called there is a hidden form element that tells it
+&gt; where to return to after submitting the form.  It is currently defined
+&gt; as ../contact.html which works for my sites that have contact.html in
+&gt; the root.  I also have sites that are multilevel (a business with
+&gt; multiple locations each with a different directory storing its location
+&gt; specific site).  These site need to have the return thing set to
+&gt; ../(sitedir)/
+&gt;
+&gt; On Friday 13 July 2001 09:56, you wrote:
+&gt; &gt; How about symbolic links into the various trees and then a Makefile
+&gt; &gt; that calls wmk -a on the various trees.
+&gt; &gt;
+&gt; &gt; This would seem the easiest way to deal with possible variations in
+&gt; &gt; templates etc for the various sites.
+&gt; &gt;
+&gt; &gt; Cheers,
+&gt; &gt; Fritz
+&gt; &gt;
+&gt; &gt; On Thu, 12 Jul 2001, Warren Turkal wrote:
+&gt; &gt; &gt; How would a person have some sites where some of the pages are
+&gt; &gt; &gt; generated from the same .wml files without copying the .wml files
+&gt; &gt; &gt; all over.  I would like it so that when I type wmk -a it would
+&gt; &gt; &gt; rebuild the files for each site.
+&gt; &gt; &gt; ___________________________________________________________________
+&gt; &gt; &gt;___ Website META Language (WML)
+&gt; &gt; &gt; www.engelschall.com/sw/wml/ Official Support Mailing List
+&gt; &gt; &gt;         sw-wml@engelschall.com Automated List Manager
+&gt; &gt; &gt;         majordomo@engelschall.com
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt;
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, CH-8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://people.ee.ethz.ch/~zaucker/">http://people.ee.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02298" HREF="msg02298.shtml">Re: [wml] ideas on multi site maintnance</A></strong>, <em>From:</em> Warren Turkal</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02298.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02300.shtml">BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02298.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02300.shtml">BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02299"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02299"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: 1.99.3 &#45; mp4h ERROR EOF when reading body of the `h1' tag -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Sun, 2 Apr 2000 14:08:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0003221257180.6683&#45;100000@mandrake.box.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01503">Date Index</a>][<a href="thrd31.shtml#01503">Thread Index</a>]<br>
+[<A HREF="msg01501.shtml">Date Prev</A>][<A HREF="msg01509.shtml">Date Next</A>][<A HREF="msg01501.shtml">Thread Prev</A>][<A HREF="msg01511.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>1.99.3 - mp4h ERROR EOF when reading body of the `h1' tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 22 Mar 2000 13:15:29 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+	Hi.
+
+	I sent this bug report 2 days ago using wmb, but it looks like
+	it disappeared 'in the endless cyberspace' .-)
+
+	Here it is again:
+
+	I have two wml sites, both working fine in wml 1.6.9-1.7.4
+
+	Now with 1.99.3 I'm getting the following error in both
+	projects:
+
+{mandrake}[kravate]$ ../bin/wmk 
+/home/davor/wml/bin/wml -n -o '(ALL-LANG_*)uLANG_HR:croata1_hr.html' -o '(ALL-LANG_*)uLANG_EN:croata1_en.html' croata1.wml
+/home/davor/wml/lib/exec/wml_p2_mp4h: ERROR:/tmp/wml.6740.tmp2.wml:2386: EOF when reading body of the `h1' tag
+** WML:Break: Error in Pass 2 (rc=1).
+** WMk:Break: Error in WML (rc=256)
+
+	I can mail the smaller site (5-6 files) if that could help
+	solving the problem, just tell me where (not in the group, of
+	course).
+
+	BTW; wml-1.99.3 compiled and test-compiled without any errors,
+	on very standard Mandrake 6.1 (perl-5.00503-4mdk,
+	pgcc-*-1.1.3-3.mdk)
+-- 
+      v
+Davor Cengija
+davor@linuxfan.com
+============================
+"Nicht in die Augen bringen"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01501.shtml">suggestion for wmb (bug reporting tool)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01509.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01501.shtml">suggestion for wmb (bug reporting tool)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01511.shtml">[BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181-17 sun4u sparc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01503"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01503"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

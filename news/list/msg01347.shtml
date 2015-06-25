@@ -1,0 +1,161 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 8 Feb 2000 18:45:33 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000208175423.19856A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200002052213.XAA24632@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01347">Date Index</a>][<a href="thrd28.shtml#01347">Thread Index</a>]<br>
+[<A HREF="msg01346.shtml">Date Prev</A>][<A HREF="msg01349.shtml">Date Next</A>][<A HREF="msg01346.shtml">Thread Prev</A>][<A HREF="msg01358.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 8 Feb 2000 18:52:21 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 5 Feb 2000 erich.schubert@gmx.de wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.4 (Debian Revision 4)
+&gt; Operating System: Debian GNU/Linux potato
+&gt; 
+&gt; Problem Description:
+&gt; | Known Bug, i think:
+&gt; | WML is stripping Spaces after closing Tags.
+&gt; | This can be _very_ annoying especially after
+&gt; | &lt;/A&gt; Tags...
+&gt; | I'm using -O4
+
+Indeed this is a known bug, but i forgot to put it on my TODO list.
+Could you tell me whether the patch below fixes this problem?
+You may apply it against wml_p8_htmlstrip as well.
+
+--- htmlstrip.src	1999/06/09 19:15:24	1.2
++++ htmlstrip.src	2000/02/08 17:45:03
+@@ -89,7 +89,7 @@
+ #   Strip Plain Text, i.e. outside of any 
+ #   preformatted area and outside any HTML tag.
+ sub StripPlainText {
+-    my ($buf) = @_;
++    my ($before, $after, $buf) = @_;
+ 
+     #   Level 0
+     #if ($opt_O &gt;= 0) {
+@@ -109,7 +109,19 @@
+     #   Level 3
+     if ($opt_O &gt;= 3) {
+         #   strip leading whitespaces
+-        $buf =~ s|^\s+||mg;
++        if ($after) {
++            $buf =~ s|^\s+| |mg;
++        }
++        else {
++            $buf =~ s|^\s+||mg;
++        }
++        #   strip trailing whitespaces
++        if ($before) {
++            $buf =~ s|\s+$||mg;
++        }
++        else {
++            $buf =~ s|\s+$| |mg;
++        }
+     }
+     #   Level 4
+     if ($opt_O &gt;= 4) {
+@@ -248,15 +260,20 @@
+ 
+ sub StripNonPreformatted {
+     my ($I) = @_;
+-    my ($O);
++    my ($O, $L, $T, $A, $B);
+ 
+     $O = '';
++    $B = 0;
+     while ($I =~ m|^(.*?)(&lt;.+?&gt;)(.*)$|s) {
+         $I = $3;
+-        $O .= &amp;StripPlainText($1);
+-        $O .= &amp;StripHTMLTag($2);
++        $L = $1;
++        $T = $2;
++        $A = $B;
++        $B = ($2 =~ m|^&lt;/| ? 1 : 0);
++        $O .= &amp;StripPlainText($B, $A, $L);
++        $O .= &amp;StripHTMLTag($T);
+     }
+-    $O .= &amp;StripPlainText($I);
++    $O .= &amp;StripPlainText(0, $B, $I);
+     return $O;
+ }
+ 
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01358" HREF="msg01358.shtml">Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux</A></strong>, <em>From:</em> erich.schubert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01346" HREF="msg01346.shtml">[BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato</A></strong>, <em>From:</em> erich.schubert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01346.shtml">[BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01349.shtml">A few questions on using wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01346.shtml">[BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01358.shtml">Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01347"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01347"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

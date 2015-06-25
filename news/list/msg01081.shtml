@@ -1,0 +1,246 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: New WML feature for pass 6 &#45; Area Substitution (patch) -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Thu, 21 Oct 1999 08:15:38 +0200 (MET DST) -->
+<!--X-Message-Id: 19991020165406.A18563@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01081">Date Index</a>][<a href="thrd22.shtml#01081">Thread Index</a>]<br>
+[<A HREF="msg01080.shtml">Date Prev</A>][<A HREF="msg01082.shtml">Date Next</A>][<A HREF="msg01080.shtml">Thread Prev</A>][<A HREF="msg01083.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>New WML feature for pass 6 - Area Substitution (patch)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Oct 1999 16:54:06 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Name: wml174.p6.patch
+WML Version: WML 1.7.4
+Patch Author: Thomas Akin
+
+
+Applying the patch:
+
+	 1) copy the patch to your wml-1.7.4 directory
+
+	 2) delete everything up to and including the line
+	    ------- &lt;cut here&gt; -------------------
+         
+         3) run 'patch -b -p1 &lt; patchfilename'
+            where "patchfilename" is the name of the patch file. 
+	
+
+Function:
+
+	This patch adds a new tag pair called 
+	&lt;noasub&gt; ... &lt;/noasub&gt;. Anything within these tags will be
+	ignored by pass 6 the Area Substitution pass.
+
+Why:
+
+	This patch was developed because I needed it :)
+
+	Here was the problem... I have a site template which contains
+	something similar to
+
+	{:
+	[[s|(data.here)|&lt;a href="data-here.html"&gt;$1&lt;/a&gt;|igs]]
+	[[s|(other.data)|&lt;a href="other-data.html"&gt;$1&lt;/a&gt;igs]]
+	etc...
+
+	&lt;&lt;BODY&gt;&gt;
+
+	:}
+
+	That way I have key phrases that are automatically substituted
+	anywhere in my entire site. But, there are certain locations
+	where I only want part of the body substituted. For example,
+	when I rendered a table of contents using the &lt;toc&gt; tag it was
+	not only marking up the data below the TOC, but also any
+	matching phrases in the TOC. I had links within links.
+
+	Having to place individual {: :} blocks in each page that I
+	only wanted partially substituted seemed extremely tedious. I
+	needed a way to tell pass 6 to ignore certain areas of
+	data. Hence the &lt;noasub&gt; ... &lt;/noasub&gt; tags.
+
+Details:
+
+	Anything located inside the tags &lt;noasub&gt; .... &lt;/noasub&gt; is
+	ignored by pass 6. It deals nicely with nested tags by simply
+	removing and ignoring any nested &lt;noasub&gt; .... &lt;/noasub&gt; tags.
+	The &lt;noasub&gt; and &lt;/noasub&gt; tags are removed after the last
+	area substitution pass.
+
+Example:
+	
+	The wml code:
+
+	  {:
+	  [[s|(home.page)|&lt;a href="index.html"&gt;$1&lt;/a&gt;|igs]]
+
+	  See my home page when you get a chance!
+
+	  &lt;noasub&gt;
+	  My brother is also working on a home page. Watch for it soon.
+	  &lt;/noasub&gt;
+
+	  }:
+
+	Renders:
+
+	  See my &lt;a href="index.html"&gt;home page&lt;/a&gt; when you get a chance!
+	  My brother is also working on a home page. Watch for it soon.
+	
+
+That's it.... Let me know if you find this useful or have any
+questions...  Denis, any chance of this making it into the next
+release? I have found this tag extremely useful and it seems a logical
+extension to pass 6...
+
+
+Thanks,
+
+
+Thomas
+---------------------------------------------------------------
+Thomas Akin                       Kennesaw State University
+Networking Instructor             Continuing Education
+CNX, CSA, ICS                     1000 Chastain Road
+takin@kennesaw.edu                Kennesaw, GA 30144-5591
+---------------------------------------------------------------
+
+
+------- &lt;cut here&gt; -------------------
+
+Index: wml-1.7.4/wml_backend/p6_asubst/asubst.src
+*** wml-1.7.4.1/wml_backend/p6_asubst/asubst.src	Tue Jan 12 09:24:25 1999
+--- wml-1.7.4/wml_backend/p6_asubst/asubst.src	Tue Oct 19 18:38:40 1999
+***************
+*** 223,231 ****
+      $str =~ s|\[\[(s(.)[^\2]+?\2[^\2]*?\2[igosme]*?)\]\]|push(@SCMD, $1), ''|sge;
+      $str =~ s|\[\[(tr(.)[^\2]+?\2[^\2]+?\2[igosme]*?)\]\]|push(@SCMD, $1), ''|sge;
+      foreach $scmd (@SCMD) {
+!         eval "\$str =~ $scmd;";
+      }
+      return $str;
+  }
+  sub cnvpost {
+      my ($str, $level) = @_;
+--- 223,277 ----
+      $str =~ s|\[\[(s(.)[^\2]+?\2[^\2]*?\2[igosme]*?)\]\]|push(@SCMD, $1), ''|sge;
+      $str =~ s|\[\[(tr(.)[^\2]+?\2[^\2]+?\2[igosme]*?)\]\]|push(@SCMD, $1), ''|sge;
++ 
++ 
++     my $outstr;
++     my $tmpstr;
+      foreach $scmd (@SCMD) {
+! 		
+!         $outstr = '';
+!         # Lets tear apart $str and build an asubbed $outstr
+!         while ($str ne '') {
+!             # If we don't have any &lt;noasub&gt; tags mark up and were done.
+!             if ($str !~ m|&lt;noasub&gt;|is) {
+!                 eval "\$str =~ $scmd;";
+!                 $outstr .= $str;
+!                 $str = '';
+!             } else {
+!                 # We strip out any begging text and asub it
+!                 # Making sure to leave in the &lt;noasub&gt; tag
+!                 $str =~ s|^(.*?)&lt;noasub&gt;|&lt;noasub&gt;|is;
+!                 $tmpstr = $1;
+!                 eval "\$tmpstr =~ $scmd;";
+!                 $outstr .= $tmpstr;
+! 		
+!                 # Now we find the smallest &lt;noasub&gt;...&lt;/noasub&gt; block
+!                 $str =~ s|&lt;noasub&gt;(.*?)&lt;/noasub&gt;||is;
+!                 $tmpstr = $1;
+! 		
+!                 # If there are no nested tags we add this to our
+!                 # $outstr not marked up.
+!                 if ($tmpstr !~ m|&lt;noasub&gt;|is) {
+!                     $outstr .= "&lt;noasub&gt;$tmpstr&lt;/noasub&gt;";
+! 		    
+!                 # Else we have to deal with the nested tags...
+!                 } else {
+!                     # Get rid of nested &lt;noasub&gt; tag.
+!                     $tmpstr =~ s|&lt;noasub&gt;||is;
+!                     # Rebuild $str
+!                     $str = "&lt;noasub&gt;$tmpstr$str";
+!                 }
+!             }    
+!         }
+! 	# Reset $str 
+!         $str = $outstr;
+      }
++     # Now strip out all of the &lt;noasub&gt; tags
++     $str =~ s|&lt;noasub&gt;||isg;
++     $str =~ s|&lt;/noasub&gt;||isg;
++     
++     # and finally return... :)
+      return $str;
+  }
++ 
+  sub cnvpost {
+      my ($str, $level) = @_;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01083" HREF="msg01083.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01080.shtml">Re: Perl-Errors when LANG=de in .bashrc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01082.shtml">New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01080.shtml">Re: Perl-Errors when LANG=de in .bashrc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01083.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01081"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01081"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

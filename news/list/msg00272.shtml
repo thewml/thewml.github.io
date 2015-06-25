@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Frames -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Thu, 10 Dec 1998 19:03:11 +0100 (CET) -->
+<!--X-Message-Id: 199812101654.IAA26713@seer.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199812091841.KAA09727@seer.surefirev.com -->
+<!--X-Reference: 98121009111102.00486@apogee.aponet.priv -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00272">Date Index</a>][<a href="thrd6.shtml#00272">Thread Index</a>]<br>
+[<A HREF="msg00271.shtml">Date Prev</A>][<A HREF="msg00273.shtml">Date Next</A>][<A HREF="msg00271.shtml">Thread Prev</A>][<A HREF="msg00277.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Frames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 10 Dec 1998 08:54:40 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Jan Holler writes:
+ &gt; On Wed, 09 Dec 1998, Michael McNamara wrote:
+ &gt; &gt;	I am wondering is if I can get the automatic java script
+ &gt; &gt;changing of navbar gifs from the 'normal' to 'over' to 'selected'
+ &gt; &gt;features, but cause the effect of selecting a menu item be to load a
+ &gt; &gt;url into another frame.
+ &gt; 
+ &gt; i use my own tag-definitions and some variables with templates
+ &gt; to solve this. it's working, but is not very portable. i have to modify the
+ &gt; include files for every new site, but then i get exactly what i want.
+ &gt; see <A  HREF="http://www.snf.ch/nfp42/">http://www.snf.ch/nfp42/</A>  (it's a very academic site, at the moment 
+ &gt; german only, but prepared for multi-language-support).
+ &gt; it's my second project fully based on WML, so the code is
+ &gt; not very sophisticated and probably hard to read. but let me know 
+ &gt; if you want to see it anyway.
+ &gt; 
+
+	Yes I'd love to see it; it seems you've done exactly what I
+want to do: menus using navbars for major navigation, and then frames
+for selecting the various publications.
+
+	Vis a vis your previous question: I think sharing the 'source'
+for various web pages is a useful way for us to learn good use of
+variables and such.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00277" HREF="msg00277.shtml">Re: Frames</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00268" HREF="msg00268.shtml">Re: Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+<li><strong><A NAME="00271" HREF="msg00271.shtml">Re: Frames</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00271.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00273.shtml">Re: Blank lines (once more)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00271.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00277.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00272"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00272"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

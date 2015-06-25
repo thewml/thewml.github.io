@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: vim syntax file? -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Wed, 27 Jan 1999 11:38:45 +0100 (CET) -->
+<!--X-Message-Id: 19990127111044.A3160@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990125103551.A7643@skater.htu.tuwien.ac.at -->
+<!--X-Reference: 19990125140246.A14583@engelschall.com -->
+<!--X-Reference: 19990127084450.A23801@skater.htu.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00373">Date Index</a>][<a href="thrd8.shtml#00373">Thread Index</a>]<br>
+[<A HREF="msg00372.shtml">Date Prev</A>][<A HREF="msg00374.shtml">Date Next</A>][<A HREF="msg00372.shtml">Thread Prev</A>][<A HREF="msg00375.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: vim syntax file?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Jan 1999 11:10:44 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jan 27, 1999 at 08:44:50AM +0000, Gerfried Fuchs wrote:
+&gt;  Could it be possible that the output of "wml --help" isn't sent to
+&gt; STDERR but to STDOUT for it doesn't really seem like an error-message to
+&gt; me and I'm used to pipe that messages to my pager  ;)
+
+I disagree, help messages should be outputted to STDERR.
+You can view that in your pager anyway with
+"wml --help |&amp; less" or "wml --help 2&gt;&amp;1 |less" depending on your shell.
+
+CU,
+    Sec
+-- 
+"Computers make very fast, very accurate, mistakes."
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00375" HREF="msg00375.shtml">emacs mode</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00366" HREF="msg00366.shtml">vim syntax file?</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00368" HREF="msg00368.shtml">Re: vim syntax file?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00372" HREF="msg00372.shtml">Re: vim syntax file?</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00372.shtml">Re: vim syntax file?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00374.shtml">[BUG REPORT] WML 1.6.8, Digital (DEC) OSF/1 4.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00372.shtml">Re: vim syntax file?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00375.shtml">emacs mode</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00373"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00373"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

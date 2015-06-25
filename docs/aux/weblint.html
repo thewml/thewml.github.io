@@ -1,0 +1,1019 @@
+<HTML><HEAD><TITLE>Manpage of weblint \*(wV</TITLE>
+</HEAD><BODY>
+<H1>weblint \*(wV</H1>
+Section: Misc. Reference Manual Pages (1L)<BR>Updated: August 97<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+
+
+
+
+
+
+
+
+
+
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+weblint - pick fluff off web pages (HTML)
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>weblint</B>
+
+
+[
+<B>-d </B><I>id</I>
+
+
+
+]
+
+
+[
+<B>-e </B><I>id</I>
+
+
+
+]
+
+
+[
+<B>-f </B><I>filename</I>
+
+
+
+]
+
+
+[
+<B>-i </B><I></I>
+
+
+
+]
+
+
+[
+<B>-l </B><I></I>
+
+
+
+]
+
+
+[
+<B>-s </B><I></I>
+
+
+
+]
+
+
+[
+<B>-stderr </B><I></I>
+
+
+
+]
+
+
+[
+<B>-t </B><I></I>
+
+
+
+]
+
+
+[
+<B>-todo </B><I></I>
+
+
+
+]
+
+
+[
+<B>-help </B><I></I>
+
+
+
+]
+
+
+[
+<B>-U </B><I></I>
+
+
+
+]
+
+
+[
+<B>-urlget </B><I>command</I>
+
+
+
+]
+
+
+[
+<B>-v </B><I></I>
+
+
+
+]
+
+
+[
+<B>-version </B><I></I>
+
+
+
+]
+
+
+[
+<B>-warnings </B><I></I>
+
+
+
+]
+
+
+[
+<B>-x </B><I>extension</I>
+
+
+
+]
+
+file1 .. fileN
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+Weblint is a Perl script which picks fluff off HTML pages.
+Files to be checked are passed on the command-line:
+<DL COMPACT><DT><DD>
+<PRE>
+
+% weblint foobar.html ./dodgy-files/ index.html
+
+</PRE>
+
+</DL>
+
+If any of the arguments are directories weblint will recurse
+in the directory, and check any HTML files found.
+If an argument is a URL, then weblint will get the file
+using a URL retrieval program, and then check the file:
+<DL COMPACT><DT><DD>
+<PRE>
+
+% weblint <A HREF="http://www.foobar.com/">http://www.foobar.com/</A>
+
+</PRE>
+
+</DL>
+
+By default weblint will use lynx to retrieve URLs,
+but this can be over-ridden.
+A filename of `-' specifies that weblint should read from standard input:
+<DL COMPACT><DT><DD>
+<PRE>
+
+% lynx -source <A HREF="http://www.foobar.com/">http://www.foobar.com/</A> | weblint -
+
+</PRE>
+
+</DL>
+
+Warnings are generated a la lint:
+<P>
+
+<DL COMPACT><DT><DD>
+<PRE>
+<A HREF="http://localhost/cgi-bin/man/man2html?9+home.html">home.html</A>(9): unmatched &lt;/A&gt; (no matching &lt;A&gt; seen).
+</PRE>
+
+</DL>
+
+<DL COMPACT>
+<DT>Weblint includes the following features:<DD>
+
+<DL COMPACT><DT><DD>
+
+
+<DL COMPACT>
+<DT><B>*</B>
+
+<DD>
+by default checks for HTML 3.2 (Wilbur)
+
+
+<DT><B>*</B>
+
+<DD>
+46 different checks and warnings
+
+
+<DT><B>*</B>
+
+<DD>
+Warnings can be enabled/disabled individually, as per your preference
+
+
+<DT><B>*</B>
+
+<DD>
+basic structure and syntax checks
+
+
+<DT><B>*</B>
+
+<DD>
+warnings for use of unknown elements and element attributes.
+
+
+<DT><B>*</B>
+
+<DD>
+context checks (where a tag must appear within a certain element).
+
+
+<DT><B>*</B>
+
+<DD>
+overlapped or illegally nested elements.
+
+
+<DT><B>*</B>
+
+<DD>
+do IMG elements have ALT text?
+
+
+<DT><B>*</B>
+
+<DD>
+flags obsolete elements.
+
+
+<DT><B>*</B>
+
+<DD>
+support for user and site configuration files
+
+
+<DT><B>*</B>
+
+<DD>
+stylistic checks
+
+
+<DT><B>*</B>
+
+<DD>
+checks for html which is not portable across all browsers
+
+
+<DT><B>*</B>
+
+<DD>
+flags markup embedded in comments, since this can confuse some browsers
+
+
+<DT><B>*</B>
+
+<DD>
+support for Netscape, and Microsoft HTML extensions
+
+
+</DL>
+</DL>
+
+
+</DL>
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+
+
+
+<DL COMPACT>
+<DT><B>-d <I>warning-identifier</I></B><DD>
+
+Disable the warning associated with the identifier.
+Multiple identifiers can be specified,
+with a comma between identifiers.
+
+<DT><B>-e <I>warning-identifier</I></B><DD>
+
+Enable the warning associated with the identifier.
+Multiple identifiers can be specified,
+with a comma between identifiers.
+
+<DT><B>-f <I>config-file</I></B><DD>
+
+Specify a weblint configuration file which should be used in place
+of the user's default config file, or the site configuration file.
+
+<DT><B>-help</B><DD>
+
+Show a short usage summary.
+
+<DT><B>-i</B><DD>
+
+Ignore case of element tags.
+
+<DT><B>-l</B><DD>
+
+When recursing in directories,
+ignore any files which are symlinks (also known as soft links).
+This will also cause files on the command-line to be ignored if they
+are symlinks, unless only one file is given.
+
+<DT><B>-pedantic</B><DD>
+
+Turn on all warnings except the case-sensitive and bad-link warnings.
+
+<DT><B>-s</B><DD>
+
+Generate `short' warning messages,
+which do not include the filename.
+
+<DT><B>-stderr</B><DD>
+
+Print warning messages to STDERR rather than STDOUT.
+
+<DT><B>-t</B><DD>
+
+Enable terse warning mode,
+which is mainly useful for the weblint testsuite.
+
+<DT><B>-U</B><DD>
+
+Same as -help.
+
+<DT><B>-urlget <I>command</I></B><DD>
+
+The command which should be used to retrieve HTML pages specified by URL.
+
+<DT><B>-v</B><DD>
+
+Display the version number.
+
+<DT><B>-version</B><DD>
+
+Display the version number.
+
+<DT><B>-todo</B><DD>
+
+This prints out the URL for the online version of the weblint ToDo list.
+This includes known bugs, and requested/planned features.
+
+<DT><B>-warnings</B><DD>
+
+List all supported warnings, with warning identifier,
+and whether the warning is enabled.
+
+<DT><B>-x <I>extension</I></B><DD>
+
+Include checks for the specified HTML extension;
+multiple extensions can be specified, separated with a comma.
+Currently the only extensions supported are <I>Netscape</I> and <I>Microsoft</I>.
+This can also be set in your weblint configuration file,
+described below.
+
+
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>HTML EXTENSIONS</H2>
+
+Unless you specify otherwise, weblint assumes you are using HTML 3.2.
+Weblint supports the Netscape and Microsoft HTML extensions in addition.
+For example, weblint will complain that the BLINK
+element is not known,
+unless you enable the
+<B>Netscape</B>
+
+extension.
+The following extensions are currently supported:
+
+
+
+<DL COMPACT>
+<DT><B>Netscape</B><DD>
+
+The HTML extensions supported by the Netscape browser, version 4.
+
+<DT><B>Microsoft</B><DD>
+
+The HTML extensions supported by Microsoft Internet Explorer, version 4.
+
+
+</DL>
+<P>
+
+To enable an extension, you can either use the <B>-x</B> command-line
+switch:
+<PRE>
+
+    <TT></TT><FONT SIZE="-2"><TT>% weblint -x Netscape foobar.html</TT></FONT><TT></TT>
+
+</PRE>
+
+Or you can use the <B>extension</B> keyword in your <I>.weblintrc</I>:
+<PRE>
+
+    <TT></TT><FONT SIZE="-2"><TT># enable the Microsoft extensions
+    extension Microsoft</TT></FONT><TT></TT>
+
+</PRE>
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>CONFIGURATION FILE</H2>
+
+<I>Weblint</I> can be configured using a file <I>.weblintrc</I> 
+in your home directory (or a file referenced by the WEBLINTRC
+environment variable).
+This file can be used to enable or disable specific warnings,
+set weblint variables, and include HTML extensions,
+as described above.
+Each warning has a short identifier string, used to refer to
+the warning in config files, and from the command-line.
+For example, if you want to enable the check for tags in upper-case,
+but disable the check for obsolete elements,
+then you would include the following lines in your .weblintrc:
+<P>
+
+<DL COMPACT><DT><DD>
+
+<FONT SIZE="-2">
+</FONT><PRE>
+# specify the command used to retrieve URLs (-urlget switch)
+set url-get = lynx -source
+
+# the style of warning message to generate (lint, short, or terse)
+set message-style = lint
+
+# enable warning for tags not in upper-case
+enable upper-case
+
+# disable the warning for obsolete tags
+disable obsolete
+
+# enable the Netscape HTML extensions
+extension Netscape
+
+# when recursing in a directory,
+# ignore files which are symlinks (also known as soft links)
+ignore symlinks
+</PRE>
+
+<FONT SIZE="+2">
+
+</DL>
+
+<P>
+
+The keywords can be followed by any number of arguments,
+separated by spaces or tabs.
+Anything following a `#' is treated as a comment.
+<P>
+
+A sample configuration file is included in the weblint distribution
+(as of version 1.004),
+which mirrors the configuration built-in to weblint.
+<P>
+
+Weblint also supports a site configuration file.
+If a user does not have a personal configuration file,
+then weblint will check for a local site configuration file.
+To provide such a file,
+create a directory such as /usr/local/weblint,
+and create a file global.weblintrc.
+You need to edit the weblint script and modify the $SITE_DIR variable,
+which you will find near the top of the file.
+For example:
+</FONT><PRE>
+
+    <TT></TT><FONT SIZE="-2"><TT>$SITE_DIR = '/usr/local/weblint';</TT></FONT><TT></TT>
+
+</PRE>
+
+At some point in the future there will be configuration support for
+weblint, so you won't have to modify the script directly yourself.
+<P>
+
+If you have a site configuration file,
+then users can inherit the site defaults by adding the following line
+at the top of their .weblintrc file:
+<PRE>
+
+    <TT></TT><FONT SIZE="-2"><TT>use global weblintrc</TT></FONT><TT></TT>
+
+</PRE>
+
+<A NAME="lbAH">&nbsp;</A>
+<H2>WARNINGS</H2>
+
+All warnings generated by <I>weblint</I> are listed below,
+along with the associated identifier,
+and whether the warning is enabled or disabled by default.
+
+<P>
+
+<DL COMPACT>
+<DT>
+
+
+<DT><B>tag &lt;...&gt; is not in upper case.</B><DD>
+<I>Identifier</I>: upper-case
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>tag &lt;...&gt; is not in lower case.</B><DD>
+<I>Identifier</I>: lower-case
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>foo attribute is required for &lt;...&gt;</B><DD>
+<I>Identifier</I>: required-attribute
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>expected an attribute for &lt;...&gt;</B><DD>
+<I>Identifier</I>: expected-attribute
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>unknown element &lt;...&gt;</B><DD>
+<I>Identifier</I>: unknown-element
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>unknown attribute `...' for element &lt;...&gt;.</B><DD>
+<I>Identifier</I>: unknown-attribute
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>should not have whitespace between `&lt;' and `...&gt;'</B><DD>
+<I>Identifier</I>: leading-whitespace
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>bad form to use `here' as an anchor!</B><DD>
+<I>Identifier</I>: here-anchor
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>no &lt;TITLE&gt; in HEAD element.</B><DD>
+<I>Identifier</I>: require-head
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>tag &lt;...&gt; should only appear once.  I saw one on line XX!</B><DD>
+<I>Identifier</I>: once-only
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;BODY&gt; but no &lt;HEAD&gt;.</B><DD>
+<I>Identifier</I>: body-no-head
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>outer tags should be &lt;HTML&gt; .. &lt;/HTML&gt;.</B><DD>
+<I>Identifier</I>: html-outer
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; can only appear in the HEAD element.</B><DD>
+<I>Identifier</I>: head-element
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; cannot appear in the HEAD element.</B><DD>
+<I>Identifier</I>: non-head-element
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; is obsolete.</B><DD>
+<I>Identifier</I>: obsolete
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>unmatched &lt;/...&gt; (no matching &lt;...&gt; seen).</B><DD>
+<I>Identifier</I>: mis-match
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>IMG does not have ALT text defined.</B><DD>
+<I>Identifier</I>: img-alt
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; cannot be nested.</B><DD>
+<I>Identifier</I>: nested-element
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>Did not see &lt;LINK REV=MADE HREF=mailto:...&gt; in HEAD.</B><DD>
+<I>Identifier</I>: mailto-link
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>&lt;/...&gt; on line XX seems to overlap &lt;...&gt;, opened on line YY.</B><DD>
+<I>Identifier</I>: element-overlap
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>no closing &lt;/...&gt; seen for &lt;...&gt; on line XX.</B><DD>
+<I>Identifier</I>: unclosed-element
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>markup embedded in a comment can confuse some browsers.</B><DD>
+<I>Identifier</I>: markup-in-comment
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>odd number of quotes in element &lt;...&gt;.</B><DD>
+<I>Identifier</I>: odd-quotes
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>heading &lt;H?&gt; follows &lt;H?&gt; on line N.</B><DD>
+<I>Identifier</I>: heading-order
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>target for anchor ... not found.</B><DD>
+<I>Identifier</I>: bad-link
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>unexpected &lt; in &lt;...&gt; -- potentially unclosed element.</B><DD>
+<I>Identifier</I>: unexpected-open
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>illegal context for &lt;...&gt; - must appear in &lt;...&gt; element.</B><DD>
+<I>Identifier</I>: required-context
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>unclosed comment (comment should be: &lt;!-- ... --&gt;</B><DD>
+<I>Identifier</I>: unclosed-comment
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>element &lt;...&gt; is not a container -- &lt;/...&gt; not legal.</B><DD>
+<I>Identifier</I>: illegal-closing
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; is physical font markup -- use logical (such as XXX)</B><DD>
+<I>Identifier</I>: physical-font
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>attribute XYZ is repeated in element &lt;...&gt;</B><DD>
+<I>Identifier</I>: repeated-attribute
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>empty container element &lt;...&gt;</B><DD>
+<I>Identifier</I>: empty-container
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>use of ' for attribute value delimiter is not supported by all browsers (attribute XYZ of tag ABC)</B><DD>
+<I>Identifier</I>: attribute-delimiter
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>closing tag &lt;...&gt; should not have any attributes specified.</B><DD>
+<I>Identifier</I>: closing-attribute
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>directory DIR does not have an index file (index.html)</B><DD>
+<I>Identifier</I>: directory-index
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; must immediately follow &lt;...&gt;</B><DD>
+<I>Identifier</I>: must-follow
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>setting WIDTH and HEIGHT attributes on IMG tag can improve rendering performance on some browsers</B><DD>
+<I>Identifier</I>: img-size
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>leading/trailing whitespace in content of container element ...</B><DD>
+<I>Identifier</I>: container-whitespace
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>first element was not DOCTYPE specification</B><DD>
+<I>Identifier</I>: require-doctype
+<DD>
+<I>Default</I>: disabled
+
+
+<DT><B>`&gt;' should be represented as `&amp;gt;'</B><DD>
+<I>Identifier</I>: literal-metacharacter
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>malformed heading - open tag is &lt;H?&gt;, but closing is &lt;/H?&gt;</B><DD>
+<I>Identifier</I>: heading-mismatch
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>illegal context, &lt;...&gt;, for text; should be in XXX.</B><DD>
+<I>Identifier</I>: bad-text-context
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>illegal value for AAA attribute of XXX (...)</B><DD>
+<I>Identifier</I>: attribute-format
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;...&gt; is extended markup (use '-x &lt;extension&gt;' to allow this).</B><DD>
+<I>Identifier</I>: extension-markup
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>attribute `...' for &lt;...&gt; is extended markup (use '-x &lt;extension&gt;' to allow this).</B><DD>
+<I>Identifier</I>: extension-attribute
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>value for attribute XYZ (xyz-value) of element FOOBAR should be quoted (i.e. XYZ='xyz-value')</B><DD>
+<I>Identifier</I>: quote-attribute-value
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>you should use '&amp;gt;' in place of '&gt;', even in a PRE element.</B><DD>
+<I>Identifier</I>: meta-in-pre
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>&lt;A&gt; should be inside &lt;H?&gt;, not &lt;H?&gt; inside &lt;A&gt;.</B><DD>
+<I>Identifier</I>: heading-in-anchor
+<DD>
+<I>Default</I>: enabled
+
+
+<DT><B>The HTML spec. recommends the TITLE be no longer than 64 characters.</B><DD>
+<I>Identifier</I>: title-length
+<DD>
+<I>Default</I>: enabled
+
+
+
+</DL>
+<A NAME="lbAI">&nbsp;</A>
+<H2></H2>
+
+<A NAME="lbAJ">&nbsp;</A>
+<H2>TESTSUITE</H2>
+
+<DD>A simple regression testsuite is included with weblint,
+in the Perl script <TT></TT><FONT SIZE="-2"><TT>test.pl</TT></FONT><TT></TT>.
+You can run the testsuite with either of the following commands:
+<PRE>
+    <TT></TT><FONT SIZE="-2"><TT>% make test
+    % ./test.pl</TT></FONT><TT></TT>
+</PRE>
+
+The results are printed to STDERR,
+with a more complete report generated in test.log.
+<P>
+
+All tests should pass.
+If any tests fail, please email test.log to the address given
+in the AUTHOR section below.
+<A NAME="lbAK">&nbsp;</A>
+<H2>ENVIRONMENT VARIABLES</H2>
+
+
+
+
+<DL COMPACT>
+<DT><B>WEBLINTRC</B><DD>
+
+If this variable is defined, and references a file,
+then <I>weblint</I> will read the referenced file for the user's configuration,
+rather than $HOME/.weblintrc.
+
+<DT><B>TMPDIR</B><DD>
+
+The directory where weblint will create temporary working files.
+Defaults to /usr/tmp.
+
+
+</DL>
+<A NAME="lbAL">&nbsp;</A>
+<H2>FILES</H2>
+
+
+
+
+<DL COMPACT>
+<DT><B>$HOME/.weblintrc</B><DD>
+
+The user's configuration file.  See the section `CONFIGURATION FILE'.
+
+
+</DL>
+<A NAME="lbAM">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<B><A HREF="http://localhost/cgi-bin/man/man2html?1+perl">perl</A>(1)</B>
+
+<A NAME="lbAN">&nbsp;</A>
+<H2>VERSION</H2>
+
+This man page describes <I>weblint 1.020</I>.
+<A NAME="lbAO">&nbsp;</A>
+<H2>AVAILABILITY</H2>
+
+
+<FONT SIZE="-2">
+</FONT><PRE>
+<A HREF="ftp://ftp.cre.canon.co.uk/pub/weblint/weblint.tar.gz">ftp://ftp.cre.canon.co.uk/pub/weblint/weblint.tar.gz</A>
+<A HREF="http://www.cre.canon.co.uk/~neilb/weblint/">http://www.cre.canon.co.uk/~neilb/weblint/</A>
+</PRE>
+
+
+<FONT SIZE="+2">
+</FONT><A NAME="lbAP">&nbsp;</A>
+<H2>KNOWN BUGS</H2>
+
+The list of known bugs can be found on the weblint home page:
+<PRE>
+
+    <A HREF="http://www.cre.canon.co.uk/~neilb/weblint/todo/">http://www.cre.canon.co.uk/~neilb/weblint/todo/</A>
+
+</PRE>
+
+Certain versions of Perl have bugs which are triggered by weblint.
+You shouldn't experience problems if you have 4.036, or 5.002.
+<A NAME="lbAQ">&nbsp;</A>
+<H2>AUTHOR</H2>
+
+Neil Bowers, Canon Research Centre Europe
+<BR>
+
+<A HREF="mailto:neilb@cre.canon.co.uk">neilb@cre.canon.co.uk</A>
+<A NAME="lbAR">&nbsp;</A>
+<H2>CONTRIBUTIONS</H2>
+
+Lots of people have contributed to weblint,
+in the form of suggestions, bug reports, fixes, and contributed code.
+Please email me if your name should appear in the roll call below.
+<P>
+
+Abigail &lt;<A HREF="mailto:abigail@mars.ic.iaf.nl">abigail@mars.ic.iaf.nl</A>&gt;;
+Anthony Thyssen &lt;<A HREF="mailto:anthony@cit.gu.edu.au">anthony@cit.gu.edu.au</A>&gt;;
+Axel Boldt &lt;<A HREF="mailto:axel@uni-paderborn.de">axel@uni-paderborn.de</A>&gt;;
+Barry Bakalor &lt;<A HREF="mailto:barry@hal.com">barry@hal.com</A>&gt;;
+Bill Arnett &lt;<A HREF="mailto:billa@netcom.com">billa@netcom.com</A>&gt;;
+Bob Friesenhahn &lt;<A HREF="mailto:bfriesen@simple.dallas.tx.us">bfriesen@simple.dallas.tx.us</A>&gt;;
+Mark Gates &lt;<A HREF="mailto:mr-gates@uiuc.edu">mr-gates@uiuc.edu</A>&gt;;
+Bruce Speyer &lt;<A HREF="mailto:bspeyer@texas-one.org">bspeyer@texas-one.org</A>&gt;;
+Chris Siebenmann &lt;<A HREF="mailto:cks@hawkwind.utcs.toronto.edu">cks@hawkwind.utcs.toronto.edu</A>&gt;;
+Clay Webster &lt;<A HREF="mailto:clay@unipress.com">clay@unipress.com</A>&gt;;
+Dana Jacobsen &lt;<A HREF="mailto:dana@acm.org">dana@acm.org</A>&gt;;
+David Begley &lt;<A HREF="mailto:david@bacall.nepean.uws.edu.au">david@bacall.nepean.uws.edu.au</A>&gt;;
+David J. MacKenzie &lt;<A HREF="mailto:djm@va.pubnix.com">djm@va.pubnix.com</A>&gt;;
+Douglas Brick &lt;<A HREF="mailto:dbrick@u.washington.edu">dbrick@u.washington.edu</A>&gt;;
+Gil Citro;
+Eric de Mund &lt;<A HREF="mailto:ead@ixian.com">ead@ixian.com</A>&gt;;
+Richard Finegold &lt;<A HREF="mailto:goldfndr@eskimo.com">goldfndr@eskimo.com</A>&gt;;
+Joerg Heitkoetter &lt;<A HREF="mailto:Joerg.Heitkoetter@germany.eu.net">Joerg.Heitkoetter@germany.eu.net</A>&gt;;
+David Koblas &lt;<A HREF="mailto:koblas@homepages.com">koblas@homepages.com</A>&gt;;
+John Labovitz &lt;<A HREF="mailto:johnl@ora.com">johnl@ora.com</A>&gt;;
+Eric Maryniak &lt;<A HREF="mailto:E.Maryniak@rgd.nl">E.Maryniak@rgd.nl</A>&gt;;
+John F. Whitehead &lt;<A HREF="mailto:jfw@wral-tv.com">jfw@wral-tv.com</A>&gt;
+Juergen Schoenwaelder &lt;<A HREF="mailto:schoenw@ibr.cs.tu-bs.de">schoenw@ibr.cs.tu-bs.de</A>&gt;;
+Frank Steinke &lt;<A HREF="mailto:fsteinke@zeta.org.au">fsteinke@zeta.org.au</A>&gt;;
+Larry Virden &lt;<A HREF="mailto:lvirden@cas.org">lvirden@cas.org</A>&gt;;
+Paul Black &lt;<A HREF="mailto:black@lal.cs.byu.edu">black@lal.cs.byu.edu</A>&gt;;
+Doug Grinbergs &lt;<A HREF="mailto:dougg@qualcomm.com">dougg@qualcomm.com</A>&gt;;
+Philip Hallstrom &lt;<A HREF="mailto:philip@wolfe.net">philip@wolfe.net</A>&gt;;
+Craig Leres &lt;<A HREF="mailto:leres@ee.lbl.gov">leres@ee.lbl.gov</A>&gt;;
+Richard Lloyd &lt;<A HREF="mailto:R.K.Lloyd@csc.liv.ac.uk">R.K.Lloyd@csc.liv.ac.uk</A>&gt;;
+Charles F. Randall &lt;<A HREF="mailto:crandall@dmacc.cc.ia.us">crandall@dmacc.cc.ia.us</A>&gt;;
+Robert Schmunk &lt;<A HREF="mailto:pcrxs@nasagiss.giss.nasa.gov">pcrxs@nasagiss.giss.nasa.gov</A>&gt;;
+Jeff Schave &lt;<A HREF="mailto:schave@engr.wisc.edu">schave@engr.wisc.edu</A>&gt;;
+Jon Thackray &lt;<A HREF="mailto:jrmt@uk.gdscorp.com">jrmt@uk.gdscorp.com</A>&gt;;
+Jens Thordarson &lt;<A HREF="mailto:thordurh@rhi.hi.is">thordurh@rhi.hi.is</A>&gt;;
+Ryan Waldron &lt;<A HREF="mailto:rew@nuance.com">rew@nuance.com</A>&gt;;
+Thomas Leavitt &lt;<A HREF="mailto:leavitt@webcom.com">leavitt@webcom.com</A>&gt;;
+Tom Neff &lt;<A HREF="mailto:tneff@panix.com">tneff@panix.com</A>&gt;;
+Victor Parada &lt;<A HREF="mailto:vparada@inf.utfsm.cl">vparada@inf.utfsm.cl</A>&gt;;
+Erick Branderhorst &lt;<A HREF="mailto:branderhorst@fgg.eur.nl">branderhorst@fgg.eur.nl</A>&gt;;
+Bryan O'Sullivan &lt;<A HREF="mailto:bos@serpentine.com">bos@serpentine.com</A>&gt;;
+Alan J. Flavell &lt;<A HREF="mailto:FLAVELL@v2.ph.gla.ac.uk">FLAVELL@v2.ph.gla.ac.uk</A>&gt;;
+Raphael Manfredi &lt;<A HREF="mailto:Raphael_Manfredi@grenoble.hp.com">Raphael_Manfredi@grenoble.hp.com</A>&gt;;
+Keith Iosso &lt;<A HREF="mailto:a-keithi@microsoft.com">a-keithi@microsoft.com</A>&gt;;
+Chris Lambert &lt;<A HREF="mailto:lambertc@sharelink.com">lambertc@sharelink.com</A>&gt;;
+Tristan Savatier &lt;<A HREF="mailto:tristan@creative.net">tristan@creative.net</A>&gt;;
+Phil Hooper &lt;<A HREF="mailto:hooper@bcci.eng.sun.com">hooper@bcci.eng.sun.com</A>&gt;;
+Gerald Viers &lt;<A HREF="mailto:grviers@csupomona.edu">grviers@csupomona.edu</A>&gt;;
+Dean Brissinger &lt;<A HREF="mailto:brissing@bvsd.k12.co.us">brissing@bvsd.k12.co.us</A>&gt;;
+Dave Schmitt &lt;<A HREF="mailto:dschmi1@gl.umbc.edu">dschmi1@gl.umbc.edu</A>&gt;;
+John Van Essen &lt;<A HREF="mailto:vanes002@maroon.tc.umn.edu">vanes002@maroon.tc.umn.edu</A>&gt;;
+Brandon Bell &lt;<A HREF="mailto:brandon@arcs.bcit.bc.ca">brandon@arcs.bcit.bc.ca</A>&gt;;
+Fumio Moriya and Toshiaki Nomura &lt;<A HREF="mailto:dsfrsoft@oai6.yk.fujitsu.co.jp">dsfrsoft@oai6.yk.fujitsu.co.jp</A>&gt;;
+Vincent Lefevre &lt;<A HREF="mailto:vlefevre@ens-lyon.fr">vlefevre@ens-lyon.fr</A>&gt;;
+Jason Mathews &lt;<A HREF="mailto:mathews@nssdc.gsfc.nasa.gov">mathews@nssdc.gsfc.nasa.gov</A>&gt;;
+Lars Balker Rasmussen &lt;<A HREF="mailto:lbr@mjolner.dk">lbr@mjolner.dk</A>&gt;;
+Richard L. Hawes &lt;<A HREF="mailto:rhawes@dmapub.dma.org">rhawes@dmapub.dma.org</A>&gt;.
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">HTML EXTENSIONS</A><DD>
+<DT><A HREF="#lbAG">CONFIGURATION FILE</A><DD>
+<DT><A HREF="#lbAH">WARNINGS</A><DD>
+<DT><A HREF="#lbAI"></A><DD>
+<DT><A HREF="#lbAJ">TESTSUITE</A><DD>
+<DT><A HREF="#lbAK">ENVIRONMENT VARIABLES</A><DD>
+<DT><A HREF="#lbAL">FILES</A><DD>
+<DT><A HREF="#lbAM">SEE ALSO</A><DD>
+<DT><A HREF="#lbAN">VERSION</A><DD>
+<DT><A HREF="#lbAO">AVAILABILITY</A><DD>
+<DT><A HREF="#lbAP">KNOWN BUGS</A><DD>
+<DT><A HREF="#lbAQ">AUTHOR</A><DD>
+<DT><A HREF="#lbAR">CONTRIBUTIONS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 10:51:59 GMT, May 05, 2005
+</BODY>
+</HTML>

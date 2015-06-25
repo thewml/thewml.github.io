@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Discussion about stable/unstable, etc. -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 17 Sep 2000 11:40:10 +0200 (MET DST) -->
+<!--X-Message-Id: 20000917112047.A34188@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000915221441.A6663@engelschall.com -->
+<!--X-Reference: Pine.LNX.4.21.0009151915070.25958&#45;100000@joeysmith.com -->
+<!--X-Reference: 20000916133554.B19145@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01968">Date Index</a>][<a href="thrd40.shtml#01968">Thread Index</a>]<br>
+[<A HREF="msg01967.shtml">Date Prev</A>][<A HREF="msg01969.shtml">Date Next</A>][<A HREF="msg01967.shtml">Thread Prev</A>][<A HREF="msg01970.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Discussion about stable/unstable, etc.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Sep 2000 11:20:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Sep 16, 2000, Denis Barbier wrote:
+
+&gt; [...]
+&gt; &gt; I think that for the size/scope of WML, MFC is a great way to do this.
+&gt; [...]
+&gt; What is MFC?
+
+It's the FreeBSD term from my posting. It stands for "merge from -current" and
+means that all changes on the stable branch are bugfixes which are merged from
+the trunk to the branch, i.e., all regular commits occur only on the trunk in
+CVS and only MFCs are done to enhance/bugfix the stable branch.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01964" HREF="msg01964.shtml">Re: Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="01965" HREF="msg01965.shtml">Re: Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Joey Smith</li>
+<li><strong><A NAME="01967" HREF="msg01967.shtml">Re: Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01967.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01969.shtml">Re: New mailing list sw-wml-dev</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01967.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01970.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01968"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01968"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

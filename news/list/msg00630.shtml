@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: About tidy -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Sat, 8 May 1999 00:18:56 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.10.9905080017260.11116&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990507134652.10199A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00630">Date Index</a>][<a href="thrd14.shtml#00630">Thread Index</a>]<br>
+[<A HREF="msg00629.shtml">Date Prev</A>][<A HREF="msg00631.shtml">Date Next</A>][<A HREF="msg00626.shtml">Thread Prev</A>][<A HREF="msg00627.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: About tidy</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 May 1999 00:18:42 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Yesterday you sent me mail regarding About tidy:
+
+*&gt; On Fri, 7 May 1999, Tobias Oetiker wrote:
+*&gt; 
+*&gt; &gt; *&gt; * Test tidy &lt;URL:<A  HREF="http://www.w3.org/People/Raggett/tidy/">http://www.w3.org/People/Raggett/tidy/</A>&gt;
+*&gt; &gt; 
+*&gt; &gt; we are using it on the pages in www.ee.ethz.ch/student-computing
+*&gt; 
+*&gt; Hi Tobias,
+*&gt; 
+*&gt; i did not have a close look at tidy ; do you think it replaces a
+*&gt; piece of WML (maybe wml_aux_weblint?) or should it be added?
+
+no it is just an additional measure ... you must be careful though  ... if
+tidy finds any real erros in the page it will abort and just give you some
+error messages and not the contents of the page ... tidies out put is always
+correct and if it can't do it there is no output at all ...
+
+cheers
+tobi
+*&gt; 
+*&gt; Denis
+*&gt; 
+*&gt; ______________________________________________________________________
+*&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+*&gt; Official Support Mailing List                   sw-wml@engelschall.com
+*&gt; Automated List Manager                       majordomo@engelschall.com
+*&gt; 
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00626" HREF="msg00626.shtml">About tidy</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00629.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00631.shtml">RE: It's time...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00626.shtml">About tidy</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00627.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00630"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00630"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

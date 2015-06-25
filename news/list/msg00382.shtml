@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: Egrir Evmrzber <fgrirNpzcunez.hpfs.rqh> -->
+<!--X-Date: Tue, 2 Feb 1999 03:25:33 +0100 (CET) -->
+<!--X-Message-Id: 19990201143607.C319920@cmpharm.ucsf.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990120110312.A263369@cmpharm.ucsf.edu -->
+<!--X-Reference: Pine.LNX.3.96.990201160916.7571A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00382">Date Index</a>][<a href="thrd8.shtml#00382">Thread Index</a>]<br>
+[<A HREF="msg00381.shtml">Date Prev</A>][<A HREF="msg00376.shtml">Date Next</A>][<A HREF="msg00379.shtml">Thread Prev</A>][<A HREF="msg00704.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Steve Sizemore &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Feb 1999 14:36:07 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Feb 01, 1999 at 04:14:32PM +0100, Denis Barbier wrote:
+&gt; 
+&gt; Hi Steve,
+&gt; 
+&gt; this bug appears on HP-UX B.10.20 too. The problem is that configure
+&gt; defines the TMPDIR variable to a temporary directory. The workaround i
+&gt; used is to replace all occurences of TMPDIR by MYTMPDIR in the top
+&gt; `configure'.
+&gt; Could you please tell me if this works for your Irix 6.5.2 too, i do not
+&gt; have access to this machine.
+&gt; Thanks.
+&gt; 
+&gt;    Denis
+
+Yes, that also works under Irix.
+
+Steve
+-- 
+----------------------------------------------#-----#--#####---------------
+                                              #     # #     #
+ Steve Sizemore                               #     # #
+ Dept. of Cellular and Molecular Pharmacology #     # #      
+ Box 0450, Room HSE-1285                      #     # #     
+ University of California Medical Center      #     # #     # 
+ 513 Parnassus Avenue                          #####   ##### #####  #######
+ San Francisco CA 94143-0450                                #     # #
+                                                            #       #
+ steve@cmpharm.ucsf.edu                                      #####  #####
+ (415) 476-6987  FAX: (415) 476-6515                              # #
+                                                            #     # #
+-------------------------------------------------------------#####--#------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00361" HREF="msg00361.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Steve Sizemore</li>
+<li><strong><A NAME="00379" HREF="msg00379.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00381.shtml">perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00376.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00379.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00704.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00382"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00382"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

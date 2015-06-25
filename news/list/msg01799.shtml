@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Question about <subject> -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Mon, 10 Jul 2000 11:46:55 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007101139171.497&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01799">Date Index</a>][<a href="thrd37.shtml#01799">Thread Index</a>]<br>
+[<A HREF="msg01798.shtml">Date Prev</A>][<A HREF="msg01800.shtml">Date Next</A>][<A HREF="msg01805.shtml">Thread Prev</A>][<A HREF="msg01800.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Question about &lt;subject&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 10 Jul 2000 11:54:08 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi again,
+
+I have a question about the use of the &lt;subject&gt; tag. 
+
+I'm using wml to build multi-language versions (currently German and
+English) of my web pages, which works great, apart from one effect that I
+don't understand.
+
+I would start off a file like this:
+
+[...]                   
+#include "template.wml"
+
+&lt;d: 
+&lt;subject "Über uns"&gt;
+&lt;headline&gt;So erreichen Sie uns&lt;/headline&gt;
+&gt;
+&lt;e: 
+&lt;subject "About us"&gt;
+&lt;headline&gt;Contact information&lt;/headline&gt;
+&gt;
+[...]
+
+The subject tag is then used in template.wml in a pretty standard way:
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;
+&lt;html&gt; 
+&lt;head&gt; 
+&lt;title&gt;&lt;&lt;SUBJECT_LOC&gt;&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+[...]
+
+# way to insert the subject 
+&lt;define-tag subject&gt; 
+..SUBJECT_LOC&gt;&gt;%0&lt;&lt;..
+&lt;/define-tag&gt; 
+
+# per default we are in body 
+..BODY&gt;&gt;
+
+
+
+The strange result is that the &lt;title&gt; of both resulting html files is in
+*both* cases:
+
+&lt;title&gt;Über unsAbout us&lt;/title&gt;
+
+(i.e. both &lt;subject&gt; tag values make it into the &lt;title&gt; tag) 
+
+All the other aspects of the language-specific html creation are perfectly
+o.k.
+
+Is this a bug, a feature, or a side-effect? :-)
+
+All the best,
+Stephan
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01800" HREF="msg01800.shtml">Re: Question about &lt;subject&gt;</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01798.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01800.shtml">Re: Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01805.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01800.shtml">Re: Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01799"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01799"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

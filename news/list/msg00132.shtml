@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: a few questions on using wml -->
+<!--X-From-R13: "Xnzrf O. Fernpl" <gernplNqrovna.bet> -->
+<!--X-Date: Thu, 25 Jun 1998 07:24:54 +0200 (CEST) -->
+<!--X-Message-Id: m0yotmj&#45;000DHYC@landru.math.uwaterloo.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00132">Date Index</a>][<a href="thrd3.shtml#00132">Thread Index</a>]<br>
+[<A HREF="msg00131.shtml">Date Prev</A>][<A HREF="msg00133.shtml">Date Next</A>][<A HREF="msg00131.shtml">Thread Prev</A>][<A HREF="msg00134.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>a few questions on using wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;James A. Treacy&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 24 Jun 1998 13:56:41 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+The Debian web pages are in the process of being converted to using
+wml. In the process I have come across a few things I haven't been
+able to figure out. Is it possible that there are things wml can't
+do? :)
+
+Since I want the .html files in a different directory from the source
+a shebang path is used in the files, e.g. #!wml -o ../debian.org/%BASE.html.en
+What is actually desired is to use a variable to make it easier to move
+things around later, i.e. #!wml -o $(HTMLDIR)/%BASE.html.en where the
+variable is set in a .wmlrc file. Is this possible?
+
+To keep the pages from being too static, I used some perl to grab the
+latest news entries and put their titles on the main page. It works
+perfectly, but 'wmk -a' does not catch the dependency (which is understandable).
+Is there a way to force a file to have a dependency on another?
+'#use &lt;file&gt;' is not appropriate in this case.
+
+I tried 'wmk -a -F template/debian/*.wml' so all .wml files would
+be processed except for the template files. What's the proper way
+to do this?
+
+Thanks for such a useful program.
+
+Jay Treacy &lt;treacy@debian.org&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00134" HREF="msg00134.shtml">Re: a few questions on using wml</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00140" HREF="msg00140.shtml">Re: a few questions on using wml</A></strong>, <em>From:</em> David Duffey</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00131.shtml">RE: configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00133.shtml">question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00131.shtml">RE: configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00134.shtml">Re: a few questions on using wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00132"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00132"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

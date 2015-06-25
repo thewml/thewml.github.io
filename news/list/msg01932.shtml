@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: fix for des::navbar -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 12 Sep 2000 23:26:40 +0200 (MET DST) -->
+<!--X-Message-Id: 20000912232910.A10607@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0009122231110.22148&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01932">Date Index</a>][<a href="thrd39.shtml#01932">Thread Index</a>]<br>
+[<A HREF="msg01931.shtml">Date Prev</A>][<A HREF="msg01933.shtml">Date Next</A>][<A HREF="msg01931.shtml">Thread Prev</A>][<A HREF="msg01933.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: fix for des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Sep 2000 23:29:10 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Sep 12, 2000 at 10:35:41PM +0200, Tobias Oetiker wrote:
+
+&gt; I have just started using the built in navbar code of wml again and
+&gt; found that there is a problem with nesting and the epilog .... 
+&gt; I think prolog and epilog should occure next to the button even
+&gt; when there is a sub navbar ... at the moment the sub navbar comes
+&gt; between the end of the button and the epilog ... here is the patch
+[...]
+
+Hi Tobias,
+
+i disagree, both solutions seems relevant to me.
+But providing this feature would certainly be helpful, so i add an
+option to &lt;navbar:render&gt;, say ``menumode=inner|outer'' (or any other
+name).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01931" HREF="msg01931.shtml">fix for des::navbar</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01931.shtml">fix for des::navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01933.shtml">[2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01931.shtml">fix for des::navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01933.shtml">[2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01932"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01932"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

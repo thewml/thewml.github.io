@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ISOTIME should have ISO format... -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Sun, 19 Mar 2000 19:55:52 +0100 (MET) -->
+<!--X-Message-Id: 20000318123657.A3225@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000318182800.O844@spinnaker.rhein.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01454">Date Index</a>][<a href="thrd30.shtml#01454">Thread Index</a>]<br>
+[<A HREF="msg01455.shtml">Date Prev</A>][<A HREF="msg01456.shtml">Date Next</A>][<A HREF="msg01442.shtml">Thread Prev</A>][<A HREF="msg01505.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ISOTIME should have ISO format...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 18 Mar 2000 12:36:57 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Mar 18, 2000 at 06:28:00PM +0100, Roland Rosenfeld wrote:
+&gt; I noted, that the so called ISOTIME in WML has the format 
+&gt;  dd-mm-yyyy hh:mm:ss
+&gt; As far as I know, the "official" ISO time format is 
+&gt;  yyyy-mm-dd hh:mm:ss
+&gt; The attached patch changes this in WML.
+
+BTW, Roland made the above patch for wml_1.7.4-6.2 in Debian unstable.
+And indeed, this was recently implemented in WML 1.99.1 too.  :-)
+
+Now the warning: it may break existing web sites, www.debian.org being one
+of them, and my www.olvc.ab.ca site too, because I used something like this:
+
+	$WML_SRC_ISOTIME =~ /(..)-(..)-(....) (..):(..):(..)/;
+        local($time) = timelocal($6, $5, $4, $1, $2-1, $3);
+
+which should be changed to:
+
+	$WML_SRC_ISOTIME =~ /(....)-(..)-(..) (..):(..):(..)/;
+	local($time) = timelocal($6, $5, $4, $3, $2-1, $1);
+
+or something similar.  We'll just have to remember to change it when
+www.debian.org (or master.debian.org) upgrades.  :-)
+
+Other than this, and perhaps a few &lt;ifeq&gt; changes, I don't foresee any major
+problem for www.debian.org to upgrade to wml_1.99.1 (or wml_2.0).  :-)
+
+Incidentally, mp4h seems to be much faster for Pass2-intensive pages,
+notably one that uses navbar with submenu etc.  Pass 2 used to take up to
+7.5 seconds with mhc, and now it is more like 2.5 seconds with mp4h.  
+I'm really happy!  (Merci beaucoup, Denis et al.!  :-)
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+Come visit Our Lady of Victory Camp -- <A  HREF="http://www.olvc.ab.ca/">http://www.olvc.ab.ca/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01505" HREF="msg01505.shtml">Re: ISOTIME should have ISO format...</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01442" HREF="msg01442.shtml">ISOTIME should have ISO format...</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01455.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01456.shtml">Re: I cannot get navbar to work</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01442.shtml">ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01505.shtml">Re: ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01454"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01454"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

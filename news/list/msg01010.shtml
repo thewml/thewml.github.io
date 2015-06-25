@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Ouput directory other than source directory -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Thu, 30 Sep 1999 16:35:03 +0200 (MET DST) -->
+<!--X-Message-Id: 199909301411.QAA09095@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990930021853.A4030@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01010">Date Index</a>][<a href="thrd20.shtml#01010">Thread Index</a>]<br>
+[<A HREF="msg01009.shtml">Date Prev</A>][<A HREF="msg01011.shtml">Date Next</A>][<A HREF="msg01009.shtml">Thread Prev</A>][<A HREF="msg01011.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Sep 1999 16:11:34 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thu, 30 Sep 1999 02:18:54 -0600:
+&gt; The Debian web site currently uses "make install" to copy all the *.html
+&gt; files etc. to a different directory.  Two reasons that I can think of are:
+
+I use "mirror.pl" a perlscript to copy the changed files
+via ftp to the web-server. It is configurable. You can
+exclude filepatterns from mirroring, e.g. .wml
+So it does not matter to have .html and .wml files mixed up.
+
+Note: I manage all my sites with wml. I learn while doing. 
+What I like about wml is the extensibility: you will always 
+find some way how to do it simpler and better.
+
+Cheers,
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01011" HREF="msg01011.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="01013" HREF="msg01013.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01009" HREF="msg01009.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01009.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01011.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01009.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01011.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01010"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#01010"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

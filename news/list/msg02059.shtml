@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [RFC] &#38; in URLs -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 13 Nov 2000 09:04:17 +0100 (MET) -->
+<!--X-Message-Id: 20001113091013.A18699@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02059">Date Index</a>][<a href="thrd42.shtml#02059">Thread Index</a>]<br>
+[<A HREF="msg02058.shtml">Date Prev</A>][<A HREF="msg02060.shtml">Date Next</A>][<A HREF="msg02058.shtml">Thread Prev</A>][<A HREF="msg02060.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[RFC] &amp; in URLs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 13 Nov 2000 09:10:13 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+following reports of validator.w3.org, ampersands in URLs must be
+written
+  &lt;a href="foo.html?x=a&amp;amp;y=b"&gt;foo&lt;/a&gt;
+since HTML 4.0, but i never see such links.
+Is this syntax well understood by all browsers (it works with Lynx and
+Netscape)?
+
+There are also 2 modules concerned by this behaviour: wml::fmt::url and
+wml::std::href.  They currently do not perform any substitution on URLs.
+What is the desired behaviour?
+  a) Never change URLs, it is the user task to provide valid input.
+  b.1) Automatically transform all &amp; into &amp;amp; when displaying text,
+       but do not touch links.
+  b.2) Automatically transform all &amp; into &amp;amp; in both text and links.
+  c.1) By default, no substitution is performed.  An extra attribute
+       allows substitution either in text, or in both text and links.
+  c.2) By default, substitutions are performed.  An extra attribute
+       preserve from this substitution either in link, or in both text
+       and links.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02060" HREF="msg02060.shtml">Re: [RFC] &amp; in URLs</A></strong>, <em>From:</em> David Odin</li>
+<li><strong><A NAME="02063" HREF="msg02063.shtml">Re: [RFC] &amp; in URLs</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02058.shtml">Re: Nested ePerl tags implementation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02060.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02058.shtml">Re: Nested ePerl tags implementation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02060.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02059"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02059"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: "wmk &#45;a" and auto&#45;adjusted variables? -->
+<!--X-From-R13: cybaxnNqbvg.jvfp.rqh -->
+<!--X-Date: Fri, 9 Jul 1999 00:38:12 +0200 (MET DST) -->
+<!--X-Message-Id: 19990708173807.26393@doit.wisc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990708150133.23267@doit.wisc.edu -->
+<!--X-Reference: 19990708222609.A12238@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00844">Date Index</a>][<a href="thrd18.shtml#00844">Thread Index</a>]<br>
+[<A HREF="msg00843.shtml">Date Prev</A>][<A HREF="msg00845.shtml">Date Next</A>][<A HREF="msg00840.shtml">Thread Prev</A>][<A HREF="msg00845.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &quot;wmk -a&quot; and auto-adjusted variables?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 17:38:07 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jul 08, 1999 at 10:26:09PM +0200, Stefan `Sec` Zehl wrote:
+&gt; On Thu, Jul 08, 1999 at 03:01:33PM -0500, plonka@doit.wisc.edu wrote:
+&gt; &gt; I'm having some trouble with "wmk -a" when I use auto-adjusted variables
+&gt; &gt; such as "-DIMG~images".  It seems that wmk prevents these auto-adjusted
+&gt; &gt; relative paths from working as desired.
+&gt; [...]
+&gt; 
+&gt; &gt;    $ wmk -a -DIMG~images
+&gt; 
+&gt; My suggestion is to write this into ./.wmlrc
+&gt; There it works perfectly and is automatically picked up by all
+&gt; subdirectories.
+&gt; 
+&gt; this is my .wmlrc in my html-root:
+&gt; 
+&gt; -DBASE_URL=<A  HREF="http://www.42.org/~sec/">http://www.42.org/~sec/</A>
+&gt; -DBASE_DIR~.
+&gt; -DIMGDOT_BASE~.img/
+
+Thanks, that does work for me and is a potential workaround.
+
+In this instance however, it's less desirable than being able to use just
+command-line switches.  Since I'm invoking wmk from another Makefile, I'd
+like that Makefile to be self-contained (i.e. not to be reliant on the
+content of the ".wmlrc").
+
+It's surprising that putting "-DIMG~images" on the wmk command line is
+different than putting it in the ".wmlrc" file.  No?
+
+I'm thinking that perhaps:
+1) wmk should not chdir around as it invokes wml, or should have a new
+   mode that causes it not to chdir.
+- or -
+2) The wmk man page should document the issue that "-D~value" on the
+   wmk command-line won't have the same effect as passing it to wml
+   directly (if wml had been invoked from the same dir) or specifying
+   it in an rc file.
+
+If anyone else agrees, I'm willing to submit a change for one of these
+options...  It might keep someone else from similarly spending quite some
+time trying to figure that out.
+
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00845" HREF="msg00845.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00837" HREF="msg00837.shtml">&quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> plonka</li>
+<li><strong><A NAME="00840" HREF="msg00840.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00843.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00845.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00840.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00845.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00844"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00844"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: XML -->
+<!--X-From-R13: Pra Vbpufgrqyre <orauNrrlber.zbarat.zrv.pbz> -->
+<!--X-Date: Mon, 29 Jun 1998 19:10:03 +0200 (CEST) -->
+<!--X-Message-Id: 199806291508.KAA23583@eeyore.moneng.mei.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00150">Date Index</a>][<a href="thrd4.shtml#00150">Thread Index</a>]<br>
+[<A HREF="msg00149.shtml">Date Prev</A>][<A HREF="msg00151.shtml">Date Next</A>][<A HREF="msg00143.shtml">Thread Prev</A>][<A HREF="msg00151.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: XML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ben Hochstedler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 29 Jun 1998 10:08:07 -0500 (CDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; Hmmmm.. I've followed the XML-stuff of the W3C only sparingly.  Ok, XML now is
+&gt; standardized, but as I know, there are no real applications available (like
+&gt; HTML for SGML). Only a few Java-based parsers and other experimental stuff is
+&gt; available. Only Mozilla 5 should contain some XML-parsing stuff. But because
+
+Microsoft's Internet Explorer as well as its office applications will
+support XML in their next major releases.
+
+&gt; the complete XML-topic is still in experimental stage, I've never though in
+&gt; the past that it is already interesting for WML. But perhaps time has changed
+&gt; now.  So, what concrete support for XML do think WML should have in the
+&gt; future?
+
+One way of describing WML is that it "helps automate the production and 
+simplify the maintanence of hyperlinked, stylistic documents."  You can 
+say the exact same thing about why XML is being created.  Maintaining
+large websites can be a pain without some tool.  Right now a lot of
+effort is focussed on scripting and using databases.  I think XML will
+reduce the amount of scripting and database necessary in helping
+to maintain websites.  Another way of seeing it is that it's going to
+do what SGML could have done, but because SGML was so complex and
+not easily learned, a more simplified version (XML) will provide some
+of the exciting and powerful features HTML didn't include from SGML.
+
+&gt; OTOH my plans for WML are the following: WML 1.x will be maintained by me at
+&gt; least for the next year but only enhanced slightly (because the implementation
+&gt; cannot be made a lot better this way and plans for WML 2.x are already in
+&gt; progress). Until then I hope that WML 2.x is available which is based on the
+&gt; tool I currently create as a prototype in my diploma thesis. And for this tool
+&gt; maximum speed and generality in usage is my primary goal (because what WML 1.x
+&gt; really lacks is performance). In other words: XML is one goal for WML 2.x,
+&gt; too. Yes. But perhaps it is easy to add XML support to WML 1.x and we can do
+&gt; it easily.  As long as it is possible for me to add it with my available time,
+&gt; I'll do it. And when someone contributes a patch we can have it in 1.x, of
+&gt; course.
+
+Your plans for WML sound good.
+
+&gt; But first we have to know what exact support for generating XML-based markup
+&gt; is needed in WML (please help us here with examples and hints). Then we can
+&gt; decide how much work it is.
+
+I should have been more clear in my first message.  What I meant was
+for WML to take XML as input and produce HTML, not for it to automate
+the construction of XML.
+
+Something that is going to be hard to develop are good tools for
+managing XML documents, and I can't see very easily how WML could be
+enhanced to do that.  What I see is that WML has scripting features
+to produce HTML that XML with CSS &amp; extended CSS can do if there were
+XML rendering applications that supported it.
+
+
+Am I way off base here?
+
+-Ben
+
+Ben Hochstedler         www.mei.com        Marquette Medical Systems
+ben.hochstedler@mail.mei.com  Phone: 414-362-3317  Fax: 414-362-3389
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00151" HREF="msg00151.shtml">Re: XML</A></strong>, <em>From:</em> Robin Stephenson</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00149.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00151.shtml">Re: XML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00143.shtml">XML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00151.shtml">Re: XML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00150"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00150"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: An "@" in the sliceterm makes wml fail? -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Wed, 29 Dec 1999 10:07:47 +0100 (MET) -->
+<!--X-Message-Id: 19991228195741.A15035@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01241">Date Index</a>][<a href="thrd26.shtml#01241">Thread Index</a>]<br>
+[<A HREF="msg01240.shtml">Date Prev</A>][<A HREF="msg01242.shtml">Date Next</A>][<A HREF="msg01237.shtml">Thread Prev</A>][<A HREF="msg01242.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>An &quot;@&quot; in the sliceterm makes wml fail?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Dec 1999 19:57:41 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis!
+
+While tweaking with Debian's web page Chinese portion to accommodate for
+variations among Mainland (CN) and Taiwan (TW) usage, I ran into some
+problem with wml's handling of "@" in the SLICETERM.  It perplexed me
+because a test with "slice" works just fine:
+
+  $ slice -o UNDEFuZH@uCN:index.zh-cn.html -o UNDEFuZH@uTW:index.zh-tw.html \
+    index.wml
+
+  $ slice -o UNDEFuZH@uCN:index.zh-cn.html -o UNDEFuZH@uTW:index.zh-tw.html \
+    &lt;or_whatever_the_tmp_output_file_after_pass_8&gt;
+
+But it fails with wml:
+
+  $ wml -o UNDEFuZH@uCN:index.zh-cn.html -o UNDEFuZH@uTW:index.zh-tw.html \
+    index.wml
+  cannot load UNDEFuZH for unprotection at /usr/bin/wml line 666.
+
+I knew "666" is evil!  &lt;grin, duck, run&gt;...  Anyway, that line is:
+
+    $fp-&gt;open("&lt;$file") || die "cannot load $file for unprotection";
+
+in /usr/bin/wml
+
+Removing "@" solves the problem, but then the output isn't what I want.  :-)
+Using ZH@uUNDEFuCN gives
+
+  cannot load ZH for unprotection at /usr/bin/wml line 666.
+
+and UNDEFuCNuZH@ gives
+
+  cannot load UNDEFuCNuZH for unprotection at /usr/bin/wml line 666.
+
+So, somehow, whatever is in front of "@" get put into the $file variable.
+Could you look into this when you have time?  Thanks!
+
+For now, I think I would work around this by running wml with passes 1-8
+and then calling slice separately.  :-)
+
+Cheers, and have a Happy New Year!
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+anthony_fok@catholic.org             Keep smiling!  *^_^*
+Come visit Our Lady of Victory Camp -- <A  HREF="http://come.to/olvc">http://come.to/olvc</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01242" HREF="msg01242.shtml">Re: An &quot;@&quot; in the sliceterm makes wml fail?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01240.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01242.shtml">Re: An &quot;@&quot; in the sliceterm makes wml fail?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01237.shtml">Re: Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01242.shtml">Re: An &quot;@&quot; in the sliceterm makes wml fail?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01241"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01241"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

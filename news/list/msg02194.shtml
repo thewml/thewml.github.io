@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 2.0.2 (22&#45;Jun&#45;2000) -->
+<!--X-From-R13: Xnzrf Ertneen <wfrtneenNFurSagrecevfr.zhp.qr> -->
+<!--X-Date: Sun, 8 Apr 2001 12:30:18 +0200 (MET DST) -->
+<!--X-Message-Id: 200104020056.f320unm08769@TheEnterprise -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02194">Date Index</a>][<a href="thrd37.shtml#02194">Thread Index</a>]<br>
+[<A HREF="msg02193.shtml">Date Prev</A>][<A HREF="msg02195.shtml">Date Next</A>][<A HREF="msg01913.shtml">Thread Prev</A>][<A HREF="msg01765.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: James Segarra &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 1 Apr 2001 20:56:49 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.2 (22-Jun-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     James Segarra
+Reply-To: jim@segarra.org
+
+PROBLEM DESCRIPTION:
+Crash upon launch
+
+PLATFORM CHARACTERISTICS:
+Used WML System:2.06
+Built Environment:
+    Host: i686-pc-linux-gnu2
+    Perl: 5.005 (/usr/bin/perl)
+    User: barbier@botzaris.polytechnique.fr
+    Date: 11-Jul-2000
+Built Location:
+    Prefix: /usr
+    BinDir: /usr/bin
+    LibDir: /usr/lib/wml
+    ManDir: /usr/man
+
+Used Perl System:
+Summary of my perl5 (revision 5.0 version 6 subversion 0) configuration:
+  Platform:
+    osname=linux, osvers=2.2.16-22smp, archname=i386-linux
+    uname='linux porky.devel.redhat.com 2.2.16-22smp #1 smp tue aug 22 16:39:21 edt 2000 i686 unknown '
+    config_args='-des -Doptimize=-O2 -march=i386 -mcpu=i686 -Dcc=gcc -Dcccdlflags=-fPIC -Dinstallprefix=/usr -Dprefix=/usr -Darchname=i386-linux -Dd_dosuid -Dd_semctl_semun -Di_db -Di_ndbm -Di_gdbm -Di_shadow -Di_syslog -Dman3ext=3pm -Uuselargefiles'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef use5005threads=undef useithreads=undef usemultiplicity=undef
+    useperlio=undef d_sfio=undef uselargefiles=undef 
+    use64bitint=undef use64bitall=undef uselongdouble=undef usesocks=undef
+  Compiler:
+    cc='gcc', optimize='-O2 -march=i386 -mcpu=i686', gccversion=2.96 20000731 (Red Hat Linux 7.0)
+    cppflags='-fno-strict-aliasing'
+    ccflags ='-fno-strict-aliasing'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=4
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -ldl -lm -lc -lcrypt
+    libc=/lib/libc-2.2.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fPIC', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options:
+  Built under linux
+  Compiled at Dec  7 2000 18:04:23
+  @INC:
+    /usr/lib/perl5/5.6.0/i386-linux
+    /usr/lib/perl5/5.6.0
+    /usr/lib/perl5/site_perl/5.6.0/i386-linux
+    /usr/lib/perl5/site_perl/5.6.0
+    /usr/lib/perl5/site_perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02193.shtml">Re: man for mp4h</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02195.shtml">Parsing WML to insert records into database</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01913.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01765.shtml">#use / verbose level</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02194"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#02194"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

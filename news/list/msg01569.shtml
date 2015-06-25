@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Todo list -->
+<!--X-From-R13: =?vfb&#45;8859&#45;1?C?Oyrxfv_@vrzry=S4?= <nyrxfv.avrzrynNpvaabore.pbz> -->
+<!--X-Date: Mon, 15 May 2000 14:25:27 +0200 (MET DST) -->
+<!--X-Message-Id: E536C8EE2A1FD31195370008C79FFA1F13F4E2@world.cinnober.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01569">Date Index</a>][<a href="thrd33.shtml#01569">Thread Index</a>]<br>
+[<A HREF="msg01568.shtml">Date Prev</A>][<A HREF="msg01570.shtml">Date Next</A>][<A HREF="msg01567.shtml">Thread Prev</A>][<A HREF="msg01571.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Todo list</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Aleksi Niemelä &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 12 May 2000 09:50:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; ** Write a replacement for gFont. The idea is to build logos with
+&gt;    antialiased characters, which is impossible with gFont.
+&gt;    Remco van den Berg wrote webbutton, which uses True Type fonts.
+&gt;    These fonts are the key.  I worked with Remco to improve its
+
+I don't know if this is the solution, but it might provide some thoughts or
+guidance:
+
+<A  HREF="http://typehack.aial.hiroshima-u.ac.jp/VFlib/">http://typehack.aial.hiroshima-u.ac.jp/VFlib/</A>
+
+This library can surely support multiple languages (it's internet time after
+all :) and font sources. As far as I can see from the web pages, the support
+for required 'antialiased characters' might be a little bit weak. They
+mention anti-aliasing for PGM bitmap format, but I don't know better than
+that.
+
+	- Aleksi
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01568.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01570.shtml">Re: VPATH (was: [ANNOUNCE] WML 2.0)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01567.shtml">Todo list</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01571.shtml">Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01569"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01569"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

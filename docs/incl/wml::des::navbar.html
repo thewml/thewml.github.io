@@ -1,0 +1,768 @@
+
+<html>
+<head>
+<title>Website META Language (WML), Documentation: Include File wml::des::navbar</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal">
+<meta name="Copyright" content="1996-2001 Engelschall, Germany.">
+<meta name="Author"    content="WML, wml@master.thewml.org">
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)">
+<meta name="Modified"  content="2005-05-05 12:04:59">
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function nb_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function nb_imgSelect(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_s.src');
+        self.status = '';
+    }
+}
+function nb_imgOver(imgName, nohints, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        if (! nohints) self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function ro_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function ro_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+if (document.images) {
+    ro_img_unknown1_n = new Image();
+    ro_img_unknown1_n.src = '../../com/navbar/button-n-sw.gif';
+    ro_img_unknown1_o = new Image();
+    ro_img_unknown1_o.src = '../../com/navbar/button-o-sw.gif';
+}
+// done hiding -->
+</script>
+</head>
+<body background="../../com/bg/bg.gif" bgcolor="#ffffff" text="#000000" link="#6060c0" alink="#6060f0" vlink="#6060a0">
+<table border="0" cellspacing="0" cellpadding="0" summary="">
+<tr>
+  <td align="left" valign="top">
+    <a href="http://swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+></a><br>
+<a href="../../../" onmouseover="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onmouseout="ro_imgNormal('ro_img_unknown1'); return true" onfocus="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onblur="ro_imgNormal('ro_img_unknown1'); return true"><img name="ro_img_unknown1" src="../../com/navbar/button-n-sw.gif" alt="Free Software Area" border="0"></a><br>
+    <img src="../../com/navbar/button-i-wml.gif" alt=""><br>
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="140" height="1" align="bottom" border="0">
+    <p>
+  </td>
+  <td align="center" valign="top">
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="5" height="1" align="bottom" border="0">
+  </td>
+  <td valign="top">
+    <table cellspacing="0" cellpadding="0" width="550" summary="">
+    <tr>
+      <td valign="top">
+        <img src="../../com/navbar/headline-docs.gif" alt="Documentation: Include File wml::des::navbar"><br>
+        <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table cellspacing="0" cellpadding="0" border="0" summary="">
+<tr>
+<td>
+&nbsp;
+&nbsp;
+</td>
+<td>
+<table bgcolor="#666699" cellspacing="0" cellpadding="0" border="0" summary="">
+<tr><td></td><td></td><td></td><td></td><td bgcolor="#000000"><img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="1" height="1" align="bottom" border="0"></td><td></td><td></td></tr>
+<tr>
+<td>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../index.html" onmouseover="self.status = '../index.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../index.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Introduction</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../frontend.html" onmouseover="self.status = '../frontend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../frontend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Frontends</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../backend.html" onmouseover="self.status = '../backend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../backend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Backends</font></a></font>&nbsp;&nbsp;</td>
+<td bgcolor="#ccccff">&nbsp;&nbsp;<font face="Arial,Helvetica"><b><a href="../incl.html" onmouseover="self.status = '../incl.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../incl.html'; return true" onblur="self.status = ''; return true"><font color="#000000">Includes</font></a></b></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../aux.html" onmouseover="self.status = '../aux.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../aux.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Auxilliaries</font></a></font>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src="../../com/imgdot/shared.imgdot-1x1-000000.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>wml::des::navbar - Navigation Bar</title>
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<ul>
+		<li><a href="#options_of__navbar_define__"><strong>Options of <code>&lt;navbar:define&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_header__"><strong>Options of <code>&lt;navbar:header&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_footer__"><strong>Options of <code>&lt;navbar:footer&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_prolog__"><strong>Options of <code>&lt;navbar:prolog&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_epilog__"><strong>Options of <code>&lt;navbar:epilog&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_button__"><strong>Options of <code>&lt;navbar:button&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_debug__"><strong>Options of <code>&lt;navbar:debug&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_render__"><strong>Options of <code>&lt;navbar:render&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_filter__"><strong>Options of <code>&lt;navbar:filter&gt;</code>:</strong></a></li>
+		<li><a href="#options_of__navbar_jsfuncs__"><strong>Options of <code>&lt;navbar:jsfuncs&gt;</code>:</strong></a></li>
+	</ul>
+	<li><a href="#examples">EXAMPLES</a></li>
+	<ul>
+		<li><a href="#classic_navigation_bar">Classic Navigation bar</a></li>
+		<li><a href="#nested_navigation_bar">Nested Navigation bar</a></li>
+	</ul>
+	<li><a href="#authors">AUTHORS</a></li>
+	<li><a href="#requires">REQUIRES</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>wml::des::navbar - Navigation Bar</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+<pre>
+ &lt;navbar:jsfuncs&gt;</pre>
+<pre>
+ &lt;navbar:define name=&lt;name&gt; [&lt;options&gt;]&gt;
+     &lt;navbar:header&gt;...&lt;/navbar:header&gt;
+     &lt;navbar:footer&gt;...&lt;/navbar:footer&gt;
+     &lt;navbar:prolog [&lt;options&gt;]&gt;...&lt;/navbar:prolog&gt;
+     &lt;navbar:epilog [&lt;options&gt;]&gt;...&lt;/navbar:epilog&gt;
+     &lt;navbar:button id=&lt;id1&gt; txt=... [&lt;options&gt;]&gt;
+          :
+     &lt;navbar:button id=&lt;idN&gt; txt=... [&lt;options&gt;]&gt;
+     &lt;navbar:filter&gt;...&lt;/navbar:filter&gt;
+ &lt;/navbar:define&gt;</pre>
+<pre>
+ &lt;navbar:debug name=&lt;name&gt;&gt;</pre>
+<pre>
+ &lt;navbar:render name=&lt;name&gt; [options]&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This include file defines a complex navigation bar container tag named
+<code>&lt;navbar:define&gt;</code>. It can be used to define navigation bars of any
+optical style by specifying its parts in general and individually and letting
+the <code>&lt;navbar:render&gt;</code> tag create the complete particular HTML code.
+Creating a navigation bar is a two step process. First you define it according
+to this grammar:</p>
+<pre>
+   navbar   ::= HEADER{0,1}
+                PROLOG{0,3} BUTTON{1,N} EPILOG{0,3}
+                FOOTER{0,1}
+                FILTER{0,1}</pre>
+<pre>
+   HEADER   ::= navbar:header</pre>
+<pre>
+   PROLOG   ::= navbar:prolog (type=N)
+              | navbar:prolog (type=S)
+              | navbar:prolog (type=SS)</pre>
+<pre>
+   BUTTON   ::= navbar:button</pre>
+<pre>
+   EPILOG   ::= navbar:epilog (type=N)
+              | navbar:epilog (type=S)
+              | navbar:epilog (type=SS)</pre>
+<pre>
+   FOOTER   ::= navbar:footer</pre>
+<pre>
+   FILTER   ::= navbar:filter</pre>
+<p>or in other words: navigation bar consists of an optional header and
+footer, up to three different (according to <code>type</code>) prologs and epilogs for
+the navigation buttons and at least one actual navigation button.
+Additionally a filter can be applied. The <code>navbar:XXXX</code> names in the above
+grammar directly correspond to the existing tags you have to use.</p>
+<p>After you have defined such a navigation bar (which is usually done inside an
+include file) you can create the corresponding HTML markup code by placing
+<code>&lt;navbar:render&gt;</code> at the point where this markup code should occur.
+This tag can be used more then once when you want (for instance inside a page
+header <em>and</em> its footer or once with graphics and once with the <a href="#item_txtonly"><code>txtonly</code></a>
+attribute for the textual version, etc.).</p>
+<p>Always notice that <code>&lt;navbar:render&gt;</code> has no internal built-in
+knowledge of your navigation bar except its structure according to the above
+grammar. So, you only receive nice results when you define a nice grammar
+instance with the available <code>navbar:XXXX</code> tags. The
+<code>&lt;navbar:render&gt;</code> tag is not there to create nice things you usually
+couldn't do yourself. It is there to avoid the nasty compilation of one
+million prologs and epilogs for each button where each of these consists of
+similar HTML code. So, <code>&lt;navbar:render&gt;</code> is your workhorse, the
+intelligence is yours.</p>
+<p>But how do we actually get navigation bars? Haven't we forgot something which
+is essential to navigation bars? Yes, we have. Navigation bars feature is that
+we can define them at one point for the underlaying hyperlink structure and
+use them at any point inside this structure while the hyperlinks are
+automatically aligned for the current location. But this feature the core of
+WML already provides through its adjustable path variables. So, this include
+file is useless without this feature. Or in other words: You really have to
+define some root-variable of your structure in a <em>.wmlrc</em> file and then use
+this variable when defining the hyperlinks inside the <code>&lt;navbar:button&gt;</code>'s
+<code>url</code> attribute. Never forget this point!</p>
+<p>For complete examples see under <code>EXAMPLES</code> below.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<p>
+</p>
+<h2><a name="options_of__navbar_define__"><strong>Options of <code>&lt;navbar:define&gt;</code>:</strong></a></h2>
+<p>This defines the navigation bar.</p>
+<dl>
+<dt><strong><a name="item_name_3dstr">name=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+This sets the name of the navigation bar which is used both for internal data
+respresentation and for referencing in <code>&lt;navbar:debug&gt;</code> and
+<code>&lt;navbar:render&gt;</code>. Always use this attribute (or you risk other
+navigation bars to be overwritten) and always use a unique name here when
+using more then one navigation bar.
+</dd>
+<p></p>
+<dt><strong><a name="item_imgstar_3dspec">imgstar=<em>SPEC</em></a></strong><br />
+</dt>
+<dd>
+This contains a colon-separated list of three strings. They are used for
+substitution of asterisks in the <code>&lt;navbar:button&gt;</code>'s <code>img</code> attribute
+when this attribute only contains one image filename and this filename
+contains an asterisk. In other words: this single image filename is expanded
+to a colon-separated list of three image filenames while for each filename the
+asterisk is substituted with the corresponding string from the <code>imgstar</code>
+attribute.
+</dd>
+<dd>
+<p>Example:</p>
+</dd>
+<dd>
+<pre>
+  &lt;navbar:define imgstar=std:sel:ovr ...&gt;
+    ...
+    &lt;navbar:button img=button-1-*.gif ...&gt;
+    &lt;navbar:button img=button-2-*.gif ...&gt;
+    ...
+  &lt;/navbar:define&gt;</pre>
+</dd>
+<dd>
+<p>This is equivalent to the following:</p>
+</dd>
+<dd>
+<pre>
+  &lt;navbar:define ...&gt;
+    ...
+    &lt;navbar:button img=button-1-std.gif:button-1-sel.gif:button-1-ovr.gif ...&gt;
+    &lt;navbar:button img=button-2-std.gif:button-2-sel.gif:button-2-ovr.gif ...&gt;
+    ...
+  &lt;/navbar:define&gt;</pre>
+</dd>
+<p></p>
+<dt><strong><a name="item_imgbase_3dpath">imgbase=<em>PATH</em></a></strong><br />
+</dt>
+<dd>
+Defines a common image base directory, i.e. all non-absolute pathnames in
+<code>&lt;navbar:button&gt;</code>'s <code>img</code> attributes are prefixed with <em>PATH</em>. Per
+default there is no such prefix.
+</dd>
+<p></p>
+<dt><strong><a name="item_urlbase_3dpath">urlbase=<em>PATH</em></a></strong><br />
+</dt>
+<dd>
+Defines a common navigation base directory, i.e. all non-absolute pathnames in
+<code>&lt;navbar:button&gt;</code>'s <code>url</code> attributes are prefixed with <em>PATH</em>. Per
+default there is no such prefix. Is is useful that <em>PATH</em> itself contains an
+WML adjustable path variable.
+</dd>
+<p></p>
+<dt><strong><a name="item_target_3dstr">target=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The target frame or window to which all hyperlinks are per default redirected
+to. This can be overwritten by the <code>target</code> attribute of
+<code>&lt;navbar:button&gt;</code>.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="options_of__navbar_header__"><strong>Options of <code>&lt;navbar:header&gt;</code>:</strong></a></h2>
+<p>This defines the global header for the navigation bar.
+Currently there are no attributes used.</p>
+<p>
+</p>
+<h2><a name="options_of__navbar_footer__"><strong>Options of <code>&lt;navbar:footer&gt;</code>:</strong></a></h2>
+<p>This defines the global footer for the navigation bar.
+Currently there are no attributes used.</p>
+<p>
+</p>
+<h2><a name="options_of__navbar_prolog__"><strong>Options of <code>&lt;navbar:prolog&gt;</code>:</strong></a></h2>
+<p>This defines the prolog of <code>&lt;navbar:button&gt;</code>s, i.e. the local header for
+each navigation button.</p>
+<dl>
+<dt><strong><a name="item_pos_3dspec">pos=<em>SPEC</em></a></strong><br />
+</dt>
+<dd>
+This sets the button position where to apply this prolog, i.e. the number of
+the button starting with the number 1. Use this to apply a special prolog to a
+particular button only. The default is <code>any</code> for <em>SPEC</em> which means: apply
+this prolog to any button as long as there is no specially defined one for it.
+There are three important special values for <em>SPEC</em>: <code>first</code> (=1), <code>last</code>
+(=number of used <code>&lt;navbar:button&gt;</code>'s) and <code>next</code> which
+applies to the next button only.
+</dd>
+<p></p>
+<dt><strong><a name="item_type_3dspec">type=<em>SPEC</em></a></strong><br />
+</dt>
+<dd>
+This sets the type of application of this button. There are three possible
+values for <em>SPEC</em>: ``<code>N</code>'' (normal: used for buttons in normal state),
+``<code>S</code>'' (selected: used for selected buttons) and ``<code>SS</code>'' (sub-selected:
+used for selected buttons but level is deeper).
+</dd>
+<dd>
+<p>This type is triggered by the <a href="#item_select_3did"><code>select=ID</code></a> and <a href="#item_subselected"><code>subselected</code></a> attributes of
+<code>&lt;navbar:render&gt;</code>.</p>
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="options_of__navbar_epilog__"><strong>Options of <code>&lt;navbar:epilog&gt;</code>:</strong></a></h2>
+<p>This defines the epilog of <code>&lt;navbar:button&gt;</code>s, i.e. the local footer
+for each navigation button. The available attributes or the same as for
+<code>&lt;navbar:prolog&gt;</code>.</p>
+<p>
+</p>
+<h2><a name="options_of__navbar_button__"><strong>Options of <code>&lt;navbar:button&gt;</code>:</strong></a></h2>
+<p>This defines a particular navigation button, i.e. a text or image surrounded
+by a hyperlink plus a few special features like status bar hints and a
+rollover effect for images.</p>
+<dl>
+<dt><strong><a name="item_id_3dstr">id=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The identification string for this button. This has to be a unique identifier
+which later is used with <code>&lt;navbar:render&gt;</code>'s <code>select</code> attribute to
+mark this button as selected.
+</dd>
+<p></p>
+<dt><strong><a name="item_alias_3dstr">alias=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The former <code>id</code> attribute has to be unique. This tag allows you to
+group buttons as if they had the same <code>id</code> attribute.
+</dd>
+<p></p>
+<dt><strong><a name="item_txt_3dstr">txt=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The textual representation of the button which is displayed.
+When no <code>alt</code> attribute is specified, it defaults to the value
+of this <code>txt</code> attribute.
+</dd>
+<p></p>
+<dt><strong><a name="item_alt_3dstr">alt=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The <code>alt</code> attribute for the created <code>&lt;img&gt;</code> tags. When images are
+not displayed this is used instead by most browsers. If images are displayed
+this is ignored by most browsers. It defaults to the value of the <code>txt</code>
+attribute.
+</dd>
+<p></p>
+<dt><strong><a name="item_img_3dspec">img=<em>SPEC</em></a></strong><br />
+</dt>
+<dd>
+The <code>image(s)</code> to display for this button. This can be a single image file or a
+colon-separated list of three images. The first one is the normal button, the
+second one is the selected button variant and the third one is the variant
+which is displayed when the mouse is over the button (but only if the button
+is not a selected one).
+</dd>
+<p></p>
+<dt><strong><a name="item_hint_3dstr">hint=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The text displayed in the browsers status bar when the mouse
+is over the button.
+</dd>
+<p></p>
+<dt><strong><a name="item_url_3dpath">url=<em>PATH</em></a></strong><br />
+</dt>
+<dd>
+The hyperlink URL which is activated when the button is pressed. There
+are three special URLs: <code>#UP#</code>, <code>#PREV#</code> and <code>#NEXT#</code>, which refer
+to the node one level up, the previous or the next node.
+</dd>
+<p></p>
+<dt><strong>target=<em>STR</em></strong><br />
+</dt>
+<dd>
+A target frame or window where the hyperlink is redirected to.
+</dd>
+<p></p>
+<dt><strong><a name="item_menu_3dstr">menu=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The name of a navigation bar to insert at this point.
+</dd>
+<p></p>
+<dt><strong><a name="item__3aa_3aattr_3dstr__3aimg_3aattr_3dstr">:a:<em>ATTR</em>=<em>STR</em> :img:<em>ATTR</em>=<em>STR</em></a></strong><br />
+</dt>
+<dd>
+The ``<em>ATTR</em>=<em>STR</em>'' pairs are passed along to the desired HTML tags.
+It is also possible to add a prefix to tag name to select only normal
+(<code>.N</code>), selected (<code>.S</code>) or subselected (<code>.SS</code>) buttons.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="options_of__navbar_debug__"><strong>Options of <code>&lt;navbar:debug&gt;</code>:</strong></a></h2>
+<p>Use this tag while developing your navigation bar definition.
+It dumps the internal structure of this definition.</p>
+<dl>
+<dt><strong>name=<em>STR</em></strong><br />
+</dt>
+<dd>
+The name of the navigation bar to dump. See the corresponding <code>name</code>
+attribute of <code>&lt;navbar:define&gt;</code>.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="options_of__navbar_render__"><strong>Options of <code>&lt;navbar:render&gt;</code>:</strong></a></h2>
+<dl>
+<dt><strong>name=<em>STR</em></strong><br />
+</dt>
+<dd>
+The name of the navigation bar definition to use when rendering.
+</dd>
+<p></p>
+<dt><strong><a name="item_select_3did">select=<em>ID</em></a></strong><br />
+</dt>
+<dd>
+Select a particular button as selected.
+</dd>
+<p></p>
+<dt><strong><a name="item_subselected">subselected</a></strong><br />
+</dt>
+<dd>
+Marks the selected button as a subselected one, i.e. the current page for
+which the button is selected is deeper than the original page for which
+this button stands.
+</dd>
+<p></p>
+<dt><strong><a name="item_txtcol_select_3d_23rrggbb">txtcol_select=<em>#rrggbb</em></a></strong><br />
+</dt>
+<dd>
+This is a hack because of the HTML rendering of typical browsers on anchors.
+You have to use this attribute when you want to create textual
+navigations bars with specific colors, this can not be performed with
+prologs and epilogs when defining navbars.
+</dd>
+<p></p>
+<dt><strong><a name="item_txtcol_normal_3d_23rrggbb">txtcol_normal=<em>#rrggbb</em></a></strong><br />
+</dt>
+<dd>
+This is the corresponding tag to <code>txtcol_select</code> because we want to
+have a homogen configuration style.
+</dd>
+<p></p>
+<dt><strong><a name="item_menumode_3dinner_7couter">menumode=<em>inner|outer</em></a></strong><br />
+</dt>
+<dd>
+With <strong>menumode=inner</strong> (default), a selected sub-menu is inserted
+before epilog of current entry, otherwise it is put after.
+</dd>
+<p></p>
+<dt><strong><a name="item_txtonly">txtonly</a></strong><br />
+</dt>
+<dd>
+Forces the rendering to ignore all defined images.
+</dd>
+<p></p>
+<dt><strong><a name="item_nohints">nohints</a></strong><br />
+</dt>
+<dd>
+Do not create Javascript hints for navigation buttons.
+</dd>
+<p></p>
+<dt><strong>:a:<em>ATTR</em>=<em>STR</em> :img:<em>ATTR</em>=<em>STR</em></strong><br />
+</dt>
+<dd>
+The ``<em>ATTR</em>=<em>STR</em>'' pairs are passed along to all the desired HTML
+tags found in this navbar. It is also possible to add a prefix to tag
+name to select only normal (<code>.N</code>), selected (<code>.S</code>) or subselected
+(<code>.SS</code>) buttons. For instance with
+</dd>
+<dd>
+<pre>
+   &lt;navbar:render name=main :img:class=nav
+      :a.N:class=nav-n :a.S:class=nav-s :a.SS:class=nav-ss /&gt;</pre>
+</dd>
+<dd>
+<p>attribute ``class=``nav'''' is added to all images, ``class=``nav-s'''' is
+added to anchor when button is selected (this is a dummy example, since
+when button is selected, there is no such anchor), ``class=``nav-ss'''' is
+added when button is subselected, and normal links have ``class=``nav-n''''.</p>
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="options_of__navbar_filter__"><strong>Options of <code>&lt;navbar:filter&gt;</code>:</strong></a></h2>
+<p>This defines the body of a Perl filtering function which can be used to
+post-process the generated HTML markup code before it is written out.
+Currently there are no attributes used.</p>
+<p>When no <code>&lt;navbar:filter&gt;</code> tag is specified, no such
+filtering occurs. When</p>
+<pre>
+  &lt;navbar:filter&gt; BODY &lt;/navbar:filter&gt;</pre>
+<p>is specified, internally an anonymous Perl function is created
+and the HTML markup code is filtered through this function
+as follows:</p>
+<pre>
+  $func = sub { BODY };
+  $markup_code = &amp;{$func}($markup_code, $CFG, $select);</pre>
+<p>where <code>$CFG</code> is the internal configuration structure as seen with
+<code>&lt;navbar:debug&gt;</code> and <code>$markup_code</code> is a literal string holding the
+HTML markup code. In other words, when you want to apply a filter, you have to
+do it with the following skeleton:</p>
+<pre>
+  &lt;navbar:filter&gt;
+      my ($mcode, $CFG, $select) = @_;
+      ...
+      return $mcode;
+  &lt;/navbar:filter&gt;</pre>
+<p>
+</p>
+<h2><a name="options_of__navbar_jsfuncs__"><strong>Options of <code>&lt;navbar:jsfuncs&gt;</code>:</strong></a></h2>
+<p>This prints Javascript functions used for rollover effects on images.
+This macro discards itself after first invocation so that definitions
+are printed only once. It is automatically called by
+<code>&lt;navbar:render&gt;</code>, so it could looks useless. But if you
+consider</p>
+<pre>
+  &lt;en&gt;&lt;navbar:render name=main&gt;&lt;/en&gt;
+  &lt;fr&gt;&lt;navbar:render name=main&gt;&lt;/fr&gt;</pre>
+<p>javascript code only appears in English version. The correct solution
+is to put this tag outside of any slice:</p>
+<pre>
+  &lt;navbar:jsfuncs&gt;
+  &lt;en&gt;&lt;navbar:render name=main&gt;&lt;/en&gt;
+  &lt;fr&gt;&lt;navbar:render name=main&gt;&lt;/fr&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="examples">EXAMPLES</a></h1>
+<p>
+</p>
+<h2><a name="classic_navigation_bar">Classic Navigation bar</a></h2>
+<p>File: nb.inc</p>
+<pre>
+  &lt;navbar:define name=test
+          imgbase=&quot;img/&quot; urlbase=&quot;$(ROOT)&quot;
+          txtcol_normal=&quot;#000000&quot; txtcol_select=&quot;#ffffff&quot;&gt;
+    &lt;navbar:header&gt;
+      &lt;table cellspacing=1 cellpadding=2 border=0&gt;
+      &lt;tr&gt;
+    &lt;/navbar:header&gt;</pre>
+<pre>
+    &lt;navbar:prolog&gt;        &lt;td bgcolor=&quot;#cccccc&quot;&gt; &lt;/navbar:prolog&gt;
+    &lt;navbar:prolog type=S&gt; &lt;td bgcolor=&quot;#cc3333&quot;&gt; &lt;/navbar:prolog&gt;</pre>
+<pre>
+    &lt;navbar:button id=foo txt=&quot;Foo&quot; url=&quot;foo.html&quot; hint=&quot;The Foo Page&quot;&gt;
+    &lt;navbar:button id=bar txt=&quot;Bar&quot; url=&quot;bar.html&quot; hint=&quot;The Bar Page&quot;&gt;
+    &lt;navbar:button id=baz txt=&quot;Baz&quot; url=&quot;baz.html&quot; hint=&quot;The Baz Page&quot;&gt;</pre>
+<pre>
+    &lt;navbar:epilog&gt; &lt;/td&gt; &lt;/navbar:epilog&gt;</pre>
+<pre>
+    &lt;navbar:footer&gt;
+      &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/navbar:footer&gt;
+  &lt;/navbar:define&gt;</pre>
+<pre>
+  &lt;navbar:render name=$(name) select=$(select)&gt;</pre>
+<p>File: .wmlrc</p>
+<pre>
+  -DROOT~.
+  -I.</pre>
+<p>File: foo.wml
+</p>
+<pre>
+
+<pre>
+
+  &lt;page indent=2&gt;</pre>
+<pre>
+<pre>
+  &lt;h1&gt;The Foo Page&lt;/h1&gt;
+  &lt;p&gt;
+  Foo...</pre>
+<p>File: bar.wml</p>
+<pre>
+  
+  &lt;page indent=2&gt;</pre>
+<pre>
+<pre>
+  &lt;h1&gt;The Bar Page&lt;/h1&gt;
+  &lt;p&gt;
+  Bar...</pre>
+<p>
+</p>
+<h2><a name="nested_navigation_bar">Nested Navigation bar</a></h2>
+<p>File: nb.inc</p>
+<pre>
+  &lt;navbar:define
+          name=test imgbase=&quot;img/&quot;
+          txtcol_normal=&quot;#000000&quot; txtcol_select=&quot;#ffffff&quot;&gt;
+    &lt;navbar:header&gt;
+      &lt;ul&gt;
+    &lt;/navbar:header&gt;
+    &lt;navbar:prolog&gt;&lt;li&gt;&lt;/navbar:prolog&gt;</pre>
+<pre>
+    &lt;navbar:button id=foo txt=&quot;Foo&quot; url=&quot;foo.html&quot;&gt;
+    &lt;navbar:button id=bar txt=&quot;Bar&quot; url=&quot;bar.html&quot; menu=&quot;nb-bar&quot;&gt;</pre>
+<pre>
+    &lt;navbar:footer&gt;
+      &lt;/ul&gt;
+    &lt;/navbar:footer&gt;
+  &lt;/navbar:define&gt;
+  &lt;navbar:define name=&quot;nb-bar&quot;&gt;
+    &lt;navbar:header&gt;
+      &lt;ul&gt;
+    &lt;/navbar:header&gt;
+    &lt;navbar:prolog&gt;&lt;li&gt;&lt;/navbar:prolog&gt;</pre>
+<pre>
+    &lt;navbar:button txt=&quot;First bar item&quot;&gt;
+    &lt;navbar:button txt=&quot;Second bar item&quot;&gt;</pre>
+<pre>
+    &lt;navbar:footer&gt;
+      &lt;/ul&gt;
+    &lt;/navbar:footer&gt;
+  &lt;/navbar:define&gt;</pre>
+<pre>
+  &lt;navbar:render name=test select=$(select)&gt;</pre>
+<p>File: foo.wml
+</p>
+<pre>
+
+<pre>
+
+  &lt;page indent=2&gt;</pre>
+<pre>
+<pre>
+  &lt;h1&gt;The Foo Page&lt;/h1&gt;
+  &lt;p&gt;
+  Foo...</pre>
+<p>File: bar.wml</p>
+<pre>
+  
+  &lt;page indent=2&gt;</pre>
+<pre>
+<pre>
+  &lt;h1&gt;The Bar Page&lt;/h1&gt;
+  &lt;p&gt;
+  Bar...</pre>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com</pre>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com</pre>
+<p>
+</p>
+<hr />
+<h1><a name="requires">REQUIRES</a></h1>
+<pre>
+ Internal: P1, P2, P3
+ External: --
+
+</pre>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p><code>wml(1)</code>
+</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

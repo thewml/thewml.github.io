@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Feature request: removal of "unwanted" tags -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Thu, 29 Jan 1998 15:17:18 +0100 (MET) -->
+<!--X-Message-Id: m1k9bjh9xw.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.980128100735.19790A&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00064">Date Index</a>][<a href="thrd2.shtml#00064">Thread Index</a>]<br>
+[<A HREF="msg00063.shtml">Date Prev</A>][<A HREF="msg00065.shtml">Date Next</A>][<A HREF="msg00063.shtml">Thread Prev</A>][<A HREF="msg00067.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Feature request: removal of &quot;unwanted&quot; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 29 Jan 1998 11:05:31 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jim Hebert &lt;jhebert@compu-aid.com&gt; writes:
+
+&gt; Perhaps in the mean time you could override tags -- so that &lt;b&gt; expands to
+&gt; ""? I hope I'm remembering correctly that one of the things you can do is
+&gt; redefine existing tags...
+
+Sure, that's a possibility. But it would be a lot less work to just
+specify what's allowed and much easier to maintain (as the number of
+"official" tags is bound to increase with each release of HTML and
+Netscape and IE).
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://www.ee-staff.ethz.ch/~zaucker/">http://www.ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00063" HREF="msg00063.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00063.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00065.shtml">Compilation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00063.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00067.shtml">Webdesign presentation (german)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00064"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00064"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

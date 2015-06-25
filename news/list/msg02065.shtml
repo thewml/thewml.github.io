@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [RFC] &#38; in URLs -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Tue, 14 Nov 2000 21:55:05 +0100 (MET) -->
+<!--X-Message-Id: 20001114211747.P2797@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001113091013.A18699@imacs.polytechnique.fr -->
+<!--X-Reference: 3A10F702.1D954405@snafu.de -->
+<!--X-Reference: 20001114110745.A28590@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02065">Date Index</a>][<a href="thrd42.shtml#02065">Thread Index</a>]<br>
+[<A HREF="msg02064.shtml">Date Prev</A>][<A HREF="msg02066.shtml">Date Next</A>][<A HREF="msg02064.shtml">Thread Prev</A>][<A HREF="msg02066.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [RFC] &amp; in URLs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Nov 2000 21:17:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 14 Nov 2000, Denis Barbier wrote:
+
+&gt; But then, your
+&gt;   &lt;href url="foo.html?bar=x&amp;amp;baz=quux"&gt;
+&gt; will be transformed into
+&gt;   &lt;a href="foo.html?bar=x&amp;amp;amp;baz=quux"&gt;foo.html?bar=x&amp;amp;amp;baz=quux&lt;/a&gt;
+&gt; unless a special attribute is set.
+
+Isn't there a chance to configure an exception for &amp;foo; tags?  I
+sometimes use &amp;auml; for ä and something like this and I don't like
+WML to convert this to &amp;amp;auml; which doesn't make sense.
+
+&gt; If there is no objection, i will implement c.2, since there is a
+&gt; consensus on it.
+
+If c.2 means, that &amp;auml; is converted to &amp;amp;auml; by default, I
+personally prefer c.1.  Otherwise correct HTML would be converted to
+broken HTML by default and IMHO correct HTML should keep correct HTML
+when piped through wml.
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02059" HREF="msg02059.shtml">[RFC] &amp; in URLs</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02063" HREF="msg02063.shtml">Re: [RFC] &amp; in URLs</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02064" HREF="msg02064.shtml">Re: [RFC] &amp; in URLs</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02064.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02066.shtml">eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02064.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02066.shtml">eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02065"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02065"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

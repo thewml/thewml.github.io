@@ -1,0 +1,159 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Javascript missing -->
+<!--X-From-R13: [vpunry Yerff <xerffNuny.fnne.qr> -->
+<!--X-Date: Tue, 13 Feb 2001 01:46:41 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0102130132001.21957&#45;100000@hal.saar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3A82D7E2.80609@club&#45;internet.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02131">Date Index</a>][<a href="thrd43.shtml#02131">Thread Index</a>]<br>
+[<A HREF="msg02130.shtml">Date Prev</A>][<A HREF="msg02132.shtml">Date Next</A>][<A HREF="msg02128.shtml">Thread Prev</A>][<A HREF="msg02129.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Javascript missing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Kress &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 13 Feb 2001 01:43:41 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+sorry for not writing so long, debugging took me so long! :-)
+Well, *yippie :-D* I coped without modifying the wml installation files.
+I didn't find the bug though, but I had another project where this feature
+worked, so I took the main template file from there, copied it and
+transformed it back to the original. OK, that's quite a hard way, but in
+the end ... it worked. ;-) If you want an example set of files from the
+other project, have a look @ my hp under www.michael-kress.de/tmpl
+I hope, this will survive the next major releases ... :)
+Thanx anyways!
+Greetings - Michael
+
+
+On Thu, 8 Feb 2001, Jean-Michel Sauvage wrote:
+
+&gt; Michael Kress wrote:
+&gt; 
+&gt; &gt; Hello,
+&gt; Hello !
+&gt; 
+&gt; &gt; generated, while using sub navbars.
+&gt; &gt; I'm just getting errors like:
+&gt; &gt; ------------------------------------------------------------------------------------------
+&gt; &gt; JavaScript Error:
+&gt; &gt; file:/var/local/offshore/aktuelle_Projekte/mohme/version_0_3/nodistr/wml/service-al.html,
+&gt; &gt; line 93:
+&gt; &gt; nb_imgOver is not defined. 
+&gt; 
+&gt; &gt; Has anybody got any clue for that behaviour ? What can I do ?
+&gt; &gt; 
+&gt; 
+&gt; this problem seems to be complex :
+&gt; 
+&gt; 1) in /usr/lib/wml/include/des/navbar.wml file, there's a macro : 
+&gt; &lt;define-tag navbar:jsfuncs&gt;
+&gt; at the end of this macro there is this line :
+&gt; &lt;define-tag navbar:jsfuncs&gt;&lt;/define-tag&gt;
+&gt; 
+&gt; so the JS code will be generated one time and only once ;
+&gt; 
+&gt; 2) in /usr/lib/wml/include/std/tags.wml you'll find &lt;javascript&gt; macro.
+&gt; the JS code is diverted with &lt;head&gt; tag (and [LANG_* ...)
+&gt; 
+&gt; so, JS code is diverted one time in page head where your (sub)navbar is 
+&gt; define !
+&gt; 
+&gt; if you define &lt;snb&gt; before &lt;page&gt; tag  and if you have a .wml file per 
+&gt; final .html page, or if you have a multipages .wml, your JS code may be 
+&gt; diverted in a wrong &lt;head&gt; (you can debug this after pass 3)
+&gt; 
+&gt; a solution is to copy the &lt;javascript&gt; define-tag to make your own (eg 
+&gt; MK_javascript) and modify the navbar:jsfuncs (un)define-tag (the kind of 
+&gt; solution depends on multipages use or not)
+&gt; 
+&gt; but it's not finished, there's also another problem if you use 
+&gt; multipages features :
+&gt; you will have to modify /usr/lib/include/std/page.wml :
+&gt; &lt;head&gt; and &lt;title&gt; definitions ends with :##}
+&gt; replace it with :#WML_PAGE_HEAD_&lt;get-var __std_page_cnt /&gt;#}
+&gt; if you want JS code correctly diverted to each page_head
+&gt; 
+&gt; 
+&gt; &gt; Thanks for any helpful comment!
+&gt; &gt; 
+&gt; you're welcome
+&gt; 
+&gt; Jean-Michel Sauvage
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Michael Kress / kress@hal.saar.de / coroner@irc
+<A  HREF="http://www.michael-kress.de">http://www.michael-kress.de</A>
+To increase system performance press CTRL+D now.
+P E N G U I N S   A R E   C O O L.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02128" HREF="msg02128.shtml">Re: Javascript missing</A></strong>, <em>From:</em> Jean-Michel Sauvage</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02130.shtml">Re: wml &amp; cookies</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02132.shtml">Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02128.shtml">Re: Javascript missing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02129.shtml">wml &amp; cookies</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02131"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02131"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

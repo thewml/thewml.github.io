@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: parent dir breaks Diversion -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Thu, 26 Apr 2001 20:21:56 +0200 (MET DST) -->
+<!--X-Message-Id: 200104261821.DAA20959@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02209">Date Index</a>][<a href="thrd45.shtml#02209">Thread Index</a>]<br>
+[<A HREF="msg02208.shtml">Date Prev</A>][<A HREF="msg02210.shtml">Date Next</A>][<A HREF="msg02243.shtml">Thread Prev</A>][<A HREF="msg02212.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>parent dir breaks Diversion</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 27 Apr 2001 03:21:37 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi,
+
+  I found a bug in wml-2.1a1 (also in SNAP).
+
+---- input
+&lt;&lt;head&gt;&gt;
+..head&gt;&gt;This is OK.&lt;&lt;..
+&lt;a href="../"&gt;Parent dir&lt;/a&gt;
+..head&gt;&gt;This is NG.&lt;&lt;..
+
+---- output
+This is OK.
+&lt;a href="../"&gt;Parent&lt;/a&gt;
+..head&gt;&gt;This is NG.
+
+--- correct, I think.
+This is OK.
+This is NG.
+&lt;a href="../"&gt;Parent&lt;/a&gt;
+---
+
+  I made a patch, but I'm not good at perl,
+so please take care.
+
+--- /usr/lib/wml/exec/wml_p5_divert.orig	Fri Apr 27 02:44:37 2001
++++ /usr/lib/wml/exec/wml_p5_divert	Fri Apr 27 02:52:35 2001
+@@ -203,9 +203,12 @@
+         #   calculate the minimum amount of plain characters we can skip
+         my $l = length($remain);
+         my $i1 = index($remain, '&lt;&lt;');  $i1 = ($i1 == -1 ? $l : $i1);
+-        my $i2 = index($remain, '..');
++        my $i2 = -1;
+         #   Skip ../ which is often used in URLs
+-        $i2 = $l if ($i2 == -1 or substr($remain, $i2+2, 1) eq '/');
++        do {
++            $i2 = index($remain, '..', $i2+1);
++        } while (substr($remain, $i2+2, 1) eq '/');
++        $i2 = $l if $i2 == -1;
+ 
+         my $i3 = index($remain, '{#');  $i3 = ($i3 == -1 ? $l : $i3);
+         my $i4 = index($remain, ':#');  $i4 = ($i4 == -1 ? $l : $i4);
+
+  One thing more, I think
+
+	$i1 = ($i1 == -1 ? $l : $i1);
+
+is tricky. Isn't
+
+	$i1 = $l if $i1 == -1;
+
+quicker and more readable?
+
+-- Regards,
+Nobuyuki Tsuchimura
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02212" HREF="msg02212.shtml">Re: parent dir breaks Diversion</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02208.shtml">BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02210.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02243.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02212.shtml">Re: parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02209"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02209"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

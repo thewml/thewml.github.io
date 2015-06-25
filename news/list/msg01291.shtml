@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Sat, 22 Jan 2000 15:14:23 +0100 (MET) -->
+<!--X-Message-Id: 14473.45169.390232.220355@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m12BffQ&#45;001GKgC@mero.imago&#45;viva.de -->
+<!--X-Reference: Pine.LNX.3.96.1000121191128.5290A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01291">Date Index</a>][<a href="thrd23.shtml#01291">Thread Index</a>]<br>
+[<A HREF="msg01290.shtml">Date Prev</A>][<A HREF="msg01292.shtml">Date Next</A>][<A HREF="msg01290.shtml">Thread Prev</A>][<A HREF="msg01302.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 22 Jan 2000 14:54:36 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier writes:
+ &gt; On Fri, 21 Jan 2000, Carsten Wartmann wrote:
+ &gt; 
+ &gt; &gt; PROBLEM DESCRIPTION:
+ &gt; &gt; Running wml under a normal user account doesn't reads .wmlrc
+ &gt; &gt; files. Running under the root-account works as expected. I have
+ &gt; &gt; compared the strace output running under the two accounts but can´t
+ &gt; &gt; figure out what problem occours at the point the two logs differ. 
+ &gt; &gt; 
+ &gt; &gt; Also it wasn't possible to compile (not make install of course) wml
+ &gt; &gt; under a user account, it fails to compile Readkey and getoptlong 
+ &gt; 
+ &gt; Did you compile from scratch or from a previous compilation?
+ &gt; I never had problem when compiling from scratch, but there may be
+ &gt; problems after a ``make distclean'', i do not know.
+
+As user or root I get on a fresh unpacked wml:
+
+make[1]: Entering directory `/usr/src/wml-1.7.4/wml_common'
+===&gt; wml_common/getoptlong
+Checking if your kit is complete...
+Can't exec "pwd": Too many levels of symbolic links at /usr/lib/perl5/Cwd.pm line 69.
+Looks good
+Writing Makefile for Getopt::Long
+make[2]: Entering directory `/usr/src/wml-1.7.4/wml_common/getoptlong'
+make[2]: *** No rule to make target `pure_all'.  Stop.
+make[2]: Leaving directory `/usr/src/wml-1.7.4/wml_common/getoptlong'
+make[1]: [all] Error 1 (ignored)
+make[1]: Leaving directory `/usr/src/wml-1.7.4/wml_common'
+
+This ends in no program from wml-common....
+
+Same for htmlclean...
+
+This is crazy, I was at least one time able to make it (not counting
+the problem thet it doesn´t read my .wmlrc).
+
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01288" HREF="msg01288.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Carsten Wartmann</li>
+<li><strong><A NAME="01289" HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01290.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01292.shtml">Questions...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01290.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01302.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01291"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01291"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

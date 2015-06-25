@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: WML under Windows... -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNenqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Thu, 20 Jun 2002 12:16:34 +0200 (MET DST) -->
+<!--X-Message-Id: 000301c21843$774a51f0$4601a8c0@DELL8000 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020620093903.GA5007@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02621">Date Index</a>][<a href="thrd53.shtml#02621">Thread Index</a>]<br>
+[<A HREF="msg02620.shtml">Date Prev</A>][<A HREF="msg02622.shtml">Date Next</A>][<A HREF="msg02620.shtml">Thread Prev</A>][<A HREF="msg02622.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 20:15:51 +1000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thanks....
+
+That worked. I am getting there. WML and WMK both work... Except there
+are some issues that stop it running... The major one is that the
+.../aux/... Directory is not legal in Cygwin. That is because AUX is a
+physical device - com port from memory. I am looking through this to see
+what I can do.
+
+I have also disabled all the STRIP commands at the moment since they
+were causing me problems. 
+
+It is looking more than hopeful that we will have WML running under
+windows soon
+
+Darryl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au  
+
+-----Original Message-----
+From: owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>]
+On Behalf Of Denis Barbier
+Sent: Thursday, 20 June 2002 7:39 PM
+To: sw-wml@engelschall.com
+Subject: Re: WML under Windows...
+
+
+On Thu, Jun 20, 2002 at 05:16:42PM +1000, Darryl Smith wrote:
+&gt; G'Day
+&gt; 
+&gt; I believe they turn :: into . so that we have things like
+&gt; 	/usr/man/man3/File.Spec.Mac.3
+&gt; 
+&gt; Which I believe is similar to 
+&gt; 	/usr/local/man/man3/File::Spec::Mac.3 on my unix box
+&gt; 
+&gt; Perldoc File::Spec::Mac does work. I do not know how, or where to look
+
+Indeed, I looked into ExtUtils::MM_Unix and it seems that double colons 
+are replaced by dots on MS Windows.
+Then in wml_include/Makefile, you could s/::/./g
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02622" HREF="msg02622.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02620" HREF="msg02620.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02620.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02622.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02620.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02622.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02621"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02621"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

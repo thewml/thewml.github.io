@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Ouput directory other than source directory -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Fri, 1 Oct 1999 17:01:58 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991001164628.31039I&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991001141141.23974A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01017">Date Index</a>][<a href="thrd21.shtml#01017">Thread Index</a>]<br>
+[<A HREF="msg01016.shtml">Date Prev</A>][<A HREF="msg01018.shtml">Date Next</A>][<A HREF="msg01016.shtml">Thread Prev</A>][<A HREF="msg01018.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 1 Oct 1999 17:01:55 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 1 Oct 1999 barbier@imacs.polytechnique.fr wrote:
+
+&gt;Ok, building and mirroring is something i understand. But could someone
+&gt;explain the benefits of putting output files in a different directory than
+&gt;the source file (that's what the subject means).
+&gt;
+&gt;I want to know if it is worth i try to ease such manipulations.
+
+I do not really understand this thread but here are my two
+Pfennigs. In the Sudelbuch i have all wml and html files in one
+directory:
+1999/*.wml
+
+But when I compile the wml-file it creates two identically files:
+1999/*.html
+heute/index.html
+
+heute/index.html is the daily new-file.
+
+I do it with the shebang -o line and LANG-Definitions.
+
+Sometimes there are files of a series. Then I create three
+identically files
+
+1999/*.html
+heute/index.html
+drnj/*.html 
+
+where the files in 1999 and drnj have different navigation-bars.
+
+As you can see heute/index.html will always be new.
+
+On my business-pages I have to navigations. One for Advertising
+Agencies and one for Companies. Some files have the same content
+but different nav-bars. So there I have one directory for all wml
+files
+wml/*.wml
+
+and two directories for agencies and companies.
+
+Until now I had only one problem. I found no way to produce files
+in different hierarchical levels. For example:
+
+www.sudelbuch.de/1999/19991030.html
+and the same file as
+www.sudelbuch.de/index.html
+
+There are problems with the pathes, because in the first file there
+must be an image "../bilder/image.gif" and in the index-file it must
+be "./bilder/image.gif. I worked around with inventing a
+heute-directory. The other way: all files in the root-dir.
+
+Perhaps it would be helpful, when the variable $(ROOT) dissolves
+in realationship to the target-directory, not in relation to the
+source-directory.
+
+&gt;PS to juh: there are lots of mirror.pl worldwide. One comes from
+&gt;              <A  HREF="http://sunsite.org.uk/packages/mirror/">http://sunsite.org.uk/packages/mirror/</A>
+THX!
+
+&gt;           Try wget (from any GNU archive) too.
+
+Can I "put" with wget?
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Literatur und Satire per E-Mail
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01015" HREF="msg01015.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01016.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01018.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01016.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01018.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01017"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01017"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

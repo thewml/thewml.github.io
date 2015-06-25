@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: troubles with wml::std::lang -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 30 Aug 2000 14:37:03 +0200 (MET DST) -->
+<!--X-Message-Id: 20000830143955.A32292@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000830135550.A664@Davide -->
+<!--X-Reference: 200008301205.OAA28612@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01923">Date Index</a>][<a href="thrd39.shtml#01923">Thread Index</a>]<br>
+[<A HREF="msg01922.shtml">Date Prev</A>][<A HREF="msg01924.shtml">Date Next</A>][<A HREF="msg01922.shtml">Thread Prev</A>][<A HREF="msg01924.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: troubles with wml::std::lang</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 30 Aug 2000 14:39:55 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Aug 30, 2000 at 02:05:17PM +0200, Stephane Bortzmeyer wrote:
+
+&gt; On Wednesday 30 August 2000, at 13 h 55, the keyboard of Davide Puricelli 
+&gt; &lt;apurice@tin.it&gt; wrote:
+&gt; 
+&gt; &gt; #!wml -o (ALL-LANG_*)+LANG_EN:index.html.en \
+&gt; ...
+&gt; &gt; ** Slice:Error: no existing slice matches `LANG_*'
+&gt; 
+&gt; <A  HREF="http://www.engelschall.com/sw/slice/docs/#DESCRIPTION">http://www.engelschall.com/sw/slice/docs/#DESCRIPTION</A>
+&gt; 
+&gt; The NAME identifier has to match against the regular expression
+&gt; ``[_A-Z0-9]+'', i.e. NAME is a string consisting only of uppercase
+&gt; letters, digits or underscore characters. 
+&gt; 
+&gt; So, I assume it is a bug in the manual.
+
+And 10 lines below
+   SLICE_TERM ::= NAME
+          The slice NAME itself. This name has to match against the regex
+          ``[_A-Z0-9*{}]+''. Here two cases are possible: NAME is either
+          a plain slice name consisting only of uppercase letters, digits
+          or an underscore character. Or it is a wildcarded slice name
+          indicated by an asterisk character.
+
+Warning: braces apply to wml-SNAP only
+
+The problem reported by Slice is just the lack of LANG_* slices, which
+is solved by adding them, e.g.
+
+ &lt;lang:new id=en&gt;
+ &lt;lang:new id=de&gt;
+
+ &lt;lang:en&gt;...&lt;/lang:en&gt;
+ &lt;lang:de&gt;...&lt;/lang:de&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01921" HREF="msg01921.shtml">troubles with wml::std::lang</A></strong>, <em>From:</em> Davide Puricelli</li>
+<li><strong><A NAME="01922" HREF="msg01922.shtml">Re: troubles with wml::std::lang</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01922.shtml">Re: troubles with wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01924.shtml">[wml] last minute changes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01922.shtml">Re: troubles with wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01924.shtml">[wml] last minute changes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01923"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01923"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

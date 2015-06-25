@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Mon, 22 May 2000 18:32:27 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0005221506050.15267&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000522122457.E16814@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01596">Date Index</a>][<a href="thrd33.shtml#01596">Thread Index</a>]<br>
+[<A HREF="msg01595.shtml">Date Prev</A>][<A HREF="msg01597.shtml">Date Next</A>][<A HREF="msg01595.shtml">Thread Prev</A>][<A HREF="msg01598.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 May 2000 15:14:36 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!
+
+On Mon, 22 May 2000, Roland Rosenfeld wrote:
+&gt; &lt;ifeq this="0" that="0"&gt;
+&gt;   &lt;then&gt;
+&gt;      foo
+&gt;   &lt;/then&gt;
+&gt;   &lt;else
+&gt;      bar
+&gt;   &lt;/else&gt;
+&gt; &lt;/ifeq&gt;
+
+The &lt;when&gt; tag exists already. What do you think of:
+
+&lt;when &lt;string-eq "&lt;get-var this&gt;" "&lt;get-var that&gt;"&gt;&gt; # exists
+foo
+&lt;else&gt;                                               # doesn't exist yet
+bar
+&lt;/when&gt;
+
+This is shorter and needs only the implementation of an &lt;else&gt; tag (and
+I'd like to suggest an &lt;elsewhen&gt;, too)...
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01598" HREF="msg01598.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01595" HREF="msg01595.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01595.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01597.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01595.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01598.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01596"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01596"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Fri, 4 Feb 2000 10:20:20 +0100 (MET) -->
+<!--X-Message-Id: 200002040920.KAA27603@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: juh@pironet.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01337">Date Index</a>][<a href="thrd28.shtml#01337">Thread Index</a>]<br>
+[<A HREF="msg01333.shtml">Date Prev</A>][<A HREF="msg01338.shtml">Date Next</A>][<A HREF="msg01326.shtml">Thread Prev</A>][<A HREF="msg01343.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 04 Feb 2000 10:20:11 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thursday 3 February 2000, at 16 h 56, the keyboard of Jan Ulrich Hasecke 
+&lt;juh@pironet.de&gt; wrote:
+
+&gt; I am beginning to love dselect and apt, although it is a little bit
+&gt; unearthly. I always fear that updating packages will ruin something
+&gt; inside of my box.
+
+&lt;ifeq &lt;get-var Debian&gt; "true"
+I no longer use dselect but only apt-get. Nothing to fear: the dependency 
+system is here for that.
+&gt;
+
+&gt; O.K. The installation of wml removes my tetex-Installation, but I
+&gt; reinstalled it. 
+
+That's strange but, with dselect, it is easy to select too few or too many. 
+Next time, use apt-get and pay attention to the list of packages it will 
+install/remove before you say "yes".
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01343" HREF="msg01343.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Tamas Papp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01333.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01338.shtml">Re: BUG REPORT for wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01326.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01343.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01337"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01337"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

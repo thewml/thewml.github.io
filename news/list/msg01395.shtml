@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New Vim Syntax File! -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Wed, 1 Mar 2000 12:04:38 +0100 (MET) -->
+<!--X-Message-Id: 20000301120506.A20306@skater.priv.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000229075738.A27468@skater.priv.at -->
+<!--X-Reference: 200002291032.LAA05723@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01395">Date Index</a>][<a href="thrd29.shtml#01395">Thread Index</a>]<br>
+[<A HREF="msg01394.shtml">Date Prev</A>][<A HREF="msg01397.shtml">Date Next</A>][<A HREF="msg01392.shtml">Thread Prev</A>][<A HREF="msg01400.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New Vim Syntax File!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Mar 2000 12:05:06 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 29 Feb 2000, Stephane Bortzmeyer &lt;bortzmeyer@pasteur.fr&gt; wrote:
+
+ Pretty please, Stephane: No need to reply _both_ in mail and to the
+list. I am subscribed to it, so please leave it on the list and don't
+load my mailbox twice. TIA!
+
+&gt; On Tuesday 29 February 2000, at 7 h 57, the keyboard of Gerfried Fuchs 
+&gt; &lt;alfie@innocent.com&gt; wrote:
+
+ No no, it wasn't my keyboard, it was really me ;-))
+
+&gt; It was discussed several times on this list and the problem is that WML is 
+&gt; actually a mix of several languages. I use 'html-mode' when editing HTML code, 
+&gt; 'perl-mode' when in an ePerl block, etc.
+&gt; 
+&gt; How do you address that in vim?
+
+ As Davor already noticed vim is able to use 'embedded' syntax - just
+like wml uses embedded perl ;)  The file simply extends the html-syntax
+and embeds the perl.vim syntax description between &lt;: and :&gt; (or even
+&lt;perl&gt; and &lt;/perl&gt;).
+
+&gt; &gt; The United States is like the guy at the party who gives cocaine to
+&gt; &gt; everybody and still nobody likes him.
+&gt; 
+&gt; I don't sniff cocaine (neither do I eat McDonald's) so it seems normal.
+
+ It's just a random fortune, don't take it too serious. I don't smoke
+usual cigarettes either ;)
+
+ Have fun!
+Alfie
+-- 
+A language that doesn't affect the way you think about programming is
+not worth knowing.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01400" HREF="msg01400.shtml">Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01387" HREF="msg01387.shtml">New Vim Syntax File!</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="01388" HREF="msg01388.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01394.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01397.shtml">Help with wml::std::href</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01392.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01400.shtml">Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01395"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01395"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

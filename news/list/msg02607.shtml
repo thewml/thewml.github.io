@@ -1,0 +1,422 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: WML under Windows... -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNenqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Sat, 8 Jun 2002 10:04:12 +0200 (MET DST) -->
+<!--X-Message-Id: 001501c20ec2$e1983c50$4601a8c0@DELL8000 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 001401c20eb9$5edfa950$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02607">Date Index</a>][<a href="thrd53.shtml#02607">Thread Index</a>]<br>
+[<A HREF="msg02606.shtml">Date Prev</A>][<A HREF="msg02608.shtml">Date Next</A>][<A HREF="msg02606.shtml">Thread Prev</A>][<A HREF="msg02608.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 Jun 2002 18:02:42 +1000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Further to this... I just downloaded CYGWIN (www.CYGWIN.COM) that sort
+of allows what I want. I am compiling up the WML and I get 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+eperl_main.c:    my_perl = perl_alloc();
+eperl_main.c:    perl_construct(my_perl);
+eperl_main.c:    rc = perl_parse(my_perl, Perl5_XSInit, myargc, myargv,
+env);
+eperl_main.c:    rc = perl_parse(my_perl, NULL, myargc, myargv, env);
+eperl_main.c:    rc = perl_run(my_perl);
+eperl_main.c:    if (my_perl) {
+eperl_main.c:       perl_destruct(my_perl);
+
+eperl_main.c:       perl_free(my_perl);
+Binary file eperl_main.o matches
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ grep Perl5_SetScalar *
+eperl_perl5.c:void Perl5_SetScalar(char *pname, char *vname, char
+*vvalue)
+eperl_perl5.c:        Perl5_SetScalar("main", ca, cp);
+eperl_proto.h:extern void Perl5_SetScalar(char *pname, char *vname, char
+*vvalue
+);
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ joe
+bash: joe: command not found
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ less eperl_perl5.c
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ grep my_perl *
+eperl_main.c:    static PerlInterpreter *my_perl = NULL;
+eperl_main.c:    my_perl = perl_alloc();
+eperl_main.c:    perl_construct(my_perl);
+eperl_main.c:    rc = perl_parse(my_perl, Perl5_XSInit, myargc, myargv,
+env);
+eperl_main.c:    rc = perl_parse(my_perl, NULL, myargc, myargv, env);
+eperl_main.c:    rc = perl_run(my_perl);
+eperl_main.c:    if (my_perl) {
+eperl_main.c:       perl_destruct(my_perl);
+
+eperl_main.c:       perl_free(my_perl);
+Binary file eperl_main.o matches
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ make
+gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -fno-strict-aliasing
+-I/usr/local/include
+-I/usr/lib/perl5/5.6.1/cygwin-multi/CORE -I. -c eperl_perl5.c
+eperl_perl5.c: In function `Perl5_XSInit':
+eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+eperl_perl5.c:58: (Each undeclared identifier is reported only once
+eperl_perl5.c:58: for each function it appears in.)
+eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+incompatible point
+er type
+eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+eperl_perl5.c:73: `my_perl' undeclared (first use in this function)
+eperl_perl5.c: In function `Perl5_SetScalar':
+eperl_perl5.c:104: `my_perl' undeclared (first use in this function)
+make: *** [eperl_perl5.o] Error 1
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ grep my_perl *
+eperl_main.c:    static PerlInterpreter *my_perl = NULL;
+eperl_main.c:    my_perl = perl_alloc();
+eperl_main.c:    perl_construct(my_perl);
+eperl_main.c:    rc = perl_parse(my_perl, Perl5_XSInit, myargc, myargv,
+env);
+eperl_main.c:    rc = perl_parse(my_perl, NULL, myargc, myargv, env);
+eperl_main.c:    rc = perl_run(my_perl);
+eperl_main.c:    if (my_perl) {
+eperl_main.c:       perl_destruct(my_perl);
+
+eperl_main.c:       perl_free(my_perl);
+Binary file eperl_main.o matches
+
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$ make
+gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -fno-strict-aliasing
+-I/usr/local/include
+-I/usr/lib/perl5/5.6.1/cygwin-multi/CORE -I. -c eperl_perl5.c
+eperl_perl5.c: In function `Perl5_XSInit':
+eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+eperl_perl5.c:58: (Each undeclared identifier is reported only once
+eperl_perl5.c:58: for each function it appears in.)
+eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+incompatible point
+er type
+eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+eperl_perl5.c:73: `my_perl' undeclared (first use in this function)
+eperl_perl5.c: In function `Perl5_SetScalar':
+eperl_perl5.c:104: `my_perl' undeclared (first use in this function)
+make: *** [eperl_perl5.o] Error 1
+
+Darryl@DELL8000 ~/wml-2.0.8/wml_backend/p3_eperl
+$
+
+My_perl is there in eperl_main.c, but not there... Can anyone help? This
+is looking as if it might work, if I can get this fully compiled
+
+Darryl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au  
+
+-----Original Message-----
+From: owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>]
+On Behalf Of Darryl Smith
+Sent: Saturday, 8 June 2002 4:55 PM
+To: sw-wml@engelschall.com
+Subject: WML under Windows...
+
+
+G'Day
+
+I was wondering how far people had got getting WML to work under
+Windows. I would love it as it would allow me to do web development on
+my laptop with all my favourite tools (running under windows)
+
+Many thanks
+
+Darryl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au  
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02608" HREF="msg02608.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02606" HREF="msg02606.shtml">WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02606.shtml">WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02608.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02606.shtml">WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02608.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02607"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02607"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

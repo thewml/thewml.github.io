@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Questions about wml -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Fri, 6 Feb 1998 12:43:02 +0100 (MET) -->
+<!--X-Message-Id: 199802061143.MAA07041@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: wd8wwf9jgbh.fsf@parate.irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00079">Date Index</a>][<a href="thrd2.shtml#00079">Thread Index</a>]<br>
+[<A HREF="msg00078.shtml">Date Prev</A>][<A HREF="msg00080.shtml">Date Next</A>][<A HREF="msg00078.shtml">Thread Prev</A>][<A HREF="msg00080.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Questions about wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Fri, 6 Feb 1998 12:43:00 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello David Mentre, in a previous mail you wrote:
+
+&gt; &gt; Are you sure about your syntax? Because the above is incorrect syntax. 
+&gt; &gt; I thing what you really mean is
+&gt; &gt; 
+&gt; &gt;    &lt;href url="\
+&gt; &gt;    &lt;it: index1.it.html&gt;\
+&gt; &gt;    &lt;en: index1.en.html&gt;\
+&gt; &gt;    &lt;es: index1.es.html&gt;\
+&gt; &gt;    "&gt;
+&gt; 
+&gt;  As a side note, I usually prefer learning with examples. The man pages
+&gt; are perfect to know the syntax of a tag, but it does not give enough
+&gt; information when you look for a way to do a specific thing (like a
+&gt; navbar or a multi-lingual site). In fact, I'm looking for the
+&gt; "cookbook-approach".
+
+I understand, but there is a wml_tutorial(7) for this. Ok, currently is covers
+only standard stuff, but we can extend it. Just give me hints what topics you
+want to find there. As a start:
+
+  - multi-lingual pages
+  - navigation bars
+  - ??
+ 
+&gt;  As you have a rationale when you create a specific tag, would it be too
+&gt; costly to put those examples in a file (with an index) and put it in the
+&gt; WML distribution ?
+
+Hmmmm... how about a wml_example(7) manpage? The other point is that most
+examples are very specific and why not just use the search feature of the ML
+archive for this?
+
+&gt;  Another note: Wouldn't be useful to put on the WML site main page a
+&gt; link to the swiss site ?
+
+No, it isn't very useful anymore, because a few days ago the DNS alias
+www.engelschall.com already switched to this site ;-) You should notice this
+in faster access, I hope. If not, your DNS server has not refreshed (TTL!) or
+www.de.engelschall.com is actually faster for you.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00080" HREF="msg00080.shtml">Re: Questions about wml</A></strong>, <em>From:</em> David Mentre</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00078" HREF="msg00078.shtml">Re: Questions about wml</A></strong>, <em>From:</em> David Mentre</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00078.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00080.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00078.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00080.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00079"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00079"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

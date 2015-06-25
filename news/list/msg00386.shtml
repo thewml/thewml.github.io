@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Getting filenames.. -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 5 Feb 1999 11:46:17 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990205080855.16331A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36B9FBDB.9A4E248C@tsai.es -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00386">Date Index</a>][<a href="thrd3.shtml#00386">Thread Index</a>]<br>
+[<A HREF="msg00385.shtml">Date Prev</A>][<A HREF="msg00387.shtml">Date Next</A>][<A HREF="msg00384.shtml">Thread Prev</A>][<A HREF="msg00385.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Getting filenames..</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 Feb 1999 08:42:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 4 Feb 1999, Ismael Olea wrote:
+
+&gt; 	Hi!
+&gt; 
+&gt; 	I need to read a variable number of name files. I tried to use
+&gt; meta-html primitives but it's too hard for me. 
+&gt; 
+&gt; 	Now I choose to run a very simple shell script that output a filename
+&gt; by line.
+&gt; 
+&gt; 	I try to read it with met-html streams but I can't.
+[...]
+
+Hi Ismael,
+
+the wml pass2 is a stripped down version of meta-html ; as explained
+somewhere in the docs, lot of functionalities have been removed.
+I checked, and found no reference to streams, so i assume you read the
+meta-html doc. It's a good idea to read manuals, but in this case not
+appropriate.
+Other stuff have been removed, like databases management. I know there
+is a reference to &lt;with-open-database&gt;, it will be fixed.
+
+When i replied to your previous question, i made a mistake.  I wrote
+macros with meta-html to show how powerful it is, because i like how it
+works, and moreover because i was working on upgrading wml pass2 to the
+next release of wml.
+The original vocation of wml_p2_mhc is to define new html-like tags. So
+i think you should begin by using it only to this purpose and take
+benefit of the powerful wml_p3_eperl for programming.
+When you are familiar with wml_p2_mhc, you may convert some eperl code
+to meta-html constructions.
+
+About your specific problem, i did not understand what you are trying to
+perform, sorry.
+
+Have a nice day
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00384" HREF="msg00384.shtml">Getting filenames..</A></strong>, <em>From:</em> Ismael Olea</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00385.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00387.shtml">Re: Getting filenames..</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00384.shtml">Getting filenames..</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00385.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00386"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00386"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

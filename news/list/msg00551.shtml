@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: I like this navbar -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 7 Apr 1999 22:22:53 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990407185027.25231A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00551">Date Index</a>][<a href="thrd13.shtml#00551">Thread Index</a>]<br>
+[<A HREF="msg00550.shtml">Date Prev</A>][<A HREF="msg00552.shtml">Date Next</A>][<A HREF="msg00570.shtml">Thread Prev</A>][<A HREF="msg00553.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>I like this navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 7 Apr 1999 22:17:21 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi everyone,
+
+take a look at &lt;URL:<A  HREF="http://www.engelschall.com/sw/wml/test/gimp">http://www.engelschall.com/sw/wml/test/gimp</A>&gt; ;o)
+All the features i had in mind are implemented, so tell me if you want
+more.
+
+News:
+* UP/PREV/NEXT buttons
+* sub-menus are open and closed depending on the context
+* buttons can be grouped to behave as if all were selected
+
+Florian, i am not sure whether i will implement your i18n improvements.
+In fact, one can write
+&lt;define-tag lang:wildcard&gt;
+&lt;protect pass=3&gt;&lt;lang:star: *&gt;&lt;/protect&gt;
+&lt;/define-tag&gt;
+and then
+   &lt;navbar:button
+            url="index.&lt;lang:wildcard&gt;.html"
+            img="ind.&lt;lang:wildcard&gt;.*.gif"&gt;
+
+You have to apply the patch below to wml to fix a bug about protection,
+I thought it was fixed, but i was obviously wrong :-(
+
+And i don't understand what your ``imgstyle'' attribute is for. Do you
+have an example?
+Concerning the ``nohints'' attribute, it's a good idea. We can either
+add this attribute to all tags writing urls, either use a global variable
+(e.g WML_JS_WRITE) and test it to determine if we want to write inline
+JavaScript and/or JavaScript code (for rollover...), or improve
+wml_p8_htmlstrip to suppress JavaScript code. I prefer the latter, any
+opinion?
+
+   Denis
+
+--- wml.src     1999/01/13 08:32:55     1.3
++++ wml.src     1999/04/07 19:53:30
+@@ -614,7 +614,6 @@
+         if ($pass &gt;= $s-&gt;{PE}) {
+             $fp-&gt;print($prefix);
+             $fp-&gt;print($s-&gt;{BODY});
+-            $PROTECT_STORAGE{$key} = undef if $pass &lt; 9;
+         }
+         else {
+             $fp-&gt;print($prefix."-=P[$key]=-");
+@@ -622,6 +622,9 @@
+     }
+     $fp-&gt;print($data);
+     $fp-&gt;close;
++    foreach $key (%PROTECT_STORAGE) {
++        $PROTECT_STORAGE{$key} = undef if $pass &lt; 9;
++    }
+ }
+ 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00553" HREF="msg00553.shtml">Re: I like this navbar</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00550.shtml">a suggestion: &lt;css&gt; &lt;/css&gt; tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00552.shtml">Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00570.shtml">Re: a suggestion: &lt;css&gt; &lt;/css&gt; tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00553.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00551"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00551"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

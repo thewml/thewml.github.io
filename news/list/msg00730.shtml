@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNnhqerl.rr.rgum.pu> -->
+<!--X-Date: Sun, 6 Jun 1999 10:50:02 +0200 (MET DST) -->
+<!--X-Message-Id: 199906052115.XAA08886@audrey.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00730">Date Index</a>][<a href="thrd16.shtml#00730">Thread Index</a>]<br>
+[<A HREF="msg00729.shtml">Date Prev</A>][<A HREF="msg00731.shtml">Date Next</A>][<A HREF="msg00731.shtml">Thread Prev</A>][<A HREF="msg00732.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 5 Jun 1999 23:15:28 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.1 (05-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Tobias Oetiker
+Reply-To: oetiker@ee.ethz.ch
+
+PROBLEM DESCRIPTION:
+
+the fmt::verbatim manpage says:
+
+        &lt;: $buf = &amp;wml_fmt_verbatim($file) :&gt;
+
+but this does not work ... 
+
+as the verbatim function looks for $arg-&gt;{FILE}
+
+I had to use 
+
+&lt;: $A{FILE}="../CONTRIBUTORS";  print &amp;wml_fmt_verbatim(\%A); :&gt;
+
+which does not look very intuitive to me :-) 
+
+cheers
+tobi
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i686-pc-linux-gnu
+    Perl: 5.004_04 (/usr/bin/perl)
+    User: oetiker@audrey.ee.ethz.ch
+    Date: 05-Jun-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration:
+  Platform:
+    osname=linux, osvers=2.0.34, archname=i386-linux
+    uname='linux porky.redhat.com 2.0.34 #1 tue may 5 19:32:29 edt 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=y useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=2.7.2.3
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at May  8 1998 15:05:17
+  @INC:
+    /usr/lib/perl5/i386-linux/5.00404
+    /usr/lib/perl5
+    /usr/lib/perl5/site_perl/i386-linux
+    /usr/lib/perl5/site_perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00729.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00731.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00731.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00732.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00730"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00730"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

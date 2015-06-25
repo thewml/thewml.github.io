@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: define tag with optional parameter -->
+<!--X-From-R13: Okry Ybruyre <xbruyreNzngu.FG&#45;Preyva.RS> -->
+<!--X-Date: Wed, 9 Dec 1998 15:09:16 +0100 (CET) -->
+<!--X-Message-Id: Pine.A41.4.05.9812091435410.15896&#45;100000@newton.math.TU&#45;Berlin.DE -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00263">Date Index</a>][<a href="thrd6.shtml#00263">Thread Index</a>]<br>
+[<A HREF="msg00262.shtml">Date Prev</A>][<A HREF="msg00264.shtml">Date Next</A>][<A HREF="msg00303.shtml">Thread Prev</A>][<A HREF="msg00264.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>define tag with optional parameter</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Koehler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 9 Dec 1998 15:02:32 +0100 (NFT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I need a tag definition with an optional parameter.
+
+The tag should give  an alternate  result in the case
+that the parameter exist. 
+
+I mean a structure like:
+
+&lt;define-tag side_begin&gt;
+
+If exist (parameter) 
+  do blabla blub
+else 
+  do something completly different
+end
+
+&lt;/define-tag&gt;
+
+Greetings
+Axel Koehler
+___________________________________________________________________________
+Axel K"ohler,                                            Tel: 030-314 73352
+TU Berlin  FB 2  FR 0-1              Franklinstr. 28-29        10587 Berlin
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00264" HREF="msg00264.shtml">Re: define tag with optional parameter</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00262.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00264.shtml">Re: define tag with optional parameter</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00303.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00264.shtml">Re: define tag with optional parameter</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00263"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00263"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

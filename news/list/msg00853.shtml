@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2, Linux RH 6.0 -->
+<!--X-From-R13: objyvaNfvevhf.pbz -->
+<!--X-Date: Wed, 14 Jul 1999 07:56:57 +0200 (MET DST) -->
+<!--X-Message-Id: 199907132002.WAA27971@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00853">Date Index</a>][<a href="thrd18.shtml#00853">Thread Index</a>]<br>
+[<A HREF="msg00852.shtml">Date Prev</A>][<A HREF="msg00854.shtml">Date Next</A>][<A HREF="msg00859.shtml">Thread Prev</A>][<A HREF="msg00862.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2, Linux RH 6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 13 Jul 1999 22:02:38 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2
+Operating System: Linux RH 6.0
+
+Problem Description:
+| I have just used three wonderful software packages:
+| 
+| mod_ssl
+| mod_rewrite
+| wml
+| 
+| And they were all written by you!
+| I am incredibly impressed.
+| 
+| I ended up writing my own version of wmk because
+| I had trouble getting %DIR and -DIMG~image
+| to both work at the same time.  I also cache the
+| .wmlrc files (perhaps you do to, I didn't check).
+| 
+| Instead of effectively doing a cd to the directory
+| where the target .wml file resides, I run wml from
+| the top level directory in order for %BASE to work
+| properly in:
+| 
+| --outputfile=FACULTYuUNDEF:/home/ssl-httpd/%DIR/%BASE.html
+|      --outputfile=PUBLICuUNDEF:/home/httpd/%DIR/%BASE.html
+| 
+| I found that I wanted a little more control over
+| where the output files go and also which output
+| files to create.
+| 
+| I also added a bit of a kludge that defined
+| BASE_NAME and REL_PATH variables.  This allowed
+| me to get rid of most of my lower level .wmlrc
+| files.  My ideal is to have no repeated info in
+| the .wml source tree.  This now works.
+| 
+| I do not check file timestamps right now.  I think
+| that can be done by having mkwml read the .wmlrc
+| files to figure out both the destination files
+| and the dates of the files on the include path.
+| 
+| I will probably add some top level directives to
+| give better control over which sets of output files
+| get created.  I already use REs to pick which files
+| in the source tree to work on.  By working out of
+| the top level directory I can use the Tab key in
+| bash to easily pick the set of files to compile.
+| 
+| It could just be me, but I find that always running
+| wml from the top level directory makes more sense.
+| 
+| I'd be glad to send you my mkwml program.  It is
+| very crude but it  works for me.
+| 
+| Your software is beautiful.  You get my vote for the
+| world's best progammer.
+| 
+| Thanks -- Jim Bowlin
+| 
+| 
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00862" HREF="msg00862.shtml">Re: [BUG REPORT] WML 1.7.2, Linux RH 6.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00852.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00854.shtml">print &quot;&lt;DIV ...&quot;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00859.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00862.shtml">Re: [BUG REPORT] WML 1.7.2, Linux RH 6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00853"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00853"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

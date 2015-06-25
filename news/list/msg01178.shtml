@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [HELP] Replacement of wml_p2_mhc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 2 Dec 1999 09:18:28 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991129123931.3737C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991123182325.15372A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01178">Date Index</a>][<a href="thrd24.shtml#01178">Thread Index</a>]<br>
+[<A HREF="msg01177.shtml">Date Prev</A>][<A HREF="msg01179.shtml">Date Next</A>][<A HREF="msg01158.shtml">Thread Prev</A>][<A HREF="msg01181.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[HELP] Replacement of wml_p2_mhc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 2 Dec 1999 09:27:24 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all,
+
+I have written a replacement for wml_p2_mhc, i.e. our stripped down
+version of Meta-HTML.  It is called mp4h (macro processor for HTML
+documents), is derived from GNU m4 version 1.4n and looks very
+promising: on WML files, pass 2 runs 75% faster :)
+
+Unfortunately, i will have few free time for months, so i am looking for
+help to develop and maintain it.  Here is my TODO list on this project:
+* Syntax rethinking : at the beginning, compatibility with Meta-HTML was
+  a priority.  I believe now that it is best to have a robust and easy
+  to learn syntax.  Compatibility with older templates within WML is
+  done via wml::sys::bootmhc.
+  We also could have discussions on this list about improvements
+  on Meta-HTML syntax.  For instance, Meta-HTML has 2 macros to
+  define new tags : &lt;define-tag&gt; and &lt;define-container&gt;.  I prefer
+  having only one, and containers could be defined with
+  &lt;define-tag foo endtag=required&gt; or &lt;define-tag foo type=complex&gt;.
+
+* Write documentation. My version does not include documentation yet,
+  it's why there is no URL in this post.
+
+* Enhance C portability (mp4h has been tested on Linux and SunOS 5.6)
+
+* Optimization
+
+* If needed, write a converter to ease upgrading template files.
+
+* Enhance wml::sys::bootmhc for maximum backward compatibility.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01181" HREF="msg01181.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01158" HREF="msg01158.shtml">Re: slice-problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01177.shtml">Re: Specifying an alternate output extension</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01179.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01158.shtml">Re: slice-problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01181.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01178"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01178"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

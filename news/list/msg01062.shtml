@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: showing comments in HTML -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Thu, 14 Oct 1999 12:02:45 +0200 (MET DST) -->
+<!--X-Message-Id: 19991014115059.A657@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991006212145.A4863@perolo -->
+<!--X-Reference: Pine.LNX.3.96.991007230828.1517A&#45;100000@localhost -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01062">Date Index</a>][<a href="thrd22.shtml#01062">Thread Index</a>]<br>
+[<A HREF="msg01061.shtml">Date Prev</A>][<A HREF="msg01063.shtml">Date Next</A>][<A HREF="msg01041.shtml">Thread Prev</A>][<A HREF="msg01064.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: showing comments in HTML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Oct 1999 11:50:59 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Thu, Oct 07, 1999 at 11:10:02PM +0200, Denis Barbier contaba:
+
+&gt;Hash signs are not welcome within WML ;-)
+&gt;Lines beginning with this char are removed in pass 8 _and_ pass 1.
+&gt;So try &lt;protect pass=1,8&gt;
+
+I have to agree with you, finally I decided using
+
+   s/#/\&amp;#035;/g
+
+in my editor, so I will have no more a "#" but just the entity that
+shows that character. Now it works pretty fine.
+
+Well, I had to change the `verbatim' macro to don't change my
+"&amp;#035;" to "&amp;amp;#035;", but I suppose this is a `personal hack' and
+there is no need to include it in the WML distribution.
+
+Or I should have used "\#" and forget in fiddling with `verbatim'? 
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+10/14	British Computer Society founded, 1957
+10/14	Frump Day. 
+10/14	(10/14/1890) Dwight David Eisenhower, 34th president. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01064" HREF="msg01064.shtml">Re: showing comments in HTML</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01040" HREF="msg01040.shtml">showing comments in HTML</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="01041" HREF="msg01041.shtml">Re: showing comments in HTML</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01061.shtml">Re: WML site?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01063.shtml">Re: WML site?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01041.shtml">Re: showing comments in HTML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01064.shtml">Re: showing comments in HTML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01062"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01062"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

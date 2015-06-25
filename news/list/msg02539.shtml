@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: user references -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 6 Mar 2002 00:45:21 +0100 (MET) -->
+<!--X-Message-Id: 20020306005727.B26058@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C7A5E1D.8040409@netngine.hu -->
+<!--X-Reference: 20020225224630.B6033@imacs.polytechnique.fr -->
+<!--X-Reference: 3C7B9976.8060103@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02539">Date Index</a>][<a href="thrd51.shtml#02539">Thread Index</a>]<br>
+[<A HREF="msg02538.shtml">Date Prev</A>][<A HREF="msg02540.shtml">Date Next</A>][<A HREF="msg02531.shtml">Thread Prev</A>][<A HREF="msg02533.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: user references</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Mar 2002 00:57:27 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 26, 2002 at 03:19:34PM +0100, Veres Ferenc wrote:
+&gt; Hi!
+&gt; 
+&gt; First the simplier mail. I downloaded the [templates] links from
+&gt; the top of engelshcall.com/sw/wml User References page.
+&gt; 
+&gt; <A  HREF="http://www.engelschall.com/sw/wml/example/refs.html">http://www.engelschall.com/sw/wml/example/refs.html</A>
+&gt; First two links, but probably almost each links apply this problem.
+&gt; 
+&gt; OpenSSL contains &lt;define-container&gt; which could be updated.
+&gt; (confusing when trying to learn wml from the examples)
+&gt; 
+&gt; Anyway: NICE TRICK with the include file! :-)
+&gt; 
+&gt; www.engelschall.com templates, "stdpage.wml" also contains
+&gt; &lt;define-container&gt;. If I am right there was a different tag for
+&gt; the current endtag=required stuff, so in new templates you use
+&gt; &lt;define-tag&gt; instead container.
+&gt; 
+&gt; Just would be fine to follow the Tutorial and stuff in the main
+&gt; examples of the system. This is not a technical problem. I hope
+&gt; I was understandable. This is just too complicated to learn from
+&gt; different tutorial and example files.
+[...]
+
+Unfortunately there is nothing I can do here, these pages out of my
+control.  I converted everything under /sw/wml/ (mostly to check
+there was no regression), but I could not change other areas.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02526" HREF="msg02526.shtml">user references</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02530" HREF="msg02530.shtml">Re: user references</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02531" HREF="msg02531.shtml">Re: user references</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02538.shtml">Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02540.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02531.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02533.shtml">image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02539"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02539"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

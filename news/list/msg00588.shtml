@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: patch for denis new navbar -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Thu, 22 Apr 1999 14:09:35 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.10.9904221409120.21276&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990422124942.12860A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00588">Date Index</a>][<a href="thrd13.shtml#00588">Thread Index</a>]<br>
+[<A HREF="msg00587.shtml">Date Prev</A>][<A HREF="msg00589.shtml">Date Next</A>][<A HREF="msg00587.shtml">Thread Prev</A>][<A HREF="msg00591.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: patch for denis new navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Apr 1999 14:09:29 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding Re: patch for denis new navbar :
+
+*&gt; On Thu, 22 Apr 1999, Tobias Oetiker wrote:
+*&gt; 
+*&gt; &gt; Hi,
+*&gt; 
+*&gt; Hi Tobias,
+*&gt; 
+*&gt; &gt; I am using Denis multilevel navbar on www.ee.ethz.ch/stud2
+*&gt; &gt; 
+*&gt; &gt; it works very well, except that the button epilog does not get printed
+*&gt; &gt; after a button with an active submenu ... 
+*&gt; &gt; 
+*&gt; &gt; I have fixed this with the following patch ... the patch also added a new
+*&gt; &gt; argument called imgstarsep which allows to configure the separator used in
+*&gt; &gt; the imgstar parameter (I need this because I am using multilingual
+*&gt; &gt; arguments)
+*&gt; 
+*&gt; First, are you sure you need this imgstarsep attribute? If you retrieve
+*&gt; a recent lang.src (and maybe wml.src) it should compile without it.
+
+you are right ... this is not necessary anymore ... 
+
+cheers
+tobi
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1194  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00587" HREF="msg00587.shtml">Re: patch for denis new navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00587.shtml">Re: patch for denis new navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00589.shtml">Re: slices - if defined, do not display</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00587.shtml">Re: patch for denis new navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00591.shtml">Re: patch for denis new navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00588"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00588"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

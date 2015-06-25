@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: feature query -->
+<!--X-From-R13: [ngguvnf Preauneqg <zngguoNthkuntra.arg> -->
+<!--X-Date: Tue, 30 May 2000 13:25:20 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.10005300933420.2251&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000528141741.D30017@ummagumma -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01663">Date Index</a>][<a href="thrd35.shtml#01663">Thread Index</a>]<br>
+[<A HREF="msg01661.shtml">Date Prev</A>][<A HREF="msg01662.shtml">Date Next</A>][<A HREF="msg01648.shtml">Thread Prev</A>][<A HREF="msg01666.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: feature query</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Matthias Bernhardt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 09:40:42 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 28 May 2000, Tom Gilbert wrote:
+
+TG&gt; Right now, I can bring this stuff in, but either have to mark it up
+TG&gt; previously, or pull it into a file, run that through a separate wml
+TG&gt; process and then import the result (messy).
+
+You could use a Makefile if you want, eg.
+
+Makefile:
+-----8&lt;-----
+index.html: index.wml
+	fortune &gt;fortune.wml
+	wml index.wml &gt;index.html
+-----&gt;8-----
+
+index.wml:
+-----8&lt;-----
+&lt;define-tag fortune&gt;
+#include fortune.wml
+&lt;/define-tag&gt;
+
+&lt;p&gt;
+Today's Fortune is:
+&lt;/p&gt;
+
+&lt;table bgcolor="cccccc" width="80%" cellpadding="20"&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;pre&gt;&lt;fortune&gt;&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+-----&gt;8-----
+
+The Makefile would keep you from forgetting to do it manually.
+Sorry, that I'm so keen on Make, but since I use it anyway, so
+in my environment it wouldn't be much of a change. You may as
+well prefer Denis' more universal solution.
+
+Greets, Matthias
+
+
+----------------------------------------------------------------
+<A  HREF="http://www.guxhagen.net/matthb/">http://www.guxhagen.net/matthb/</A>       <A  HREF="mailto:matthb@guxhagen.net">mailto:matthb@guxhagen.net</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01666" HREF="msg01666.shtml">Re: feature query</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01641" HREF="msg01641.shtml">feature query</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01661.shtml">Too complex (was: e) or f) : unknown tags parsing)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01662.shtml">different behaviour ;-)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01648.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01666.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01663"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01663"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

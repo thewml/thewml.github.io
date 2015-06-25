@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: QVevfgvna @vff <puevfNgbcvgzntvp.qr> -->
+<!--X-Date: Sun, 17 Jan 1999 19:03:19 +0100 (CET) -->
+<!--X-Message-Id: 36A200B2.891AAC0A@topitmagic.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A06357.3A7CFBDA@topitmagic.de -->
+<!--X-Reference: 36A1DFBA.AD006C5E@topitmagic.de -->
+<!--X-Reference: 19990117152514.A160@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00340">Date Index</a>][<a href="thrd8.shtml#00340">Thread Index</a>]<br>
+[<A HREF="msg00339.shtml">Date Prev</A>][<A HREF="msg00341.shtml">Date Next</A>][<A HREF="msg00339.shtml">Thread Prev</A>][<A HREF="msg00346.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: CHristian Niss &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Jan 1999 16:24:34 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+"Ralf S. Engelschall" wrote:
+&gt; 
+&gt; On Sun, Jan 17, 1999, CHristian Niss wrote:
+&gt; 
+&gt; &gt; I have reduced my problem to the fact, that I donot have
+&gt; &gt; setpgrp in my system ... the configure-script therefore
+&gt; &gt; stops in wml_backend/p2_mhc line 1645 ...
+&gt; &gt;
+&gt; &gt; Which rpm do I have to install to get some kind of setpgrp ???
+&gt; 
+&gt; A quick grep inside wml_backend/p2_mhc showed that the check for setpgrp in
+&gt; Meta-HTML's Autoconf stuff is obsolete and not really needed.  When you've
+&gt; Autoconf installed, just remove the line reading "AC_FUNC_SETPGRP" in
+&gt; wml_backend/p2_mhc/configure.in and run "autoconf" in this directory to get a
+&gt; fixed configure script. When you don't have Autoconf installed, remove just
+&gt; the lines 1645-1692 from the configure script.
+
+Thanks, that fixed my problem ... WML now compiles fine, but make test
+does not work ...
+
+This is the log of make test ...
+
+..................
+Running WML Test Suite (still incomplete):
+t/01-wml............** WML:Break: Error in Pass 2 (rc=139).
+cmp: EOF on tmp.01
+FAILED tests 1-2
+        Failed 2/2 tests, 0.00% okay
+t/02-p1_ipp.........** WML:Break: Error in Pass 2 (rc=139).
+cmp: EOF on tmp.01
+FAILED tests 1-2
+        Failed 2/2 tests, 0.00% okay
+Failed Test  Status Wstat Total Fail  Failed  List of failed
+-------------------------------------------------------------------------------
+t/01-wml.t                    2    2 100.00%  1-2
+t/02-p1_ipp.t                 2    2 100.00%  1-2
+Failed 2/2 test scripts, 0.00% okay. 4/4 subtests failed, 0.00% okay.
+make[1]: *** [test] Error 29
+make[1]: Leaving directory `/usr/local/wml-1.6.8/wml_test'
+make: *** [test] Error 2
+
+I hope I get WML running again ...
+
+CHristian
+
+-- 
+--------------------------------------------------------------------
+CHRISTIAN NISS     computer science student @ FAU Erlangen Nuremberg
+                        eMail: cnniss@cip.informatik.uni-erlangen.de 
+<A  HREF="http://www.topitmagic.de">http://www.topitmagic.de</A>  -  DAS Online-Magazin fuer Zauberkuenstler
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00346" HREF="msg00346.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00332" HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00338" HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00339" HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00341.shtml">Re: Question about pass 4 (m4)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00346.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00340"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00340"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

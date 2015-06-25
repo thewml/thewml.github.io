@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <big> with Color -->
+<!--X-From-R13: Bnhy Ecbanty <cnoybNnpzrqvn.qr> -->
+<!--X-Date: Fri, 5 Mar 1999 15:02:53 +0100 (CET) -->
+<!--X-Message-Id: 19990305125639.A6363@luna.office.acmedia.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990304214758.852H&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00426">Date Index</a>][<a href="thrd10.shtml#00426">Thread Index</a>]<br>
+[<A HREF="msg00425.shtml">Date Prev</A>][<A HREF="msg00427.shtml">Date Next</A>][<A HREF="msg00424.shtml">Thread Prev</A>][<A HREF="msg00427.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;big&gt; with Color</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Paul Sponagl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 Mar 1999 12:56:39 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan Ulrich Hasecke wrote:
+
+&gt; Is it possible to specify the color of the initial letter, created with
+&gt; &lt;big&gt; and to modify its size?
+
+Thats the definition for 'big'
+
+&lt;define-tag big&gt;
+&lt;gfont face="TimesBold" size=+4 align=left crop&gt;%0&lt;/gfont&gt;
+&lt;/define-tag&gt;
+
+ergo -&gt; all you can do with gfont
+
+ciao
+paul 
+
+-- 
+ACMEDIA: Professional and easy2use shopping systems
+<A  HREF="http://www.acmedia.de">http://www.acmedia.de</A> <A  HREF="http://www.buy-world.de">http://www.buy-world.de</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00424" HREF="msg00424.shtml">&lt;big&gt; with Color</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00425.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00427.shtml">height and width trough rollover</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00424.shtml">&lt;big&gt; with Color</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00427.shtml">height and width trough rollover</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00426"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00426"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

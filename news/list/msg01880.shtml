@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Praise and a question -->
+<!--X-From-R13: Xbrl Ezvgu <wbrlNwbrlfzvgu.pbz> -->
+<!--X-Date: Sat, 5 Aug 2000 01:12:01 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0008041703270.4307&#45;100000@joeysmith.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01880">Date Index</a>][<a href="thrd38.shtml#01880">Thread Index</a>]<br>
+[<A HREF="msg01879.shtml">Date Prev</A>][<A HREF="msg01881.shtml">Date Next</A>][<A HREF="msg01874.shtml">Thread Prev</A>][<A HREF="msg01882.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Praise and a question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Joey Smith &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Aug 2000 17:11:53 -0600 (MDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I just want to start by saying what a boon WML has become in my
+projects. Being able to use makefiles and such to keep a layer of
+abstraction between code and presentation is wonderful...
+
+I do, however, seem to have run up against a small snag. I use PHP, and
+I cannot seem to get the following consrtuct to work in WML 2.0.1. I'm
+wondering if it is me, the language, or what...
+
+I want to do something like:
+$(some_var:-"$php_var")
+
+ie, if some_var is not set from WML, I want it to default to a string
+containing a $, but this just seems to hang WML indefinitely...I'm
+resonably sure it's trying to resolve the php_var part.
+
+Is there any way to do this? It does not seem to be honoring the
+backslash escape...
+
+I also tried using pass 3, but I couldn't seem to figure out the proper
+usage there either (at least ePerl would bomb on me...ipp just hangs).
+
+So, am I nuts? Is there just not any way to do this? Or am I just
+missing something obvious? (20 hour days'll do that to a guy...)
+
+TIA,
+Joey
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01882" HREF="msg01882.shtml">Re: Praise and a question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01883" HREF="msg01883.shtml">Re: Praise and a question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01879.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01881.shtml">WML and XHTML 1.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01874.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01882.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01880"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01880"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

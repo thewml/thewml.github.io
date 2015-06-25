@@ -1,0 +1,255 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 20 May 2000 01:30:26 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000519233817.10316E&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01589">Date Index</a>][<a href="thrd33.shtml#01589">Thread Index</a>]<br>
+[<A HREF="msg01588.shtml">Date Prev</A>][<A HREF="msg01590.shtml">Date Next</A>][<A HREF="msg01592.shtml">Thread Prev</A>][<A HREF="msg01590.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 20 May 2000 01:30:22 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+You notice that many bug reports are identical in substance, i.e.
+problems with tags in attributes.
+
+1. Which problems do mp4h solve?
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+As i already wrote, i was unhappy with Meta-HTML.  Especially i was
+unable to
+* pass attributes with same names, as in
+    &lt;foo name="&lt;get-var name&gt;"&gt;
+* understand when attributes were expanded or not
+* predict whether syntax like
+    &lt;ifeq 0 0 &lt;: print "Good" :&gt;&gt;
+  works or not.
+* add new tags in mhc.
+
+Those who wrote WML tutorial with WML know it was a pain, because of the
+syntax of define-tag.
+
+So i decided to implement my own parser to fit our goals (better
+interaction with other WML passes).
+
+2. Tag expansion with mp4h
+=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+In this section, double quotes are used to group letters visually, do
+not focus on them now.
+
+Suppose that &lt;baz&gt; has been defined as
+&lt;define-tag baz&gt;quux&lt;/define-tag&gt;
+
+What happens when mp4h reads
+       &lt;foo bar="&lt;baz&gt;"&gt;
+?
+
+* If the &lt;foo&gt; tag has been defined
+    Input          Action             Buffer
+    
+    &lt;foo        attributes are read
+      bar="                           bar="
+        &lt;baz    attributes are read   bar="
+        &gt;       macro expansion
+                  baz()  --&gt; quux     bar="quux
+      "                               bar="quux"
+    &gt;           stop reading attr. 
+                Attr #1: bar="quux"
+                macro expansion
+                  foo(bar="quux")
+
+* If the &lt;foo&gt; tag is undefined
+    Input          Action             Buffer
+    
+    &lt;foo        tag unknown, written
+                like normal text      &lt;foo
+      bar="                           &lt;foo bar="
+        &lt;baz    attributes are read   &lt;foo bar="
+        &gt;       macro expansion
+                  baz()  --&gt; quux     &lt;foo bar="quux
+      "                               &lt;foo bar="quux"
+    &gt;                                 &lt;foo bar="quux"&gt;
+
+We see that attributes are expanded first. This is very important, since
+it ensures that we can type
+    &lt;foo name="&lt;get-var name&gt;"&gt;
+
+And now it is easy to understand why this fails:
+    &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+
+    Input                 Action                         Output
+    
+    &lt;ifeq              read attributes
+       0               Attr #1: 0
+       0               Attr #2: 0
+      &lt;img             Attr #3: &lt;img
+      src="foo.png"    Attr #4: src="foo.png"
+      alt=""           Attr #5: alt=""
+    &gt;                  stop reading attr.
+                       macro expansion
+           ifeq(0, 0, &lt;img, src="foo.png", alt="")        &lt;img
+    &gt;                  nothing special                    &gt;
+
+
+This was about attributes.  You may now want to know how complex tags
+are handled too. 
+  &lt;define-tag foo endtag=required&gt;x:%body:x&lt;/define-tag&gt;
+  &lt;define-tag bar endtag=required&gt;y:%body:y&lt;/define-tag&gt;
+  &lt;foo&gt;&lt;bar&gt;baz&lt;/bar&gt;&lt;/foo&gt;
+
+    Input                 Action                         Output
+    
+    &lt;foo&gt;              complex tag, read body
+       &lt;bar&gt;           complex tag, read body
+          baz          Body: baz
+       &lt;/bar&gt;          tag is complete
+    &lt;/foo&gt;             Body: &lt;bar&gt;baz&lt;/bar&gt;
+                         foo(&lt;bar&gt;baz&lt;/bar&gt;)
+                       replaced by
+                         x:&lt;bar&gt;baz&lt;/bar&gt;:x
+    x:                 normal text                       x:
+    &lt;bar&gt;              complex tag, read body
+       baz             Body: baz
+    &lt;/bar&gt;               bar(baz)
+                       replaced by
+                         y:baz:y
+    y:baz:y:x          normal text                       y:baz:y:x
+
+Body is first collected without expansion, after that function is
+evaluated.  As body tags is not the key point, i won't go into deeper
+details in this post.
+
+3. Quoting
+=-=-=-=-=-
+
+With Meta-HTML we write
+   &lt;ifeq 0 0 "&lt;href url=\"foo.png\"&gt;"&gt;
+
+Now remember that with mp4h attributes are evaluated *before* macro
+expansion.  This is why escaping quotes does not make sense, and
+   &lt;ifeq 0 0 "&lt;href url="foo.png"&gt;"&gt;
+is perfectly valid. Here is how it works:
+
+    Input                 Action
+    
+    &lt;ifeq              read attributes
+       0               Attr #1: 0
+       0               Attr #2: 0
+      "                start of a group
+      &lt;href            known tag, read attributes
+         url="foo.png" Attr #1: url="foo.png"
+      &gt;                stop reading attr.
+                         href(url="foo.png")
+                       replaced by
+                         &lt;a href="foo.png"&gt;&lt;tt&gt;foo.png&lt;/tt&gt;&lt;/a&gt;
+      "                end of a group
+                       This group contains
+                       &lt;a href="foo.png"&gt;&lt;tt&gt;foo.png&lt;/tt&gt;&lt;/a&gt;
+    &gt;                  stop reading attr.
+                       macro expansion
+           ifeq(0, 0, &lt;a href="foo.png"&gt;&lt;tt&gt;foo.png&lt;/tt&gt;&lt;/a&gt;)
+                       replaced by
+                         &lt;a href="foo.png"&gt;&lt;tt&gt;foo.png&lt;/tt&gt;&lt;/a&gt;
+
+On the other hand, we must write
+    &lt;ifeq 0 0 "&lt;img src=\"foo.png\" alt=\"\"&gt;"&gt;
+and not
+    &lt;ifeq 0 0 "&lt;img src="foo.png" alt=""&gt;"&gt;
+because in this case text within quotes is ordinary text, this is not a
+tag with attributes.
+
+4. What must be changed?
+=-=-=-=-=-=-=-=-=-=-=-=-
+
+I agree with your bug reports, it is a very bad idea to have different
+behaviours depending whether tags are defined or not.
+
+Of course it is easy to consider that unknown tags are simple tags, this
+will fix
+    &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+
+But it breaks
+    &lt;: print "&lt;img src=\"" . $file . "\" alt=\"" . $alt ."\"&gt;"; :&gt;
+
+And even worse, consider
+    &lt;: print &lt;&lt;EOT;
+    Hey, how to finish this pseudo EOT tag?
+    EOT
+    :&gt;
+
+In fact i focused my view on these last topics, to ease mixing ePerl and
+mp4h, but i did not realize that this syntax was confusing.
+Now that the problem is clearly (?) expressed, it should be solved
+quickly ;-)
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01590" HREF="msg01590.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="01595" HREF="msg01595.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01588.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01590.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01592.shtml">Re: [BUG REPORT] WML 2.0.0, redhat 6.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01590.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01589"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01589"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

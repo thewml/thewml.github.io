@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [bug report][patch] logo.src error -->
+<!--X-From-R13: "Rnivq [rage'r" <Rnivq.[ragerNvevfn.se> -->
+<!--X-Date: Sat, 7 Nov 1998 03:11:36 +0100 (CET) -->
+<!--X-Message-Id: wd8n264mo6h.fsf@parate.irisa.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00238">Date Index</a>][<a href="thrd6.shtml#00238">Thread Index</a>]<br>
+[<A HREF="msg00237.shtml">Date Prev</A>][<A HREF="msg00239.shtml">Date Next</A>][<A HREF="msg00236.shtml">Thread Prev</A>][<A HREF="msg00244.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[bug report][patch] logo.src error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;David Mentr'e&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 06 Nov 1998 23:49:58 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+ Hi all,
+
+The following minimal file fails to pass wml pass 3 :
+
+«
+parafond(dmentre):~/&lt;1&gt;home-page/prive [67] cat bug.wml
+#use wml::std::logo
+ 
+&lt;logo name="wml"&gt;
+»
+
+The error :
+«
+parafond(dmentre):~/&lt;1&gt;home-page/prive [66] wml bug.wml
+ePerl:Error: Perl parsing error (interpreter rc=2)
+ 
+---- Contents of STDERR channel: ---------
+syntax error at /tmp/wml.15090.tmp1 line 75, near "my"
+Execution of /tmp/wml.15090.tmp1 aborted due to compilation errors.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+»
+
+I traced it to wml_include/std/logo.src. Here is the patch to correct a
+(fatal) typo :
+
+«
+--- wml_include/std/logo.src.old        Fri Nov  6 23:41:23 1998
++++ wml_include/std/logo.src    Fri Nov  6 23:43:05 1998
+@@ -19,7 +19,7 @@
+     my $name   = "&lt;get-var name&gt;";
+     my $base   = "&lt;get-var base&gt;";
+     my $file   = "&lt;get-var file&gt;";
+-    my $target = "&lt;get-var target&gt;"
++    my $target = "&lt;get-var target&gt;";
+ 
+     my $giffile  = "$WML_LOC_LIBDIR/aux/logos/logo-$name.gif";
+     my $infofile = "$WML_LOC_LIBDIR/aux/logos/logo-$name.info";
+»
+
+People who track 1.6.8preXX patches should integrate it (I think ;).
+
+d.
+-- 
+ David.Mentre@irisa.fr -- <A  HREF="http://www.irisa.fr/prive/dmentre/">http://www.irisa.fr/prive/dmentre/</A>
+ Opinions expressed here are only mine.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00237.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00239.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00236.shtml">Problem browing WML online docs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00244.shtml">SGML-DTD for WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00238"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00238"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

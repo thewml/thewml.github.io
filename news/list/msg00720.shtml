@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 1.6.8 compiled ok but 1.7.0 not, any idea? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 4 Jun 1999 18:39:56 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990604182913.27339A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199906041616.SAA06192@lasole.fib.upc.es -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00720">Date Index</a>][<a href="thrd15.shtml#00720">Thread Index</a>]<br>
+[<A HREF="msg00719.shtml">Date Prev</A>][<A HREF="msg00721.shtml">Date Next</A>][<A HREF="msg00719.shtml">Thread Prev</A>][<A HREF="msg00721.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Jun 1999 18:33:57 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 4 Jun 1999, MANEL Rodero (LCFIB Systems Programmer) wrote:
+
+&gt; Hi,
+&gt; 
+&gt; 	I've compiled 1.6.8 ok but I can't complete the compilation of 
+&gt; 1.7.0 under Linux. 
+&gt; 
+&gt; 	I've generated a txt file with the complete output for this process 
+&gt; at this URL:
+&gt; 
+&gt; 		<A  HREF="http://alibaba.fib.upc.es/~manel/wml.txt">http://alibaba.fib.upc.es/~manel/wml.txt</A>
+&gt; 
+&gt; 	Someone could help me to find what's the problem?
+
+Could you run ``make distclean'' and re-generate wml.txt?
+It looks like you run ``configure'' on a computer and ``make'' on another.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00721" HREF="msg00721.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></strong>, <em>From:</em> MANEL Rodero (LCFIB Systems Programmer)</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00719" HREF="msg00719.shtml">1.6.8 compiled ok but 1.7.0 not, any idea?</A></strong>, <em>From:</em> MANEL Rodero (LCFIB Systems Programmer)</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00719.shtml">1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00721.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00719.shtml">1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00721.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00720"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00720"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug report: Problems with variables -->
+<!--X-From-R13: Gjr [vaqehc <hjrNzvaqehc.qr> -->
+<!--X-Date: Thu, 8 Jul 1999 22:04:56 +0200 (MET DST) -->
+<!--X-Message-Id: 99070809500300.01726@abakus -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990708001114.375D&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00839">Date Index</a>][<a href="thrd18.shtml#00839">Thread Index</a>]<br>
+[<A HREF="msg00838.shtml">Date Prev</A>][<A HREF="msg00840.shtml">Date Next</A>][<A HREF="msg00834.shtml">Thread Prev</A>][<A HREF="msg00841.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug report: Problems with variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Uwe Mindrup &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 09:31:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+&gt;I try with wml-1.7.1 and wml-1.7.2 and can't reproduce your wrong
+&gt;output.
+
+oh, very sorry. I had simplified my example one step to much :-/
+
+Here is the corrected example:
+
+template.wml:
+---------------------------------
+&lt;TITLE&gt;$(Title)$(SubTitle:+: )$(SubTitle)&lt;/TITLE&gt;
+---------------------------------
+
+The calls are:
+#use 'template.wml' Title="foo" SubTitle="Homepage"
+resp.
+#use 'template.wml' Title="foo"
+
+Now it works, as i described in my further message: the first call
+produces correctly: "foo: Homepage" but the second call generates the
+wrong  "foo$(SubTitle)".
+
+In my original template.wml I use $(PACKAGE_NAME) instead of $(Title),
+which is set in my .wmlrc via
+-D PACKAGE_NAME="foo"
+
+
+&gt;This one won't work, variables can not be nested like this. If you
+&gt;want such a feature, write it ;-) Too tricky for me.
+
+Oh, no, i don't want to write it. It's too tricky for me, too. ;-)
+
+Best regards,
+Uwe
+
+-- 
+Uwe Mindrup  Ingersheim, Germany
+<A  HREF="http://www.mindrup.de/">http://www.mindrup.de/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00841" HREF="msg00841.shtml">Re: Bug report: Problems with variables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00834" HREF="msg00834.shtml">Re: Bug report: Problems with variables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00838.shtml">Bug report: mistake in documentation of wml:.std.info</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00840.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00834.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00841.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00839"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00839"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

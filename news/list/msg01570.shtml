@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: VPATH (was: [ANNOUNCE] WML 2.0) -->
+<!--X-From-R13: [ngguvnf Preauneqg <zngguoNthkuntra.arg> -->
+<!--X-Date: Mon, 15 May 2000 23:43:44 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.10005141507190.322&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000512001359.4314A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01570">Date Index</a>][<a href="thrd32.shtml#01570">Thread Index</a>]<br>
+[<A HREF="msg01569.shtml">Date Prev</A>][<A HREF="msg01571.shtml">Date Next</A>][<A HREF="msg01566.shtml">Thread Prev</A>][<A HREF="msg01567.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: VPATH (was: [ANNOUNCE] WML 2.0)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Matthias Bernhardt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 15 May 2000 09:00:51 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 12 May 2000, Denis Barbier wrote:
+
+DB&gt;       - Better processing on files in other directories: the main goal
+DB&gt;         is to allow use of the VPATH feature of GNU make to build
+DB&gt;         webpages into a test area before compiling webpages.  This
+DB&gt;         does only apply to the wml binary, since there is no reason
+DB&gt;         to mix WMk and Makefiles.
+
+With GNU Make this worked pretty fine with WML 1.7.4, when I
+created two different Target environments out of common sources
+(actually the only difference was a "comments" button for the
+intranet-version which should not appear in the internet 
+version, but I think one could realize entirely different
+layouts or different languages in different target paths
+through this).
+
+The only problem I had was that BASENAME and DIRNAME were
+determined in a way that didn't match my expectation.
+
+user@host:~/targets $ wml ../sources/index.wml
+
+would have set
+
+WML_SRC_BASENAME=../sources/index
+WML_SRC_DIRNAME=/home/user/target
+
+instead of
+
+WML_SRC_BASENAME=index
+WML_SRC_DIRNAME=/home/user/source
+
+As a quick and dirty workaround I included the following lines
+in my templates:
+
+-----8&lt;-----
+# Tweak for WML 1.7.4 being called from a directory
+# other than the one where the source is.
+#
+# WML_SRC_BASENAME only does s/.wml$// but not s|(.*)/||
+# WML_SRC_DIRNAME is set to `pwd` instead of $1 of prev. regex
+
+&lt;set-var WML_SRC_BUGGY_BASENAME=&lt;get-var WML_SRC_BASENAME&gt;&gt;
+&lt;set-var WML_SRC_BUGGY_DIRNAME=&lt;get-var WML_SRC_DIRNAME&gt;&gt;
+&lt;set-var WML_SRC_BASENAME=&lt;substring
+    &lt;get-var WML_SRC_FILENAME&gt;
+    &lt;match &lt;get-var WML_SRC_FILENAME&gt; "[^/]*$" action=startpos&gt;
+    &lt;match &lt;get-var WML_SRC_FILENAME&gt; "\.wm.$" action=startpos&gt;
+&gt;&gt;
+&lt;set-var WML_SRC_DIRNAME=&lt;substring
+    &lt;get-var WML_SRC_FILENAME&gt;
+    0
+    &lt;match &lt;get-var WML_SRC_FILENAME&gt; "[^/]*$" action=startpos&gt;
+&gt;&gt;
+-----&gt;8-----
+
+which delivers at least
+
+WML_SRC_BASENAME=index
+WML_SRC_DIRNAME=../source
+
+where WML_SRC_DIRNAME could now be prepended to the
+WML_SRC_BUGGY_DIRNAME and put through &amp;canonpath() of
+wml::sup::path to get the expected result.
+
+But since this is really dirty and I don't know whether it
+still works under WML 2.0 (which to be testing I'm still looking
+forward to) I think If you really consider this senseful you
+should implement it directly into wml.
+
+Greets, Matthias
+
+
+----------------------------------------------------------------
+<A  HREF="http://www.guxhagen.net/matthb/">http://www.guxhagen.net/matthb/</A>       <A  HREF="mailto:matthb@guxhagen.net">mailto:matthb@guxhagen.net</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01566" HREF="msg01566.shtml">[ANNOUNCE] WML 2.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01569.shtml">RE: Todo list</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01571.shtml">Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01566.shtml">[ANNOUNCE] WML 2.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01567.shtml">Todo list</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01570"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01570"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

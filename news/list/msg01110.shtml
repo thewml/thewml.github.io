@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: An idea... -->
+<!--X-From-R13: Xvz Vroreg <wuroregNwuroreg.pk> -->
+<!--X-Date: Tue, 2 Nov 1999 08:17:50 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.9911011216530.15195&#45;100000@keymaster.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14365.50650.892947.910163@medusa.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01110">Date Index</a>][<a href="thrd24.shtml#01110">Thread Index</a>]<br>
+[<A HREF="msg01109.shtml">Date Prev</A>][<A HREF="msg01111.shtml">Date Next</A>][<A HREF="msg01108.shtml">Thread Prev</A>][<A HREF="msg01114.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: An idea...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Nov 1999 12:20:18 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+At what point does this sort of thing cross that boundary of "this is
+XML's job?"
+
+It would seem to me to be better to develop a formal orgchart dtd and
+develop a renderer for it, and plug that into wml (define a tag which
+expands into the necessary perl code to system() or exec() or whatever...)
+
+Don't get me wrong, there is something to be said about the
+lightweightedness of wml, and I surely don't think we should impose strict
+xml semantics on navbar, etc, but there does have to be some line, surely,
+where we cross it and say "alright, this is so involved that it's best to
+do it more formally with xml."
+
+
+jim
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01114" HREF="msg01114.shtml">Re: An idea...</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01108" HREF="msg01108.shtml">An idea...</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01109.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01111.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01108.shtml">An idea...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01114.shtml">Re: An idea...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01110"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01110"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

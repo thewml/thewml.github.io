@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: problem: attributes being used as body -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 26 Mar 2001 17:36:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20010326174647.A2745@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010326081240.Q31036@jeffcovey.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02183">Date Index</a>][<a href="thrd44.shtml#02183">Thread Index</a>]<br>
+[<A HREF="msg02182.shtml">Date Prev</A>][<A HREF="msg02184.shtml">Date Next</A>][<A HREF="msg02184.shtml">Thread Prev</A>][<A HREF="msg02185.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: problem: attributes being used as body</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Mar 2001 17:46:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Mar 26, 2001 at 08:12:40AM -0500, jeff covey wrote:
+&gt; i've been using wml for months with no problems, but i woke up this
+&gt; morning and my site looked like hell.  the only changes i made
+&gt; yesterday were made by updating my debian testing distribution, mainly
+&gt; upgrading to perl 5.6.0-20.  i'm running wml 1.7.4.
+&gt;
+&gt; 
+&gt; the front page should have a table of "what's new" items that looks
+&gt; like:
+&gt; 
+&gt; <A  HREF="http://jeffcovey.net/new/2000.html">http://jeffcovey.net/new/2000.html</A>
+[...]
+
+Hi Jeff,
+
+the generated HTML file shows that you are running WML 2.0.6, so you
+have to read README.mp4h for hints on upgrading. Firstly, add -i
+wml::sys::compat1 to .wmlrc or command line, then try to fix remaining
+problems.  Let us know if you need some help.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02185" HREF="msg02185.shtml">Re: problem: attributes being used as body</A></strong>, <em>From:</em> jeff covey</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02181" HREF="msg02181.shtml">problem: attributes being used as body</A></strong>, <em>From:</em> jeff covey</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02182.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02184.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02184.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02185.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02183"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02183"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

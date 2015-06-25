@@ -1,0 +1,158 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multiple outputs, one input -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Sat, 23 Dec 2000 08:49:03 +0100 (MET) -->
+<!--X-Message-Id: 200012230748.QAA14281@nn.iij4u.or.jp -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: Pine.LNX.4.21.0012230028550.1824&#45;100000@sg2.dedicatedco&#45;host.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02093">Date Index</a>][<a href="thrd42.shtml#02093">Thread Index</a>]<br>
+[<A HREF="msg02092.shtml">Date Prev</A>][<A HREF="msg02094.shtml">Date Next</A>][<A HREF="msg02092.shtml">Thread Prev</A>][<A HREF="msg02094.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multiple outputs, one input</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 23 Dec 2000 16:48:49 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi, Mak
+
+Subject: Multiple outputs, one input
+Date: Sat, 23 Dec 2000 00:47:56 -0500 (EST)
+
+&gt; I would want to be able to use evangelion.wml to generate:
+&gt; index.html (thumbnail pages)
+&gt; index-2.html
+&gt; index-3.html
+&gt; index-4.html
+&gt; index-5.html
+&gt; image-1.html (full-sized image pages)
+&gt; image-2.html
+&gt; ...
+&gt; image-30.html
+
+  I'm not sure wml can generate many files,
+but I think perl script can do.
+I made a script which generate htmls from jpgs.
+I use more complex version.
+ ex. <A  HREF="http://www.nn.iij4u.or.jp/~tutimura/pool2000/">http://www.nn.iij4u.or.jp/~tutimura/pool2000/</A> (sorry Japanese)
+
+Regards,
+-- Nobuyuki Tsuchimura
+</PRE>
+<PRE>
+#!/usr/bin/perl -w
+
+# generate thumbnails, htmls, and index.html from jpgs in current directory.
+# using perl, ls, grep, sed, wml, cjpeg, djpeg, pnmscale.
+
+
+$wml = "wml | sed -e 's/ SUMMARY=\"\"//ig'";
+$head = &lt;&lt;EOS;
+#use wml::std::page
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
+&lt;PAGE BGCOLOR="#000000" TEXT="#CCCCCC" LINK="#AAAAFF" VLINK="#00FFFF" ALINK="#FF0000"&gt;
+EOS
+
+
+# enumerate jpgs in $title[]
+open( IN, "ls *.jpg | grep -v S.jpg | sed -e s/.jpg//g |" );
+@title = &lt;IN&gt;;           # ^^^  remove thumbnails
+close(IN);
+chomp @title;
+
+
+# generate one html and one thumbnail per jpg
+for ( $i=0; $title[$i]; $i++ ) {
+    $html  = $title[$i] . ".html";
+    $large = $title[$i] . ".jpg";
+    $small = $title[$i] . "S.jpg";
+
+    print "writting $html \n";
+    open( HTML, "| $wml &gt; $html" );
+    print HTML &lt;&lt;EOS;
+$head
+&lt;HEAD&gt;&lt;TITLE&gt;$large&lt;/TITLE&gt;&lt;/HEAD&gt;
+&lt;CENTER&gt;&lt;IMG SRC="$large"&gt;&lt;/CENTER&gt;
+EOS
+    close(HTML);
+    system( "djpeg $large | pnmscale 0.22 | cjpeg &gt; $small" );
+}
+
+
+# generate index.html
+open( HTML, "| $wml &gt; index.html" );
+print HTML &lt;&lt;EOS;
+$head
+&lt;HEAD&gt;&lt;TITLE&gt;index page&lt;/TITLE&gt;&lt;/HEAD&gt;
+&lt;H1 ALIGN="CENTER"&gt;index page&lt;/H1&gt;
+&lt;CENTER&gt;
+EOS
+
+for ( $i=0; $title[$i]; $i++ ) {
+    $html  = $title[$i] . ".html";
+    $small = $title[$i] . "S.jpg";
+    print HTML "&lt;TABLE BORDER=1&gt;&lt;TR ALIGN=CENTER&gt;\n" if ( $i % 4 == 0 );
+    print HTML
+	"&lt;TD&gt;&lt;A HREF=\"$html\"&gt;&lt;IMG SRC=\"$small\" ALT=\"$small\"&gt;&lt;/A&gt;\n";
+    print HTML "&lt;/TR&gt;&lt;/TABLE&gt;&lt;BR&gt;\n" if ( $i % 4 == 3 || !$title[$i+1] );
+}
+
+print HTML "&lt;/CENTER&gt;\n";
+close(HTML);
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02092" HREF="msg02092.shtml">Multiple outputs, one input</A></strong>, <em>From:</em> Philip Mak</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02092.shtml">Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02094.shtml">Re: Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02092.shtml">Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02094.shtml">Re: Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02093"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02093"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

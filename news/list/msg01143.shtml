@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 15 Nov 1999 10:42:25 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991115104706.9606A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 000201bf2dfb$9042c780$24be22c3@phrankphurt.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01143">Date Index</a>][<a href="thrd23.shtml#01143">Thread Index</a>]<br>
+[<A HREF="msg01142.shtml">Date Prev</A>][<A HREF="msg01144.shtml">Date Next</A>][<A HREF="msg01141.shtml">Thread Prev</A>][<A HREF="msg01136.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 15 Nov 1999 10:54:45 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 13 Nov 1999, Darko Krizic wrote:
+
+&gt; &gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; &gt; /usr/local/bin/wml -n -oWEB:index.html -oPRINT:print.html index.wml
+&gt; &gt; &gt; ** WML:Break: Error in Pass 4 (rc=139).
+&gt; &gt; &gt; ** WMk:Break: Error in WML (rc=256)
+&gt; &gt; &gt;
+&gt; &gt; &gt; Compile was ok. Same when executing "make test"
+&gt; &gt;
+&gt; &gt; Darko, what does your index.wml look like?
+&gt; 
+&gt; Close this bug, I solved the problem, but I still don't know the exact
+&gt; reason.
+&gt; History:
+[...]
+&gt;   - wml's "make test" complains about missing File::PathConvert,
+&gt; reeinstalled this
+&gt;     manually from CPAN, wml runs fine now. My index.wml is correct.
+
+You'll get into trouble, because of a change in recent versions of
+File::PathConvert. You should install the one in
+wml_common/filepathconvert.
+
+&gt; SuSE 6.2 seems to be very buggy, at least after update from 6.1.
+
+WML compiles fine on a SuSE 6.2 installed from scratch.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01141" HREF="msg01141.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Darko Krizic</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01142.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01144.shtml">I can compile a site</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01141.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01136.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01143"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01143"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

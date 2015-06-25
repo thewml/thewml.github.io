@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wmk and shebang line -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Tue, 30 Mar 1999 16:11:36 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990330155150.760O&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990330134210.4107B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00529">Date Index</a>][<a href="thrd12.shtml#00529">Thread Index</a>]<br>
+[<A HREF="msg00528.shtml">Date Prev</A>][<A HREF="msg00530.shtml">Date Next</A>][<A HREF="msg00527.shtml">Thread Prev</A>][<A HREF="msg00530.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wmk and shebang line</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 Mar 1999 16:11:03 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 30 Mar 1999, Denis Barbier wrote:
+
+&gt;--- wmk.src.old Tue Mar 30 13:43:41 1999
+&gt;+++ wmk.src     Tue Mar 30 13:43:15 1999
+&gt;@@ -483,7 +483,7 @@
+&gt;     if (not $opt_f) {
+&gt;         my @outfiles = ();
+&gt;         my $s = $opts;
+&gt;-        $s =~ s|-o\s*["']?(?:[^:]+:(?!:))?([^\s@]+)|push(@outfiles, $1), ''|sge;
+&gt;+        $s =~ s|-o\s*["']?(?:[^:]+:(?!:))?([^\s@'"]+)|push(@outfiles, $1), ''|sge;
+&gt;         $skipable = &amp;skipable($file, @outfiles);
+&gt;     }
+&gt;     else {
+
+Sorry, I've never applied a patch to anything. Do I simply have to remove
+the line with the - and insert the line with the + with any editor in the
+executable "wmk" (what I've tried and does not work) or do I have to put
+it into the source-file of wmk and recompile it all?
+
+Or is there a way to recompile only wmk?
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00530" HREF="msg00530.shtml">Re: wmk and shebang line</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00526" HREF="msg00526.shtml">Re: wmk and shebang line</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00528.shtml">Re: problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00530.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00527.shtml">Meta-HTML tags are case sensitive ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00530.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00529"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00529"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

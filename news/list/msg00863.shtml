@@ -1,0 +1,219 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: gfont problem with PS fonts on big&#45;endian platforms (patch included) -->
+<!--X-From-R13: Rnir Bybaxn <cybaxnNqbvg.jvfp.rqh> -->
+<!--X-Date: Mon, 19 Jul 1999 22:14:29 +0200 (MET DST) -->
+<!--X-Message-Id: 19990719151410.A27709@doit.wisc.edu -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00863">Date Index</a>][<a href="thrd18.shtml#00863">Thread Index</a>]<br>
+[<A HREF="msg00859.shtml">Date Prev</A>][<A HREF="msg00864.shtml">Date Next</A>][<A HREF="msg00857.shtml">Thread Prev</A>][<A HREF="msg00864.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>gfont problem with PS fonts on big-endian platforms (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Dave Plonka &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 19 Jul 1999 15:14:10 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+WML users,
+
+[I submitted details of this issue using the web-form on the gfont web-
+ page...]
+
+On big-endian architectures, gfont fails when trying to use PostScript
+fonts.  It always reports that the ".gdf[.gz]" files are invalid if the
+y were built on a big-endian machine.  Here's what happens:
+
+   $ gfont -F Courier -o /tmp/courier.gif courier  
+   Running `.../lib/exec/gfont_mkgdf Courier'
+   [Create PK file via GSFtoPK/Ghostscript]
+   gsftopk -q pcrr8r 72
+   [Convert PK to GdF]
+   .../lib/exec/gfont_pktopx pcrr8r.72pk pcrr8r.72px
+   .../lib/exec/gfont_pxtogdf pcrr8r.72px pcrr8r.gdf pcrr8r.gdi
+   [Compress GdF]
+   gzip -9 &lt;pcrr8r.gdf &gt;.../lib/gdf/Courier.gdf.gz
+   Still cannot load font 'Courier'
+   $
+
+What I found to be the problem was that "gfont_pxtogdf" wrote long words
+(such as the number of characters in the font) as a host/native-ordered
+integers into the resulting ".gdf" files.  However, the code that reads
+the ".gdf" files uses a function called "gdIntern_convert_long" to swab
+these values on big-endian systems.  (This caused the number of characters
+in the font to be mis- interpreted as 65536 rather than 256 which led to
+the errant behavior.)
+
+If you want to use gfont with PostScript fonts on a big-endian machine
+(such as Solaris SPARC): apply the accompanying patch, then be sure to run
+autoconf immediately afterwards since I did not patch "configure", just
+"configure.in".  Next remove "config.cache" and rerun "configure" and
+"make install".
+
+Beware: Since the accompanying patch causes gfont to store integers in
+big-endian rather than native host-order (which is little-endian on Intel),
+it will invalidate your current ".gdf" files.  If you prefer to maintain
+compatibility with current ".gdf" files rather than rebuilding them,
+perhaps you should wait to see what the WML/gfont maintainer makes of this.
+(I did not find any docs which explicitly state the ".gdf" file format
+so I didn't know whether storing them in host-order was an oversight or if
+it was intended that they always be little-endian or what.)
+
+Dave
+
+P.S. The good news is that, for the most part, WML &amp; gfont work well on
+Solaris SPARC.  I'm gathering that the rest of the user-base is on Intel
+hence they didn't bump into this issue.
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+</PRE>
+<PRE>
+*** configure.in_djp2	Tue Jun 29 13:23:34 1999
+--- configure.in	Mon Jul 19 10:43:58 1999
+***************
+*** 27,32 ****
+--- 27,33 ----
+  AC_CONFIGURE_PART(CHECK: C Compiler and Perl Interpreter)
+  AC_PROG_CC
+  AC_PROG_CPP
++ AC_C_BIGENDIAN
+  AC_MSG_CHECKING([for Perl language])
+  TMPFILE=/tmp/ac.$$
+  rm -f $TMPFILE
+*** gfont_pxtogdf.c_djp	Fri Sep  5 13:51:38 1997
+--- gfont_pxtogdf.c	Mon Jul 19 11:35:23 1999
+***************
+*** 239,244 ****
+--- 239,250 ----
+  
+  void Put32(FILE *fp, int i)
+  {
++ #ifndef WORDS_BIGENDIAN /* { */
++     i = (((i &amp; 0xff000000L) &gt;&gt; 24) | 
++          ((i &amp; 0x00ff0000L) &gt;&gt;  8) |
++          ((i &amp; 0x0000ff00L) &lt;&lt;  8) |
++          ((i &amp; 0x000000ffL) &lt;&lt; 24));
++ #endif /* } */
+      fwrite(&amp;i, sizeof(int), 1, fp);
+      return;
+  }
+*** gfont_gd.c_djp	Fri Sep  5 13:32:51 1997
+--- gfont_gd.c	Mon Jul 19 10:54:14 1999
+***************
+*** 2674,2713 ****
+  /*****************/
+  
+  /*
+!  *  Byte Conversion -- Hilfsroutinen fuer das alte
+!  *  Problem High-Endian vs. Little-Endian !!
+   */
+- unsigned short gdIntern_convert_short(unsigned short z)
+- {
+-     char *teststring;
+-     short t;
+- 
+-     t = 0x4142;
+- 
+-     teststring = (char *)&amp;t;
+- 
+-     if(teststring[0] == 'B' &amp;&amp; teststring[1] == 'A')
+-         return(z);
+-     else
+-         return(((z &amp; 0xff00U) &gt;&gt; 8) | ((z &amp; 0x00ffU) &lt;&lt; 8));
+- }
+  unsigned long gdIntern_convert_long(unsigned long z)
+  {
+!     char *teststring;
+!     unsigned long t;
+! 
+!     t = 0x41424344;
+! 
+!     teststring = (char *)&amp;t;
+! 
+!     if(teststring[0] == 'D' &amp;&amp; teststring[1] == 'C' &amp;&amp;
+!        teststring[2] == 'B' &amp;&amp; teststring[3] == 'A')
+!         return(z);
+!     else
+!         return(((z &amp; 0xff000000L) &gt;&gt; 24) | 
+!                ((z &amp; 0x00ff0000L) &gt;&gt;  8) |
+!                ((z &amp; 0x0000ff00L) &lt;&lt;  8) |
+!                ((z &amp; 0x000000ffL) &lt;&lt; 24));
+  }
+  
+  gdFontPtr gdFontCreateFromGdf(FILE *in)
+--- 2674,2691 ----
+  /*****************/
+  
+  /*
+!  *  Byte Conversion
+   */
+  unsigned long gdIntern_convert_long(unsigned long z)
+  {
+! #ifdef WORDS_BIGENDIAN /* { */
+!     return(z);
+! #else /* }{ */
+!     return(((z &amp; 0xff000000L) &gt;&gt; 24) | 
+!            ((z &amp; 0x00ff0000L) &gt;&gt;  8) |
+!            ((z &amp; 0x0000ff00L) &lt;&lt;  8) |
+!            ((z &amp; 0x000000ffL) &lt;&lt; 24));
+! #endif /* } */
+  }
+  
+  gdFontPtr gdFontCreateFromGdf(FILE *in)
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00864" HREF="msg00864.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00859.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00864.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00857.shtml">navbar problem with non-HTTP URLs (patch included)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00864.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00863"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00863"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

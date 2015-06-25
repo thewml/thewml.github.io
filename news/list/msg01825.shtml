@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Problems with define&#45;tag -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 17 Jul 2000 17:38:19 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0007171736240.15198&#45;100000@nova.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717173242.A10463@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01825">Date Index</a>][<a href="thrd10.shtml#01825">Thread Index</a>]<br>
+[<A HREF="msg01824.shtml">Date Prev</A>][<A HREF="msg01826.shtml">Date Next</A>][<A HREF="msg01824.shtml">Thread Prev</A>][<A HREF="msg01827.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Problems with define-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 17:38:12 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+I guess this must be some side effect. I am trying to convert some
+navbar-Magic Tobias did from WML 1.7.x to WML 2.0.2 and just don't get
+anywhere.
+
+The error I get is the following line (after path 2):
+
+    $CFG-&gt;{EPILOG}-&gt;{N}-&gt;{'any'} = 
+;
+
+
+There is of course something missing after the = but I just can't find
+out how this line is created in the first place.
+
+Cheers,
+Fritz
+
+&gt; And how did you write it with define-tag?
+&gt; 
+&gt;   &lt;define-tag MAGICK endtag=required whitespace=delete&gt;
+&gt;   &lt;perl&gt;
+&gt;   BEGIN{unshift @INC, "/usr/pack/imagemagick-4.2.9-to/solaris/perl/"};
+&gt;   use Image::Magick;
+&gt;   &lt;/perl&gt;
+&gt;   &lt;/define-tag&gt;
+&gt; 
+&gt; What does not work?
+&gt; 
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01827" HREF="msg01827.shtml">Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01824" HREF="msg01824.shtml">Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01824.shtml">Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01826.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01824.shtml">Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01827.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01825"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01825"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

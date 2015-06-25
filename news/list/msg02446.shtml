@@ -1,0 +1,147 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: publish output files via FTP 'economically' -->
+<!--X-From-R13: "Egrcuna Brgrefra" <fcNnfcrgrefra.qr> -->
+<!--X-Date: Thu, 22 Nov 2001 10:11:10 +0100 (MET) -->
+<!--X-Message-Id: 3BFCCFD9.29160.4A5E6C@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02446">Date Index</a>][<a href="thrd49.shtml#02446">Thread Index</a>]<br>
+[<A HREF="msg02445.shtml">Date Prev</A>][<A HREF="msg02447.shtml">Date Next</A>][<A HREF="msg02445.shtml">Thread Prev</A>][<A HREF="msg02447.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: publish output files via FTP 'economically'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Stephan Petersen&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Nov 2001 10:13:45 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Sebastian,
+
+&gt; wml leaves its output files intermingled with input files, but in one's
+&gt; DocumentRoot one wants just the data that is needed to render the pages, not
+&gt; .wml and include files. Has anyone out there a convenient solution to keep a
+&gt; remote Webserver in sync with the locally developed html code, the only
+&gt; administrative access to the server being  ftp? 
+&gt; Sebastian
+&gt; P.S: OK, that's a little bit off-topic, please excuse me. For all this
+&gt; question is about one might generate the html with any tool out there, but
+&gt; who'd want to anyway when there IS wml?
+
+try weex (<A  HREF="http://www.enjoy.ne.jp/~gm/program/weex/index.html">http://www.enjoy.ne.jp/~gm/program/weex/index.html</A>), I´ve been using 
+it for more than a year now to synchronize my web pages, and it works like a 
+charm. Highly configurable, and very reliable. You can easily configure it to 
+ignore all *.wml files.
+
+I included some info from its web site below.
+
+Enjoy!
+
+All the best,
+Stephan
+
+
+
+ Fast Webpage Exchanger (weex) is a utility designed to automate the task of 
+remotely maintaining a web page or other FTP archive. With weex, the maintainer 
+of a web site or archive that must be administered through FTP interaction can 
+largely ignore that process.
+
+The archive administrator simply creates a local directory that serves as an 
+exact model for the offsite data. All modifications and direct interaction is 
+done locally to this directory structure. When the administrator wishes to 
+coordinate the data on the remote site with that of the local model directory, 
+simply executing weex accomplishes this in the most bandwidth-efficient fashion 
+by only transferring files that need updating. The program will create or 
+remove (!) files or directories as necessary to accurately establish the local 
+model on the remote server.
+
+`weex' is short for WEb EXchanger and is pronounced like `weeks'.
+Update your web pages every few weeks with weex. :-)
+
+
+* Features
+
+    * It works automatically based on the configuration file.
+    * You can configure more than one FTP server, and update in succession with 
+one command.
+    * It sends files that are updated after previous sending by comparing 
+timestamp.
+    * Files and directories are removed automatically (only on the remote 
+side).
+    * You can configure files and directories you want to ignore. And they can 
+be specified with shell wildcards.
+    * It can change the access permissions of sent files. It can also copy 
+access permission of the local file to the remote one.
+    * You can use it with non-case sensitive FTP servers.
+    * Cache facility is supported.
+      Weex caches directory structure, file names and each timestamps. So never 
+slow transfer even if you have many directories and files.
+    * It outputs progress bar when sending.
+    * A logging facility is supported. It is useful for using weex with cron or 
+background execution.
+    * Gettext is supported. Japanese, German, Spanish, Dutch, French and 
+Italian translations are available now.
+
+--
+Alexia &amp; Stephan Petersen - English Communication for Professionals
+"Enabling you to communicate across cultures"
+<A  HREF="http://www.aspetersen.de">http://www.aspetersen.de</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02445.shtml">Re: publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02447.shtml">Cleaning out &quot;User Reference Page&quot;?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02445.shtml">Re: publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02447.shtml">Cleaning out &quot;User Reference Page&quot;?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02446"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02446"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

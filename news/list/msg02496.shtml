@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Nested slices and variables -->
+<!--X-From-R13: Uuvfynvar Znobherg <Uuvfynvar.ZnobhergNufp.se> -->
+<!--X-Date: Sat, 9 Feb 2002 19:48:08 +0100 (MET) -->
+<!--X-Message-Id: 20020209194708.A41097@itesec.hsc.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02496">Date Index</a>][<a href="thrd50.shtml#02496">Thread Index</a>]<br>
+[<A HREF="msg02495.shtml">Date Prev</A>][<A HREF="msg02497.shtml">Date Next</A>][<A HREF="msg02497.shtml">Thread Prev</A>][<A HREF="msg02498.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Nested slices and variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ghislaine Labouret &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 9 Feb 2002 19:47:08 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+When nesting languages slices into another one like this :
+
+&lt;en: &lt;fr: français&gt;&lt;en: english&gt;&gt;
+
+the output is, as I expected :
+- nothing in the .fr file
+- "english" in the .en file
+
+But, if the inside slices come from a variable, like this :
+
+&lt;set-var foo="&lt;fr: français&gt;&lt;en: english&gt;"&gt;
+&lt;en: &lt;get-var foo&gt;&gt;
+
+the output becomes this :
+- "français" in the .fr file
+- "françaisenglish" in the .en file
+
+Is this a feature or a bug?
+
+
+Sincerely,
+
+--
+Ghislaine Labouret, Network security consultant
+Hervé Schauer Consultants (HSC) - <A  HREF="http://www.hsc.fr/">http://www.hsc.fr/</A>
+Phone (+33)-141-409-700 - Fax (+33)-141-409-709
+
+</PRE>
+<PRE>
+#use wml::std::lang
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=fr short&gt;
+%!slice -o LANG_FRuUNDEF:$(WML_SRC_BASENAME).html.fr -o LANG_ENuUNDEF:$(WML_SRC_BASENAME).html.en
+
+Without variable: &lt;en: &lt;fr: français&gt;&lt;en: english&gt;&gt;
+
+&lt;set-var foo="&lt;fr: français&gt;&lt;en: english&gt;"&gt;
+With variable: &lt;en: &lt;get-var foo&gt;&gt;
+
+Workarounds:
+
+&lt;set-var foo_fr="français"&gt;
+&lt;set-var foo_en="english"&gt;
+With language-dependant variables: &lt;en: &lt;get-var foo_&lt;lang:current&gt;&gt;&gt;
+
+&lt;define-tag foo&gt;&lt;fr: français&gt;&lt;en: english&gt;&lt;/define-tag&gt;
+With tag: &lt;en: &lt;foo&gt;&gt;
+</PRE>
+<PRE>
+Without variable: english
+With variable: françaisenglish
+Workarounds:
+With language-dependant variables: english
+With tag: english
+</PRE>
+<PRE>
+Without variable: 
+With variable: français
+Workarounds:
+With language-dependant variables: 
+With tag: 
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02498" HREF="msg02498.shtml">Re: Nested slices and variables</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02499" HREF="msg02499.shtml">Re: Nested slices and variables</A></strong>, <em>From:</em> Jean-Michel</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02495.shtml">Re: Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02497.shtml">Re: Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02497.shtml">Re: Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02498.shtml">Re: Nested slices and variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02496"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02496"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

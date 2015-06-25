@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Patch: logo.wml -->
+<!--X-From-R13: Tybevna Yhruareg <fhgbxNtzk.qr> -->
+<!--X-Date: Sun, 28 Jun 1998 07:12:51 +0200 (CEST) -->
+<!--X-Message-Id: 19980627234822.45058@babelon.in&#45;brb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00144">Date Index</a>][<a href="thrd4.shtml#00144">Thread Index</a>]<br>
+[<A HREF="msg00143.shtml">Date Prev</A>][<A HREF="msg00145.shtml">Date Next</A>][<A HREF="msg00151.shtml">Thread Prev</A>][<A HREF="msg00145.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Patch: logo.wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Kuehnert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 27 Jun 1998 23:48:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello everybody,
+
+I had to patch WML just a little bit so that I can put the WML logo using the
+WML &lt;logo&gt; tag (1.6.6.) so that there is a "target" tag similar to the HTML
+tag. I hope, what I did was right, but it actually works ;-)
+
+-----------------------------------------------------------------
+--- logo.alt.wml	Sat Jun 27 22:54:26 1998
++++ logo.wml	Sat Jun 27 23:39:06 1998
+@@ -12,12 +12,14 @@
+ &lt;preserve name&gt;
+ &lt;preserve base&gt;
+ &lt;preserve file&gt;
++&lt;preserve target&gt;
+ &lt;set-var %attributes&gt;
+ &lt;ifeq "&lt;get-var src&gt;" "" &lt;set-var src=wml&gt;&gt;
+ &lt;: 
+     my $name = "&lt;get-var name&gt;";
+     my $base = "&lt;get-var base&gt;";
+     my $file = "&lt;get-var file&gt;";
++	 my $target = "&lt;get-var target&gt;";
+ 
+     my $giffile  = "$WML_LOC_LIBDIR/aux/logos/logo-$name.gif";
+     my $infofile = "$WML_LOC_LIBDIR/aux/logos/logo-$name.info";
+@@ -59,8 +61,10 @@
+     print "&lt;a " .
+           " href=\"$url\"" .
+           " onMouseOver=\"self.status='$hint';return true\"" .
+-          " onMouseOut=\"self.status='';return true\"" .
+-          "&gt;" .
++          " onMouseOut=\"self.status='';return true\"";
++
++   print " target=\"$target\" " if ($target);
++	print " &gt;" .
+           "&lt;img" .
+           " src=\"$file\"" .
+           " alt=\"$alt\"" .
+-----------------------------------------
+
+  Florian
+
+PS: Ralf -- Did you notice the WML article in the German Linux Magazin?
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00145" HREF="msg00145.shtml">Re: Patch: logo.wml</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00146" HREF="msg00146.shtml">Re: Patch: logo.wml</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00143.shtml">XML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00145.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00151.shtml">Re: XML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00145.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00144"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00144"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

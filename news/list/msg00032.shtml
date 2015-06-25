@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frp+jzyN42.bet> -->
+<!--X-Date: Sat, 10 Jan 1998 09:49:48 +0100 (MET) -->
+<!--X-Message-Id: 19980106185509.27807@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801060809.JAA22387@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00032">Date Index</a>][<a href="thread.shtml#00032">Thread Index</a>]<br>
+[<A HREF="msg00031.shtml">Date Prev</A>][<A HREF="msg00033.shtml">Date Next</A>][<A HREF="msg00026.shtml">Thread Prev</A>][<A HREF="msg00034.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 18:55:09 +0100</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 13:35:12 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+[ I resend this, because i didn't see my original mail appear on the
+ list, and i suspect that's because i sent mail with the wrong
+ from-address. Please let me know if my assumption is wrong. ]
+
+On Tue, Jan 06, 1998 at 09:09:40AM +0100, Ralf S. Engelschall wrote:
+&gt; Hello WML-users,
+
+Hoi.
+
+&gt; What I now want is a higher-level interface to such multi-lingual variants
+&gt; because the pure Slice-usage is a boring for human readers, I think.  So, my
+&gt; request for discussion: 
+&gt; 
+&gt;    WHAT DO YOU WANT AS THE HIGH-LEVEL INTERFACE?
+
+I didn't use slices yet, but already planned to look into it :)
+
+First of all, i have to say I'm very lazy. I hate to type something
+more then twice. This said, i now use scripts to generate most of my
+pages. I'm now switching over to wml because it is very convinient to do
+all this under one roof. (I use the eperl-feature &lt;: :&gt; very much)
+
+&gt; 1. | #use wml::std::lang
+&gt;    | foo
+&gt;    | &lt;lang variants="en,de"&gt;
+&gt;    | (en) Welcome (de) Willkommen !
+&gt;    | &lt;/lang&gt;
+&gt;    | bar
+
+Hm, since you plan to do this via substitution, one could simply omit
+the 'variants="en,de"' part, and it would still work ? - That sounds
+great :)
+
+&gt; 2. | #use wml::std::lang
+&gt;    | foo
+&gt;    | &lt;lang:en "Welcome"&gt;&lt;lang:de "Willkommen"&gt;!
+&gt;    | bar
+
+This is too much to type for every case where i would put some text. I
+also find it confusing to put the text inside the &lt;&gt;'s - i would then
+prefer
+&lt;lang en&gt;Welcome&lt;/lang&gt;
+&lt;lang de&gt;Willkommen&lt;/lang&gt;
+
+but all in all, i like #1 more.
+
+&gt; 3. | #use wml::std::lang autoslice
+&gt;    | [...]
+&gt;    prevent from wanting this feature.
+
+If i understand it correctly, this would automatically generate an
+index.de.html,index.en.html if the appropriate slices appear in the body
+? - that sounds really nice, and i'd like to have it in any case.
+
+&gt; And more ideas, suggestions or comments on this topic?
+&gt; Feel free to express any opinion you have.
+
+Now this gets a bit off-topic, but is it possible to tell wml to default
+it's output to ${file%.wml}.html (i.e. ".wml" stripped and ".html" added)
+
+right now, i have to add
+#!/usr/local/bin/wml -oALL:index.html
+
+on top of my index.wml files. I have to change the filename there every
+time i rename the file...
+
+CU,
+    Sec
+-- 
+ISDN beschert uns Wunder die wir vorher noch nicht kannten:
+1)  "kannst du bitte in einer viertelstunde nochmal anrufen, 
+     weil ich telefonier grad."
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00034" HREF="msg00034.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Jim Hebert</li>
+<li><strong><A NAME="00035" HREF="msg00035.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00017" HREF="msg00017.shtml">RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00031.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00033.shtml">ML Archive fixed</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00026.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00034.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00032"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00032"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

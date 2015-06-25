@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 23 Jun 2000 22:17:32 +0200 (MET DST) -->
+<!--X-Message-Id: 20000623221857.A1617@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000623010848.C31710@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0006232006580.3026&#45;100000@drwho.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01742">Date Index</a>][<a href="thrd36.shtml#01742">Thread Index</a>]<br>
+[<A HREF="msg01741.shtml">Date Prev</A>][<A HREF="msg01743.shtml">Date Next</A>][<A HREF="msg01740.shtml">Thread Prev</A>][<A HREF="msg01752.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jun 2000 22:18:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 23, 2000 at 08:49:15PM +0200, Fritz Zaucker wrote:
+
+&gt; Some comments:
+&gt; 
+&gt; 1) I figured out the problem with &lt;if ...&gt; reported earlier. I think
+&gt;    there should be some more examples in the documentation.
+&gt; 
+&gt; 2) The following did work in 1.7.4 and not anymore:
+&gt; 
+&gt;    &lt;define-tag TITLE&gt;
+&gt;    ..!TITLE&gt;&gt;Something here&lt;&lt;..
+&gt;    &lt;/define-tag&gt;
+&gt; 
+&gt;    &lt;&lt;TITLE&gt;&gt;
+&gt; 
+&gt;    Now one must use &lt;&lt;TITLE*&gt;&gt; instead. Seems to make sense, but is
+&gt;    somewhat of a trap while migrating.
+
+No, since WML 1.7.3 it is recommended to write {#TITLE#} to prevent
+problems with pass 2. Oh shit wml_intro(7) mentions both syntaxes.
+All references to ..&gt;&gt;, &lt;&lt;.. and &lt;&lt;NAME&gt;&gt; must be removed from
+documentation, except a note in wml_p5_divert.
+
+&gt; 3) This doesn't work anymore either (leads to a segmentation fault):
+&gt; 
+&gt;    &lt;define-tag MYTAG&gt;
+&gt;    Whatever
+&gt;    &lt;/define-tag MYTAG&gt;
+&gt; 
+&gt;    You mustn't have an argument in the closing tag.
+
+Sure, but mp4h mustn't segfault :(
+The patch below fixes this bug, but this segfault should not occur.
+Could you send in my mailbox an input file which crashes mp4h?
+
+--- input.c     2000/06/22 20:23:03     1.36
++++ input.c     2000/06/23 20:00:52
+@@ -1062,7 +1062,8 @@
+       else if (expansion == READ_BODY)
+         {
+           obstack_1grow (&amp;token_stack, ch);
+-          while ((ch = next_char ()) != CHAR_EOF &amp;&amp; ! IS_ESCAPE(ch))
++          while ((ch = next_char ()) != CHAR_EOF
++                  &amp;&amp; ! IS_ESCAPE(ch) &amp;&amp; ! IS_CLOSE (ch))
+             {
+               if (eolcomm.length &gt; 0 &amp;&amp; MATCH (ch, eolcomm.string))
+                 {
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01752" HREF="msg01752.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="01753" HREF="msg01753.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01733" HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01740" HREF="msg01740.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01741.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01743.shtml">Welcome to the world, Noah!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01740.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01752.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01742"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01742"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

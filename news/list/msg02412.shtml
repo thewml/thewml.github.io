@@ -1,0 +1,198 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: attribute urlopts in navbar doesn't seem to work -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 25 Oct 2001 23:28:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20011025233737.A13252@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 3BD82DD6.D8EA195C@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02412">Date Index</a>][<a href="thrd49.shtml#02412">Thread Index</a>]<br>
+[<A HREF="msg02411.shtml">Date Prev</A>][<A HREF="msg02413.shtml">Date Next</A>][<A HREF="msg02411.shtml">Thread Prev</A>][<A HREF="msg02413.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: attribute urlopts in navbar doesn't seem to work</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Oct 2001 23:37:37 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Oct 25, 2001 at 05:20:54PM +0200, Werner Heuser wrote:
+&gt; Hi,
+&gt; 
+&gt; I would like to use the urlopts feature as follows:
+&gt; &lt;navbar:button url="index.html" id=index urlopts="title=titletest"
+&gt; hint="MobiliX Start Page" txt="MobiliX"&gt;
+&gt; but I can't get it to work. The title tag doesn't occur in the 
+&gt; rendered HTML code. I have tried to quote it (
+&gt; urlopts="title=\"titletest\"" ),
+&gt; but this doesn't help. Do you have any recommendations?
+
+Huh?  It is indeed documented, but not implemented, sorry.
+I will instead propose another scheme, with generic attributes:
+
+  &lt;navbar:button url="index.html" id=index :a:title="titletest"
+  hint="MobiliX Start Page" txt="MobiliX"&gt;
+
+You need to apply attached patch against wml::des::navbar
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: navbar.src
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_include/des/navbar.src,v
+retrieving revision 1.39
+diff -u -u -r1.39 navbar.src
+--- navbar.src	2001/06/18 23:34:03	1.39
++++ navbar.src	2001/10/25 21:20:29
+@@ -180,7 +180,7 @@
+ #
+ &lt;set-var __buttoncnt=1 /&gt;
+ &lt;define-tag navbar:button&gt;
+-&lt;preserve id alias txt alt img hint url target urlopts menu /&gt;
++&lt;preserve id alias txt alt img hint url target menu /&gt;
+ &lt;set-var %attributes /&gt;
+ &lt;increment __countbuttons /&gt;
+ &lt;if &lt;get-var alias /&gt; &lt;set-var id= /&gt; /&gt;
+@@ -193,6 +193,7 @@
+     &lt;set-var alias="_nav_" /&gt; /&gt;
+ &lt;subst-in-var id "[^a-zA-Z0-9]" "_" /&gt;
+ &lt;subst-in-var alias "[^a-zA-Z0-9]" "_" /&gt;
++
+ &lt;perl&gt;
+ {
+     my $B = {};
+@@ -206,11 +207,30 @@
+     $B-&gt;{HINT}   = qq|&lt;get-var hint /&gt;|;
+     $B-&gt;{URL}    = '&lt;get-var url /&gt;';
+     $B-&gt;{TARGET} = '&lt;get-var target /&gt;';
+-    $B-&gt;{URLOPTS}= '&lt;get-var urlopts /&gt;';
+     $B-&gt;{MENU}   = '&lt;get-var menu /&gt;';
++
++    my %tag_attr&lt;get-var id /&gt; = ();
++&lt;set-var __list_tags="a\nimg" /&gt;
++&lt;set-var __list_sel="N\nS\nSS" /&gt;
++&lt;foreach __tag __list_tags&gt;
++  &lt;set-var __nb_attr=&lt;attributes-quote &lt;attributes-extract
++        :&lt;get-var __tag /&gt;:(.*) %attributes /&gt; /&gt; /&gt;
++  &lt;foreach __sel __list_sel&gt;
++    $tag_attr&lt;get-var id /&gt;{'&lt;get-var __tag /&gt;&lt;get-var __sel /&gt;'} =  qq(&lt;or
++      &lt;attributes-quote &lt;attributes-extract
++          :&lt;get-var __tag /&gt;\\.&lt;get-var __sel /&gt;:(.*) %attributes /&gt; /&gt;
++      &lt;get-var __nb_attr /&gt; /&gt;);
++  &lt;/foreach&gt;
++&lt;/foreach&gt;
++    #   Perform some clean ups
++    foreach my $key (keys %tag_attr&lt;get-var id /&gt;) {
++        $tag_attr&lt;get-var id /&gt;{$key} =~ s/^\s*/ /;
++        delete $tag_attr&lt;get-var id /&gt;{$key} if $tag_attr&lt;get-var id /&gt;{$key} =~ m/^\s*$/;
++    }
++    $B-&gt;{TAG_ATTR}= \%tag_attr&lt;get-var id /&gt;;
+ }
+ &lt;/perl&gt;
+-&lt;restore  id alias txt alt img hint url target urlopts menu /&gt;
++&lt;restore  id alias txt alt img hint url target menu /&gt;
+ &lt;/define-tag&gt;
+ 
+ #   this is a special case since its body can contain any Perl
+@@ -346,7 +366,6 @@
+     my @imgstar  = split(':', $CFG-&gt;{IMGSTAR});
+     my $imgbase  = $CFG-&gt;{IMGBASE};
+     my $urlbase  = $CFG-&gt;{URLBASE};
+-    my $urlopts  = $CFG-&gt;{URLOPTS};
+     $txtcol_n    = $CFG-&gt;{TXTCOL_N} if $txtcol_n eq '';
+     $txtcol_s    = $CFG-&gt;{TXTCOL_S} if $txtcol_s eq '';
+     my $filter   = $CFG-&gt;{FILTER};
+@@ -400,6 +419,7 @@
+         my $target = ($B-&gt;{TARGET} eq '' ? $CFG-&gt;{TARGET} : $B-&gt;{TARGET});
+         my $hint   = $B-&gt;{HINT};
+         my $menu   = $B-&gt;{MENU};
++        my %extra_attr = %{$B-&gt;{TAG_ATTR}};
+ 
+         my $idselect = ($select eq $id or ($select eq $alias and $alias ne '') ? 1 : 0);
+         my $buttontype = 'N';
+@@ -487,8 +507,7 @@
+                           qq# onfocus="self.status = '$hint'; return true"# .
+                           qq# onblur="self.status = ''; return true"#;
+                 }
+-                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$tag_attr{'a'.$buttontype}.'&gt;'.
+-                      $txt.'&lt;*/a&gt;';
++                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$tag_attr{'a'.$buttontype}.$extra_attr{'a'.$buttontype}.'&gt;'.$txt.'&lt;*/a&gt;';
+             }
+         }
+         else {
+@@ -919,13 +938,6 @@
+ =item target=I&lt;STR&gt;
+ 
+ A target frame or window where the hyperlink is redirected to.
+-
+-=item urlopts=I&lt;STR&gt;
+-
+-With HTML 4.0, hyper-text links accept a wide range of attributes, This
+-attribute deprecate B&lt;target&gt; which must be coded
+-
+-     urlopts="target=name"
+ 
+ =item menu=I&lt;STR&gt;
+ 
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02413" HREF="msg02413.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02411" HREF="msg02411.shtml">attribute urlopts in navbar doesn't seem to work</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02411.shtml">attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02413.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02411.shtml">attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02413.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02412"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02412"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

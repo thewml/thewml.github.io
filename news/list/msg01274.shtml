@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Navbar in two languages again -->
+<!--X-From-R13: Ibystnat Rnhgreznaa <qnhgvNbru.gh&#45;tenm.np.ng> -->
+<!--X-Date: Sat, 15 Jan 2000 14:40:32 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10001151343070.14718&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01274">Date Index</a>][<a href="thrd26.shtml#01274">Thread Index</a>]<br>
+[<A HREF="msg01273.shtml">Date Prev</A>][<A HREF="msg01276.shtml">Date Next</A>][<A HREF="msg01275.shtml">Thread Prev</A>][<A HREF="msg01281.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Navbar in two languages again</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wolfgang Dautermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 15 Jan 2000 14:40:22 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+Today I found, that in both answers from Denis for my "navbar"-question
+(see <A  HREF="http://www.engelschall.com/sw/wml/news/list/12.html">http://www.engelschall.com/sw/wml/news/list/12.html</A> and
+<A  HREF="http://www.engelschall.com/sw/wml/news/list/14.html">http://www.engelschall.com/sw/wml/news/list/14.html</A>)
+the "WIDTH" and "HEIGHT" tags for the images are not created. 
+
+[Probably I can solve that problem, if I change the order of the
+wml-passes  (Pass 7 after Pass 9 ?) , but I fear, that this will introduce
+other problems].
+
+(I did not try the solution from Florian (using a modified navbar-module,
+see <A  HREF="http://www.engelschall.com/sw/wml/news/list/16.html">http://www.engelschall.com/sw/wml/news/list/16.html</A>) now, because -
+apart from that small WIDTH/HEIGHT-bug - Denis solution works).
+
+Is there another (clean) solution (apart from defining seperate navbars
+for each language)?
+
+(I still use wml 1.7.2, but I found no - for that problem important - 
+changes in the changelog)
+
+Bye, Wolfgang
+
+P.S: Some other suggestions:
+
+ - Probably we should introduce WIDTH and HEIGHT tags for wml::std::href
+   to allow browser-based image scaling. 
+
+ - Probably one could change the configuration of the webserver on
+   www.engelschall.com. It reports for ".src"-Files:
+   "Content-Type: application/x-wais-source" which is (at least for
+   everything below /sw/wml/distrib/) wrong, it would be easier to browse
+   the wml-Sources, if the Content-type would be text/plain. [yes I know,
+   I can change my browser-setup, but in WML .src-Files don't have any
+   connection with WAIS-Servers, do they?].
+ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01281" HREF="msg01281.shtml">Re: Navbar in two languages again</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01273.shtml">grid, table summary attribute</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01276.shtml">Re: verbatim and substitution of #</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01275.shtml">Re: grid, table summary attribute</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01281.shtml">Re: Navbar in two languages again</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01274"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01274"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

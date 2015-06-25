@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: prolog options -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 2 Oct 2000 10:16:37 +0200 (MET DST) -->
+<!--X-Message-Id: 20001002101826.A22270@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001001003055.A7327@frithjof -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02006">Date Index</a>][<a href="thrd41.shtml#02006">Thread Index</a>]<br>
+[<A HREF="msg02005.shtml">Date Prev</A>][<A HREF="msg02007.shtml">Date Next</A>][<A HREF="msg02005.shtml">Thread Prev</A>][<A HREF="msg02007.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: prolog options</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Oct 2000 10:18:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Oct 01, 2000 at 12:30:55AM +0200, Albert REINER wrote:
+&gt;
+&gt; Saluton,
+&gt; 
+&gt; I think it would be a good idea to have the possibility to pass an
+&gt; option to a prolog script, and it seems that it would be simple (I am
+&gt; still using wml 2.0.1, I have to confess; simply disregard this mail
+&gt; if this facility is already there in the newer versions).
+[...]
+
+Hi Albert,
+
+Following patch will be applied to wml and a similar one to wmk.
+IPP documentation will be fixed too.
+
+Thanks for your reports.
+
+--- wml_frontend/wml.src        2000/09/19 21:35:25     1.64
++++ wml_frontend/wml.src        2000/10/01 13:32:46
+@@ -1049,7 +1049,7 @@
+ #   determine prologs
+ $prolog = '';
+ foreach $p (@opt_P) {
+-    $prolog .= " -P '$p'";
++    $prolog .= ' -P "'.&amp;quotearg($p).'"';
+ }
+ 
+ $defipp = '';
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02005" HREF="msg02005.shtml">prolog options</A></strong>, <em>From:</em> Albert REINER</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02005.shtml">prolog options</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02007.shtml">One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02005.shtml">prolog options</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02007.shtml">One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02006"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02006"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

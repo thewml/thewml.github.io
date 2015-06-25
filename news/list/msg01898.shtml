@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4 -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Mon, 21 Aug 2000 13:21:26 +0200 (MET DST) -->
+<!--X-Message-Id: 20000821122331.Q10355@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200008202241.AAA14238@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01898">Date Index</a>][<a href="thrd38.shtml#01898">Thread Index</a>]<br>
+[<A HREF="msg01897.shtml">Date Prev</A>][<A HREF="msg01899.shtml">Date Next</A>][<A HREF="msg01896.shtml">Thread Prev</A>][<A HREF="msg01897.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 21 Aug 2000 12:23:31 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 21 Aug 2000, david@pananix.com wrote:
+
+&gt; Package: WML 2.0.2
+&gt; Operating System: Caldera OpenLinux eDesktop 2.4
+
+&gt; | /usr/i386-linux/bin/ld: cannot find -lgdbm
+
+Sounds like there is a symlink libgdbm.so (without version number!)
+missing like this one:
+
+/usr/lib/libgdbm.so -&gt; libgdbm.so.1.7.3
+
+ld doesn't look for libgdbm.so.2.0 or libgdbm.so.2 (these names are
+only used by the runtime linker) but only for libgdbm.so and libgdbm.a
+(the latter as a fallback and for static linking).
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01896" HREF="msg01896.shtml">[BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</A></strong>, <em>From:</em> david</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01897.shtml">slice 1.3.6 hangs on a file</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01899.shtml">Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01896.shtml">[BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01897.shtml">slice 1.3.6 hangs on a file</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01898"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01898"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

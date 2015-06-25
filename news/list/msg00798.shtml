@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: need help again.... for multilingual support -->
+<!--X-From-R13: Pehab Pbrggpure <oobrggNrez1.h&#45;fgenfot.se> -->
+<!--X-Date: Thu, 24 Jun 1999 14:48:17 +0200 (MET DST) -->
+<!--X-Message-Id: 19990624143918.D30170@erm1.u&#45;strasbg.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990624120341.G23238@erm1.u&#45;strasbg.fr -->
+<!--X-Reference: Pine.LNX.3.96.990624123535.24530B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00798">Date Index</a>][<a href="thrd17.shtml#00798">Thread Index</a>]<br>
+[<A HREF="msg00797.shtml">Date Prev</A>][<A HREF="msg00799.shtml">Date Next</A>][<A HREF="msg00796.shtml">Thread Prev</A>][<A HREF="msg00800.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: need help again.... for multilingual support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Bruno Boettcher &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 Jun 1999 14:39:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+first of all thanks a lot, i now have something that seems to work ;D
+
+&gt; - You could remove all the SSI stuff (except for current date/time, but
+&gt;   is it really necessary?) and replace with adequate WML macros.
+ehm you mean  the includes? but if i do that i will have a lot of code
+duplication wouldn't i? Is this better style?? or do i once more have
+misunderstood something?
+
+&gt; - Suppress the &lt;lang:area&gt;&lt;/lang:area&gt; tags
+didn't understood for what they stood anyway... so i will not miss them ;)
+
+&gt; - When writing &lt;en: ...&gt; there _must_ be a space after the colon
+should be in the man shouldn't it?
+
+&gt; - The &lt;en&gt; is a container tag, end tag is required.
+?? reading the man, i got the impression that this wasn't necessary if a tag
+for another language followed.... should be sayd explicitely too
+
+&gt; - Use relative links whenever possible
+i already do that, unfortunately (but perhaps my organisation lacks rigor) my
+pages are scattered across several servers....
+
+
+-- 
+ciao bboett
+==============================================================
+bboett@earthling.net
+<A  HREF="http://erm6.u-strasbg.fr/~bboett">http://erm6.u-strasbg.fr/~bboett</A>
+===============================================================
+the total amount of intelligence on earth is constant.
+human population is growing....
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00800" HREF="msg00800.shtml">Re: need help again.... for multilingual support</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00794" HREF="msg00794.shtml">need help again.... for multilingual support</A></strong>, <em>From:</em> Bruno Boettcher</li>
+<li><strong><A NAME="00796" HREF="msg00796.shtml">Re: need help again.... for multilingual support</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00797.shtml">multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00799.shtml">Re: multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00796.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00800.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00798"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00798"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

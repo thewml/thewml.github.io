@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New to WML : separate html output from wml? -->
+<!--X-From-R13: Eronfgvna Pebfvt <Eronfgvna.PebfvtNabinf.bet> -->
+<!--X-Date: Wed, 12 Dec 2001 10:57:09 +0100 (MET) -->
+<!--X-Message-Id: E16E68g&#45;0001Gu&#45;00@sand7.global.net.uk -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02457">Date Index</a>][<a href="thrd50.shtml#02457">Thread Index</a>]<br>
+[<A HREF="msg02456.shtml">Date Prev</A>][<A HREF="msg02458.shtml">Date Next</A>][<A HREF="msg02456.shtml">Thread Prev</A>][<A HREF="msg02459.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New to WML : separate html output from wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Sebastian Brosig &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 12 Dec 2001 09:52:22 -0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; 1. Structure
+&gt; I want to separate the html output from the wml source.
+I have played around with this for a while too --- but then I realised that
+there are other implications: the non-html/wml files, such as images,
+downloads etc --- still have to be moved to your /somedir/pages, and that's
+a pain. I settled for a shell script that uses find to suck out files with
+relevant extensions (html, png, jpg, zip, ...) to /somedir/pages/. Other
+people use a Makefile, it's a matter of taste and skills I guess. I just run
+that script when I intend to publish my work to the "staging" server or
+finally upload, and have my /somedir/ as apache's DocumentRoot, so that I
+(and my proof readers) can browse into my work-in-progress as well as the
+local mirror of the externally served pages.
+seb
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02459" HREF="msg02459.shtml">Re: [wml] Re: New to WML : separate html output from wml?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="02460" HREF="msg02460.shtml">Re: New to WML : separate html output from wml?</A></strong>, <em>From:</em> Louis LeBlanc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02456.shtml">New to WML - Site structure and perl question [quite long]</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02458.shtml">Extra attributes in &lt;href&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02456.shtml">New to WML - Site structure and perl question [quite long]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02459.shtml">Re: [wml] Re: New to WML : separate html output from wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02457"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02457"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

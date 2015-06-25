@@ -1,0 +1,198 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: v@rgQbz znvyfreivpr <wubNcvatarg.pu> -->
+<!--X-Date: Mon, 8 Feb 1999 17:06:32 +0100 (CET) -->
+<!--X-Message-Id: 199902081600.RAA10105@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00389">Date Index</a>][<a href="thrd9.shtml#00389">Thread Index</a>]<br>
+[<A HREF="msg00388.shtml">Date Prev</A>][<A HREF="msg00390.shtml">Date Next</A>][<A HREF="msg00391.shtml">Thread Prev</A>][<A HREF="msg00665.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: iNetCom mailservice &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 8 Feb 1999 17:00:17 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+       The user you wanted to contact is not present at this system.
+       ______________________________________________________________________
+
+
+--
+References: &lt;<A HREF="msg00388.shtml">199902080826.JAA11457@parate.irisa.fr</A>&gt;
+In-Reply-To: &lt;<A HREF="msg00388.shtml">199902080826.JAA11457@parate.irisa.fr</A>&gt;
+X-loop: mailservice@gensuisse.ch 
+
+&gt;__        ___  __ _     
+&gt;\ \      / / \/  | |      Website META Language
+&gt; \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+&gt;  \ V  V /| |  | | |___ 
+&gt;   \_/\_/ |_|  |_|_____|  BUG REPORT
+&gt;_________________________________________________________
+
+&gt;From:     David Mentré
+&gt;Reply-To: David.Mentre@irisa.fr
+
+&gt;PROBLEM DESCRIPTION:
+&gt;Table Of Content does not work with home-defined containers.
+
+&gt;* The following code :
+&gt;#use wml::std::all
+
+&gt;&lt;define-container h2&gt;
+&gt; &lt;h2* align=center&gt;%body&lt;/h2*&gt;
+&gt;&lt;/define-container&gt;
+
+&gt;&lt;toc&gt;
+
+&gt;&lt;h1&gt; I&lt;/h1&gt;
+&gt; &lt;h2&gt;1&lt;/h2&gt;
+&gt;  &lt;h3&gt;a&lt;/h3&gt;
+
+&gt;&lt;h1&gt;II&lt;/h1&gt;
+&gt; &lt;h2&gt;2&lt;/h2&gt;
+&gt;  &lt;h3&gt;b&lt;/h3&gt;
+
+&gt;* renders :
+&gt;&lt;pre&gt;
+&gt;&lt;a href="#ToC1"&gt;&lt;strong&gt; I&lt;/strong&gt;&lt;/a&gt;
+&gt;  &lt;----- reference to 1 missing here
+&gt;        &lt;a href="#ToC2"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/a&gt;
+&gt;&lt;a href="#ToC3"&gt;&lt;strong&gt;II&lt;/strong&gt;&lt;/a&gt;
+&gt;  &lt;----- reference to 2 missing here
+&gt;        &lt;a href="#ToC4"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/a&gt;
+&gt;&lt;/pre&gt;
+&gt;&lt;H1&gt;&lt;a name="ToC1"&gt; I&lt;/a&gt;&lt;/H1&gt;
+&gt;  &lt;h2 align="center"&gt;1&lt;/h2&gt;
+&gt;  &lt;H3&gt;&lt;a name="ToC2"&gt;a&lt;/a&gt;&lt;/H3&gt;
+&gt;&lt;H1&gt;&lt;a name="ToC3"&gt;II&lt;/a&gt;&lt;/H1&gt;
+&gt;  &lt;h2 align="center"&gt;2&lt;/h2&gt;
+&gt;  &lt;H3&gt;&lt;a name="ToC4"&gt;b&lt;/a&gt;&lt;/H3&gt;
+
+&gt;* Without the &lt;h2&gt; container redefinition, everything is fine :
+&gt;&lt;pre&gt;
+&gt;&lt;a href="#ToC1"&gt;&lt;strong&gt; I&lt;/strong&gt;&lt;/a&gt;
+&gt;    &lt;a href="#ToC2"&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/a&gt;
+&gt;        &lt;a href="#ToC3"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/a&gt;
+&gt;&lt;a href="#ToC4"&gt;&lt;strong&gt;II&lt;/strong&gt;&lt;/a&gt;
+&gt;    &lt;a href="#ToC5"&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/a&gt;
+&gt;        &lt;a href="#ToC6"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/a&gt;
+&gt;&lt;/pre&gt;
+&gt;&lt;H1&gt;&lt;a name="ToC1"&gt; I&lt;/a&gt;&lt;/H1&gt;
+&gt; &lt;H2&gt;&lt;a name="ToC2"&gt;1&lt;/a&gt;&lt;/H2&gt;
+&gt;  &lt;H3&gt;&lt;a name="ToC3"&gt;a&lt;/a&gt;&lt;/H3&gt;
+&gt;&lt;H1&gt;&lt;a name="ToC4"&gt;II&lt;/a&gt;&lt;/H1&gt;
+&gt; &lt;H2&gt;&lt;a name="ToC5"&gt;2&lt;/a&gt;&lt;/H2&gt;
+&gt;  &lt;H3&gt;&lt;a name="ToC6"&gt;b&lt;/a&gt;&lt;/H3&gt;
+
+
+&gt;PLATFORM CHARACTERISTICS:
+&gt;Used WML System:
+&gt;Built Environment:
+&gt;    Host: sparc-sun-solaris2.6
+&gt;    Perl: 5.004_04 (/usr/local/bin/perl5)
+&gt;    User: flemouel@garfield.irisa.fr
+&gt;    Date: 03-Feb-1999
+&gt;Built Location:
+&gt;    Prefix: /soft/wml/1.6.8
+&gt;    BinDir: /soft/wml/1.6.8/bin
+&gt;    LibDir: /soft/wml/1.6.8/lib
+&gt;    ManDir: /soft/wml/1.6.8/man
+
+&gt;Used Perl System:
+&gt;Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration:
+&gt;  Platform:
+&gt;    osname=solaris, osvers=2.4, archname=sun4-solaris
+&gt;    uname='sunos mingus 5.4 generic_101945-59 sun4m sparc '
+&gt;    hint=recommended, useposix=true, d_sigaction=define
+&gt;    bincompat3=n useperlio=undef d_sfio=undef
+&gt;  Compiler:
+&gt;    cc='cc', optimize='-O', gccversion=
+&gt;    cppflags='-I/usr/local/include'
+&gt;    ccflags ='-I/usr/local/include'
+&gt;    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+&gt;    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+&gt;    intsize=4, alignbytes=8, usemymalloc=n, prototype=define
+&gt;  Linker and Libraries:
+&gt;    ld='cc', ldflags =' -L/usr/local/lib'
+&gt;    libpth=/usr/local/lib /lib /usr/lib /usr/ccs/lib
+&gt;    libs=-lsocket -lnsl -ldb -ldl -lm -lc -lcrypt
+&gt;    libc=/lib/libc.so, so=so
+&gt;    useshrplib=false, libperl=libperl.a
+&gt;  Dynamic Linking:
+&gt;    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+&gt;    cccdlflags='-Kpic', lddlflags='-G -L/usr/local/lib'
+
+
+&gt;Characteristics of this binary (from libperl): 
+&gt;  Built under solaris
+&gt;  Compiled at Sep 14 1998 11:27:50
+&gt;  @INC:
+&gt;    /usr/local/lib/perl5/sun4-solaris/5.00404
+&gt;    /usr/local/lib/perl5
+&gt;    /usr/local/lib/perl5/site_perl/sun4-solaris
+&gt;    /usr/local/lib/perl5/site_perl
+&gt;    .
+
+&gt;______________________________________________________________________
+&gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt;Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00388.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00390.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00391.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00665.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00389"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00389"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

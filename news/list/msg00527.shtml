@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Meta&#45;HTML tags are case sensitive ... -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 30 Mar 1999 14:25:47 +0200 (MET DST) -->
+<!--X-Message-Id: m1aewv88ql.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990330134210.4107B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00527">Date Index</a>][<a href="thrd12.shtml#00527">Thread Index</a>]<br>
+[<A HREF="msg00526.shtml">Date Prev</A>][<A HREF="msg00528.shtml">Date Next</A>][<A HREF="msg00526.shtml">Thread Prev</A>][<A HREF="msg00529.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Meta-HTML tags are case sensitive ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 30 Mar 1999 14:25:38 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+... and I guess they shouldn't be as HTML is not case sensitive either.
+
+The problem shows up if you redefine an existing HTML tag, say
+
+&lt;define-container H1&gt;
+whatever
+&lt;/define-container&gt;
+
+then 
+
+&lt;h1&gt; is NOT redefined.
+
+The solution of redefining both &lt;h1&gt; and &lt;H1&gt; gets a bit more
+cumbersome with tags with longer names, as all combinations of upper
+and lower case would have to be redefined.
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00526" HREF="msg00526.shtml">Re: wmk and shebang line</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00526.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00528.shtml">Re: problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00526.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00529.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00527"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00527"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

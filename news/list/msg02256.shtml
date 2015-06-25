@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problem with ifeq -->
+<!--X-From-R13: Pryn Ybinp <jvmneqNhco.qr> -->
+<!--X-Date: Wed, 13 Jun 2001 20:35:20 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0106132021460.4998&#45;100000@jupiter.kosmos -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02256">Date Index</a>][<a href="thrd46.shtml#02256">Thread Index</a>]<br>
+[<A HREF="msg02255.shtml">Date Prev</A>][<A HREF="msg02257.shtml">Date Next</A>][<A HREF="msg02257.shtml">Thread Prev</A>][<A HREF="msg02258.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problem with ifeq</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Bela Kovac &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 13 Jun 2001 20:32:01 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i'm new to this list and to wml. A friend recommended the software wml and
+i like it.
+
+But i have a problem with the &lt;ifeq&gt; tag. It does not say yes when the two
+strings are equal:
+
+FILE #1: test.wml
+is "{#VAR#}" equal to "fubar"?
+&lt;ifeq "{#VAR#}" "fubar" "Yes!" "No? Why not?!"&gt;
+is "{#VAR#}" equal to "bamf"?
+&lt;ifeq "{#VAR#}" "bamf" "Yes, strangely..." "No, of course not!"&gt;
+is "dummy" equal to "dummy"?
+&lt;ifeq dummy "dummy" "yes." "no."&gt;
+&lt;define-tag test whitespace=delete
+attributes=verbatim&gt;{#VAR#:%0:##}&lt;/define-tag&gt;
+
+FILE #2: go.wml
+#include 'test.wml'
+&lt;test "fubar"&gt;
+
+Then i type wml go.wml and i get:
+
+is "fubar" equal to "fubar"?
+No? Why not?!
+is "fubar" equal to "bamf"?
+No, of course not!
+is "dummy" equal to "dummy"?
+yes.
+
+So my question: why is fubar &lt;&gt; fubar?
+I haven't found something about this in the docs (espacially in
+wml_p2_mp4h)...
+Has this something to fo with "invisible" chars (like line-feed or
+something similar)?
+How can i get the right answer?
+
+Thanks in advance,
+
+Bela.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02258" HREF="msg02258.shtml">Re: Problem with ifeq</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02255.shtml">info request</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02257.shtml">Re: info request</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02257.shtml">Re: info request</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02258.shtml">Re: Problem with ifeq</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02256"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02256"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RPM for WML 1.6.7 -->
+<!--X-From-R13: Fbefgra @nhznaa <Fbefgra.@nhznaaNWasbezngvx.FG&#45;Qurzavgm.RS> -->
+<!--X-Date: Sat, 8 Aug 1998 17:40:11 +0200 (CEST) -->
+<!--X-Message-Id: Pine.GSO.3.95q.980808171315.14377A&#45;100000@mykonos.informatik.tu&#45;chemnitz.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.BSI.3.96r.980807173039.23647A&#45;100000@shell1.interlog.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00186">Date Index</a>][<a href="thrd4.shtml#00186">Thread Index</a>]<br>
+[<A HREF="msg00185.shtml">Date Prev</A>][<A HREF="msg00187.shtml">Date Next</A>][<A HREF="msg00185.shtml">Thread Prev</A>][<A HREF="msg00188.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RPM for WML 1.6.7</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Torsten Naumann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 Aug 1998 17:22:09 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 7 Aug 1998, Jordan Baker wrote:
+
+&gt; I'm not sure if anyone out there is already doing this, if so, let me know
+&gt; and I'll stop. :)
+
+I've done this for the releases 1.6.6 and 1.6.7. I used a spec file
+from an other packager which I found very useful. Take a look at
+
+<A  HREF="http://www.tu-chemnitz.de/~tna/rpms/">http://www.tu-chemnitz.de/~tna/rpms/</A>
+<A  HREF="http://www.tu-chemnitz.de/~tna/srpms/">http://www.tu-chemnitz.de/~tna/srpms/</A>
+
+You can do the packaging of wml, no problem. I don't know wether I can
+do this very quickly after announcing new releases.
+
+--
+mit froehlichen Gruessen
+Torsten
+ ________________________________________________________________
+/_ \ Torsten Naumann  University of Technology, Chemnitz, Germany\
+\@)_\         Email:  Torsten.Naumann@Informatik.TU-Chemnitz.DE   \__
+     \        Phone:  +49-371-5614295   Mobile: +49-177-2382319    \(@\
+      \_____________________________________________________________\_/
+
+# Wenn wir UNIX von dieser Welt entfernen, steht sie morgen still.
+# Wenn wir dasselbe mit Microsoft Office tun, wird sich die
+# Produktivitaet raketengleich steigern.  Scott McNealy
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00188" HREF="msg00188.shtml">Re: RPM for WML 1.6.7</A></strong>, <em>From:</em> Jordan Baker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00182" HREF="msg00182.shtml">RPM for WML 1.6.7</A></strong>, <em>From:</em> Jordan Baker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00185.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00187.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00185.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00188.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00186"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00186"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

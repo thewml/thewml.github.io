@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: wrss pbirl <wrss.pbirlNcbobk.pbz> -->
+<!--X-Date: Mon, 10 May 1999 02:48:10 +0200 (MET DST) -->
+<!--X-Message-Id: 14134.11301.822515.664706@plaything.smart.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14133.49802.667070.212201@plaything.smart.net -->
+<!--X-Reference: Pine.LNX.3.96.990509213340.838A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00644">Date Index</a>][<a href="thrd14.shtml#00644">Thread Index</a>]<br>
+[<A HREF="msg00643.shtml">Date Prev</A>][<A HREF="msg00645.shtml">Date Next</A>][<A HREF="msg00642.shtml">Thread Prev</A>][<A HREF="msg00645.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: jeff covey &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun,  9 May 1999 20:47:55 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt;&gt;&gt;&gt;&gt; "Denis" == Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+    Denis&gt; wml-1.6.8 has to be patched to work with perl 5.00502. You
+    Denis&gt; can find this patch at
+    Denis&gt; <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-1.6.8-patches">http://www.engelschall.com/sw/wml/distrib/wml-1.6.8-patches</A>
+
+applied the patch to a clean source, but make test still fails on both 
+tests with "Can't locate loadable object for module Term::ReadKey in
+@INC".
+
+-- 
+|----------------------------------------------------------------------------|
+| jeff covey jeff.covey@pobox.com <A  HREF="http://pobox.com/~jeff.covey/">http://pobox.com/~jeff.covey/</A> 410-669-4926 |
+|----------------------------------------------------------------------------|
+|        i can please only one person per day. today is not your day.        |
+|                    tomorrow isn't looking good either.                     |
+|----------------------------------------------------------------------------|
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00645" HREF="msg00645.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00646" HREF="msg00646.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00639" HREF="msg00639.shtml">trouble installing wml</A></strong>, <em>From:</em> jeff covey</li>
+<li><strong><A NAME="00642" HREF="msg00642.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00643.shtml">Re: Bug in wmk?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00645.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00642.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00645.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00644"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00644"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Suggestion for wml::fmt::url -->
+<!--X-From-R13: Okry Prpxreg <norNpf.hav&#45;fo.qr> -->
+<!--X-Date: Sun, 17 Dec 2000 21:57:59 +0100 (MET) -->
+<!--X-Message-Id: 20001210200209.B21661@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001126203647.A22434@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20001201215957.A1715@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02083">Date Index</a>][<a href="thrd42.shtml#02083">Thread Index</a>]<br>
+[<A HREF="msg02082.shtml">Date Prev</A>][<A HREF="msg02084.shtml">Date Next</A>][<A HREF="msg02076.shtml">Thread Prev</A>][<A HREF="msg02078.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Suggestion for wml::fmt::url</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 10 Dec 2000 20:02:09 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+On Fri, Dec 01, 2000 at 09:59:57PM +0100, Denis Barbier wrote:
+&gt; &gt; 2. I don't know, if othe people would like this, but it seems useful
+&gt; &gt;    (at least to me :-) to linkify e-mail addresses like
+&gt; &gt;    &lt;abe@cs.uni-sb.de&gt; or &amp;lt;abe@cs.uni-sb.de&amp;gt;, too. So I added the
+&gt; &gt;    following replacements to the above:
+&gt; &gt; 
+&gt; &gt; [[s|&amp;lt;(\S+?@\S+?)&amp;gt;|&amp;lt;&lt;a href="<A  HREF="mailto:$1">mailto:$1</A>" %attributes&gt;$1&lt;/a&gt;&amp;gt;|g]]
+&gt; &gt; [[s|&lt;(\S+?@\S+?)&gt;|&amp;lt;&lt;a href="<A  HREF="mailto:$1">mailto:$1</A>" %attributes&gt;$1&lt;/a&gt;&amp;gt;|g]]
+&gt; &gt; [...]
+&gt; Sounds good, i will certainly commit this change soon, thanks.
+
+I noticed today that those regexps match message ids, too, because
+they have similar--if not the same syntax. Has anyone an idea how to
+distinguish between email addresses and message ids using regexps?
+
+(The next step would be to build regexps for usenet message ids, so
+ that they link to the appropriate message on the news server... ;-)
+
+But I think that this is only a problem, if the &lt;URL&gt; tag is used in
+some kind of mailing list archive to linkify all those URLs in the
+mails.
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02074" HREF="msg02074.shtml">Suggestion for wml::fmt::url</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02076" HREF="msg02076.shtml">Re: Suggestion for wml::fmt::url</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02082.shtml">Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02084.shtml">Windows question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02076.shtml">Re: Suggestion for wml::fmt::url</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02078.shtml">small problem with wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02083"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02083"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

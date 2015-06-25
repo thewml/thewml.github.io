@@ -1,0 +1,163 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML und Meta&#45;HTML (fwd) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 19 Jan 2000 15:20:27 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000119142950.26894C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0001191135400.1110&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01283">Date Index</a>][<a href="thrd27.shtml#01283">Thread Index</a>]<br>
+[<A HREF="msg01282.shtml">Date Prev</A>][<A HREF="msg01284.shtml">Date Next</A>][<A HREF="msg01282.shtml">Thread Prev</A>][<A HREF="msg01284.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML und Meta-HTML (fwd)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Jan 2000 15:19:42 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 19 Jan 2000, Tobias Oetiker wrote:
+
+&gt; We have some problems with the &lt;protect&gt; &lt;preserve&gt; tag.
+
+Hi tobias,
+
+&gt; We try to use it when defining containers with meta html ... try the
+&gt; following script ... I think it should not work like this ...
+&gt; 
+&gt; wml -r script
+&gt; 
+&gt; # ---------- Silly test starts here----------------------------
+[...]
+&gt; #---THe end
+&gt; 
+&gt; why does this not return 
+&gt; 
+&gt; Var title=Perpetuum Mobile
+
+Because Meta-HTML 5.09 does not evaluate attributes when function is called.
+When you type
+  &lt;foo bar=&lt;get-var bar&gt;&gt;
+then %attributes is set to "bar=&lt;get-var bar&gt;". The &lt;preserve&gt; tag
+resets the variable, and so "bar=" is printed.
+
+In the ChangeLog, i mentioned i had to hack it to restore previous
+behaviour, i.e. attributes are evalled when the function is called, but
+obviously this does not work.
+
+Here are some workarounds:
+a) do not use identical attribute names (silly advice, no?)
+b) do not use attributes like
+     title="&lt;get-var title&gt;"
+   (this is a little bit more relevant).
+#  ---------- beginning of working example
+#use wml::std::tags
+
+&lt;define-tag link2&gt;
+  &lt;preserve title&gt;
+  &lt;set-var %attributes&gt;
+  Var title=&lt;get-var title&gt;
+  &lt;restore title&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag link1&gt;
+  &lt;preserve alttitle&gt;
+  &lt;set-var %attributes&gt;
+  &lt;link2 title="&lt;get-var alttitle&gt;"&gt;
+  &lt;restore alttitle&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag project&gt;
+  &lt;preserve title&gt;
+  &lt;set-var %attributes&gt;
+  &lt;link1 alttitle="&lt;get-var title&gt;"&gt;
+  &lt;restore title&gt;
+&lt;/define-tag&gt;
+
+&lt;project title="Perpetuum Mobile"&gt;
+#  ---------- end of example
+
+c) replace 
+     &lt;define-tag link1&gt;
+       &lt;preserve title&gt;
+       &lt;set-var %attributes&gt;
+       Var title=&lt;get-var title&gt;
+       &lt;restore title&gt;
+     &lt;/define-tag&gt;
+by
+     &lt;define-tag link1&gt;
+       &lt;preserve title&gt;
+       &lt;set-var %xbody&gt;
+       Var title=&lt;get-var title&gt;
+       &lt;restore title&gt;
+     &lt;/define-tag&gt;
+
+As you can see, i do not know exactly how to fix this bug.
+This was one of the reasons (lack of documentation on the argument
+evaluation process) why i decided to leave Meta-HTML and to write my own
+macro processor ; this problem will vanish in next release.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01282" HREF="msg01282.shtml">WML und Meta-HTML (fwd)</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01282.shtml">WML und Meta-HTML (fwd)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01284.shtml">Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01282.shtml">WML und Meta-HTML (fwd)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01284.shtml">Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01283"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01283"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

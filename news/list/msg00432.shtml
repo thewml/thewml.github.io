@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml&#45;1.6.8:  p3_eperl &#38; threads => compile problem -->
+<!--X-From-R13: Drzpb ina qra Pret <eiqoretNqfr.ay> -->
+<!--X-Date: Tue, 9 Mar 1999 08:20:31 +0100 (CET) -->
+<!--X-Message-Id: 36E464CE.EABDDC97@dse.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00432">Date Index</a>][<a href="thrd11.shtml#00432">Thread Index</a>]<br>
+[<A HREF="msg00431.shtml">Date Prev</A>][<A HREF="msg00433.shtml">Date Next</A>][<A HREF="msg00450.shtml">Thread Prev</A>][<A HREF="msg00433.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml-1.6.8:  p3_eperl &amp; threads =&gt; compile problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 09 Mar 1999 00:01:18 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello WML users,
+
+I tried to compile wml on my new glibc2 Linux system and I got the
+following error during compilation:
+
+===&gt; wml_backend/p3_eperl
+make[2]: Entering directory `/usr/local/src/wml-1.6.8/wml_backend/p3_eperl'
+gcc  -D_REENTRANT -Dbool=char -DHAS_BOOL -I/usr/local/include -O6 -mpentium
+\
+-march=pentium -funroll-loops -fomit-frame-pointer -I/usr/lib/perl5/5.00
+ -c eperl_perl5.c
+eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+eperl_perl5.c:72: `thr' undeclared (first use in this function)
+eperl_perl5.c:72: (Each undeclared identifier is reported only once
+eperl_perl5.c:72: for each function it appears in.)
+eperl_perl5.c: In function `Perl5_SetScalar':
+eperl_perl5.c:101: `thr' undeclared (first use in this function)
+make[2]: *** [eperl_perl5.o] Error 1
+make[2]: Leaving directory `/usr/local/src/wml-1.6.8/wml_backend/p3_eperl'
+&lt;=== wml_backend/p3_eperl
+
+
+I tried to figure out what is going on but I really cannot find the
+definition of `thr' (a pointer to some struct) anyware. So I'm lost.
+
+Can somebody help me? I really need WML to maintain my webpages. :-)
+
+Regards,
+
+-Remco
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00433" HREF="msg00433.shtml">Re: wml-1.6.8:  p3_eperl &amp; threads =&gt; compile problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00431.shtml">Re: [BUG REPORT] WML 1.6.8, debian linux</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00433.shtml">Re: wml-1.6.8:  p3_eperl &amp; threads =&gt; compile problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00450.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00433.shtml">Re: wml-1.6.8:  p3_eperl &amp; threads =&gt; compile problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00432"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00432"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

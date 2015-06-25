@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I can compile a site -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 17 Nov 1999 23:15:24 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991117230540.5872C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199911172022.OAA10358@boron.uchicago.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01146">Date Index</a>][<a href="thrd24.shtml#01146">Thread Index</a>]<br>
+[<A HREF="msg01145.shtml">Date Prev</A>][<A HREF="msg01147.shtml">Date Next</A>][<A HREF="msg01145.shtml">Thread Prev</A>][<A HREF="msg01153.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I can compile a site</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Nov 1999 23:14:45 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 17 Nov 1999, Luisa Rebull wrote:
+
+&gt; Hello -
+&gt; 
+&gt; I'm also having problems with wmk.. my system just got upgraded to
+&gt; sun os 5.7 and we upgraded wml to the most current stable version 
+&gt; at the same time.  Now I am having a very difficult time using 
+&gt; wmk.  Now :
+&gt; wmk -a is an unrecognized option, although it appears in the man
+&gt; 	page and in what you get when you do wmk --help. 
+
+I'm very surprised, it works fine on my computer.
+
+&gt; wmk *.wml or passing it a specific specific filename results in 
+&gt; 	output to STDOUT.
+&gt; wmk research/jobs/index.wml -o research/jobs/index.html doesn't
+&gt; 	define $(ROOT) properly in the resultant html file, 
+&gt; 	although it finds and reads my .wmlrc ok.
+
+Could you please send a bug report? Either run wmb or fill the form at
+&lt;URL:<A  HREF="http://www.engelschall.com/sw/bugreport/?package=WML&amp;version=1.7.4">http://www.engelschall.com/sw/bugreport/?package=WML&amp;version=1.7.4</A>&gt;
+
+This report is automatically sent to this list.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01145" HREF="msg01145.shtml">Re: I can compile a site</A></strong>, <em>From:</em> Luisa Rebull</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01145.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01147.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01145.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01153.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01146"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01146"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

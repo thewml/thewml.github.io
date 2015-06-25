@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: what is needed to support other charsets in wml? -->
+<!--X-From-R13: Dnsnry Qbeqbarf [nepbf <ensnpzNopanegqverpgr.pbz> -->
+<!--X-Date: Thu, 7 Jan 1999 03:11:16 +0100 (CET) -->
+<!--X-Message-Id: 19990106200615.A8357@bcnartdirecte.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19981203161139.A24129@debian.org -->
+<!--X-Reference: 19981204114446.D28789@debian.org -->
+<!--X-Reference: 19981227174946.A16713@bcnartdirecte.com -->
+<!--X-Reference: 19990104110140.E2190@debian.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00302">Date Index</a>][<a href="thrd6.shtml#00302">Thread Index</a>]<br>
+[<A HREF="msg00301.shtml">Date Prev</A>][<A HREF="msg00303.shtml">Date Next</A>][<A HREF="msg00301.shtml">Thread Prev</A>][<A HREF="msg00303.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: what is needed to support other charsets in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rafael Cordones Marcos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Jan 1999 20:06:15 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 04, 1999 at 11:01:40AM -0500, James A. Treacy wrote:
+&gt; On Sun, Dec 27, 1998 at 05:49:46PM +0100, Rafael Cordones Marcos wrote:
+&gt; &gt; 
+&gt; Actually, there is another minor problem. The extension .html.&lt;lang&gt; was
+&gt; used instead of &lt;lang&gt;.html . Use &lt;lang&gt;.html as it allows apache to
+&gt; get the mime type correct on a file. I plan on switching when the Italian
+&gt; translation gets its act together.
+&gt; 
+[Maybe this is a little off-topic because it is mainly about
+Apache...? Sorry if it is.] 
+
+Well, I am trying to implement the &lt;lang&gt;.html thing and it is getting
+tricky because of the way gfont works. GFont generates GIFs like 
+index.gfont000.gif. So if I make a request to <A  HREF="http://my_server/index">http://my_server/index</A>
+apache returns index.gfont000.gif instead of any of the
+index.&lt;lang&gt;.html files. This is because I am using the "DirectoryIndex
+index index.cgi index.shtml index.html index.htm" option of Apache.
+Furthermore, for the sake of backwards compatibility I want URLs of
+the form <A  HREF="http://my_server/file.html">http://my_server/file.html</A> to work.
+
+So I you switch to &lt;lang&gt;.html I understand from Apache documentation
+that content negotiation works ONLY if the file being requested does 
+not exist (see <A  HREF="http://www.apache.org/docs/content-negotiation.html">http://www.apache.org/docs/content-negotiation.html</A> ). 
+What kind of problems do you have with the html.&lt;lang&gt; implementation?
+
+Thanx for your time.
+
+Best regards,
+
+Rafa C. Marcos
+BCN Art Directe (Promotora d'Art)
+<A  HREF="http://www.bcnartdirecte.com">http://www.bcnartdirecte.com</A>
+
+------------------------------------------------------------------------
+Visit Internet Virtual Studios at: <A  HREF="http://www.bcnartdirecte.com/studios">http://www.bcnartdirecte.com/studios</A>
+
+
+
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00303" HREF="msg00303.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00261" HREF="msg00261.shtml">what is needed to support other charsets in wml?</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="00262" HREF="msg00262.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="00281" HREF="msg00281.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> Rafael Cordones Marcos</li>
+<li><strong><A NAME="00297" HREF="msg00297.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00301.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00303.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00301.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00303.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00302"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00302"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

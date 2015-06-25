@@ -1,0 +1,165 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNunfrpxr.unfrpxr> -->
+<!--X-Date: Tue, 8 Jun 1999 09:12:23 +0200 (MET DST) -->
+<!--X-Message-Id: 199906080657.IAA00990@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00746">Date Index</a>][<a href="thrd16.shtml#00746">Thread Index</a>]<br>
+[<A HREF="msg00745.shtml">Date Prev</A>][<A HREF="msg00747.shtml">Date Next</A>][<A HREF="msg00741.shtml">Thread Prev</A>][<A HREF="msg00747.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 8 Jun 1999 08:57:36 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.1 (05-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Jan Ulrich Hasecke
+Reply-To: juh@pironet.de
+
+PROBLEM DESCRIPTION:
+
+Again me... ;-)
+
+I created a navbar containing id's referring to the base of the
+filename, so that I can simply write in my templatefile
+select=$(WML_SRC_BASENAME). Everything works fine, except when the
+filename starts with a zero. Then wml fails in PASS 3 with the
+following error-message.
+
+---- Contents of STDERR channel: ---------
+Illegal octal digit at /tmp/wml.913.tmp1 line 2355, at end of line
+Illegal octal digit at /tmp/wml.913.tmp1 line 2355, at end of line
+Illegal octal digit at /tmp/wml.913.tmp1 line 2355, at end of line
+Illegal octal digit at /tmp/wml.913.tmp1 line 2355, at end of line
+Execution of /tmp/wml.913.tmp1 aborted due to compilation errors.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+** WMk:Break: Error in WML (rc=256)   
+
+It would be not very good, when I had to rename all files beginning
+with a zero, because they should indicate the date, eg. 01071998.wml
+for the 1. July 1998.
+
+Any hints? 
+Greetings!
+juh
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.004_03 (/usr/bin/perl)
+    User: juh@hasecke.hasecke
+    Date: 05-Jun-1999
+Built Location:
+    Prefix: /opt/wml
+    BinDir: /opt/wml/bin
+    LibDir: /opt/wml/lib
+    ManDir: /opt/wml/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.0.33, archname=i386-linux
+    uname='linux buildmeister.caldera.com 2.0.33 #1 thu mar 12 20:36:04 mst 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O6 -m486 -fomit-frame-pointer -pipe', gccversion=2.7.2.3
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, randbits=31
+  Linker and Libraries:
+    ld='cc', ldflags =''
+    libpth=/lib /usr/lib
+    libs=-lgdbm -ldb -ldl -lm -lc
+    libc=/lib/libc.so.5.4.38, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared'
+
+
+Characteristics of this binary (from libperl): 
+  Locally applied patches:
+  	COL_SECURITY1 - 'perl -e'-tmp-race fix (by Theo de Raadt/Todd Miller)
+  Built under linux
+  Compiled at Mar 20 1998 09:33:50
+  @INC:
+    /usr/lib/perl5/i386-linux/5.00403
+    /usr/lib/perl5
+    /usr/lib/perl5/site-perl/i386-linux
+    /usr/lib/perl5/site-perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00747" HREF="msg00747.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00748" HREF="msg00748.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00745.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00747.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00741.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00747.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00746"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00746"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

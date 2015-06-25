@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Comments to my WML pages -->
+<!--X-From-R13: Fncvb [nexhyn <gncvb1Ntnzzn.avp.sv> -->
+<!--X-Date: Mon, 19 Jun 2000 17:21:28 +0200 (MET DST) -->
+<!--X-Message-Id: 3.0.5.32.20000617190626.00796920@gamma.nic.fi -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01723">Date Index</a>][<a href="thrd36.shtml#01723">Thread Index</a>]<br>
+[<A HREF="msg01722.shtml">Date Prev</A>][<A HREF="msg01724.shtml">Date Next</A>][<A HREF="msg01722.shtml">Thread Prev</A>][<A HREF="msg01724.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Comments to my WML pages</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tapio Markula &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 17 Jun 2000 19:06:26 +0300</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi
+
+These are primary help files to WML and WMLScript menus:
+<A  HREF="http://www.nic.fi/~tapio1/Teahing/wml.html">http://www.nic.fi/~tapio1/Teahing/wml.html</A> and
+<A  HREF="http://www.nic.fi/~tapio1/Teahing/wml_functions.html">http://www.nic.fi/~tapio1/Teahing/wml_functions.html</A>
+
+The book, which I have read hande only WML elements, which don't use any
+prefix like 
+
+wml_introX"&gt;wml::des::grid for an example.
+#use wml::home::foo
+#use wml::tmpl::swpage area=docs subarea
+#include '../myimport.inc'
+
+The encoding seems quite different as in the book INSIDE WAP, which should
+include ALL elements, attributes and WMLScript functions of version 1.1.
+Pekka Niskanen teach to use WMLScript String.LoadString() function to
+include files.
+
+Is the use of  prefix a proposal? Or is it perl encoding?
+#use wml::std::tags
+  &lt;perl&gt;
+Is that wml::std::tags classes from a perl library?
+
+This looks XSL encoding
+&lt;define-tag foo&gt;
+  ...%attributes...
+  &lt;/define-tag&gt;
+  &lt;define-container bar&gt;
+  ...%attributes...%body...
+  &lt;/define-container&gt;
+  &lt;foo ...&gt;
+  &lt;bar ...&gt;...&lt;/bar&gt;
+
+The text below looks a special XML-language other than WML
+
+WML Tag Index - Permutated index of defined
+
+CORE LANGUAGES
+ #                                         wml_p1_ipp(1)
+ $(...)                                    wml_p1_ipp(1)
+ %!slice                                   wml_p9_slice(1)
+ ..NAME&gt;&gt;                                  wml_p5_divert(1)
+ /* ... */                                 wml_p1_ipp(1)
+ :NAME#}                                   wml_p5_divert(1)
+ &lt;: ... :&gt;                                 wml_p3_eperl(1)
+ &lt;:= ... :&gt;                                wml_p3_eperl(1)
+ &lt;&lt;NAME..                                  wml_p5_divert(1)
+ &lt;&lt;NAME&gt;&gt;                                  wml_p5_divert(1)
+ &lt;and&gt;                                     wml_p2_mhc(1)
+ &lt;concat&gt;                                  wml_p2_mhc(1)
+ &lt;decrement&gt;                               wml_p2_mhc(1)
+ &lt;define-container&gt;...&lt;/define-container&gt;  wml_p2_mhc(1)
+ &lt;define-tag&gt;...&lt;/define-tag&gt;              wml_p2_mhc(1)
+ &lt;eq&gt;                                      wml_p2_mhc(1)
+ &lt;get-var-once&gt;   
+
+Because my book doesn't handle XSLT, I don't know the possibilities of XSLT
+in WAP servers. 
+------------------------------------------------------
+Tapio Markula
+Expert on
+ __
+¦__¦__ Cascading 
+¦__¦__¦__ Style
+¦__¦__¦__¦   Sheets
+
+I have made something also with XML and XSL
+------------------------------------------------------
+E:mail: tapio.markula@nic.fi
+<A  HREF="http://www.nic.fi/~tapio1/index.html">http://www.nic.fi/~tapio1/index.html</A> (Finnish)
+<A  HREF="http://www.nic.fi/~tapio1/index_e.html">http://www.nic.fi/~tapio1/index_e.html</A> (English)
+<A  HREF="http://www.nic.fi/~tapio1/Opetus/">http://www.nic.fi/~tapio1/Opetus/</A> (CSS2)
+<A  HREF="http://www.nic.fi/~tapio1/Teaching/">http://www.nic.fi/~tapio1/Teaching/</A> (CSS2)
+<A  HREF="http://www.nic.fi/~tapio1/Opetus/XSL-new.html">http://www.nic.fi/~tapio1/Opetus/XSL-new.html</A> (XML)
+<A  HREF="http://www.nic.fi/~tapio1/Teahing/XSL-new.html">http://www.nic.fi/~tapio1/Teahing/XSL-new.html</A> (XML)
+------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01722.shtml">[BUG REPORT] WML 2.0.1, FreeBSD 3.4-REL</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01724.shtml">[BUG REPORT] WML 2.0.0, Linux 2.2.14</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01722.shtml">[BUG REPORT] WML 2.0.1, FreeBSD 3.4-REL</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01724.shtml">[BUG REPORT] WML 2.0.0, Linux 2.2.14</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01723"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01723"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

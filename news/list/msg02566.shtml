@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Mar 2002 13:32:10 +0100 (MET) -->
+<!--X-Message-Id: 20020314134406.A14457@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Reference: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Reference: 3C9090B6.5000507@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02566">Date Index</a>][<a href="thrd52.shtml#02566">Thread Index</a>]<br>
+[<A HREF="msg02565.shtml">Date Prev</A>][<A HREF="msg02567.shtml">Date Next</A>][<A HREF="msg02564.shtml">Thread Prev</A>][<A HREF="msg02567.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Mar 2002 13:44:06 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Mar 14, 2002 at 12:59:50PM +0100, Veres Ferenc wrote:
+&gt; Hi!
+&gt; 
+&gt; There are 2 threads on the same subject. Ones reading the mail archives 
+&gt; later
+&gt; will get mad on this :)
+&gt; 
+&gt; &gt;I've put an old example at
+&gt; &gt;   <A  HREF="http://www.engelschall.com/sw/wml/tmp/www.gimp.org/">http://www.engelschall.com/sw/wml/tmp/www.gimp.org/</A>
+&gt; &gt;[this is a temporary location]
+&gt; &gt;
+&gt; &gt;AFAICT I played with this example when trying to figure how to deal with
+&gt; &gt;nested navbars, but I can't remember exactly if this was a good example
+&gt; &gt;
+&gt; WOW! Is gimp.org still on wml? Fine refernece :)
+
+No, it isn't, I took this example simply because I love this navbar.
+I tried to make clear on these pages that www.gimp.org does not use WML,
+but will rename this directory to an anonymous one.
+
+&gt; In this example I saw the same thing: (even if I did not really see 
+&gt; because the menu
+&gt; has no "active color") So when you select "clone tool", "documentation" or
+&gt; "core tools" will not be active coloured. Am I right?
+
+Yes.  I misunderstood your point (was confused by these threads, too :)).
+
+&gt; Still have to download the exmaple and compare to the one I tested
+&gt; according to Novas.org examples.
+&gt; 
+&gt; Dennis: my patch is BUGGY, according to this new fact that submenu
+&gt; items can be directly selected. because I set the subitem selection to
+&gt; 0, and selected state to 0 as well. I will change it back to
+&gt; "$select","$subselected", but in this case I need a way to turn OFF
+&gt; subselected state in the &lt;navbar:define&gt;.
+
+A 'selected' button is not active, since it is assumed to be the current
+page.  The 'subselected' state is only a clickable 'selected' button, it
+has nothing to do with colors.  To be more precise, layout for
+'subselected' items is by default the same as 'normal' items, because
+both are active.  In your case, simply redefine 'subselected' layout,
+e.g. copy all definitions with type=S and replace type=S by type=SS
+
+So, if you do want intermediate buttons to be clickable, no changes are
+needed.  Otherwise, wml::des::navbar must be patched, but this looks
+strange to me.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02567" HREF="msg02567.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02564" HREF="msg02564.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02565.shtml">Re: nested navbar (sources of www.novas.org)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02567.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02564.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02567.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02566"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02566"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

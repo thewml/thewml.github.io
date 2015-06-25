@@ -1,0 +1,164 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] understanding swpage.wml -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 22 Feb 2000 12:09:23 +0100 (MET) -->
+<!--X-Message-Id: Pine.GSO.4.21.0002221158010.3636&#45;100000@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 4.2.0.58.20000221190723.00a382b0@pplus.shell7.ba.best.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01368">Date Index</a>][<a href="thrd28.shtml#01368">Thread Index</a>]<br>
+[<A HREF="msg01367.shtml">Date Prev</A>][<A HREF="msg01369.shtml">Date Next</A>][<A HREF="msg01367.shtml">Thread Prev</A>][<A HREF="msg01369.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] understanding swpage.wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Feb 2000 12:09:01 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+We are using WML extensively. Some sites you can look at are
+
+www.ee.ethz.ch
+isg.ee.ethz.ch
+opensource.ee.ethz.ch
+www.ethrat.ch
+
+
+For all *.html files there are *.wml files in the same directory and
+they can be retrieved by http.
+
+For your convenience I created a gzipped tar-file for the last
+site. You can get it as <A  HREF="http://www.ethrat.ch/ethrat.wml.tgz">http://www.ethrat.ch/ethrat.wml.tgz</A>
+
+Have fun,
+Fritz
+
+P.S.: The site is using true type fonts and the ImageMagick Perl
+      module, so you'll have to install those to translate it.
+
+
+On Mon, 21 Feb 2000, Jeff McCarrell wrote:
+
+&gt; Hi.  I am trying to understand how best to use wml, and I have been
+&gt; examining swpage.wml.  I have a couple of questions:
+&gt; 
+&gt; What is the top level command that builds all of the pages?  I assume that
+&gt; it is some wmk command, perhaps from a Makefile of some sort?
+&gt; 
+&gt; In this fragment:
+&gt; 
+&gt;      74	      &lt;ifeq "$(areaparent)" ""
+&gt;      75	          &lt;if &lt;match "&lt;get-var WML_SRC_FILENAME&gt;" "index\\..*"&gt;
+&gt;      76	              &lt;set-var areaparent="../"&gt;
+&gt;      77	              &lt;set-var areaparent=""&gt;
+&gt;      78	          &gt;
+&gt;      79	          &lt;set-var areaparent="$(areaparent)"&gt;
+&gt;      80	      &gt;
+&gt; 
+&gt; what is the motive for doing this?  I mean, I understand what the code is
+&gt; doing, but why do you want the parent directory when the source filename
+&gt; starts with index. ?
+&gt; 
+&gt; This code:
+&gt; 
+&gt;     130	..!PAGE_TITLE!&gt;&gt;
+&gt;     131	Unknown Page
+&gt;     132	&lt;&lt;..
+&gt; 
+&gt; sets up a default for the PAGE_TITLE named diversion.  Why is this a good
+&gt; thing to do?  It seems to me that there are a number of other (simpler) 
+&gt; ways of
+&gt; defining default values for things.  Why is the method of using a default 
+&gt; diversion
+&gt; used here?
+&gt; 
+&gt; As an observation, the thing about wml that is giving me the most difficulty
+&gt; is trying to understand how to put the whole thing together in a sensible way.
+&gt; Publishing swpage.wml has been very helpful for me, to see the whole thing
+&gt; working together.
+&gt; 
+&gt; A tarball of the site that I could modify and run the passes of 
+&gt; individually to examine
+&gt; the intermediate output would help too.  Is that available somewhere?
+&gt; 
+&gt; The other meta level question I have is how actively is wml being used?  I 
+&gt; know that
+&gt; is a subjective question, but if you have an opinion, I'd like to hear it.
+&gt; 
+&gt; Thanks in advance for your help...
+&gt; 
+&gt; -- jeff
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01365" HREF="msg01365.shtml">understanding swpage.wml</A></strong>, <em>From:</em> Jeff McCarrell</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01367.shtml">Re: understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01369.shtml">Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01367.shtml">Re: understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01369.shtml">Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01368"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01368"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

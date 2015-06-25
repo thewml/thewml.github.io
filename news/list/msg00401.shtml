@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Wish list -->
+<!--X-From-R13: Terqrevp Zr [bhry <Terqrevp.Zr[bhryNvevfn.se> -->
+<!--X-Date: Tue, 23 Feb 1999 19:02:47 +0100 (CET) -->
+<!--X-Message-Id: 36D2DC43.25FE0BED@irisa.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990222160605.29137A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00401">Date Index</a>][<a href="thrd9.shtml#00401">Thread Index</a>]<br>
+[<A HREF="msg00400.shtml">Date Prev</A>][<A HREF="msg00402.shtml">Date Next</A>][<A HREF="msg00400.shtml">Thread Prev</A>][<A HREF="msg00412.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Wish list</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Frederic Le Mouel &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Feb 1999 17:50:11 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+&gt; 
+&gt; Of course, they are development versions and should only be used for
+&gt; testing. But feedbacks will be really helpful.
+
+Hello,
+
+Here are little suggestions : 
+- I take the snapshot and tried to install it, but, in 
+  /wml_SNAP/wml_backend/p2_mhc/config.h, the compilation failed
+  in including arch/solaris/prototypes.h (I work on Solaris :),
+  after commenting this line, it passed, bug ?
+- It will be cool that the clean method of the wml_test/Makefile
+  erase the TEST.root directory,
+- I notice that following installed files don't have the good
+  permissions for group and others:
+
+Directories :
+lib/perl/lib
+lib/perl/lib/site_perl
+lib/perl/lib/site_perl/sun4-solaris
+lib/perl/lib/site_perl/sun4-solaris/auto
+lib/perl/lib/site_perl/sun4-solaris/auto/Getopt
+lib/perl/lib/site_perl/sun4-solaris/auto/Getopt/Long
+lib/perl/lib/site_perl/sun4-solaris/auto/File
+lib/perl/lib/site_perl/sun4-solaris/auto/File/PathConvert
+lib/perl/lib/site_perl/sun4-solaris/auto/Image
+lib/perl/lib/site_perl/sun4-solaris/auto/Image/Size
+lib/perl/lib/site_perl/sun4-solaris/auto/Text
+lib/perl/lib/site_perl/sun4-solaris/auto/Text/DelimMatch
+lib/perl/lib/site_perl/sun4-solaris/auto/Text/BlockParser
+
+Files :
+lib/perl/lib/site_perl/sun4-solaris/auto/Getopt/Long/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/Bit/Vector/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/File/PathConvert/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/Image/Size/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/GD/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/IO/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/Term/ReadKey/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/Text/DelimMatch/.packlist
+lib/perl/lib/site_perl/sun4-solaris/auto/Text/BlockParser/.packlist 
+
+Now, I test :)
+
+Best Regards, Fred.
+
+-- 
+Frédéric Le Mouël, Ph.D. Student, Solidor Group, Office E307
+IRISA-INRIA, Campus de Beaulieu, 35042 Rennes Cedex, France
+Email: Frederic.LeMouel@irisa.fr, Phone: (+33|0)2 99 84 73 04
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00412" HREF="msg00412.shtml">Re: Wish list</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00400" HREF="msg00400.shtml">Wish list</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00400.shtml">Wish list</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00402.shtml">gfont and truetype ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00400.shtml">Wish list</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00412.shtml">Re: Wish list</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00401"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00401"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

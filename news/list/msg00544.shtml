@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: any chance to se PHP incorporated in wml? -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNsfo.ue> -->
+<!--X-Date: Sat, 3 Apr 1999 13:39:30 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9904030908490.708&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990402180237.14553A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00544">Date Index</a>][<a href="thrd12.shtml#00544">Thread Index</a>]<br>
+[<A HREF="msg00543.shtml">Date Prev</A>][<A HREF="msg00545.shtml">Date Next</A>][<A HREF="msg00542.shtml">Thread Prev</A>][<A HREF="msg00545.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: any chance to se PHP incorporated in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 3 Apr 1999 09:11:27 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 2 Apr 1999, Denis Barbier wrote:
+
+&gt;&gt;        actually, this works! but with one big limitation: i have to
+&gt;&gt;        escape every special character, since php uses the same way of
+&gt;&gt;        variable naming, $variable, as perl.
+&gt;
+&gt;print PHP &lt;&lt;'END_OF_PHP';
+&gt;php3 code goes here
+&gt;END_OF_PHP
+
+       yes, it works. thanks and appologies for such a newbie question.
+       the only problem is that i have to run wml twice since i need
+       an additional pass 3 in some cases, but simple makefile will
+       fix that. thanks again.
+
+       Davor
+-- 
+      v
+Davor Cengija
+Davor.Cengija@fsb.hr
+-------------------------------------------------
+Doktore, malo sam neodlu&ccaron;an... a mo&zcaron;da i nisam...
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00545" HREF="msg00545.shtml">Re: any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00542" HREF="msg00542.shtml">Re: any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00543.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00545.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00542.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00545.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00544"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00544"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

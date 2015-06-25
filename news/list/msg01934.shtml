@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Sep 2000 00:08:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20000914001117.A13545@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000913140303.E409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01934">Date Index</a>][<a href="thrd39.shtml#01934">Thread Index</a>]<br>
+[<A HREF="msg01933.shtml">Date Prev</A>][<A HREF="msg01935.shtml">Date Next</A>][<A HREF="msg01933.shtml">Thread Prev</A>][<A HREF="msg01935.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Sep 2000 00:11:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Sep 13, 2000 at 02:03:03PM +0200, Roland Rosenfeld wrote:
+
+&gt; After upgrading to 2.0.3 I noticed a strange bug in wml_p7_htmlfix,
+&gt; when processing the following HTML code:
+&gt; 
+&gt; &lt;a href="<A  HREF="http://mapweb.parc.xerox.com/map/color=1/features=alltypes/ht=22.48/lat=50.80/lon=7.03/mark=50.80,7.03/wd=45.00">http://mapweb.parc.xerox.com/map/color=1/features=alltypes/ht=22.48/lat=50.80/lon=7.03/mark=50.80,7.03/wd=45.00</A>"&gt;
+&gt; 
+&gt; IMHO htmlfix shouldn't change anything on this code, but since 2.0.3
+&gt; this is converted to
+&gt; 
+&gt; &lt;a href="<A  HREF="http://mapweb.parc.xerox.com/map/color=">http://mapweb.parc.xerox.com/map/color=</A>"1"/features="alltypes"/ht="22.48"/lat="50.80"/lon="7.03"/mark="50.80,7.03"/wd=45.00"&gt;
+&gt; 
+&gt; It's possible to track this problem down to a simpler case:
+&gt; 
+&gt; $ echo '&lt;a href="<A  HREF="http://foo.bar/baz=1/">http://foo.bar/baz=1/</A>"&gt;' | wml -p7
+&gt; &lt;a href="<A  HREF="http://foo.bar/baz=">http://foo.bar/baz=</A>"1"/"&gt;
+
+Hi Roland,
+
+this is indeed a bug i introduced when taking trailing slash in
+attributes into account.
+Here is a patch:
+
+--- wml_backend/p7_htmlfix/htmlfix.src  2000/09/02 23:06:32     1.11
++++ wml_backend/p7_htmlfix/htmlfix.src  2000/09/13 21:26:21
+@@ -247,7 +247,7 @@
+     while ($buffer =~ m|\G(.*?)(&lt;[a-zA-Z_][^&gt;]*&gt;)|sg) {
+         $last = pos($buffer);
+         ($prolog, $tag) = ($1, $2);
+-        $tag =~ s|([A-Za-z_-]+=)([^\s\"\'/&gt;&lt;\[]+)([\s/&gt;])|$1"$2"$3|sg;
++        $tag =~ s@([A-Za-z_-]+=)([^\s\"\'&gt;&lt;\[]+)(\s|/?&gt;)@$1"$2"$3@sg;
+         $bufferN .= $prolog.$tag;
+     }   
+
+Thanks for your report.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01933" HREF="msg01933.shtml">[2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01933.shtml">[2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01935.shtml">Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01933.shtml">[2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01935.shtml">Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01934"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01934"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

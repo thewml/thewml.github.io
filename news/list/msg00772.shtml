@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: 1.7.1 Compilation Problems -->
+<!--X-From-R13: Rnivq Oygraohet <nygraoheNapfn.hvhp.rqh> -->
+<!--X-Date: Tue, 15 Jun 1999 21:06:29 +0200 (MET DST) -->
+<!--X-Message-Id: 4.1.19990615135819.00abbd60@pop.ncsa.uiuc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00772">Date Index</a>][<a href="thrd17.shtml#00772">Thread Index</a>]<br>
+[<A HREF="msg00771.shtml">Date Prev</A>][<A HREF="msg00773.shtml">Date Next</A>][<A HREF="msg00770.shtml">Thread Prev</A>][<A HREF="msg00774.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>1.7.1 Compilation Problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: David Altenburg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 15 Jun 1999 14:04:53 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I'm trying to compile WML 1.7.1 on a system running Redhat Linux 5.2.
+
+However, I'm getting problems in wml_backend/p3_eperl (of the source tree) with eperl_http.c on the following line:
+
+	struct sockaddr_in sar;
+
+The compiler complains that the size of sar is unkown.
+
+The definition of struct sockaddr_in seems to be included, so I'm not sure what the problem is, or where to continue looking.
+
+
+Any ideas?
+
+Thanks,
+
+David Altenburg
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00774" HREF="msg00774.shtml">Re: 1.7.1 Compilation Problems</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00771.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00773.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00770.shtml">[BUG REPORT] WML 1.7.1, Red Hat Linux 5.2 (kernel 2.2.9)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00774.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00772"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00772"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

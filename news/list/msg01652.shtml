@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: c) or d) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 29 May 2000 15:36:06 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000529151305.27873A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0005291444410.12035&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01652">Date Index</a>][<a href="thrd33.shtml#01652">Thread Index</a>]<br>
+[<A HREF="msg01651.shtml">Date Prev</A>][<A HREF="msg01653.shtml">Date Next</A>][<A HREF="msg01651.shtml">Thread Prev</A>][<A HREF="msg01653.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: c) or d)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 29 May 2000 15:36:00 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 29 May 2000, Tobias Oetiker wrote:
+
+&gt; *&gt; &gt; In connection with xhtml it might be nice to be able to tell mp4h
+&gt; *&gt; &gt; to barf on lone &lt;ddd&gt; tags (they should be &lt;ddd/&gt;) ...
+&gt; *&gt; 
+&gt; *&gt; What does this verb (`to barf on') mean? My English-French dictionary
+&gt; *&gt; and babelfish do not know it.
+&gt; *&gt; FYI mp4h recognizes this syntax.
+&gt; 
+&gt; in xhtml it is invalid to have lone tags like &lt;BR&gt; or &lt;HR&gt; they
+&gt; musst be called &lt;BR/&gt; and &lt;HR/&gt; resectively ... this makes the
+&gt; parsing much simpler because there is nomore ambiguity ... I guess
+&gt; it would be nice to have this functionality in mp4h (as a startup
+&gt; option)
+
+it has some dirty implications:
+  &lt;simple-tag ...some code with brackets... /&gt;
+would be valid whereas
+  &lt;complex-tag ...same code... &gt;...&lt;/complex-tag&gt;
+is not.
+
+[...]
+&gt; *&gt; There is no simple solution, protection cannot be automatic, and user
+&gt; *&gt; must understand what he does.
+&gt; 
+&gt; ok &lt;' was a bad idea ... how about &lt;@@ and @@&gt; :-)
+
+&lt;-: :-&gt;
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01653" HREF="msg01653.shtml">[wml] e) or f) : unknown tags parsing</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01651" HREF="msg01651.shtml">Re: [wml] Re: [wml] Re: c) or d)</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01651.shtml">Re: [wml] Re: [wml] Re: c) or d)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01653.shtml">[wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01651.shtml">Re: [wml] Re: [wml] Re: c) or d)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01653.shtml">[wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01652"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01652"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

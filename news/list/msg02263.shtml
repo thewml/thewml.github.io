@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Recommended handling of sites with subdirs? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 18 Jun 2001 18:02:43 +0200 (MET DST) -->
+<!--X-Message-Id: 20010617235412.C31210@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3B29B645.D46695E1@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02263">Date Index</a>][<a href="thrd46.shtml#02263">Thread Index</a>]<br>
+[<A HREF="msg02262.shtml">Date Prev</A>][<A HREF="msg02264.shtml">Date Next</A>][<A HREF="msg02259.shtml">Thread Prev</A>][<A HREF="msg02266.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Recommended handling of sites with subdirs?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Jun 2001 23:54:12 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 15, 2001 at 07:16:21AM +0000, Stephan Petersen wrote:
+[...]
+&gt; The question is, what's the best way to support such a directory
+&gt; structure, meaning what's the best way to get all the paths and links
+&gt; right?
+[...]
+
+Hi Stephan,
+
+Here are some basics.  Put
+   -I templates
+in your top-level .wmlrc after moving your macro files under templates/.
+Then you may include them via #include "file".
+
+And the line
+   -D ROOT~.
+in that .wmlrc lets you define relative links, because $(ROOT) get
+this way always expanded to `\.|\.\.(/\.\.)*' (with a Perl-regexp
+syntax) to match the top-level directory (see last section in
+wml_intro(7)).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02266" HREF="msg02266.shtml">Re: Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02259" HREF="msg02259.shtml">Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02262.shtml">Re: Documentation improvement</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02264.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02259.shtml">Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02266.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02263"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02263"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

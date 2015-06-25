@@ -1,0 +1,127 @@
+##
+##  wml::std::toc - Table of Contents Generation
+##  Copyright (c) 1997 Ralf S. Engelschall, All Rights Reserved. 
+##
+
+#use wml::std::tags
+#use wml::des::space
+
+#   define the tag which just dumps the ToC
+#   via a divert location.
+<define-tag toc>\
+<get-var toc_begin>
+{#ToC#}\
+<get-var toc_end>
+</define-tag>
+
+#   globally initialize the ToC entry counter
+<set-var __TOCCNT=1>					  
+
+#   determine the ToC style
+<set-var toc_style="$(style:-pre)">
+<ifeq "<get-var toc_style>" "pre" <prog
+    <set-var toc_begin="<pre>">
+    <set-var toc_prepad="">
+    <set-var toc_pad="    ">
+    <set-var toc_postpad="">
+    <set-var toc_eol="">
+    <set-var toc_end="</pre>">
+>>
+<ifeq "<get-var toc_style>" "nbsp" <prog
+    <set-var toc_begin="">
+    <set-var toc_prepad="">
+    <set-var toc_pad="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+    <set-var toc_postpad="">
+    <set-var toc_eol="<br>">
+    <set-var toc_end="">
+>>
+<ifeq "<get-var toc_style>" "hspace" "
+    <prog
+    <set-var toc_begin="">
+    <set-var toc_prepad="">
+    <set-var toc_pad="{#TOC_HSPACE#}">
+    <set-var toc_postpad="">
+    <set-var toc_eol="<br>">
+    <set-var toc_end="">
+    >
+    ..TOC_HSPACE>><hspace 20><<..
+">
+
+<ifeq "<substring "<get-var toc_style>" 0 4>" "list" <prog
+    <set-var toc_begin="{#TOC_L#}<: $__toc__lasthead = 1 :>">
+    <set-var toc_prepad="<: $__toc__diff = - $__toc__lasthead + (1">
+    <set-var toc_pad="+1">
+    <set-var toc_postpad="\
+    	);\
+    	print $__toc__diff > 0 ? '{#TOC_L#}' x $__toc__diff :\
+		'{#TOC_UNL#}' x (-$__toc__diff);\
+    	$__toc__lasthead += $__toc__diff;\
+    	print '..!TOC_LEND!>>', '{#TOC_UNL#}' x $__toc__lasthead, '<<..':><li>\
+    ">
+    <set-var toc_eol="</li>">
+    <set-var toc_end="{#TOC_LEND#}">
+>>
+<ifeq "<get-var toc_style>" "list-ol"
+"
+	..!TOC_L!>><ol><<..
+	..!TOC_UNL!>></ol><<..
+"
+"
+	..!TOC_L!>><ul><<..
+	..!TOC_UNL!>></ul><<..
+">
+
+
+#   Now welcome to the Meta-HTML horror :-(
+#   define the <HX> and <TOC_HX> container tags (X = 1...6)
+<set-var __i=1>\
+<set-var __pad="">
+<while <lt <get-var __i> 7>>\
+   <%%eval 
+    <subst-in-string 
+      <subst-in-string "\
+=LT=define-container H<get-var __i>=GT=\
+=LT=H<get-var __i>* \%\attributes=GT=\
+<a name=\"ToC=LT=get-var __TOCCNT=GT=\">\%\body</a>\
+=LT=/H<get-var __i>*=GT=\
+..ToC>>\
+<get-var toc_prepad>\
+<get-var __pad>\
+<get-var toc_postpad>\
+<a href=\"#ToC=LT=get-var __TOCCNT=GT=\">\
+<strong>\%\body</strong>\
+</a><get-var toc_eol>
+<<..\
+=LT=increment __TOCCNT=GT=\
+=LT=/define-container=GT=\
+"
+        "=LT=" "<"
+      >
+      "=GT=" ">"
+    >
+   >
+   <%%eval 
+    <subst-in-string 
+      <subst-in-string "\
+=LT=define-container toc_H<get-var __i>=GT=\
+<a name=\"ToC=LT=get-var __TOCCNT=GT=\">\%\body</a>\
+..ToC>>\
+<get-var toc_prepad><get-var __pad><get-var toc_postpad>\
+<a href=\"#ToC=LT=get-var __TOCCNT=GT=\"><strong>\
+=LT=ifeq \"\%\attributes\" \"\" \"\%\body\" \"\%\attributes\"=GT=\
+</strong></a><get-var toc_eol>
+<<..\
+=LT=increment __TOCCNT=GT=\
+=LT=/define-container=GT=\
+"
+        "=LT=" "<"
+      >
+      "=GT=" ">"
+    >
+   >
+<set-var __pad="<get-var __pad><get-var toc_pad>">
+<increment __i>
+</while>
+
+
+##EOF##

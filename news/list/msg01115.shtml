@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [RFC] Nested ePerl tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 3 Nov 1999 12:45:39 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991103124458.5749A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87hfj4dd58.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01115">Date Index</a>][<a href="thrd24.shtml#01115">Thread Index</a>]<br>
+[<A HREF="msg01114.shtml">Date Prev</A>][<A HREF="msg01116.shtml">Date Next</A>][<A HREF="msg01114.shtml">Thread Prev</A>][<A HREF="msg01118.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[RFC] Nested ePerl tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 3 Nov 1999 12:55:23 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am pretty happy with the new include files, they allow nested
+tags containing ePerl commands (yes, it's magic). Some tests and
+examples are available at
+   &lt;URL:<A  HREF="http://www.engelschall.com/sw/wml/example/demo-exp/">http://www.engelschall.com/sw/wml/example/demo-exp/</A>&gt;
+This part of the WML website is not linked by other pages, i am thinking
+of the best location for this kind of stuff.
+
+I'll be glad to here comments/bugreports on this.
+To see it in action, either download the latest snapshot or WML modules
+alone at &lt;URL:<A  HREF="http://www.engelschall.com/sw/wml/distrib/modules/">http://www.engelschall.com/sw/wml/distrib/modules/</A>&gt;
+
+Have fun ;-)
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01118" HREF="msg01118.shtml">Re: [RFC] Nested ePerl tags</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01114" HREF="msg01114.shtml">Re: An idea...</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01114.shtml">Re: An idea...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01116.shtml">Re: My previous patch...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01114.shtml">Re: An idea...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01118.shtml">Re: [RFC] Nested ePerl tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01115"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01115"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

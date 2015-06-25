@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Question about nested navbars -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 Jul 2000 12:16:15 +0200 (MET DST) -->
+<!--X-Message-Id: 20000717121718.A8988@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0007171117040.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01818">Date Index</a>][<a href="thrd37.shtml#01818">Thread Index</a>]<br>
+[<A HREF="msg01817.shtml">Date Prev</A>][<A HREF="msg01819.shtml">Date Next</A>][<A HREF="msg01817.shtml">Thread Prev</A>][<A HREF="msg01821.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Question about nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 12:17:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 17, 2000 at 11:22:34AM +0200, Stephan Petersen wrote:
+
+&gt; Hi everybody,
+&gt; 
+&gt; I'm trying for the first time to use some nested navbars, but I seem
+&gt; to have a problem with the resulting layout in the html file. In
+&gt; short, it seems like the submenu is inserted before the
+&gt; &lt;navbar:epilog&gt; of the main menu entry (after which the submenu appears)
+&gt; is processed. I'm not sure whether this is supposed to be this way, or
+&gt; can be changed, currently I'm just not sure how to fix it. 
+
+This is indeed how it is supposed to work.
+A workaround is to define in main navbar an empty epilog for selected
+items:
+
+   &lt;navbar:define name=main_deu [...] &gt;
+      [...]
+      &lt;navbar:epilog&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/navbar:epilog&gt;
+      &lt;navbar:epilog type=S&gt;&lt;/navbar:epilog&gt;
+   &lt;/navbar:define&gt;
+
+and define header of submenu to ``&lt;/td&gt;&lt;/tr&gt;''.
+
+You may still have problems with the javascript code inserted by inner
+navbar, i guess i have to divert all javascript lines into &lt;head&gt;
+section.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01821" HREF="msg01821.shtml">Re: Question about nested navbars</A></strong>, <em>From:</em> Stephan Petersen</li>
+<li><strong><A NAME="01841" HREF="msg01841.shtml">Re: Question about nested navbars</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01817" HREF="msg01817.shtml">Question about nested navbars</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01817.shtml">Question about nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01819.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01817.shtml">Question about nested navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01821.shtml">Re: Question about nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01818"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01818"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

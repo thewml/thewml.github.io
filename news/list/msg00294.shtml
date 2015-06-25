@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [patch] wrong display of timers when using &#45;&#45;pass -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 4 Jan 1999 11:04:23 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990104093545.1294B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00294">Date Index</a>][<a href="thrd7.shtml#00294">Thread Index</a>]<br>
+[<A HREF="msg00293.shtml">Date Prev</A>][<A HREF="msg00295.shtml">Date Next</A>][<A HREF="msg00296.shtml">Thread Prev</A>][<A HREF="msg00295.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[patch] wrong display of timers when using --pass</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 4 Jan 1999 09:50:14 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi again,
+
+WML display timers sequentially, so that results are wrong if all passes
+are not used.
+Example:
+prompt&gt; wml -v1 -p2 index.tmp1 &gt; /dev/null
+
+Before the patch:
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 1.09 | 7.51  8.60 |
+
+After:
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 1.09 |   --  7.51    --   --   --   --   --   --   -- | 8.60
+
+################### File wml-timer.patch #################
+--- wml-1.6.7/wml_frontend/wml.src	Wed Mar  4 10:34:36 1998
++++ wml-1.6.7/wml_frontend/wml.src	Fri Jan  1 22:00:39 1999
+@@ -1049,7 +1049,7 @@
+     $etime = $u + $s + $cu + $cs;
+     $dtime = $etime-$stime;
+     $dtime = 0.01 if ($dtime &lt; 0);
+-    push(@TIMES, $dtime);
++    $TIMES[$p] = $dtime;
+     if ($rc != 0) {
+         if (rc % 256 != 0) {
+             printf(STDERR "** WML:Break: Error in Pass %d (status=%d, rc=%d).\n", $p, $rc % 256, $rc / 256);
+@@ -1156,13 +1156,13 @@
+ $i  = 1;
+ $pt = 0;
+ $timestr = '';
+-foreach $t (@TIMES) {
++foreach $t (@TIMES[1..9]) {
+     $pt += $t;
+     if ($i == 2 or $i == 3) {
+-        $timestr .= sprintf("%5.2f ", $t);
++        $timestr .= sprintf($t ne '' ? "%5.2f " : "   -- ", $t);
+     }
+     else {
+-        $timestr .= sprintf("%4.2f ", $t);
++        $timestr .= sprintf($t ne '' ? "%4.2f " : "  -- ", $t);
+     }
+     $i++;
+ }
+################### EOF  wml-timer.patch #################
+
+Greetings
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00293.shtml">Timing: first results : 30%</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00295.shtml">[patch navbar.src] Single quotes problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00296.shtml">Re: Timing: first results : 30%</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00295.shtml">[patch navbar.src] Single quotes problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00294"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00294"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

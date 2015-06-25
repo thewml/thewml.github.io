@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multilangual Problem -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Fri, 6 Oct 2000 00:54:46 +0200 (MET DST) -->
+<!--X-Message-Id: 20001006005435.E11393@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39D5F185.98069089@ik1.fzk.de -->
+<!--X-Reference: 20001002103854.A22556@imacs.polytechnique.fr -->
+<!--X-Reference: 39DC5551.76321BDE@ik1.fzk.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02018">Date Index</a>][<a href="thrd41.shtml#02018">Thread Index</a>]<br>
+[<A HREF="msg02017.shtml">Date Prev</A>][<A HREF="msg02019.shtml">Date Next</A>][<A HREF="msg02016.shtml">Thread Prev</A>][<A HREF="msg02021.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multilangual Problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 6 Oct 2000 00:54:35 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Oct 05, 2000 at 12:17:53PM +0200, Kai Daumiller wrote:
+&gt; Denis Barbier wrote:
+&gt; &gt; 
+&gt; &gt; &gt;
+&gt; &gt; &gt; is it possible to create links for the current document for all but the
+&gt; &gt; &gt; current languages?
+&gt; &gt; 
+&gt; &gt; Could you please be more specific?
+&gt; 
+&gt; Ok,
+&gt; 
+&gt; I am trying to maintain a site in several languages (ok, just two at the
+&gt; moment, but that may change). 
+&gt; To make it possible to switch from one language to the other at any
+&gt; page, I want to place links on each page (or, better in the navbar) that
+&gt; point to the same content, but in the other languages. 
+&gt; As the WML knows the name of the current document, the current language
+&gt; and the list of defined languages, it should be possible to create the
+&gt; links automatical, but how ?!?
+
+I did something like that on some of my pages (<A  HREF="http://sec.42.org/">http://sec.42.org/</A>) (wml
+files are in the same directory as is stddef.wml which is automatically
+included). I have now done some terrible hackery to get wml to generate
+the output files directly insted of requireing that stupid stuff in the
+#!-line (see the &lt;pg&gt; tag) This works quite well and is less of a hassle
+IMHO.
+
+nfortunately i've had no time to document this properly and
+genralize it, and I will probably not do it anymore as I've gotten a bit
+unsatisfied with wml in the recent time, the slow processing speed, the
+syntax/behaviour changes i have to follow, and the workarounds/hackery I
+need to make it do what I want.
+
+CU,
+    Sec
+-- 
+Programs that make a computer worth to use: 
+FreeBSD, zsh, mutt, wmx, procmail, vim, perl, less, LaTeX, fetch, slrn,
+screen, ssh, pgp, ircII, sendfile
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02003" HREF="msg02003.shtml">Multilangual Problem</A></strong>, <em>From:</em> Kai Daumiller</li>
+<li><strong><A NAME="02009" HREF="msg02009.shtml">Re: Multilangual Problem</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02016" HREF="msg02016.shtml">Re: Multilangual Problem</A></strong>, <em>From:</em> Kai Daumiller</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02017.shtml">[BUG REPORT] WML 2.0.4, Win NT</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02019.shtml">differences between wap and i-mode</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02016.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02021.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02018"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02018"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

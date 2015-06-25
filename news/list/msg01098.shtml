@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: replacement of gfont using TrueType fonts -->
+<!--X-From-R13: <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 27 Oct 1999 10:15:58 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991027100950.1556A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199910262310.BAA26782@jupiter.strijp.Ehv.nl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01098">Date Index</a>][<a href="thrd23.shtml#01098">Thread Index</a>]<br>
+[<A HREF="msg01099.shtml">Date Prev</A>][<A HREF="msg01100.shtml">Date Next</A>][<A HREF="msg01097.shtml">Thread Prev</A>][<A HREF="msg01102.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: replacement of gfont using TrueType fonts</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Oct 1999 10:23:26 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 27 Oct 1999, Remco van den Berg wrote:
+
+&gt; 
+&gt; Hello fellow WML-ers,
+&gt; 
+&gt; I built a small utility which makes GIF images from text using
+&gt; TrueType fonts.
+&gt; 
+&gt; I made it because I didn't like the font quality of gfont and the
+&gt; availability of TrueType fonts is bigger. (At least, that's my
+&gt; experience.)
+&gt; 
+&gt; I included a ttfont.wml file which can be used just like gfont.wml in your
+&gt; WML sources. An example wml file is also included.
+&gt; 
+&gt; To download, go to the webpage:
+&gt; 
+&gt;   <A  HREF="http://www.dse.nl/rvdberg/software/webbutton/">http://www.dse.nl/rvdberg/software/webbutton/</A>
+&gt; 
+&gt; Any comments are welcome of course.
+&gt; (It is a first release, so there's hardly any documentation included.)
+
+Hi Remco,
+
+here are some comments (i didn't try it yet):
+* You could take the documentation from wml::des::gfont
+  (and also put a line in ttfont.wml to say it is derived from
+  gfont.wml ;)
+* The TrueType directory is hardcoded in ttfont.wml, it's a bad
+  idea. Determine it at configure time.
+* Same thing in the configure script.
+* I already wanted to add some borders to gFONT generated images.
+  You had one kind of border in ttfont, but sometimes one wants
+  shaded effects.
+  Do you think it should be done by the logo generator or by a
+  call to another program (ImageMagick?)
+* Could ttfont write PNG files too ?
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01102" HREF="msg01102.shtml">Re: replacement of gfont using TrueType fonts</A></strong>, <em>From:</em> Remco van den Berg</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01097" HREF="msg01097.shtml">replacement of gfont using TrueType fonts</A></strong>, <em>From:</em> Remco van den Berg</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01099.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01100.shtml">added PNG support to webbutton</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01097.shtml">replacement of gfont using TrueType fonts</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01102.shtml">Re: replacement of gfont using TrueType fonts</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01098"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01098"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

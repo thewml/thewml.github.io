@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 23 Jun 2000 20:52:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0006232049440.3026&#45;100000@drwho.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000623202701.A1386@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01741">Date Index</a>][<a href="thrd36.shtml#01741">Thread Index</a>]<br>
+[<A HREF="msg01740.shtml">Date Prev</A>][<A HREF="msg01742.shtml">Date Next</A>][<A HREF="msg01738.shtml">Thread Prev</A>][<A HREF="msg01740.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jun 2000 20:52:08 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+yes, took me a while to find out.
+
+Thanks,
+Fritz
+
+P.S.: Our main site is almost completely recompiled with 2.0.2, I am
+      still finding some little mistakes in our .wml files, 2.0.2 is a
+      lot pickier with the syntax than 1.7.4 was. Which is good.
+
+      A quick comparison showed 2.0.2 to be about 30% faster than 1.7.4!
+
+&gt; Hi Fritz,
+&gt; 
+&gt; you may use quotes as usual:
+&gt; 
+&gt;   &lt;if &lt;match "&lt;get-var HREF /&gt;" "^(ht|f)tp://" /&gt; 
+&gt;      "(off-site)"
+&gt;      "&lt;!--#config timefmt=\"%e&amp;nbsp;%b&amp;nbsp;%Y\" --&gt;"
+&gt;   /&gt;
+&gt; 
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01738" HREF="msg01738.shtml">Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01740.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01742.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01738.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01740.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01741"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01741"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

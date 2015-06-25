@@ -1,0 +1,161 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Building 1.6.8 under Irix 6.5.2 -->
+<!--X-From-R13: Egrir Evmrzber <fgrirNpzcunez.hpfs.rqh> -->
+<!--X-Date: Wed, 20 Jan 1999 20:31:24 +0100 (CET) -->
+<!--X-Message-Id: 19990120111913.A265157@cmpharm.ucsf.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990119123631.A246828@cmpharm.ucsf.edu -->
+<!--X-Reference: Pine.LNX.3.96.990120091953.16985A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00362">Date Index</a>][<a href="thrd8.shtml#00362">Thread Index</a>]<br>
+[<A HREF="msg00361.shtml">Date Prev</A>][<A HREF="msg00363.shtml">Date Next</A>][<A HREF="msg00355.shtml">Thread Prev</A>][<A HREF="msg00356.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Building 1.6.8 under Irix 6.5.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Steve Sizemore &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jan 1999 11:19:13 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jan 20, 1999 at 09:45:10AM +0100, Denis Barbier wrote:
+&gt; On Tue, 19 Jan 1999, Steve Sizemore wrote:
+&gt; 
+&gt; [...]
+&gt; &gt; In order to build this release on SGI Irix 6.5.2, I had to do the
+&gt; &gt; following -
+&gt; &gt; 
+&gt; &gt; 1. Edit configure, and change the shell to bsh.  (#!/sbin/bsh)
+&gt; &gt;     Apparently, the default shell is now ksh, and /bin/sh is
+&gt; &gt;     actually ksh. /sbin/bsh is the bourne shell.
+&gt; 
+&gt; ksh should be sh-compatible. On HP-UX there is the same problem, some
+&gt; configure scripts fail because of a buffer overflow (if i remember).
+
+Yes, it should be, but it is not. Perhaps this is a bug in SGI's ksh,
+but it only shows up in configuring wml.
+
+&gt; One has to type ``ksh configure'' instead of ``./configure''.
+
+This gives exactly the same failure as executing "./configure" or "sh
+configure". As I said, the workaround is to use bsh.
+
+&gt; Could you send me the error message via wmb?
+
+Sure, it's on it's way...
+
+&gt; &gt; 2. This allowed configure to do it's job, but make still fails
+&gt; &gt;     because of compiler complaints in wml_backend/p2_mhc/libutils/wisper.
+&gt; No idea on this one. Do not know SGI.
+
+I don't think this is an SGI problem, but as I said, I'm not that much
+of a C programmer. The default option for cc is "-ansi". When
+compiling with the default, or with "-xansi" (ansi with extensions),
+the compilation fails. The way to get it to succeed is to use "-cckr"
+which accepts K&amp;R C, non-ansi. To me, this suggests that the code is not
+ansi compliant. Here are the errors reported...
+
+make[4]: Entering directory `/src/wml/wml-1.6.8/wml_backend/p2_mhc/libutils/wisper'
+cc -O   -I.. -I../.. -I../libutils/regex   -c wisp.c -o wisp.o
+"wisp.c", line 167: error(1133): expression must be a modifiable lvalue
+    CAR (object) = car;
+    ^
+
+"wisp.c", line 168: error(1133): expression must be a modifiable lvalue
+    CDR (object) = cdr;
+    ^
+
+"wisp.c", line 488: error(1133): expression must be a modifiable lvalue
+  	      CAR (new_list) = val_read;
+  	      ^
+
+"wisp.c", line 489: error(1133): expression must be a modifiable lvalue
+  	      CDR (new_list) = make_cons (next_val, read_list ());
+  	      ^
+
+"wisp.c", line 501: error(1133): expression must be a modifiable lvalue
+        CAR (list) = val_read;
+        ^
+
+"wisp.c", line 502: error(1133): expression must be a modifiable lvalue
+        CDR (list) = read_list ();
+        ^
+
+"wisp.c", line 784: error(1133): expression must be a modifiable lvalue
+  	  CDR (last_cons) = object; 
+  	  ^
+
+"wisp.c", line 790: warning(1116): non-void function "wisp_append" (declared
+          at line 771) should return a value
+  }
+  ^
+
+"wisp.c", line 814: error(1133): expression must be a modifiable lvalue
+        CAR (copy) = copy_object (CAR (object));
+        ^
+
+"wisp.c", line 815: error(1133): expression must be a modifiable lvalue
+        CDR (copy) = copy_object (CDR (object));
+        ^
+
+9 errors detected in the compilation of "wisp.c".
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00354" HREF="msg00354.shtml">Building 1.6.8 under Irix 6.5.2</A></strong>, <em>From:</em> Steve Sizemore</li>
+<li><strong><A NAME="00355" HREF="msg00355.shtml">Re: Building 1.6.8 under Irix 6.5.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00361.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00363.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00355.shtml">Re: Building 1.6.8 under Irix 6.5.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00356.shtml">Some help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00362"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00362"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

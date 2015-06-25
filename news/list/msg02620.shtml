@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML under Windows... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 20 Jun 2002 11:30:33 +0200 (MET DST) -->
+<!--X-Message-Id: 20020620093903.GA5007@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020620070452.GA3960@imacs.polytechnique.fr -->
+<!--X-Reference: 000001c2182a$6d81a060$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02620">Date Index</a>][<a href="thrd53.shtml#02620">Thread Index</a>]<br>
+[<A HREF="msg02619.shtml">Date Prev</A>][<A HREF="msg02621.shtml">Date Next</A>][<A HREF="msg02619.shtml">Thread Prev</A>][<A HREF="msg02621.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 11:39:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 20, 2002 at 05:16:42PM +1000, Darryl Smith wrote:
+&gt; G'Day
+&gt; 
+&gt; I believe they turn :: into . so that we have things like
+&gt; 	/usr/man/man3/File.Spec.Mac.3
+&gt; 
+&gt; Which I believe is similar to 
+&gt; 	/usr/local/man/man3/File::Spec::Mac.3 on my unix box
+&gt; 
+&gt; Perldoc File::Spec::Mac does work. I do not know how, or where to look
+
+Indeed, I looked into ExtUtils::MM_Unix and it seems that double colons 
+are replaced by dots on MS Windows.
+Then in wml_include/Makefile, you could s/::/./g
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02621" HREF="msg02621.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02618" HREF="msg02618.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02619" HREF="msg02619.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02619.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02621.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02619.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02621.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02620"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02620"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

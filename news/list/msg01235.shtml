@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Downstripped meta&#45;html -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 28 Dec 1999 09:52:56 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991228093305.7452A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9912272256150.32286&#45;100000@lara.stud.fh&#45;heilbronn.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01235">Date Index</a>][<a href="thrd26.shtml#01235">Thread Index</a>]<br>
+[<A HREF="msg01234.shtml">Date Prev</A>][<A HREF="msg01236.shtml">Date Next</A>][<A HREF="msg01234.shtml">Thread Prev</A>][<A HREF="msg01237.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Downstripped meta-html</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Dec 1999 09:55:59 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 27 Dec 1999, Oliver Paukstadt wrote:
+
+&gt; HY HY
+&gt; 
+&gt; I have problems with the downsized version of mhtml.
+&gt; 
+&gt; I need to include all files in a special directory during the mhtml-pass
+&gt; because all defined tags in those files should be parsed.
+[...]
+
+Doing this with mhtml is not trivial.
+Suggestion:
+ Use ePerl to generate a file containing wml_p1_ipp directives. 
+* create an empty file named ``contents''
+* load this file during pass 1 (with flags or wml_p1_ipp directives)
+* during pass 3,
+  o parse this file to read which files were included during pass 1
+  o read directory contents
+  o if files included during pass 1 do not exactly match directory
+    contents, overwrite the ``contents'' file and write a message to
+    stderr telling to rerun WML and exit
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01237" HREF="msg01237.shtml">Re: Downstripped meta-html</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01234" HREF="msg01234.shtml">Downstripped meta-html</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01234.shtml">Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01236.shtml">Re: [BUG REPORT] WML 1.7.4, Solaris</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01234.shtml">Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01237.shtml">Re: Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01235"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01235"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.2 (22&#45;Jun&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 16 Jul 2000 22:18:26 +0200 (MET DST) -->
+<!--X-Message-Id: 20000716221922.B7329@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200007132114.BAA02802@webster.domain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01815">Date Index</a>][<a href="thrd37.shtml#01815">Thread Index</a>]<br>
+[<A HREF="msg01814.shtml">Date Prev</A>][<A HREF="msg01816.shtml">Date Next</A>][<A HREF="msg01811.shtml">Thread Prev</A>][<A HREF="msg01826.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 16 Jul 2000 22:19:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jul 14, 2000 at 01:14:38AM +0400, Ilya Martynov wrote:
+
+&gt; Automatic generation of dependencies for Makefiles seems to be broken. Here
+&gt; small test case:
+[...]
+
+Thanks for your report Ilya, there is indeed a bug.
+The patch below fixes this problem. You may apply it against
+wml_frontend/wml.src and recompile, or against your installed wml
+script.
+
+--- wml_frontend/wml.src	2000/06/15 16:25:21	1.53
++++ wml_frontend/wml.src	2000/07/16 20:10:56
+@@ -1191,7 +1191,7 @@
+         $opt_pass = '';
+         foreach $a (@opt_W) {
+             if ($a =~ m|^(\d),(.*)$|) {
+-                $opt_pass .= " $2 " if $1 == $p;
++                $opt_pass .= " $2 " if $1 == 1;
+ 		}
+         }
+         eval "\$rc = \&amp;pass1(\$opt_pass1 . \$opt_pass, \$src, \$o, \$tmp[2]);";
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01826" HREF="msg01826.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></strong>, <em>From:</em> Ilya Martynov</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01811" HREF="msg01811.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></strong>, <em>From:</em> Ilya Martynov</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01814.shtml">Re: Creating a new tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01816.shtml">Re: Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01811.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01826.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01815"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01815"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

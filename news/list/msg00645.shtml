@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 10 May 1999 09:48:13 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990510090721.2163A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14134.11301.822515.664706@plaything.smart.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00645">Date Index</a>][<a href="thrd14.shtml#00645">Thread Index</a>]<br>
+[<A HREF="msg00644.shtml">Date Prev</A>][<A HREF="msg00646.shtml">Date Next</A>][<A HREF="msg00644.shtml">Thread Prev</A>][<A HREF="msg00646.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 10 May 1999 09:42:24 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 9 May 1999, jeff covey wrote:
+
+&gt; &gt;&gt;&gt;&gt;&gt; "Denis" == Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; 
+&gt;     Denis&gt; wml-1.6.8 has to be patched to work with perl 5.00502. You
+&gt;     Denis&gt; can find this patch at
+&gt;     Denis&gt; <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-1.6.8-patches">http://www.engelschall.com/sw/wml/distrib/wml-1.6.8-patches</A>
+&gt; 
+&gt; applied the patch to a clean source, but make test still fails on both 
+&gt; tests with "Can't locate loadable object for module Term::ReadKey in
+&gt; @INC".
+
+Hi Jeff,
+
+it may be due to a perl misconfiguration. To know where wml searches the
+Perl modules, take a look into wml_test/TEST.root/bin/wml
+The lines beginning with ``use lib'' tell you where WML will search perl
+modules.
+
+* If the 4 lines match
+    use lib "/some/path/wml_test/TEST.root/lib/wml/any/subdirs";
+  (where ``/some/path'' and ``/any/subdirs'' depend on your system)
+  your installation is ok.
+  You should remove wml_common/*/.configured and rerun ``make; make test''
+  If it still fails, try ``make distclean'' and rebuild wml.
+
+* If not, e.g. you see /usr/local/lib/.... something's wrong with
+  your perl configuration.
+
+  I had such problems and here is what i did:
+  - locate the Config.pm file
+  - edit it and find the 4 variables
+     installarchlib installprivlib installsitearch installsitelib 
+    On my computer with perl 5.00404, the last 2 variables were defined by
+installsitearch='/usr/local/lib/site_perl/i386-linux'
+installsitelib='/usr/local/lib/site_perl'
+    I change them to
+installsitearch='/usr/lib/perl5/site_perl/i386-linux'
+installsitelib='/usr/lib/perl5/site_perl'
+    and everything worked fine (take care, iirc locations are different
+    under perl 5.00502).
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00644" HREF="msg00644.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> jeff covey</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00644.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00646.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00644.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00646.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00645"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00645"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] New release (unstable) -->
+<!--X-From-R13: oneovreNvznpf.cbylgrpuavdhr.se (Rravf Pneovre) -->
+<!--X-Date: Sun, 11 Mar 2001 11:48:12 +0100 (MET) -->
+<!--X-Message-Id: 20010311013751.A18320@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02165">Date Index</a>][<a href="thrd44.shtml#02165">Thread Index</a>]<br>
+[<A HREF="msg02158.shtml">Date Prev</A>][<A HREF="msg02161.shtml">Date Next</A>][<A HREF="msg02158.shtml">Thread Prev</A>][<A HREF="msg02174.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] New release (unstable)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Denis Barbier)</LI>
+<LI><em>Date</em>: Sun, 11 Mar 2001 01:37:51 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+WML 2.1a1 is out, this is the first unstable release since the
+discussion about having stable and unstable branches.
+I did not work on WML for a while, so i have to get back into source
+code before releasing WML 2.0.7.
+Here is a brief summary of changes, read
+   <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-2.1a1/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-2.1a1/ChangeLog</A>
+for details.
+
+  Changes between 2.0.6 and 2.1a1:
+    *) Fixed wml::std::href (10-Mar-2001)
+    *) Fixed wml::std::page (21-Feb-2001)
+    *) Fixed wml::des::preload (21-Feb-2001)
+    *) Remove special characters in debugging output (20-Feb-2001)
+    *) New &lt;disjoin&gt; tag (20-Feb-2001)
+    *) Fix bug with body tag surrounded by quotes (20-Feb-2001)
+    *) New logos (18-Dec-2000)
+    *) Upgraded to txt2html 1.28 (26-Nov-2000)
+    *) Fix wml::fmt::text (26-Nov-2000)
+    *) Change transparency in wml::des::imgdot (22-Nov-2000)
+    *) Improve wml_p5_divert (21-Nov-2000)
+    *) Improve wml::des::navbar (15-Nov-2000)
+    *) Improve wml_p7_htmlfix (15-Nov-2000)
+    *) Fix bugs with conditionals (13-Nov-2000)
+    *) Fix nested ePerl tags implementation (10-Nov-2000)
+    *) Fix wml::des::navbar (30-Oct-2000)
+    *) Upgrade ePerl to current CVS version (29-Oct-2000)
+    *) New `all except' operator in slice terms (29-Oct-2000)
+
+PS: my casual mailserver is down for the whole week-end, i may be reached
+    at barbier@engelschall.com instead.
+
+Yours.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02174" HREF="msg02174.shtml">BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02158.shtml">[BUG REPORT] WML HML Documentation, NT</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02161.shtml">Perl parsing error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02158.shtml">[BUG REPORT] WML HML Documentation, NT</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02174.shtml">BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02165"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02165"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

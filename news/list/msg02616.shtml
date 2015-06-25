@@ -1,0 +1,244 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML under Windows... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 20 Jun 2002 00:56:38 +0200 (MET DST) -->
+<!--X-Message-Id: 20020619230533.GA1506@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20020608204023.GA4108@imacs.polytechnique.fr -->
+<!--X-Reference: 003001c20fa2$f4ec4a40$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02616">Date Index</a>][<a href="thrd53.shtml#02616">Thread Index</a>]<br>
+[<A HREF="msg02615.shtml">Date Prev</A>][<A HREF="msg02617.shtml">Date Next</A>][<A HREF="msg02611.shtml">Thread Prev</A>][<A HREF="msg02617.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 01:05:33 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jun 09, 2002 at 08:46:43PM +1000, Darryl Smith wrote:
+&gt; Sorry... The editor copied more than I thought... Anyway I am getting
+&gt; the following errors...
+&gt; 
+&gt; I have got gFont, and with a slight modification I have got all the
+&gt; other passes to run. P3 is the one that will not run. 
+&gt; 
+&gt; $ make
+&gt; gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -fno-strict-aliasing
+&gt; -I/usr/local/include
+&gt; -I/usr/lib/perl5/5.6.1/cygwin-multi/CORE -I. -c eperl_perl5.c
+&gt; eperl_perl5.c: In function `Perl5_XSInit':
+&gt; eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+&gt; eperl_perl5.c:58: (Each undeclared identifier is reported only once
+&gt; eperl_perl5.c:58: for each function it appears in.)
+&gt; eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+[snip]
+
+Hi Darryl,
+
+could you try this patch and let me know if it works for you?
+
+It would be wonderful if someone with good knowledge of Perl threads
+could review ePerl sources.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: eperl_main.c
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_backend/p3_eperl/eperl_main.c,v
+retrieving revision 1.9
+diff -u -u -r1.9 eperl_main.c
+--- eperl_main.c	2001/10/28 22:57:40	1.9
++++ eperl_main.c	2002/06/19 22:53:12
+@@ -1051,6 +1051,10 @@
+     }
+     IO_redirect_stderr(er);
+ 
++    /*  now allocate the Perl interpreter  */
++    my_perl = perl_alloc();   
++    perl_construct(my_perl); 
++
+     /*  initialise the Perl Locale environment  */
+ #if AC_perl_vnum &lt; 500400
+     perl_init_i18nl14n(1); /* Perl 5.003 or lower */
+@@ -1058,9 +1062,6 @@
+     perl_init_i18nl10n(1); /* Perl 5.004 or higher */
+ #endif
+ 
+-    /*  now allocate the Perl interpreter  */
+-    my_perl = perl_alloc();   
+-    perl_construct(my_perl); 
+     /* perl_destruct_level = 1; */
+ 
+     /*  create command line...  */
+@@ -1130,10 +1131,10 @@
+     }
+ 
+     /*  Set the previously remembered Perl 5 scalars (option -d) */
+-    Perl5_SetRememberedScalars();
++    Perl5_SetRememberedScalars(aTHX);
+ 
+     /*  Force unbuffered I/O */
+-    Perl5_ForceUnbufferedStdout();
++    Perl5_ForceUnbufferedStdout(aTHX);
+ 
+     /*  NOW IT IS TIME to evaluate/execute the script!!! */
+     rc = perl_run(my_perl);
+Index: eperl_perl5.c
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_backend/p3_eperl/eperl_perl5.c,v
+retrieving revision 1.12
+diff -u -u -r1.12 eperl_perl5.c
+--- eperl_perl5.c	2001/03/10 21:47:45	1.12
++++ eperl_perl5.c	2002/06/19 22:51:36
+@@ -41,14 +41,14 @@
+ 
+ #ifdef HAVE_PERL_DYNALOADER
+ 
+-extern void boot_DynaLoader _((CV* cv));
++extern void boot_DynaLoader _((pTHX_ CV* cv));
+ 
+ /*
+ **
+ **  the Perl XS init function for dynamic library loading
+ **
+ */
+-void Perl5_XSInit(void)
++void Perl5_XSInit(pTHX)
+ {
+    char *file = __FILE__;
+    /* dXSUB_SYS; */
+@@ -64,7 +64,7 @@
+ **  Force Perl to use unbuffered I/O
+ **
+ */
+-void Perl5_ForceUnbufferedStdout(void)
++void Perl5_ForceUnbufferedStdout(pTHX)
+ {
+ #if AC_perl_vnum &lt; 500476
+     IoFLAGS(GvIOp(defoutgv)) |= IOf_FLUSH; /* $|=1 */
+@@ -96,7 +96,7 @@
+ **  sets a Perl scalar variable
+ **
+ */
+-void Perl5_SetScalar(char *pname, char *vname, char *vvalue)
++void Perl5_SetScalar(pTHX_ char *pname, char *vname, char *vvalue)
+ {
+ #if AC_perl_vnum &gt;= 500476
+     dTHR;
+@@ -140,7 +140,7 @@
+     return;
+ }
+ 
+-void Perl5_SetRememberedScalars(void) 
++void Perl5_SetRememberedScalars(pTHX) 
+ {
+     char ca[1024];
+     char *cp;
+@@ -150,7 +150,7 @@
+         strcpy(ca, Perl5_RememberedScalars[i]);
+         cp = strchr(ca, '=');
+         *cp++ = '\0';
+-        Perl5_SetScalar("main", ca, cp);
++        Perl5_SetScalar(aTHX_ "main", ca, cp);
+     }
+ }
+ 
+Index: eperl_proto.h
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_backend/p3_eperl/eperl_proto.h,v
+retrieving revision 1.8
+diff -u -u -r1.8 eperl_proto.h
+--- eperl_proto.h	2001/03/10 21:47:45	1.8
++++ eperl_proto.h	2002/06/19 22:06:33
+@@ -37,6 +37,8 @@
+ 
+ /*_BEGIN_PROTO_*/
+ 
++#include "eperl_perl5.h"
++
+ /* eperl_main.c */
+ extern int mode;
+ extern char *allowed_file_ext[];
+@@ -58,13 +60,13 @@
+ extern int main(int argc, char **argv, char **env);
+ 
+ /* eperl_perl5.c */
+-extern void Perl5_XSInit(void);
+-extern void Perl5_ForceUnbufferedStdout(void);
++extern void Perl5_XSInit(pTHX);
++extern void Perl5_ForceUnbufferedStdout(pTHX);
+ extern char **Perl5_SetEnvVar(char **env, char *str);
+-extern void Perl5_SetScalar(char *pname, char *vname, char *vvalue);
++extern void Perl5_SetScalar(pTHX_ char *pname, char *vname, char *vvalue);
+ extern char *Perl5_RememberedScalars[1024];
+ extern void Perl5_RememberScalar(char *str);
+-extern void Perl5_SetRememberedScalars(void);
++extern void Perl5_SetRememberedScalars(pTHX);
+ 
+ /* eperl_parse.c */
+ extern char *ePerl_begin_delimiter;
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02617" HREF="msg02617.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02608" HREF="msg02608.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02609" HREF="msg02609.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02615.shtml">Re: wml locale problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02617.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02611.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02617.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02616"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02616"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

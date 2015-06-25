@@ -1,0 +1,86 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.6, Debian Linux 2.2 -->
+<!--X-From-R13: Egrssra.FfpuvecxrNtzk.arg -->
+<!--X-Date: Fri, 1 Dec 2000 17:30:34 +0100 (MET) -->
+<!--X-Message-Id: 200011271300.OAA13675@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02073">Date Index</a>][<a href="thrd42.shtml#02073">Thread Index</a>]<br>
+[<A HREF="msg02072.shtml">Date Prev</A>][<A HREF="msg02074.shtml">Date Next</A>][<A HREF="msg02080.shtml">Thread Prev</A>][<A HREF="msg02075.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.6, Debian Linux 2.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 27 Nov 2000 14:00:33 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.6
+Operating System: Debian Linux 2.2
+
+Problem Description:
+| Bei mir funktioniert im Package
+| wml::std::lang das Tag &lt;lang:current&gt; nicht.
+| Das Tag &lt;lang:list&gt; funktioniert jedoch. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02075" HREF="msg02075.shtml">Re: [BUG REPORT] WML 2.0.6, Debian Linux 2.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02072.shtml">Re: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02074.shtml">Suggestion for wml::fmt::url</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02080.shtml">Bug report, I think, regarding &lt;attributes-quote %attributes&gt;.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02075.shtml">Re: [BUG REPORT] WML 2.0.6, Debian Linux 2.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02073"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02073"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

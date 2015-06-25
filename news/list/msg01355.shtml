@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <protect> does not work -->
+<!--X-From-R13: Ibystnat Rnhgreznaa <qnhgvNbru.gh&#45;tenm.np.ng> -->
+<!--X-Date: Sat, 12 Feb 2000 14:09:26 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10002121331001.21155&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01355">Date Index</a>][<a href="thrd28.shtml#01355">Thread Index</a>]<br>
+[<A HREF="msg01354.shtml">Date Prev</A>][<A HREF="msg01356.shtml">Date Next</A>][<A HREF="msg01360.shtml">Thread Prev</A>][<A HREF="msg01357.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;protect&gt; does not work</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wolfgang Dautermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 12 Feb 2000 14:09:21 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I want to create two pages from one input file - one html-only page
+and one with php-scripts. A small example:
+
+#use wml::std::lang
+&lt;lang:new id=html&gt;
+&lt;lang:new id=php&gt;
+&lt;lang:star:slice: %BASE.*&gt;
+&lt;h1&gt; Linux&lt;/h1&gt;
+&lt;lang:html&gt;&lt;/lang:html&gt;
+&lt;lang:php&gt;
+&lt;H3&gt;Linux Headlines&lt;/H3&gt;
+&lt;P&gt;
+&lt;protect&gt;
+&lt;?php
+         readfile("<A  HREF="http://lwn.net/headlines/html">http://lwn.net/headlines/html</A>");
+?&gt;
+&lt;/protect&gt;
+&lt;/lang:php&gt;
+
+Wml (1.7.4) should leave the php-code (everything between "&lt;?php" and
+"?&gt;") untouched - therefore the &lt;protect&gt;-container.
+
+But after pass 1 (!) the code looks like: 
+
+...
+&lt;lang:php&gt;
+&lt;H3&gt;Linux Headlines&lt;/H3&gt;
+&lt;P&gt;
+-=P[000000]=-
+&lt;/lang:php&gt;
+...
+
+Why? I get the same result, if I write &lt;protect pass=1-9&gt; instead
+&lt;protect&gt;. What can I do to protect php-code against wml?
+
+Bye, Wolfgang
+
+
+Strange - if I call wml using "wml -p 1 index.wml", the php-code passes
+pass 1 correct (but the &lt;protect&gt;-tag vanishes), if I call it using
+"wml -v 9 index.wml" and I look at the result after Pass1, I get the
+code above.
+
+(the sourcecode can be found at
+<A  HREF="http://ers.dhs.org/~wolfgang/wml-question/index.wml">http://ers.dhs.org/~wolfgang/wml-question/index.wml</A>)
+
+--
+Diese Mail kommt von: Wolfgang Dautermann
+WWW-Homepage: <A  HREF="http://oeh.tu-graz.ac.at/~dauti/">http://oeh.tu-graz.ac.at/~dauti/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01357" HREF="msg01357.shtml">Re: &lt;protect&gt; does not work</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01354.shtml">[HELP] New macro-processor for pass 2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01356.shtml">Re: &lt;protect&gt; does not work</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01360.shtml">Re: WML port to Win32</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01357.shtml">Re: &lt;protect&gt; does not work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01355"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01355"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

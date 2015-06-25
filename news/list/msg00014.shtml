@@ -1,0 +1,185 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Examples: WML Itself -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 29 Dec 1997 09:39:30 +0100 (MET) -->
+<!--X-Message-Id: 199712290839.JAA22322@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00014">Date Index</a>][<a href="thread.shtml#00014">Thread Index</a>]<br>
+[<A HREF="msg00013.shtml">Date Prev</A>][<A HREF="msg00015.shtml">Date Next</A>][<A HREF="msg00013.shtml">Thread Prev</A>][<A HREF="msg00008.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Examples: WML Itself</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 29 Dec 1997 09:39:28 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00013.shtml">199712270946.EAA04184@plymouth.truespectra.com</A>&gt; you wrote:
+
+&gt;[...]
+&gt;&gt; Just a few things I've discovered:
+
+&gt;&gt; 1. The pages have 
+&gt;&gt;    &lt;body bgcolor="#000000" text=ffff60 link=00d0d0 vlink=00a0a0 alink=ff7070&gt;
+&gt;&gt;    First, as a side question, how can does be created with WML?
+&gt;&gt;    WML (at least from 1.4.7 up) would create:
+
+&gt; I'm currently at 1.3 (not keeping up with every upgrade).  The definition
+&gt; of &lt;tspage&gt; is:
+
+&gt; [...]
+&gt; &lt;body bgcolor=000000 text=ffff60 link=00d0d0 vlink=00a0a0
+&gt; alink=ff7070&gt;
+&gt; [...]
+
+&gt; I found it odd that bgcolor was the only one to get quotes, but didn't
+&gt; consider it important enough to fix.  I'll just update the tag definition
+&gt; so that it generates sensible HTML.
+
+Ok, thats fine. Alternatively you can just upgrade to WML 1.4.x ;_) BTW: For a
+brief description of what 1.4.x provides against 1.3.x just read the NEWS file
+on the WML webarea under News-&gt;NEWS. There are really a few interesting
+enhancements like WMd, &lt;protect&gt;, etc. pp.
+
+&gt;[...]
+&gt; &lt;linkto place="Products_PhotoGraphics"&gt;this is a link to photographics
+&gt; stuff&lt;/linkto&gt;
+
+&gt; The stuff that does not link in this mannger is, for now, a pain to
+&gt; maintain.  Images are done with relative directories (images/foo.jpg).
+
+&gt;&gt;    start with / only. Or even better: Use WML's auto-adustable path variables
+&gt;&gt;    and let WML calculate the relative paths between each page. See the ``WML
+&gt;&gt;    Itself'' pages and how I let WML calculate all URLs in the navbars via this
+&gt;&gt;    approach.
+
+&gt; I'm not sure that I used this facility, not having seen it, but used
+&gt; something fairly similar.
+
+Sure, but the auto-adjustable path variables already provide you with the
+calculation of relative links without doing anything manually. So, when you
+want to simplify it again ;_), use -DROOT~. in the .wmlrc of your "root-dir"
+and then use $(ROOT)/relpath/foo/bar and these URLs automatically become .
+../../ ../../, etc. prefixed.
+
+&gt;&gt; 4. There are images like ``img
+&gt;&gt;    src="<A  HREF="http://www.truespectra.com/images/tsramp-mini.jpg">http://www.truespectra.com/images/tsramp-mini.jpg</A>" alt="TrueSpectra
+&gt;&gt;    Home Page" border="0"&gt;''. Here I again wondering how this can survive WML,
+
+&gt; $DOCROOT + "images/tsramp-mini.jpg", located in wml::usr::ts.wml
+
+&gt; For some reason the defined-tag expansion occurred after the &lt;img&gt;
+&gt; width expansion?
+&gt; I certainly didn't use &lt;img*&gt;
+
+The point is why there are no WIDTH/HEIGHT attributes added by WML? When I
+pass the above to WML 1.4.x they get automatically added. Perhaps an already
+fixed bug of 1.3.x...
+
+&gt;&gt; That's an interesting file-system-based approach for a navbar.  Hmmmmm... if
+&gt;&gt; you can limite the files that's fine this way.  But which feature for the
+&gt;&gt; grammar-based wml::des::navbar would be required to let us create the same
+&gt;&gt; with it? I just ask because there have to be a reason why you choose your
+&gt;&gt; approach.  Perhaps I've missed some essential feature in wml::des::navbar
+&gt;&gt; which restricts it too much in use? Just give a few hints. Thanks.  Or did you
+&gt;&gt; start your work on the navbar before wml::des::navbar arrived?
+
+&gt; &lt;thinks&gt;
+
+&gt; In the man pages I've got for 1.3, navbar was documented as needing to be
+&gt; finished.  I was also somewhat obsessive about the presentation,
+
+Ok, thats a reason. Sorry, wml::des::navbar was completed in WML 1.4.x the
+first time. 
+
+&gt; preferring:
+&gt; * the hierarchical display ("twistie"-like behaviour in e.g. Win95 or
+&gt;   MacOS)
+&gt; * not using images nor image maps to render the display:
+&gt;   style sheets were the way to go
+
+Thats also an interesting point: CSS. Hmmm... I'll think about this way of
+navigation bar generation, too. Very interesting...
+
+&gt; There were some other limitations; the huge majority of the company's
+&gt; visitors are users of our OS/2 product; that platform hasn't progressed
+&gt; past 3.0, and the JavaScript support seemed to be unstable.  I preferred
+&gt; to avoid that.
+
+&gt; So I simply rolled my own.
+
+Fine, no more comments. You take the best the state-of-the-art provided.
+
+&gt;&gt; In general to summarize: The complete website looks good. Keep on your work...
+
+&gt; Thanks!
+&gt; You too, a very handy tool.  The alternative was frontpage!
+
+&lt;grin&gt; Yes, MS Frontpage, AOL Press, Adobe Pagemill, ... All of them are nice
+tools. But only for prototyping I think. Whenever it comes to generate a
+complete webarea or website with consistent layout and design, a generation
+approach like WML in the good old Unix fashion is still the best. It need not
+be WML in particular, but at least a generation approach.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00013.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00015.shtml">ANNOUNCE: WML 1.4.10</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00013.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00008.shtml">ANNOUNCE: WML 1.4.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00014"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00014"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

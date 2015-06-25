@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Disappearance of a quoted body -->
+<!--X-From-R13: Brge Oaqerlri <crgeNknanqh.eh> -->
+<!--X-Date: Mon, 19 Feb 2001 17:38:01 +0100 (MET) -->
+<!--X-Message-Id: Pine.WNT.4.32.0102191725580.228&#45;100000@turm.infra.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3A795E1C.1000708@xanadu.ru -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02132">Date Index</a>][<a href="thrd43.shtml#02132">Thread Index</a>]<br>
+[<A HREF="msg02131.shtml">Date Prev</A>][<A HREF="msg02133.shtml">Date Next</A>][<A HREF="msg02124.shtml">Thread Prev</A>][<A HREF="msg02133.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Disappearance of a quoted body</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Petr Andreyev &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 19 Feb 2001 17:35:10 +0100 (=?koi8-r?Q?Westeurop=E4ische_Normalzeit?=)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Collegues!
+
+We have found the following interesting behavior of mp4h:
+
+====== code =======
+&lt;define-tag bodytest endtag=required&gt;
+::::::
+%body
+::::::
+&lt;/define-tag&gt;
+&lt;bodytest&gt;"Magic body"&lt;/bodytest&gt;
+
+===== output ======
+::::::
+::::::
+===================
+
+That is to say that the body dissappears. When you add a space or a newline to
+the left or to the right of the quoted string everything works as expected.
+
+How would you explain this, and is this an assumed behavior?
+
+Best wishes,
+Petr
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02133" HREF="msg02133.shtml">Re: Disappearance of a quoted body</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02137" HREF="msg02137.shtml">Re: Disappearance of a quoted body</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02122" HREF="msg02122.shtml">Escaping double quotes in mp4h</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02131.shtml">Re: Javascript missing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02133.shtml">Re: Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02124.shtml">Re: Escaping double quotes in mp4h</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02133.shtml">Re: Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02132"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02132"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

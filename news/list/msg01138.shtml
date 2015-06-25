@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: empty eperl man file -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 13 Nov 1999 16:47:46 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991112112053.2138B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199911101857.DAA24612@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01138">Date Index</a>][<a href="thrd24.shtml#01138">Thread Index</a>]<br>
+[<A HREF="msg01136.shtml">Date Prev</A>][<A HREF="msg01139.shtml">Date Next</A>][<A HREF="msg01131.shtml">Thread Prev</A>][<A HREF="msg01135.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: empty eperl man file</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Nov 1999 16:47:09 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 11 Nov 1999, Nobuyuki Tsuchimura wrote:
+
+&gt;   Hi,
+&gt; 
+&gt;   I can't see 'man wml_p3_eperl'. Its man file is empty.
+&gt; 
+&gt; &gt;-rw-r--r--   1 root     root        15373 Oct 23 03:03 wml_p1_ipp.1
+&gt; &gt;-rw-r--r--   1 root     root            0 Oct 23 03:03 wml_p3_eperl.1
+&gt; &gt;-rw-r--r--   1 root     root        10031 Oct 23 03:03 wml_p5_divert.1
+[...]
+
+Indeed, your patch has been committed.
+Thanks for your help.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01131" HREF="msg01131.shtml">empty eperl man file</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01136.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01139.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01131.shtml">empty eperl man file</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01135.shtml">[BUG REPORT] WML 1.7.4, Linux 2.2 (SuSE 6.0)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01138"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01138"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: problem undrstanding cotainers -->
+<!--X-From-R13: Yevfuan [bghxhev <xevfuanNfniren.pbz> -->
+<!--X-Date: Mon, 29 Mar 1999 22:55:38 +0200 (MET DST) -->
+<!--X-Message-Id: 36FFE8C2.E269BE2F@savera.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00521">Date Index</a>][<a href="thrd12.shtml#00521">Thread Index</a>]<br>
+[<A HREF="msg00520.shtml">Date Prev</A>][<A HREF="msg00522.shtml">Date Next</A>][<A HREF="msg00519.shtml">Thread Prev</A>][<A HREF="msg00522.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>problem undrstanding cotainers</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Krishna Motukuri &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 29 Mar 1999 15:55:30 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+	I have defined multiple containers in my code which have the same set
+of attributes. My requirements are such that I have to include one
+container in another and pass the attributes of the top-level container
+to the nested container. The problem is that the values of the
+attributes seem to be lost when they get to the second container.
+
+	If I have different attribute names for the containers, then the
+example works fine. I'd appreciate any explanations for this phenomenon
+and suggestions for alternate ways of accomplishing the task.
+
+Here is the example:
+
+Definition:
+-----------
+
+&lt;define-container top&gt;
+&lt;preserve attr&gt;
+&lt;set-var %attributes&gt;
+
+  &lt;child attr=&lt;get-var attr&gt;&gt;
+  %body
+  &lt;/child&gt;
+
+&lt;restore attr&gt;
+&lt;/define-container&gt;
+
+
+&lt;define-container child&gt;
+&lt;preserve attr&gt;
+&lt;set-var %attributes&gt;
+
+Hello &lt;get-var attr&gt;,
+Here is your body:
+%body
+
+&lt;restore attr&gt;
+&lt;/define-container&gt;
+
+Usage:
+-----
+
+&lt;top attr="user"&gt;
+This is a test body
+&lt;/top&gt;
+
+Output:
+------
+
+Hello ,
+Here is your body:
+This is a test body
+
+
+Thanks,
+Krishna
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00522" HREF="msg00522.shtml">Re: problem undrstanding cotainers</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00520.shtml">Re: Automatic button generation (Was: Substitution of asteriks)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00522.shtml">Re: problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00519.shtml">Re: WML for Windows 98</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00522.shtml">Re: problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00521"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00521"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: print "<DIV ..." -->
+<!--X-From-R13: Evzba Phee <fvzrfNocsu.arg> -->
+<!--X-Date: Thu, 15 Jul 1999 11:30:30 +0200 (MET DST) -->
+<!--X-Message-Id: 199907150932.KAA04299@triad.bpfh.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990714200755.A970@coyo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00855">Date Index</a>][<a href="thrd18.shtml#00855">Thread Index</a>]<br>
+[<A HREF="msg00854.shtml">Date Prev</A>][<A HREF="msg00856.shtml">Date Next</A>][<A HREF="msg00854.shtml">Thread Prev</A>][<A HREF="msg00860.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: print &quot;&lt;DIV ...&quot;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Simon Burr &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 15 Jul 1999 10:32:13 +0100 (BST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Rainer Jung said
+&gt;I just tried a thing like
+&gt;&lt;: print "&lt;DIV align=\"right\"&gt;"; :&gt;
+&gt;It seems that div has already a meaning (Sorry, i am not very concerned with 
+&gt;WML). The output is then:
+
+I've come across this one before. AFAICT the problem is that meta-HTML (ie
+pass 2) does work on DIV tags and does things like put quotes around the
+DIV options if they don't already exist.
+
+When working with WML you have to remember that each pass sees the *entire*
+file, thus meta-HTML gets the above and sees that the DIV doesn't have the
+quotes around the align option (you've escaped them after all), thus it puts
+quotes in for you.
+
+The following shows this quite well:
+
+% echo '&lt;: print "&lt;div align=\"right\"&gt;"; :&gt;' | /usr/local/lib/wml/exec/wml_p2_mhc
+&lt;: print "&lt;DIV align=""right""&gt;"; :&gt;
+%
+
+Note the capitialisation of the div tag name as well.
+
+You're solution works as meta-HTML no longer sees the &lt;div ...&gt; tag. The
+solution is to use the &lt;verbatim&gt;...&lt;/verbatim&gt; tags to get meta-HTML to
+leave the ePerl alone. Thus I'll quite often use code like:
+
+  &lt;perl&gt;&lt;verbatim&gt;
+  # Perl goes here :)
+  &lt;/verbatim&gt;&lt;/perl&gt;
+
+Thus:
+
+  % cat &gt; t &lt;&lt;EOF
+  &gt; &lt;perl&gt;
+  &gt; &lt;verbatim&gt;
+  &gt; print "&lt;DIV align=\"right\"&gt;";
+  &gt; &lt;/verbatim&gt;
+  &gt; &lt;/perl&gt;
+  &gt; EOF
+  % /usr/local/lib/wml/exec/wml_p2_mhc t
+  &lt;perl&gt;
+  print "&lt;DIV align=\"right\"&gt;";
+  &lt;/perl&gt;
+  %
+
+HTH.
+
+-- 
+Simon the stressed       <A  HREF="http://www.bpfh.net/">http://www.bpfh.net/</A>       simes@bpfh.net
+ "So, I'm in the UK, but not a part of a UK group; my boss is in
+  France and his boss is just up the corridor ? Oh joys"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00854" HREF="msg00854.shtml">print &quot;&lt;DIV ...&quot;</A></strong>, <em>From:</em> Rainer Jung</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00854.shtml">print &quot;&lt;DIV ...&quot;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00856.shtml">Minor fix for command line options</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00854.shtml">print &quot;&lt;DIV ...&quot;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00860.shtml">Re: print &quot;&lt;DIV ...&quot;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00855"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00855"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

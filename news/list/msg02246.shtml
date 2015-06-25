@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 &#45; Solaris 8 -->
+<!--X-From-R13: ubssznanNzn.ghz.qr -->
+<!--X-Date: Fri, 25 May 2001 21:13:41 +0200 (MET DST) -->
+<!--X-Message-Id: 200105081551.RAA07637@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02246">Date Index</a>][<a href="thrd45.shtml#02246">Thread Index</a>]<br>
+[<A HREF="msg02245.shtml">Date Prev</A>][<A HREF="msg02247.shtml">Date Next</A>][<A HREF="msg02245.shtml">Thread Prev</A>][<A HREF="msg02248.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 8 May 2001 17:51:31 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.6
+Operating System: SunOS Release 5.8 - Solaris 8
+
+Problem Description:
+| Hello Denis,
+| 
+| in "htmlfix" the &lt;center&gt;-Tags are replaced by 
+| &lt;div align=...&gt;. Unfortunately this only applies to
+| plain &lt;center&gt;-Tags without attributes. 
+| &lt;center style="SomeCssStuff"&gt;Text&lt;/center&gt;
+| leads to
+| &lt;center style="SomeCssStuff"&gt;Text&lt;/div&gt;.
+| Didn't cause any browser probs here, but should be 
+| fixed in the next version nevertheless.
+| It should be enough to remove the trailing "&gt;" in the
+| replacement in "htmlfix". 
+| 
+| Wrote a own &lt;center&gt;-tag as workaround till the bugfix
+| comes up.
+| 
+| hth
+| Andreas
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02248" HREF="msg02248.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02245.shtml">[BUG REPORT] WML 2.0.6, Debian GNU/Linux (unstable)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02247.shtml">WML v2.x in Debian/Testing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02245.shtml">[BUG REPORT] WML 2.0.6, Debian GNU/Linux (unstable)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02248.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02246"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02246"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Disappearance of a quoted body -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 19 Feb 2001 18:56:45 +0100 (MET) -->
+<!--X-Message-Id: 20010219190329.A7043@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3A795E1C.1000708@xanadu.ru -->
+<!--X-Reference: Pine.WNT.4.32.0102191725580.228&#45;100000@turm.infra.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02133">Date Index</a>][<a href="thrd43.shtml#02133">Thread Index</a>]<br>
+[<A HREF="msg02132.shtml">Date Prev</A>][<A HREF="msg02134.shtml">Date Next</A>][<A HREF="msg02132.shtml">Thread Prev</A>][<A HREF="msg02137.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Disappearance of a quoted body</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 19 Feb 2001 19:03:29 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Feb 19, 2001 at 05:35:10PM +0100, Petr Andreyev wrote:
+&gt; Hello Collegues!
+&gt; 
+&gt; We have found the following interesting behavior of mp4h:
+&gt; 
+&gt; ====== code =======
+&gt; &lt;define-tag bodytest endtag=required&gt;
+&gt; ::::::
+&gt; %body
+&gt; ::::::
+&gt; &lt;/define-tag&gt;
+&gt; &lt;bodytest&gt;"Magic body"&lt;/bodytest&gt;
+&gt; 
+&gt; ===== output ======
+&gt; ::::::
+&gt; ::::::
+&gt; ===================
+&gt; 
+&gt; That is to say that the body dissappears. When you add a space or a newline to
+&gt; the left or to the right of the quoted string everything works as expected.
+&gt; 
+&gt; How would you explain this, and is this an assumed behavior?
+
+Hi Petr,
+
+this is certainly not a desired behavior, i will try to figure why this
+happens.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02122" HREF="msg02122.shtml">Escaping double quotes in mp4h</A></strong>, <em>From:</em> Petr Andreyev</li>
+<li><strong><A NAME="02132" HREF="msg02132.shtml">Disappearance of a quoted body</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02132.shtml">Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02132.shtml">Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02137.shtml">Re: Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02133"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02133"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Substitution of asteriks -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Mon, 22 Mar 1999 09:32:58 +0100 (MET) -->
+<!--X-Message-Id: 87pv61ncvb.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.10.9903170952240.7703&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00504">Date Index</a>][<a href="thrd11.shtml#00504">Thread Index</a>]<br>
+[<A HREF="msg00503.shtml">Date Prev</A>][<A HREF="msg00505.shtml">Date Next</A>][<A HREF="msg00489.shtml">Thread Prev</A>][<A HREF="msg00505.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Substitution of asteriks</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 22 Mar 1999 09:32:24 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Tobias Oetiker &lt;oetiker@ee.ethz.ch&gt; writes:
+&gt; *&gt; Is-it possible to combine two substitution of asteriks ?
+&gt; sure, but the syntax must be
+&gt; &lt;navbar:button img = &lt;lang:star: Icons-*&gt;-*.gif&gt;
+
+This way you will get something like 
+&lt;img src="[LANG_EN: Icons-en-n.gif][LANG_DE: Icons-de-n.gif]"&gt;
+and since the slice-pass comes after the html fixup pass in wml 1.6.8
+(IIRC Denis made some remarks about moving the fixup to the end of the
+pipline, where it belongs, what happend to this in SNAP?) this will
+not give you height and width attributes for your images.
+
+The other way at least for your problem is my solution which I
+mentioned last week, which usese the hashmark (#) for the lang
+substitution:
+&lt;navbar:button img=Icons-#-*.gif&gt;
+and produces:
+[LANG_EN: &lt;img src=Icons-en-n.gif&gt;][LANG_DE: ...]
+which will be properly handeled by the fixup pass (and it saves you
+some keystrokes, too :-)).
+
+See <A  HREF="http://www.hars.de/www/wml_nav_lang.en.html">http://www.hars.de/www/wml_nav_lang.en.html</A>
+
+Yours, Florian.
+
+PS: I should try to implement something like Tobias' nice trick to
+    automatically produce the images for the buttons using ImageMagick
+    or maybe Gimp, but the version of Gimp (1.1.2) I have recommends
+    updating perl, and, of course, my Gimp should be replaced by
+    version 1.1.3.
+    Update mania, again.
+    And I don't use images on my buttons, so you should probably go
+    with his version if you depend on this feature.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00505" HREF="msg00505.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="00506" HREF="msg00506.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00509" HREF="msg00509.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00489" HREF="msg00489.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00503.shtml">Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00505.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00489.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00505.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00504"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00504"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

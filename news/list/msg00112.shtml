@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.3 -->
+<!--X-From-R13: Rnivq [rager <Rnivq.[ragerNvevfn.se> -->
+<!--X-Date: Sun, 15 Mar 1998 17:53:13 +0100 (MET) -->
+<!--X-Message-Id: wd8hg50j9d3.fsf@parate.irisa.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199803051202.NAA16193@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00112">Date Index</a>][<a href="thrd3.shtml#00112">Thread Index</a>]<br>
+[<A HREF="msg00111.shtml">Date Prev</A>][<A HREF="msg00113.shtml">Date Next</A>][<A HREF="msg00111.shtml">Thread Prev</A>][<A HREF="msg00113.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: David Mentre &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 15 Mar 1998 15:51:04 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+ Hi all WML users,
+
+rse@engelschall.com (Ralf S. Engelschall) writes:
+
+&gt; Now available:
+&gt; Website META Language, Version 1.6.3
+
+ While installing this new version, an error occured when trying to
+compile a WML document :
+
+====================
+wml -I/home/parasite/d03/calcpar/dmentre/pub/home-page/prive -oALL:index.html index.wml
+ePerl:Error: Perl parsing error (interpreter rc=2)
+ 
+---- Contents of STDERR channel: ---------
+Can't load '/usr/local/lib/perl5/site_perl/sun4-solaris/auto/GD/GD.so' for module GD: ld.so.1: /udd/dmentre/arch/solaris-sparc/lib/wml/exec/wml_p3_eperl: fatal: relocation error: file /usr/local/lib/perl5/site_perl/sun4-solaris/auto/GD/GD.so: symbol Perl_stack_sp: referenced symbol not found at /usr/local/lib/perl5/sun4-solaris/5.00403/DynaLoader.pm line 155.
+ 
+ at /tmp/wml.1576.tmp1 line 88
+BEGIN failed--compilation aborted at /tmp/wml.1576.tmp1 line 88.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+make[1]: *** [index.html] Error 1
+====================
+
+ Is it related to an error occuring when I installed WML (I'm not a perl
+expert):
+
+=====================
+===&gt; wml_common/gd
+make[2]: Entering directory `/tmp/wml-1.6.3/wml_common/gd'
+Couldn't read /usr/local/lib/perl5/site_perl/sun4-solaris/auto/GD/.packlist at -
+e line 1
+make[2]: *** [pure_site_install] Error 13
+make[2]: Leaving directory `/tmp/wml-1.6.3/wml_common/gd'
+&lt;=== wml_common/gd
+=====================
+
+ Therefore is it related to perl wrongly installed on our system or did
+I make a mistake when installing perl ?
+
+Regards,
+d.
+-- 
+ David.Mentre@irisa.fr
+  Personal: <A  HREF="http://www.irisa.fr/prive/dmentre/">http://www.irisa.fr/prive/dmentre/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00111" HREF="msg00111.shtml">ANNOUNCE: WML 1.6.3</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00111.shtml">ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00113.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00111.shtml">ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00113.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00112"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00112"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

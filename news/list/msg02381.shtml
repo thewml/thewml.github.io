@@ -1,0 +1,155 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: new flag? wml &#45;U -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 27 Aug 2001 15:58:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20010827154516.A5491@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20010827094300.A4146@imacs.polytechnique.fr -->
+<!--X-Reference: XFMail.010827143630.jh@inetcom.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02381">Date Index</a>][<a href="thrd48.shtml#02381">Thread Index</a>]<br>
+[<A HREF="msg02380.shtml">Date Prev</A>][<A HREF="msg02382.shtml">Date Next</A>][<A HREF="msg02380.shtml">Thread Prev</A>][<A HREF="msg02388.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: new flag? wml -U</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 15:45:16 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Aug 27, 2001 at 02:36:30PM +0200, Jan Holler wrote:
+&gt; Hi Denis
+&gt; 
+&gt; On 27-Aug-01 Denis Barbier wrote:
+&gt; &gt; On Thu, Aug 16, 2001 at 04:18:44PM +0200, Jan Holler wrote:
+&gt; &gt;&gt; 
+&gt; &gt;&gt; I suggest to implement a flag -U to undefine previously with
+&gt; &gt;&gt; -D defined variables.
+&gt; 
+&gt; &gt;&gt; &lt;if &lt;var-exists BAR&gt;
+&gt; &gt;&gt; &lt;set-var newbar=&lt;get-var bar&gt;&gt;           # or $(BAR) instead of &lt;get-var bar&gt;
+&gt; &gt;&gt; &lt;set-var newbar=$(WML_SRC_BASENAME)&gt;
+&gt; &gt;&gt; &gt;
+&gt; 
+&gt; &gt; problem is that wml has then to distinguish between
+&gt; &gt;   -D foo=bar -U foo
+&gt; &gt; and
+&gt; &gt;   -U foo -D foo=bar
+&gt; &gt; which is not trivial.
+&gt; 
+&gt; Regard the order: last flag wins over earlier flags from the 
+&gt; left to the right (.wmlc -&gt; top down). Would that still be 
+&gt; complicated to implement in the "command-line"-parsing?
+&gt; 
+&gt; &gt; IMO it is always possible to unset a variable by making it empty,
+&gt; &gt; and replace your test by &lt;if &lt;get-var BAR&gt; ...
+&gt; 
+&gt; Thanks. That would work around. But needs some
+&gt; extra effort (need to unset it in every file or make
+&gt; global changes in some include-file) and is IMHO not 
+&gt; that flexible as the described '-U'. (speaking of
+&gt; global and hierarchical settings).
+
+Agree, but there is indeed a problem, all flags are handled separatly.
+This is quite common, I do not know any command-line parser which takes
+care of flags' order, and the Perl module Getopt::Long do not derogate
+to this rule.
+So, we would have to parse command-line and .wmlrc twice, first time
+with Getopt::Long, then with a single regex checker to determine -D/-U
+order.  I would prefer avoiding this solution.
+
+Maybe we could adopt a convention, say -Dfoo=_undef to ask wml to
+undefine this value (and also delete all previous declarations) before
+passing it to every pass, a patch is attached, you may apply it against
+wml_frontend/wml.src or your wml script.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: wml.src
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_frontend/wml.src,v
+retrieving revision 1.74
+diff -u -u -r1.74 wml.src
+--- wml.src	2001/08/26 00:43:41	1.74
++++ wml.src	2001/08/27 13:28:42
+@@ -543,6 +543,17 @@
+     push(@opt_o,$opts);
+ }
+ 
++#   7. Undefine variables when requested
++%new_opt_D = ();
++foreach $d (@opt_D) {
++    ($var, $val) = ($d =~ m|^(.+?)=(.*)$|);
++    if ($val eq '_undef') {
++        delete $new_opt_D{$var};
++    } else {
++        $new_opt_D{$var} = $val;
++    }
++}
++@opt_D = map { $_."=".$new_opt_D{$_} } keys %new_opt_D;
+ 
+ #   fix the verbose level
+ if ($opt_v == 0) {
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02388" HREF="msg02388.shtml">Re: new flag? wml -U</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02375" HREF="msg02375.shtml">Re: new flag? wml -U</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02380" HREF="msg02380.shtml">Re: new flag? wml -U</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02380.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02382.shtml">Questions about navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02380.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02388.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02381"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02381"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

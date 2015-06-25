@@ -1,0 +1,89 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem after switching to 2.0.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 23 Jun 2000 01:03:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20000623010513.B31710@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 002501bfdc9b$a57f7ae0$d90bfea9@pc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01732">Date Index</a>][<a href="thrd36.shtml#01732">Thread Index</a>]<br>
+[<A HREF="msg01731.shtml">Date Prev</A>][<A HREF="msg01733.shtml">Date Next</A>][<A HREF="msg01731.shtml">Thread Prev</A>][<A HREF="msg01734.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem after switching to 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jun 2000 01:05:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 22, 2000 at 07:44:07PM -0300, Santiago Erquicia wrote:
+
+&gt; How did you get it work with perl 5.6.0??  I've switch to Mandrake 7.1 and
+&gt; that is the version of perl and I didn't know how to use it.
+
+As with most Perl applications, you have to recompile it when changing
+Perl version. I just checked it works fine with perl 5.6.0
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01731" HREF="msg01731.shtml">RE: Problem after switching to 2.0.1</A></strong>, <em>From:</em> Santiago Erquicia</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01731.shtml">RE: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01731.shtml">RE: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01734.shtml">RE: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01732"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01732"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

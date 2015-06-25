@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Multiple outputs, one input -->
+<!--X-From-R13: Buvyvc [nx <cznxNnnnavzr.arg> -->
+<!--X-Date: Sat, 23 Dec 2000 06:45:01 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0012230028550.1824&#45;100000@sg2.dedicatedco&#45;host.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02092">Date Index</a>][<a href="thrd42.shtml#02092">Thread Index</a>]<br>
+[<A HREF="msg02091.shtml">Date Prev</A>][<A HREF="msg02093.shtml">Date Next</A>][<A HREF="msg02090.shtml">Thread Prev</A>][<A HREF="msg02093.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Multiple outputs, one input</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Philip Mak &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 23 Dec 2000 00:47:56 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I am the programmer for www.animewallpapers.com. We currently run
+Apache::ASP (based on modperl) to generate all the pages of the site. This
+is inefficient; our content is static but we are dynamically generating it
+for each and every request. As our website gets more popular, our machine
+is running out of resources.
+
+So, I am doing a feasibility study of whether WML would work for my site.
+I have read over the documentation, but I am not completely clear on how
+to generate multiple output pages from just one page in a scalable
+fashion (not just to have an English version and a German version).
+
+Here is an example of what I need to do:
+
+<A  HREF="http://www.animewallpapers.com/wallpapers/evangelion.htm">http://www.animewallpapers.com/wallpapers/evangelion.htm</A>
+
+The page is titled "Neon Genesis Evangelion Wallpapers (page 1 of 5)"; it
+actually has 5 sections, each of which displays 6 thumbnail images. When
+someone clicks on a thumbnail, they get an HTML page that includes the
+full-sized image embedded in it, e.g.
+<A  HREF="http://www.animewallpapers.com/wallpapers/wallpaper.asp?series=evangelion&amp;page=1&amp;num=03">http://www.animewallpapers.com/wallpapers/wallpaper.asp?series=evangelion&amp;page=1&amp;num=03</A>
+
+So I have 5 pages of thumbnails, and 30 pages containing the full-sized
+images.
+
+Right now in my Apache::ASP code, all of this is generated from the
+following single data structure:
+
+$papers{'evangelion'} = {
+  NAME =&gt; 'Neon Genesis Evangelion',
+  DIR =&gt; 'Evangelion',
+  SEARCH =&gt; q|Genesis Evangelion|,
+  IMAGES =&gt; [
+['Sarcastic59', 1],
+['Sarcastic59', 2],
+...
+['Sarcastic59', 30]
+]
+};
+
+My question is, can I do something similar in WML? Obviously I do not want
+to have to create 35 pages when it should all be doable with 1.
+
+I'm guessing this has something to do with parsing phase #3 (perl) and #9
+(code splitting) where phase #3 will generate stuff that phase #9 parses,
+but I'm not completely clear on how to do this. Could somebody tell me
+more about this?
+
+I would want to be able to use evangelion.wml to generate:
+index.html (thumbnail pages)
+index-2.html
+index-3.html
+index-4.html
+index-5.html
+image-1.html (full-sized image pages)
+image-2.html
+...
+image-30.html
+
+Thanks,
+
+-Philip Mak (pmak@aaanime.net)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02093" HREF="msg02093.shtml">Re: Multiple outputs, one input</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+<li><strong><A NAME="02094" HREF="msg02094.shtml">Re: Multiple outputs, one input</A></strong>, <em>From:</em> Albert REINER</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02091.shtml">Re: Suggestions for wml::std::logo</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02093.shtml">Re: Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02090.shtml">Re: Another bug?  [wml 2.0.6]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02093.shtml">Re: Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02092"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02092"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

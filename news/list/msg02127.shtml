@@ -1,0 +1,245 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Javascript missing -->
+<!--X-From-R13: [vpunry Yerff <xerffNuny.fnne.qr> -->
+<!--X-Date: Wed, 7 Feb 2001 01:04:12 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0102070044520.19823&#45;100000@hal.saar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02127">Date Index</a>][<a href="thrd43.shtml#02127">Thread Index</a>]<br>
+[<A HREF="msg02126.shtml">Date Prev</A>][<A HREF="msg02128.shtml">Date Next</A>][<A HREF="msg02126.shtml">Thread Prev</A>][<A HREF="msg02128.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Javascript missing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Kress &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 7 Feb 2001 01:03:26 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I've got a problem after migrating from 1.7.0 to 2.0.6 (I know, I slept
+for a long time! ;-) and yes, I had the define-container-to-define-tag -
+related-with-endtag-required-problem ;-) ):
+I use 2.0.6 under RH 7.0, i.e. perl 5.6.0.
+The problem ist, that the Javascript functions for navbars won't be
+generated, while using sub navbars.
+I'm just getting errors like:
+------------------------------------------------------------------------------------------
+JavaScript Error:
+file:/var/local/offshore/aktuelle_Projekte/mohme/version_0_3/nodistr/wml/service-al.html,
+line 93:
+nb_imgOver is not defined. 
+... (lots of)
+------------------------------------------------------------------------------------------
+
+Whereas this code would be generated correctly:
+------------------------------------------------------------------------------------------
+&lt;!-- Hiding the code
+if (document.images) {
+    nb_img1_artshop_s = new Image();
+    nb_img1_artshop_s.src = 'img/button-artshop-p.gif';
+    nb_img1_artshop_o = new Image();
+    nb_img1_artshop_o.src = 'img/button-artshop-p.gif';
+...
+------------------------------------------------------------------------------------------
+
+Has anybody got any clue for that behaviour ? What can I do ?
+
+Thanks for any helpful comment!
+
+cu - Michael
+
+Here's the code:
+# ========================== Navbar Begin ======================================
+##
+##  The main Navigation Bar [left, vertically]
+##
+
+#   define the navigation bar through a grammar
+&lt;navbar:define name=navbar imgstar=":-p:-p"
+               imgbase="$(IMG)" urlbase="$(ROOT)"&gt;
+  &lt;navbar:header&gt;
+  &lt;/navbar:header&gt;
+  #   button prolog
+  &lt;navbar:prolog&gt;
+    &lt;tr&gt;&lt;td&gt;\
+  &lt;/navbar:prolog&gt;
+  #   the buttons itself
+  &lt;navbar:button id=artshop    url=artshop-ash.html
+txt="Artshop"         img=button-artshop*.gif&gt;
+  &lt;navbar:button id=news       url=news.html
+txt="News"            img=button-news*.gif&gt;
+  &lt;navbar:button id=service    url=service-al.html
+txt="Service"         img=button-service*.gif&gt;
+  &lt;navbar:button id=galerie    url=galerie-w-001.html
+txt="Galerie"         img=button-galerie*.gif&gt;
+  &lt;navbar:button id=gaestebuch url=gaestebuch.html
+txt="G&amp;auml;stebuch"  img=button-gaestebuch*.gif&gt;
+  &lt;navbar:button id=presse     url=presse_mappe_uebersicht.html
+txt="Pressemappe"     img=button-presse*.gif&gt;
+  &lt;navbar:button id=email      url=email.html                   txt="Email
+schicken"  img=button-email*.gif&gt;
+  #   button epilog
+  &lt;navbar:epilog&gt;\
+    &lt;/td&gt;&lt;/tr&gt;\
+  &lt;/navbar:epilog&gt;
+  &lt;navbar:footer&gt;
+  &lt;/navbar:footer&gt;
+&lt;/navbar:define&gt;
+
+..PAGE_NAVBAR&gt;&gt;\
+  &lt;navbar:jsfuncs&gt;
+  &lt;table cellspacing=0 cellpadding=0 border=0&gt;\
+    &lt;navbar:render name=navbar select=$(area) $(page:+subselected)&gt;
+  &lt;/table&gt;
+&lt;&lt;..
+# ========================== Navbar End ========================================
+# ========================== Navbar Begin ======================================
+##
+##  The Sub Navigation Bar (SNB) [top, horizontally]
+##
+
+#   define the &lt;snb&gt;...&lt;/snb&gt; tag
+&lt;define-tag snb endtag=required&gt;
+  #   1. define the navigation bar through a grammar
+  &lt;navbar:define name=snb urlbase="$(ROOT)" imgbase="$(IMG)"
+                 imgstar=":-p:-p"&gt;
+    #   bar header
+    &lt;navbar:header&gt;\
+      &lt;table cellspacing=0 cellpadding=0 border=0&gt;&lt;tr&gt;\
+    &lt;/navbar:header&gt;
+
+    #   button prolog
+    &lt;navbar:prolog&gt;\
+          &lt;td align=center&gt;[&amp;nbsp; \
+    &lt;/navbar:prolog&gt;
+
+    #   ...here the &lt;snb_button&gt; tags will occur...
+    %body
+
+    #   button epilog
+    &lt;navbar:epilog&gt;\
+          &amp;nbsp;]&amp;nbsp;&amp;nbsp;&lt;/td&gt; \
+    &lt;/navbar:epilog&gt;
+
+    # last button epilog of a line
+    &lt;navbar:epilog pos=10&gt;\
+          &amp;nbsp;]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;\
+    &lt;/navbar:epilog&gt;
+
+    # last button epilog of a line
+    &lt;navbar:epilog pos=20&gt;\
+          &amp;nbsp;]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;\
+    &lt;/navbar:epilog&gt;
+
+    # last button epilog of a line
+    &lt;navbar:epilog pos=30&gt;\
+          &amp;nbsp;]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;\
+    &lt;/navbar:epilog&gt;
+
+    # last button epilog
+    &lt;navbar:epilog pos=last&gt;\
+          &amp;nbsp;]&lt;/td&gt;\
+    &lt;/navbar:epilog&gt;
+    #   bar footer
+    &lt;navbar:footer&gt;\
+      &lt;/tr&gt;&lt;/table&gt;&lt;/font&gt;
+    &lt;/navbar:footer&gt;
+  &lt;/navbar:define&gt;
+
+  ..PAGE_SUBNAVBAR&gt;&gt;\
+  &lt;navbar:render name=snb select="$(page)"&gt;\
+  &lt;&lt;..
+&lt;/define-tag&gt;
+
+&lt;define-tag snb_button&gt;
+  &lt;navbar:button %attributes&gt;
+&lt;/define-tag&gt;
+
+..PAGE_SUBNAVBAR!&gt;&gt;
+&amp;nbsp;
+&lt;&lt;..
+
+$(page:*# )$(page:+#include ")$(SNB_RC:-.wmlsnb)$(page:+")
+# ========================== Navbar End  ========================================
+
+The submenu files contain all the same like ....
+e.g. artshop.wmlsnb:
+====================
+&lt;snb&gt;
+  &lt;snb_button id=ash url="artshop-ash.html" txt="Art Shop"         &gt;
+  &lt;snb_button id=pk  url="artshop-pk.html" txt="Postkarten"        &gt;
+  &lt;snb_button id=gk  url="artshop-gk.html" txt="Gru&amp;szlig;karten"  &gt;
+  &lt;snb_button id=kd  url="artshop-kd.html" txt="Kunstdrucke"       &gt;
+  &lt;snb_button id=kl  url="artshop-kl.html" txt="Kalender"          &gt;
+&lt;/snb&gt;
+
+
+
+
+-- 
+Michael Kress / kress@hal.saar.de / coroner@irc
+<A  HREF="http://www.michael-kress.de">http://www.michael-kress.de</A>
+To increase system performance press CTRL+D now.
+P E N G U I N S   A R E   C O O L.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02128" HREF="msg02128.shtml">Re: Javascript missing</A></strong>, <em>From:</em> Jean-Michel Sauvage</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02126.shtml">Re: &lt;define-tag in combination with &lt;navbar:define</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02128.shtml">Re: Javascript missing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02126.shtml">Re: &lt;define-tag in combination with &lt;navbar:define</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02128.shtml">Re: Javascript missing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02127"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02127"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

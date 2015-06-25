@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: bug in href or toc? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 11 Feb 2002 18:02:26 +0100 (MET) -->
+<!--X-Message-Id: 20020211181204.A16345@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C66F1DB.7050CB49@web.de -->
+<!--X-Reference: 20020211121000.GA2156@tomk32.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02505">Date Index</a>][<a href="thrd51.shtml#02505">Thread Index</a>]<br>
+[<A HREF="msg02504.shtml">Date Prev</A>][<A HREF="msg02506.shtml">Date Next</A>][<A HREF="msg02504.shtml">Thread Prev</A>][<A HREF="msg02507.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: bug in href or toc?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 11 Feb 2002 18:12:04 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Feb 11, 2002 at 01:10:00PM +0100, Thomas R. Koll wrote:
+&gt; On Sun, Feb 10, 2002 at 11:19:07PM +0100, Werner Heuser wrote:
+&gt; &gt; Hi,
+&gt; &gt; 
+&gt; &gt; this line in WML
+&gt; &gt; 
+&gt; &gt; &lt;h3&gt;&lt;href url="<A  HREF="http://www.fujitsu-siemens.de">http://www.fujitsu-siemens.de</A>" name="Fujitsu"&gt;: Lifebook
+&gt; &gt; Biblo B-2130&lt;/h3&gt;
+&gt; &gt; 
+&gt; &gt; results in this HTML code
+&gt; &gt; 
+&gt; &gt; &lt;h3&gt;&lt;a name="ToC4"&gt;&lt;a href="<A  HREF="http://www.fujitsu-siemens.de">http://www.fujitsu-siemens.de</A>"&gt;Fujitsu&lt;/a&gt;:
+&gt; &gt; Lifebook Biblo B-2130&lt;/a&gt;&lt;/h3&gt;
+&gt; &gt; 
+&gt; &gt; As you see there is one &lt;/a&gt; to much. I probably shouldn't use links in
+&gt; &gt; headers,
+&gt; &gt; and have removed these construct. But just to let you know.
+&gt; 
+&gt; No it ain't a bug.
+&gt; you obviously use wml::std::toc which creates a TableOfContent and adds
+&gt; a &lt;a name..&gt; to all &lt;hX&gt;
+&gt; 
+&gt; IMHO wlm::std::toc is missing some features like excluding a &lt;hX&gt; from the
+&gt; TOC (even though &lt;protect&gt; might do it) and an additional &lt;nobr&gt; style
+&gt; (see my patch from last year).
+
+Hmm, are you telling me I forgot something ;)
+Will look at it again.
+
+&gt; So try &lt;protect&gt; if you really want no TOC
+
+IMO output should be
+
+ &lt;h3&gt;&lt;a name="ToC4"&gt;&lt;/a&gt;&lt;a href="<A  HREF="http://www.fujitsu-siemens.de">http://www.fujitsu-siemens.de</A>"&gt;Fujitsu&lt;/a&gt;:
+ Lifebook Biblo B-2130&lt;/h3&gt;
+
+IIRC this construct (i.e. an empty &lt;a&gt; tag) was avoided because older
+Netscape did not recognize them as anchors.
+Maybe it is time to leave such workarounds behind and deal with decent
+browsers.  Comments?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02507" HREF="msg02507.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Thomas R. Koll</li>
+<li><strong><A NAME="02515" HREF="msg02515.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02502" HREF="msg02502.shtml">bug in href or toc?</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02504" HREF="msg02504.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02504.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02506.shtml">toc etc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02504.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02507.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02505"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02505"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

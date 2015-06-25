@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: conflict between passes -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Fri, 30 Jan 1998 13:05:59 +0100 (MET) -->
+<!--X-Message-Id: 199801301205.NAA08592@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 34D15326.2DDE473C@eri.u&#45;tokyo.ac.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00071">Date Index</a>][<a href="thrd2.shtml#00071">Thread Index</a>]<br>
+[<A HREF="msg00070.shtml">Date Prev</A>][<A HREF="msg00072.shtml">Date Next</A>][<A HREF="msg00069.shtml">Thread Prev</A>][<A HREF="msg00072.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: conflict between passes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Fri, 30 Jan 1998 13:05:57 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Zhao Yue, in a previous mail you wrote:
+
+&gt; I am beginner of wml. I met such a problem: since
+&gt; pass 2 is processed first than pass 3, the following
+&gt; example can't reach its desired result:
+&gt; 
+&gt; &lt;define-tag mytag&gt;
+&gt; &lt;:{
+&gt;     printf "some words";
+&gt; }:&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;define-tag anothertag&gt;
+&gt; &lt;:{
+&gt;   printf "&lt;mytag&gt;";
+&gt; }:&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;anothertag&gt;
+&gt; 
+&gt; In fact, this will lead to a parsing error of perl.
+
+Correct, because ePerl currently doesn't support nested Perl blocks.  As you
+might expect this restriction is not because I just wanted ePerl to support
+it. It is because it is very difficult to do it in a really useful and
+backward-compatible manner. I'll start a discussion in a different posting
+because it bites us a lot of times and I really want to implement the
+nesting-support now. But we need to make sure we decided the correct approach
+which is 100% backward-compat, so existing scripts don't get broken.
+
+&gt; Any suggestion for recorvering this problem?
+
+Until we have an ePerl with nesting-support, you have to use a few tricks to
+avoid this problem. First, to let all understand the problem: What WML
+created after running pass 1 and 2 is basically the following:
+
+     &lt;:{ printf "&lt;:{ printf "some words"; }:&gt;"; }:&gt;
+
+i.e. a nested structure which is not supported by the current ePerl.  So, our
+goal is to avoid this structure while still having the same functionality and
+result. I currently know only one work-arounds which wml::des::navbar and
+other include files use:
+
+   | &lt;define-tag mytag&gt;
+   | &lt;:{ printf "some words"; }:&gt;
+   | &lt;/define-tag&gt;
+   | 
+   | &lt;define-tag anothertag&gt;
+   | &lt;:{ printf "&lt;&lt;div_mytag&gt;&gt;"; }:&gt;
+   | ..div_mytag&gt;&gt;&lt;mytag&gt;&lt;&lt;..
+   | &lt;/define-tag&gt;
+   | 
+   | &lt;anothertag&gt;
+
+Here Pass 5 (Divert) is used to avoid the conflict.  Sorry for this heavy
+restriction, but it cannot be eliminated easily.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00072" HREF="msg00072.shtml">Re: conflict between passes</A></strong>, <em>From:</em> Zhao Yue</li>
+<li><strong><A NAME="00073" HREF="msg00073.shtml">Re: conflict between passes</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00069" HREF="msg00069.shtml">conflict between passes</A></strong>, <em>From:</em> Zhao Yue</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00070.shtml">Re: Filtering with wml, security considerations?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00072.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00069.shtml">conflict between passes</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00072.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00071"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00071"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

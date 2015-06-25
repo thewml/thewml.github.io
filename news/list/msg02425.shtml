@@ -1,0 +1,171 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: img&#45;dimensions in navbars -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 5 Nov 2001 23:42:17 +0100 (MET) -->
+<!--X-Message-Id: 20011105235316.A2518@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20011105175620.T606&#45;100000@amber.wg.oertel.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02425">Date Index</a>][<a href="thrd49.shtml#02425">Thread Index</a>]<br>
+[<A HREF="msg02424.shtml">Date Prev</A>][<A HREF="msg02426.shtml">Date Next</A>][<A HREF="msg02424.shtml">Thread Prev</A>][<A HREF="msg02426.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: img-dimensions in navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 5 Nov 2001 23:53:16 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Nov 05, 2001 at 06:05:01PM +0100, Clemens Oertel wrote:
+&gt; hi,
+&gt; 
+&gt; to please poor ms ie users, i'd like to hardcode the sizes of my navbar's
+&gt; button images to speed up the site rendering. now i'm wondering: how do i do
+&gt; that with wml 2.0.8?
+&gt; 
+&gt; i tried adding
+&gt;   :img:width="123"     and
+&gt;   :img:height="321"
+&gt; for each of the navbar's images. however, none of the size specs appear in the
+&gt; generated html code (i've seen the :img:-option used only with navbar:render -
+&gt; doesn't it work with navbar:button?).
+&gt; 
+&gt; i know it's possible - ralf's site about wml seems to have it (but i couldn't
+&gt; find the source files for the navigation bars).
+&gt; 
+&gt; by the way, the image's width varies for each button.
+
+Image dimensions are automatically added during pass 7, so if they are
+not, there is something you forgot to mention.
+
+About wml::des::navbar, your try looks fine and I must admit that I
+forgot to implement all the necessary stuff, this patch should fix it.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: navbar.src
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_include/des/navbar.src,v
+retrieving revision 1.43
+diff -u -u -r1.43 navbar.src
+--- navbar.src	2001/10/28 23:53:53	1.43
++++ navbar.src	2001/11/05 22:22:52
+@@ -419,11 +419,14 @@
+         my $target = ($B-&gt;{TARGET} eq '' ? $CFG-&gt;{TARGET} : $B-&gt;{TARGET});
+         my $hint   = $B-&gt;{HINT};
+         my $menu   = $B-&gt;{MENU};
+-        my %extra_attr = %{$B-&gt;{TAG_ATTR}};
+ 
+         my $idselect = ($select eq $id or ($select eq $alias and $alias ne '') ? 1 : 0);
+         my $buttontype = 'N';
+         $buttontype = ($subselected ? 'SS' : 'S') if $idselect;
++        my %extra_attr = (
++                a       =&gt; (${$B-&gt;{TAG_ATTR}}{'a'.$buttontype} || $tag_attr{'a'.$buttontype}),
++                img     =&gt; (${$B-&gt;{TAG_ATTR}}{'img'.$buttontype} || $tag_attr{'img'.$buttontype}),
++        );
+ 
+         #
+         #   PROLOG
+@@ -507,7 +510,7 @@
+                           qq# onfocus="self.status = '$hint'; return true"# .
+                           qq# onblur="self.status = ''; return true"#;
+                 }
+-                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$tag_attr{'a'.$buttontype}.$extra_attr{'a'.$buttontype}.'&gt;'.$txt.'&lt;*/a&gt;';
++                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$extra_attr{'a'}.'&gt;'.$txt.'&lt;*/a&gt;';
+             }
+         }
+         else {
+@@ -517,7 +520,7 @@
+             $hint = $txt if ($hint eq '');
+             $hint = '' if $nohints;
+             if (($idselect and not $subselected) or $url eq '') {
+-                $O .= '&lt;img src="'.$img[1].'" alt="'.$alt.'"'.$tag_attr{'img'.$buttontype}.' /&gt;';
++                $O .= '&lt;img src="'.$img[1].'" alt="'.$alt.'"'.$extra_attr{'img'}.' /&gt;';
+             }
+             elsif ($idselect and $subselected) {
+                 $js = '';
+@@ -534,8 +537,8 @@
+                           qq# onfocus="self.status = '$hint'; return true"# .
+                           qq# onblur="self.status = ''; return true"#;
+                 }
+-                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$tag_attr{'a'.$buttontype}.'&gt;' .
+-                      '&lt;img name="'.$nb.'_'.$id.'" src="'.$img[1].'" alt="'.$alt.'" border=0'.$tag_attr{'img'.$buttontype}.' /&gt;' .
++                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$extra_attr{'a'}.'&gt;' .
++                      '&lt;img name="'.$nb.'_'.$id.'" src="'.$img[1].'" alt="'.$alt.'" border=0'.$extra_attr{'img'}.' /&gt;' .
+                       '&lt;*/a&gt;';
+             }
+             else { # not selected 
+@@ -553,8 +556,8 @@
+                           qq# onfocus="self.status = '$hint'; return true"# .
+                           qq# onblur="self.status = ''; return true"#;
+                 }
+-                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$tag_attr{'a'.$buttontype}.'&gt;' .
+-                      '&lt;img name="'.$nb.'_'.$id.'" src="'.$img[0].'" alt="'.$alt.'" border=0'.$tag_attr{'img'.$buttontype}.' /&gt;' .
++                $O .= '&lt;*a href="'.$url.'"'.$target.$js.$extra_attr{'a'}.'&gt;' .
++                      '&lt;img name="'.$nb.'_'.$id.'" src="'.$img[0].'" alt="'.$alt.'" border=0'.$extra_attr{'img'}.' /&gt;' .
+                       '&lt;*/a&gt;';
+             }
+         }
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02426" HREF="msg02426.shtml">Re: img-dimensions in navbars</A></strong>, <em>From:</em> Clemens Oertel</li>
+<li><strong><A NAME="02427" HREF="msg02427.shtml">Re: img-dimensions in navbars</A></strong>, <em>From:</em> Clemens Oertel</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02424" HREF="msg02424.shtml">img-dimensions in navbars</A></strong>, <em>From:</em> Clemens Oertel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02424.shtml">img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02426.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02424.shtml">img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02426.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02425"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02425"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

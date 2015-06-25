@@ -1,0 +1,188 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Tue, 2 Nov 1999 08:17:48 +0100 (MET) -->
+<!--X-Message-Id: 199911012205.RAA00474@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01109">Date Index</a>][<a href="thrd22.shtml#01109">Thread Index</a>]<br>
+[<A HREF="msg01108.shtml">Date Prev</A>][<A HREF="msg01110.shtml">Date Next</A>][<A HREF="msg01090.shtml">Thread Prev</A>][<A HREF="msg01112.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Nov 1999 17:05:06 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Thomas Akin
+Reply-To: takin@kennesaw.edu
+
+PROBLEM DESCRIPTION:
+
+The std::toc include file uses pass 6 area substitutions internally 
+which break when you use a &lt;protect pass=6&gt; around the &lt;toc&gt; tag...
+
+For Example...
+
+The code
+
+	#include wml::std::toc style=ol
+
+	&lt;protect pass=6&gt;
+	&lt;toc&gt;
+	&lt;/protect&gt;
+	&lt;toc_h1&gt;Chapter 1&lt;/toc_h1&gt;
+	&lt;toc_h1&gt;Chapter 2&lt;/toc_h1&gt;
+	&lt;toc_h1&gt;Chapter 3&lt;/toc_h1&gt;
+
+has this as the output:
+
+	{:[[s|&lt;/ol&gt;\n*&lt;ol*[^&gt;]*&gt;||g]][[s|&lt;/ol&gt;\n*&lt;ol*[^&gt;]*&gt;||g]][[s|&lt;/ol&gt;\n*&lt;ol*[^&gt;]*&gt;||g]][[s|&lt;/ol&gt;\n*&lt;ol*[^&gt;]*&gt;||g]][[s|&lt;/ol&gt;\n*&lt;ol*[^&gt;]*&gt;||g]][[s|&lt;/ol&gt;\n*&lt;ol*[^&gt;]*&gt;||g]]
+	&lt;ol&gt;&lt;li&gt;&lt;a href="#ToC1"&gt;&lt;strong&gt;Chapter 1&lt;/strong&gt;&lt;/a&gt;
+	&lt;/ol&gt;
+	&lt;ol&gt;&lt;li&gt;&lt;a href="#ToC2"&gt;&lt;strong&gt;Chapter 2&lt;/strong&gt;&lt;/a&gt;
+	&lt;/ol&gt;
+	&lt;ol&gt;&lt;li&gt;&lt;a href="#ToC3"&gt;&lt;strong&gt;Chapter 3&lt;/strong&gt;&lt;/a&gt;
+	&lt;/ol&gt;
+	:}
+	&lt;a name="ToC1"&gt;Chapter 1&lt;/a&gt;
+	&lt;a name="ToC2"&gt;Chapter 2&lt;/a&gt;
+	&lt;a name="ToC3"&gt;Chapter 3&lt;/a&gt;
+
+
+
+I believe that in 1.7.2 that the code
+
+	&lt;protect pass=6&gt;
+	&lt;toc&gt;
+	&lt;/protect&gt;
+
+worked correctly. 
+
+I looked briefly into this and it seems to be due to the 
+wml_include/std/toc.src file relying on pass 6 to perform some of its
+formatting... but for the next month I am going to overworked so I can't
+look into it further...
+
+
+Thanks,
+
+
+Thomas
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sun4u-sun-solaris2.7
+    Perl: 5.005_03 (/local/bin/perl)
+    User: takin@Aramis.kennesaw.edu
+    Date: 20-Oct-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=solaris, osvers=2.7, archname=sun4-solaris
+    uname='sunos aramis 5.7 generic_106541-02 sun4u sparc sunw,ultra-5_10 '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O', gccversion=2.8.1
+    cppflags='-I/usr/local/include'
+    ccflags ='-I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -ldl -lm -lc -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at Jul  6 1999 17:32:21
+  @INC:
+    /usr/local/lib/perl5/5.00503/sun4-solaris
+    /usr/local/lib/perl5/5.00503
+    /usr/local/lib/perl5/site_perl/5.005/sun4-solaris
+    /usr/local/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01112" HREF="msg01112.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01108.shtml">An idea...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01110.shtml">Re: An idea...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01090.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01112.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01109"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01109"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

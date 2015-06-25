@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Tue, 7 Sep 1999 08:35:25 +0200 (MET DST) -->
+<!--X-Message-Id: 19990907083528.A22649@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990906142529.A15640@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990906145123.24824A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00939">Date Index</a>][<a href="thrd19.shtml#00939">Thread Index</a>]<br>
+[<A HREF="msg00938.shtml">Date Prev</A>][<A HREF="msg00940.shtml">Date Next</A>][<A HREF="msg00935.shtml">Thread Prev</A>][<A HREF="msg00943.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Sep 1999 08:35:28 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 06 Sep 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; &gt; -S /usr/local/lib/wml/include/  -I /INCLUDES  -s 'sys/bootmhc.wml' -s
+&gt;                                      ^^^^^^^^^
+&gt; Now, we have to find why INCLUDES has been replaced by /INCLUDES.
+&gt; Any clue?
+
+ None at all! As I said - the same tgz-package works at home *scratches*
+
+&gt; Try ``cat -v .wmlrc'' to see whether there are control characters in
+&gt; your file.
+
+ None at all.... I include it here again, just read it in with no
+further changes:
+--------
+-IINCLUDES
+--------
+
+&gt; Another hint: when redirecting output, it is a good idea to call wml
+&gt; with the -q option to suppress printing of '-\|/-\|/-'
+
+ O.k., thanks for that :)
+
+ I am also using just a tgz'ed copy of the files I have at home and did
+put them on the server.....
+
+ I think this is a very special problem - well, I think I'll do an alias
+for that for a first workaround and wait for the next version; maybe
+it's just a collection of strange situations that produces this "error".
+I don't really think that it's a bug in wml, I thought that maybe one of
+you knows what might be going on here....  Thanks alot anyway, Denis,
+for not giving in, just like me at the moment.... *sighs*
+
+ So long!
+Alfie
+-- 
+If God didn't mean for us to juggle, tennis balls wouldn't come three
+to a can.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00943" HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00946" HREF="msg00946.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00934" HREF="msg00934.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00935" HREF="msg00935.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00938.shtml">How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00940.shtml">Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00935.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00939"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00939"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

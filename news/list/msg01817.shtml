@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Question about nested navbars -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Mon, 17 Jul 2000 11:14:50 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007171117040.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01817">Date Index</a>][<a href="thrd37.shtml#01817">Thread Index</a>]<br>
+[<A HREF="msg01816.shtml">Date Prev</A>][<A HREF="msg01818.shtml">Date Next</A>][<A HREF="msg01814.shtml">Thread Prev</A>][<A HREF="msg01818.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Question about nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 11:22:34 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi everybody,
+
+I'm trying for the first time to use some nested navbars, but I seem
+to have a problem with the resulting layout in the html file. In
+short, it seems like the submenu is inserted before the
+&lt;navbar:epilog&gt; of the main menu entry (after which the submenu appears)
+is processed. I'm not sure whether this is supposed to be this way, or
+can be changed, currently I'm just not sure how to fix it. 
+
+The effect can be seen at <A  HREF="http://www.aspetersen.de/services_d.html">http://www.aspetersen.de/services_d.html</A>
+
+As you can see, the vertical menu structure is interrupted. This is
+caused by a misplaced &lt;navbar:epilog&gt; entry, which in my case is just
+"&lt;/td&gt;&lt;/tr&gt;". This can be fixed easily manually, as I did for the
+English version of the same page:
+<A  HREF="http://www.aspetersen.de/services_e.html">http://www.aspetersen.de/services_e.html</A>
+(All I did was move the "&lt;/td&gt;&lt;/tr&gt;" to the right position)
+
+I attached the relevant section from my navbar include file (the code
+for the two German menus,main_deu and serv_deu) below. How do I change the
+menu structure so that wml creates the correct html code?
+
+If anybody can suggest what to do, I'd be grateful.
+
+All the best,
+Stephan
+
+#
+# Main menu
+#
+ &lt;navbar:define name=main_deu
+        imgstar=up:down:over
+        imgbase="./img" urlbase="&lt;get-var BASE_DIR&gt;"
+        txtcol_normal="#000000" txtcol_select="#ffffff"&gt;
+  &lt;navbar:header&gt;
+    &lt;table border="0" cellpadding="0" cellspacing="0"&gt;
+  &lt;/navbar:header&gt;
+
+  &lt;navbar:prolog&gt;         &lt;tr valign=top align=left&gt;&lt;td&gt; &lt;/navbar:prolog&gt;
+
+  &lt;navbar:button id=german img=eng_*.gif txt="This page in English"
+  url="&lt;get-var WML_SRC_BASENAME&gt;_e.html" hint="This page in English"&gt;
+
+  &lt;navbar:button id=home img=start_*.gif txt="Start" url="home_d.html" hint="Startseite"&gt;
+
+#
+# the submenu gets inserted after the following entry, but before the 
+# &lt;navbar:epilog&gt; is processed.
+#
+  &lt;navbar:button id=services img=dienstl_*.gif txt="Dienstleistungen" url="services_d.html" hint="Dienstleistungen" menu="serv_deu"&gt;
+  &lt;navbar:button id=about img=ueber_*.gif txt="Über uns"
+  url="about_d.html" hint="Über uns"&gt;
+
+  &lt;navbar:epilog&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/navbar:epilog&gt;
+
+  &lt;navbar:footer&gt;
+   &lt;tr&gt;
+	&lt;td&gt;&lt;img src="img/left_bottom.gif" alt=""&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/navbar:footer&gt;
+&lt;/navbar:define&gt;
+
+#
+# Submenu
+#
+ &lt;navbar:define name=serv_deu
+        imgstar=up:down:over       
+        imgbase="./img" urlbase="&lt;get-var BASE_DIR&gt;"
+        txtcol_normal="#000000" txtcol_select="#ffffff"&gt;
+  &lt;navbar:header&gt;
+#
+  &lt;/navbar:header&gt;
+
+  &lt;navbar:prolog&gt; &lt;tr valign=top align=left&gt;&lt;td&gt; &lt;/navbar:prolog&gt;
+  &lt;navbar:button id=sem img=sem_d_*.gif txt="Seminare" 
+  url="sem_d.html" hint="Seminare"&gt;
+  &lt;navbar:button id=work img=work_d_*.gif txt="Workshops" 
+  url="work_d.html" hint="Workshops"&gt;
+  &lt;navbar:button id=cons img=cons_d_*.gif txt="Beratung" 
+  url="cons_d.html" hint="Beratung"&gt;
+
+  &lt;navbar:epilog&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/navbar:epilog&gt;
+&lt;/navbar:define&gt;
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01818" HREF="msg01818.shtml">Re: Question about nested navbars</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01816.shtml">Re: Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01818.shtml">Re: Question about nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01814.shtml">Re: Creating a new tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01818.shtml">Re: Question about nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01817"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01817"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

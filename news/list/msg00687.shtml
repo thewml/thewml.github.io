@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: moving from m4 -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Tue, 25 May 1999 13:10:59 +0200 (MET DST) -->
+<!--X-Message-Id: 19990524202629.A2463@meu.debian -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00687">Date Index</a>][<a href="thrd15.shtml#00687">Thread Index</a>]<br>
+[<A HREF="msg00686.shtml">Date Prev</A>][<A HREF="msg00688.shtml">Date Next</A>][<A HREF="msg00685.shtml">Thread Prev</A>][<A HREF="msg00688.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>moving from m4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 24 May 1999 20:26:29 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Before trying `WML' I was using `m4' for my web pages. `m4' is
+usefull,  but it becomes very frustrating. Anyway, I had already
+written plenty of complex macros (recursive and looping), and I
+wanted to still use them.
+
+Under `WML', `m4'  works with quotes disabled. I can only agree with
+that choice (that was one of the reasons I gave up `m4'). The problem
+is I have plenty of commas (,) inside my macros, so I have to quote
+them.
+
+I thought about a `&lt;m4&gt;' tag to surround my macros, but somebody has
+already included it before me. (Probably because that was a good
+idea).
+
+I just make it more handy:
+
+--------------------------
+&lt;define-container m4&gt;
+m4_quotes
+{: [[s/&amp;lquot;/`/]] [[s/&amp;rquot;/'/]]
+%body 
+:}
+m4_noquotes
+&lt;/define-container&gt;
+-------------------------
+
+I added two entities for (`) and (') if I want to include them in a
+macro. There already exist: &amp;#96; and &amp;acute; but with such a name
+nobody will ever remember them.
+
+Anyway, I think it should be easier try to migrate my macros to
+Meta-HTML. 
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+05/24	Bob Dylan (Robert Zimmerman) is born in Duluth, 1941
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00688" HREF="msg00688.shtml">Re: moving from m4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00686.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00688.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00685.shtml">Re: Question: nested tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00688.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00687"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00687"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

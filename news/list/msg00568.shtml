@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUGREPORT: Umlaute in gfont -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Mon, 12 Apr 1999 15:35:04 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990412151910.730E&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990412103121.1446A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00568">Date Index</a>][<a href="thrd13.shtml#00568">Thread Index</a>]<br>
+[<A HREF="msg00567.shtml">Date Prev</A>][<A HREF="msg00569.shtml">Date Next</A>][<A HREF="msg00565.shtml">Thread Prev</A>][<A HREF="msg00569.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUGREPORT: Umlaute in gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Apr 1999 15:34:10 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis!
+
+I patched the files, compiled and installed it.
+
+&gt;You will need the T1 encoded fonts (known as EC fonts).
+&gt;Either replace in the Fontmap file the CM fonts by the EC ones
+&gt;CMRoman-T       mf:cmr8-0.0           ---&gt; mf:ecrm0800-0.0
+&gt;CMRoman-F       mf:cmr10-0.0          ---&gt; mf:ecrm1000-0.0
+&gt;usw, or specify the EC fonts on the command-line
+
+I edited as You described my Fontmap file.
+
+But the results I get look like using LaTeX without german.sty. All
+Umlaute are missing.
+
+What can I do?
+juh
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00565" HREF="msg00565.shtml">Re: BUGREPORT: Umlaute in gfont</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00567.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00569.shtml">newbie: skeletons for slides?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00565.shtml">Re: BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00569.shtml">newbie: skeletons for slides?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00568"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00568"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

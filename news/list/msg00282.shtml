@@ -1,0 +1,375 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [patch] gfont and 8&#45;bit characters -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 29 Dec 1998 14:42:14 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981229142135.7075A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00282">Date Index</a>][<a href="thrd7.shtml#00282">Thread Index</a>]<br>
+[<A HREF="msg00281.shtml">Date Prev</A>][<A HREF="msg00283.shtml">Date Next</A>][<A HREF="msg00280.shtml">Thread Prev</A>][<A HREF="msg00283.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[patch] gfont and 8-bit characters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 29 Dec 1998 14:29:41 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Ralf and others
+
+here is a patch i applied to allow eight-bit characters in strings.
+It works fine with EC and PS fonts, and remove those characters when
+used in conjunction with CM fonts.
+
+Regards
+Denis
+
+--- gfont-1.0.2/gfont_gd.c	Fri Sep  5 20:32:51 1997
++++ gfont-1.0.2/gfont_gd.c	Tue Dec 29 14:05:02 1998
+@@ -549,7 +549,7 @@
+         ((x &lt; 0) || (x &gt;= im-&gt;sx))));
+ }
+ 
+-void gdImageChar(gdImagePtr im, gdFontPtr f, int x, int y, int c, int color)
++void gdImageChar(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char c, int color)
+ {
+     int cx, cy;
+     int px, py;
+@@ -572,7 +572,7 @@
+     }
+ }
+ 
+-void gdImageCharUp(gdImagePtr im, gdFontPtr f, int x, int y, char c, int color)
++void gdImageCharUp(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char c, int color)
+ {
+     int cx, cy;
+     int px, py;
+@@ -596,7 +596,7 @@
+ }
+ 
+ #if 0
+-void gdImageString(gdImagePtr im, gdFontPtr f, int x, int y, char *s, int color)
++void gdImageString(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char *s, int color)
+ {
+     int i;
+     int l;
+@@ -609,7 +609,7 @@
+ #endif
+ 
+ #if 0
+-void gdImageStringUp(gdImagePtr im, gdFontPtr f, int x, int y, char *s, int color)
++void gdImageStringUp(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char *s, int color)
+ {
+     int i;
+     int l;
+@@ -2931,42 +2931,7 @@
+         /* non proportional font */
+         for (i=0; (i&lt;l); i++) 
+             {
+-            if(s[i] == 0xdf)            /* scharfes 's'     */
+-                gdImageChar(im, f, x, y, 0x19, color);    
+-            else if(s[i] == 0xe4)       /* Umlaut 'a'       */
+-                { 
+-                gdImageChar(im, f, x, y, 0x61, color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                }
+-            else if(s[i] == 0xc4)       /* Umlaut 'A'       */
+-                { 
+-                gdImageChar(im, f, x, y, 0x41, color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                }
+-            else if(s[i] == 0xf6)       /* Umlaut 'o'       */
+-                { 
+-                gdImageChar(im, f, x, y, 0x6f, color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                }
+-            else if(s[i] == 0xd6)       /* Umlaut 'O'       */
+-                { 
+-                gdImageChar(im, f, x, y, 0x4f, color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                }
+-            else if(s[i] == 0xfc)       /* Umlaut 'u'       */
+-                { 
+-                gdImageChar(im, f, x, y, 0x75, color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                }
+-            else if(s[i] == 0xdc)       /* Umlaut 'U'       */
+-                { 
+-                gdImageChar(im, f, x, y, 0x55, color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                }
+-            else                        /* normales Zeichen */
+-                {
+-                gdImageChar(im, f, x, y, s[i], color);
+-                }
++            gdImageChar(im, f, x, y, s[i], color);
+             x += f-&gt;w;
+             }
+     }
+@@ -2977,48 +2942,7 @@
+                 {
+                 x += (f-&gt;width)['-'];
+                 }
+-            else if(s[i] == 0xdf)            /* scharfes 's'     */
+-                {
+-                gdImageChar(im, f, x, y, 0x19, color);
+-                x += (f-&gt;width)[0x19];
+-                }    
+-            else if(s[i] == 0xe4)       /* Umlaut 'a'       */
+-                { 
+-                gdImageChar(im, f, x, y, 'a' , color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                x += (f-&gt;width)['a'];
+-                }
+-            else if(s[i] == 0xc4)       /* Umlaut 'A'       */
+-                { 
+-                gdImageChar(im, f, x, y, 'A', color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                x += (f-&gt;width)['A'];
+-                }
+-            else if(s[i] == 0xf6)       /* Umlaut 'o'       */
+-                { 
+-                gdImageChar(im, f, x, y, 'o' , color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                x += (f-&gt;width)['o'];
+-                }
+-            else if(s[i] == 0xd6)       /* Umlaut 'O'       */
+-                { 
+-                gdImageChar(im, f, x, y, 'O' , color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                x += (f-&gt;width)['O'];
+-                }
+-            else if(s[i] == 0xfc)       /* Umlaut 'u'       */
+-                { 
+-                gdImageChar(im, f, x, y, 'u' , color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                x += (f-&gt;width)['u'];
+-                }
+-            else if(s[i] == 0xdc)       /* Umlaut 'U'       */
+-                { 
+-                gdImageChar(im, f, x, y, 'U' , color); 
+-                gdImageChar(im, f, x, y, 0x7f, color);
+-                x += (f-&gt;width)['U'];
+-                }
+-            else                        /* normales Zeichen */
++            else
+                 {
+                 gdImageChar(im, f, x, y, s[i], color);
+                 x += (f-&gt;width)[s[i]];
+@@ -3028,7 +2952,7 @@
+     return;
+ }
+ 
+-int gdImageStringWidth(gdFontPtr f, char *s)
++int gdImageStringWidth(gdFontPtr f, unsigned char *s)
+ {
+     int i, l;
+     int w;
+@@ -3062,48 +2986,7 @@
+     for (i=0; (i&lt;l); i++) {
+         if(s[i] == ' ') 
+             zeichen[0] = 0x20;
+-        else if(s[i] == 0xdf)            /* scharfes 's'     */
+-            {
+-            gdImageCharUp(im, f, x, y, 0x19, color);
+-            zeichen[0] = 0x19;
+-            }    
+-        else if(s[i] == 0xe4)       /* Umlaut 'a'       */
+-            { 
+-            gdImageCharUp(im, f, x, y, 'a' , color); 
+-            gdImageCharUp(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'a';
+-            }
+-        else if(s[i] == 0xc4)       /* Umlaut 'A'       */
+-            { 
+-            gdImageCharUp(im, f, x, y, 'A', color); 
+-            gdImageCharUp(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'A';
+-            }
+-        else if(s[i] == 0xf6)       /* Umlaut 'o'       */
+-            { 
+-            gdImageCharUp(im, f, x, y, 'o' , color); 
+-            gdImageCharUp(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'o';
+-            }
+-        else if(s[i] == 0xd6)       /* Umlaut 'O'       */
+-            { 
+-            gdImageCharUp(im, f, x, y, 'O' , color); 
+-            gdImageCharUp(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'O';
+-            }
+-        else if(s[i] == 0xfc)       /* Umlaut 'u'       */
+-            { 
+-            gdImageCharUp(im, f, x, y, 'u' , color); 
+-            gdImageCharUp(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'u';
+-            }
+-        else if(s[i] == 0xdc)       /* Umlaut 'U'       */
+-            { 
+-            gdImageCharUp(im, f, x, y, 'U' , color); 
+-            gdImageCharUp(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'U';
+-            }
+-        else                        /* normales Zeichen */
++        else
+             {
+             gdImageCharUp(im, f, x, y, s[i], color);
+             zeichen[0] = s[i];
+@@ -3123,48 +3006,7 @@
+     for (i=0; i&lt;l; i++) {
+         if(s[i] == ' ') 
+             zeichen[0] = 0x20;
+-        else if(s[i] == 0xdf)            /* scharfes 's'     */
+-            {
+-            gdImageCharDown(im, f, x, y, 0x19, color);
+-            zeichen[0] = 0x19;
+-            }    
+-        else if(s[i] == 0xe4)       /* Umlaut 'a'       */
+-            { 
+-            gdImageCharDown(im, f, x, y, 'a' , color); 
+-            gdImageCharDown(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'a';
+-            }
+-        else if(s[i] == 0xc4)       /* Umlaut 'A'       */
+-            { 
+-            gdImageCharDown(im, f, x, y, 'A', color); 
+-            gdImageCharDown(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'A';
+-            }
+-        else if(s[i] == 0xf6)       /* Umlaut 'o'       */
+-            { 
+-            gdImageCharDown(im, f, x, y, 'o' , color); 
+-            gdImageCharDown(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'o';
+-            }
+-        else if(s[i] == 0xd6)       /* Umlaut 'O'       */
+-            { 
+-            gdImageCharDown(im, f, x, y, 'O' , color); 
+-            gdImageCharDown(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'O';
+-            }
+-        else if(s[i] == 0xfc)       /* Umlaut 'u'       */
+-            { 
+-            gdImageCharDown(im, f, x, y, 'u' , color); 
+-            gdImageCharDown(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'u';
+-            }
+-        else if(s[i] == 0xdc)       /* Umlaut 'U'       */
+-            { 
+-            gdImageCharDown(im, f, x, y, 'U' , color); 
+-            gdImageCharDown(im, f, x, y, 0x7f, color);
+-            zeichen[0] = 'U';
+-            }
+-        else                        /* normales Zeichen */
++        else
+             {
+             gdImageCharDown(im, f, x, y, s[i], color);
+             zeichen[0] = s[i];
+--- gfont-1.0.2/gfont_gd.h	Fri Sep  5 20:33:17 1997
++++ gfont-1.0.2/gfont_gd.h	Tue Dec 29 12:21:46 1998
+@@ -94,7 +94,7 @@
+ 	/* Font data; array of characters, one row after another.
+ 		Easily included in code, also easily loaded from
+ 		data files. */
+-	char *data;
++	unsigned char *data;
+ 	/* additional information to support proportional fonts */
+ 	int *width;
+ 	/* optional name of font or NULL */
+@@ -151,11 +151,11 @@
+ /* Solid bar. Upper left corner first, lower right corner second. */
+ void gdImageFilledRectangle(gdImagePtr im, int x1, int y1, int x2, int y2, int color);
+ int gdImageBoundsSafe(gdImagePtr im, int x, int y);
+-void gdImageChar(gdImagePtr im, gdFontPtr f, int x, int y, int c, int color);
+-void gdImageCharUp(gdImagePtr im, gdFontPtr f, int x, int y, char c, int color);
++void gdImageChar(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char c, int color);
++void gdImageCharUp(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char c, int color);
+ #if 0
+-void gdImageString(gdImagePtr im, gdFontPtr f, int x, int y, char *s, int color);
+-void gdImageStringUp(gdImagePtr im, gdFontPtr f, int x, int y, char *s, int color);
++void gdImageString(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char *s, int color);
++void gdImageStringUp(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char *s, int color);
+ #endif
+ 
+ /* Point type for use in polygon drawing. */
+@@ -210,7 +210,7 @@
+ void gdImageString(gdImagePtr im, gdFontPtr f, int x, int y, unsigned char *s, int color);
+ void gdImageStringUp(gdImagePtr im, gdFontPtr font, int x, int y, unsigned char *s, int color);
+ void gdImageStringDown(gdImagePtr im, gdFontPtr font, int x, int y, unsigned char *s, int color);
+-int gdImageStringWidth(gdFontPtr font, char *s);
++int gdImageStringWidth(gdFontPtr font, unsigned char *s);
+ void gdImageFilledEllipse(gdImagePtr im, int cx, int cy, int w, int h, int color, int fillcolor);
+ 
+ /*EOF*/
+--- gfont-1.0.2/gfont_pxtogdf.c	Fri Sep  5 20:51:38 1997
++++ gfont-1.0.2/gfont_pxtogdf.c	Tue Dec 29 13:58:29 1998
+@@ -479,7 +479,7 @@
+      */
+ 
+ 
+-    for (i = 0; i &lt;= 127; i++) {
++    for (i = 0; i &lt; NUM_CHARS_IN_PK; i++) {
+         fseek(fppx, sizeof(int)*rasterpointer[i], SEEK_SET);
+ 
+         fprintf(fpgdi, " char: # %-3d    design size: %2d x %2d\n", i, sizes_w[i], sizes_h[i]);
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00283" HREF="msg00283.shtml">Re: [patch] gfont and 8-bit characters</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00281.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00283.shtml">Re: [patch] gfont and 8-bit characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00280.shtml">8-bit and gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00283.shtml">Re: [patch] gfont and 8-bit characters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00282"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00282"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

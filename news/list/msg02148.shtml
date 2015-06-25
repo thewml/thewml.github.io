@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: XHTML problem in htmlfixup -->
+<!--X-From-R13: Bnhyvar [vqqryvax <zvqqryvaxNcbyljner.ay> -->
+<!--X-Date: Sun, 25 Feb 2001 19:06:29 +0100 (MET) -->
+<!--X-Message-Id: 20010225190621.A311@polyware.nl -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02148">Date Index</a>][<a href="thrd44.shtml#02148">Thread Index</a>]<br>
+[<A HREF="msg02147.shtml">Date Prev</A>][<A HREF="msg02149.shtml">Date Next</A>][<A HREF="msg02265.shtml">Thread Prev</A>][<A HREF="msg02149.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>XHTML problem in htmlfixup</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Pauline Middelink &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 25 Feb 2001 19:06:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi ppl,
+
+Recently started wondering if my companies website would do great
+in XHTML, so i changed the doctypes, and started using
+'wml -W2,-X1034' so the trailing '&lt;br /&gt;' wouldn't be deleted.
+That worked, so far so good.
+
+Now the problem, some files have &lt;img&gt; tags in them, where
+I rely on wml to add the proper width and height attributes.
+This however fails in XHTML mode, the check does not allow
+for a space before the /&gt;, and the result becomes:
+	&lt;img src="..." alt="" width="100" height="100/"&gt;
+                                                  ^^^^^ oops
+
+Setting "-W7,-v" proved this:
+	started with)  &lt;img src="..." /&gt;
+	after imgalt)  &lt;img src="..." alt=""/&gt;
+	after imgsize) &lt;img src="..." alt="" width=100 height=100/&gt;
+	after quotes)  &lt;img src="..." alt="" width="100" height="100/"&gt;
+
+I fixed it by making sure the space is required with the /&gt; too.
+(patch attached) but I'm not sure this is entirly the right way.
+(And quite sure there will be more places to fix)
+
+    Met vriendelijke groet,
+        Pauline Middelink
+-- 
+GPG Key fingerprint = 2D5B 87A7 DDA6 0378 5DEA  BD3B 9A50 B416 E2D0 C3C2
+For more details look at my website <A  HREF="http://www.polyware.nl/~middelink">http://www.polyware.nl/~middelink</A>
+</PRE>
+<PRE>
+--- htmlfix.src	Sat Sep 16 01:06:30 2000
++++ /usr/lib/wml/exec/wml_p7_htmlfix	Sun Feb 25 17:34:51 2001
+@@ -205,7 +205,7 @@
+ }
+ sub Fixup_imgalt {
+     $bufferN = '';
+-    while ($buffer =~ s|^(.*?)(&lt;[iI][mM][gG]\s+)([^&gt;]+?)(/?&gt;)||s) {
++    while ($buffer =~ s|^(.*?)(&lt;[iI][mM][gG]\s+)([^&gt;]+?)(( /)?&gt;)||s) {
+         ($pre, $tag, $attr, $end) = ($1, $2, $3, $4);
+         if (    $attr !~ m|ALT\s*=\s*"[^"]*"|is
+             and $attr !~ m|ALT\s*=\s*\S+|is) {
+@@ -218,7 +218,7 @@
+ }
+ sub Fixup_imgsize {
+     $bufferN = '';
+-    while ($buffer =~ s|^(.*?)(&lt;[iI][mM][gG]\s+)([^&gt;]+?)(/?&gt;)||s) {
++    while ($buffer =~ s|^(.*?)(&lt;[iI][mM][gG]\s+)([^&gt;]+?)(( /)?&gt;)||s) {
+         ($pre, $tag, $attr, $end) = ($1, $2, $3, $4);
+         $bufferN .= $pre . $tag . &amp;ProcessImgTag($attr) . $end;
+     }
+@@ -233,7 +233,7 @@
+ 
+     my $last = 0;
+     $bufferN = '';
+-    while ($buffer =~ m|\G(.*?)(&lt;[tT][aA][bB][lL][eE])([^&gt;]*?)(/?&gt;)|gs) {
++    while ($buffer =~ m|\G(.*?)(&lt;[tT][aA][bB][lL][eE])([^&gt;]*?)(( /)?&gt;)|gs) {
+         $last = pos($buffer);
+         ($pre, $begin, $attr, $end) = ($1, $2, $3, $4);
+ 
+@@ -404,136 +404,5 @@
+ $out-&gt;close;
+ 
+ exit(0);
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02149" HREF="msg02149.shtml">Re: XHTML problem in htmlfixup</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02150" HREF="msg02150.shtml">&lt;no subject&gt;</A></strong>, <em>From:</em> Jason Cheong (US)</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02147.shtml">Re: bug report : &lt;page_end&gt; definition in wml::std::page</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02149.shtml">Re: XHTML problem in htmlfixup</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02265.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02149.shtml">Re: XHTML problem in htmlfixup</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02148"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02148"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: rendering of tables -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 27 Oct 2000 23:47:18 +0200 (MET DST) -->
+<!--X-Message-Id: 20001027234817.A22018@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39F92D24.75D0C75A@snafu.de -->
+<!--X-Reference: 20001027102654.B9092@imacs.polytechnique.fr -->
+<!--X-Reference: 20001027134902.A1919@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02046">Date Index</a>][<a href="thrd41.shtml#02046">Thread Index</a>]<br>
+[<A HREF="msg02045.shtml">Date Prev</A>][<A HREF="msg02047.shtml">Date Next</A>][<A HREF="msg02045.shtml">Thread Prev</A>][<A HREF="msg02047.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: rendering of tables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 27 Oct 2000 23:48:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Oct 27, 2000 at 01:49:02PM -0100, Werner Heuser wrote:
+&gt; On Fri, Oct 27, 2000 at 10:26:54AM +0200, Denis Barbier wrote:
+&gt; ...
+&gt; &gt; Hi Werner,
+&gt; &gt; 
+&gt; &gt; i am surprised this has never been requested before, it looks quite
+&gt; &gt; natural. The &lt;xtable&gt; tag is just a wrapper for freetable (formerly
+&gt; &gt; wwwtable), so the best solution is to request this feature to the
+&gt; &gt; freetable maintainer (i'll do so).  Meantime you may try this trick:
+&gt; ...
+&gt; Hi Denis,
+&gt; 
+&gt; feels natural to me, too. And your appreciation of this
+&gt; idea feels good :) Anyway I will try your trick and I prefer,
+&gt; when you ask the freetable maintainer.
+[...]
+
+Hi again,
+
+I believe that with this example and wml_macros(7), you have all the
+material you need ;o)
+
+&lt;define-tag tablebody&gt;
+... table content here ...
+&lt;/define-tag&gt;
+&lt;perl&gt;
+{
+  my $tablebody;
+  &lt;perl:assign $tablebody&gt;
+     &lt;xtable&gt;
+       #   Remove first column
+       (*,1) REMOVE_THIS
+       #   and first row
+       (1,*) REMOVE_THIS
+       &lt;tablebody&gt;
+     &lt;/xtable&gt;
+  &lt;/perl:assign&gt;
+  #   Remove unwanted cells
+  $tablebody =~ s|&lt;(t[hd]) [^&gt;]*REMOVE_THIS.*?&lt;/\1&gt;||g;
+  #   Remove empty rows
+  $tablebody =~ s|&lt;tr&gt;\s*&lt;/tr&gt;||g;
+  &lt;perl:print: $tablebody&gt;
+}
+&lt;/perl&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02047" HREF="msg02047.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02048" HREF="msg02048.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02042" HREF="msg02042.shtml">rendering of tables</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02043" HREF="msg02043.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02045" HREF="msg02045.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02045.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02047.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02045.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02047.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02046"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02046"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

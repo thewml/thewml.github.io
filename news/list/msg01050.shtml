@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WMLOPTS quoting bug in WML 1.7.4 -->
+<!--X-From-R13: Vnaf Gyevpu @vrqreznaa <hyevpuNavrqreznaa.oo.onjhr.qr> -->
+<!--X-Date: Mon, 11 Oct 1999 02:24:18 +0200 (MET DST) -->
+<!--X-Message-Id: m24sfyagml.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01050">Date Index</a>][<a href="thrd22.shtml#01050">Thread Index</a>]<br>
+[<A HREF="msg01049.shtml">Date Prev</A>][<A HREF="msg01051.shtml">Date Next</A>][<A HREF="msg01052.shtml">Thread Prev</A>][<A HREF="msg01051.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WMLOPTS quoting bug in WML 1.7.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Hans Ulrich Niedermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 11 Oct 1999 02:24:50 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+this time it is a real bug, I'm sure :-)
+
+[uli@chef ~]$ touch test.wml
+[uli@chef ~]$ WMLOPTS='-DX=1 \"-DXY=2\"' wml test.wml
+** Slice:Warning: no such slice 'ALL'
+[uli@chef ~]$ WMLOPTS='-DX=1 "-DXY=2"' wml test.wml
+
+And now, nothing happens. 100% CPU load and nothing else. So I
+cancelled with Ctrl-C.
+
+[uli@chef ~]$ ll test.*
+-rw-rw-r--   1 uli      uli             0 Okt 11 02:15 test.wml
+[uli@chef ~]$ 
+
+Still using wml 1.7.4, patched from 1.7.3 source-tarball. If the guy
+"fixing" the "quotes in WMLOPTS" bug wants to handle that: You're
+welcome :-) (You probably know where to look). Else I'll be looking
+after it during the next few days.
+
+Bye,
+
+Uli
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01051" HREF="msg01051.shtml">Re: WMLOPTS quoting bug in WML 1.7.4</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01049.shtml">p7_htmlfix</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01051.shtml">Re: WMLOPTS quoting bug in WML 1.7.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01052.shtml">Re: p7_htmlfix</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01051.shtml">Re: WMLOPTS quoting bug in WML 1.7.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01050"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01050"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

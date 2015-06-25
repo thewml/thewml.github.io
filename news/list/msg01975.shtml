@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Changes between WML 2.0.3 and WML 2.0.4 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 20 Sep 2000 14:43:58 +0200 (MET DST) -->
+<!--X-Message-Id: 20000920144614.A10648@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01975">Date Index</a>][<a href="thrd40.shtml#01975">Thread Index</a>]<br>
+[<A HREF="msg01974.shtml">Date Prev</A>][<A HREF="msg01976.shtml">Date Next</A>][<A HREF="msg01974.shtml">Thread Prev</A>][<A HREF="msg01976.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Changes between WML 2.0.3 and WML 2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Sep 2000 14:46:14 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+This time, there have been few changes, so here is the whole ChangeLog
+
+    *) Fix wml::mod::MakeMaker (19-Sep-2000):
+       The `extradistfiles' attribute did not work.
+       [Denis Barbier]
+
+    *) Fix problems with synclines and protection (19-Sep-2000):
+       The `synclines' feature was not documented in WML 2.0.3.
+       It helps debugging by putting some special commands after
+       pass 1 to keep track of input line numbers.
+       Unfortunately, these extra commands will remain on output when
+       included file is inside a protected area.
+       This problem is now documented, and 2 solutions exist: either
+       compile with `-W1,-N', or append the `IPP_NOSYNCLINES' special
+       keyword to the #include line.
+       [Many Debian people]
+
+    *) Improve wml::des::navbar (16-Sep-2000):
+       By default (called `inner' mode), epilog is put after sub-menu
+       buttons, i.e. navbars are nested.  When &lt;navbar:render&gt; is called
+       with attribute `menumode=outer', then sub-menus are inserted after
+       epilog.
+       [Tobias Oetiker]
+
+    *) Make wml_p7_htmlfix customizable (16-Sep-2000):
+       Two new options let the user decide which fixups are performed
+       or skipped.
+       [Denis Barbier]
+
+    *) Fix wml_p7_htmlfix (13-Sep-2000):
+       The version shipped with WML 2.0.3 is broken, there are problems
+       with unquoted attributes containing a slash sign.
+       [Roland Rosenfeld]
+
+    *) Support w3m in addition to lynx in wmd (13-Sep-2000):
+       The wmd command now searches through $PATH for w3m and lynx (and
+       prefers w3m over lynx) instead of insisting on the existence of lynx.
+       [Ralf S. Engelschall]
+
+    *) Upgraded to LinkLint 2.2 (10-Sep-2000):
+       [Ralf S. Engelschall, James B. Bowlin]
+NB: This upgrade was made possible because James B. Bowlin is
+    relicensing his software.  He was kind enough to provide us this
+    relicensed version before putting it on his website, so please
+    do not bother him with LinkLint related questions before his website
+    is updated.
+    Be patient, and if you are not, ask me &lt;barbier@imacs.polytechnique.fr&gt;.
+    Thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01974.shtml">WML 2.0.4 is out</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01976.shtml">mail form</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01974.shtml">WML 2.0.4 is out</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01976.shtml">mail form</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01975"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01975"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.4, Linux 2.2 (SuSE 6.0) -->
+<!--X-From-R13: ppNpynfbuz.pbz -->
+<!--X-Date: Fri, 12 Nov 1999 17:10:06 +0100 (MET) -->
+<!--X-Message-Id: 199911121450.PAA01279@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01135">Date Index</a>][<a href="thrd24.shtml#01135">Thread Index</a>]<br>
+[<A HREF="msg01134.shtml">Date Prev</A>][<A HREF="msg01136.shtml">Date Next</A>][<A HREF="msg01138.shtml">Thread Prev</A>][<A HREF="msg01140.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.4, Linux 2.2 (SuSE 6.0)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 12 Nov 1999 15:50:00 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.4
+Operating System: Linux 2.2 (SuSE 6.0)
+
+Problem Description:
+| wml does not parse the --outputfile parameter 
+| correctly if the slice term contains the character
+| '@'. To fix this, line 1027 of wml_frontend/wml 
+| (sub ProcessOutfiles) has to be changed from
+| 
+|   elsif ($o =~ m|^([_A-Z0-9*~!+u%n\-\\^x()]+):(.+)$|) {
+| 
+| to
+| 
+|   elsif ($o =~ m|^([_A-Z0-9*~!+u%n\-\\^x()@]+):(.+)$|) {
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01140" HREF="msg01140.shtml">Re: [BUG REPORT] WML 1.7.4, Linux 2.2 (SuSE 6.0)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01134.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01136.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01138.shtml">Re: empty eperl man file</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01140.shtml">Re: [BUG REPORT] WML 1.7.4, Linux 2.2 (SuSE 6.0)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01135"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01135"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

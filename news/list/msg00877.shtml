@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: rollover and slice -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Wed, 28 Jul 1999 13:15:07 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990728125748.20219A&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00877">Date Index</a>][<a href="thrd18.shtml#00877">Thread Index</a>]<br>
+[<A HREF="msg00876.shtml">Date Prev</A>][<A HREF="msg00878.shtml">Date Next</A>][<A HREF="msg00880.shtml">Thread Prev</A>][<A HREF="msg00881.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>rollover and slice</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 28 Jul 1999 13:14:36 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I have a strange problem and cannot solve it.
+
+I have this definition in my template
+
+# Slice 1
+&lt;lang:new id=free short&gt;
+
+# Slice 2
+&lt;lang:new id=bk short&gt;
+
+
+&lt;bk&gt; 
+&lt;rollover name="logo"  
+href="Kontakt.html" 
+src="../GIFS/seitenlogoa2.gif"  
+oversrc="../GIFS/seitenlogob.gif" 
+alt="Kontakt" &gt; 
+&lt;/bk&gt;
+
+&lt;free&gt; 
+&lt;rollover name="logo"  
+href="Kontakt.html" 
+src="../GIFS/seitenlogoa1.gif"  
+oversrc="../GIFS/seitenlogob.gif" 
+alt="Kontakt" &gt;
+&lt;/free&gt;
+
+The first slice, in this case &lt;bk&gt; is okay. But the second is
+corrupt. When I change the succession, and &lt;free&gt; is the first,
+then &lt;bk&gt;, now the second, is corrupt and the first &lt;free&gt; is
+okay.
+
+The same result with [LANG_BK:...:] and LANG_FREE:...:]
+
+In the second slice the first part of the script 
+
+function ro_imgNormal(imgName) {     (and so on)
+
+is gone.
+
+Any hint?
+
+Ciao!
+juh
+
+-- 
+Das GenerationenProjekt
+Ein halbes Jahrhundert in HYPERTEXT
+<A  HREF="http://www.koeln.netsurf.de/~JanUlrich.Hasecke/GenerationenProjekt/">http://www.koeln.netsurf.de/~JanUlrich.Hasecke/GenerationenProjekt/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00881" HREF="msg00881.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00876.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00878.shtml">Small bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00880.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00881.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00877"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00877"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

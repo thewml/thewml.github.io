@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Need some Zen to whilst writing MP4H/eperl macros along with  output slices -->
+<!--X-From-R13: Khfhs Ubbynznoonf <lhfhstNbhgoynmr.pbz> -->
+<!--X-Date: Thu, 4 Jan 2001 06:33:12 +0100 (MET) -->
+<!--X-Message-Id: 20010104053716.17184.qmail@yusufg.portal2.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02101">Date Index</a>][<a href="thrd43.shtml#02101">Thread Index</a>]<br>
+[<A HREF="msg02100.shtml">Date Prev</A>][<A HREF="msg02102.shtml">Date Next</A>][<A HREF="msg02100.shtml">Thread Prev</A>][<A HREF="msg02102.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Need some Zen to whilst writing MP4H/eperl macros along with  output slices</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Yusuf Goolamabbas &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 4 Jan 2001 05:37:16 -0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi, I have a fairly largish set of &lt;define-tags&gt; written in the
+following form [Many more languages also]
+
+&lt;define-tag title whitespace=delete&gt;
+&lt;en: Hello&gt;
+&lt;es: Yowsa&gt;
+&lt;/define-tag&gt;
+
+I am looking to convert these into
+
+&lt;title&gt;
+&lt;![CDATA[
+Hello
+]]&gt;
+&lt;/title&gt;
+
+and an appropiate generation for other languages. I started to
+experiment how I could write WML code to do this and I got stuck
+whilst trying to build a generic tag which takes an appropiate
+parameter
+
+Any assistance would be appreciated ?
+
+
+#use wml::std::tags
+#use wml::std::lang
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=es short&gt;
+
+&lt;define-tag title whitespace=delete&gt;
+&lt;en: Hello&gt;
+&lt;es: Yowsa&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag xmltitle whitespace=delete&gt;
+&lt;protect pass=2&gt;
+&lt;title&gt;
+&lt;![CDATA[
+&lt;/protect&gt;
+&lt;title&gt;
+&lt;protect pass=2&gt;
+]]&gt;
+&lt;/title&gt;
+&lt;/protect&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag genericxml whitespace=delete&gt;
+&lt;perl&gt;
+&lt;perl:assign $name&gt;%0&lt;/perl:assign&gt;
+&lt;perl:print&gt;
+&lt;$name&gt;
+&lt;![CDATA[
+&lt;/perl:print&gt;
+
+# How do I input &lt;$name&gt; and interpolate
+# Do I need to change pass order etc
+
+&lt;perl:print&gt;
+]]&gt;
+&lt;/$name&gt;
+&lt;/perl:print&gt;
+&lt;/perl&gt;
+&lt;/define-tag&gt;
+
+
+# Usage of the three tags
+
+&lt;title&gt;
+&lt;xmltitle&gt;
+&lt;genericxml title&gt;
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02100.shtml">Re: Compiling WML 2.0.6 on IRIX 6.5.x</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02102.shtml">Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02100.shtml">Re: Compiling WML 2.0.6 on IRIX 6.5.x</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02102.shtml">Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02101"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02101"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

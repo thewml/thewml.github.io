@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml 2.0.7: ePerl printf -->
+<!--X-From-R13: Yynhf Penaq <xynhf.oenaqNfnc.pbz> -->
+<!--X-Date: Tue, 31 Jul 2001 11:34:12 +0200 (MET DST) -->
+<!--X-Message-Id: 874rrtxx27.fsf@ls3517.wdf.sap&#45;ag.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15RP8e&#45;0000KC&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 3B664DA7.FEB0DBE1@qis&#45;systemhaus.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02344">Date Index</a>][<a href="thrd47.shtml#02344">Thread Index</a>]<br>
+[<A HREF="msg02343.shtml">Date Prev</A>][<A HREF="msg02345.shtml">Date Next</A>][<A HREF="msg02349.shtml">Thread Prev</A>][<A HREF="msg02345.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml 2.0.7: ePerl printf</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Klaus Brand &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 31 Jul 2001 11:33:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Karl-Heinz,
+
+Karl-Heinz Marbaise &lt;kmarbaise@qis-systemhaus.de&gt; writes:
+
+[...]
+&gt;   print $output;
+&gt;   printf STDOUT '%02d:%02d:%02d UTC %04d', $hour, $min, $sec, $year;
+&gt; 
+&gt; My questions is now, why does the simple print $output
+&gt; work correctley but the printf STDOUT does only produce
+&gt; "d:d:d UTC d" in output HTML file?
+&gt; Am I not allowed to use printf in ePerl?
+It's because print and printf have a different syntax.
+Try: printf STDOUT ("%02d:%02d:%02d UTC %04d", $hour, $min, $sec, $year);
+Note the () and the quotes ".
+
+HTH.
+Klaus
+-- 
+Klaus Brand
+Compaq Computer Corporation @ SAP LinuxLab
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02345" HREF="msg02345.shtml">Re: wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02337" HREF="msg02337.shtml">xhtml vs. wml</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02338" HREF="msg02338.shtml">wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02343.shtml">&lt;break&gt; when using included &lt;while&gt; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02345.shtml">Re: wml 2.0.7: ePerl printf</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02349.shtml">Re: &lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02345.shtml">Re: wml 2.0.7: ePerl printf</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02344"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02344"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

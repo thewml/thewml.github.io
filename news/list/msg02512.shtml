@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: nested navbar -->
+<!--X-From-R13: Tenax Zvzcreg <yvzchfNg&#45;bayvar.qr> -->
+<!--X-Date: Mon, 11 Feb 2002 22:48:27 +0100 (MET) -->
+<!--X-Message-Id: 200202112147.WAA05791@p5088BA9A.dip.t&#45;dialin.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02512">Date Index</a>][<a href="thrd31.shtml#02512">Thread Index</a>]<br>
+[<A HREF="msg02511.shtml">Date Prev</A>][<A HREF="msg02513.shtml">Date Next</A>][<A HREF="msg01483.shtml">Thread Prev</A>][<A HREF="msg02514.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>nested navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Frank Limpert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 11 Feb 2002 22:47:08 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi everyone,
+
+As you can see under <A  HREF="http://www.rothenstein-oelknitz.de/">http://www.rothenstein-oelknitz.de/</A> and the pages 
+included therein, I made a text only navbar out of tables. Under the navbar 
+item Chronik / chronicle I located a sub-navbar. As you can see, the pointer 
+GIF, which is located in the &lt;navbar:prolog type="S"&gt; tag, follows the 
+selection. This works fine for the main navbar and also for the sub-navbar if 
+you see each one alone.
+But I wish to have the top menu item still marked, even when I descend down 
+into a sub-navbar. This means when I select a page under a sub-navbar item, 
+both the selected item and the main navbar item, which is the parent of it, 
+should be in selected state.
+&gt;From the documentation I guessed, the main navbar item would enter the 
+SS-state when a descendant is selected, but I was wrong.
+
+It would greatly help if someone had an example for me. I only found an 
+example for a simple navbar in the docs.
+
+Thanks in advance,
+and
+Happy computing...
+Frank Limpert
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02514" HREF="msg02514.shtml">Re: nested navbar</A></strong>, <em>From:</em> Kurt Sermeus</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02511.shtml">Re: toc etc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02513.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01483.shtml">Re: nested navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02514.shtml">Re: nested navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02512"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#02512"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

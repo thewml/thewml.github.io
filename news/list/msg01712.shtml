@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Include misunderstanding -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 10 Jun 2000 07:06:06 +0200 (MET DST) -->
+<!--X-Message-Id: 20000609191445.A11236@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0006071448560.359&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Reference: 3940E482.E37FFFA5@corp.goyogi.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01712">Date Index</a>][<a href="thrd35.shtml#01712">Thread Index</a>]<br>
+[<A HREF="msg01711.shtml">Date Prev</A>][<A HREF="msg01713.shtml">Date Next</A>][<A HREF="msg01710.shtml">Thread Prev</A>][<A HREF="msg01705.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Include misunderstanding</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Jun 2000 19:14:45 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 09, 2000 at 05:35:14AM -0700, Afam Agbodike wrote:
+
+[...]
+&gt; Also, is there a short tutorial on how to build a multi level site? I'm
+&gt; trying to convert over a completely established site to wml, and I have
+&gt; a very short time period to do this. most of the docs don't cover
+&gt; anything about building a site, just individual pages, and the stuff the
+&gt; does go over site creation is either too basic or way over my head. It
+&gt; would be really great if there was something that gave a step by step on
+&gt; how do define universal variable, that apply accross the entire site,
+&gt; and local variables that apply to only a certain directory or file. I'm
+&gt; looking at the example of the wml site, but so for it is too complicated
+&gt; for me. I don't understand much of anything that's going on in there.
+
+Hi Afam, i will be disconnected for few days and do not have time to reply now.
+You may go to
+   <A  HREF="http://www.engelschall.com/sw/wml/example/refs.html">http://www.engelschall.com/sw/wml/example/refs.html</A>
+and check sites with templates.  Those sites are usually build in place,
+so you may view .wmlrc files, source files (by replacing html suffix by
+wml), etc.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01704" HREF="msg01704.shtml">Problems moving from 1.7.4 to 2.0.1</A></strong>, <em>From:</em> Stephan Petersen</li>
+<li><strong><A NAME="01710" HREF="msg01710.shtml">Include misunderstanding</A></strong>, <em>From:</em> Afam Agbodike</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01711.shtml">problems with the wml site</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01713.shtml">Variables in #!-lines</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01710.shtml">Include misunderstanding</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01705.shtml">compilation problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01712"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01712"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

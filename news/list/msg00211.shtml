@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Speeding up WML / real&#45;time WML -->
+<!--X-From-R13: "Rnivq Vneevf" <quneevfNqeu.arg> -->
+<!--X-Date: Fri, 11 Sep 1998 19:25:24 +0200 (CEST) -->
+<!--X-Message-Id: 001701bddda8$19cab080$0500a8c0@delf.delf -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: m1u32frump.fsf@foobar.ee.ethz.ch -->
+<!--X-Derived: bin00020.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00211">Date Index</a>][<a href="thrd5.shtml#00211">Thread Index</a>]<br>
+[<A HREF="msg00210.shtml">Date Prev</A>][<A HREF="msg00212.shtml">Date Next</A>][<A HREF="msg00208.shtml">Thread Prev</A>][<A HREF="msg00212.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Speeding up WML / real-time WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;David Harris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 11 Sep 1998 13:17:49 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+Fritz Zaucker wrote:
+&gt; Why don't you just send the source to the list? And Ralf, PLEASE
+&gt; implement that, my site takes 15 minutes on a Ultra 2x300MHz ...
+
+I've attached the file. Here is how to install it:
+
+Get to the $(MWL_ROOT)/lib/exec directory. Move the wml_p1_ipp file to
+another filename, say wml_ip_ipp-orig. Then copy the attached file into
+wml_p1_ipp. But this is not enough because of the changes made for your
+system by the makefile. Open both of the files in an editor and take the
+first 16 lines from the original file and use them to replace the first 16
+lines in the new file. (This is specifically getting your path to perl used
+on line one and two and your WML specific Perl library directories.)
+Remember to make sure the new has the correct permissions. Now everything is
+set to go.
+
+Because this directly replaces the installation file, running another "make"
+or "make install" will overwrite this. Yes, call me lazy for not modifying
+the source file used by the makefile.
+
+&gt; &gt; I've also noticed inefficiencies in other WML passes, but I have not
+&gt; &gt; undertaken to work on them. However, I will soon (month or two) be
+starting
+&gt; &gt; on a project which will use WML for real-time page generation. At that
+time,
+&gt; &gt; I'll go mucking around with WML's internals if I run into any problems.
+Is
+&gt; &gt; anyone else using WML in a real time? If so, how is it faring?
+&gt;
+&gt; Talk to Ralf first before spending too much effort on this.
+
+I agree. I am not going to spend any more time modifying the internals
+before checking with him. I read the post in the archives about WML 2.0
+being much more efficient. Ralf, what's the latest status on WML 2.0? When
+is it expected?
+
+- David Harris
+   Principal Engineer, DRH Internet Services
+
+
+</PRE>
+<P><A HREF="bin00020.bin" >wml_p1_ipp</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00212" HREF="msg00212.shtml">Re: Speeding up WML / real-time WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00208" HREF="msg00208.shtml">Re: Speeding up WML / real-time WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00210.shtml">RE: TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00212.shtml">Re: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00208.shtml">Re: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00212.shtml">Re: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00211"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00211"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

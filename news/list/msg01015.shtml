@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Ouput directory other than source directory -->
+<!--X-From-R13: <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 1 Oct 1999 14:26:32 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991001141141.23974A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: NDBBJOMIEJPJILMHKHDJMEELCAAA.dkrizic@bsb&#45;software.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01015">Date Index</a>][<a href="thrd21.shtml#01015">Thread Index</a>]<br>
+[<A HREF="msg01014.shtml">Date Prev</A>][<A HREF="msg01016.shtml">Date Next</A>][<A HREF="msg01014.shtml">Thread Prev</A>][<A HREF="msg01016.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 1 Oct 1999 14:28:57 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 30 Sep 1999, Darko Krizic wrote:
+
+&gt; &gt; The Debian web site currently uses "make install" to copy all the *.html
+&gt; &gt; files etc. to a different directory.  Two reasons that I can think of are:
+&gt; 
+&gt; I "wmk" the pages on one machine and copy the files using "sitecopy -u bsb"
+&gt; with the WebDAV protocol to a WebDAV-enabled Apache (Apache + mod_dav). In
+&gt; ./.sitecopyrc I can specify rules what files to exclude like *.wml,
+&gt; Makefile, .wmlrc, .wmkrc.
+&gt; 
+&gt; I think this is the most elegant solution.
+
+Ok, building and mirroring is something i understand. But could someone
+explain the benefits of putting output files in a different directory than
+the source file (that's what the subject means).
+
+I want to know if it is worth i try to ease such manipulations.
+
+PS to juh: there are lots of mirror.pl worldwide. One comes from
+              <A  HREF="http://sunsite.org.uk/packages/mirror/">http://sunsite.org.uk/packages/mirror/</A>
+           Try wget (from any GNU archive) too.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01016" HREF="msg01016.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> David Odin</li>
+<li><strong><A NAME="01017" HREF="msg01017.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+<li><strong><A NAME="01018" HREF="msg01018.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="01024" HREF="msg01024.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01014" HREF="msg01014.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> Darko Krizic</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01014.shtml">RE: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01016.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01014.shtml">RE: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01016.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01015"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01015"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

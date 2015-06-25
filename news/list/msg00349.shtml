@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: No installation problems with 1.6.8 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 18 Jan 1999 10:53:40 +0100 (CET) -->
+<!--X-Message-Id: 19990118105338.A1473@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990118081154.A6851@engelschall.com -->
+<!--X-Reference: Pine.LNX.3.96.990118103900.1048C&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00349">Date Index</a>][<a href="thrd8.shtml#00349">Thread Index</a>]<br>
+[<A HREF="msg00348.shtml">Date Prev</A>][<A HREF="msg00350.shtml">Date Next</A>][<A HREF="msg00348.shtml">Thread Prev</A>][<A HREF="msg00365.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: No installation problems with 1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Jan 1999 10:53:38 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 18, 1999, Jan Ulrich Hasecke wrote:
+
+&gt; &gt;Slides? You mean slices, right? But which particular example do you mean
+&gt; &gt;(slices are used in the wml_tutorial document more than once)?
+&gt; 
+&gt; In wml_tutorial.html
+&gt; at source-code line 384
+&gt; 
+&gt;  1| &lt;html&gt;
+&gt;  2| &lt;head&gt;
+&gt;  3| &lt;title&gt;TitlelineTitelzeile&lt;/title&gt;
+&gt;  4| &lt;/head&gt;
+&gt;  5| &lt;body&gt;
+&gt;  6| &lt;h1&gt;HeaderlineUeberschrift&lt;/h1&gt;
+&gt;  7| &lt;/body&gt;
+&gt;  8| &lt;/html&gt;   
+&gt; 
+&gt; Missing [EN] and [DE]-tag?
+
+Oh, that's only on the website, yes. The source (POD) and the manpage (.7) is
+correct, but the HTML version of the document has problems because it shows
+WML examples and is post-processed by WML, too. This way the tags got
+stripped. Hmmm... when it's manually processed I would &lt;protect&gt; it, but it's
+generated out of the POD. So, I currently have no clue how one can fix the
+HTML version on the website.  Nevertheless the original document and manpage
+of the distribution is correct. So I recommend you to read it there. Use wmd
+to find it (when it's not in your MANPATH) or try "man wml_tutorial".
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00343" HREF="msg00343.shtml">Re: No installation problems with 1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00348" HREF="msg00348.shtml">Re: No installation problems with 1.6.8</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00348.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00350.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00348.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00365.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00349"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00349"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

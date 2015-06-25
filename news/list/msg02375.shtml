@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: new flag? wml &#45;U -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 27 Aug 2001 09:33:22 +0200 (MET DST) -->
+<!--X-Message-Id: 20010827094300.A4146@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: XFMail.010816161844.jh@inetcom.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02375">Date Index</a>][<a href="thrd48.shtml#02375">Thread Index</a>]<br>
+[<A HREF="msg02374.shtml">Date Prev</A>][<A HREF="msg02376.shtml">Date Next</A>][<A HREF="msg02365.shtml">Thread Prev</A>][<A HREF="msg02380.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: new flag? wml -U</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 09:43:00 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Aug 16, 2001 at 04:18:44PM +0200, Jan Holler wrote:
+&gt; 
+&gt; I suggest to implement a flag -U to undefine previously with
+&gt; -D defined variables.
+&gt; 
+&gt; Reason:
+&gt; There is no way to unset such a variable as it is
+&gt; possible within a file with &lt;set-var&gt; ... &lt;unset-var foo&gt;
+&gt; 
+&gt; e.g. if in an upper .wmlrc is -D BAR="foo" (since we need it 
+&gt; there) and in a lower (cd into some subdir) .wmlrc we would
+&gt; not want 'BAR' to be set, we cannot use such a construct
+&gt; because 'BAR' is set und 'newbar' will never be $(WML_SRC_BASENAME):
+&gt; 
+&gt; &lt;if &lt;var-exists BAR&gt;
+&gt; &lt;set-var newbar=&lt;get-var bar&gt;&gt;           # or $(BAR) instead of &lt;get-var bar&gt;
+&gt; &lt;set-var newbar=$(WML_SRC_BASENAME)&gt;
+&gt; &gt;
+
+Hi Jan,
+
+I implemented this feature months ago, but never committed it. The
+problem is that wml has then to distinguish between
+  -D foo=bar -U foo
+and
+  -U foo -D foo=bar
+which is not trivial.
+IMO it is always possible to unset a variable by making it empty,
+and replace your test by &lt;if &lt;get-var BAR&gt; ...
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02380" HREF="msg02380.shtml">Re: new flag? wml -U</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02365" HREF="msg02365.shtml">new flag? wml -U</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02374.shtml">Re: Bug in documentation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02376.shtml">Problem with including files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02365.shtml">new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02380.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02375"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02375"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

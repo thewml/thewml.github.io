@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: slices &#45; if defined, do not display -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 22 Apr 1999 14:29:59 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990422141815.13441A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9904220800480.4484&#45;100000@kanta.smece.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00589">Date Index</a>][<a href="thrd13.shtml#00589">Thread Index</a>]<br>
+[<A HREF="msg00588.shtml">Date Prev</A>][<A HREF="msg00590.shtml">Date Next</A>][<A HREF="msg00586.shtml">Thread Prev</A>][<A HREF="msg00590.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: slices - if defined, do not display</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Apr 1999 14:24:17 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 22 Apr 1999, Davor Cengija wrote:
+
+&gt;        hi there
+
+Hi Davor,
+
+[...]
+&gt;        what i'm trying to do now is 'if SLICE is defined, DO NOT
+&gt;        display what's between [SLICE: :], in any other case, display
+&gt;        it'
+
+You have explanations in the wml_p1_ipp manpage (`Use Negative Alternate
+String') :
+
+   $(SLICE:*&lt;img src="[SLICE1:car1:][SLICE2:car2:].gif"&gt;)
+
+When the SLICE variable is defined it expands to an empty string,
+otherwise it prints &lt;img...&gt;
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00586" HREF="msg00586.shtml">slices - if defined, do not display</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00588.shtml">Re: patch for denis new navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00590.shtml">imgstarsep is needed</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00586.shtml">slices - if defined, do not display</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00590.shtml">imgstarsep is needed</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00589"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00589"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

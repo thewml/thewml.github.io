@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 7 Jul 2000 22:38:37 +0200 (MET DST) -->
+<!--X-Message-Id: 20000707223950.B23214@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000707162820.A942@frithjof -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01796">Date Index</a>][<a href="thrd34.shtml#01796">Thread Index</a>]<br>
+[<A HREF="msg01795.shtml">Date Prev</A>][<A HREF="msg01797.shtml">Date Next</A>][<A HREF="msg01793.shtml">Thread Prev</A>][<A HREF="msg01605.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 Jul 2000 22:39:50 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jul 07, 2000 at 04:28:20PM +0200, Albert REINER wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; Consider the following minimal input file:
+&gt; 
+&gt; &gt; &lt;:
+&gt; &gt; 
+&gt; &gt; system "ls -alF $SCRIPT_SRC_PATH";
+&gt; &gt; 
+&gt; &gt; print "\$SCRIPT_SRC_DIR = $ENV{'SCRIPT_SRC_DIR'}\n";
+&gt; &gt; print "\$SCRIPT_SRC_PATH = $SCRIPT_SRC_PATH\n";
+&gt; &gt; 
+&gt; &gt; :&gt;
+&gt; 
+&gt; For some reason, on my system this will give me the directory listing,
+&gt; but the two explicit print statements will yield:
+&gt; 
+&gt; &gt; $SCRIPT_SRC_DIR =
+&gt; &gt; $SCRIPT_SRC_PATH =
+&gt; 
+&gt; , i.e. I don't seem to be able to access the variables even though
+&gt; they are obviously used in the system call. This is true not only with
+&gt; wml but also by using eperl alone, so the problem is obviously in pass
+&gt; 3.
+
+Very strange, i got same result with
+  &lt;:
+    system "ls -alF $LS_LISTS_CURRENT_DIR_BY_DEFAULT";
+    print "\$SCRIPT_SRC_PATH = $LS_LISTS_CURRENT_DIR_BY_DEFAULT\n";
+  :&gt;
+
+;-))
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01793" HREF="msg01793.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Albert REINER</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01795.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01797.shtml">[wml] Handling unknown attributes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01793.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01605.shtml">first try, first suggestion</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01796"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01796"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

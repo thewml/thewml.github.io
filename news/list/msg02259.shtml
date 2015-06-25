@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Recommended handling of sites with subdirs? -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Fri, 15 Jun 2001 09:14:07 +0200 (MET DST) -->
+<!--X-Message-Id: 3B29B645.D46695E1@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02259">Date Index</a>][<a href="thrd46.shtml#02259">Thread Index</a>]<br>
+[<A HREF="msg02258.shtml">Date Prev</A>][<A HREF="msg02260.shtml">Date Next</A>][<A HREF="msg02258.shtml">Thread Prev</A>][<A HREF="msg02263.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Recommended handling of sites with subdirs?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Jun 2001 07:16:21 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+Hi everybody,
+
+I've been using wml for a couple of years now, mostly for the site at
+www.aspetersen.de
+
+So far the site was small enough to have all html files in the root
+dir of the site. But with further additions coming up, I want to
+structure the new material into subdirectories.
+
+The question is, what's the best way to support such a directory
+structure, meaning what's the best way to get all the paths and links
+right?
+
+Using subdirectories affects the template file, the navbar code, and
+some general "macros". Sometimes you need to know the name of the
+subdirectory to prepend it to links, sometimes you need to know how
+many levels you are away from your document root dir to prepend the
+correct number of "../"s.
+
+I'll still have my one standard template, navbar, and misc. include
+files loaded into each wml file. I'm using Gnu make and Makefiles to
+process all wml files, but I would like to stick with one Makefile,
+not resorting to recursive make calls. I also automatically create
+text-only versions of the pages, which are stored in a textonly/
+subdirectory. And last but not least, I like to stick with relative
+links and path info, if possible, because this way the ready-made site
+can be checked easier locally.
+
+What's the recommended way to do it, or your favorite way? What's the
+best way to get all the proper path and subdir information into the
+various #include-d wml files?
+
+Thanks in advance for any pointers,
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02263" HREF="msg02263.shtml">Re: Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02258.shtml">Re: Problem with ifeq</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02260.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02258.shtml">Re: Problem with ifeq</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02263.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02259"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02259"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

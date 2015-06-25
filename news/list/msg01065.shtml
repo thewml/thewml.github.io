@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: file permissions -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Fri, 15 Oct 1999 16:02:46 +0200 (MET DST) -->
+<!--X-Message-Id: 19991014182117.B1411@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199910130655.CAA25283@ursa.calvin.edu -->
+<!--X-Reference: rvbijl39@calvin.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01065">Date Index</a>][<a href="thrd22.shtml#01065">Thread Index</a>]<br>
+[<A HREF="msg01066.shtml">Date Prev</A>][<A HREF="msg01067.shtml">Date Next</A>][<A HREF="msg01057.shtml">Thread Prev</A>][<A HREF="msg01058.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: file permissions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Oct 1999 18:21:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Wed, Oct 13, 1999 at 02:55:37AM -0400, Ryan VanderBijl contaba:
+
+&gt;Is there any trick to having wmk (or wml, or whoever) to make the 
+&gt;output file with 0644 permissions? I've noticed that wmk is smart
+&gt;enought to make wml take in foobar.wml and output foobar.html, but
+&gt;when that happens the file permissions are just 0600. 
+
+¿Using `umask'?
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+10/14	British Computer Society founded, 1957
+10/14	Frump Day. 
+10/14	(10/14/1890) Dwight David Eisenhower, 34th president. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01055" HREF="msg01055.shtml">file permissions</A></strong>, <em>From:</em> Ryan VanderBijl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01066.shtml">Re: showing comments in HTML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01067.shtml">[BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01057.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01058.shtml">WML site?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01065"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01065"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

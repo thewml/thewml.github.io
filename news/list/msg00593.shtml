@@ -1,0 +1,205 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: using WML for the first time! -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 27 Apr 1999 11:41:49 +0200 (MET DST) -->
+<!--X-Message-Id: m1aevuxuw9.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 4.1.19990426002714.011e4360@autopc.eden.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00593">Date Index</a>][<a href="thrd13.shtml#00593">Thread Index</a>]<br>
+[<A HREF="msg00592.shtml">Date Prev</A>][<A HREF="msg00594.shtml">Date Next</A>][<A HREF="msg00592.shtml">Thread Prev</A>][<A HREF="msg00594.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: using WML for the first time!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 27 Apr 1999 11:41:42 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Alessio Sangalli &lt;manoweb@iname.com&gt; writes:
+
+&gt; I was writing an HTML generation tool, when I heard about WML. My
+&gt; program was only at the beginning, so I decided to abandon it to
+&gt; explore WML capabilities.
+
+Good decision!
+ 
+&gt; Now I've read the tutorial and the documentation. I have to read
+&gt; everithing another couple of times, but I'll be very happy if
+&gt; someone could help me find the right solution for my problem. WML is
+&gt; a so "big" program that I'm confused about the capabilities it can
+&gt; offer.
+
+That's not surprising. What you should do is go to the WML-sites pages
+and look at some of the places that implemented a site that looks a
+bit like what you have in mind. Get the wml source files and look at
+them. Don't forget to get the include files that are referenced in the
+.wml files (look for use and include statements). Those are the key!
+
+&gt; I have a default-document structure, wich I can say is:
+&gt; 
+&gt; GIF image
+&gt; Index Actual text Language selection 
+&gt; Address...
+&gt; 
+&gt; 
+&gt; I have to write 6-7 pages in 5 different languages, but the structure of
+&gt; the document is always the same. Only "Actual text" changes from page to
+&gt; page and "Index" changes from language to language.
+ 
+&gt; How can I use WML to write only the text I need and let it generate
+&gt; the rest???
+
+You can create a template that deals with all the layout and stuff,
+defines your own tags if you need some, redefines existing html tags,
+etc.
+
+Then you just include this template file in your .wml files, specify
+the actual text part and you are done.
+
+Here is a sketch how such a file would look:
+
+
+----------
+#!wml -oLANG_VAR:%BASE.var -o(ALL-LANG_*)+LANG_EN:%BASE.en.html \
+      -o(ALL-LANG_*)+LANG_DE:%BASE.de.html
+      -o(ALL-LANG_*)+LANG_IT:%BASE.it.html
+
+#include &lt;$(ROOT)/.wml/template-alessio.inc&gt;
+
+&lt;de&gt;Text in German.&lt;/de&gt;
+
+&lt;en&gt;Text in English.&lt;/en&gt;
+
+&lt;it&gt;Text in Italian.&lt;/it&gt;
+---------
+
+And that's it!!!
+
+You GIF image and address section are only entered once in the
+template. Your template file has also to deal with automatic
+generation of languages, the first line in the above example uses that
+and tells wmk to deal with the languages.
+
+For languages you have two options:
+
+You can either put all the page content between the language tags, so
+you have basically 5 sections in the file if you have 5 languages.
+
+I personally recommend another approach:
+
+Put all languages inside the structural elements. This has the
+advantage, that you never (should) forget to update the various
+languages if you change something in a file. So this is what I'd do:
+
+
+&lt;H1&gt;&lt;de&gt;Title in German&lt;/de&gt;&lt;en&gt;Title in English&lt;/en&gt;&lt;it&gt;Title in
+Italian&lt;/it&gt;&lt;/H1&gt;
+
+&lt;P&gt;
+&lt;de&gt;German text&lt;/de&gt;
+&lt;en&gt;English text&lt;/en&gt;
+&lt;it&gt;Italian text&lt;/it&gt;
+&lt;/P&gt;
+
+&lt;H2&gt;&lt;de&gt;Subtitle in German&lt;/de&gt;&lt;en&gt;Subtitle in
+English&lt;/en&gt;&lt;it&gt;Subtitle in Italian&lt;/it&gt;&lt;/H2&gt;
+
+
+&lt;P&gt;
+&lt;de&gt;German text&lt;/de&gt;
+&lt;en&gt;English text&lt;/en&gt;
+&lt;it&gt;Italian text&lt;/it&gt;
+&lt;/P&gt;
+
+&lt;P&gt;
+&lt;de&gt;German text&lt;/de&gt;
+&lt;en&gt;English text&lt;/en&gt;
+&lt;it&gt;Italian text&lt;/it&gt;
+&lt;/P&gt;
+
+
+etc
+
+
+You might want to look at our site
+
+<A  HREF="http://www.ee.ethz.ch/student-computing">http://www.ee.ethz.ch/student-computing</A> 
+
+for a rather elaborate example of a multi-language site. We are still
+actively working on a cleanup of the WML-code, so beware, things might
+change.
+
+
+Cheers,
+Fritz
+
+P.S.: And YES, WML offers you many features, you should invest some
+      time in learning in. The more web sites I am working on the more
+      I realize that learning WML is time well spent.
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00592" HREF="msg00592.shtml">using WML for the first time!</A></strong>, <em>From:</em> Alessio Sangalli</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00592.shtml">using WML for the first time!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00594.shtml">how to apply patch-SNAP to wml-1.6.8?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00592.shtml">using WML for the first time!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00594.shtml">how to apply patch-SNAP to wml-1.6.8?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00593"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00593"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

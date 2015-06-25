@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with including files -->
+<!--X-From-R13: "Bnjry Frpmn" <cnjry.grpmnNcbpmgn.sz> -->
+<!--X-Date: Mon, 27 Aug 2001 12:17:26 +0200 (MET DST) -->
+<!--X-Message-Id: 004b01c12edc$c9661d80$3a140b0a@ptecza -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: XFMail.010827112004.jh@inetcom.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02379">Date Index</a>][<a href="thrd48.shtml#02379">Thread Index</a>]<br>
+[<A HREF="msg02378.shtml">Date Prev</A>][<A HREF="msg02380.shtml">Date Next</A>][<A HREF="msg02378.shtml">Thread Prev</A>][<A HREF="msg02382.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with including files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Pawel Tecza&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 11:43:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; The directive must begin in column 1.
+&gt; Instead of
+&gt;
+&gt;    #include '....'
+&gt;
+&gt; use
+&gt;
+&gt; #include '...'
+
+Really? I haven't known it is so simply. I'll try it later at my home,
+because now I'm hard working ;-)
+
+Thanks a lot for your help
+Regards
+
+Pawel Tecza
+
+
+
+---------------------------------------------------
+<A  HREF="http://POCZTA.interia.pl/">http://POCZTA.interia.pl/</A> - sa powody by korzystac!
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02378" HREF="msg02378.shtml">RE: Problem with including files</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02378.shtml">RE: Problem with including files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02380.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02378.shtml">RE: Problem with including files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02382.shtml">Questions about navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02379"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02379"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

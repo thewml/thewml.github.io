@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Perl in xtable -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Wed, 17 Feb 1999 18:53:10 +0100 (CET) -->
+<!--X-Message-Id: m1ogmssz1g.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.3.96.990217124113.8742C&#45;100000@illiac.uni&#45;paderborn.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00398">Date Index</a>][<a href="thrd9.shtml#00398">Thread Index</a>]<br>
+[<A HREF="msg00397.shtml">Date Prev</A>][<A HREF="msg00399.shtml">Date Next</A>][<A HREF="msg00397.shtml">Thread Prev</A>][<A HREF="msg00399.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Perl in xtable</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 17 Feb 1999 18:47:07 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Carsten Frewert &lt;frewi@uni-paderborn.de&gt; writes:
+
+I assume that &lt;xtable&gt; is itself defined in Perl. No perl-tag can use
+Perl inside as ePerl does not support nesting at this point.
+
+Fritz
+
+&gt; I can't use any Perl statements inside a &lt;xtable&gt; &lt;/xtable&gt;.
+&gt; 
+&gt; wml exits with the following message:
+&gt; 
+&gt; &gt; ePerl:Error: Perl parsing error (interpreter rc=2)
+&gt; &gt;
+&gt; &gt; ---- Contents of STDERR channel: ---------
+&gt; &gt; Can't find string terminator "__XTABLE__EOT" anywhere before EOF at
+&gt; &gt; /tmp/wml.11585.tmp1 line 541.
+&gt; &gt; ------------------------------------------
+&gt; &gt; ** WML:Break: Error in Pass 3 (rc=74).
+&gt; 
+&gt; The same perl-code outside the xtable runs fine.
+&gt; 
+&gt; Can someone reproduce this behaviour?
+&gt; 
+&gt; Oops, I'm using wml 1.6.8 with perl 5.004_04
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00399" HREF="msg00399.shtml">Re: Perl in xtable</A></strong>, <em>From:</em> Carsten Frewert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00397" HREF="msg00397.shtml">Perl in xtable</A></strong>, <em>From:</em> Carsten Frewert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00397.shtml">Perl in xtable</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00399.shtml">Re: Perl in xtable</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00397.shtml">Perl in xtable</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00399.shtml">Re: Perl in xtable</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00398"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00398"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

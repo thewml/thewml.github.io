@@ -1,0 +1,155 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: navbar problem with non&#45;HTTP URLs (patch included) -->
+<!--X-From-R13: Rnir Bybaxn <cybaxnNqbvg.jvfp.rqh> -->
+<!--X-Date: Sat, 17 Jul 1999 00:23:03 +0200 (MET DST) -->
+<!--X-Message-Id: 19990716172257.A18398@doit.wisc.edu -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00857">Date Index</a>][<a href="thrd18.shtml#00857">Thread Index</a>]<br>
+[<A HREF="msg00856.shtml">Date Prev</A>][<A HREF="msg00858.shtml">Date Next</A>][<A HREF="msg00861.shtml">Thread Prev</A>][<A HREF="msg00863.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>navbar problem with non-HTTP URLs (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Dave Plonka &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 16 Jul 1999 17:22:57 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+WML users,
+
+In working with navbars I noticed that it messes up "absolute" URLs
+on buttons unless they are use HTTP as in "http://...".  I wanted one of
+my navbar buttons to go to an *ftp* URL, as in:
+
+   &lt;navbar:button ...  url=<A  HREF="ftp://ftp.my.domain/pub">ftp://ftp.my.domain/pub</A> ...&gt;
+
+The root of the problem is in "wml_include/des/navbar.src" which contains
+a quick and dirty regexp which decides that a URL is absolute only if it
+contains "http".  ("navbar.wml" proceeds to tweak the value of what it
+thinks are "relative" URLs - which breaks non-http ones.)
+
+I decied to patch "navbar.wml" to "use URI" (a popular perl module) to
+properly parse the URL to determine if it is really absolute or relative.
+
+The patch is attached.  Note that this patch does *require* that you
+install "URI.pm" (see CPAN).
+
+[I'll submit this as a bug using the web form as well, it's just easier
+ to attach the patch using an MUA.]
+
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+</PRE>
+<PRE>
+*** wml_include/des/navbar.src_djp	Mon Jun 28 06:12:34 1999
+--- wml_include/des/navbar.src	Fri Jul 16 16:52:37 1999
+***************
+*** 376,381 ****
+--- 376,382 ----
+  &lt;/define-tag&gt;
+  
+  &lt;:
++ use URI;
+  sub navbar_render {
+      my($name, $select, $subselected, $txtonly, $nohints, $nbcount) = @_;
+  
+***************
+*** 458,466 ****
+              $img[1] = $img[0] 
+          }
+          for ($i = 0; $i &lt;= $#img; $i++) {
+!             $img[$i] = "$imgbase/$img[$i]" if ($imgbase ne '' and 
+!                                                $img[$i] !~ m;^(http://|/););
+!             $img[$i] = &amp;canonpath($img[$i]) if ($img[$i] !~ m;^http://;);
+          }
+  
+          #   cleanup url information
+--- 459,470 ----
+              $img[1] = $img[0] 
+          }
+          for ($i = 0; $i &lt;= $#img; $i++) {
+! 	    my $uri = URI-&gt;new($img[$i]);
+! 	    if (!ref($uri) || '' eq $uri-&gt;scheme) {
+! 	       # URI has no scheme so it's not an absolute URI reference:
+!                $img[$i] = "$imgbase/$img[$i]" if ($imgbase ne '');
+!                $img[$i] = &amp;canonpath($img[$i]);
+! 	    }
+          }
+  
+          #   cleanup url information
+***************
+*** 468,475 ****
+              $url = $NAVBAR{"$name"}-&gt;{uc($1)};
+          }
+          if ($url ne '') {
+!             $url  = "$urlbase/$url" if ($urlbase ne '' and $url !~ m;^(http://|/););
+!             $url  = &amp;canonpath($url) if ($url !~ m;^http://;);
+          }
+  
+          #   cleanup target information
+--- 472,483 ----
+              $url = $NAVBAR{"$name"}-&gt;{uc($1)};
+          }
+          if ($url ne '') {
+! 	    my $uri = URI-&gt;new($url);
+! 	    if (!ref($uri) || '' eq $uri-&gt;scheme) {
+! 	       # URI has no scheme so it's not an absolute URI reference:
+!                $url  = "$urlbase/$url" if ($urlbase ne '');
+!                $url  = &amp;canonpath($url);
+! 	    }
+          }
+  
+          #   cleanup target information
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00856.shtml">Minor fix for command line options</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00858.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00861.shtml">Re: Minor fix for command line options</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00863.shtml">gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00857"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00857"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

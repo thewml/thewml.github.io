@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [mp4h] Small change in quotes parsing -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 22 Jul 2000 22:55:02 +0200 (MET DST) -->
+<!--X-Message-Id: 20000722225554.A28610@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01857">Date Index</a>][<a href="thrd38.shtml#01857">Thread Index</a>]<br>
+[<A HREF="msg01856.shtml">Date Prev</A>][<A HREF="msg01858.shtml">Date Next</A>][<A HREF="msg01856.shtml">Thread Prev</A>][<A HREF="msg01858.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[mp4h] Small change in quotes parsing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 22 Jul 2000 22:55:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+the files sent by Fritz Zaucker showed that current scheme fails in some
+circumstances. I explain below why and what changes have been made.
+
+Consider 
+  &lt;define-tag hello endtag=required&gt;
+  &lt;: print "Hello, \"%body\"\n"; :&gt;
+  &lt;/define-tag&gt;
+
+  &lt;define-tag message&gt;
+  &lt;preserve from&gt;
+  &lt;preserve text&gt;
+  &lt;set-var %attributes&gt;
+  Message from &lt;get-var from&gt;
+  &lt;BLOCKQUOTE&gt;
+  &lt;get-var message&gt;
+  &lt;/BLOCKQUOTE&gt;
+  &lt;restore text&gt;
+  &lt;restore from&gt;
+  &lt;/define-tag&gt;
+
+Now try to compile
+  &lt;message from=Bob text="&lt;hello&gt;blah blah&lt;/hello&gt;"&gt;
+
+Why does it fail?
+Because macro arguments are first divided into attributes (and quotes
+are removed during this phase), then attributes are expanded.  So this
+line becomes after processing by wml_p2_mp4h
+  Message from Bob
+  &lt;BLOCKQUOTE&gt;
+  &lt;: print Hello, \"blah blah\"
+  ; :&gt;
+  &lt;/BLOCKQUOTE&gt;
+
+The idea is to remember that quotes have a special role in attributes
+only.  So it is safe to mark quotes not residing in attributes as
+immutable, i.e. they are never removed even if they become part of some
+attributes.
+
+It is very simple and this is why i am much more confident with this new
+approach.  But it will break one case, which appears in wml::des::rollover.
+A simpler version is
+  &lt;group "
+  &lt;javascript&gt;
+  function ro_imgNormal(imgName) {
+      if (document.images) {
+          document[imgName].src = eval(imgName + \"_n.src\");
+          self.status = '';
+      }
+  }
+  &lt;/javascript&gt;
+  "&gt;
+
+Now, \" is no more processed as an escaped quote in string (and remember
+how &lt;hello&gt; is defined, we do not want this behaviour anymore).  So it
+must be replaced by normal double quotes.
+This should appear in very rarely.
+
+To prevent other problems with quotes, it is wise to replace double
+quotes by single quotes whenever possible (e.g. in lines above), or by
+Perl q and qq operators.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01856.shtml">Re: mp4h problem with diversions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01858.shtml">[wml] New cool stuff in wml-SNAP</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01856.shtml">Re: mp4h problem with diversions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01858.shtml">[wml] New cool stuff in wml-SNAP</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01857"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01857"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

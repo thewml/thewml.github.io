@@ -1,0 +1,159 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: attribute urlopts in navbar doesn't seem to work -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Thu, 25 Oct 2001 17:24:09 +0200 (MET DST) -->
+<!--X-Message-Id: 3BD82DD6.D8EA195C@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02411">Date Index</a>][<a href="thrd49.shtml#02411">Thread Index</a>]<br>
+[<A HREF="msg02410.shtml">Date Prev</A>][<A HREF="msg02412.shtml">Date Next</A>][<A HREF="msg02415.shtml">Thread Prev</A>][<A HREF="msg02412.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>attribute urlopts in navbar doesn't seem to work</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Oct 2001 17:20:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I would like to use the urlopts feature as follows:
+&lt;navbar:button url="index.html" id=index urlopts="title=titletest"
+hint="MobiliX Start Page" txt="MobiliX"&gt;
+but I can't get it to work. The title tag doesn't occur in the 
+rendered HTML code. I have tried to quote it (
+urlopts="title=\"titletest\"" ),
+but this doesn't help. Do you have any recommendations?
+I have dared to include the complete navbar include file below.
+
+Werner
+
+
+
+&lt;navbar:define name=navbar_li_site imgbase="img/" urlbase="$(ROOT)"
+txtcol_normal="#000000" txtcol_select="#ffffff"&gt;
+
+&lt;navbar:header&gt;
+
+&lt;table cellspacing="0" cellpadding="0" border="0" summary="site
+navigation" bgcolor="#cccccc"&gt;
+&lt;tr valign="top"&gt;
+
+&lt;/navbar:header&gt;
+
+&lt;navbar:prolog&gt;       &lt;td                  &gt;&lt;/navbar:prolog&gt;
+&lt;navbar:prolog type=S&gt;&lt;td bgcolor="#cc3333"&gt;&lt;/navbar:prolog&gt;
+
+&lt;navbar:button url="index.html" id=index urlopts="title=titletest"
+hint="MobiliX Start Page" txt="MobiliX"&gt;
+&lt;navbar:button url="howtos.html" id=howtos urlopts="title=titletest"
+hint="Linux-Mobile-Guide, InfraRed-HOWTO, ..." txt="HOWTOs"&gt;
+&lt;navbar:button url="mylaptops.html" id=mylaptops
+urlopts="title=titletest" hint="Linux Laptop Descriptions"
+txt="Laptops"&gt;
+&lt;navbar:button url="pda_linux.html" id=pda_linux
+urlopts="title=titletest" hint="Linux PDA Descriptions, Accessories,
+..." txt="PDAs"&gt;
+&lt;navbar:button url="phones_linux.html" id=phones_linux
+urlopts="title=titletest" hint="Linux Connections to (Cell) Phones, SMS
+Tools, Telephony Server, ...." txt="Cell Phones"&gt;
+&lt;navbar:button url="hardware.html" id=hardware urlopts="title=titletest"
+hint="PCMCIA Cards, InfraRed Devices, Hard Disks, Internal Modems,
+Accessories, ... for Laptops and PDAs" txt="Hardware"&gt;
+&lt;navbar:button url="software.html" id=software urlopts="title=titletest"
+hint="Linux Software for Mobile Users (Kernel, ...)" txt="Software"&gt;
+&lt;navbar:button url="misc.html" id=misc urlopts="title=titletest"
+hint="Stolen Laptop Databases, Debian-Laptop-Proposal, ..." txt="Misc"&gt;
+&lt;navbar:button url="mobile_news.html" id=mobile_news
+urlopts="title=titletest" hint="News for Mobile Users" txt="News"&gt;
+&lt;navbar:button url="mobilix_ml.html" id=mobilix_ml
+urlopts="title=titletest" hint="`linux-laptop@mobilix.org` Mailing List,
+(NewsLetter)" txt="Mailing Lists"&gt;
+&lt;navbar:button url="book_linux.html" id=book_linux
+urlopts="title=titletest" hint="A Fine Selection of Linux Books."
+txt="Books"&gt;
+&lt;navbar:button url="mobilix_search.html" id=mobilix_search
+urlopts="title=titletest" hint="Search Engine, A-Z Index, Sitemap."
+txt="Search"&gt;
+
+&lt;navbar:epilog&gt;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&amp;middot;&amp;nbsp;&lt;/td&gt;&lt;/navbar:epilog&gt;
+&lt;navbar:epilog type=S&gt;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&amp;middot;&amp;nbsp;&lt;/td&gt;&lt;/navbar:epilog&gt;
+&lt;navbar:epilog pos=12&gt;&lt;/td&gt;&lt;/navbar:epilog&gt;
+
+&lt;navbar:footer&gt;
+
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/navbar:footer&gt;
+
+&lt;/navbar:define&gt;
+
+&lt;navbar:render name=$(name) select=$(select) txtonly&gt;
+
+-- 
+|=| Werner Heuser = Keplerstr. 11A = D-10589 Berlin = Germany
+|=| &lt;wehe@mobilix.org&gt;         T. +49-30-3495386
+|=| <A  HREF="http://MobiliX.org">http://MobiliX.org</A>         Linux-Mobile-Guide
+|=| <A  HREF="http://Xtops.DE">http://Xtops.DE</A>            Laptops und PDAs mit Linux
+|*| This is no time for phony rhetoric -- Lou Reed
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02412" HREF="msg02412.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02410.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02412.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02415.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02412.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02411"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02411"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

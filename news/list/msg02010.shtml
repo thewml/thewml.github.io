@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Mehrsprachiger Navigationbar -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 2 Oct 2000 10:45:53 +0200 (MET DST) -->
+<!--X-Message-Id: 20001002104728.B22556@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39D5EE1B.215A465@ik1.fzk.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02010">Date Index</a>][<a href="thrd41.shtml#02010">Thread Index</a>]<br>
+[<A HREF="msg02009.shtml">Date Prev</A>][<A HREF="msg02011.shtml">Date Next</A>][<A HREF="msg02002.shtml">Thread Prev</A>][<A HREF="msg02003.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Mehrsprachiger Navigationbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Oct 2000 10:47:28 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Sep 30, 2000 at 03:43:55PM +0200, Kai Daumiller wrote:
+
+&gt; Hallo,
+&gt; 
+&gt; ich versuche gerade mit WML 2.0.3 mehrsprachige Seiten mit navigation
+&gt; bars zu
+&gt; erstellen:
+&gt; 
+&gt; &lt;lang:set-wildcard "%"&gt; 
+&gt; &lt;navbar:button
+&gt;        id=home                                                           
+&gt;        url="&lt;lang:star:href: index.%.html|index.html&gt;"                   
+&gt;        img="&lt;lang:star:
+&gt;        button-home-%-*.gif&gt;"                            
+&gt;        name=&lt;en: "Home"&gt;&lt;de: "Startseite"&gt;                               
+&gt;        hint=&lt;en: "Home"&gt;&lt;de: "Startseite"&gt;                               
+&gt;        &gt;                                      
+&gt; &lt;lang:set-wildcard&gt;
+&gt; 
+&gt; Bei den Buttons wird dabei aber nur das % Zeichen korrekt aufgeloest,
+&gt; der * bleibt als Teil des Filenamens erhalten.
+&gt; Mache ich was falsch, oder geht das nicht?
+
+The latter, because the img attribute cannot contain language wildcard.
+IMO the best way to perform multilingual navbars is to define a navbar
+per language, and call each one in the right context, e.g.
+  &lt;navbar:define name=main-en&gt;
+  &lt;navbar:button
+         id=home                                                           
+         url="index.en.html"                   
+         img="home-en-*.gif"                            
+         name="Home"
+         hint="Home"
+         &gt;                                      
+   ...
+  &lt;/navbar:define&gt;
+  &lt;navbar:define name=main-de&gt;
+  &lt;navbar:button
+         id=home                                                           
+         url="index.de.html"                   
+         img="home-de-*.gif"                            
+         name="Startseite"
+         hint="Startseite"
+         &gt;                                      
+   ...
+  &lt;/navbar:define&gt;
+
+  &lt;en&gt;&lt;navbar:render name=main-en&gt;&lt;/en&gt;
+  &lt;de&gt;&lt;navbar:render name=main-de&gt;&lt;/de&gt;
+
+But maybe someone else has a better solution.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02002" HREF="msg02002.shtml">Mehrsprachiger Navigationbar</A></strong>, <em>From:</em> Kai Daumiller</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02009.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02011.shtml">Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02002.shtml">Mehrsprachiger Navigationbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02003.shtml">Multilangual Problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02010"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02010"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

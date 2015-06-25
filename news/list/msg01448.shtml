@@ -1,0 +1,162 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: I cannot get navbar to work -->
+<!--X-From-R13: Brgre Bbhyfra <crgre_cbhyfraNznvy1.fgbsnarg.qx> -->
+<!--X-Date: Sun, 19 Mar 2000 16:59:13 +0100 (MET) -->
+<!--X-Message-Id: 00031916541500.12431@alexander -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01448">Date Index</a>][<a href="thrd30.shtml#01448">Thread Index</a>]<br>
+[<A HREF="msg01447.shtml">Date Prev</A>][<A HREF="msg01449.shtml">Date Next</A>][<A HREF="msg01450.shtml">Thread Prev</A>][<A HREF="msg01456.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>I cannot get navbar to work</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Peter Poulsen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 19 Mar 2000 16:43:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I have an include file called menu.inc looking like this:
+
+&lt;menu:define name=main imgbase="../images/" urlbase="./"&gt;
+ &lt;menu:header&gt;
+  &lt;table cellspacing=1 cellpadding=2 border=0&gt;
+  &lt;tr&gt;
+ &lt;/menu:header&gt;
+
+ &lt;menu:prolog&gt;        &lt;td bgcolor="#cccccc"&gt; &lt;/menu:prolog&gt;
+ &lt;menu:prolog type=S&gt; &lt;td bgcolor="#cc3333"&gt; &lt;/menu:prolog&gt;
+
+ &lt;menu:button id=nyheder	url="nyheder/" 	hint="Nyheder" 	img=nyheder_inaktiv.jpg:nyheder_aktiv.jpg:nyheder_aktiv.jpg&gt;
+ &lt;menu:button id=links 		url="links/" 	hint="Links" 	img=links_inaktiv.jpg:links_aktiv.jpg:links_aktiv.jpg&gt;
+ &lt;menu:button id=adresser 	url="adresser/" 	hint="Adresser" 	img=adresser_inaktiv.jpg:adresser_aktiv.jpg:adresser_aktiv.jpg&gt;
+ &lt;menu:button id=arkiv 		url="arkiv/" 	hint="Arkiv" 	img=arkiv_inaktiv.jpg:arkiv_aktiv.jpg:arkiv_aktiv.jpg&gt;
+ &lt;menu:button id=aktiviteter 	url="aktiviteter/" 	hint="Aktiviteter" img=aktiviteter_inaktiv.jpg:aktiviteter_aktiv.jpg:aktiviteter_aktiv.jpg&gt;
+
+ &lt;menu:epilog&gt; &lt;/td&gt; &lt;/menu:epilog&gt;
+
+ &lt;menu:footer&gt;
+  &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/menu:footer&gt;
+
+&lt;/menu:define&gt;
+
+&lt;menu:render name=$(name) select=$(select)&gt;
+
+and a file called index.wml, looking like this:
+
+#use wml::std::page
+#use wml::des::navbar
+&lt;html&gt;
+&lt;body&gt;
+#include "../menu.inc" name=main select=nyheder
+
+&lt;h1&gt;Nyheder&lt;/h1&gt;
+
+&lt;p&gt;
+Her kan du finde sidste nyt i vores lokal-forening.
+&lt;/body&gt;
+&lt;/html&gt;
+
+I then run: 
+wmk index.wml
+and get this output, which never will give me a navbar:
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;menu:define name="main" imgbase="../images/" urlbase="./"&gt;
+ &lt;menu:header&gt;
+  &lt;table cellspacing="1" cellpadding="2" border="0"&gt;
+  &lt;tr&gt;
+ &lt;/menu:header&gt;
+ &lt;menu:prolog&gt;        &lt;td bgcolor="#cccccc"&gt; &lt;/menu:prolog&gt;
+ &lt;menu:prolog type="S"&gt; &lt;td bgcolor="#cc3333"&gt; &lt;/menu:prolog&gt;
+ &lt;menu:button id="nyheder" txt="Nyheder" url="nyheder/" hint="Nyheder" img="nyheder_inaktiv.jpg:nyheder_aktiv.jpg:nyheder_aktiv.jpg"&gt;
+ &lt;menu:button id="links" url="links/" hint="Links" img="links_inaktiv.jpg:links_aktiv.jpg:links_aktiv.jpg"&gt;
+ &lt;menu:button id="adresser" url="adresser/" hint="Adresser" img="adresser_inaktiv.jpg:adresser_aktiv.jpg:adresser_aktiv.jpg"&gt;
+ &lt;menu:button id="arkiv" url="arkiv/" hint="Arkiv" img="arkiv_inaktiv.jpg:arkiv_aktiv.jpg:arkiv_aktiv.jpg"&gt;
+ &lt;menu:button id="aktiviteter" url="aktiviteter/" hint="Aktiviteter" img="aktiviteter_inaktiv.jpg:aktiviteter_aktiv.jpg:aktiviteter_aktiv.jpg"&gt;
+ &lt;menu:epilog&gt; &lt;/td&gt; &lt;/menu:epilog&gt;
+ &lt;menu:footer&gt;
+  &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/menu:footer&gt;
+&lt;/menu:define&gt;
+&lt;menu:render name="main" select="nyheder"&gt;
+&lt;h1&gt;Nyheder&lt;/h1&gt;
+&lt;p&gt;
+Her kan du finde sidste nyt i vores lokal-forening.
+&lt;/body&gt;
+
+
+I'm sorry about the bunce of code but I have no clue where there error is. Please help.
+
+
+-- 
+yours/mvh
+Peter Poulsen
+Aalborg, Denmark
+
+E-mail: peter_poulsen@mail1.stofanet.dk
+Phone: +45 98 15 47 05
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01456" HREF="msg01456.shtml">Re: I cannot get navbar to work</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01459" HREF="msg01459.shtml">Re: I cannot get navbar to work</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01447.shtml">Pass parameter -k to eperl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01449.shtml">Re: Upgrade problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01450.shtml">Re: Pass parameter -k to eperl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01456.shtml">Re: I cannot get navbar to work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01448"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01448"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

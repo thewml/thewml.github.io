@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: First attempt to allow nested ePerl commands -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 26 Oct 1999 10:49:18 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991026020348.16805A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01095">Date Index</a>][<a href="thrd23.shtml#01095">Thread Index</a>]<br>
+[<A HREF="msg01094.shtml">Date Prev</A>][<A HREF="msg01096.shtml">Date Next</A>][<A HREF="msg01094.shtml">Thread Prev</A>][<A HREF="msg01097.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>First attempt to allow nested ePerl commands</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Oct 1999 02:20:57 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i committed changes tonight to allow nested ePerl commands. This is very
+experimental, but if some people are interested, feel free to test it.
+I do not have time to perform huge tests now, so wml-SNAP could be
+unstable for some days.
+
+Changed modules are
+   des/gfont.src
+   des/imgbg.src
+   des/imgdot.src
+   des/lowsrc.src
+   des/navbar.src
+   des/typography.src
+   fmt/verbatim.src
+   fmt/xtable.src
+   std/grid.src
+   std/info.src
+   std/logo.src
+   std/tags.src
+
+Others will be updated ASAP.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01094.shtml">Re: perl(EUC JP) trouble</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01096.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01094.shtml">Re: perl(EUC JP) trouble</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01097.shtml">replacement of gfont using TrueType fonts</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01095"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01095"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

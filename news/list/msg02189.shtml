@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Compile Problems -->
+<!--X-From-R13: Dbqtre Sgm&#45;Pebja <ebqtreroNyvahkgnt.bet> -->
+<!--X-Date: Wed, 4 Apr 2001 16:02:03 +0200 (MET DST) -->
+<!--X-Message-Id: 20010404160141.A31355@hydra.linuxtag.uni&#45;kl.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02189">Date Index</a>][<a href="thrd44.shtml#02189">Thread Index</a>]<br>
+[<A HREF="msg02188.shtml">Date Prev</A>][<A HREF="msg02190.shtml">Date Next</A>][<A HREF="msg02188.shtml">Thread Prev</A>][<A HREF="msg02190.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Compile Problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rodger Etz-Brown &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 4 Apr 2001 16:01:41 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all,
+
+I am trying to compile WML Ver. 2.0.6 from a tar ball that I downloaded from
+the main site.
+
+I made sure that I have got all the prerequisits that the INSTALL doc suggests.
+
+Unfortunately, after I configured (./configure --prefix=/usr/) I made make.
+
+It stops and the last chunk of messages is below. Any ideas anybody?
+
+Thanks in advance,
+REB
+
+===&gt; wml_common/gd (all)
+Checking if your kit is complete...
+Looks good
+Writing Makefile for libgd
+Writing Makefile for WML::GD
+make[2]: Entering directory `/usr/src/wml-2.0.6/wml_common/gd'
+mkdir blib
+mkdir blib/lib
+mkdir blib/lib/WML
+mkdir blib/arch
+mkdir blib/arch/auto
+mkdir blib/arch/auto/WML
+mkdir blib/arch/auto/WML/GD
+mkdir blib/lib/auto
+mkdir blib/lib/auto/WML
+mkdir blib/lib/auto/WML/GD
+cp GD.pm blib/lib/WML/GD.pm
+AutoSplitting blib/lib/WML/GD.pm (blib/lib/auto/WML/GD)
+DEFINE='-DHAVE_LIBPNG=1 '; export DEFINE INC; \
+cd libgd &amp;&amp; make -e
+make[3]: Entering directory `/usr/src/wml-2.0.6/wml_common/gd/libgd'
+gcc -c  -fno-strict-aliasing -O2 -march=i386 -mcpu=i686     -DVERSION=\"0.10\"
+-DXS_VERSION=\"0.10\" -fPIC -I/usr/lib/perl5/5.6.0/i386-linux/CORE
+-DHAVE_LIBPNG=1  gd.c
+gcc -c  -fno-strict-aliasing -O2 -march=i386 -mcpu=i686     -DVERSION=\"0.10\"
+-DXS_VERSION=\"0.10\" -fPIC -I/usr/lib/perl5/5.6.0/i386-linux/CORE
+-DHAVE_LIBPNG=1  gd_gif.c
+gcc -c  -fno-strict-aliasing -O2 -march=i386 -mcpu=i686     -DVERSION=\"0.10\"
+-DXS_VERSION=\"0.10\" -fPIC -I/usr/lib/perl5/5.6.0/i386-linux/CORE
+-DHAVE_LIBPNG=1  gd_png.c
+In file included from gd_png.c:8:
+/usr/include/png.h:278:18: zlib.h: No such file or directory
+make[3]: *** [gd_png.o] Error 1
+make[3]: Leaving directory `/usr/src/wml-2.0.6/wml_common/gd/libgd'
+make[2]: *** [libgd/libgd.a] Error 2
+make[2]: Leaving directory `/usr/src/wml-2.0.6/wml_common/gd'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/usr/src/wml-2.0.6/wml_common'
+make: *** [all] Error 1
+
+
+-- 
+ Rodger Etz-Brown                               LinuxTag-Team
+ email: rodgereb@linuxtag.de                    phone: +49-631-3109371
+ <A  HREF="http://www.linuxtag.org/">http://www.linuxtag.org/</A>                       fax: +49-631-3109372
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02190" HREF="msg02190.shtml">Re: Compile Problems</A></strong>, <em>From:</em> Rodger Etz-Brown</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02188.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02190.shtml">Re: Compile Problems</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02188.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02190.shtml">Re: Compile Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02189"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02189"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

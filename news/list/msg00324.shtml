@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML, HOME~ and the redirections -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 15 Jan 1999 11:44:33 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990115093151.514B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199901121610.RAA31833@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00324">Date Index</a>][<a href="thrd7.shtml#00324">Thread Index</a>]<br>
+[<A HREF="msg00323.shtml">Date Prev</A>][<A HREF="msg00325.shtml">Date Next</A>][<A HREF="msg00304.shtml">Thread Prev</A>][<A HREF="msg00305.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML, HOME~ and the redirections</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Jan 1999 09:35:22 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 12 Jan 1999, Stephane Bortzmeyer wrote:
+
+&gt; The problem is that HOME is expansed at compile time, in the directory of 
+&gt; forbidden.wml. It makes:
+&gt; &lt;A HREF="../search/"&gt;
+[...]
+
+Stephane, if the server does not tell the client where he actually is,
+all relative links will be broken. So an absolute URL is the only solution
+i found to this problem.
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00304" HREF="msg00304.shtml">WML, HOME~ and the redirections</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00323.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00325.shtml">Re: Combining slices and divert</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00304.shtml">WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00305.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00324"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00324"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

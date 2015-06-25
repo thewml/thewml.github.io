@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Script to upgrade from WML 1.x to 2.x -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 3 Oct 2000 14:41:27 +0200 (MET DST) -->
+<!--X-Message-Id: 20001003144313.A27160@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001003000829.A25004@imacs.polytechnique.fr -->
+<!--X-Reference: 39D9C55F.1905D10C@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02013">Date Index</a>][<a href="thrd41.shtml#02013">Thread Index</a>]<br>
+[<A HREF="msg02012.shtml">Date Prev</A>][<A HREF="msg02014.shtml">Date Next</A>][<A HREF="msg02012.shtml">Thread Prev</A>][<A HREF="msg02014.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Script to upgrade from WML 1.x to 2.x</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 3 Oct 2000 14:43:14 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Oct 03, 2000 at 12:39:11PM +0100, Werner Heuser wrote:
+&gt; Denis Barbier wrote:
+&gt; &gt; 
+&gt; &gt; Hi,
+&gt; &gt; 
+&gt; &gt; i eventually wrote a script to help upgrading to WML 2.x.
+&gt; Hi Denis,
+&gt; 
+&gt; I tried the new conversion script and it worked great. Thank you.
+
+Cool.
+
+&gt; BTW: WML 2.0.4 still contains a glitch in the -O4 option.
+&gt; After a &lt; a href .. &gt; .. &lt;/a&gt; construct the blank sign gets
+&gt; removed :(
+
+In fact i do not know what to do with this flag, so i prefer not to
+change its behaviour. Maybe a reasonable solution would be to
+  - remove spaces after begin tag and before closing tag (for container
+    tags)
+  - leave spaces around simple tags.
+But then what to do with HTML tags having an optional closing tag?
+
+It sounds really painful, and external tools (like tidy) are much more
+suited for this task. So do not expect wml_p8_htmlstrip to support
+optimization level higher than 2.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02014" HREF="msg02014.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02011" HREF="msg02011.shtml">Script to upgrade from WML 1.x to 2.x</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02012" HREF="msg02012.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02012.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02014.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02012.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02014.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02013"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02013"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

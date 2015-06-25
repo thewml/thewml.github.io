@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <text> broken in WML 2? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 28 Aug 2000 21:24:42 +0200 (MET DST) -->
+<!--X-Message-Id: 20000828212739.A20084@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200008281459.QAA21416@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01915">Date Index</a>][<a href="thrd39.shtml#01915">Thread Index</a>]<br>
+[<A HREF="msg01914.shtml">Date Prev</A>][<A HREF="msg01916.shtml">Date Next</A>][<A HREF="msg01914.shtml">Thread Prev</A>][<A HREF="msg01917.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;text&gt; broken in WML 2?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 28 Aug 2000 21:27:39 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Aug 28, 2000 at 04:59:17PM +0200, Stephane Bortzmeyer wrote:
+
+&gt; In WML 1, the following code worked fine and used txt2html to guess good HTML:
+&gt; 
+&gt; 
+&gt; #use wml::fmt::text
+&gt; 
+&gt; &lt;text&gt;
+&gt; foo@bar
+&gt; &lt;/text&gt;
+&gt; 
+&gt; 
+&gt; In WML 2, it now crashes:
+&gt; 
+&gt; 				
+&gt; wallis:/tmp&gt; wml toto.wml
+&gt; ePerl:Error: Perl parsing error (interpreter rc=255)
+&gt; 
+&gt; ---- Contents of STDERR channel: ---------
+&gt; In string, @bar now must be written as \@bar at /tmp/wml.24256.tmp1.wml line 
+&gt; 122, near "foo@bar"
+&gt; Execution of /tmp/wml.24256.tmp1.wml aborted due to compilation errors.
+&gt; ------------------------------------------
+&gt; ** WML:Break: Error in Pass 3 (rc=74).
+&gt; 
+&gt; 
+&gt; I certainly do not want to Perl-escape all my files. I use &lt;text&gt; precisely to 
+&gt; convert anything, including email addresses.
+
+Indeed, here is a patch. The same problem occurs with some other modules
+too.
+Thanks for the point.
+
+--- wml_include/fmt/text.src    2000/07/21 23:25:10     1.12
++++ wml_include/fmt/text.src    2000/08/28 19:20:41
+@@ -43,7 +43,7 @@
+     my $notypo = (qq|&lt;get-var notypo /&gt;| eq '' ? 1 : 0);
+ 
+     my $buf;
+-    &lt;perl:assign $buf&gt;%body&lt;/perl:assign&gt;
++    &lt;perl:assign:sq $buf&gt;%body&lt;/perl:assign:sq&gt;
+ 
+     #   there is no reason to nest &lt;text&gt; tags, so the &lt;perl:print&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01914" HREF="msg01914.shtml">&lt;text&gt; broken in WML 2?</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01914.shtml">&lt;text&gt; broken in WML 2?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01916.shtml">Re: slice 1.3.6 hangs on a file</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01914.shtml">&lt;text&gt; broken in WML 2?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01917.shtml">wml editors on windows</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01915"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01915"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

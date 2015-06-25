@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: not expanding $(SOMETHING) in <import> or <fsview> -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Fri, 9 Jul 1999 10:10:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.9907081112360.8283&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990707232607.375C&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00847">Date Index</a>][<a href="thrd17.shtml#00847">Thread Index</a>]<br>
+[<A HREF="msg00846.shtml">Date Prev</A>][<A HREF="msg00848.shtml">Date Next</A>][<A HREF="msg00833.shtml">Thread Prev</A>][<A HREF="msg00848.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 11:20:55 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 8 Jul 1999, Denis Barbier wrote:
+
+[...]
+&gt;&gt; 	so... how to force &lt;import&gt; or &lt;fsview&gt; to show #-starting
+&gt;&gt; 	lines as well as the other ones?
+&gt;
+&gt;Ok, i see now where does your problem come from. Try
+&gt;#use wml::std::page
+&gt;#use wml::std::box
+&gt;#use wml::imp::all
+&gt;&lt;page info title="Test"&gt;
+&gt;&lt;protect pass=4-9&gt;
+&gt;&lt;fsview src="$(WML_SRC_FILENAME)"&gt;
+&gt;&lt;box&gt;
+&gt;&lt;import src="$(WML_SRC_FILENAME)"&gt;
+&gt;&lt;/box&gt;
+&gt;&lt;/protect&gt;
+
+	It's OK now. But, including protected pass numbers in quotes
+	will cause &lt;protect&gt; to ignore them. so, &lt;protect pass=4-9&gt;
+	works, and &lt;protect pass="4-9"&gt; does not. I think wml should
+	be fixed to accept the quotes in &lt;protect&gt; since many people
+	surrounds every attribute with quotes. Just a thought.
+
+&gt;To fix these problems, i see 2 solutions:
+&gt;* Insert &lt;protect pass=4-9&gt;...&lt;/protect&gt; in the wml_fmt_verbatim Perl
+&gt;  subroutine in wml::fmt::verbatim (internally called when the attribute
+&gt;  format=verbatim is set).
+&gt;* Don't suppress sharp/comment-lines inside &lt;pre&gt;...&lt;/pre&gt;
+&gt;
+&gt;The latter is more attractive, but the former is more general. You could
+&gt;then import files containing slice commands, for instance.
+&gt;If there is no objection, i'll implement the former. If you want, try
+
+	&lt;fsview&gt; could be useful for showing the source code of some
+	files, and it generates the link to that file. It would be nice
+	if &lt;fsview&gt; had more options (colors, width etc.)
+
+	Thanks, 
+	Davor
+-- 
+      v
+Davor Cengija
+davor@linuxfan.com
+===================================
+"Please allow 30 days for delivery"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00848" HREF="msg00848.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00833" HREF="msg00833.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00846.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00848.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00833.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00848.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00847"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00847"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

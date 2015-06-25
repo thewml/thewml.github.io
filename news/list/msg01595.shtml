@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Mon, 22 May 2000 13:08:02 +0200 (MET DST) -->
+<!--X-Message-Id: 20000522122457.E16814@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000519233817.10316E&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01595">Date Index</a>][<a href="thrd33.shtml#01595">Thread Index</a>]<br>
+[<A HREF="msg01594.shtml">Date Prev</A>][<A HREF="msg01596.shtml">Date Next</A>][<A HREF="msg01594.shtml">Thread Prev</A>][<A HREF="msg01596.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 May 2000 12:24:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 20 May 2000, Denis Barbier wrote:
+
+&gt; 4. What must be changed?
+&gt; =-=-=-=-=-=-=-=-=-=-=-=-
+&gt; 
+&gt; I agree with your bug reports, it is a very bad idea to have different
+&gt; behaviours depending whether tags are defined or not.
+&gt; 
+&gt; Of course it is easy to consider that unknown tags are simple tags, this
+&gt; will fix
+&gt;     &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+&gt; 
+&gt; But it breaks
+&gt;     &lt;: print "&lt;img src=\"" . $file . "\" alt=\"" . $alt ."\"&gt;"; :&gt;
+&gt; 
+&gt; And even worse, consider
+&gt;     &lt;: print &lt;&lt;EOT;
+&gt;     Hey, how to finish this pseudo EOT tag?
+&gt;     EOT
+&gt;     :&gt;
+&gt; 
+&gt; In fact i focused my view on these last topics, to ease mixing ePerl and
+&gt; mp4h, but i did not realize that this syntax was confusing.
+&gt; Now that the problem is clearly (?) expressed, it should be solved
+&gt; quickly ;-)
+
+Okay, I understand the problem now, but I still hate the syntax.
+Wouldn't it be better to completely change the syntax of &lt;ifeq&gt; like
+this:
+
+&lt;ifeq this="0" that="0"&gt;
+  &lt;then&gt;
+     foo
+  &lt;/then&gt;
+  &lt;else
+     bar
+  &lt;/else&gt;
+&lt;/ifeq&gt;
+
+The &lt;else&gt; tag is optional.  This looks much more like HTML and it
+should be easier to cascade multiple &lt;ifeq&gt; constructs.  Similar
+syntax for &lt;ifneq&gt; and &lt;if&gt; (the latter seems to be near to the &lt;when&gt;
+tag).
+
+I don't know, whether this can be easily implemented, but it sounds
+much more intuitive to use to me than the cascading of quotes and
+quoted quotes.  Instead of this we have a syntax similar to the
+&lt;table&gt; tag here.
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01596" HREF="msg01596.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Franz Knipp</li>
+<li><strong><A NAME="01597" HREF="msg01597.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01589" HREF="msg01589.shtml">[LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01594.shtml">Re: [wml] Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tagsy</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01596.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01594.shtml">Re: [wml] Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tagsy</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01596.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01595"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01595"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Question about pass 4 (m4) -->
+<!--X-From-R13: Drgrb Hnenyn <ergrbNtrbpvgvrf.pbz> -->
+<!--X-Date: Sun, 17 Jan 1999 19:03:35 +0100 (CET) -->
+<!--X-Message-Id: 19990117114804.A29584@reteo.neo.lrun.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990116123731.A617@ganymede -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00341">Date Index</a>][<a href="thrd8.shtml#00341">Thread Index</a>]<br>
+[<A HREF="msg00340.shtml">Date Prev</A>][<A HREF="msg00342.shtml">Date Next</A>][<A HREF="msg00337.shtml">Thread Prev</A>][<A HREF="msg00352.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Question about pass 4 (m4)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Reteo Varala &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Jan 1999 11:48:05 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Jan 16, 1999 at 12:37:31PM +0100, Alexander Graefe wrote:
+&gt; But I have one big question: What is the usefulness of pass 4 (m4) ?
+&gt; Maybe it's because I have never used m4 for anything before, but maybe
+&gt; it's exactly the thing I am looking for, I just didn't know it :)
+&gt; 
+&gt; So what I am asking for is basically an easy example, of what the
+&gt; m4-pass does, and what it can be used for.
+
+m4 is best described as a macro processor.
+
+one of the most-used features of m4 is the ability to make macros on the
+fly, similar to WML's own features.
+
+m4 works something like this:
+
+first, you define the macro to create:
+
+---
+define(`foo', `Hello World')
+---
+
+This can appear anywhere in the document; it doesn't even have to be on
+the beginning of a line!
+
+once you have the macro defined, you can then use it anywhere as a
+replacement for the macro's contents.
+
+---
+As I said before, foo.
+---
+
+And it will print out "As I said before, Hello World."
+
+As you can see, it would not be a good idea to use common words as macros,
+because then they could be replace when the word itself would have been
+better off.
+
+For further detailed descriptions of the uses of this wonderful macro
+preprocessor, check out the m4 info page... it's very well-written.
+
+(NOTE: There are also ways to produce arguments which can be handled
+       by the macro)
+
+-- 
+True hacking requires a piece of wood and an axe.
+
+	-Reteo Varala (reteo@geocities.com)
+		<A  HREF="http://www.geocities.com/SiliconValley/Network/5389/">http://www.geocities.com/SiliconValley/Network/5389/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00333" HREF="msg00333.shtml">Question about pass 4 (m4)</A></strong>, <em>From:</em> Alexander Graefe</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00342.shtml">No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00337.shtml">Re: Question about pass 4 (m4)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00352.shtml">&lt;page&gt; &lt;grid&gt; and css</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00341"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00341"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

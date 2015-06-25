@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: what is needed to support other charsets in wml? -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 5 Jan 1999 03:12:27 +0100 (CET) -->
+<!--X-Message-Id: m1u2y6fxaa.fsf@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.990104183013.8300V&#45;100000@amitaba.omedia.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00299">Date Index</a>][<a href="thrd6.shtml#00299">Thread Index</a>]<br>
+[<A HREF="msg00298.shtml">Date Prev</A>][<A HREF="msg00300.shtml">Date Next</A>][<A HREF="msg00298.shtml">Thread Prev</A>][<A HREF="msg00300.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: what is needed to support other charsets in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 05 Jan 1999 00:11:57 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Norbert Crettol &lt;nc@omedia.ch&gt; writes:
+
+&gt; &gt; You can get a copy of the repository using the following commands
+&gt; &gt; (requires that CVS be installed):
+&gt; &gt; 
+&gt; &gt;   cvs -d :pserver:anonymous@cvs.debian.org:/cvs/webwml login
+&gt; &gt; just hit &lt;return&gt; for the password
+&gt; &gt;   cvs -d :pserver:anonymous@cvs.debian.org:/cvs/webwml checkout webwml/english
+&gt; 
+&gt; I've tried it but was rejected :
+
+Worked for me ...
+
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00300" HREF="msg00300.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> Norbert Crettol</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00298" HREF="msg00298.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> Norbert Crettol</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00298.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00300.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00298.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00300.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00299"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00299"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

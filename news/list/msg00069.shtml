@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: conflict between passes -->
+<!--X-From-R13: Lunb Khr <lhrmunbNrev.h&#45;gbxlb.np.wc> -->
+<!--X-Date: Fri, 30 Jan 1998 07:09:49 +0100 (MET) -->
+<!--X-Message-Id: 34D15326.2DDE473C@eri.u&#45;tokyo.ac.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.980129140821.27514F&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00069">Date Index</a>][<a href="thrd2.shtml#00069">Thread Index</a>]<br>
+[<A HREF="msg00068.shtml">Date Prev</A>][<A HREF="msg00070.shtml">Date Next</A>][<A HREF="msg00068.shtml">Thread Prev</A>][<A HREF="msg00071.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>conflict between passes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Zhao Yue &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 30 Jan 1998 13:12:22 +0900</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>Hi all,
+
+I am beginner of wml. I met such a problem: since
+pass 2 is processed first than pass 3, the following
+example can't reach its desired result:
+
+&lt;define-tag mytag&gt;
+&lt;:{
+        printf "some words";
+}:&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag anothertag&gt;
+&lt;:{
+        printf "&lt;mytag&gt;";
+}:&gt;
+&lt;/define-tag&gt;
+
+&lt;anothertag&gt;
+
+In fact, this will lead to a parsing error of perl.
+Any suggestion for recorvering this problem?
+
+Thanks
+
+-- 
+--------------------------------------------------------
+       Zhao Yue   ERI, Univ. of Tokyo
+ ("&lt;              +81-3-3812-2111 Ex 5746
+\/ )              <A HREF="http://www.eri.u-tokyo.ac.jp/yuezhao/">http://www.eri.u-tokyo.ac.jp/yuezhao/</A>
+-""-----------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+</PRE>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00071" HREF="msg00071.shtml">Re: conflict between passes</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00068" HREF="msg00068.shtml">Filtering with wml, security considerations?</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00068.shtml">Filtering with wml, security considerations?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00070.shtml">Re: Filtering with wml, security considerations?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00068.shtml">Filtering with wml, security considerations?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00071.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00069"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00069"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

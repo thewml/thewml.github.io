@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Problem with including files -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 27 Aug 2001 11:22:17 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.010827112004.jh@inetcom.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 003d01c12ed2$bd51a960$3a140b0a@ptecza -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02378">Date Index</a>][<a href="thrd48.shtml#02378">Thread Index</a>]<br>
+[<A HREF="msg02377.shtml">Date Prev</A>][<A HREF="msg02379.shtml">Date Next</A>][<A HREF="msg02376.shtml">Thread Prev</A>][<A HREF="msg02379.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Problem with including files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 11:20:04 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+On 27-Aug-01 Pawe³ Têcza wrote:
+&gt; I don't understand why WML includes the .wml file in one place and doesn't
+&gt; include the same file in another place.
+&gt; &lt;tr&gt;&lt;td colspan="3"&gt;
+&gt;   
+&gt;   &lt;!--
+&gt;   Here WML includes 'navbar.wml', but this is not place for my navbar.
+&gt;   --&gt;
+&gt; 
+&gt;   #include 'navbar.wml' name="menu"
+&gt; 
+&gt; &lt;/td&gt;&lt;/tr&gt;
+
+The directive must begin in column 1.
+Instead of 
+
+   #include '....'
+
+use
+
+#include '...'
+
+Cheers!
+ -jan
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02379" HREF="msg02379.shtml">Re: Problem with including files</A></strong>, <em>From:</em> Pawel Tecza</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02376" HREF="msg02376.shtml">Problem with including files</A></strong>, <em>From:</em> Pawe&lstrok; T&eogon;cza</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02377.shtml">Re: WML Roadmap or TODO-List</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02379.shtml">Re: Problem with including files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02376.shtml">Problem with including files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02379.shtml">Re: Problem with including files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02378"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02378"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

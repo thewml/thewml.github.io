@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with ifeq -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Thu, 14 Jun 2001 01:35:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20010614013252.E5485@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Reference: Pine.LNX.4.21.0106132021460.4998&#45;100000@jupiter.kosmos -->
+<!--X-Derived: pgp00010.pgp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02258">Date Index</a>][<a href="thrd46.shtml#02258">Thread Index</a>]<br>
+[<A HREF="msg02257.shtml">Date Prev</A>][<A HREF="msg02259.shtml">Date Next</A>][<A HREF="msg02256.shtml">Thread Prev</A>][<A HREF="msg02259.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with ifeq</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jun 2001 01:32:52 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Bela Kovac wrote:
+&gt; A friend recommended the software wml and i like it.
+
+That's fine. :-)
+
+&gt; &lt;ifeq "{#VAR#}" "fubar" "Yes!" "No? Why not?!"&gt;
+&gt; &lt;define-tag test whitespace=delete
+&gt; attributes=verbatim&gt;{#VAR#:%0:##}&lt;/define-tag&gt;
+&gt;
+&gt; So my question: why is fubar &lt;&gt; fubar?
+
+This does not work, because of the order of the different passes.
+&lt;ifeq ...&gt; is from mp4h (pass 2) and {#VAR#} is from divert (pass5).
+
+When evaluating the &lt;ifeq ...&gt; statement in pass 2, "{#VAR#}" is still
+"{#VAR#}", it gets replaced later in pass 5.
+
+Try "wml -p12 test.wml" to see how the file looks like after pass 2.
+
+There will be written a "No? Why not?!" already at this stage, because
+"{#VAR#}" hasn't been evaluated yet.
+
+&gt; Has this something to fo with "invisible" chars (like line-feed or
+&gt; something similar)?
+
+No.
+
+HTH
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+</PRE>
+<P><A HREF="pgp00010.pgp" >PGP signature</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02256" HREF="msg02256.shtml">Problem with ifeq</A></strong>, <em>From:</em> Bela Kovac</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02257.shtml">Re: info request</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02259.shtml">Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02256.shtml">Problem with ifeq</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02259.shtml">Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02258"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02258"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

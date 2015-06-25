@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Wed, 8 Sep 1999 14:05:09 +0200 (MET DST) -->
+<!--X-Message-Id: 19990908140515.A18617@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990907083528.A22649@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990907134001.14154A&#45;100000@localhost -->
+<!--X-Reference: 19990908082123.A29574@skater.htu.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00953">Date Index</a>][<a href="thrd20.shtml#00953">Thread Index</a>]<br>
+[<A HREF="msg00952.shtml">Date Prev</A>][<A HREF="msg00954.shtml">Date Next</A>][<A HREF="msg00952.shtml">Thread Prev</A>][<A HREF="msg00954.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 8 Sep 1999 14:05:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+	Hi for the last time (in this thread ;))
+
+On 08 Sep 1999, Gerfried Fuchs &lt;alfie@innocent.com&gt; wrote:
+&gt;  Yes, it's 0.85. I start cpan every now and then and update the
+&gt; packages, and compilied with the --with-openworld switch. Let's see how
+&gt; it's working now:
+&gt; make distclean
+&gt; ./configure --without-openworld
+&gt; make
+&gt; make test
+&gt; make install
+&gt; 
+&gt;  Nope, same behavior here... Or is there some other way to use the 0.83
+&gt; from the package than the new 0.85? It still checks for the installed
+&gt; packages? What for is the --with-openworld switch then, if it's not
+&gt; honoured? *scratches*  Should I remove the package completely from the
+&gt; perl-tree? Which files should I remove then?
+
+ ... I simply changed the configure-script (line 1126) from:
+  have_filepathconvert=1
+ to:
+  have_filepathconvert=0
+ Now it's using the included File::PathConvert.
+
+ Still puzzled why --without-openworld didn't work (maybe that should be
+checked?) but it's now working and running, finally. Thanks alot,
+Denis!!!
+
+ So long!
+Alfie
+-- 
+"Not Hercules could have knock'd out his brains, for he had none."
+                -- Shakespeare
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00954" HREF="msg00954.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00939" HREF="msg00939.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00943" HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00952" HREF="msg00952.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00952.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00954.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00952.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00954.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00953"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00953"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

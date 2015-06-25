@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.0 -->
+<!--X-From-R13: inatNryl.yrnqre.eb -->
+<!--X-Date: Tue, 10 Feb 1998 19:07:28 +0100 (MET) -->
+<!--X-Message-Id: 19980210145141.23713@zeus.advatech.ro -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 19980209153422.25404@zeus.advatech.ro -->
+<!--X-Reference: 199802091534.QAA12867@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00086">Date Index</a>][<a href="thrd2.shtml#00086">Thread Index</a>]<br>
+[<A HREF="msg00085.shtml">Date Prev</A>][<A HREF="msg00087.shtml">Date Next</A>][<A HREF="msg00092.shtml">Thread Prev</A>][<A HREF="msg00089.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 10 Feb 1998 14:51:41 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+sorry, i forgot to attach the errors report ...
+
+-- 
+
+Viorel ANGHEL &lt;vang@roedu.net&gt;                "World domination. Fast!"
+<A  HREF="http://www.pub.ro/~vang/">http://www.pub.ro/~vang/</A>                          (Linus Torvalds)
+</PRE>
+<PRE>
+wml -n -v2 -olocal.html local.wml
+** WML:Verbose: Reading RC file: /home/vang/public_html/.wmlrc
+** WML:Verbose: PASS 1:
+-** WML:Verbose: source: /home/vang/usr/lib/wml/exec/wml_p1_ipp  "-DWML_VERSION=1.6.0 (09-02-1998)" "-DWML_LOC_MANDIR=/home/vang/usr/man" "-DWML_LOC_LIBDIR=/home/vang/usr/lib/wml" "-DWML_LOC_BINDIR=/home/vang/usr/bin" "-DWML_LOC_PREFIX=/home/vang/usr" "-DWML_GEN_HOSTNAME=zeus.advatech.ro" "-DWML_GEN_REALNAME=" "-DWML_GEN_USERNAME=vang" "-DWML_GEN_ISOTIME=10-02-1998 14:49:06" "-DWML_GEN_CTIME=Tue Feb 10 14:49:06 1998" "-DWML_SRC_REALNAME=UNKNOWN-REALNAME" "-DWML_SRC_USERNAME=vang" "-DWML_SRC_ISOTIME=06-02-1998 14:08:58" "-DWML_SRC_CTIME=Fri Feb  6 14:08:58 1998" "-DWML_SRC_BASENAME=local" "-DWML_SRC_FILENAME=local.wml" "-DWML_SRC_DIRNAME=/home/vang/public_html" "-DBASE_DIR=." "-DBASE_URL=<A  HREF="http://localhost/~vang">http://localhost/~vang</A>" "-DVANG_EMAIL=vang@leader.ro"  -S /home/vang/usr/lib/wml/include/  -I .  -s 'sys/boot.wml'  -o /tmp/wml.796.tmp2 /tmp/wml.796.tmp1
+** IPP:Error: Bad argument to option `D': WML_GEN_REALNAME=
+** WML:Verbose: PASS 2:
+\** WML:Verbose: system: /home/vang/usr/lib/wml/exec/wml_p2_mhc  --set "WML_VERSION" "1.6.0 (09-02-1998)" --set "WML_LOC_MANDIR" "/home/vang/usr/man" --set "WML_LOC_LIBDIR" "/home/vang/usr/lib/wml" --set "WML_LOC_BINDIR" "/home/vang/usr/bin" --set "WML_LOC_PREFIX" "/home/vang/usr" --set "WML_GEN_HOSTNAME" "zeus.advatech.ro" --set "WML_GEN_REALNAME" "" --set "WML_GEN_USERNAME" "vang" --set "WML_GEN_ISOTIME" "10-02-1998 14:49:06" --set "WML_GEN_CTIME" "Tue Feb 10 14:49:06 1998" --set "WML_SRC_REALNAME" "UNKNOWN-REALNAME" --set "WML_SRC_USERNAME" "vang" --set "WML_SRC_ISOTIME" "06-02-1998 14:08:58" --set "WML_SRC_CTIME" "Fri Feb  6 14:08:58 1998" --set "WML_SRC_BASENAME" "local" --set "WML_SRC_FILENAME" "local.wml" --set "WML_SRC_DIRNAME" "/home/vang/public_html" --set "BASE_DIR" "." --set "BASE_URL" "<A  HREF="http://localhost/~vang">http://localhost/~vang</A>" --set "VANG_EMAIL" "vang@leader.ro" --set mhtml::relative-prefix `pwd` /tmp/wml.796.tmp2 &gt;/tmp/wml.796.tmp3
+** WML:Verbose: PASS 3:
+|** WML:Verbose: system: /home/vang/usr/lib/wml/exec/wml_p3_eperl  "-dWML_VERSION=1.6.0 (09-02-1998)" "-dWML_LOC_MANDIR=/home/vang/usr/man" "-dWML_LOC_LIBDIR=/home/vang/usr/lib/wml" "-dWML_LOC_BINDIR=/home/vang/usr/bin" "-dWML_LOC_PREFIX=/home/vang/usr" "-dWML_GEN_HOSTNAME=zeus.advatech.ro" "-dWML_GEN_REALNAME=" "-dWML_GEN_USERNAME=vang" "-dWML_GEN_ISOTIME=10-02-1998 14:49:06" "-dWML_GEN_CTIME=Tue Feb 10 14:49:06 1998" "-dWML_SRC_REALNAME=UNKNOWN-REALNAME" "-dWML_SRC_USERNAME=vang" "-dWML_SRC_ISOTIME=06-02-1998 14:08:58" "-dWML_SRC_CTIME=Fri Feb  6 14:08:58 1998" "-dWML_SRC_BASENAME=local" "-dWML_SRC_FILENAME=local.wml" "-dWML_SRC_DIRNAME=/home/vang/public_html" "-dBASE_DIR=." "-dBASE_URL=<A  HREF="http://localhost/~vang">http://localhost/~vang</A>" "-dVANG_EMAIL=vang@leader.ro" -P -k -B '&lt;:' -E ':&gt;' /tmp/wml.796.tmp1 &gt;/tmp/wml.796.tmp2
+** WML:Verbose: PASS 4:
+/** WML:Verbose: system: /home/vang/usr/lib/wml/exec/wml_p4_gm4  "-Dm4_WML_VERSION=1.6.0 (09-02-1998)" "-Dm4_WML_LOC_MANDIR=/home/vang/usr/man" "-Dm4_WML_LOC_LIBDIR=/home/vang/usr/lib/wml" "-Dm4_WML_LOC_BINDIR=/home/vang/usr/bin" "-Dm4_WML_LOC_PREFIX=/home/vang/usr" "-Dm4_WML_GEN_HOSTNAME=zeus.advatech.ro" "-Dm4_WML_GEN_REALNAME=" "-Dm4_WML_GEN_USERNAME=vang" "-Dm4_WML_GEN_ISOTIME=10-02-1998 14:49:06" "-Dm4_WML_GEN_CTIME=Tue Feb 10 14:49:06 1998" "-Dm4_WML_SRC_REALNAME=UNKNOWN-REALNAME" "-Dm4_WML_SRC_USERNAME=vang" "-Dm4_WML_SRC_ISOTIME=06-02-1998 14:08:58" "-Dm4_WML_SRC_CTIME=Fri Feb  6 14:08:58 1998" "-Dm4_WML_SRC_BASENAME=local" "-Dm4_WML_SRC_FILENAME=local.wml" "-Dm4_WML_SRC_DIRNAME=/home/vang/public_html" "-Dm4_BASE_DIR=." "-Dm4_BASE_URL=<A  HREF="http://localhost/~vang">http://localhost/~vang</A>" "-Dm4_VANG_EMAIL=vang@leader.ro" --prefix-builtins &lt;/tmp/wml.796.tmp3 &gt;/tmp/wml.796.tmp1
+** WML:Verbose: PASS 5:
+-** WML:Verbose: source: /home/vang/usr/lib/wml/exec/wml_p5_divert  -o/tmp/wml.796.tmp2 /tmp/wml.796.tmp1
+** WML:Verbose: PASS 6:
+\** WML:Verbose: source: /home/vang/usr/lib/wml/exec/wml_p6_asubst  -o/tmp/wml.796.tmp1 /tmp/wml.796.tmp2
+** WML:Verbose: PASS 7:
+|** WML:Verbose: source: /home/vang/usr/lib/wml/exec/wml_p7_htmlfix  -o/tmp/wml.796.tmp2 /tmp/wml.796.tmp1
+** WML:Verbose: PASS 8:
+/** WML:Verbose: source: /home/vang/usr/lib/wml/exec/wml_p8_htmlstrip   -o/tmp/wml.796.tmp1 /tmp/wml.796.tmp2
+** WML:Verbose: PASS 9:
+-** WML:Verbose: system: /home/vang/usr/lib/wml/exec/wml_p9_slice   -o local.html /tmp/wml.796.tmp1
+** WML:Verbose: Processing time (seconds):
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic |  TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 0.87 | 0.69  0.10  0.13 0.07 0.07 0.07 0.14 0.11 0.68 |   2.93
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00083" HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> vang</li>
+<li><strong><A NAME="00084" HREF="msg00084.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00085.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00087.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00092.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00089.shtml">pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00086"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00086"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

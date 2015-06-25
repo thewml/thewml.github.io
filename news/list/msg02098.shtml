@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Best practices for creating multi&#45;lingual documents -->
+<!--X-From-R13: Khfhs Ubbynznoonf <lhfhstNbhgoynmr.pbz> -->
+<!--X-Date: Fri, 29 Dec 2000 10:50:57 +0100 (MET) -->
+<!--X-Message-Id: 20001229031752.26048.qmail@yusufg.portal2.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02098">Date Index</a>][<a href="thrd42.shtml#02098">Thread Index</a>]<br>
+[<A HREF="msg02097.shtml">Date Prev</A>][<A HREF="msg02099.shtml">Date Next</A>][<A HREF="msg02095.shtml">Thread Prev</A>][<A HREF="msg02096.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Best practices for creating multi-lingual documents</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Yusuf Goolamabbas &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 29 Dec 2000 03:17:52 -0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi, I am a newbie to WML and am trying to understand how I can use it
+to create multi-lingual documents from a single source file
+
+Whilst the documentation provides a good start, I am looking to see if
+there is a way to abstract the multi-lingual strings into some form of
+a resource bundle [Each language has a file containing a moniker and
+its corresponding language string]
+
+For example, whilst the following WML file is great for small number
+of tags and small number of languages, it tends to break down with
+large number of tags/languages
+
+#use wml::std::lang
+#use wml::std::tags
+
+&lt;lang::new id=en short&gt;
+&lt;lang::new id=fr short&gt;
+&lt;define-tag mytitle whitespace=delete&gt;
+&lt;en: Hello&gt;
+&lt;fr: Bon Jour&gt;
+&lt;/define-tag&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;
+&lt;mytitle&gt;
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;/html&gt;
+
+Is it possible to create an en.def and a fr.def file which could
+conceptually have the following
+en.def ==&gt;
+TITLE::Hello
+MONIKER2::Some long random English text
+
+fr.def ==&gt;
+TITLE::Bon Jour
+MONIKER2:: Some long random French text
+
+Thus one could provide the .def files to appropiate translators and
+the tag definition could be changed to read the appropiate monikers
+However, I don't know if this is possible since the tag definition
+occurs in pass 2 and what I may need to do would require ePerl in pass
+3
+
+Has anybody else done something similar, Is there some other way to do
+multi-lingual pages with string definitions coming from different
+files
+
+Regards, Yusuf
+-- 
+Yusuf Goolamabbas
+yusufg@outblaze.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02097.shtml">[BUG REPORT] WML 2.0.6, Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02099.shtml">Compiling WML 2.0.6 on IRIX 6.5.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02095.shtml">Best practices for creating multi-lingual documents</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02096.shtml">[BUG REPORT] WML 2.0.6, Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02098"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02098"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

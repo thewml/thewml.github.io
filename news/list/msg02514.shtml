@@ -1,0 +1,239 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbar -->
+<!--X-From-R13: Yheg Erezrhf <jroznfgreNqnp.or> -->
+<!--X-Date: Tue, 12 Feb 2002 01:20:12 +0100 (MET) -->
+<!--X-Message-Id: 3C685EA7.2030502@dac.be -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200202112147.WAA05791@p5088BA9A.dip.t&#45;dialin.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02514">Date Index</a>][<a href="thrd31.shtml#02514">Thread Index</a>]<br>
+[<A HREF="msg02513.shtml">Date Prev</A>][<A HREF="msg02515.shtml">Date Next</A>][<A HREF="msg02512.shtml">Thread Prev</A>][<A HREF="msg01479.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Kurt Sermeus &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Feb 2002 01:15:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Frank Limpert wrote:
+
+&gt; Hi everyone,
+&gt; 
+&gt; As you can see under <A  HREF="http://www.rothenstein-oelknitz.de/">http://www.rothenstein-oelknitz.de/</A> and the pages 
+&gt; included therein, I made a text only navbar out of tables. Under the navbar 
+&gt; item Chronik / chronicle I located a sub-navbar. As you can see, the pointer 
+&gt; GIF, which is located in the &lt;navbar:prolog type="S"&gt; tag, follows the 
+&gt; selection. This works fine for the main navbar and also for the sub-navbar if 
+&gt; you see each one alone.
+&gt; But I wish to have the top menu item still marked, even when I descend down 
+&gt; into a sub-navbar. This means when I select a page under a sub-navbar item, 
+&gt; both the selected item and the main navbar item, which is the parent of it, 
+&gt; should be in selected state.
+&gt; From the documentation I guessed, the main navbar item would enter the 
+&gt; SS-state when a descendant is selected, but I was wrong.
+
+Hi Frank,
+
+For the new website of my gliding club (www.dac.be &lt;<A  HREF="http://www.dac.be">http://www.dac.be</A>&gt;, 
+beware it's still the old non-WML version that is online, sorry) I 
+wanted exactly the same navbar and sub-navbar behaviour as you describe.
+
+It took me a while to find out how to do this (after reading the 
+documentation several times), but finally it works very well, at least 
+with WML 2.0.8.
+
+Here's the relevant part of my template file, with the definition of the 
+&lt;mainnavbar&gt; and &lt;subnavbar&gt; tags:
+
+&lt;define-tag mainnavbar endtag=required&gt;
+  # 1. Definition of the mainnavbar layout
+  &lt;navbar:define name=mainnavbar urlbase="."&gt;
+
+    #   bar header
+    &lt;navbar:header&gt;
+      &lt;table cellspacing=0 cellpadding=0 border=1 width=150 align=center bgcolor="#4a88be"&gt;&lt;tr&gt;&lt;td&gt;
+      &lt;table cellspacing=3 cellpadding=1 border=0 align=left&gt;
+      &lt;tr&gt;&lt;td colspan=2 align="center"&gt;&lt;p class="navtitle"&gt;{#AREA_TITLE#}&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/navbar:header&gt;
+    #   button prolog (normal)
+    &lt;navbar:prolog type=N&gt;\
+      &lt;tr&gt;&lt;td width=14 align=right&gt;&lt;img src=$(IMGDIR)/pixtra.gif width=5 height=1&gt;&lt;/td&gt;
+      &lt;td width="110" class=navbutton&gt;
+      &amp;nbsp;
+    &lt;/navbar:prolog&gt;
+    #   button prolog (selected)
+    &lt;navbar:prolog type=S&gt;\
+      &lt;tr&gt;&lt;td width=14 align=right valign=top&gt;&lt;img src=$(IMGDIR)/arrow.gif&gt;&lt;/td&gt;
+      &lt;td width="110" class=navbutton-s&gt;
+      &amp;nbsp;
+    &lt;/navbar:prolog&gt;
+    #   button prolog (subselected)
+    &lt;navbar:prolog type=SS&gt;\
+      &lt;tr&gt;&lt;td width=14 align=right valign=top&gt;&lt;img src=$(IMGDIR)/arrow.gif&gt;&lt;/td&gt;
+      &lt;td width="110" class=navbutton&gt;
+      &amp;nbsp;
+    &lt;/navbar:prolog&gt;
+
+    #   the buttons 
+    %body
+    
+    #   button epilog (normal)
+    &lt;navbar:epilog&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+    &lt;/navbar:epilog&gt;
+    #   button epilog (selected)
+    &lt;navbar:epilog type=S&gt;\
+         {#PAGE_SUBNAVBAR#}
+          &lt;/td&gt;&lt;/tr&gt;
+    &lt;/navbar:epilog&gt;
+    #   button epilog (subselected)
+    &lt;navbar:epilog type=SS&gt;
+	 {#PAGE_SUBNAVBAR#}
+         &lt;/td&gt;&lt;/tr&gt;
+    &lt;/navbar:epilog&gt;
+
+    #   bar footer
+    &lt;navbar:footer&gt;\
+      &lt;tr&gt;&lt;td colspan=2&gt;&lt;font size=1&gt;&amp;nbsp;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+    &lt;/navbar:footer&gt;
+
+  &lt;/navbar:define&gt;
+
+  # 2. Rendering of the mainnavbar
+  {#PAGE_MAINNAVBAR#:\
+      &lt;navbar:render name=mainnavbar select=$(page) $(nested) nohints&gt;\
+  :##}
+&lt;/define-tag&gt;
+
+[....]
+
+&lt;define-tag subnavbar endtag=required&gt;
+# 1. Definition of the subnavbar layout
+  &lt;navbar:define name=%0 urlbase="."&gt;
+
+    #   bar header
+    &lt;navbar:header&gt;
+      &lt;table width=80 cellspacing=0 cellpadding=0 border=0 align=center&gt;
+    &lt;/navbar:header&gt;
+    
+    #   button prolog (normal)
+    &lt;navbar:prolog type=N&gt;
+      &lt;tr&gt;&lt;td class=menubutton&gt;&amp;nbsp;
+    &lt;/navbar:prolog&gt;
+
+    #   button prolog (selected)  
+    &lt;navbar:prolog type=S&gt;
+      &lt;tr&gt;&lt;td class=menubutton-s&gt;&amp;nbsp;
+    &lt;/navbar:prolog&gt;
+
+    #   the buttons 
+    %body
+    
+    #   button epilog (normal)
+    &lt;navbar:epilog type=N&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/navbar:epilog&gt;
+
+    #   button epilog (selected)
+    &lt;navbar:epilog type=S&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/navbar:epilog&gt;
+  
+    #   bar footer
+    &lt;navbar:footer&gt;
+      &lt;/table&gt;
+    &lt;/navbar:footer&gt;
+
+  &lt;/navbar:define&gt;
+
+  # 2. Rendering of the subnavbar
+  {#PAGE_SUBNAVBAR#:\
+      &lt;br&gt;
+      &lt;navbar:render name=%0 select=$(childpage) nohints&gt;\
+  :##}
+&lt;/define-tag&gt;
+
+How to use this template now?
+In the .wml source for a page 'stories', that is at the level of the 
+main navigation bar, I include the template like this
+
+#include  '$(ROOT)/dactemplate.wml' page=stories
+For the page 'story1' that is at the level of the subnavbar, and under 
+the 'story' area, I include the template like this
+
+#include  '$(ROOT)/dactemplate.wml' page=stories  childpage=story1 nested=subselected
+By using the variable `nested' to mark a button as subselected, the 
+indicating arrow (the GIF file in the prolog) is kept in place at the 
+selected button of the mainnavbar when you go a level lower to the 
+childpage.
+
+I hope this was clear enough.
+
+Regards,
+
+Kurt Sermeus
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02512" HREF="msg02512.shtml">nested navbar</A></strong>, <em>From:</em> Frank Limpert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02513.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02515.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02512.shtml">nested navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01479.shtml">wappies-owner@egroups.com</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02514"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#02514"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

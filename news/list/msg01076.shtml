@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.4, Redhat linux 6.0 -->
+<!--X-From-R13: ubegvmNarhebovb.hce.pyh.rqh -->
+<!--X-Date: Wed, 20 Oct 1999 08:18:04 +0200 (MET DST) -->
+<!--X-Message-Id: 199910192043.WAA07298@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01076">Date Index</a>][<a href="thrd22.shtml#01076">Thread Index</a>]<br>
+[<A HREF="msg01075.shtml">Date Prev</A>][<A HREF="msg01077.shtml">Date Next</A>][<A HREF="msg01088.shtml">Thread Prev</A>][<A HREF="msg01078.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.4, Redhat linux 6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 19 Oct 1999 22:43:38 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.4
+Operating System: Redhat linux 6.0
+
+Problem Description:
+| xtable does not output captions inside the table:
+| 
+| #use wml::fmt::xtable
+| 
+| &lt;xtable&gt;
+| 
+| Outputs
+| 
+| &lt;caption&gt;
+| This is a test
+| &lt;/caption&gt;
+| (1,1)
+| testing
+| &lt;/xtable&gt;
+| &lt;caption&gt;
+| This is a test
+| &lt;/caption&gt;&lt;table&gt;
+|   &lt;tr&gt;
+|     &lt;td&gt;testing&lt;/td&gt;
+|   &lt;/tr&gt;
+| &lt;/table&gt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01075.shtml">[BUG REPORT] WML 1.7.4, Redhat 6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01077.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01088.shtml">Re: [BUG REPORT] WML 1.7.4, Redhat 6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01078.shtml">[BUG REPORT] WML ?, Linux - Kernel 2.0.36</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01076"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01076"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

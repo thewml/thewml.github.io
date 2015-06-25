@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml&#45;mode for (X)Emacs ? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Tue, 14 Jul 1998 11:05:24 +0200 (CEST) -->
+<!--X-Message-Id: 19980714110522.B24299@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980713210950.07075@hades.rz.uni&#45;wuppertal.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00163">Date Index</a>][<a href="thrd4.shtml#00163">Thread Index</a>]<br>
+[<A HREF="msg00162.shtml">Date Prev</A>][<A HREF="msg00164.shtml">Date Next</A>][<A HREF="msg00162.shtml">Thread Prev</A>][<A HREF="msg00164.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml-mode for (X)Emacs ?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Jul 1998 11:05:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 13, 1998, Alexander Graefe wrote:
+ 
+&gt; just a quick question: Has anybody written a wml-mode for (X)Emacs ?
+&gt; The html-mode unfortunately doesn't know about eperl and the other
+&gt; wml-goodies, and I don't know jack about lisp, so writing it myself
+&gt; is out of the question (too busy understanding wml fully, thanks Ralf
+&gt; for such a great tool !)
+
+I personally are a pure Vi(m) hacker and like about Emacs mainly cookies like
+"Emacs is a great operating system, but Unix has the better editor" ;-) So my
+question is (because I'm interested): Is such an Emacs wml-mode just syntax
+highlighting of WML-Tags or is it really more like tag expansion, etc?
+
+If its pure tag highligthing it should be trivial as for Vim (just a few
+regex). For something like tag expansion the wml_docs/wml_tags.L.xxx files
+could be used as a resource. There are all known WML tags assembled at one
+place for reference.
+
+Let me know when such an Emacs wml-mode is available. We could insert it into
+the official WML distribution so others benefit from it.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00164" HREF="msg00164.shtml">Re: wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Florian Kuehnert</li>
+<li><strong><A NAME="00165" HREF="msg00165.shtml">Re: wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00162" HREF="msg00162.shtml">wml-mode for (X)Emacs ?</A></strong>, <em>From:</em> Alexander Graefe</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00162.shtml">wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00164.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00162.shtml">wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00164.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00163"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00163"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

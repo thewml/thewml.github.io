@@ -1,0 +1,87 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: <nkryNsvqvhf.zhp.qr> -->
+<!--X-Date: Fri, 15 Sep 2000 10:24:31 +0200 (MET DST) -->
+<!--X-Message-Id: 00091509075700.10957@fidius -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00091400152400.01026@fidius -->
+<!--X-Reference: 20000915075536.A16680@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01948">Date Index</a>][<a href="thrd40.shtml#01948">Thread Index</a>]<br>
+[<A HREF="msg01947.shtml">Date Prev</A>][<A HREF="msg01949.shtml">Date Next</A>][<A HREF="msg01962.shtml">Thread Prev</A>][<A HREF="msg01959.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Sep 2000 09:07:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; To remove this attribute, write your own epilog program
+&gt; like this:
+&gt;
+&gt;   #!/bin/sh
+&gt;   sed -e 's/ summary=""//g' $1 &gt; $1.tmp &amp;&amp; mv $1.tmp $1
+thank you
+Axel Müller
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01936" HREF="msg01936.shtml">2.0.3 - bug or feature</A></strong>, <em>From:</em> axel</li>
+<li><strong><A NAME="01946" HREF="msg01946.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01947.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01949.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01962.shtml">Re: [wml] Re: [wml] Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01959.shtml">Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01948"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01948"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

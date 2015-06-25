@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 2.0.1 -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Thu, 25 May 2000 19:28:22 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0005251630210.29542&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000523164832.29786A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01611">Date Index</a>][<a href="thrd33.shtml#01611">Thread Index</a>]<br>
+[<A HREF="msg01610.shtml">Date Prev</A>][<A HREF="msg01612.shtml">Date Next</A>][<A HREF="msg01600.shtml">Thread Prev</A>][<A HREF="msg01616.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 May 2000 16:54:26 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis!
+
+On Tue, 23 May 2000, Denis Barbier wrote:
+&gt; i just uploaded WML 2.0.1
+
+I've just downloaded and installed it :-)
+
+To make some tests I've set up my system with wml 1.7.4, wml 2.0.0 and wml
+2.0.1... (tnx for the hints doing this)
+
+Short conclusion: I'm not happy with the current version :-( In my sense
+the old MetaHTML grammer of the second pass is the best, you don't have to
+take care of so much things...
+
+&gt;   * Undefined tags are now parsed like defined tags, it means that it is
+
+IMO undefined tags shouldn't be parsed and altered at all. If there's a
+mp4h command inside, this should be expanded as usual, but nothing else.
+
+A tag ends with a right angle bracket - nested tags have to be possible
+(of course).
+
+&gt;   * This implies that left angle brackets inside ePerl code must be
+&gt;     protected.
+
+This shouldn't be necessary at all. I like WML because of its
+transparency in the sense, that it leaves the files untouched where
+there's no WML construct (especially in pass 1-4) - this philosophy has to
+take place in all passes! 
+
+So, therefore I've the following suggestion: let's us speak about the
+grammar of mp4h before producing three other versions in sequence with
+changing syntax...
+
+This will also simplify the job of Denis Barbier who has to check all the
+include files before publishing a new version.
+
+What do you think about it?
+
+Greetings from Spain,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01616" HREF="msg01616.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01634" HREF="msg01634.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+<li><strong><A NAME="01649" HREF="msg01649.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01600" HREF="msg01600.shtml">WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01610.shtml">Re: first try, first suggestion</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01612.shtml">Archives of this mailing-list</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01600.shtml">WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01616.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01611"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01611"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,42 @@
+242a243,258
+> 
+> 	    # changes by fknipp 31.1.2000
+> 
+>   	    if ($arg{"INCLUDE_REVERSE"}) {
+>   		@ls = reverse(sort(@ls));
+>   	    }
+>   	    elsif ($arg{"INCLUDE_SORT"}) {
+>   		@ls = sort(@ls);
+>   	    }
+> 	    
+>   	    if (my $max = $arg{"INCLUDE_MAX"}) {
+>   		@ls = @ls[0..$max-1] if ($max =~ m|[0-9]+|);
+>   	    }
+> 
+> 	    # end of changes
+> 
+674a691,714
+> 
+> B<Proposed changes:>
+> 
+> With the following parameters you can control the order and the number
+> of included files using the B<#include 'pattern'> directive:
+> 
+> =over 4
+> 
+> =item C<INCLUDE_SORT>   The files are included in ascending order 
+>                         according to their file names.
+> 
+> =item C<INCLUDE_REVERSE>   The files are included in descending order
+>                         according to their file names.
+> 
+> =item C<INCLUDE_MAX=n>   Only B<n> files are included.
+> 
+> =back
+> 
+> If you want to include the 5 newest include files of the news directory 
+> with file names like C<20000131.inc>, you may write:
+> 
+>   #include 'news/*.inc' INCLUDE_REVERSE INCLUDE_MAX=5
+> 
+> B<End of proposed changes:>

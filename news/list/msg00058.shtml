@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to define an \<expire\> tag\? -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Wed, 28 Jan 1998 00:28:34 +0100 (MET) -->
+<!--X-Message-Id: 19980126180906.33816@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801241653.RAA18217@en1.engelschall.com -->
+<!--X-Reference: m1oh0zz61w.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00058">Date Index</a>][<a href="thrd2.shtml#00058">Thread Index</a>]<br>
+[<A HREF="msg00057.shtml">Date Prev</A>][<A HREF="msg00059.shtml">Date Next</A>][<A HREF="msg00057.shtml">Thread Prev</A>][<A HREF="msg00059.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to define an \&lt;expire\&gt; tag\?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Jan 1998 18:09:06 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 26, 1998 at 03:03:07PM +0100, Fritz Zaucker wrote:
+&gt; I guess the 395 should be replaced by 365???  Anyway, this breaks for
+&gt; leap-years. How about using Timelocal instead? The problem is that
+&gt; this is (funnily) not a standard perl module either. But as I have it,
+&gt; I guess I'll use it.
+
+maybe I'm completly nuts, but why should this break for leap-years ?
+you're comparing two dates created by the same mechanism. 
+As long as your constants aren't too small it should work, so i think
+if ( $ct[0]+100*$ct[1]*100*$ct[2] &gt;= et[0]+100*$et[1]*1000*$et[2]){...
+would do it, too.
+
+CU,
+    Sec
+-- 
+rfc0896: This 4000% overhead is annoying, but tolerable on 
+         lightly loaded networks.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00059" HREF="msg00059.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00060" HREF="msg00060.shtml">Feature request: removal of &quot;unwanted&quot; tags</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00055" HREF="msg00055.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00056" HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00057.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00059.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00057.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00059.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00058"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00058"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slicing and not&#45;slicing but using the same template(s). -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Wed, 1 Dec 1999 10:00:11 +0100 (MET) -->
+<!--X-Message-Id: 199912010856.JAA11461@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991125103529.22375A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01169">Date Index</a>][<a href="thrd24.shtml#01169">Thread Index</a>]<br>
+[<A HREF="msg01168.shtml">Date Prev</A>][<A HREF="msg01170.shtml">Date Next</A>][<A HREF="msg01161.shtml">Thread Prev</A>][<A HREF="msg01170.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slicing and not-slicing but using the same template(s).</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Dec 1999 09:56:05 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hi denis
+
+as fine as your solution is (thank you again) there shows
+up one problem:
+
+Thu, 25 Nov 1999 10:52:40 +0100 (CET), you wrote:
+[...]
+&gt;&gt; so how the heck can i put a value in variable
+&gt;&gt; depending on the language which is generated?
+&gt; 
+&gt; &lt;set-var foo="&lt;de: deutsch&gt;&lt;fr: francais&gt;"&gt;
+
+suppose i want to make decisions based on the contents of
+the variable:
+(all the necessary includes and definitions for the use of
+slices are done)
+..
+&lt;if &lt;string-eq &lt;get-var foo&gt; "francais"&gt;
+&lt;set-var bar="true"&gt;
+&lt;set-var bar="false"&gt;
+&gt;
+#print it
+bar is: &lt;get-var bar&gt;
+
+after generation of the two slices (de,fr) 
+*both* of them have:
+
+bar is: false
+
+how is that to solve?
+cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01170" HREF="msg01170.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Andreas Hofmeister</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01159" HREF="msg01159.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01168.shtml">recursive &lt;when&gt; &lt;/when&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01170.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01161.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01170.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01169"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01169"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

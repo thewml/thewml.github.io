@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Multiple prog. language support -->
+<!--X-From-R13: Enaqvc Punggnpuneln <fnaqvcNzvaqfj.pbz> -->
+<!--X-Date: Thu, 1 Nov 2001 08:55:11 +0100 (MET) -->
+<!--X-Message-Id: 3BE0D68F.8090405@mindsw.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02421">Date Index</a>][<a href="thrd49.shtml#02421">Thread Index</a>]<br>
+[<A HREF="msg02420.shtml">Date Prev</A>][<A HREF="msg02422.shtml">Date Next</A>][<A HREF="msg02420.shtml">Thread Prev</A>][<A HREF="msg02424.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Multiple prog. language support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Sandip Bhattacharya &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 01 Nov 2001 10:28:55 +0530</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Has anyone thought of a way to make the ePerl pass more language 
+independent? I mean that some people might find it useful to choose the 
+scripting language of their choice for the third pass. This would be 
+possible if there is a clean interface and a consistent specification 
+for this pass, so that others could plug in - say a python,php,ruby or 
+even shell script embedded scripting engine instead of the present perl.
+
+Please note, I have anothing against Perl as such. Perl is a wonderful 
+language. But currently, only people with a knowledge of perl can put in 
+a lot of logic when necessary.
+
+Personally, I have a working knowledge of Perl, so I am not facing a lot 
+of problems. But I encounter a lot of resistance when I try to push wml 
+to non-perl-aware site maintainers.
+
+Perl is possibly one of the fastest interpreters. But since all the work 
+in wml is offline, performance is not much of an issue, is it?
+
+Thanks,
+  Sandip
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02420.shtml">Pass 7 action on series of 6 digits</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02422.shtml">Re: New release WML 2.0.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02420.shtml">Pass 7 action on series of 6 digits</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02424.shtml">img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02421"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02421"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

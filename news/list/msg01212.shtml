@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: HELP: Slides again.... -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Thu, 9 Dec 1999 18:04:11 +0100 (MET) -->
+<!--X-Message-Id: 19991209164725.B439@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991204182712.B22100@erm1.u&#45;strasbg.fr -->
+<!--X-Reference: bboett@erm1.u&#45;strasbg.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01212">Date Index</a>][<a href="thrd25.shtml#01212">Thread Index</a>]<br>
+[<A HREF="msg01211.shtml">Date Prev</A>][<A HREF="msg01213.shtml">Date Next</A>][<A HREF="msg01197.shtml">Thread Prev</A>][<A HREF="msg01198.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: HELP: Slides again....</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 9 Dec 1999 16:47:25 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Sat, Dec 04, 1999 at 06:27:12PM +0100, Bruno Boettcher contaba:
+&gt;am i asking too much??? if not how can i achieve this?
+
+I was thinking in something similar to what are you asking. But as I
+have not so much time I did not even began in tesing my ideas.
+
+I wanted to make a 'slice' option, just to split a big page in
+smaller ones. If you have visited ZDNet you notice they split all the
+stories. I think I like this 'book' alike idea of having several
+small pages and..
+
+Well, my plan was something like:
+
+------ WML Code --------
+#slices number=3
+
+&lt;slice&gt;
+Text 1 
+&lt;slice&gt;
+Text 2 
+&lt;slice&gt;
+Text 3
+-------------------------
+
+The result will be somethink like:
+
+
+---------- page1.html ------------
+Text 1
+
+&lt;div align="left"&gt;
+       1
+       &lt;a href="page2.html"&gt;2&lt;/a&gt;
+       &lt;a href="page3.html"&gt;3&lt;/a&gt;
+       &lt;a href="page2.html"&gt;&amp;gt;&amp;gt;&lt;/a&gt;
+&lt;/div&gt;          
+----------------------------------
+
+And similar, the onther pages.
+
+Somebody is probably thinking:
+
+I never heard of a tag like:  
+
+#slice number=3
+
+This is just used for a preprocessor called before WML that will do
+among other things substitute it for:
+
+#!wml -o "(ALL-S_*)uS_1:$WML_SOURCE_BASENAME1.html" \
+	  -o "(ALL-S_*)uS_2:$WML_SOURCE_BASENAME2.html" \ 
+	  -o "(ALL-S_*)uS_3:$WML_SOURCE_BASENAME3.html" \ 
+
+Really, I don't think if my Idea is good or not. Using a preprocessor
+first can make things a bit complicated. But I cannot think of a more
+confortable way of doing this all.
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+12/09	The Who's "Tommy" premieres in London, 1973
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01196" HREF="msg01196.shtml">HELP: Slides again....</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01211.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01213.shtml">Re: OT: WML friendly newsgroup</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01197.shtml">Re: HELP: Slides again....</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01198.shtml">Minor problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01212"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01212"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

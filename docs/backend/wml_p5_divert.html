@@ -1,0 +1,335 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Core / Divert (Pass 5)</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:36"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+<br />
+<ul class="navbarnestnest">
+<li>
+<a href="./wml_p1_ipp.html">p1_ipp</a>
+</li>
+<li>
+<a href="./wml_p2_mp4h.html">p2_mp4h</a>
+</li>
+<li>
+<a href="./wml_p3_eperl.html">p3_eperl</a>
+</li>
+<li>
+<a href="./wml_p4_gm4.html">p4_gm4</a>
+</li>
+<li>
+<b>p5_divert</b>
+</li>
+<li>
+<a href="./wml_p6_asubst.html">p6_asubst</a>
+</li>
+<li>
+<a href="./wml_p7_htmlfix.html">p7_htmlfix</a>
+</li>
+<li>
+<a href="./wml_p8_htmlstrip.html">p8_htmlstrip</a>
+</li>
+<li>
+<a href="./wml_p9_slice.html">p9_slice</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Core / Divert (Pass 5)</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Divert - Text Diversion Filter</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#example">EXAMPLE</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#authors">AUTHORS</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>Divert - Text Diversion Filter</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>divert</strong>
+[<strong>-o</strong> <em>outputfile</em>]
+[<strong>-q</strong>]
+[<strong>-v</strong>]
+[<em>inputfile</em>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The <em>divert</em> program reads <em>inputfile</em> or from <code>stdin</code> and applies a 2-pass
+diversion filter to its contents. In pass 1 all diversion locations are
+accumulated and in pass 2 these locations are recursively expanded at their
+dump positions. The diversion filter is controlled by directives found in the
+input data:</p>
+<dl>
+<dt><strong><a name="item__7b_23name_23_7d__28or__3c_3cname_3e_3e_29"><strong>{#</strong><em>NAME</em><strong>#}</strong> (or <strong>&lt;&lt;</strong><em>NAME</em><strong>&gt;&gt;</strong>)</a></strong>
+<dd>
+<p>This defines the dump position of the location <em>NAME</em>. All accumulated data
+which <em>finally</em> has to been diverted to <em>NAME</em> is inserted at this data
+position. Notice: the final data of a location <em>NAME</em> has not to be known at
+this point, because the expansion of such location dumps are done in pass 2.
+You can also dump a location more than once, but the contents is always the
+same, independent of the data position where the location dump tag stays. The
+<em>NAME</em> can be any symbolic name matching <code>[a-zA-Z][a-zA-Z0-9_]*</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__7b_23_5b_21_5dname_5b_21_5d_23_3a__28or__2e_2e_5b"><strong>{#</strong>[<strong>!</strong>]<em>NAME</em>[<strong>!</strong>]<strong>#:</strong> (or <strong>..</strong>[<strong>!</strong>]<em>NAME</em>[<strong>!</strong>]<strong>&gt;&gt;</strong>)</a></strong>
+<dd>
+<p>This enters the location <em>NAME</em> (or <em>diverts</em> the data flow to it, hence the
+name for this filter). In other words: the data flow now goes on at location
+<em>NAME</em>. All following data (up to end of file or the next location leave tag)
+gets appended to location <em>NAME</em>. You can nest diversions by entering other
+locations at any point, because the locations are remembered on a stack. The
+default entered location is named ``<code>main</code>''. The top most location is named
+``<code>null</code>'' which neither can be entered nor leaved explicitly. But of course
+the ``<code>null</code>'' diversion can be manually dumped, for instance when using it
+for error messages.</p>
+</dd>
+<dd>
+<p>There are two special features for diverting data which are controlled by the
+``<code>!</code>'' characters preceding or following the <em>NAME</em> identifier:</p>
+</dd>
+<dl>
+<dt><strong><a name="item__21name"><strong>!</strong><em>NAME</em></a></strong>
+<dd>
+<p>This sets the data flow position to the <em>begin</em> of location <em>NAME</em>, i.e. it
+actually discards the current (already diverted) contents of location <em>NAME</em>
+before entering it. Use this to overwrite a locations contents.</p>
+</dd>
+</li>
+<dt><strong><a name="item_name_21"><em>NAME</em><strong>!</strong></a></strong>
+<dd>
+<p>This marks this location entry as <em>overwritable</em>, i.e. it enters location
+<em>NAME</em> but when the corresponding leave tag is found, the data-flow position
+for <em>NAME</em> gets automatically reset to its begin. Use this if you want to set
+the default contents for a location which only gets used if no other
+diversions occur to it (because any following diversions to this location
+will be overwrite the contents). This feature is usually used for a
+template scheme.</p>
+</dd>
+</li>
+<dt><strong><a name="item__21name_21"><strong>!</strong><em>NAME</em><strong>!</strong></a></strong>
+<dd>
+<p>Just the combination of the above two features. Use this to both discard the
+current contents of location <em>NAME</em> and set a new default for it.</p>
+</dd>
+</li>
+</dl>
+<dt><strong><a name="item__3a_23_5bname_5d_23_7d__28or__3c_3c_5bname_5d_2e_2"><strong>:#</strong>[<em>NAME</em>]<strong>#}</strong> (or <strong>&lt;&lt;</strong>[<em>NAME</em>]<strong>..</strong>)</a></strong>
+<dd>
+<p>This leaves the current location, i.e. enters again the location which was
+active when this location was entered. There is no need to leave all
+locations at the end of the input data. All still entered locations are
+automatically left at end of file because this is essential for a template
+scheme.</p>
+</dd>
+</li>
+</dl>
+<p>Notice that there are two ways of using (and thinking) about the filtering
+mechanism this program provides:</p>
+<dl>
+<dt><strong><a name="item_macro_mechanism"><strong>Macro Mechanism</strong></a></strong>
+<dd>
+<p>This is the ``predefined'' way of thinking here. Use it like this:</p>
+</dd>
+<dd>
+<pre>
+  FOO
+  {#BAR#}
+  QUUX
+  {#BAR#:
+  BAZ
+  :##}</pre>
+</dd>
+<dd>
+<p>Here you are thinking of the mechanism as a macro mechanism where you
+<em>expand</em> a macro at one data position while you define it via <em>begin</em> and
+<em>end</em> tags.</p>
+</dd>
+</li>
+<dt><strong><a name="item_diversion_mechanism"><strong>Diversion Mechanism</strong></a></strong>
+<dd>
+<p>This is the alternative way of thinking. Use it like this:</p>
+</dd>
+<dd>
+<pre>
+  FOO
+  &lt;&lt;BAR&gt;&gt;
+  QUUX
+  ..BAR&gt;&gt;
+  BAZ
+  &lt;&lt;..</pre>
+</dd>
+<dd>
+<p>In other words: You are thinking of the mechanism as a diversion mechanism
+where you <em>dump</em> a location at one data position while you divert to it by
+<em>entering</em> end <em>leaving</em> the location (here <strong>BAR</strong>) at other positions.</p>
+</dd>
+</li>
+</dl>
+<p>You can even intermix both ways because both are just alternative syntax
+variants which are treated the same.</p>
+<p>
+</p>
+<hr />
+<h1><a name="example">EXAMPLE</a></h1>
+<pre>
+  {#HEAD#}
+  {#BODY#}
+  {#FOOT#}</pre>
+<pre>
+  {#FOOT#:
+  Quux
+  :##}</pre>
+<pre>
+  {#BODY#:
+  Bar
+  :##}</pre>
+<pre>
+  {#HEAD#:
+  Foo
+  :##}
+
+</pre>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2do_outputfile"><strong>-o</strong> <em>outputfile</em></a></strong>
+<dd>
+<p>This redirects the output to <em>outputfile</em>. Usually the output will be send to
+<em>stdout</em> if no such option is specified or <em>outputfile</em> is ``<code>-</code>''.
+</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dq"><strong>-q</strong></a></strong>
+<dd>
+<p>This sets quiet mode where warnings are suppressed.
+</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-v</strong></a></strong>
+<dd>
+<p>This sets verbose mode where some processing information will be given on
+<em>stderr</em>.
+</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com
+
+</pre>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com
+
+</pre>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

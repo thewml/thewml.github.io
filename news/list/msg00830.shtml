@@ -1,0 +1,184 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: not expanding $(SOMETHING) in <import> or <fsview> -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Wed, 7 Jul 1999 21:35:10 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.9907071858020.9984&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990707110941.28827A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00830">Date Index</a>][<a href="thrd17.shtml#00830">Thread Index</a>]<br>
+[<A HREF="msg00829.shtml">Date Prev</A>][<A HREF="msg00831.shtml">Date Next</A>][<A HREF="msg00826.shtml">Thread Prev</A>][<A HREF="msg00833.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 7 Jul 1999 19:06:39 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 7 Jul 1999, Denis Barbier wrote:
+
+&gt;On Tue, 6 Jul 1999, Davor Cengija wrote:
+&gt;
+&gt;&gt; 	i'm trying to implement something like this:
+&gt;&gt; 
+&gt;&gt; &lt;box header="$(WML_SRC_FILENAME)"&gt;
+&gt;&gt; &lt;import src="$(WML_SRC_FILENAME)"&gt;
+&gt;&gt; &lt;/box&gt;
+&gt;&gt; 
+&gt;&gt; 	but in the &lt;import&gt;'s output $(WML_SRC_FILENAME) is expanded
+&gt;&gt; 	to the_realname.wml what i want to avoid.
+&gt;&gt; 	
+&gt;&gt; 	i guess that P3 (ePerl) expands those variables. the same
+&gt;&gt; 	applies for #use and #include statements.
+&gt;&gt; 
+&gt;&gt; 	is there a workarround? maybe some explicit &lt;perl&gt; statements?
+&gt;
+&gt;Sorry Davor, i don't understand your request.
+&gt;Pass 1 expands $(WML_SRC_FILENAME) to the_realname.wml. Now what do you
+&gt;want to do exactly?
+&gt;
+&gt;
+	sorry for the inconveniance, but i've made the mistake: i was
+	writing about expanding $(VARIABLE) in the &lt;import&gt;'s and
+	&lt;fsview&gt;'s output, but i was thinking on expanding #include
+	and #use lines.
+
+	here's the example:
+
+the_realname.wml
+----------------
+#use wml::std::page
+#use wml::std::box
+#use wml::imp::all
+&lt;page info title="Test"&gt;
+&lt;fsview src="$(WML_SRC_FILENAME)"&gt;
+&lt;box&gt;
+&lt;import src="$(WML_SRC_FILENAME)"&gt;
+&lt;/box&gt;
+
+	so, three #use lines on the top of the file
+	
+the_realname.html
+-----------------
+[cut]
+&lt;table border="0" width="90%" cellpadding="10" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td align="left" bgcolor="#dfc0c0"&gt;
+&lt;a href="the_realname.wml"&gt;&lt;font size="5"&gt;[ &lt;b&gt;FILE&lt;/b&gt; ]&lt;/font&gt;
+&lt;/a&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;font size="5" color="#404080"&gt;&lt;b&gt;&lt;tt&gt;the_realname.wml&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;
+&lt;br&gt;
+&lt;font size="-1" color="#606090"&gt;&lt;tt&gt;
+[-rw-rw-r-- davor davor]&lt;/tt&gt;&lt;/font&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td bgcolor="#ffe0e0" align="left"&gt;
+&lt;pre&gt;
+&amp;lt;page info title="Test"&amp;gt;
+&amp;lt;fsview src="$(WML_SRC_FILENAME)"&amp;gt;
+&amp;lt;box&amp;gt;
+&amp;lt;import src="$(WML_SRC_FILENAME)"&amp;gt;
+&amp;lt;/box&amp;gt;
+&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+	(see, no #include or #use lines)
+
+&lt;table cellspacing="0" cellpadding="4" border="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;pre&gt;
+&amp;lt;page info title="Test"&amp;gt;
+&amp;lt;fsview src="$(WML_SRC_FILENAME)"&amp;gt;
+&amp;lt;box&amp;gt;
+&amp;lt;import src="$(WML_SRC_FILENAME)"&amp;gt;
+&amp;lt;/box&amp;gt;&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+	same thing here... it looks like the_realname.wml does not
+	have any #include or #use statements and i'm trying to show
+	which external files i've used to create that html document.
+
+	so... how to force &lt;import&gt; or &lt;fsview&gt; to show #-starting
+	lines as well as the other ones?
+
+	thanks
+-- 
+      v
+Davor Cengija
+davor@linuxfan.com
+===================================
+"Please allow 30 days for delivery"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00833" HREF="msg00833.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00826" HREF="msg00826.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00829.shtml">Re: Perl installation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00831.shtml">Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00826.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00833.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00830"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00830"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

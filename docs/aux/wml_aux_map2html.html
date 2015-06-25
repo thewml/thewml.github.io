@@ -1,0 +1,175 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Auxiliaries / Map2HTML</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:34"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Auxiliaries / Map2HTML</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>map2html - convert server-side to client-side imagemap</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>map2html - convert server-side to client-side imagemap</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>map2html</strong>
+[<strong>-t</strong> <em>type</em>]
+[<strong>-d</strong> <em>shape</em>]
+[<strong>-n</strong> <em>name</em>]
+[<strong>-o</strong> <em>outputfile</em>]
+[<strong>-v</strong>]
+[<em>inputfile</em>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The <em>map2html</em> program reads <em>inputfile</em> and converts
+its contents from a server-side map to a client-side map.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2dt_type"><strong>-t</strong> <em>type</em></a></strong>
+<dd>
+<p>Sets the type of the server-side map. Either <code>ncsa</code> (default) or <code>cern</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dd_shape"><strong>-d</strong> <em>shape</em></a></strong>
+<dd>
+<p>Sets the default area shape. Either <code>def</code> (default) or <code>rect</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dn_name"><strong>-n</strong> <em>name</em></a></strong>
+<dd>
+<p>Produce a map called <em>name</em>. Default is <em>inputfile</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_outputfile"><strong>-o</strong> <em>outputfile</em></a></strong>
+<dd>
+<p>This redirects the output to <em>outputfile</em>. Usually the output will be send to
+<code>stdout</code> if no such option is specified or <em>outputfile</em> is ``<code>-</code>''.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-v</strong></a></strong>
+<dd>
+<p>This sets verbose mode where some processing information will be given on the
+console.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com
+
+</pre>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

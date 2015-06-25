@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Suggestion for htmlstrip level 4 -->
+<!--X-From-R13: Okry Prpxreg <norNpf.hav&#45;fo.qr> -->
+<!--X-Date: Sun, 17 Dec 2000 21:57:58 +0100 (MET) -->
+<!--X-Message-Id: 20001210195325.A21661@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02081">Date Index</a>][<a href="thrd42.shtml#02081">Thread Index</a>]<br>
+[<A HREF="msg02080.shtml">Date Prev</A>][<A HREF="msg02082.shtml">Date Next</A>][<A HREF="msg02087.shtml">Thread Prev</A>][<A HREF="msg02084.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Suggestion for htmlstrip level 4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 10 Dec 2000 19:53:25 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+I've got some suggestion for htmlstrip level 4: I would like to use
+level 4, because I don't use client-side scripting languages like
+JavaScript. But I use server-side includes, which have a similar
+syntax as HTML comments.
+
+Is it possible to change level 4 of htmlstrip so, that it'll
+weed out HTML comments (&lt;!-- [...] --&gt;), but not SSI commands
+(&lt;!--#command [param=value]* --&gt;)?
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02080.shtml">Bug report, I think, regarding &lt;attributes-quote %attributes&gt;.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02082.shtml">Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02087.shtml">Re: small problem with wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02084.shtml">Windows question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02081"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02081"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

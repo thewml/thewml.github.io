@@ -1,0 +1,311 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [LONG] Re: How to write a paper about WML in WML -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 7 Sep 1999 13:45:57 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990907082859.29323A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1r9kb7lgk.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00944">Date Index</a>][<a href="thrd20.shtml#00944">Thread Index</a>]<br>
+[<A HREF="msg00943.shtml">Date Prev</A>][<A HREF="msg00945.shtml">Date Next</A>][<A HREF="msg00940.shtml">Thread Prev</A>][<A HREF="msg00945.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[LONG] Re: How to write a paper about WML in WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Sep 1999 13:45:06 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 6 Sep 1999, Fritz Zaucker wrote:
+
+&gt; Hi,
+
+Hi Fritz,
+
+&gt; I am trying to write an article about WML for an internal journal of
+&gt; our computer center. Of course, I want to publish it on our Web-site
+&gt; as well. This leads to the problem of presenting WML-example code on a
+&gt; WMl-generated page. This leads to some interesting problems with
+&gt; including verbatim code.
+&gt; 
+&gt; While one can fool WML with for example entering
+&gt; 
+&gt; &lt; define-container foo&gt;
+&gt; 
+&gt; and then in using area substition to get rid of the the blank between
+&gt; &lt; and define, this is not particularly elegant. The problem with the
+&gt; verbatim-environment is that it is evaluated to late.
+&gt; 
+&gt; Ideally, one would like to put some WML example code into an include
+&gt; file and then include it once as verbatim and then a second time after
+&gt; being processed by WML. But I guess that would involve at least
+&gt; processing these include files separately once and then include the
+&gt; resulting .html file verbatim again.
+
+You guess wrong ;-)
+The macros below implement this feature in a one-shot trip. Of course,
+in some cases strange problems may occur. 
+
+I need these include files
+   #use wml::std::tags
+   #use wml::std::box
+   #use wml::fmt::verbatim
+
+The latest has been updated on 20-Aug-1999 and i realize there is still
+a bug. Replace &lt;pass=4-8&gt; by &lt;pass=4-9&gt;, i don't see why i didn't
+protect against the last pass.
+
+Here is a macro to write your examples to a file
+&lt;define-container verbatim-write &amp;unevalled &amp;body vw-body&gt;
+&lt;preserve file&gt;
+&lt;set-var %attributes&gt;
+&lt;:
+{
+    my $file = '&lt;get-var file&gt;';
+    if ($file eq '') {
+        my $tmpdir = $ENV{'TMPDIR'} || '/tmp';
+        $file = $tmpdir . "/wml.verbfile";
+    }
+    my $buffer = &lt;&lt;'__EOT_VERBATIM__';
+&lt;subst-in-string
+  &lt;subst-in-string
+    &lt;get-var-once vw-body&gt;
+                        "&lt;:" "&amp;lt;:"&gt;
+                        ":&gt;" ":&amp;gt;"&gt;
+__EOT_VERBATIM__
+    open(FP, "&gt;$file") || die "Unable to open $file for writing";
+    print FP $buffer;
+    close(FP);
+}
+:&gt;
+&lt;restore file&gt;
+&lt;/define-container&gt;
+
+The subst-in-string tags are needed to escape ePerl delimiters.
+The ``&amp;unevalled &amp;body'' is a dirty trick from Meta-HTML. I hope i could
+provide a better way one day. Meanwhile i see no other solution :-(
+Use this feature only when there is no alternative, i will suppress it ASAP.
+
+Now we can write WML code verbatim to a file. Next we have to show this
+code and execute it.
+
+&lt;define-container example&gt;
+&lt;preserve label&gt;
+&lt;set-var %attributes&gt;
+#   Write text to a file
+&lt;verbatim-write file="/tmp/wml-example"&gt;
+%body
+&lt;/verbatim-write&gt;
+#   Print file contents
+&lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Source code : &lt;get-var label&gt;&lt;/font&gt;" \
+     bdcolor="#333399" bdwidth=2 bdspace=5 \
+     bgcolor="#ccccff"&gt;
+&lt;protect pass=2&gt;\
+&lt;:
+    #   The &lt;protect&gt; tag is to needed because of =&gt; below.
+    #   Don't know why, any idea?
+    $_ = &amp;wml_fmt_verbatim({ FILE =&gt; '/tmp/wml-example'});
+
+    #   ePerl delimiters are coming back. The backslash prevents 
+    #   expansion during pass 3.
+    s|&amp;amp;lt;:|&lt;\:|sg;
+    s|:&amp;amp;gt;|:\&gt;|sg;
+    print;
+:&gt;\
+&lt;/protect&gt;
+&lt;/box&gt;
+#   And show what it does
+&lt;p&gt;
+&lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Result : &lt;get-var label&gt;&lt;/font&gt;" \
+     bdcolor="#993333" bdwidth=2 bdspace=5 \
+     bgcolor="#ffcccc"&gt;
+#   The line below seems to be equivalent to %body. It is not because of
+#   wml_p5_divert constructions &gt;&gt;NAME..
+#   With %body, angle brackets will close groups. With the line below this
+#   problem those angle brackets do not interfere because the are part
+#   of strings.
+&lt;concat %qbody&gt;
+&lt;/box&gt;
+&lt;restore label&gt;
+&lt;/define-container&gt;
+
+Some examples? Ok, let's go
+
+&lt;example label="Test Pass 2"&gt;
+&lt;define-container test&gt;
+&lt;box header="Test"
+     bdcolor="#000000" bdwidth=2 bdspace=5
+     bgcolor="#ccffcc"&gt;
+&lt;pre&gt;
+%body
+&lt;/pre&gt;
+&lt;/box&gt;
+&lt;/define-container&gt;
+&lt;test&gt;
+This is a test
+&lt;/test&gt;
+&lt;/example&gt;
+
+&lt;example label="Test Pass 3"&gt;
+&lt;:
+sub isotime {
+    my ($time) = @_;
+
+    my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) =
+        localtime($time);
+    my ($str) = sprintf("%02d-%02d-%04d %02d:%02d:%02d",
+        $mday, $mon+1, $year+1900, $hour, $min, $sec);
+    return $str;
+}
+:&gt;
+Last modified on &lt;:=&amp;isotime(time()):&gt;
+&lt;/example&gt;
+
+&lt;example label="Test Pass 4"&gt;
+&lt;m4&gt;
+m4_define(`forloop',
+    `m4_pushdef(`$1', `$2')_forloop(`$1', `$2', `$3', `$4')m4_dnl
+     m4_popdef(`$1')')
+m4_define(`_forloop',
+    `$4`'m4_ifelse($1, `$3', ,
+        `m4_define(`$1', m4_incr($1))m4_dnl
+         _forloop(`$1', `$2', `$3', `$4')')')
+forloop(`i', 1, 8, `i ')
+&lt;/m4&gt;
+&lt;/example&gt;
+
+&lt;example label="Test Pass 5"&gt;
+&lt;&lt;HEADER&gt;&gt;
+&lt;&lt;BODY&gt;&gt;
+&lt;&lt;FOOTER&gt;&gt;
+..FOOTER&gt;&gt;
+&lt;hr&gt;Copyright (c) 1999 me@domain.com
+&lt;&lt;..
+
+..HEADER&gt;&gt;
+&lt;h2&gt;Diversion Test&lt;/h2&gt;
+&lt;&lt;..
+
+..BODY&gt;&gt;&lt;p&gt;And here goes the body.&lt;&lt;..
+&lt;/example&gt;
+
+&lt;example label="Test Pass 6"&gt;
+{: [[tr#[a-z]#[A-Z]#]]
+Are all TheSe lEtterS iN upperCaSe?
+:}
+&lt;p&gt;
+{: [[s#(href=")([^"]*)#\1../\2#g]][[s#(this)#that#g]]
+Follow this &lt;a href="link.html"&gt;link&lt;/a&gt;
+:}
+&lt;/example&gt;
+
+Passes 1, 5 and 9 require special attention.
+* To suppress pass 1 parsing, you must either add
+  &lt;protect pass=1&gt;...&lt;/protect&gt; around your code or read a file via pass
+  2, 3 or 4, e.g.
+&lt;define-container example-pass1&gt;
+&lt;preserve label&gt;
+&lt;preserve file&gt;
+&lt;set-var %attributes&gt;
+&lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Source code : &lt;get-var label&gt;&lt;/font&gt;" \
+     bdcolor="#333399" bdwidth=2 bdspace=5 \
+     bgcolor="#ccccff"&gt;
+&lt;verbatim-file src=&lt;get-var file&gt;&gt;
+&lt;/box&gt;
+&lt;p&gt;
+&lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Result : &lt;get-var label&gt;&lt;/font&gt;" \
+     bdcolor="#993333" bdwidth=2 bdspace=5 \
+     bgcolor="#ffcccc"&gt;
+&lt;concat %qbody&gt;
+&lt;/box&gt;
+&lt;restore file&gt;
+&lt;restore label&gt;
+&lt;/define-container&gt;
+
+&lt;example-pass1 file="pass1.ex"&gt;
+#include 'pass1.ex' VAR=value ....
+&lt;/example-pass1&gt;
+
+With pass 5, you have to take care of location names. All different
+buffers should have different names.
+
+I don't know how to show examples of pass 9. you may use pass 3 to
+invoke wml:
+   system('wml -q -o A:test.a -o B:test.b test.wml');
+It will be awfully slow, and you certainly do not need to always
+regenerate output files.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00945" HREF="msg00945.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00950" HREF="msg00950.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00951" HREF="msg00951.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00938" HREF="msg00938.shtml">How to write a paper about WML in WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00945.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00940.shtml">Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00945.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00944"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00944"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

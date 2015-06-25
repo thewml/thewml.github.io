@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug in gfont -->
+<!--X-From-R13: Okry Ybruyre <xbruyreNzngu.FG&#45;Preyva.RS> -->
+<!--X-Date: Thu, 12 Oct 2000 08:25:19 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.A41.4.05.10010120811110.24016&#45;100000@newton.math.TU&#45;Berlin.DE -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02025">Date Index</a>][<a href="thrd41.shtml#02025">Thread Index</a>]<br>
+[<A HREF="msg02024.shtml">Date Prev</A>][<A HREF="msg02026.shtml">Date Next</A>][<A HREF="msg02057.shtml">Thread Prev</A>][<A HREF="msg02028.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug in gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Koehler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 12 Oct 2000 08:25:13 +0200 (DFT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Dear all,
+
+I'm trying to use gfont Version 1.0.3  to generate buttons for my new
+website.
+The X-Spec doesn't seems to work as expected:
+   gfont -r '+200 C x 80 M'  huhu
+should center the string huhu in the x-direction
+   gfont -r '+200 R x 80 M'  huhu
+should set the string huhu at the right border.
+In both cases "huhu" is placed at the left corner.
+
+Is this a bug or my  mistake? 
+Is there a workaround ?
+
+
+Axel
+
+___________________________________________________________________________
+Axel K"ohler,                                            Tel: 030-314 73352
+TU Berlin  FB 2  FR 0-1              Franklinstr. 28-29        10587 Berlin
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02028" HREF="msg02028.shtml">Re: Bug in gfont</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02024.shtml">Re: Problems with relative paths</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02026.shtml">Re: Bug in gfont</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02057.shtml">Open System Manager Positions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02028.shtml">Re: Bug in gfont</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02025"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02025"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

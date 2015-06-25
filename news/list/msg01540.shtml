@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Wide chars support (was Re: [ANNOUNCE] WML 1.99.8) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 28 Apr 2000 12:05:44 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000428115311.7736A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200004180834.RAA01242@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01540">Date Index</a>][<a href="thrd31.shtml#01540">Thread Index</a>]<br>
+[<A HREF="msg01539.shtml">Date Prev</A>][<A HREF="msg01541.shtml">Date Next</A>][<A HREF="msg01541.shtml">Thread Prev</A>][<A HREF="msg01549.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Wide chars support (was Re: [ANNOUNCE] WML 1.99.8)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 28 Apr 2000 12:05:31 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 18 Apr 2000, Nobuyuki Tsuchimura wrote:
+
+&gt;   Hi,
+&gt; 
+&gt; barbier&gt; another beta-release is out and its name is WML-1.99.8
+&gt; barbier&gt; I am very interested if this version fails compiling on other platforms.
+&gt; 
+&gt;   Compiling on Linux (with Japanized perl) is OK.
+[...]
+
+Do you believe that support for multi-byte characters is worth working
+on?  Are you interested in helping?
+
+It should be pretty easy with perl 5.6.0, but more trickier with C
+programs.  So if i have some help, i will provide an enhanced version of
+mp4h, after that i could add this support into other phases.
+
+This is a long term plan, #1 priority is to release WML 2.0.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01549" HREF="msg01549.shtml">Re: Wide chars support (was Re: [ANNOUNCE] WML 1.99.8)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01529" HREF="msg01529.shtml">Re: [ANNOUNCE] WML 1.99.8</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01539.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01541.shtml">A simple question concerning l10n</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01541.shtml">A simple question concerning l10n</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01549.shtml">Re: Wide chars support (was Re: [ANNOUNCE] WML 1.99.8)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01540"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01540"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,246 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [PATCH] &#45;o flags in .wmkrc -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Wed, 26 May 1999 10:46:36 +0200 (MET DST) -->
+<!--X-Message-Id: m1aeuskytk.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990526091921.9825A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00695">Date Index</a>][<a href="thrd9.shtml#00695">Thread Index</a>]<br>
+[<A HREF="msg00694.shtml">Date Prev</A>][<A HREF="msg00696.shtml">Date Next</A>][<A HREF="msg00693.shtml">Thread Prev</A>][<A HREF="msg00696.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [PATCH] -o flags in .wmkrc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 26 May 1999 10:41:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+Great, I'll try to apply that to our current version.
+I agree, the -N option can go away with this.
+
+Cheers,
+Fritz
+
+P.S.: One of the problems with wmk is that it "pretends" to be more
+      intelligent as it really is. It doesn't handle include files and
+      stuff like that. This might not be obvious to a user that
+      doesn't know much about WML. I am not sure that this can be
+      solved at all, as it would mean implementing make.
+
+      Perhaps a Makefile-Generator would be a solution?
+
+&gt; On Mon, 17 May 1999, Fritz Zaucker wrote:
+&gt; 
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; 
+&gt; &gt; wmk produces a 
+&gt; &gt; 
+&gt; &gt;     -ooutputfile optionI 
+&gt; &gt; 
+&gt; &gt; for wml. This is not good if -o lines are specified in the .wmlrc
+&gt; &gt; file.
+&gt; &gt; 
+&gt; &gt; I tried to add an option to wmk (-N) that would suppress the creation
+&gt; &gt; of the -o line for wml. This is a rather trivial patch which I'd
+&gt; &gt; happily submit.
+&gt; &gt; 
+&gt; &gt; However, when I tried to put -N into the .wmkrc file (and this is what
+&gt; &gt; would be needed in conjunction with the -o lines in .wmlrc) I noticed,
+&gt; &gt; that .wmkrc is only read if wmk process a directory and not when it
+&gt; &gt; processes a single file.
+&gt; &gt; 
+&gt; &gt; Looks to me as if the code for reading .wmkrc is at the wrong place
+&gt; &gt; (inside sub determine_files).
+&gt; 
+&gt; Hi Fritz,
+&gt; 
+&gt; below is a patch to allow -o flags in .wmkrc.
+&gt; I am rethinking how wmk builds options from .wmkrc and command line,
+&gt; so wmk could change soon.
+&gt; 
+&gt; I believe we don't need the -N flag, am i right?
+&gt; 
+&gt; Denis
+&gt; 
+&gt; diff -u -r1.7 -r1.8 wml_frontend/wmk.src
+&gt; @@ -119,6 +119,7 @@
+&gt;  @opt_i = ();
+&gt;  @opt_D = ();
+&gt;  $opt_O = '';
+&gt; +@opt_o = ();
+&gt;  @opt_P = ();
+&gt;  @opt_E = ();
+&gt;  $opt_t = 0;
+&gt; @@ -149,6 +150,7 @@
+&gt;              "i|includefile=s@", 
+&gt;              "D|define=s@",
+&gt;              "O|optimize=i",
+&gt; +            "o|output=s@",
+&gt;              "P|prologue=s@",
+&gt;              "E|epilogue=s@",
+&gt;              "t|settime",
+&gt; @@ -315,10 +317,12 @@
+&gt;          if ($dir) {
+&gt;              $cwd = Cwd::cwd;
+&gt;              chdir($dir);
+&gt; +            &amp;read_rcfile();
+&gt;              &amp;process_file($p, $dir, $file);
+&gt;              chdir($cwd);
+&gt;          }
+&gt;          else {
+&gt; +            &amp;read_rcfile();
+&gt;              &amp;process_file($p, $dir, $file);
+&gt;          }
+&gt;      }
+&gt; @@ -328,19 +332,18 @@
+&gt;      }
+&gt;  }
+&gt;  
+&gt; -#   determine files to act on
+&gt; -sub determine_files {
+&gt; -    my ($cwd, $reldir, $dir, @DIR, @files, @filesA, @filesF, $fileA, $fileF, %files);
+&gt; -
+&gt; -    #   read .wmkrc files
+&gt; +#   read .wmkrc files
+&gt; +sub read_rcfile {
+&gt;      @opt_A_SAV = @opt_A;
+&gt;      @opt_F_SAV = @opt_F;
+&gt;      @opt_x_SAV = @opt_x;
+&gt;      @opt_X_SAV = @opt_X;
+&gt; +    @opt_o_SAV = @opt_o;
+&gt;      @opt_A_CUR = @opt_A;
+&gt;      @opt_F_CUR = @opt_F;
+&gt;      @opt_x_CUR = @opt_x;
+&gt;      @opt_X_CUR = @opt_X;
+&gt; +    @opt_o_CUR = @opt_o;
+&gt;      if (not $opt_r) {
+&gt;          ($cwd = Cwd::cwd) =~ s|/$||;
+&gt;          while ($cwd) {
+&gt; @@ -365,19 +368,30 @@
+&gt;                  @opt_F = ();
+&gt;                  @opt_x = ();
+&gt;                  @opt_X = ();
+&gt; +                @opt_o = ();
+&gt;                  &amp;ProcessOptions();
+&gt;                  @opt_A_CUR = (@opt_A_CUR, @opt_A);
+&gt;                  @opt_F_CUR = (@opt_F_CUR, @opt_F);
+&gt;                  @opt_x_CUR = (@opt_x_CUR, @opt_x);
+&gt;                  @opt_X_CUR = (@opt_X_CUR, @opt_X);
+&gt; +                @opt_o_CUR = @opt_o if $#opt_o &gt; -1;
+&gt;              }
+&gt;          }
+&gt;          @opt_A = @opt_A_SAV;
+&gt;          @opt_F = @opt_F_SAV;
+&gt;          @opt_x = @opt_x_SAV;
+&gt;          @opt_X = @opt_X_SAV;
+&gt; +        @opt_o = @opt_o_SAV;
+&gt;      }
+&gt; +}
+&gt; +
+&gt; +#   determine files to act on
+&gt; +sub determine_files {
+&gt; +    my ($cwd, $reldir, $dir, @DIR, @files, @filesA, @filesF, $fileA, $fileF, %files);
+&gt;  
+&gt; +    #   read .wmkrc files to check -A and -F options
+&gt; +    &amp;read_rcfile();
+&gt; +
+&gt;      #   determine files
+&gt;      @filesA = glob(join(' ', @opt_A_CUR));
+&gt;      @filesF = glob(join(' ', @opt_F_CUR));
+&gt; @@ -431,6 +445,8 @@
+&gt;      #   determine additional options
+&gt;      open(FP, "&lt;$file");
+&gt;      $shebang = '';
+&gt; +    $opts = '';
+&gt; +    $opts = '-o' . join(' -o', @opt_o_CUR) if $#opt_o_CUR &gt; -1;
+&gt;      while (1) {
+&gt;          $shebang .= &lt;FP&gt;;
+&gt;          if ($shebang =~ m|^(.*)\\\s*$|s) {
+&gt; @@ -439,7 +455,6 @@
+&gt;          }
+&gt;          last;
+&gt;      }
+&gt; -    $opts = '';
+&gt;      if ($shebang =~ m|^#!wml\s+(.+\S)\s*$|is) {
+&gt;         $opts = $1;
+&gt;      }
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00696" HREF="msg00696.shtml">Re: [PATCH] -o flags in .wmkrc</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00693" HREF="msg00693.shtml">[PATCH] -o flags in .wmkrc</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00694.shtml">shebang line with filename-variable</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00696.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00693.shtml">[PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00696.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00695"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00695"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

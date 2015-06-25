@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: toc for <h1> only? -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Wed, 29 Dec 1999 18:34:36 +0100 (MET) -->
+<!--X-Message-Id: 386A29A0.9ABC0B57@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01244">Date Index</a>][<a href="thrd26.shtml#01244">Thread Index</a>]<br>
+[<A HREF="msg01243.shtml">Date Prev</A>][<A HREF="msg01245.shtml">Date Next</A>][<A HREF="msg01242.shtml">Thread Prev</A>][<A HREF="msg01245.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>toc for &lt;h1&gt; only?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Dec 1999 16:32:48 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I have just started to build my Linux with Laptop Computers
+page with WML 1.7.4 (06-Oct-1999). Should have done it earlier ;-)
+
+I would like to use a TOC which contains &lt;h1&gt; headers
+only. Though I tried different approaches I don't get this to work.
+The standard as in the man page:
+
+#use wml::std::toc
+&lt;toc&gt;
+
+works well. 
+
+But the remaining part of the man page I probably don't understand
+exactly. 
+
+       Alternatively you can use the &lt;toc_hN&gt; tags to insert its
+       body (can be empty!) at the current location and into the
+       Table Of Contents. If specified, the alt attribute is
+       included into the ToC instead of the body.
+
+#use wml::std::toc
+&lt;toc_h1&gt;
+
+doesn't work as desired.
+
+Thank you
+-werner-
+-- 
+Werner Heuser                       | Stop nuclear power now!       /~~
+LiLAC - Linux with Laptop Computers |                              /~~~
+Berlin, Germany                     |                             /~~~~
+T. +49 30 349 53 86             <A  HREF="http://www.snafu.de/~wehe/index_li.html">http://www.snafu.de/~wehe/index_li.html</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01245" HREF="msg01245.shtml">Re: toc for &lt;h1&gt; only?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01243.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01245.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01242.shtml">Re: An &quot;@&quot; in the sliceterm makes wml fail?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01245.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01244"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01244"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

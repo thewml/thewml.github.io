@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem... -->
+<!--X-From-R13: Rnir Bybaxn <cybaxnNqbvg.jvfp.rqh> -->
+<!--X-Date: Tue, 27 Jul 1999 23:59:06 +0200 (MET DST) -->
+<!--X-Message-Id: 19990727165809.A26215@doit.wisc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199907262014.QAA05139@no.cs.brown.edu -->
+<!--X-Reference: Pine.LNX.3.96.990727010158.4421A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00875">Date Index</a>][<a href="thrd18.shtml#00875">Thread Index</a>]<br>
+[<A HREF="msg00874.shtml">Date Prev</A>][<A HREF="msg00876.shtml">Date Next</A>][<A HREF="msg00873.shtml">Thread Prev</A>][<A HREF="msg00880.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Dave Plonka &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 27 Jul 1999 16:58:09 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 27, 1999 at 01:03:15AM +0200, Denis Barbier wrote:
+&gt; On Mon, 26 Jul 1999, John Bazik wrote:
+&gt; 
+&gt; &gt; I downloaded the latest gfont distribution, with the big-endian patch.
+&gt; &gt; Works perfectly!
+&gt; &gt; 
+&gt; &gt; One problem: I think the precompiled fonts are little-endian.  I
+&gt; &gt; regenerated them for myself and all is well.  Include two sets or
+&gt; &gt; generate during the build?
+&gt; 
+&gt; Oops, you're right.
+&gt; Thanx for the point
+
+Hmm, I think I should clarify something here - you *don't* want to
+distribute two sets of fonts, the ".gdf" files _should_ now be portable.
+(I tested the patch on Solaris SPARC and Linux Intel and also tested
+that the ".gdf" files created after the patch are portable between
+them.) The two things that I was addressing in that patch were:
+
+   1) make gfont work on big-endian architectures (e.g. Solaris SPARC)
+   2) make ".gdf" files portable
+
+Previously, the problem was that gfont_pxtogdf would write *host order*
+32-bit integers into the ".gdf" files, but then gfont expected them to be
+little-endian when it read them.  As such, it only worked properly on
+little-endian platforms.
+
+With the patch, gfont_pxtogdf will now always write *network order* (big-
+endian) 32-bit values when creating ".gdf" files, and gfont will now
+expect big-endian when reading the files, and swab them into *host order*
+on little-endian platforms.
+
+As an aside, if the maintainer/author would prefer not to invalidate
+previously generated ".gdf" files for the current/large(?) little-endian
+user base, the patch could be modified.  The tests for WORDS_BIGENDIAN
+simply would need to be reversed so that the ".gdf" files would then
+always contain "little-endian" 32-bit integers, regardless of platform.
+If this is done, a new snapshot should probably be done ASAP before more
+confusion ensues.  (I just chose big-endian because that's the canonical
+"network order" with which we're all familiar.)
+
+If the patch is left as-is (which I think is fine), it may help if the
+docs (and probably ChangeLog) mention that, when upgrading from an older
+gfont, users should remove and/or regenerate their existing installed
+".gdf" and ".gdf.gz" files before "make install".
+
+Lastly, one other thing I noticed in the new snapshot is that, regarding
+Frederic's contribution (which he mentioned in the list that he integrated
+with my "configure.in" patch), I believe it should say that it was to
+improve the test of the perl version rather than handle big-endian
+architectures, no?  e.g.:
+
+  Changes between 1.0.2 and SNAP:
+  ...
+
+    *) Check for big endian architecture (21-Jul-1999):
+       [Dave Plonka &lt;plonka@doit.wisc.edu&gt;]
+
+    *) Improve checking of perl version (21-Jul-1999):
+       [Frederic le Mouel &lt;Frederic.LeMouel@irisa.fr&gt;]
+
+Thanks for the work Denis...
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00880" HREF="msg00880.shtml">Re: gfont problem...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00872" HREF="msg00872.shtml">Re: gfont problem...</A></strong>, <em>From:</em> John Bazik</li>
+<li><strong><A NAME="00873" HREF="msg00873.shtml">Re: gfont problem...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00874.shtml">Re: html2wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00876.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00873.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00880.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00875"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00875"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,194 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Examples: WML Itself -->
+<!--X-From-R13: Egrcura ina Stzbaq <finartzbNgehrfcrpgen.pbz> -->
+<!--X-Date: Sun, 28 Dec 1997 07:21:50 +0100 (MET) -->
+<!--X-Message-Id: 199712270946.EAA04184@plymouth.truespectra.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199712240845.JAA01908@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00013">Date Index</a>][<a href="thread.shtml#00013">Thread Index</a>]<br>
+[<A HREF="msg00012.shtml">Date Prev</A>][<A HREF="msg00014.shtml">Date Next</A>][<A HREF="msg00010.shtml">Thread Prev</A>][<A HREF="msg00014.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Examples: WML Itself</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephen van Egmond &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 27 Dec 1997 04:46:29 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; I've poked around in this website and it looks good and clean.  And because of
+&gt; the good similarity of the page layout a WML-based approach is a good one,
+&gt; too.
+
+Thanks!
+
+&gt; Just a few things I've discovered:
+
+&gt; 1. The pages have 
+&gt;    &lt;body bgcolor="#000000" text=ffff60 link=00d0d0 vlink=00a0a0 alink=ff7070&gt;
+&gt;    First, as a side question, how can does be created with WML?
+&gt;    WML (at least from 1.4.7 up) would create:
+
+I'm currently at 1.3 (not keeping up with every upgrade).  The definition
+of &lt;tspage&gt; is:
+
+&lt;define-container tspage&gt;
+&lt;preserve title&gt;
+&lt;set-var %attributes&gt;
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;html*&gt;&lt;head*&gt;&lt;title*&gt;&lt;get-var title&gt;&lt;/title&gt;
+&lt;link rel=StyleSheet href="<A  HREF="http://www.truespectra.com/truespectra.css">http://www.truespectra.com/truespectra.css</A>"
+      title="TrueSpectra Style Sheet" type="text/css"&gt;
+&lt;/head&gt;
+&lt;body bgcolor=000000 text=ffff60 link=00d0d0 vlink=00a0a0
+alink=ff7070&gt;
+	[more stuff, probably not important]
+&lt;/tspage&gt;
+
+I found it odd that bgcolor was the only one to get quotes, but didn't
+consider it important enough to fix.  I'll just update the tag definition
+so that it generates sensible HTML.
+
+&gt; 2. The colors from 1.) are not all in the 216-color-cube (browser
+&gt;    safe colors). To avoid color substitutions, I recommend you
+&gt;    to align them to the nearest ones from the color-cube.
+
+A good idea.
+
+&gt; 2. On a few pages I see in the source that you successfully used
+&gt;    wml::std::toc. Great! ;_)
+
+It's handy.
+
+&gt; 3. There are a lot of pages with absolute hyperlinks in them
+&gt;    like ``&lt;a href="<A  HREF="http://www.truespectra.com/">http://www.truespectra.com/</A>..''. I personally thing this
+&gt;    makes your site a little bit static. For instance you cannot easily make a
+&gt;    version under a subdir where you work and from where the pages are then
+&gt;    distributed to the final place.
+
+
+Actually, there is.  All links, with few exceptions, are generated via the
+&lt;linkto&gt; tag which I generated, and which uses an environment variable to
+set the document root.  e.g. 
+
+&lt;linkto place="Products_PhotoGraphics"&gt;this is a link to photographics
+stuff&lt;/linkto&gt;
+
+The stuff that does not link in this mannger is, for now, a pain to
+maintain.  Images are done with relative directories (images/foo.jpg).
+
+&gt;    start with / only. Or even better: Use WML's auto-adustable path variables
+&gt;    and let WML calculate the relative paths between each page. See the ``WML
+&gt;    Itself'' pages and how I let WML calculate all URLs in the navbars via this
+&gt;    approach.
+
+I'm not sure that I used this facility, not having seen it, but used
+something fairly similar.
+
+&gt; 4. There are images like ``img
+&gt;    src="<A  HREF="http://www.truespectra.com/images/tsramp-mini.jpg">http://www.truespectra.com/images/tsramp-mini.jpg</A>" alt="TrueSpectra
+&gt;    Home Page" border="0"&gt;''. Here I again wondering how this can survive WML,
+
+$DOCROOT + "images/tsramp-mini.jpg", located in wml::usr::ts.wml
+
+For some reason the defined-tag expansion occurred after the &lt;img&gt;
+width expansion?
+I certainly didn't use &lt;img*&gt;
+
+&gt;    at least add them manually by piping the SSI-includes through WML to easily
+&gt;    determine the width/height dimensions.
+
+We don't use any SSI at the moment, so I admit to being somewhat perplexed
+by this.
+
+&gt; That's an interesting file-system-based approach for a navbar.  Hmmmmm... if
+&gt; you can limite the files that's fine this way.  But which feature for the
+&gt; grammar-based wml::des::navbar would be required to let us create the same
+&gt; with it? I just ask because there have to be a reason why you choose your
+&gt; approach.  Perhaps I've missed some essential feature in wml::des::navbar
+&gt; which restricts it too much in use? Just give a few hints. Thanks.  Or did you
+&gt; start your work on the navbar before wml::des::navbar arrived?
+
+&lt;thinks&gt;
+
+In the man pages I've got for 1.3, navbar was documented as needing to be
+finished.  I was also somewhat obsessive about the presentation,
+preferring:
+* the hierarchical display ("twistie"-like behaviour in e.g. Win95 or
+	MacOS)
+* not using images nor image maps to render the display:
+	style sheets were the way to go
+
+There were some other limitations; the huge majority of the company's
+visitors are users of our OS/2 product; that platform hasn't progressed
+past 3.0, and the JavaScript support seemed to be unstable.  I preferred
+to avoid that.
+
+So I simply rolled my own.
+
+&gt; In general to summarize: The complete website looks good. Keep on your work...
+
+Thanks!
+
+You too, a very handy tool.  The alternative was frontpage!
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00010" HREF="msg00010.shtml">Re: Examples: WML Itself</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00012.shtml">ANNOUNCE: WML 1.4.9</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00014.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00010.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00014.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00013"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00013"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

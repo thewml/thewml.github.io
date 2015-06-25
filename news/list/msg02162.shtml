@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Perl parsing error -->
+<!--X-From-R13: Quevfgvna Irregf <puevfgvnaNsnzvyvr&#45;jrregf.qr> -->
+<!--X-Date: Sun, 11 Mar 2001 11:48:21 +0100 (MET) -->
+<!--X-Message-Id: 20010305202617.B592@familie&#45;weerts.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02162">Date Index</a>][<a href="thrd44.shtml#02162">Thread Index</a>]<br>
+[<A HREF="msg02161.shtml">Date Prev</A>][<A HREF="msg02163.shtml">Date Next</A>][<A HREF="msg02172.shtml">Thread Prev</A>][<A HREF="msg02171.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Perl parsing error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Christian Weerts &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 5 Mar 2001 20:26:17 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i'm quiet new in WML and do the work for a friend of mine now.
+After upgrading to  WML-Version 2.0.6 under Debian testing/unstable,
+eperl can't find Local.pm now. I drop the error messages at the end of
+the message.
+Anybody could help me?
+
+Greetings
+    Christian
+-- 
+<A  HREF="http://oldenburg.linux.de">http://oldenburg.linux.de</A>
+
+make[2]: Entering directory `/home/cw/work/web/oldenburg.linux.de/src/Termine'
+/usr/bin/wml -n -I. -I../../Styles -o index.html index.wml
+-\|ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate Time/Local.pm in @INC (@INC contains: /usr/lib/wml/perl/lib /usr/lib/wml/perl/lib/i386-linux /usr/lib/perl5 /usr/lib/perl5/5.6/i386-linux /usr/lib/perl5/5.6 /usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .) at /tmp/wml.11421.tmp1.wml line 119.
+BEGIN failed--compilation aborted at /tmp/wml.11421.tmp1.wml line 119.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+make[2]: *** [index.html] Error 1
+make[2]: Leaving directory `/home/cw/work/web/oldenburg.linux.de/src/Termine'
+make[1]: *** [all] Error 2
+make[1]: Leaving directory `/home/cw/work/web/oldenburg.linux.de/src'
+make: *** [build] Error 2
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02171" HREF="msg02171.shtml">Re: Perl parsing error</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02161.shtml">Perl parsing error</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02163.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02172.shtml">Re: Perl parsing error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02171.shtml">Re: Perl parsing error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02162"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02162"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

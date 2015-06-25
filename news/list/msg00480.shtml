@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Sliced, folded navbars -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Sun, 14 Mar 1999 21:46:21 +0100 (MET) -->
+<!--X-Message-Id: 87sob7pzpk.fsf@rechner.none -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00480">Date Index</a>][<a href="thrd11.shtml#00480">Thread Index</a>]<br>
+[<A HREF="msg00481.shtml">Date Prev</A>][<A HREF="msg00482.shtml">Date Next</A>][<A HREF="msg00481.shtml">Thread Prev</A>][<A HREF="msg00482.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Sliced, folded navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 14 Mar 1999 21:45:43 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I somehow tweaked my code for hierarchical navbars to produce slices
+for different languages. So if you always wanted to do things like 
+
+  &lt;navbar:button id=www.wml.navbars
+  url="www/wml_navbars.#.html|www/wml_navbars.html"
+  txt="&lt;de:Navigationsleisten&gt;&lt;en: Navigation&amp;nbsp;Bars&gt;"&gt;
+
+you might want to take a look at <A  HREF="http://www.hars.de/www/wml_navbars.html">http://www.hars.de/www/wml_navbars.html</A>
+resp. <A  HREF="http://www.hars.de/www/wml_navbars.en.html">http://www.hars.de/www/wml_navbars.en.html</A>.
+
+I managed to rebuild my site with these definitions (and three pages
+even use the slice functionality), so it can't be totally broken.
+
+The documentation could probably be better, but if you understand
+wml::des::navbar, you should be able to make some sense of it, my code
+is only a modification of it and should almost work as a drop in
+replacement. And, yes, the resulting slices have [LANG_XX:&lt;img src=...&gt;:]
+instead of the slightly easier to achieve &lt;img src=[LANG_XX:...:]&gt;,
+so the beautifier will actually insert the image dimensions.
+
+Yours, Florian.
+
+PS: I'll be in Heidelberg for most of this week, so if you find any bugs
+you have the whole week to look for a solution before you report them
+to me, I won't have time to fix them anyway :-).
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00482" HREF="msg00482.shtml">Re: Sliced, folded navbars</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00481.shtml">Minor bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00482.shtml">Re: Sliced, folded navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00481.shtml">Minor bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00482.shtml">Re: Sliced, folded navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00480"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00480"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

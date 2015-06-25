@@ -1,0 +1,188 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Strange bug in mp4h parsing -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Mon, 24 Dec 2001 04:06:20 +0100 (MET) -->
+<!--X-Message-Id: 20011224033957.A30809@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02472">Date Index</a>][<a href="thrd50.shtml#02472">Thread Index</a>]<br>
+[<A HREF="msg02471.shtml">Date Prev</A>][<A HREF="msg02473.shtml">Date Next</A>][<A HREF="msg02467.shtml">Thread Prev</A>][<A HREF="msg02475.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Strange bug in mp4h parsing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 24 Dec 2001 03:39:57 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+I've got a strange parsing bug in mp4h (wml 2.0.7, system details at
+the end of the email...):
+
+If I use a &lt;subst-in-string&gt; inside a &lt;define-tag&gt; to make recursive
+tag definitions, &lt;subst-in-string&gt; seems to require a space after the
+first parameter and doesn't work, if there immediately follows a
+newline after the first parameter. Maybe there are some more pedantic
+circumstances necessary to reproduce this bug, but at least I could
+reduce the complexity to the following to examples work the difference
+out:
+
+---8&lt;---
+# Doesn't work
+&lt;define-tag add_foo whitespace=delete&gt;
+&lt;subst-in-string
+    "=LT=define-tag %0-only endtag=required&gt;[%0:%%body:%0]=LT=/define-tag&gt;"
+    "=LT=" "&lt;" /&gt;
+&lt;/define-tag&gt;
+
+&lt;add_foo bar /&gt;
+
+&lt;bar-only&gt;baz&lt;/bar-only&gt;
+
+# Works fine
+&lt;define-tag add_foo whitespace=delete&gt;
+&lt;subst-in-string
+    "=LT=define-tag %0-only endtag=required&gt;[%0:%%body:%0]=LT=/define-tag&gt;" 
+    "=LT=" "&lt;" /&gt;
+&lt;/define-tag&gt;
+
+&lt;add_foo bar /&gt;
+
+&lt;bar-only&gt;baz&lt;/bar-only&gt;
+---&gt;8---
+
+Please note the blank behind the second '=LT=/define-tag&gt;"'! The result
+of this piece of WML code is:
+
+---8&lt;---
+=LT=define-tag bar-only endtag=required&gt;[bar:%body:bar]=LT=/define-tag&gt;=LT=
+&lt;bar-only&gt;baz&lt;/bar-only&gt;
+[bar:baz:bar]
+---&gt;8---
+
+Here's the full debugging data:
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sun4u-sun-solaris2.7
+    Perl: 5.006 (/usr/local/bin/perl)
+    User: axel@kathrin.dagstuhl.de
+    Date: 11-Jul-2001
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (revision 5.0 version 6 subversion 1) configuration:
+  Platform:
+    osname=solaris, osvers=2.7, archname=sun4-solaris
+    uname='sunos kathrin 5.7 generic sun4u sparc '
+    config_args=''
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef use5005threads=undef useithreads=undef usemultiplicity=undef
+    useperlio=undef d_sfio=undef uselargefiles=define usesocks=undef
+    use64bitint=undef use64bitall=undef uselongdouble=undef
+  Compiler:
+    cc='gcc', ccflags ='-fno-strict-aliasing -I/usr/local/include -I/opt/local/include -I/opt/gnu/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    optimize='-O',
+    cppflags='-fno-strict-aliasing -I/usr/local/include -I/opt/local/include -I/opt/gnu/include'
+    ccversion='', gccversion='2.95.2 19991024 (release)', gccosandvers='solaris2.7'
+    intsize=4, longsize=4, ptrsize=4, doublesize=8, byteorder=4321
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib -L/opt/local/lib -L/opt/gnu/lib '
+    libpth=/usr/local/lib /opt/local/lib /opt/gnu/lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -ldl -lm -lc
+    perllibs=-lsocket -lnsl -ldl -lm -lc
+    libc=/lib/libc.so, so=so, useshrplib=true, libperl=libperl.so
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' -Wl,-E -R /usr/local/lib/perl5/5.6.1/sun4-solaris/CORE'
+    cccdlflags='-fPIC', lddlflags=' -W,l-E -G -L/usr/local/lib -L/opt/local/lib -L/opt/gnu/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options: USE_LARGE_FILES
+  Built under solaris
+  Compiled at Jul 11 2001 13:53:17
+  @INC:
+    /usr/local/lib/perl5/5.6.1/sun4-solaris
+    /usr/local/lib/perl5/5.6.1
+    /usr/local/lib/perl5/site_perl/5.6.1/sun4-solaris
+    /usr/local/lib/perl5/site_perl/5.6.1
+    /usr/local/lib/perl5/site_perl/5.6.0/sun4-solaris
+    /usr/local/lib/perl5/site_perl/5.6.0
+    /usr/local/lib/perl5/site_perl
+    .
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02475" HREF="msg02475.shtml">Re: Strange bug in mp4h parsing</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02471.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02473.shtml">Bug in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02467.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02475.shtml">Re: Strange bug in mp4h parsing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02472"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02472"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

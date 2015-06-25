@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181&#45;17 sun4u sparc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 2 Apr 2000 23:33:44 +0200 (MET DST) -->
+<!--X-Message-Id: 20000402233336.C25738@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200003241100.MAA16961@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01516">Date Index</a>][<a href="thrd31.shtml#01516">Thread Index</a>]<br>
+[<A HREF="msg01514.shtml">Date Prev</A>][<A HREF="msg01517.shtml">Date Next</A>][<A HREF="msg01511.shtml">Thread Prev</A>][<A HREF="msg01508.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181-17 sun4u sparc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 2 Apr 2000 23:33:36 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Mar 24, 2000 at 12:00:51PM +0100, siegmund@fmi.uni-konstanz.de wrote:
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.4
+&gt; Operating System: SunOS 5.6 Generic_105181-17 sun4u sparc
+&gt; 
+&gt; Problem Description:
+&gt; | Bit::Vector doesn't compile.
+&gt; | 
+&gt; | Thank's for any help.
+
+This bug is fixed in WML 1.99.5, it even compiles with perl 5.6.0.
+
+PS: Jack, could you tell me your whole name so that i give you credit
+    for that.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01511" HREF="msg01511.shtml">[BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181-17 sun4u sparc</A></strong>, <em>From:</em> siegmund</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01514.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01517.shtml">Re: wml_macros(7) ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01511.shtml">[BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181-17 sun4u sparc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01508.shtml">wml_macros(7) ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01516"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01516"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

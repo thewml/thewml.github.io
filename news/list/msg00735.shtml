@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 7 Jun 1999 14:38:47 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990607131112.31817A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990607120554.2241B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00735">Date Index</a>][<a href="thrd16.shtml#00735">Thread Index</a>]<br>
+[<A HREF="msg00734.shtml">Date Prev</A>][<A HREF="msg00736.shtml">Date Next</A>][<A HREF="msg00734.shtml">Thread Prev</A>][<A HREF="msg00736.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 7 Jun 1999 14:32:35 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 7 Jun 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Should there always be a newline after the last line, if it
+&gt; contains a tag?
+
+This time, i must admit it's a bug :-(
+If after the first pass, the last character is a superior sign
+instead of a newline, then the last tag is not expanded during pass 2.
+
+All editors put a newline on the last line, so i beieve this bug has no
+consequence in practice.
+
+Apply the patch below if you think you are concerned by this bug.
+
+Thanx to Jan Ulrich for the report.
+
+Denis
+
+--- wml_backend/p2_mhc/libmhtml/pagefuncs.c	1999/03/16 11:05:12	1.7
++++ wml_backend/p2_mhc/libmhtml/pagefuncs.c	1999/06/07 12:22:02
+@@ -336,7 +336,7 @@
+       int loc = atoi (insert_loc);
+ 
+       if (loc &lt; 0)
+-          loc = top_page-&gt;page-&gt;bindex + loc;
++          loc = top_page-&gt;page-&gt;bindex + loc + 1;
+       if ((loc &gt; -1) &amp;&amp; (loc &lt; top_page-&gt;page-&gt;bindex))
+         {
+           bprintf_insert_text (top_page-&gt;page, loc, insertion);
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00736" HREF="msg00736.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00733" HREF="msg00733.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00734.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00736.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00734.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00736.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00735"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00735"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

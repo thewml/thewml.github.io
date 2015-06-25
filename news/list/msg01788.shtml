@@ -1,0 +1,181 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Idea how not to need future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Wed, 5 Jul 2000 21:07:55 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007051705120.11617&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200007051136.NAA02922@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01788">Date Index</a>][<a href="thrd32.shtml#01788">Thread Index</a>]<br>
+[<A HREF="msg01787.shtml">Date Prev</A>][<A HREF="msg01789.shtml">Date Next</A>][<A HREF="msg01787.shtml">Thread Prev</A>][<A HREF="msg01797.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Idea how not to need future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 5 Jul 2000 17:44:01 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Jan!
+
+On Wed, 5 Jul 2000, Jan Holler wrote:
+&gt; &gt; Ok - this would be a solution for your this case - but I want to use
+&gt; &gt; different environments at one page!
+&gt; That is why I mentioned CSS, the cascading makes it
+&gt; interesting.
+
+:-) I agree...
+
+&gt; I also think the effort of creating e.g. &lt;ptable&gt; is not
+&gt; worth result since it differs from site to site too much
+&gt; and could not easily be reused in new sites.
+
+You don't know &lt;ptable&gt; and its function!
+
+It does the following:
+
+* You can define cells for pictures and cells for text, which can span
+multiple rows and columns
+
+* According to a total width set in the opening &lt;ptable&gt; tag it tries to
+find out the best geometry of each picture to fit into this layout: for
+example a row of three pictures is layed out with three pictures of the
+same height, the total width as set.
+
+* More complex like the following is also possible (A, B and C different
+pictures of different original size and different aspect ratios):
+
+	+-----+---+
+	|     | B |
+	|  A  +---+
+	|     | C |
+	+-----+---+
+
+* And even more complex layouts are also possible ;-)
+
+
+So, the main function is not to `draw´ table elements but to calculate the
+needed size of the pictures ;-) (and to resize them)
+
+I used that to make a photo album of about 188 photos on 59 pages,
+calculating the size of the pictures by hand would last too long...
+
+I wrote these functions not very site-specific - almost everything can be
+set up by the user - and I'll publish these set of macros in the moment,
+when I've set up a computer with Linux and WML here in Vienna (I changed
+from Spain three weeks ago) to do the necessary changes to use them with
+the latest WML version. 
+
+In that moment also a public version with pictures will be available, this
+photo album is a little bit to private to publish the URL on the list.
+
+
+Another example which is ready yet:
+
+I've programmed something like a table of content (TOC) generator which
+can organize different pages. This is done by adding a special line to the
+TOC file and the text to view as link to this page. Of course, a type of
+sorting is provided (and also links to the previous and next file,
+according of the level).
+
+Imagine the following TOC file (the lines with #TOC# are these special
+lines used by the macro to make the sorting):
+
+#TOC# 101 1 toc_1.html
+&lt;TOCENTRY src="toc_1.html" level=1&gt;Inhaltsverzeichnis&lt;/TOCENTRY&gt;
+#TOC# 111 1
+&lt;TOCENTRY level=1&gt;Weihnachten&lt;/TOCENTRY&gt;
+#TOC# 112 2 xmas_2.html
+&lt;TOCENTRY src="xmas_2.html" level=2&gt;Weihnachten in Valencia&lt;/TOCENTRY&gt;
+#TOC# 113 2 xmas_3.html
+&lt;TOCENTRY src="xmas_3.html" level=2&gt;Abschied von Marcos&lt;/TOCENTRY&gt;
+
+Imagine that you want to use this TOC in two kinds: in a small version at
+the left side of each page, in another version as start page...
+
+With environments you can use it in the following way:
+
+&lt;lefttoc&gt; 		# lefttoc is an environment and also 
+			# &lt;lefttoc:tocentry&gt; is defined
+#include 'std.toc'
+&lt;/lefttoc&gt;
+
+and at the mainpage:
+
+&lt;maintoc&gt;		# &lt;maintoc:tocentry&gt; is defined
+#include 'std.toc'
+&lt;/maintoc&gt;
+
+So - now I wrote very much of my idea of environments. Is there anybody
+out there who wants another explanation? ;-)
+
+
+Few words about site-specifiness of macros: 
+
+I'd like to write the macros in a way that another person can reuse them -
+this way we could share our work and make WML more powerful. I think that
+wml::mod::MakeMaker was introduced by Denis Barbier to do this.
+
+Greetings from Vienna,
+
+Franz
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01787" HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01789.shtml">Re: Any way to make XHTML work with WML2.0.2/MP4H1.0.2 ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01797.shtml">[wml] Handling unknown attributes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01788"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01788"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

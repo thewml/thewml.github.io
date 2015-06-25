@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Substitution of asteriks -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Mon, 22 Mar 1999 17:22:10 +0100 (MET) -->
+<!--X-Message-Id: 87k8w9mr5c.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990322120152.23613A&#45;200000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00510">Date Index</a>][<a href="thrd11.shtml#00510">Thread Index</a>]<br>
+[<A HREF="msg00509.shtml">Date Prev</A>][<A HREF="msg00511.shtml">Date Next</A>][<A HREF="msg00509.shtml">Thread Prev</A>][<A HREF="msg00491.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Substitution of asteriks</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 22 Mar 1999 17:21:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; One workaround is to write
+&gt;     img=Icons-&lt;protect pass=3&gt;&lt;lang:star: *&gt;&lt;/protect&gt;-*.gif&gt;
+&gt; and to apply the attached patch.
+
+The other workaround is the one by Tobias, he changed navbar:define so
+that it accepts imgstarsep="|" imgstar="n|s|o"
+
+&gt; Any opinion? What does ``IIRC'' mean?
+
+"If I recall correctly"
+
+&gt; Florian, i will put your mynavbar.wml into the wml_contrib, and rename it.
+&gt; Is navbar-hars.wml a good choice? Maybe you want to do some changes,
+
+This is fine. Just pick a convention for contributed files that helps
+to avoid name clashes (navbar-hars.wml or FHnavbar.wml or whatever)
+and encourage people to stick to it.
+Maybe you should put something like
+
+# See <A  HREF="http://www.hars.de/www/wml_navbars.html">http://www.hars.de/www/wml_navbars.html</A> for further information
+# or newer versions.
+
+in the file. I'll probably change the name of my file to the name you
+use in wml_contrib.
+
+Yours, Florian
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00509" HREF="msg00509.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00509.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00511.shtml">Automatic button generation (Was: Substitution of asteriks)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00509.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00491.shtml">Always substitutions ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00510"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00510"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

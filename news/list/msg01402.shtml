@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New Vim Syntax File! -->
+<!--X-From-R13: [vpunry [p@nznen <znpNirevfvgl.pbz> -->
+<!--X-Date: Thu, 2 Mar 2000 09:27:29 +0100 (MET) -->
+<!--X-Message-Id: 14525.27084.996819.255308@medusa.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200003010853.JAA24298@ezili.sis.pasteur.fr -->
+<!--X-Reference: Pine.LNX.4.21.0003011421270.16178&#45;100000@mandrake.box.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01402">Date Index</a>][<a href="thrd29.shtml#01402">Thread Index</a>]<br>
+[<A HREF="msg01401.shtml">Date Prev</A>][<A HREF="msg01403.shtml">Date Next</A>][<A HREF="msg01396.shtml">Thread Prev</A>][<A HREF="msg01404.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New Vim Syntax File!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Mar 2000 11:04:44 -0800 (PST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Davor Cengija writes:
+ &gt; On Wed, 1 Mar 2000, Stephane Bortzmeyer wrote:
+ &gt; 
+ &gt; &gt;On Tuesday 29 February 2000, at 17 h 56, the keyboard of Davor Cengija 
+ &gt; &gt;&lt;davor@linuxfan.com&gt; wrote:
+ &gt; &gt;
+ &gt; &gt;&gt; 	Vim has that possibility to color certain parts of the file
+ &gt; &gt;&gt; 	being edited differently, according to the content. Take
+ &gt; &gt;&gt; 	php.vim (or is it php3.vim?). If you turn on html and sql
+ &gt; &gt;&gt; 	syntax coloring, you can have everything between &lt;?php and ?&gt;
+ &gt; &gt;&gt; 	colored by php3 rules, 
+ &gt; &gt;
+ &gt; &gt;Does anyone know how to do so in Emacs? I'm interested.
+ &gt; 
+ &gt; 	It's not possible, as one of the (x)emacs authors answered on
+ &gt; 	my question asked in local Linux group.
+
+ Nothing is impossible in emacs.
+
+The font lock sequence can be a regular expression, or a function!
+and the function could comprehend regions delimited just as the vim
+code does.
+
+I say all this, and I am the author of the Verilog HDL emacs mode;
+however, I too, just use the html highlighting....  Too busy, and the
+existing bit works good enough form me *sigh*
+
+I'd be happy to advise someone wanting to dive in...
+
+
+ 
+ &gt; -- 
+ &gt; ______________________________________________________________________
+ &gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+ &gt; Official Support Mailing List                   sw-wml@engelschall.com
+ &gt; Automated List Manager                       majordomo@engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01394" HREF="msg01394.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+<li><strong><A NAME="01396" HREF="msg01396.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01401.shtml">Re: Remove duplicate mails using procmail [was: Re: New Vim Syntax File!]</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01403.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01396.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01404.shtml">How to use tidy?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01402"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01402"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

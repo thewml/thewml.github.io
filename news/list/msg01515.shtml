@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.99.3 (19&#45;Mar&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 2 Apr 2000 23:30:44 +0200 (MET DST) -->
+<!--X-Message-Id: 20000402232851.A25738@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200003201253.NAA24744@mandrake.box.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01515">Date Index</a>][<a href="thrd31.shtml#01515">Thread Index</a>]<br>
+[<A HREF="msg01513.shtml">Date Prev</A>][<A HREF="msg01514.shtml">Date Next</A>][<A HREF="msg01507.shtml">Thread Prev</A>][<A HREF="msg01501.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.99.3 (19-Mar-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 2 Apr 2000 23:28:51 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Mar 20, 2000 at 01:53:12PM +0100, Davor Cengija wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt; wml (and wmk) fails with my old wml files.
+&gt; 
+&gt; This is the output:
+&gt; 
+&gt; {mandrake}[kravate]$ ../bin/wmk                               
+&gt; /home/davor/wml/bin/wml -n -o '(ALL-LANG_*)uLANG_HR:croata1_hr.html' -o
+&gt; '(ALL-LANG_*)uLANG_EN:croata1_en.html' croata1.wml
+&gt; /home/davor/wml/lib/exec/wml_p2_mp4h: ERROR:/tmp/wml.24715.tmp2.wml:2386: EOF
+&gt; when reading body of the `h1' tag
+&gt; ** WML:Break: Error in Pass 2 (rc=1).
+&gt; ** WMk:Break: Error in WML (rc=256)
+&gt; {mandrake}[kravate]$ 
+&gt; 
+&gt; Same problems with both wml websites I currently have.
+&gt; 
+&gt; Compilation went with no problems; wml 1.7.4 worked just fine.
+&gt; 
+&gt; I can mail the smaller projects (4-5 wml documents + images) if necessary.
+
+The simplest is to put a .tar.gz on your website and send its URL.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01507" HREF="msg01507.shtml">BUG REPORT: Website META Language 1.99.3 (19-Mar-2000)</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01513.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01514.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01507.shtml">BUG REPORT: Website META Language 1.99.3 (19-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01501.shtml">suggestion for wmb (bug reporting tool)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01515"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01515"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

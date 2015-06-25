@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: presentation example with WML -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Mon, 14 May 2001 17:59:31 +0200 (MET DST) -->
+<!--X-Message-Id: 20010514174814.L10422@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Reference: 3AFF8F5D.AA1599FE@snafu.de -->
+<!--X-Reference: 3AFFDACB.F94677B3@snafu.de -->
+<!--X-Derived: pgp00009.pgp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02233">Date Index</a>][<a href="thrd45.shtml#02233">Thread Index</a>]<br>
+[<A HREF="msg02232.shtml">Date Prev</A>][<A HREF="msg02234.shtml">Date Next</A>][<A HREF="msg02232.shtml">Thread Prev</A>][<A HREF="msg02234.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: presentation example with WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 14 May 2001 17:48:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Werner Heuser wrote:
+&gt; can somebody give me a recommendation how to achieve a standard
+&gt; page length for each slide? IOW, how to fill the bottom of a page
+&gt; with an appropriate number of &lt;br&gt; tags?
+
+&lt;TABLE BORDER="0" WIDTH="100%" HEIGHT="100"&gt;
+&lt;TR VALIGN="top"&gt;
+    &lt;TD&gt;
+
+	Content goes here.
+
+    &lt;/TD&gt;
+&lt;/TR&gt;&lt;TR VALIGN="bottom"&gt;
+    &lt;TD&gt;
+
+	Footer goes here.
+
+    &lt;/TD&gt;
+&lt;/TR&gt;&lt;/TABLE&gt;
+
+In comparison to the example of Peter, this should also work with
+older browsers, which are not capable of CSS like NN4 with JS (and
+therefore also CSS) disabled.
+
+Apropos CSS: CSS 2.0 lets you define different style sheets for
+browsing, printing and presentations. This is e.g. supported in Opera
+5. (Maybe in NN6/Mozilla, MSIE4/5/6, too, haven't tested them.)
+Konqueror seems not to support this CSS2 feature. See
+
+<A  HREF="http://www.w3.org/TR/REC-CSS2/media.html">http://www.w3.org/TR/REC-CSS2/media.html</A>
+<A  HREF="http://www.w3.org/TR/REC-CSS2/page.html">http://www.w3.org/TR/REC-CSS2/page.html</A>
+<A  HREF="http://www.teamone.de/selfhtml/tdba.htm#a3">http://www.teamone.de/selfhtml/tdba.htm#a3</A> (German)
+<A  HREF="http://www.opera.no/opera5/operashow.html">http://www.opera.no/opera5/operashow.html</A>
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+</PRE>
+<P><A HREF="pgp00009.pgp" >PGP signature</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02234" HREF="msg02234.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02235" HREF="msg02235.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="02237" HREF="msg02237.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02228" HREF="msg02228.shtml">presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02231" HREF="msg02231.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02232.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02234.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02232.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02234.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02233"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02233"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

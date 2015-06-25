@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: slice&#45;problem -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Tue, 23 Nov 1999 16:35:41 +0100 (MET) -->
+<!--X-Message-Id: 19991123163651.B4602@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991123111544.A31654@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.991123125007.14043A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01156">Date Index</a>][<a href="thrd24.shtml#01156">Thread Index</a>]<br>
+[<A HREF="msg01155.shtml">Date Prev</A>][<A HREF="msg01157.shtml">Date Next</A>][<A HREF="msg01155.shtml">Thread Prev</A>][<A HREF="msg01158.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: slice-problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Nov 1999 16:36:51 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 23 Nov 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; Put backslashes to remove newlines:
+&gt; 
+&gt;     &lt;body&gt;
+&gt;     [EN:Hello!:]\
+&gt;     [FR:Salut!:]\
+&gt;     [DE:Hallo!:]
+&gt;     &lt;/body&gt;
+
+ ... although this solves the first problem I wrote about it didn't
+solve the cause for this, which is really bugging me for I'd like to
+have comment-lines (for optical orientation in the file) between the
+different sliced - which is not possible in this approach.
+
+ Thanks anyway. Anyone else an idea?  :-)
+
+ So long!
+Alfie
+-- 
+The best defense against logic is ignorance.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01158" HREF="msg01158.shtml">Re: slice-problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01154" HREF="msg01154.shtml">slice-problem</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="01155" HREF="msg01155.shtml">Re: slice-problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01155.shtml">Re: slice-problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01157.shtml">Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01155.shtml">Re: slice-problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01158.shtml">Re: slice-problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01156"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01156"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

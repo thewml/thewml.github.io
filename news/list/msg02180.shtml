@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: patch for wml::std::toc -->
+<!--X-From-R13: "Fubznf D. Ybyy" <gbzx32Ngbzx32.qr> -->
+<!--X-Date: Mon, 26 Mar 2001 06:49:01 +0200 (MET DST) -->
+<!--X-Message-Id: 20010326064649.A712@tomk32.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010325181224.A7966@tomk32.de -->
+<!--X-Reference: 20010326000416.A15706@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02180">Date Index</a>][<a href="thrd44.shtml#02180">Thread Index</a>]<br>
+[<A HREF="msg02179.shtml">Date Prev</A>][<A HREF="msg02181.shtml">Date Next</A>][<A HREF="msg02179.shtml">Thread Prev</A>][<A HREF="msg02181.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: patch for wml::std::toc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Thomas R. Koll&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Mar 2001 06:46:49 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Mar 26, 2001 at 12:04:16AM +0200, Denis Barbier wrote:
+&gt; Hi Thomas,
+&gt; 
+&gt; i believe you have the same output when specifying an undefined style,
+&gt; right?
+OK, you're right. If I'm using style=blsdfjkh then it's really the same, but 
+it's nowhere documented (I looked for it in the man pages) that such a 
+thing could work (and shouldn't be normal, no?).
+In my opinion you should set a default style (and add my "nobr")
+
+
+-- 
+www.TomK32.de
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02178" HREF="msg02178.shtml">patch for wml::std::toc</A></strong>, <em>From:</em> Thomas R. Koll</li>
+<li><strong><A NAME="02179" HREF="msg02179.shtml">Re: patch for wml::std::toc</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02179.shtml">Re: patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02181.shtml">problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02179.shtml">Re: patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02181.shtml">problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02180"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02180"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

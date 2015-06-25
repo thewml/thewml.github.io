@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New WML features for gif generation (patch) -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Fri, 22 Oct 1999 09:32:46 +0200 (MET DST) -->
+<!--X-Message-Id: 19991021153028.B21513@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991020165713.B18563@Aramis.kennesaw.edu -->
+<!--X-Reference: Pine.LNX.3.96.991021095145.10652C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01086">Date Index</a>][<a href="thrd22.shtml#01086">Thread Index</a>]<br>
+[<A HREF="msg01085.shtml">Date Prev</A>][<A HREF="msg01087.shtml">Date Next</A>][<A HREF="msg01084.shtml">Thread Prev</A>][<A HREF="msg01087.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New WML features for gif generation (patch)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 21 Oct 1999 15:30:28 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis,
+
+On Thu, Oct 21, 1999 at 10:00:42AM +0200, barbier@imacs.polytechnique.fr wrote:
+&gt; 
+&gt; Hi again,
+&gt; 
+&gt; did you try to define
+&gt;    &lt;set-var IMGDOT_BASE="images/&lt;get-var WML_SRC_BASENAME&gt;"&gt;
+&gt;    &lt;set-var BGIMG_BASE="images/&lt;get-var WML_SRC_BASENAME&gt;"&gt;
+&gt;    ...
+&gt; in your templates?
+&gt; 
+&gt; I believe it is what you want.
+
+
+      I didn't think of the example above... I was intrigued
+      by the simplicity of putting '-DIMGDIR~images' in my
+      .wmlrc or .wmkrc file.... The above would work as
+      well, but I still like the idea of only having to set
+      one variable, instead of one for every include file
+      that generates images... It just seems cleaner to
+      me. The IMGDIR variable makes life a little easier. I
+      always prefer to be able to change one variable rather
+      than make the same changes to multiple variable...
+
+      I agree that the &lt;noasub&gt; patch was completely
+      redundant and unnecessary, but I think the IMGDIR
+      variable is a useful feature. Even though you can get
+      the same functionality through other means, this
+      addition just makes it easier and more intuitive.
+
+      Thoughts???
+
+Thanks,
+
+
+Thomas
+-- 
+
+---------------------------------------------------------------
+Thomas Akin                       Kennesaw State University
+Networking Instructor             Continuing Education
+CNX, CSA, ICS                     1000 Chastain Road
+takin@kennesaw.edu                Kennesaw, GA 30144-5591
+---------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01087" HREF="msg01087.shtml">Re: New WML features for gif generation (patch)</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01082" HREF="msg01082.shtml">New WML features for gif generation (patch)</A></strong>, <em>From:</em> Thomas Akin</li>
+<li><strong><A NAME="01084" HREF="msg01084.shtml">Re: New WML features for gif generation (patch)</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01085.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01087.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01084.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01087.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01086"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01086"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

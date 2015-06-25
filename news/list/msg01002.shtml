@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: May I run wml from a setuid program? (It seems not) -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Wed, 29 Sep 1999 11:13:56 +0200 (MET DST) -->
+<!--X-Message-Id: 199909290911.LAA14811@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01002">Date Index</a>][<a href="thrd20.shtml#01002">Thread Index</a>]<br>
+[<A HREF="msg01000.shtml">Date Prev</A>][<A HREF="msg01003.shtml">Date Next</A>][<A HREF="msg01001.shtml">Thread Prev</A>][<A HREF="msg01003.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: May I run wml from a setuid program? (It seems not)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Sep 1999 11:11:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wednesday 29 September 1999, at 0 h 10, the keyboard of Denis Barbier 
+&lt;barbier@imacs.polytechnique.fr&gt; wrote:
+
+&gt; You have to define $ENV{PATH} _inside_ your Perl scripts.
+
+I do it in the Perl script which runs wml. But wml resets it :-( which is not 
+a good idea, IMHO.
+
+&gt; So copy wml to wml-safe and define $ENV{PATH} in wml-safe.
+
+Done. I just have to remember to do it again at the next upgrade. Now, it gets a little further:
+
+Running from another account, with the setuid wrapper (which sets uid to me):
+
+/local/bin/wml -o index_all.html   index_all.wml 
+cannot load /tmp/wml.12907.tmp2 for unprotection: No such file or directory at /local/bin/wml line 642.
+
+(The .tmp1 file is properly created, and with the proper UID, mine)
+
+Running from my account, it works.
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01003" HREF="msg01003.shtml">Re: May I run wml from a setuid program? (It seems not)</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01000.shtml">Re: Solution to &quot;Problems with Install.pm&quot;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01003.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01001.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01003.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01002"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#01002"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

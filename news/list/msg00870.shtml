@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: filenames/directories -->
+<!--X-From-R13: Dnsnry Qbeqbarf [nepbf <ensnpzNopanegqverpgr.pbz> -->
+<!--X-Date: Fri, 23 Jul 1999 20:32:27 +0200 (MET DST) -->
+<!--X-Message-Id: 19990723201155.A924@lazlo.bcnartdirecte.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199907220135.VAA20341@ursa.calvin.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00870">Date Index</a>][<a href="thrd18.shtml#00870">Thread Index</a>]<br>
+[<A HREF="msg00869.shtml">Date Prev</A>][<A HREF="msg00871.shtml">Date Next</A>][<A HREF="msg00867.shtml">Thread Prev</A>][<A HREF="msg00868.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: filenames/directories</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rafael Cordones Marcos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jul 1999 20:11:55 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jul 21, 1999 at 09:35:41PM -0400, Ryan VanderBijl wrote:
+&gt; Hello
+&gt; 
+&gt; I'm still trying to grasp all the powers that wml has, and i'm 
+&gt; having troubles figuring out what the directory manipulation
+&gt; wml does. I know it does some stuff with relative/absolute,
+&gt; but, i couldn't figure it out from the man pages. could
+&gt; someone tell what they are? how to use them? and some examples
+&gt; would  top it off perfectly ;-)
+
+Yoy create a file called .wmlrc with:
+--------------------------
+##
+##  .wmlrc
+##
+
+-I../include
+
+-DROOT~.
+-I.
+-DCOM~com
+-Icom
+-DGRAPHICS~com/graphics
+-DTALLERES~talleres
+-DSTUDIOS~studios
+
+##EOF##
+--------------------------
+
+An then in your wml files you can write:
+
+---------------------------
+&lt;img source="$(GRAPHICS)/image.gif"&gt;
+---------------------------
+
+This way $(GRAPHICS) will allways get translated to the correct path.
+
+&gt; Thanks,
+&gt; 
+&gt; Ryan
+&gt; /******************************************\
+&gt; **  Ryan VanderBijl, rvbijl39@calvin.edu  **
+&gt; **   www.calvin.edu/~rvbijl39             **
+&gt; \******************************************/
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+
+-- 
+Best regards,
+
+Rafa C. Marcos
+BCN Art Directe (Promotora d'Art)           Tel: +34 93 317 2757
+Serra, 18, Pral. 2                          Fax: +34 93 317 3386
+E-08002 Barcelona                           info@bcnartdirecte.com
+Spain                                       <A  HREF="http://www.bcnartdirecte.com">http://www.bcnartdirecte.com</A>
+------------------------------------------------------------------------
+   Info on Euroart'99 and Index·Art at: <A  HREF="http://www.bcnartdirecte.com">http://www.bcnartdirecte.com</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00867" HREF="msg00867.shtml">filenames/directories</A></strong>, <em>From:</em> Ryan VanderBijl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00869.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00871.shtml">html2wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00867.shtml">filenames/directories</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00868.shtml">ePerl substitions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00870"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00870"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

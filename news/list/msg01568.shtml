@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml::std::page -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Fri, 12 May 2000 04:04:32 +0200 (MET DST) -->
+<!--X-Message-Id: 200005112241.AAA02362@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000511211347.3774A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01568">Date Index</a>][<a href="thrd32.shtml#01568">Thread Index</a>]<br>
+[<A HREF="msg01567.shtml">Date Prev</A>][<A HREF="msg01569.shtml">Date Next</A>][<A HREF="msg01563.shtml">Thread Prev</A>][<A HREF="msg01564.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml::std::page</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 12 May 2000 00:41:49 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thu, 11 May 2000 21:24:11 +0200 (CET), Denis Barbier wrote:
+&gt; On Thu, 11 May 2000, Jan Holler wrote:
+&gt;&gt; &lt;info style=custom
+&gt;&gt; &lt;meta http-equiv="content-style-type" content="text/css"&gt;
+&gt;&gt; &lt;link rel="stylesheet" type="text/css" href="$(STYLESHEETS)/screen.css"&gt;
+
+&gt; With wml::std::page, this is exactly what &lt;head&gt; is for, it puts its
+&gt; body into the HTML header section, so you may write
+
+Sorry then for the bothering. It has been a long time since
+I looked at the &lt;head&gt;-tag. I use standard templates for my
+overall development and enhance them (quick and dirty) as I 
+need it. I definitely have to clean them up when switching to 
+wml 2.0. Best for me is to read all documentation over
+again, but I'm running short of time in this weeks.
+
+&gt; I added a note in WML 2.0 about the &lt;title&gt; and &lt;head&gt; tags defined in
+&gt; wml::std::page.
+
+I remember having had problems with the old documentation
+when I started with wml. I'll check it out, when I get some
+spare time. One never learns out.
+
+cheers!
+ -jan
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01563" HREF="msg01563.shtml">Re: wml::std::page</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01567.shtml">Todo list</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01569.shtml">RE: Todo list</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01563.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01564.shtml">Suggestion about documentation</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01568"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01568"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

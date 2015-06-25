@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: there's still a bug in wml::des::navbar -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 20 May 2000 11:58:41 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000520115734.12672A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000519110200.A1712@lux.planet.earth -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01591">Date Index</a>][<a href="thrd33.shtml#01591">Thread Index</a>]<br>
+[<A HREF="msg01590.shtml">Date Prev</A>][<A HREF="msg01592.shtml">Date Next</A>][<A HREF="msg01578.shtml">Thread Prev</A>][<A HREF="msg01583.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: there's still a bug in wml::des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 20 May 2000 11:58:31 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 19 May 2000, Gerd Maier wrote:
+
+&gt; Hi!
+&gt; In WML 2.0.0 there still is a bug in the navbar-module, I know from the
+&gt; wml-package in Debian slink (wml 1.6.something):
+&gt; the target set in &lt;navbar:define&gt; isn't used, or -more exact- it is
+&gt; overwritten by either the target set in &lt;navbar:button&gt; (which is normal)
+&gt; or an empty string, if there's no target in &lt;navbar:button&gt;.
+&gt; 
+&gt; Gerd.
+&gt; 
+&gt; I appended a patch, which corrects this bug. I hope this is the right place
+&gt; for it, but as even "wmb" sends its bugreports here, I think it is.
+
+Hi Gerd, your patch is incorporated, thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01578" HREF="msg01578.shtml">there's still a bug in wml::des::navbar</A></strong>, <em>From:</em> Gerd Maier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01590.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01592.shtml">Re: [BUG REPORT] WML 2.0.0, redhat 6.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01578.shtml">there's still a bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01583.shtml">Bug report - Pass 2: &lt;group&gt; tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01591"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01591"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

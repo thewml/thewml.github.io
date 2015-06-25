@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: multiple outputs from one input file? -->
+<!--X-From-R13: <wrss.pbirlNcbobk.pbz> -->
+<!--X-Date: Thu, 24 Jun 1999 13:12:43 +0200 (MET DST) -->
+<!--X-Message-Id: 14194.4292.649328.918167@plaything.smart.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00797">Date Index</a>][<a href="thrd17.shtml#00797">Thread Index</a>]<br>
+[<A HREF="msg00796.shtml">Date Prev</A>][<A HREF="msg00798.shtml">Date Next</A>][<A HREF="msg00800.shtml">Thread Prev</A>][<A HREF="msg00799.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>multiple outputs from one input file?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 Jun 1999 07:12:15 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+i've been going through the wml documentation, and there's something
+about it that's too much like m4 for my taste:  it seems to assume
+that for every generated html file, there's going to be a wml source
+file.  this would drive me nuts if i had to use it.  here's what i'm
+used to:
+
+<A  HREF="http://pobox.com/~jeff.covey/hpp/">http://pobox.com/~jeff.covey/hpp/</A>
+
+all my guitar pages are in one file, all my linux ones in another, all 
+my music ones in another.  how can this be done with wml?
+
+-- 
+|----------------------------------------------------------------------------|
+| jeff covey jeff.covey@pobox.com <A  HREF="http://pobox.com/~jeff.covey/">http://pobox.com/~jeff.covey/</A> 410-669-4926 |
+|----------------------------------------------------------------------------|
+|    how did the old ladies turn into russians?  what were you doing there?  |
+|----------------------------------------------------------------------------|
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00799" HREF="msg00799.shtml">Re: multiple outputs from one input file?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00804" HREF="msg00804.shtml">Re: multiple outputs from one input file?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00806" HREF="msg00806.shtml">multiple files in command line</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00796.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00798.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00800.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00799.shtml">Re: multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00797"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00797"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

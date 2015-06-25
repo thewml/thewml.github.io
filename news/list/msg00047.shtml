@@ -1,0 +1,574 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2nd Try: Page Explorer -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 14 Jan 1998 17:54:14 +0100 (MET) -->
+<!--X-Message-Id: 199801141654.RAA02435@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980114163320.31878@advatech.rom -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00047">Date Index</a>][<a href="thread.shtml#00047">Thread Index</a>]<br>
+[<A HREF="msg00046.shtml">Date Prev</A>][<A HREF="msg00048.shtml">Date Next</A>][<A HREF="msg00046.shtml">Thread Prev</A>][<A HREF="msg00048.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2nd Try: Page Explorer</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 14 Jan 1998 17:54:12 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Viorel ANGHEL, in a previous mail you wrote:
+
+&gt; &gt; Any more comments?
+&gt; 
+&gt; It's free? I'm interested to use that script local.
+
+Sure, I'm not an PC/Windows-idiot who hacks a 10 KB script and then tries to
+make money with it ;_) No problem. I've appended the script to this message
+It's self-contained, i.e. it even contains the header image.
+
+Feel free to use it. Only one exception: When you enhance it, don't make your
+own program out of it, send _me_ the diffs, please. In other words: It is
+freely available and useable, but it's not freeware.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+#!/sw/bin/perl
+##
+##  pe.cgi -- Page Explorer
+##  Copyright (c) 1998 Ralf S. Engelschall, All Rights Reserved. 
+##
+##  This script is a webdesigner's tool to explore how
+##  real-life webpages are constructed. It works by acting
+##  as a filtering proxy which converts the webpage and
+##  its inlined graphics on-the-fly. The amount of
+##  conversion is controlled by a exploration level.
+##
+##  Disclaimer: I didn't use the CGI.pm module because
+##              it leads to unexpected errors under the
+##              combination Apache 1.2.[45] / Solaris 2.6 :-(
+##
+
+
+require 5.004;
+
+#   import used modules
+use URI::URL;
+use HTTP::Headers;
+use HTTP::Request;
+use LWP::UserAgent;
+use Image::Size;
+use GD;
+
+#   switch to unbuffered I/O
+$|++;
+
+#   surround with an eval to catch errors[...]
+eval {
+
+##
+##  configuration
+##  [THIS SHOULD BE THE ONLY PLACE WHERE YOU EDIT SOMETHING]
+##
+#   determine our name
+$server_name = $ENV{'SERVER_NAME'};
+
+#   the URL to an optionally used proxy ('none' for no proxy)
+$proxy_url = 'none';
+$proxy_url = '<A  HREF="http://en1.engelschall.com:8080/">http://en1.engelschall.com:8080/</A>'    if ($server_name =~ m|^en1|);
+#$proxy_url = '<A  HREF="http://www.de.engelschall.com:8080/">http://www.de.engelschall.com:8080/</A>' if ($server_name =~ m|^www\.engelschall\.com$|);
+#$proxy_url = '<A  HREF="http://???:8080/">http://???:8080/</A>'                    if ($server_name =~ m|^www\.ch\.engelschall\.com$|);
+
+#   comma seperated list of domains for 
+#   which no proxy is used
+$no_proxy_domains = 'none';
+
+#   the URL to ourself for URL rewriting
+#   
+#   Note: I use it with a directory style URL through
+#          the use of the following Apache/mod_rewrite
+#          ruleset. Just index.cgi will not work! You
+#          then also have to set $my_url to ../index.cgi!
+#
+#   RewriteEngine on
+#   RewriteRule   ^$        pe.cgi    [L]
+#   RewriteRule   ^pe\.cgi  -         [L]
+#   RewriteRule   ^(.+)     pe.cgi/$1 [T=application/x-httpd-cgi,L]
+#
+$my_url = 'http://'.$server_name.'/sw/wml/pe/';
+$my_url_sep = '/' if ($my_url !~ m|/$|);
+
+#   the inital URL for the form
+$init_url = 'http://'.$server_name.'/sw/wml/';
+
+#   the name of this service
+$our_name = 'PageExplorer';
+$our_vers = '1.0.0';
+
+
+##
+##  import of parameters
+##
+
+#   PATH_INFO
+$path_info = $ENV{'PATH_INFO'};
+
+#   QUERY_STRING
+$query_string = $ENV{'QUERY_STRING'};
+if ($ENV{'REQUEST_METHOD'} eq 'POST') {
+    $query_string = '';
+    while (&lt;STDIN&gt;) { $query_string .= $_; }
+}
+%qs = ();
+@pairs = split(/&amp;/, $query_string);
+foreach $pair (@pairs) {
+    my ($name, $value) = split(/=/, $pair);
+    $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack('C', hex($1))/eg;
+    $qs{$name} = $value;
+}
+
+
+##
+##  helping functions
+##
+
+#   send a HTTP response for a complete page
+sub send_page {
+    my ($type, $data) = @_;
+    print "Content-type: $type\n";
+    print "Content-length: ".sprintf("%d", length($data))."\n";
+    print "Connection: close\n";
+    print "Server: $our_name/$our_vers\n";
+    print "\n";
+    print $data;
+}
+
+#   send a HTTP redirect
+sub send_redirect {
+    my ($url) = @_;
+    print "Status: 302\n";
+    print "Location: $url\n";
+    print "URI: $url\n";
+    print "Server: $our_name/$our_vers\n";
+    print "Content-type: text/html\n";
+    print "\n";
+    print "New URL: &lt;a href=\"$url\"&gt;$url&lt;/a&gt;\n";
+}
+
+sub uudecode {
+    my($in) = @_;
+    my($result,$file,$mode);
+
+    $result = $mode = $file = '';
+    while ($in =~ s/(.*?\n)//s) {
+        my $line = $1;
+        if ($file eq '' and !$mode){
+            ($mode,$file) = $line =~ /^begin\s+(\d+)\s+(\S+)/ ;
+            next;
+        }
+        next if $file eq '' and !$mode;
+        last if $line =~ /^end/;
+        $result .= uudecode_chunk($line);
+    }
+    wantarray ? ($result,$file,$mode) : $result;
+}
+
+sub uudecode_chunk {
+    my($chunk) = @_;
+
+    return '' if $chunk =~ /^(--|\#|CREATED)/;
+    my $string = substr($chunk,0,int((((ord($chunk) - 32) &amp; 077) + 2) / 3)*4+1);
+    return unpack("u", $string);
+}
+
+##
+##  processing
+##
+
+#
+#   display input form on no parameters
+#
+if ($path_info eq '' and $query_string eq '') {
+    $data = &lt;&lt;"EOT";
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Explorer&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#ffffff"&gt;
+  &lt;p&gt;
+  &lt;br&gt;
+  &lt;center&gt;
+    &lt;p&gt;
+    &lt;form method="POST" action="$my_url" 
+          enctype="application/x-www-form-urlencoded"&gt;
+      &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+      &lt;tr&gt;
+        &lt;td colspan=4&gt;
+          &lt;img src="${my_url}${my_url_sep}head.gif" alt="PAGE EXPLORER" width=310 height=36&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan=4&gt;
+          &lt;font size=+1 face="Arial,Helvetica"&gt;Copyright (c) 1998 Ralf S. Engelschall&lt;/font&gt;
+          &lt;br&gt;&lt;br&gt;&lt;p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;&lt;font size=+2 face="Arial,Helvetica"&gt;&lt;b&gt;URL:&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
+         &lt;td colspan=2&gt;&lt;input type="text" size=40 name="url" value="$init_url"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;&lt;font size=+2 face="Arial,Helvetica"&gt;&lt;b&gt;Level:&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
+         &lt;td&gt;
+           &lt;select name="level"&gt;
+             &lt;option value="0"&gt;0 [+just URL rewriting]
+             &lt;option value="1"&gt;1 [+visible 1pt-images]
+             &lt;option value="2" selected&gt;2 [+visible borders]
+             &lt;option value="3"&gt;3 [+substituted images]
+             &lt;option value="4"&gt;4 [+removed colors]
+           &lt;/select&gt;
+         &lt;/td&gt;
+         &lt;td&gt;&lt;font face="Arial,Helvetica" size=+2 color="#cc0000"&gt;&lt;b&gt;&lt;input type="submit" name="submit" value="explore!"&gt;&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/form&gt;
+  &lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+EOT
+    &amp;send_page('text/html', $data);
+    exit(0);
+}
+
+#
+#   send out the header image
+#
+if ($path_info eq '/head.gif') {
+    $head_gif = &lt;&lt;'EOT';
+begin 664 head.gif
+M1TE&amp;.#EA-@$D`,0``/____\``,S,S&amp;9F9C,S,__,S/]F9O\S,\S__\S,_YF9
+MF&lt;S_S)F9S/_,____S/^9S/^9F6:9F?_,F?]FF0`S,_\`,S-F9O\S`&amp;8S9@``
+M`,PS,_\S9O]F,S,`,V9FF0``,R'^%D=)1B!3;6%R=%-A=F5R(%9E&lt;C$N,6$`
+M+``````V`20```7^("".9&amp;F&gt;:*JN;.N^&lt;"S/=&amp;W?&gt;*[O?.__P*!P2"P:C\BD
+M\E=H.I_0%[0)*Q@.AX`V&lt;#`44M.PV"4HF\_HM%J@6KO3*[5,,2!D[AG"0,%.
+MO=%Q?VLC@F8R!5N)BHE=$"H0BP%?+!!9D5L'CB8&amp;EYU;+0)XHJ.D=P)VI`,H
+M`Z4"K*6P&gt;GTDI`0P"JBP&amp;0.S);JELB:AO[I]N&lt;1Y&gt;RZ(GI&lt;'DR:6B@8LTLU&lt;
+MF]&gt;7H,BP9=["I:JOW:($O;5DQ\2J)N6CYR3#[WC&amp;]'&lt;$"BS,VHN:)/P6J2A@
+MK1\T`)SZ*&gt;)VSQ0`!&gt;),K,LC@ES#6&gt;E8S'O7CE;#._I$;*1G[V-'%`'^%6[Y
+M)R)A))8E"BJ$YE)E`(8714S,T&amp;ND0P`6&lt;P+(V.;C+E]&amp;&gt;8HT6O)C2)0V%1TH
+MX8G:B9HVI[:,J@7G/8Q$`4SL&amp;/1&gt;N[`H=I9[.C1I.Y_EFGX&lt;N,@J0*PK1T#R
+M="(E)@B3"NRMNU418#%/O-[A)8@$1%)]'ILC4;:7R+)W1*`U@7G7+%RP/$XN
+M(0`TJ:6C&amp;/\9,5&amp;8Z5%L2_BU*SN27;R&amp;H[U$4=!+X40';?@\Z:*LK;:C&gt;E5&amp;
+M(5D4F\U((9_`W!$Z`+CZAL-HG385&amp;,(H\&amp;H%L*C@&gt;!%^`\",J&gt;49";S!:VB7
+M48J.=\K2NZ=&amp;CN&lt;X\U8I8#:"=4!Y-Y\+W)W^T!P^WTW3(",B#+:%7P&gt;)MP)!
+M\&lt;&amp;GPX&amp;WU++9&lt;JMX1Z!8]Z50GV;P!&amp;A@B2TD&amp;$Z*4#D8(X0`]%:CC"+(M)X+
+M&amp;N;`(0R=.&lt;=9?M.)"",*`*I0UEE'#KG?CRNX2!J!LZ4@87L`^.4(5N=%$A^/
+M=1D@YIAD^J98,@.DJ&gt;::L8D&amp;"W$5$&gt;FD**H0Z)-_*2Q($7\,ZB=*=K6L*6B:
+M;$F)WWXS;D$;&gt;P[BA=XBT$12`V[-+.I'0WB6H&amp;=_(29GHG0$Z@GGBZ-9MREJ
+M].!I**I_/JAH&gt;+O9F*.,?IV''A:XYHJ%591610:F2H)3I*?"",CGGL/2V4(I
+M*)J3AGWWP46,JI#^H0%MDR;46N85SF3ISPB.&gt;BM5MLUHU6LGEJ(@[2^9EM"9
+M92,L.:A:3(Z6+!ZCNG/:L22Q6@ZU1K4)$%=YA1OAM[62ZXFY4:5[PKJZM#O"
+MIGW.^5$?!"ZY[+Y)S0)Q+"2HA8S``Q-L%7@C$)9P;0O_AHFN,._X&lt;"T$U&amp;SS
+MS7I\JLNH08X\(+:'*LL"L_PB$P\A-..,\TDB1PROP@T?G-M[`J4'=;&lt;(0;HA
+MBT`B`V_/O[!EYXC^[GG/T?)P'&gt;4])%_=CYE9*Q+&lt;E&gt;J1IS5`,(\;-W!;(QH#
+MQ4"#':B^]I(J"@NB-OO.S'ZW^-4RY&lt;'&lt;!=PI1ZYK&gt;3?BB,*5#,O=M]#^,;02
+M4=#]*:T''T@"[28&gt;;&gt;M$2DAA:3QEXRRXJ*?$?:%,"&lt;&amp;2X/;E".:YK,7O,D!9
+MNW&gt;;*B&gt;G"R,:IT+RBE=\79)(T[[V*"5,U/H(5;H@DT(&amp;T(W-YICO/&gt;'G^/Y-
+MU$1X@@C#B)OF"Y=_:#F?MO4J2'GJ/KK3Q?M4WW-/"7#3.;[Y2&amp;U%(1)&lt;R+*\
+MC17N!#N!D[2&gt;@A;LW`]TCL-&gt;]A#(LD0X+!N\DX3XVD.F3A104=M*(&gt;489XY!
+MN9`7)*(=9OK@OA&lt;`PW0UX\/.U*06/'TH+'=ZX:#88"CH^&lt;^#W@N3"O%"C&gt;\I
+MY(0V(5[9.&amp;+$D&amp;6DALRCQS@ZMCID50\V7VS@B"I6-98+]2]1GW#5)]+S1.&amp;I
+M1(K3,PIU%!01+#JP'.T0W(FZ*#%CQ=$D,3R&lt;X&gt;IQQ%&gt;Q@(DKT)&amp;XM($%&amp;IVK
+M&amp;7#\V-E4]#H[#DV+\7I&lt;=#AU@M%)&lt;F&gt;!Q(.?.(G&amp;`'R0!%Y:`=VL0I!K4*,F
+M4'QC'))"O4'BJX&amp;7Y(AC_O4TZ\SPCV(,9698V*I2GE)J-"ID&amp;B/D1#/!THTS
+MF24M'V@"P!'K?9C4E,A@F#IJ_BQ%GWR3,#.0@ITLH096$!-@SLG.=H*"34]S
+&lt;ISSG2&lt;]ZVO.&gt;^,RG/O?)SW[Z\Y\`#:A`7P``.P``
+`
+end
+EOT
+    &amp;send_page('image/gif', &amp;uudecode($head_gif));
+    exit(0);
+}
+
+#
+#   do a redirection for the form data to
+#   get the inital canonical form of the URL
+#
+if ($path_info eq '' and $qs{'url'} ne '' and $qs{'level'} ne '') {
+    $path = $qs{'url'};
+    $path =~ s|^http://||;
+    $level = $qs{'level'};
+    &amp;send_redirect($my_url.$my_url_sep."l=$level/$path");
+    exit(0);
+}
+
+#
+#   do the actual filtering for a particular URL
+#   (this URL can be either a webpage itself or
+#    some of the inlined images, etc.)
+#
+
+#   define an own user-agent which has the 
+#   resolving of HTTP redirections disabled
+#   because redirects have to go through us, too.
+package LWP::MyUA;
+@ISA = qw(LWP::UserAgent);
+sub redirect_ok { return 0; }
+package main;
+
+#   create an user-agent object
+$useragent = new LWP::MyUA;
+$useragent-&gt;agent("$our_name/$our_vers");
+$useragent-&gt;proxy('http', $proxy_url) if ($proxy_url ne 'none');
+$useragent-&gt;no_proxy(split(/,/, $no_proxy_domains)) if ($no_proxy_domains ne 'none');
+
+#   calculate the URL which has ourself as the prefix
+$path_info =~ m|/l=(\d)/(.+)$|;
+$level = $1;
+$url = 'http://' . $2;
+$url .= "?$query_string" if ($query_string ne '');
+$url = new URI::URL($url);
+
+#   create the HTTP request
+$headers = new HTTP::Headers;
+$request = new HTTP::Request('GET', $url, $headers);
+
+#   perfrom the HTTP request
+$response = $useragent-&gt;request($request, undef, undef);
+
+#   parse the HTTP response
+$urlbase  = $response-&gt;base;
+$contents = $response-&gt;content;
+$type     = $response-&gt;content_type;
+
+#   if a redirect was forced we perform it
+#   but with an adjusted URL which again has
+#   ourself as the prefix
+if ($response-&gt;is_redirect) {
+    $path = $response-&gt;header("Location");
+    $path =~ s|^http://||;
+    &amp;send_redirect($my_url.$my_url_sep."l=$level/".$path);
+    exit(0);
+}
+
+#
+#   now do the actual filtering
+#   (Note 1: Level 0 is always needed!)
+#   (Note 2: It's an `if' for each level, not an `elsif'!)
+#
+$isnewimage = 0;
+if ($level &gt;= 0) {
+    #
+    #   rewrite all URLs in HTML files
+    #   to make sure we are always the prefix
+    #
+    if ($type eq 'text/html') {
+        $contents =~ s/(&lt;(?:img|frame)\s+)(.+?)(&gt;)/$1.&amp;fixattr_src($2).$3/isge;
+        $contents =~ s/(&lt;a\s+)(.+?)(&gt;)/$1.&amp;fixattr_href($2).$3/isge;
+        $contents =~ s/(&lt;script\s+[^&gt;]+?javascript.+?&gt;)(.+?)(&lt;\/script&gt;)/$1.&amp;fixattr_js($2).$3/isge;
+        sub fixattr_src {
+            my ($attr) = @_;
+            $attr =~ s|(src\s*=\s*")([^"]+)(")|$1.&amp;fixurl($2).$3|isge;
+            $attr =~ s|(src\s*=\s*)([^"]\S+)|$1.&amp;fixurl($2)|isge;
+            return $attr;
+        }
+        sub fixattr_href {
+            my ($attr) = @_;
+            $attr =~ s|(href\s*=\s*")([^"]+)(")|$1.&amp;fixurl($2).$3|isge;
+            $attr =~ s|(href\s*=\s*)([^"]\S+)|$1.&amp;fixurl($2)|isge;
+            return $attr;
+        }
+        sub fixattr_js {
+            my ($attr) = @_;
+            $attr =~ s/(\.src\s*=\s*')([^']+\.(?:gif|jpg))(')/$1.&amp;fixurl($2).$3/isge;
+            $attr =~ s/(\.src\s*=\s*")([^"]+\.(?:gif|jpg))(")/$1.&amp;fixurl($2).$3/isge;
+            return $attr;
+        }
+        sub fixurl {
+            my ($url) = @_;
+            my $u = new URI::URL $url, $urlbase;
+            $url = $u-&gt;abs-&gt;as_string;
+            $url =~ s|^http://||;
+            $url = $my_url.$my_url_sep."l=$level/".$url;
+            return $url;
+        }
+    }
+}
+if ($level &gt;= 1) {
+    #
+    #   replace all transparent 1pt dot-images with a red image
+    #
+    if ($type eq 'image/gif') {
+        ($w, $h, $t) = Image::Size::imgsize(\$contents);
+        if ($w*$h == 1) {
+            #   read image into GD
+            $tmpfile = "/tmp/pe.tmp.$$";
+            unlink($tmpfile);
+            open(TMP, "&gt;$tmpfile");
+            print TMP $contents;
+            close(TMP);
+            open(TMP, "&lt;$tmpfile");
+            $tmpimg = newFromGif GD::Image(TMP);
+            close(TMP);
+            unlink($tmpfile);
+            if ($tmpimg-&gt;transparent != -1) {
+                my $im = new GD::Image($w, $h);
+                ($r1, $g1, $b1) = (255, 0, 0);
+                ($r2, $g2, $b2) = (255, 0, 0);
+                my $col1 = $im-&gt;colorAllocate($r1, $g1, $b1);
+                my $col2 = $im-&gt;colorAllocate($r2, $r2, $b2);
+                $contents = $im-&gt;gif;
+                $isnewimage = 1;
+            }
+        }
+    }
+}
+if ($level &gt;= 2) {
+    #   
+    #   replace all border=0 attributes with border=1
+    #
+    if ($type eq 'text/html') {
+        $contents =~ s|border\s*=\s*"?0"?|border=1|sgi;
+        sub fix_table_border {
+            my ($str) = @_;
+            if ($str !~ m|border\s*=|) {
+                $str = $str."border=1";
+            }
+            return $str;
+        }
+        $contents =~ s/(&lt;table\s+)(.+?)(&gt;)/$1.&amp;fix_table_border($2).$3/isge;
+    }
+}
+if ($level &gt;= 3) {
+    #
+    #   remove any background images
+    #
+    if ($type eq 'text/html') {
+        sub fix_bg {
+            my ($str) = @_;
+            $str =~ s/(background\s*=\s*')([^']+\.(?:gif|jpg))(')/''/isge;
+            $str =~ s/(background\s*=\s*")([^"]+\.(?:gif|jpg))(")/''/isge;
+            return $str;
+        }
+        $contents =~ s/(&lt;body\s+)(.+?)(&gt;)/$1.&amp;fix_bg($2).$3/isge;
+    }
+    #
+    #   replace all non-transparent images with a blank one
+    #
+    if ($type =~ m|^image/.*| and not $isnewimage) {
+        ($w, $h, $t) = Image::Size::imgsize(\$contents);
+        my $im = new GD::Image($w, $h);
+        ($r1, $g1, $b1) = (200, 200, 200);
+        ($r2, $g2, $b2) = (100, 100, 100);
+        ($r3, $g3, $b3) = (0, 0, 0);
+        my $col1 = $im-&gt;colorAllocate($r1, $g1, $b1);
+        my $col2 = $im-&gt;colorAllocate($r2, $g2, $b2);
+        my $col3 = $im-&gt;colorAllocate($r3, $g3, $b3);
+        $im-&gt;rectangle(0, 0, $w-1, $h-1, $col2);
+        $im-&gt;string(gdSmallFont,1,1, sprintf("%dx%d", $w, $h), $col3);
+        $im-&gt;string(gdSmallFont,1,12, $t, $col3);
+        $contents = $im-&gt;gif;
+        $type = 'image/gif';
+    }
+}
+if ($level &gt;= 4) {
+    #   
+    #   remove all color attributes
+    #
+    if ($type eq 'text/html') {
+        $contents =~ s|bgcolor="?#?[0-9a-hA-H]{6}"?||isg;
+        $contents =~ s|color="?#?[0-9a-hA-H]{6}"?||isg;
+        $contents =~ s|text="?#?[0-9a-hA-H]{6}"?||isg;
+        $contents =~ s|link="?#?[0-9a-hA-H]{6}"?||isg;
+        $contents =~ s|vlink="?#?[0-9a-hA-H]{6}"?||isg;
+        $contents =~ s|alink="?#?[0-9a-hA-H]{6}"?||isg;
+    }
+}
+
+#  
+#   Puhhh... now the filtering is done.
+#   All we now have to do is to send the
+#   stuff to the user...
+#
+&amp;send_page($type, $contents);
+
+#   die gracefully
+exit(0);
+
+#   ...error handler:
+};
+if ($@) {
+    my $text = $@;
+    print "Content-type: text/html\n";
+    print "Connection: close\n";
+    print "\n";
+    print "&lt;h1&gt;Internal Error&lt;/h1&gt;\n";
+    print $text;
+}
+
+##EOF##
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00048" HREF="msg00048.shtml">Re: 2nd Try: Page Explorer</A></strong>, <em>From:</em> Viorel ANGHEL</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00046" HREF="msg00046.shtml">Re: 2nd Try: Page Explorer</A></strong>, <em>From:</em> Viorel ANGHEL</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00046.shtml">Re: 2nd Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00048.shtml">Re: 2nd Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00046.shtml">Re: 2nd Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00048.shtml">Re: 2nd Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00047"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00047"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

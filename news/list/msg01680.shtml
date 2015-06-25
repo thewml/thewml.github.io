@@ -1,0 +1,175 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 2.0.1 -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Thu, 1 Jun 2000 19:15:47 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0005311110470.4578&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000529125259.27139A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01680">Date Index</a>][<a href="thrd34.shtml#01680">Thread Index</a>]<br>
+[<A HREF="msg01681.shtml">Date Prev</A>][<A HREF="msg01677.shtml">Date Next</A>][<A HREF="msg01649.shtml">Thread Prev</A>][<A HREF="msg01671.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 31 May 2000 12:04:22 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis! Hello folks!
+
+On Mon, 29 May 2000, Denis Barbier wrote:
+&gt; Franz, could you explain what you dislike in WML 2.0.1?
+
+That it breaks a lot of perl constructs in my scripts ;-)
+
+&gt; My comprehension of recent discussions is that mp4h acts like we want.
+&gt; As my point of view is certainly biased, it would be useful if someone
+&gt; else coordinates this discussion and writes a resume of which syntax we
+&gt; want for mp4h.
+
+I'll describe what I want:
+
+(1) As explained yet, mp4h shouldn't be program which has to correct HTML
+syntax. 
+
+(2) IMO it should do exactly one job: Expanding mp4h commands!
+
+(3) This means, that e.g. 
+
+&lt;aaa&gt; is a tag defined by &lt;define-tag&gt;
+&lt;bbb&gt; is a complex tag defined by &lt;define-tag endtag=required&gt;
+
+(a) &lt;IMG src="foo.png"&gt; has not to be tokenized because there is no
+mp4h-command inside.
+(b) &lt;bbb&gt;&lt;IMG src="foo.png"&gt;&lt;/bbb&gt; The same as (a). The body is inserted
+without altering it.
+(c) &lt;IMG src="&lt;aaa&gt;"&gt; &lt;aaa&gt; is substituted by the output of the tag
+(d) &lt;: print "&lt;IMG src=\"foo.png\"&gt;"; :&gt; has not to be altered because
+there is no mp4h command (like (a)).
+(e) &lt;: open(FH, "&lt; file") :&gt; like (d)
+
+(4) As consequence I see no necessary to make a special protection
+mechanism inside of mp4h to protect perl constructs - as long as there are
+no mp4h commands, mp4h should be totally transparent (and should \" leave
+intact)
+
+(5) About tokenizing: I'll explain my ideas (which are simply the
+behaviour of MetaHTML and seem logical to me):
+
+(a) &lt;ifeq 0 0 "&lt;bla&gt;&lt;bla&gt;&lt;bla "foo"&gt; &lt;blb&gt;&lt;/blb&gt;"&gt;
+     0000 1 2 "333333333333333"444"5555555555555"
+
+Because there is no whitespace character between 3, 4 and 5 it's treated
+as one token: output: &lt;bla&gt;&lt;bla&gt;&lt;bla foo&gt; &lt;blb&gt;&lt;/blb&gt;
+
+(b) &lt;ifeq 0 0 "&lt;bla&gt;&lt;bla&gt;&lt;bla "f o o"&gt; &lt;blb&gt;&lt;/blb&gt;"&gt;
+     0000 1 2 "333333333333333"4 5 6"7777777777777"
+
+3 and 4 is grouped together, 5 is the else-branch, 6 and 7 are grouped
+together. output: &lt;bla&gt;&lt;bla&gt;&lt;bla f
+
+(c) &lt;ifeq 0 0 &lt;bla&gt;&lt;bla&gt;&lt;bla "f o o"&gt; &lt;blb&gt;&lt;/blb&gt;&gt;
+     0000 1 2 33333444445555555555555 66666777777
+
+3, 4 and 5 are interpreted as one token because there's no whitespace
+character inbetween. 6 and 7 is the output in the case of else.
+output: &lt;bla&gt;&lt;bla&gt;&lt;bla "f o o"&gt;
+
+(d) &lt;ifeq 0 0 &lt;bla &lt;blb&gt;"&gt;"&lt;/blb&gt;&gt; &lt;bla "foo"&gt;&gt;
+     0000 1 2 33333333333333333333 44444444444
+
+The &gt; inside of 3 is not interpreted because it is in ".
+output: &lt;bla &lt;blb&gt;"&gt;"&lt;/blb&gt;&gt;
+
+(6) Let's try to find some rules to explain this behaviour - mmh:
+
+(a) A token may start with an left square bracket (&lt;), its end is the
+corresponding &gt; (and not always the next)
+(b) A token may be enclosed in double quotes(")
+(c) Tokens without whitespace between them are grouped together and
+handled as one token
+(d) Tokens are strictly nested - an inner token cannot break up an outer
+token (see case 5 (d))
+
+(7) What else?
+
+I hope you understood my horrible English and my ideas of mp4h. I'm very
+happy with the new possibilities and use the A and U modifiers of %body
+and %attributes extensively - in the moment, that WML2 is `stable' (so
+that I don't have to change my templates any more), I'll show you some of
+my works.
+
+Greetings from Spain,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01671" HREF="msg01671.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01649" HREF="msg01649.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01681.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01677.shtml">Re: BUG</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01649.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01671.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01680"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01680"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

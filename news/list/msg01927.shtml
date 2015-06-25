@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: From version 1.7 to 2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 2 Sep 2000 23:15:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20000902231803.A5994@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000831175241.A5262@maxwell.physique.usherb.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01927">Date Index</a>][<a href="thrd39.shtml#01927">Thread Index</a>]<br>
+[<A HREF="msg01926.shtml">Date Prev</A>][<A HREF="msg01928.shtml">Date Next</A>][<A HREF="msg01926.shtml">Thread Prev</A>][<A HREF="msg01928.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: From version 1.7 to 2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 2 Sep 2000 23:18:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Aug 31, 2000 at 05:52:41PM -0400, Benoit des Ligneris wrote:
+
+&gt; Hello,
+&gt; 
+&gt; Well, I just downloaded the last version of wml and I've got some trouble for passing from v1.7 to 2.0
+&gt; 
+&gt; My navbars are all "scratched". Well, what I mean is that all the navbars and subbars are displayed
+&gt; by wml whereas I selected ony the main one !
+&gt; 
+&gt; Here is the portion of code for navbars and how I "call" them :
+&gt; 
+&gt; ============
+&gt; wml::home::ben-navbars2.wml
+&gt; ============
+&gt; #use wml::des::navbar
+&gt; 
+&gt; &lt;define-container subbar&gt;
+&gt;   &lt;if &lt;or
+&gt;         &lt;match "$(select)" "%0"&gt;
+&gt;         &lt;match "$(parent)" "%0"&gt;&gt;
+&gt;         &lt;prog
+&gt; #         %body
+&gt;           &gt; &gt;
+&gt; &lt;/define-container&gt;
+[...]
+
+Hi Benoit,
+
+WML 2.x is shipped with a file called README.mp4h which give some
+explanations about your problem.
+You have to load wml::sys::compat1 or replace your &lt;define-container&gt;
+tags with &lt;define-tag xxx endtag=required&gt;
+
+You should also replace the &lt;if&gt; tags by &lt;when&gt;, which gives much more
+readable input.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01926" HREF="msg01926.shtml">From version 1.7 to 2</A></strong>, <em>From:</em> Benoit des Ligneris</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01926.shtml">From version 1.7 to 2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01928.shtml">[ANNOUNCE] WML 2.0.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01926.shtml">From version 1.7 to 2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01928.shtml">[ANNOUNCE] WML 2.0.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01927"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01927"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

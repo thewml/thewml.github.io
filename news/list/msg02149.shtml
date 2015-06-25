@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: XHTML problem in htmlfixup -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 25 Feb 2001 22:32:13 +0100 (MET) -->
+<!--X-Message-Id: 20010225223833.B15336@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010225190621.A311@polyware.nl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02149">Date Index</a>][<a href="thrd43.shtml#02149">Thread Index</a>]<br>
+[<A HREF="msg02148.shtml">Date Prev</A>][<A HREF="msg02150.shtml">Date Next</A>][<A HREF="msg02148.shtml">Thread Prev</A>][<A HREF="msg02150.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: XHTML problem in htmlfixup</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 25 Feb 2001 22:38:33 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Feb 25, 2001 at 07:06:21PM +0100, Pauline Middelink wrote:
+&gt; Hi ppl,
+&gt; 
+&gt; Recently started wondering if my companies website would do great
+&gt; in XHTML, so i changed the doctypes, and started using
+&gt; 'wml -W2,-X1034' so the trailing '&lt;br /&gt;' wouldn't be deleted.
+&gt; That worked, so far so good.
+&gt; 
+&gt; Now the problem, some files have &lt;img&gt; tags in them, where
+&gt; I rely on wml to add the proper width and height attributes.
+&gt; This however fails in XHTML mode, the check does not allow
+&gt; for a space before the /&gt;, and the result becomes:
+&gt; 	&lt;img src="..." alt="" width="100" height="100/"&gt;
+&gt;                                                   ^^^^^ oops
+&gt; 
+&gt; Setting "-W7,-v" proved this:
+&gt; 	started with)  &lt;img src="..." /&gt;
+&gt; 	after imgalt)  &lt;img src="..." alt=""/&gt;
+&gt; 	after imgsize) &lt;img src="..." alt="" width=100 height=100/&gt;
+&gt; 	after quotes)  &lt;img src="..." alt="" width="100" height="100/"&gt;
+&gt; 
+&gt; I fixed it by making sure the space is required with the /&gt; too.
+&gt; (patch attached) but I'm not sure this is entirly the right way.
+&gt; (And quite sure there will be more places to fix)
+
+Hi Pauline,
+
+i believe it has been fixed on 2000/11/15 in the CVS tree (and yes a new
+version should be shipped soon).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02148" HREF="msg02148.shtml">XHTML problem in htmlfixup</A></strong>, <em>From:</em> Pauline Middelink</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02148.shtml">XHTML problem in htmlfixup</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02150.shtml">&lt;no subject&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02148.shtml">XHTML problem in htmlfixup</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02150.shtml">&lt;no subject&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02149"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02149"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

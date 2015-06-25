@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested eperl tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 20 Feb 2001 14:24:57 +0100 (MET) -->
+<!--X-Message-Id: 20010220143128.A11508@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010220010731.B8208@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.WNT.4.32.0102200946300.261&#45;101000@turm.infra.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02143">Date Index</a>][<a href="thrd44.shtml#02143">Thread Index</a>]<br>
+[<A HREF="msg02142.shtml">Date Prev</A>][<A HREF="msg02144.shtml">Date Next</A>][<A HREF="msg02142.shtml">Thread Prev</A>][<A HREF="msg02265.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested eperl tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 14:31:28 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 20, 2001 at 12:39:58PM +0100, Petr Andreyev wrote:
+&gt; Hi Denis,
+&gt; 
+&gt; i'm glad that WML will be developed further. What are the  directions of the
+&gt; future WML development, except for fixing existing problems?
+
+Hmmm, no great challenge to focus on, suggestions are welcome.
+My plans are to work on easing migration to WML 2.x and apply some
+patches that are sleeping into my home repository.
+
+&gt; We have discovered a couple of bugs in embedded eperl tags construction.
+[...]
+
+Indeed, very nice example which demonstrates the problem.
+
+After a quick look into your patch, it is clear that in inner &lt;perl&gt;, we
+need to know what outer &lt;perl&gt; is looking for. But i will say that there
+are four possible states (sq stands for single quotes and dq for double
+quotes):
+   assign-dq assign-sq print-dq print-sq
+Code added when entering into inner &lt;perl&gt; depends upon this outer
+state, i believe this is roughly what your patch is doing.
+If you want, you may implement those 4 states, otherwise i'll do.
+
+PS: please use diff -u or -c, it is easier to read.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02139" HREF="msg02139.shtml">I am back ;)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02142" HREF="msg02142.shtml">Nested eperl tags</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02142.shtml">Nested eperl tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02144.shtml">RegExp, Double Quotes and ^E (was: Why does &lt;set-var %body&gt; not work?)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02142.shtml">Nested eperl tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02265.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02143"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02143"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

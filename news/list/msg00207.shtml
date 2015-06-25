@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Speeding up WML / real&#45;time WML -->
+<!--X-From-R13: "Rnivq Vneevf" <quneevfNqeu.arg> -->
+<!--X-Date: Fri, 11 Sep 1998 00:30:53 +0200 (CEST) -->
+<!--X-Message-Id: 000201bddd03$6ea6afa0$0500a8c0@delf.delf -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00207">Date Index</a>][<a href="thrd5.shtml#00207">Thread Index</a>]<br>
+[<A HREF="msg00206.shtml">Date Prev</A>][<A HREF="msg00208.shtml">Date Next</A>][<A HREF="msg00206.shtml">Thread Prev</A>][<A HREF="msg00208.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Speeding up WML / real-time WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;David Harris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 10 Sep 1998 17:39:04 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I just got WML up and running recently and threw together a small WML file
+that only included wml::std::page and my own template. Nice and small.
+However, this file was taking 30 seconds to be processed by WML. Now, I
+admit this machine is slow (it's a sparc 20) but I thought this was a little
+too slow.
+
+Investigating revealed that 10 of those 30 seconds were being spent in pass
+one alone. This seemed weird, because pass one doesn't have much to
+implement. So, I modified the pass one source code to get rid of some
+inefficiencies and it runs much faster - pass one takes 1.9 seconds now,
+reducing my total time from 30 to 20 seconds.
+
+WML sites which include more external files will experience a gain greater
+than 5 to 1 on pass one. On my system, the new pass one takes 5.1 seconds to
+parse wml::all, where the old one takes 109.9 seconds. This reduced the
+total time from 127.9 to 23.0 seconds.
+
+If you want the sources to this, just e-mail me -- I'll be glad to provide
+them. I'm also sending them to Mr. WML himself for inclusion into his stew
+pot.
+
+I've also noticed inefficiencies in other WML passes, but I have not
+undertaken to work on them. However, I will soon (month or two) be starting
+on a project which will use WML for real-time page generation. At that time,
+I'll go mucking around with WML's internals if I run into any problems. Is
+anyone else using WML in a real time? If so, how is it faring?
+
+ - David Harris
+   Principal Engineer, DRH Internet Services
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00208" HREF="msg00208.shtml">Re: Speeding up WML / real-time WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00206.shtml">relative path variable similiar to -D VAR~.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00208.shtml">Re: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00206.shtml">relative path variable similiar to -D VAR~.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00208.shtml">Re: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00207"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00207"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

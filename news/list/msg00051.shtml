@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: htmlfix problem -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 20 Jan 1998 15:13:43 +0100 (MET) -->
+<!--X-Message-Id: 199801201413.PAA24320@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 98Jan20.210204jst.27817@spiral.secom&#45;sis.co.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00051">Date Index</a>][<a href="thrd2.shtml#00051">Thread Index</a>]<br>
+[<A HREF="msg00050.shtml">Date Prev</A>][<A HREF="msg00052.shtml">Date Next</A>][<A HREF="msg00050.shtml">Thread Prev</A>][<A HREF="msg00052.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: htmlfix problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 20 Jan 1998 15:13:41 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Tetsuya Furukawa, in a previous mail you wrote:
+
+&gt; Problem:
+&gt;     % echo '&lt;I&gt;foo=bar&lt;/I&gt;' | wml
+&gt;     &lt;I&gt;foo="bar&lt;/I"&gt;
+&gt; 
+&gt; To-Fix:
+&gt; --- wml_p7_htmlfix/htmlfix.src.orig	Tue Jan 20 20:26:07 1998
+&gt; +++ wml_p7_htmlfix/htmlfix.src	Tue Jan 20 20:43:10 1998
+&gt; @@ -197,7 +197,7 @@
+&gt;  #
+&gt;  $bufferN = '';
+&gt;  while (($prolog, $tag, $epilog) = 
+&gt; -       ($buffer =~ m|^(.*?)(&lt;[a-zA-Z_][a-zA-Z0-9-_]*.+?&gt;)(.*)$|s)) {
+&gt; +       ($buffer =~ m|^(.*?)(&lt;[a-zA-Z_][a-zA-Z0-9-_]*.*?&gt;)(.*)$|s)) {
+&gt;      $tag =~ s|([A-Za-z_-]+=)([^\s\f\"\'&gt;]+)([\s\n&gt;])|$1"$2"$3|isg;
+&gt;      $tag =~ s|([A-Za-z_-]+=")([0-9A-Fa-f]{6}"[\s\n&gt;])|$1#$2|sg;
+&gt;      $bufferN .= $prolog.$tag;
+
+Ops! Yes, there _are_ tags with just one letter.... Thanks! The patch will be
+included into WML 1.5.2 or 1.6.0 (I currently don't know if I release another
+patchlevel with just the bugfixes are include them together with the latest
+changes into a 1.6.0).
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00050" HREF="msg00050.shtml">htmlfix problem</A></strong>, <em>From:</em> Tetsuya Furukawa</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00050.shtml">htmlfix problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00052.shtml">How to define an &lt;expire&gt; tag?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00050.shtml">htmlfix problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00052.shtml">How to define an &lt;expire&gt; tag?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00051"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00051"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: your mail -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 1 Jul 1999 18:00:22 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990701174016.24139A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199907011508.RAA12814@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00819">Date Index</a>][<a href="thrd9.shtml#00819">Thread Index</a>]<br>
+[<A HREF="msg00818.shtml">Date Prev</A>][<A HREF="msg00820.shtml">Date Next</A>][<A HREF="msg00818.shtml">Thread Prev</A>][<A HREF="msg00820.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: your mail</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Jul 1999 17:54:08 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 1 Jul 1999, Tobias Oetiker wrote:
+
+&gt; __        ___  __ _     
+&gt; \ \      / / \/  | |      Website META Language
+&gt;  \ \ /\ / / |\/| | |      Version 1.7.2
+&gt;   \ V  V /| |  | | |___ 
+&gt;    \_/\_/ |_|  |_|_____|  BUG REPORT
+&gt; _________________________________________________________
+&gt; 
+&gt; From:     Tobias Oetiker
+&gt; Reply-To: oetiker@ee.ethz.ch
+&gt; 
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt; I Recently tried to install WML with the ./configure --prefix=/home/tobi/wml
+&gt; it nevertheless tried to install all the perl modules into the normal           
+&gt; siteperl directories ... 
+&gt; 
+&gt; I suggest you use $(MAKE) install PREFIX=$(PREFIX) INSTALLDIRS=perl
+&gt; top install the modules, that makes sure they end up in the right directory ...
+
+I saw these problems, and i am not sure if it's my fault or a
+misconfigured perl. IIRC i found a machine where ``make test'' install
+perl modules under wml_test/TEST.root/... whereas ``make install''
+failed. I didn't see why.
+
+Are you sure your command will work everywhere ?
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00820" HREF="msg00820.shtml">Re: your mail</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00818" HREF="msg00818.shtml">No Subject</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00818.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00820.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00818.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00820.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00819"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00819"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

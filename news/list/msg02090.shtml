@@ -1,0 +1,149 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Another bug?  [wml 2.0.6] -->
+<!--X-From-R13: Yra [pUybguyra <zptyxNnegybtvk.pbz> -->
+<!--X-Date: Mon, 18 Dec 2000 11:38:40 +0100 (MET) -->
+<!--X-Message-Id: 877l4yauar.fsf@ralf.artlogix.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 877l4yd7vu.fsf@ralf.artlogix.com -->
+<!--X-Reference: 20001218103509.A16134@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02090">Date Index</a>][<a href="thrd42.shtml#02090">Thread Index</a>]<br>
+[<A HREF="msg02089.shtml">Date Prev</A>][<A HREF="msg02091.shtml">Date Next</A>][<A HREF="msg02089.shtml">Thread Prev</A>][<A HREF="msg02092.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Another bug?  [wml 2.0.6]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ken McGlothlen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 18 Dec 2000 02:38:20 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+| On Sun, Dec 17, 2000 at 02:01:57PM -0800, Ken McGlothlen wrote:
+| [...]
+| &gt; 	while( $body ) {
+| &gt; 	    if( $body =~ /^(&lt;[^&gt;]+&gt;|[^a-z]+|&amp;\w+;)(.*)$/ ) {
+| &gt; 		# got a tag or non-lowercase characters or entities
+| &gt; 		$result .= $1;
+| &gt; 		$body = $2;
+| &gt; 	    } elsif( $body =~ /^([a-z]+)(.*)$/ ) {
+| &gt; 		# got lowercase characters
+| &gt; 		$result .= qq{&lt;font size="$lcsize"&gt;} . uc( $1 ) . "&lt;/font&gt;";
+| &gt; 		$body = $2;
+| &gt; 	    }
+| &gt; 	}
+| &gt; 	return( $result );
+| [...]
+| 
+| And indeed, the loop above never breaks if $body begins with a character
+| other than '&lt;' or a lowercase letter.  Maybe you should add
+|             } else {
+|  		$result .= $body;
+|  		$body = '';
+
+Well, yes, I'd be the first to admit that the structure I hacked up needs
+improvement.  But I don't think that's the answer, either.
+
+The problem here is with the regexes:  I have three bugs in my regexes.
+
+The first one (which didn't enter into this particular problem) is that I'm too
+greedy with the tag-recognition bit in the if clause:  it should be /&lt;[^&gt;]+?&gt;/
+instead of /&lt;[^&gt;]+&gt;/.
+
+The second thing is what's causing the infinite loop: the carriage return in
+"This is a Test" in the second example.  It's not caught by either one, because
+newlines don't normally show up in the set [^a-z].  (It's the only character
+that fails.)  This can be solved by using the m//s operator with the regexes.
+
+The third thing is that the regex in the if clause needs to be reordered.
+
+So the while loop should read
+
+	while( $body ) {
+	    if( $body =~ /^(&lt;[^&gt;]+?&gt;|&amp;\w+;|\s+|[^a-z]+)(.*)$/s ) {
+		# got a tag or entity or whitespace or non-lc
+		$result .= "$1";
+		$body = $2;
+	    } elsif( $body =~ /^([a-z]+)(.*)$/s ) {
+		# got lowercase characters
+		$result .= qq{&lt;font size="$lcsize"&gt;} . uc( $1 ) . "&lt;/font&gt;";
+		$body = $2;
+	    } else {
+		# got something weird
+		$body =~ /^(.)(.*)$/s;
+		$result .= "$1";
+		$body = $2;
+	    }
+	}
+
+and this indeed works.
+
+The *real* bug in this is that I allowed myself to get misled by the difference
+between HTML and Perl, where whitespace has very different impacts.  :)
+
+So, my apologies, Denis.  At least I used a question mark in the subject line.
+:)
+
+						---Ken McGlothlen
+						   mcglk@artlogix.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02088" HREF="msg02088.shtml">Another bug?  [wml 2.0.6]</A></strong>, <em>From:</em> Ken McGlothlen</li>
+<li><strong><A NAME="02089" HREF="msg02089.shtml">Re: Another bug?  [wml 2.0.6]</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02089.shtml">Re: Another bug?  [wml 2.0.6]</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02091.shtml">Re: Suggestions for wml::std::logo</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02089.shtml">Re: Another bug?  [wml 2.0.6]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02092.shtml">Multiple outputs, one input</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02090"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02090"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

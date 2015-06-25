@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Wed, 13 Sep 2000 14:05:56 +0200 (MET DST) -->
+<!--X-Message-Id: 20000913140303.E409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01933">Date Index</a>][<a href="thrd39.shtml#01933">Thread Index</a>]<br>
+[<A HREF="msg01932.shtml">Date Prev</A>][<A HREF="msg01934.shtml">Date Next</A>][<A HREF="msg01932.shtml">Thread Prev</A>][<A HREF="msg01934.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 13 Sep 2000 14:03:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+After upgrading to 2.0.3 I noticed a strange bug in wml_p7_htmlfix,
+when processing the following HTML code:
+
+&lt;a href="<A  HREF="http://mapweb.parc.xerox.com/map/color=1/features=alltypes/ht=22.48/lat=50.80/lon=7.03/mark=50.80,7.03/wd=45.00">http://mapweb.parc.xerox.com/map/color=1/features=alltypes/ht=22.48/lat=50.80/lon=7.03/mark=50.80,7.03/wd=45.00</A>"&gt;
+
+IMHO htmlfix shouldn't change anything on this code, but since 2.0.3
+this is converted to
+
+&lt;a href="<A  HREF="http://mapweb.parc.xerox.com/map/color=">http://mapweb.parc.xerox.com/map/color=</A>"1"/features="alltypes"/ht="22.48"/lat="50.80"/lon="7.03"/mark="50.80,7.03"/wd=45.00"&gt;
+
+It's possible to track this problem down to a simpler case:
+
+$ echo '&lt;a href="<A  HREF="http://foo.bar/baz=1/">http://foo.bar/baz=1/</A>"&gt;' | wml -p7
+&lt;a href="<A  HREF="http://foo.bar/baz=">http://foo.bar/baz=</A>"1"/"&gt;
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01934" HREF="msg01934.shtml">Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01935" HREF="msg01935.shtml">Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01932.shtml">Re: fix for des::navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01934.shtml">Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01932.shtml">Re: fix for des::navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01934.shtml">Re: [2.0.3] Bug in wml_p7_htmlfix: Inserts quotes into URL</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01933"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01933"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

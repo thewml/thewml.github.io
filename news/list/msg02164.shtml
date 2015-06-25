@@ -1,0 +1,186 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: prob with language&#45;tags when opening a file with EPerl -->
+<!--X-From-R13: "Fubznf D. Ybyy" <gbzx32Ngbzx32.qr> -->
+<!--X-Date: Sun, 11 Mar 2001 11:48:25 +0100 (MET) -->
+<!--X-Message-Id: 20010218232527.E31715@tomk32.de -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02164">Date Index</a>][<a href="thrd44.shtml#02164">Thread Index</a>]<br>
+[<A HREF="msg02163.shtml">Date Prev</A>][<A HREF="msg02166.shtml">Date Next</A>][<A HREF="msg02171.shtml">Thread Prev</A>][<A HREF="msg02168.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>prob with language-tags when opening a file with EPerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Thomas R. Koll&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 18 Feb 2001 23:25:27 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I'm opening a file through (I know I could do it in WML with #include, but would be much much more work) which contains language tags like &lt;en&gt;&lt;/en&gt;. my problem is now that WML ignores these tags :(
+
+
+
+-- 
+www.TomK32.de
+</PRE>
+<PRE>
+------- the WML file with EPerl code --------
+
+	$tmp =  $ddir.$images[$count][0].".desc";
+	open (DESCFILE, "&lt;$tmp");
+	while (&lt;DESCFILE&gt;) {
+			print $_;
+	}
+	close (DESCFILE);
+
+
+------------ the description file ------------
+&lt;en&gt;altachum - The old watchtower at the westcoast during sunset.&lt;br&gt;
+	A motiv I'm still painting sometimes.&lt;/en&gt;
+&lt;de&gt;altachum - Der Wachturm and der Westküste bei Sonnenuntergang.&lt;br&gt;
+	Ein Motiv dass mich auch heute noch beschäftigt.&lt;/de&gt;</PRE>
+<PRE>
+
+#use wml::std::grid
+#include "includes/main.inc"
+
+&lt;navigation page=art&gt;
+&lt;last-update date="2001 02 04" time="16:30 CET"&gt;
+##&lt;last-update date="2000 09 19"&gt;
+
+{#NEWS#:
+#include "news/art.news"
+:##}
+
+{#QLINKS#:
+&lt;qlink <A  HREF="http://www.gimp.org">http://www.gimp.org</A> "The GIMP"&gt;
+&lt;qlink <A  HREF="http://misery.subnet.at">http://misery.subnet.at</A> Misery&gt;
+&lt;qlink <A  HREF="http://tigert.gimp.org">http://tigert.gimp.org</A> "Tigert"&gt;
+&lt;qlink <A  HREF="http://artramp.org">http://artramp.org</A> "artwiz"&gt;
+:##}
+
+
+{#MAIN#:
+
+&lt;de&gt;
+Manchmal spiel ich mich halt ein bißchen mit &lt;thref name="GIMP"&gt; und da 
+kommt dann sowas raus.
+&lt;/de&gt;
+&lt;en&gt;
+Sometimes I play around with &lt;thref name="GIMP"&gt; and this is the result
+&lt;/en&gt;
+
+&lt;p&gt;
+&lt;table border="0"&gt;
+&lt;:{
+
+my $adir = "/images/art/";
+my $tdir = "/images/art/_thumb/";
+my $xdir = "/images/art/_xcf/";
+my $ddir = "/Arbeit/www.tomk32.de/images/art/_desc/";
+my $count = 0;
+
+#### normal size, thumbnail and xcf-file
+@images = (
+		["tomk32-2.png", "", "tomk32-2.xcf.gz"],
+		["two-moon-night.png", "", "two-moon-night.xcf.gz"],
+		["mystic-sphere3-blank.png", "mystic-sphere3-blank.png", 
+			"mystic-sphere3-blank.xcf.gz"],
+		["mystic-sphere2.png", "mystic-sphere2-blank.png", 
+			"mystic-sphere2-blank.xcf.gz"],
+		["altachum.jpg", "altachum.jpg", ""]
+		);
+$imagecount = @images;
+
+while ($imagecount &gt; $count) {
+	print "&lt;t&lt;&gt;&lt;td&gt;";
+	if (!$images[$count][1] &amp;&amp; !$images[$count][2]) {
+		print "&lt;img src=\"$adir$images[$count][0]\" alt=\"$images[$count][0]\"&gt;\n\n";
+	}
+	if ($images[$count][1] &amp;&amp; !$images[$count][2]) {
+		print "&lt;img src=\"$tdir$images[$count][1]\" alt=\"$images[$count][0]\"&gt;\n\t",
+			"&lt;br clear=\"all\"&gt;&lt;a href=\"$adir$images[$count][2]\"&gt;",
+			"&lt;en&gt;larger&lt;/en&gt;&lt;de&gt;größer&lt;/de&gt;&lt;/a&gt;\n\n";
+	}
+	if (!$images[$count][1] &amp;&amp; $images[$count][2]) {
+		print "&lt;img src=\"$adir$images[$count][0]\" alt=\"$images[$count][0]\"&gt;\n\t",
+			"&lt;br clear=\"all\"&gt;&lt;a href=\"$xdir$images[$count][2]\"&gt;xcf file&lt;/a&gt;\n\n";
+	}
+	if ($images[$count][1] &amp;&amp; $images[$count][2]) {
+		print "&lt;img src=\"$tdir$images[$count][1]\" alt=\"$images[$count][0]\"&gt;\n",
+			"\t&lt;br clear=\"all\"&gt;&lt;a href=\"$xdir$images[$count][2]\"&gt;xcf file&lt;/a&gt; | ",
+			"\n\t&lt;a href=\"$adir$images[$count][0]\"&gt;",
+			"&lt;en&gt;larger&lt;/en&gt;&lt;de&gt;größer&lt;/de&gt;&lt;/a&gt;\n\n";
+	}
+	print "&lt;/td&gt;&lt;td&gt;";
+	$tmp =  $ddir.$images[$count][0].".desc";
+	open (DESCFILE, "&lt;$tmp");
+	while (&lt;DESCFILE&gt;) {
+			print $_;
+	}
+	close (DESCFILE);
+		print "&lt;/td&gt;&lt;/tr&gt;";
+	
+	$count++;
+}
+}:&gt;
+
+&lt;/table&gt;
+:##}
+
+
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02168" HREF="msg02168.shtml">Re: prob with language-tags when opening a file with EPerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02163.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02166.shtml">Re: wml &amp; jsp</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02171.shtml">Re: Perl parsing error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02168.shtml">Re: prob with language-tags when opening a file with EPerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02164"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02164"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

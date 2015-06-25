@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Slice&#45;1.3.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 26 May 1999 16:36:25 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990526162446.20203B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00697">Date Index</a>][<a href="thrd15.shtml#00697">Thread Index</a>]<br>
+[<A HREF="msg00696.shtml">Date Prev</A>][<A HREF="msg00698.shtml">Date Next</A>][<A HREF="msg00700.shtml">Thread Prev</A>][<A HREF="msg00698.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Slice-1.3.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 26 May 1999 16:30:29 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi folks,
+
+for those who use SLICE out of WML, i just released slice-1.3.3, it can
+be found at
+    <A  HREF="http://www.engelschall.com/sw/slice">http://www.engelschall.com/sw/slice</A>
+
+Changes between 1.3.2 and 1.3.3:
+*) Upgrade Perl modules (compliant with perl5.004 and 5.005)
+*) Allow nested slices with the same name
+*) Report a warning rather than an error when undefined slices 
+   are requested
+
+Denis
+
+P.S.: Ralf, do you know who could be interested by this announce?
+      It's done for freshmeat.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00698" HREF="msg00698.shtml">Re: Slice-1.3.3</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00696.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00698.shtml">Re: Slice-1.3.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00700.shtml">Re: shebang line with filename-variable</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00698.shtml">Re: Slice-1.3.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00697"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00697"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

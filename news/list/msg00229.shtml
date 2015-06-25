@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [WML 1.6.7] boot.wml patch -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Thu, 29 Oct 1998 19:14:16 +0100 (CET) -->
+<!--X-Message-Id: 199810291800.KAA03338@medusa.surefirev.com. -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19981029145225.B3678@engelschall.com -->
+<!--X-Reference: Pine.LNX.4.03.9810290908460.32015&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00229">Date Index</a>][<a href="thrd5.shtml#00229">Thread Index</a>]<br>
+[<A HREF="msg00228.shtml">Date Prev</A>][<A HREF="msg00230.shtml">Date Next</A>][<A HREF="msg00228.shtml">Thread Prev</A>][<A HREF="msg00231.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [WML 1.6.7] boot.wml patch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Oct 1998 10:00:07 -0800 (PST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Jim Hebert writes:
+ &gt; Some of the posts in the last few days have been very "cathedral" centric,
+ &gt; and I'm hoping to talk y'all out of that into a more bazaar-like model
+ &gt; where the development effort doesn't have to flow through Ralf all the
+ &gt; time. (www.opensource.org might have pointers to the paper regarding this
+ &gt; distinction) So if you've got a suggestion, post it, but addressed to
+ &gt; everyone who might be able to code it, not just Ralf. And if you've got
+ &gt; code, don't be shy, post a pointer to it, or if it's short, just post it!
+ &gt; Learn to use patch if you haven't already, to post patches of existing wml
+ &gt; sources, and so forth. Or post to the list if you're hvaing trouble making
+ &gt; a patch: some one will help you.
+ &gt; 
+ &gt; And if you've got a suggestion but no code, give serious thought to diving
+ &gt; in and writing some. You might think "hey, who the hell am I? I can't
+ &gt; possibly be the right person to code this idea" but people like you garner
+ &gt; up the courage to do some hacking and come up with something. Even if you
+ &gt; don't get it to work right, sometimes half-baked code that is in the
+ &gt; direction of what you want will do MUCH more to spark other hackers to
+ &gt; work on coding that feature with you than a simple suggestion posted to
+ &gt; the list, and you'll usually end up smarter at the end of the day because
+ &gt; people will so often spend gobs of time helping you learn.
+ &gt; 
+ &gt; Go forth and hack on it! =)
+ &gt; 
+ &gt; jim
+ &gt; who hasn't even used wml for many months, and is embroiled in a bazaar
+ &gt; free software project of his own.
+
+	Hear Hear! 
+
+	I endorse your suggestion mightily.  There are a lot of us
+who, while not willing to commit to spend the hours a week to be
+maintainer, would happily spend close to those same hours "adding
+tweaks and enhancements" if we felt they would both help us, and
+eventually get into the tool.
+
+	It is still essential that there is a high priest that blesses 
+inclusion in the one true version; however the high preist doesn't
+have to give every sermon.
+
+-- 
+    /\     Michael McNamara             &lt;mac@surefirev.com&gt;
+   /\//    SureFire Verification Inc.   408-374-4100 x 100
+  /\///\   &lt;<A  HREF="http://www.surefirev.com">http://www.surefirev.com</A>&gt;   408-374-4174 FAX
+ _\///\/        Formerly Silicon Sorcery
+  \//\/    Get my verilog emacs mode from
+    \/     &lt;<A  HREF="http://www.surefirev.com/verilog-mode.html">http://www.surefirev.com/verilog-mode.html</A>&gt;
+                                     
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00227" HREF="msg00227.shtml">Re: [WML 1.6.7] boot.wml patch</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00228" HREF="msg00228.shtml">Re: [WML 1.6.7] boot.wml patch</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00228.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00230.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00228.shtml">Re: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00231.shtml">RE: [WML 1.6.7] boot.wml patch</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00229"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00229"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

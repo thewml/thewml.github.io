@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Fnznf Bncc <gcnccNzngniarg.uh> -->
+<!--X-Date: Sat, 5 Feb 2000 15:32:57 +0100 (MET) -->
+<!--X-Message-Id: 20000204165243.A2845@matavnet.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0002031618250.2569&#45;100000@jobs.hasecke.com -->
+<!--X-Reference: 200002040920.KAA27603@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01343">Date Index</a>][<a href="thrd28.shtml#01343">Thread Index</a>]<br>
+[<A HREF="msg01344.shtml">Date Prev</A>][<A HREF="msg01345.shtml">Date Next</A>][<A HREF="msg01337.shtml">Thread Prev</A>][<A HREF="msg01332.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tamas Papp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Feb 2000 16:52:44 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Feb 04, 2000 at 10:20:11AM +0100, Stephane Bortzmeyer wrote:
+
+&gt; &gt; I am beginning to love dselect and apt, although it is a little bit
+&gt; &gt; unearthly. I always fear that updating packages will ruin something
+&gt; &gt; inside of my box.
+&gt; 
+&gt; &lt;ifeq &lt;get-var Debian&gt; "true"
+&gt; I no longer use dselect but only apt-get. Nothing to fear: the dependency 
+&gt; system is here for that.
+
+I know that it's not a Debian mailing list, but now there exist
+several frontends to apt-get, like console-apt. There is a gnome
+version, too - the can be found in unstable.
+
+Regards,
+
+Tamas
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01328" HREF="msg01328.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+<li><strong><A NAME="01337" HREF="msg01337.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01344.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01345.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01337.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01332.shtml">Screen and printing Version...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01343"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01343"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

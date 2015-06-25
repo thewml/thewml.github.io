@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: No installation problems with 1.6.8 -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Mon, 18 Jan 1999 10:49:40 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990118103900.1048C&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990118081154.A6851@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00348">Date Index</a>][<a href="thrd8.shtml#00348">Thread Index</a>]<br>
+[<A HREF="msg00347.shtml">Date Prev</A>][<A HREF="msg00349.shtml">Date Next</A>][<A HREF="msg00343.shtml">Thread Prev</A>][<A HREF="msg00349.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: No installation problems with 1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Jan 1999 10:42:42 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Ralf,
+
+&gt;Slides? You mean slices, right? But which particular example do you mean
+&gt;(slices are used in the wml_tutorial document more than once)?
+
+In wml_tutorial.html
+at source-code line 384
+
+ 1| &lt;html&gt;
+ 2| &lt;head&gt;
+ 3| &lt;title&gt;TitlelineTitelzeile&lt;/title&gt;
+ 4| &lt;/head&gt;
+ 5| &lt;body&gt;
+ 6| &lt;h1&gt;HeaderlineUeberschrift&lt;/h1&gt;
+ 7| &lt;/body&gt;
+ 8| &lt;/html&gt;   
+
+Missing [EN] and [DE]-tag?
+
+Ciao!
+juh
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00349" HREF="msg00349.shtml">Re: No installation problems with 1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00343" HREF="msg00343.shtml">Re: No installation problems with 1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00347.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00349.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00343.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00349.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00348"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00348"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

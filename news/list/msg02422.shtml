@@ -1,0 +1,452 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New release WML 2.0.8 -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Mon, 5 Nov 2001 13:42:26 +0100 (MET) -->
+<!--X-Message-Id: 3BE688C7.5053517@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011031013800.A31403@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02422">Date Index</a>][<a href="thrd49.shtml#02422">Thread Index</a>]<br>
+[<A HREF="msg02421.shtml">Date Prev</A>][<A HREF="msg02423.shtml">Date Next</A>][<A HREF="msg02419.shtml">Thread Prev</A>][<A HREF="msg02423.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New release WML 2.0.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 05 Nov 2001 13:40:39 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+...
+&gt; I am pleased to announce that WML 2.0.8 is out and available from
+
+Denis,
+
+thank you very much for the new issue. I was away from home for
+LinuxWorld 2001 Frankfurt, so I couldn't test it before today.
+Before I have used Debian packages and this is the first WML release
+I have tried to compile myself. The compilation worked well,
+but `make test' produced the errors below. Also `make install'
+failed. I didn't try to solve the problem, since I'm not
+the C or PERL expert. But I'm willing to test further
+versions.
+
+Werner
+
+
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: b: No such file or directory
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.02
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.05
+cmp: a.en.html: No such file or directory
+cmp: a.de.html: No such file or directory
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.02
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.05
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.08
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.02
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.05
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13324.tmp1.00 line 168.
+BEGIN failed--compilation aborted at /tmp/wml.13324.tmp1.00 line 168.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.02
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13342.tmp1.00 line 196.
+BEGIN failed--compilation aborted at /tmp/wml.13342.tmp1.00 line 196.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.02
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13359.tmp1.03 line 196.
+BEGIN failed--compilation aborted at /tmp/wml.13359.tmp1.03 line 196.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.05
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13376.tmp1.06 line 196.
+BEGIN failed--compilation aborted at /tmp/wml.13376.tmp1.06 line 196.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.08
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13393.tmp1.09 line 196.
+BEGIN failed--compilation aborted at /tmp/wml.13393.tmp1.09 line 196.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.11
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13410.tmp1.12 line 196.
+BEGIN failed--compilation aborted at /tmp/wml.13410.tmp1.12 line 196.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.14
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.02
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.02
+cmp: a.en.html: No such file or directory
+Can't locate Bit/Vector.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5/5.6
+/usr/lib/perl5/5.005/i386-linux .) at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+BEGIN failed--compilation aborted at
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 49.
+** WML:Break: Error in Pass 9 (rc=2).
+cmp: EOF on tmp.02
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13515.tmp1.00 line 169.
+BEGIN failed--compilation aborted at /tmp/wml.13515.tmp1.00 line 169.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.02
+ePerl:Error: Perl parsing error (interpreter rc=2)
+
+---- Contents of STDERR channel: ---------
+Can't locate WML/GD.pm in @INC (@INC contains:
+/usr/src/wml-2.0.8/wml_test/TEST.root/lib/wml/perl/lib
+/usr/src/wml-2.0.8/wml_test/TEST.rootlib/wml/perl/lib/i386-linux
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1
+/usr/lib/perl5/5.005 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.6.1
+/usr/share/perl/5.6.1 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux
+/usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005 .
+/usr/local/lib/perl/5.6.1 /usr/local/share/perl/5.6.1 /usr/lib/perl5
+/usr/share/perl5 /usr/lib/perl/5.6.1 /usr/share/perl/5.6.1
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5/5.6 /usr/lib/perl5/5.005/i386-linux /usr/lib/perl5/5.005
+.) at /tmp/wml.13532.tmp1.03 line 169.
+BEGIN failed--compilation aborted at /tmp/wml.13532.tmp1.03 line 169.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.05
+Failed 12/20 test scripts, 40.00% okay. 46/72 subtests failed, 36.11%
+okay.
+make[1]: [test] Error 29 (ignored)
+
+
+Failed Test        Status Wstat Total Fail  Failed  List of Failed
+--------------------------------------------------------------------------------
+t/09-p9_slice.t                        2    2 100.00%  1-2
+t/10-wml.t                             4    4 100.00%  1-4
+t/11-wmk.t                             6    6 100.00%  1-6
+t/des-gfont.t                          6    6 100.00%  1-6
+t/des-navbar.t                         4    4 100.00%  1-4
+t/des-space.t                          2    2 100.00%  1-2
+t/des-typography.t                    10   10 100.00%  1-10
+t/std-grid.t                           2    2 100.00%  1-2
+t/std-href.t                           2    2 100.00%  1-2
+t/std-lang.t                           2    2 100.00%  1-2
+t/std-tags.t                           2    2 100.00%  1-2
+t/std-toc.t                            4    4 100.00%  1-4
+
+japh:/usr/src/wml-2.0.8# make install
+___ INSTALL: prepare directory structure ___
+./etc/shtool mkdir -f -p -m 755 /usr/bin//bin
+./etc/shtool mkdir -f -p -m 755 /usr/bin//lib/wml
+./etc/shtool mkdir -f -p -m 755 /usr/bin//lib/wml/aux
+./etc/shtool mkdir -f -p -m 755 /usr/bin//lib/wml/exec
+./etc/shtool mkdir -f -p -m 755 /usr/bin//lib/wml/include
+./etc/shtool mkdir -f -p -m 755 /usr/bin//lib/wml/perl
+./etc/shtool mkdir -f -p -m 755 /usr/bin//man
+mkdir: `/usr/bin/man' exists but is not a directory
+make: *** [install-dirs] Error 1
+
+-- 
+|=| Werner Heuser = Keplerstr. 11A = D-10589 Berlin = Germany
+|=| &lt;wehe_AT_mobilix.org&gt;      T. 0049 - (0)30 - 349 53 86
+|=| <A  HREF="http://MobiliX.org">http://MobiliX.org</A>         UniX on Mobile Systems: HOWTOs,Software,
+..
+|=| <A  HREF="http://Xtops.DE">http://Xtops.DE</A>            Laptops+PDAs pre-installed with UniX
+|*| This is no time for phony rhetoric -- Lou Reed
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02423" HREF="msg02423.shtml">Re: New release WML 2.0.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02419" HREF="msg02419.shtml">New release WML 2.0.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02421.shtml">Multiple prog. language support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02423.shtml">Re: New release WML 2.0.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02419.shtml">New release WML 2.0.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02423.shtml">Re: New release WML 2.0.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02422"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02422"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

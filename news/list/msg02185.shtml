@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: problem: attributes being used as body -->
+<!--X-From-R13: wrss pbirl <wrss.pbirlNcbobk.pbz> -->
+<!--X-Date: Mon, 26 Mar 2001 18:39:29 +0200 (MET DST) -->
+<!--X-Message-Id: 20010326113919.D24281@jeffcovey.net -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Reference: 20010326081240.Q31036@jeffcovey.net -->
+<!--X-Reference: 20010326174647.A2745@imacs.polytechnique.fr -->
+<!--X-Derived: pgp00008.pgp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02185">Date Index</a>][<a href="thrd44.shtml#02185">Thread Index</a>]<br>
+[<A HREF="msg02184.shtml">Date Prev</A>][<A HREF="msg02186.shtml">Date Next</A>][<A HREF="msg02183.shtml">Thread Prev</A>][<A HREF="msg02186.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: problem: attributes being used as body</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: jeff covey &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Mar 2001 11:39:19 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+on Mon, Mar 26, 2001 at 05:46:47PM +0200%, Denis Barbier said:
+
+    denis&gt; the generated HTML file shows that you are running WML
+    denis&gt; 2.0.6
+
+bah!  thanks for spotting this.  i must have been running debian
+unstable when i installed wml ages ago.  the recent perl upgrade
+removed it, and when i reinstalled it, i got the 1.7.4 from testing
+instead of the 2.0.6 from unstable.  i'm going to try grabbing 2.0.6
+from unstable and letting it install what it needs to install.
+
+thanks,
+
+-- 
+|----------------------------------------------------------------------------|
+| jeff covey jeff.covey@pobox.com <A  HREF="http://pobox.com/~jeff.covey/">http://pobox.com/~jeff.covey/</A> 410-669-4926 |
+|----------------------------------------------------------------------------|
+|                          time is better than money.                        |
+|----------------------------------------------------------------------------|
+</PRE>
+<P><A HREF="pgp00008.pgp" >PGP signature</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02181" HREF="msg02181.shtml">problem: attributes being used as body</A></strong>, <em>From:</em> jeff covey</li>
+<li><strong><A NAME="02183" HREF="msg02183.shtml">Re: problem: attributes being used as body</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02184.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02186.shtml">wmk and include files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02183.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02186.shtml">wmk and include files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02185"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02185"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

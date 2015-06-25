@@ -1,0 +1,164 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: moving from m4 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 25 May 1999 14:51:59 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990525140015.8351A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990524202629.A2463@meu.debian -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00688">Date Index</a>][<a href="thrd15.shtml#00688">Thread Index</a>]<br>
+[<A HREF="msg00687.shtml">Date Prev</A>][<A HREF="msg00689.shtml">Date Next</A>][<A HREF="msg00687.shtml">Thread Prev</A>][<A HREF="msg00701.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: moving from m4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 25 May 1999 14:46:05 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 24 May 1999, Xose Manoel Ramos wrote:
+
+&gt; Hi!
+&gt; 
+&gt; Before trying `WML' I was using `m4' for my web pages. `m4' is
+&gt; usefull,  but it becomes very frustrating. Anyway, I had already
+&gt; written plenty of complex macros (recursive and looping), and I
+&gt; wanted to still use them.
+&gt; 
+&gt; Under `WML', `m4'  works with quotes disabled. I can only agree with
+&gt; that choice (that was one of the reasons I gave up `m4'). The problem
+&gt; is I have plenty of commas (,) inside my macros, so I have to quote
+&gt; them.
+&gt; 
+&gt; I thought about a `&lt;m4&gt;' tag to surround my macros, but somebody has
+&gt; already included it before me. (Probably because that was a good
+&gt; idea).
+&gt; 
+&gt; I just make it more handy:
+&gt; 
+&gt; --------------------------
+&gt; &lt;define-container m4&gt;
+&gt; m4_quotes
+&gt; {: [[s/&amp;lquot;/`/]] [[s/&amp;rquot;/'/]]
+&gt; %body 
+&gt; :}
+&gt; m4_noquotes
+&gt; &lt;/define-container&gt;
+&gt; -------------------------
+&gt; 
+&gt; I added two entities for (`) and (') if I want to include them in a
+&gt; macro. There already exist: &amp;#96; and &amp;acute; but with such a name
+&gt; nobody will ever remember them.
+&gt; 
+&gt; Anyway, I think it should be easier try to migrate my macros to
+&gt; Meta-HTML. 
+
+Hi Xose,
+
+in the next release, i took another way. With your method, the quotes
+have to be escaped (i mean ``replaced'') in the body of the text. It's
+not a problem for you, but it is for people with a minimal knowledge
+of programming.
+
+Please keep in mind that macros are written by developers whereas
+webpages might be written by everyone.
+The &lt;m4&gt; tag in wml::std::tag will be defined by
+
+&lt;define-container m4&gt;
+&lt;preserve quotes&gt;\
+&lt;set-var quotes="`,'"&gt;\
+&lt;set-var %attributes&gt;\
+m4_noquotes()m4_dnl
+m4_changequote(&lt;get-var quotes&gt;)m4_dnl
+%body \
+m4_noquotes()m4_dnl
+&lt;restore quotes&gt;
+&lt;/define-container&gt;
+
+The &lt;symbol&gt; tag has been redefined to use this new ``quotes''
+attribute:
+
+&lt;define-tag symbol&gt;
+&lt;m4 quotes="&lt;`,'&gt;"&gt;
+&lt;ifeq &lt;get-var %1&gt; undef
+      &lt;prog m4_undefine(&lt;`%0'&gt;)&gt;
+      &lt;prog m4_define(&lt;`%0'&gt;,\
+            &lt;`m4_noquotes()m4_changequote(&lt;`,'&gt;)&lt;`%1'&gt;'&gt;)&gt;&gt;
+&lt;/m4&gt;
+&lt;/define-tag&gt;
+
+This is an example of what i expect : tricks are done in macro files,
+not in the source of the web pages.
+
+In your case, you could replace all occurences of quotes (` and ') by
+&lt;` and '&gt; respectively, and define another macro
+&lt;define-container mym4&gt;
+&lt;m4 quotes="&lt;`,'&gt;"&gt;
+%body
+&lt;/m4&gt;
+&lt;/define-container&gt;
+
+Few people use this m4 pass, so any feedback is really helpful.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00687" HREF="msg00687.shtml">moving from m4</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00687.shtml">moving from m4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00689.shtml">Placing files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00687.shtml">moving from m4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00701.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00688"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00688"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

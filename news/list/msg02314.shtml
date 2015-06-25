@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Multi Language Support Question -->
+<!--X-From-R13: Yney&#45;Vrvam [neonvfr <xzneonvfrNdvf&#45;flfgrzunhf.qr> -->
+<!--X-Date: Fri, 20 Jul 2001 09:36:09 +0200 (MET DST) -->
+<!--X-Message-Id: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02314">Date Index</a>][<a href="thrd47.shtml#02314">Thread Index</a>]<br>
+[<A HREF="msg02313.shtml">Date Prev</A>][<A HREF="msg02315.shtml">Date Next</A>][<A HREF="msg02312.shtml">Thread Prev</A>][<A HREF="msg02321.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Multi Language Support Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Karl-Heinz Marbaise &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 20 Jul 2001 09:35:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi there,
+
+i have a little problem with WML 2.0.7:
+
+I'm using the language feature to different 
+output files.
+
+I have the following contens (test.wml):
+#use wml::std::page
+#use wml::des::navbar
+#use wml::std::lang
+#use wml::std::href
+#use wml::std::logo
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+&lt;lang:star:slice: &lt;get-var WML_SRC_BASENAME&gt;-*.html&gt;
+&lt;h1&gt;&lt;de&gt;Das ist die Foo Seite&lt;/de&gt;&lt;en&gt;The Foo Page&lt;/en&gt;&lt;/h1&gt;
+
+If  I use wml test.wml there will two files created
+(test-de.html and test-en.html) as I expected. But
+now I have the problem if a file has no &lt;de&gt; or
+&lt;en&gt; area which should create only a single file.
+
+#use wml::std::page
+#use wml::des::navbar
+#use wml::std::lang
+#use wml::std::href
+#use wml::std::logo
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+&lt;lang:star:slice: &lt;get-var WML_SRC_BASENAME&gt;-*.html&gt;
+&lt;h1&gt;Dass ist die Foo Seite&lt;/h1&gt;
+
+like the above, but it produces an error message which
+says there is slice defined.
+Can I define a default behaviour if no slice is defined
+in a file, because some parts of my project become
+very complicated.
+
+Thanks in advance.
+
+-- 
+Dipl.-Ing. Karl Heinz Marbaise | Phone: +49 (241) 4 13 26 - 48
+QIS Systemhaus GmbH Aachen     | Fax  : +49 (241) 4 13 26 - 40
+Juelicher Strasse 338          | Internet: <A  HREF="http://www.qis-systemhaus.de">http://www.qis-systemhaus.de</A>
+52070 Aachen                   | e-mail  : kmarbaise@qis-systemhaus.de
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02326" HREF="msg02326.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02313.shtml">Re: xtable bug</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02315.shtml">Re: xtable bug</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02312.shtml">Re: Grid question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02321.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02314"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02314"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Substitution of asteriks -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Wed, 17 Mar 1999 09:53:00 +0100 (MET) -->
+<!--X-Message-Id: Pine.GSO.4.10.9903170952240.7703&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36EF6BC8.658F53CD@irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00489">Date Index</a>][<a href="thrd11.shtml#00489">Thread Index</a>]<br>
+[<A HREF="msg00488.shtml">Date Prev</A>][<A HREF="msg00490.shtml">Date Next</A>][<A HREF="msg00488.shtml">Thread Prev</A>][<A HREF="msg00504.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Substitution of asteriks</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Mar 1999 09:52:54 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding Substitution of asteriks:
+
+*&gt; Is-it possible to combine two substitution of asteriks ?
+*&gt; 
+*&gt; By example:
+*&gt; 
+*&gt; #use wml::std::lang
+*&gt; #use wml::des::navbar
+*&gt; 
+*&gt; &lt;navbar:define name    = nav
+*&gt; 	       imgstar = std:sel:ovr&gt;
+*&gt; ...
+*&gt; &lt;navbar:button img = &lt;lang:star: Icons-*-*.gif&gt;&gt;
+*&gt; ...
+*&gt; 
+*&gt; where the first asteriks is for the language and the second 
+*&gt; for the navbar substitution ?
+
+sure, but the syntax must be
+
+&lt;navbar:button img = &lt;lang:star: Icons-*&gt;-*.gif&gt;
+
+cheers
+tobi
+*&gt; 
+*&gt; 
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1194  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00504" HREF="msg00504.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00488" HREF="msg00488.shtml">Substitution of asteriks</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00488.shtml">Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00490.shtml">Re: [BUG REPORT] WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00488.shtml">Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00504.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00489"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00489"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

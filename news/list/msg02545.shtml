@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: NAVBAR and CSS -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 6 Mar 2002 13:35:12 +0100 (MET) -->
+<!--X-Message-Id: 20020306134720.A28975@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.44.0202112053560.23292&#45;100000@ns.xanadu.ru -->
+<!--X-Reference: 000001c1c505$db556680$702f07d5@ravis -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02545">Date Index</a>][<a href="thrd51.shtml#02545">Thread Index</a>]<br>
+[<A HREF="msg02544.shtml">Date Prev</A>][<A HREF="msg02546.shtml">Date Next</A>][<A HREF="msg02544.shtml">Thread Prev</A>][<A HREF="msg02547.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: NAVBAR and CSS</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Mar 2002 13:47:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Mar 06, 2002 at 12:55:47PM +0100, Ralf Vissers wrote:
+&gt; Hi Denis,
+&gt; 
+&gt; thanks for maintaining WML and Mailing List.
+&gt; You (and all other participants) are doing a great job there! ;-))
+&gt; 
+&gt; Last week I switched to NAVBAR txtonly mode
+&gt; and i was looking for an extra link behaviour
+&gt; like pseudo class a:link { ... } in CSS.
+&gt; Finally I have changed
+&gt; 	$O .= '&lt;*a href=...
+&gt; to
+&gt; 	$O .= '&lt;*a class="menu" href=...
+&gt; in section
+&gt; 	#   for a button without images
+&gt; of my local copy of navbar.wml.
+&gt; See <A  HREF="http://home.arcor.de/vissers/">http://home.arcor.de/vissers/</A> for an example.
+
+Hi,
+
+you could try
+   &lt;navbar:render [your options] :a:class="menu"&gt;
+
+This is how it is supposed to work.
+But in ChangeLog there is
+    *) Fix generic attributes in wml::des::navbar (05-Nov-2001):
+       They were not always taken into account.
+
+So it could not work with WML 2.0.8, maybe CVS version is required.
+
+&gt; What do you think about builtin WML macro support for CSS?
+
+WML must help writing HTML documents with CSS support.
+I have no idea on how to do it, except with the scheme above, described
+in wml::des::navbar(1) section 'Special options of &lt;navbar:render&gt;'.
+Unfortunately I reveive few feedback, so I am not not it works as
+expected.
+
+&gt; IMHO it would be nice for other users and for other includes.
+&gt; What about the mail below from Petr Andreyev?
+&gt; You have answered "Your idea looks interesting, patches are welcome ;)".
+&gt; Have there been any patches?
+
+Not yet.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02547" HREF="msg02547.shtml">Re: NAVBAR and CSS</A></strong>, <em>From:</em> Kurt Sermeus</li>
+<li><strong><A NAME="02548" HREF="msg02548.shtml">AW: NAVBAR and CSS</A></strong>, <em>From:</em> Ralf Vissers</li>
+<li><strong><A NAME="02549" HREF="msg02549.shtml">AW: NAVBAR and CSS</A></strong>, <em>From:</em> Ralf Vissers</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02506" HREF="msg02506.shtml">toc etc</A></strong>, <em>From:</em> Petr Andreyev</li>
+<li><strong><A NAME="02544" HREF="msg02544.shtml">NAVBAR and CSS</A></strong>, <em>From:</em> Ralf Vissers</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02544.shtml">NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02546.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02544.shtml">NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02547.shtml">Re: NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02545"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02545"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,215 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <page> and <info> tags -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Mon, 31 Aug 1998 18:06:52 +0200 (CEST) -->
+<!--X-Message-Id: 199808311603.JAA04903@medusa.surefirev.com. -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199808290143.SAA15121@medusa.surefirev.com. -->
+<!--X-Reference: 19980830131740.A5173@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00198">Date Index</a>][<a href="thrd5.shtml#00198">Thread Index</a>]<br>
+[<A HREF="msg00197.shtml">Date Prev</A>][<A HREF="msg00199.shtml">Date Next</A>][<A HREF="msg00197.shtml">Thread Prev</A>][<A HREF="msg00199.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;page&gt; and &lt;info&gt; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 31 Aug 1998 09:03:11 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Ralf S. Engelschall writes:
+ &gt; On Fri, Aug 28, 1998, Michael McNamara wrote:
+ &gt; 
+ &gt; &gt; I use the &lt;page&gt; tag.
+ &gt; &gt; 
+ &gt; &gt; I want to get &lt;meta name="Keywords" content="keys, locks, doors"&gt;
+ &gt; &gt; inserted into the &lt;head&gt; &lt;/head&gt; region, as per the HTML spec.
+ &gt; 
+ &gt; The wml::std::page also overwrites the &lt;head&gt; container tag, so you simply can
+ &gt; use:
+ &gt; 
+ &gt; | #use wml::std::page
+ &gt; | &lt;page info&gt;
+ &gt; | &lt;head&gt;
+ &gt; | &lt;meta name="Keywords" content="keys, locks, doors"&gt;
+ &gt; | &lt;/head&gt;
+ &gt; | test
+ &gt; 
+ &gt; 
+ &gt; Isn't this exactly what you want?
+
+oh. Thanks a bunch for the help, and for wml in general!
+
+No to grousing: it isn't clear to me from the wml:std:page man page
+what the syntax for a wml &lt;head&gt; (or &lt;title&gt; is. There is a fair bit
+about &lt;page&gt; but as for head and title, they are only mentioned in the
+synopsis area, and then we are refered to standard HTML documentation
+for &lt;head&gt; and &lt;title&gt;. I assumed the message was that page replaces
+head and title... 
+
+No man page exists for wml::std::head or wml::std::title, so logically
+they should be documented in man::std:page, right?
+
+
+
+EN Tools                                        WML::STD::PAGE(1)
+
+NAME
+     wml::std::page - Standard HTML Page Header and Footer
+
+SYNOPSIS
+      #use wml::std::page
+
+      &lt;page [attributes]&gt;
+      [&lt;page_end&gt;]
+
+      &lt;head&gt;...&lt;/head&gt;
+      &lt;title&gt;...&lt;/title&gt;
+
+
+DESCRIPTION
+     This include file provides the new &lt;page&gt; tag which is a
+     advanced combination of the HTML &lt;body&gt; and &lt;head&gt; container
+     tags. The idea is to provide complete header and footer tags
+     via one single tag while providing new features like page
+     indentation, easy title specificattion and setup of default
+     values for the page colors.
+
+     The generated page skeleton is additionally structured via
+     three slices:  WML_STDPAGE_HEAD, WML_STDPAGE_BODY and
+     WML_STDPAGE_FOOT. Use these slices to cut out some parts.
+
+ATTRIBUTES
+     title
+         This is a shorthand for the container tag &lt;title&gt;. The
+         value of this attribute is placed in the &lt;head&gt; section
+         of the page, surrounded with the &lt;title&gt; tag.
+
+     indent
+         This sets the indentation level of the page in units of
+         &lt;blockquote&gt;'s.  Default is no indentation. Setting
+         intent to a value of N means the page is surrounded by N
+         &lt;blockquote&gt;&gt; tags.  The attribute indent=1 or indent=2
+         usually provides the best readable layout.
+
+     background
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets the background image.  This is per
+         default not used.
+
+     bgcolor
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets the background color.  Default is
+         bgcolor="#ffffff" (white).
+
+     text
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets the text color.  Default is
+         text="#000000" (black).
+     link
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets the normal hyperlink color. Default
+         is text="#333399" (medium blue).
+
+     alink
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets the color for activated hyperlinks.
+         Default is text="#9999ff" (light blue).
+
+     vlink
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets the color for already visited
+         hyperlinks. Default is text="#000066" (dark blue).
+
+     onload
+         This just corresponds to the same attribute of the
+         &lt;body&gt; tag and sets a JavaScript even handler which is
+         activated after page was loaded.  This is per default
+         not used.
+
+     info
+         This automatically puts a &lt;info style=meta&gt; tag into the
+         &lt;head&gt; section of the page. See wml::std::info(3) for
+         more details.
+
+     slices
+         This enables the creating of the WML_PAGE_* slices.
+         These can be used in Pass 9 (Slice) later.
+
+AUTHOR
+      Ralf S. Engelschall
+      rse@engelschall.com
+      www.engelschall.com
+
+
+REQUIRES
+      Internal: P1, P2, P5
+      External: --
+
+
+SEEALSO
+     HTML &lt;head&gt;, &lt;body&gt; and &lt;title&gt; tags
+
+1/Jul/98              Last change: EN Tools                     3
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00195" HREF="msg00195.shtml">&lt;page&gt; and &lt;info&gt; tags</A></strong>, <em>From:</em> Michael McNamara</li>
+<li><strong><A NAME="00197" HREF="msg00197.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00197.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00199.shtml">Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00197.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00199.shtml">Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00198"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00198"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

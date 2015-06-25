@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Is there a better way to do this? -->
+<!--X-From-R13: Ureneq Znabvf <treneqNzfv.pbz> -->
+<!--X-Date: Fri, 4 Jun 1999 21:49:52 +0200 (MET DST) -->
+<!--X-Message-Id: 37582DDD.24DC4E10@msi.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: bin00021.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00723">Date Index</a>][<a href="thrd15.shtml#00723">Thread Index</a>]<br>
+[<A HREF="msg00722.shtml">Date Prev</A>][<A HREF="msg00724.shtml">Date Next</A>][<A HREF="msg00724.shtml">Thread Prev</A>][<A HREF="msg00728.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Is there a better way to do this?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerard Lanois &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 04 Jun 1999 12:49:49 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am brand new to WML.  I discovered it by accident yesterday on
+freshmeat.net.  I have always dreamed about such a tool!  Amazing.
+
+I have been playing with WML for a few hours and I love it.
+
+I would like to have an index column on each page for navigation
+purposes.  But I want the entry for the _current_ page to be
+in plain text (NOT a link).  And I only want to have to maintain
+the definition of this column in one location.
+
+I have attached a sample which demonstrates how to do this in WML.
+This works perfectly, but seems somewhat sloppy.  I was wondering
+if those of you more experienced with WML could suggest a better
+or cleaner way to approach this.
+
+Thanks in advance,
+
+-Gerard
+gerard@msi.com
+
+PS: Before anyone gets their shorts all in a knot about the attachment,
+    notice that it is only 1399 *bytes* long.</PRE>
+<P><A HREF="bin00021.bin" >demo.tgz</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00728" HREF="msg00728.shtml">Re: Is there a better way to do this?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00757" HREF="msg00757.shtml">Re: Is there a better way to do this?</A></strong>, <em>From:</em> Gerard Lanois</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00722.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00724.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00724.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00728.shtml">Re: Is there a better way to do this?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00723"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00723"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

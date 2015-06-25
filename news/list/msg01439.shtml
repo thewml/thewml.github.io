@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: align (1.99.1) -->
+<!--X-From-R13: Xbret Byngr <XbretNByngr.pk> -->
+<!--X-Date: Sat, 18 Mar 2000 17:15:17 +0100 (MET) -->
+<!--X-Message-Id: 878zzg8y66.fsf@psyche.kn&#45;bremen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01439">Date Index</a>][<a href="thrd30.shtml#01439">Thread Index</a>]<br>
+[<A HREF="msg01437.shtml">Date Prev</A>][<A HREF="msg01438.shtml">Date Next</A>][<A HREF="msg01449.shtml">Thread Prev</A>][<A HREF="msg01443.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>align (1.99.1)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Joerg Plate &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 18 Mar 2000 09:44:49 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+1&gt; cat demo.wml
+
+#use wml::std::page
+#use wml::std::grid
+
+&lt;page indent=1&gt;
+
+&lt;grid layout=2x3 align=lr valign=tbm&gt;
+  &lt;cell&gt;This is Cell #1 of Grid #1&lt;/cell&gt;
+  &lt;cell&gt;This is Cell #2 of Grid #2:
+    &lt;grid layout=2x2&gt;
+      &lt;cell&gt;A&lt;/cell&gt; &lt;cell&gt;B&lt;/cell&gt; &lt;cell&gt;C&lt;/cell&gt; &lt;cell&gt;D&lt;/cell&gt;
+    &lt;/grid&gt;
+  &lt;/cell&gt;
+  &lt;cell&gt;This is Cell #3 of Grid #1&lt;/cell&gt;  &lt;cell&gt;This is Cell #4 of Grid #1&lt;/cell&gt;
+  &lt;cell&gt;This is Cell #5 of Grid #1&lt;/cell&gt;  &lt;cell&gt;This is Cell #6 of Grid #1&lt;/cell&gt;
+&lt;/grid&gt;
+
+1&gt; wml demo.wml | grep align
+
+/usr/local/lib/wml/exec/wml_p2_mp4h: /tmp/wml.16178.tmp2.wml:
+642: Warning:/tmp/wml.16178.tmp2.wml:642: The `sub' tag is
+obsolete, see `substract'
+
+    &lt;td align="" valign=""&gt;
+    &lt;td align="" valign=""&gt;
+        &lt;td align="" valign=""&gt;
+        &lt;td align="" valign=""&gt;
+        &lt;td align="" valign=""&gt;
+        &lt;td align="" valign=""&gt;
+    &lt;td align="" valign=""&gt;
+    &lt;td align="" valign=""&gt;
+    &lt;td align="" valign=""&gt;
+    &lt;td align="" valign=""&gt;
+
+1&gt; cat test.wml
+
+#use wml::std::grid
+&lt;grid layout="1x1"&gt;
+&lt;cell&gt;Test&lt;/cell&gt;
+&lt;/grid&gt;
+
+&lt;grid layout="1x1" align="r" valign="b"&gt;
+&lt;cell&gt;Test&lt;/cell&gt;
+&lt;/grid&gt;
+
+1&gt; wml test.wml | grep align
+
+    &lt;td align="" valign=""&gt;
+    &lt;td align="" valign=""&gt;
+
+Why are all align parameters empty?
+
+-- 
+PGP&amp;GPG  "I'm working on it."  "There should be more math. This could be mathier."
+&lt;<A  HREF="http://www.psyche.cx/">http://www.psyche.cx/</A>&gt; "I haven't been a nerd for a very long time."
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01443" HREF="msg01443.shtml">Re: align (1.99.1)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01453" HREF="msg01453.shtml">Re: align (1.99.1)</A></strong>, <em>From:</em> Joerg Plate</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01437.shtml">Upgrade problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01438.shtml">BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01449.shtml">Re: Upgrade problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01443.shtml">Re: align (1.99.1)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01439"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01439"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

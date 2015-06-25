@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: y2k readiness of wml -->
+<!--X-From-R13: "Xnzrf O. Fernpl" <gernplNqrovna.bet> -->
+<!--X-Date: Thu, 20 May 1999 18:23:07 +0200 (MET DST) -->
+<!--X-Message-Id: 19990520122615.B30345@debian.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3743DD93.DDE5F6F4@its.monash.edu.au -->
+<!--X-Reference: Pine.LNX.3.96.990520133641.11400A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00679">Date Index</a>][<a href="thrd9.shtml#00679">Thread Index</a>]<br>
+[<A HREF="msg00678.shtml">Date Prev</A>][<A HREF="msg00680.shtml">Date Next</A>][<A HREF="msg00678.shtml">Thread Prev</A>][<A HREF="msg00693.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: y2k readiness of wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;James A. Treacy&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 May 1999 12:26:15 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, May 20, 1999 at 04:09:02PM +0200, Denis Barbier wrote:
+&gt; About specific WML issues:
+&gt; - Yes, pieces of WML do use dates.
+&gt; - Yes, WML might still have bugs (John Bazik reported one a couple of
+&gt;   weeks ago).
+&gt; - I just checked source code and found few places where problems could
+&gt;   occur.
+&gt; - But don't panic, they affect only
+&gt;     * the maintainer
+&gt;     * those who use one of these variables on their web pages
+&gt;         WML_SRC_CTIME WML_SRC_ISOTIME WML_GEN_CTIME WML_GEN_ISOTIME
+&gt; - So i can't imagine how those bugs could break anything.
+&gt;   If you don't use these variables to write ``Last modified on ...'',
+&gt;   you can sleep on your two ears (French idiom ;-)
+&gt; - WML is a collection of perl and C programs. Robustness of WML strongly
+&gt;   depends on robustness of your architecture.
+
+The dependency on perl is almost certainly the biggest issue (coupled
+with the use of the WML_*TIME variables). For y2k info on perl, see
+<A  HREF="http://language.perl.com/news/y2k.html">http://language.perl.com/news/y2k.html</A>. As with anything written by
+Larry (it doesn't have his name on it, but it's definitely his style),
+it's entertaining as well as edifying.
+
+&gt; - And again if i am told of a bug, be sure i will try to fix it.
+&gt;   For no charge ;-)
+&gt; 
+
+Jay Treacy
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00676" HREF="msg00676.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> Oliver Daly</li>
+<li><strong><A NAME="00678" HREF="msg00678.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00678.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00680.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00678.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00693.shtml">[PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00679"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00679"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

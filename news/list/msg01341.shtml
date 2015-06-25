@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Proposed changes for pass 1 wml_p1_ipp -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Fri, 4 Feb 2000 15:32:47 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000204131532.10992C&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000204112603.24289A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01341">Date Index</a>][<a href="thrd28.shtml#01341">Thread Index</a>]<br>
+[<A HREF="msg01340.shtml">Date Prev</A>][<A HREF="msg01342.shtml">Date Next</A>][<A HREF="msg01339.shtml">Thread Prev</A>][<A HREF="msg01345.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Proposed changes for pass 1 wml_p1_ipp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Feb 2000 13:32:36 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+On Fri, 4 Feb 2000, Denis Barbier wrote:
+&gt; ipp is much more complex that it looks like, so i have to be very
+&gt; careful. I discuss below some of your points.
+
+Ok, but I think I've got the idea ;-)
+
+&gt; &gt; $(INCLUDE_SRC). If you want to use them in the further passes, you have to
+&gt; &gt; assign variables like &lt;set-var INCLUDE_SRC=$(INCLUDE_SRC).
+&gt; 
+&gt; Hmmm, i am not convinced this is the best approach for your problem, i
+&gt; will think about it.
+
+First: it's not my problem, it's only a idea. Why I use this is very easy
+to explain: after including you don't have any more any information about
+the included files - therefore it must be done in the way of pass 1.
+
+If you don't need or use these variables, nothing will happen, and you
+don't have to think about it in pass 2-9.
+
+&gt; &gt; *  The handling of comments is now done in another part and should be
+&gt; &gt; faster than previos (therefore I deleted the warning in the man page).
+&gt; 
+&gt; Here is where we have to be careful, do these changes break anything?
+
+I know that's the main disadvantage, but it doesn't break any of the
+standard include files. Thinking about a safier solution I've got the idea
+not to detect (regexp) ".*/\*.*" and '.*/\*.*' as start of comment. The
+combination /* outside of file selection is quite rare. 
+
+And you may not forget, that you can build everytime a source code which
+breaks any innovation - even against the old comment concept ;-)
+
+With this little enhancement I don't fear any problem... (except in some
+rare cases in regexps, where someone wants to detect zero ore more
+slashes)
+
+&gt; &gt; *  Silent Assign Methods: to assign variables without writing themselves
+&gt; &gt; to the output (file) I've invented the following "variable substitutions":
+&gt; This is a very nice idea.
+
+Thanks. Firstly I thought, this would be the main discussion point because
+it breaks the compatibility to the Bourne Shell concept. But in all the
+shells you can assign variables without printing them, but not in ipp.
+
+&gt; You're right, that's my first name. As i said before, some of your code
+&gt; will be put into wml-SNAP soon, but not everything.
+
+Ok! Please tell me which parts, that I can fight for the other ones ;-)
+
+&gt; Another point: please avoid constructs like
+&gt;   +    ($l =~ m/^#(use|include|depends)\s+(\S+)(.*)$/ and $use = 1)
+&gt;   +       or next if $l =~ m/^[ \t]*#.*$/ ;
+&gt; these are very hard to maintain.
+
+ACK. But I was so happy to create PERLish code ;-) Ok - no problem, but
+this regexp is a copy of the regexp in the #(use|include|depends) part ;-)
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01339" HREF="msg01339.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01340.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01342.shtml">setting output dir in .wmlrc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01339.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01345.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01341"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01341"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

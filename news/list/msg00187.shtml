@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: A question [FWD] -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 9 Aug 1998 10:14:03 +0200 (CEST) -->
+<!--X-Message-Id: 19980809101400.A25860@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199808082033.WAA03286@online.no -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00187">Date Index</a>][<a href="thrd5.shtml#00187">Thread Index</a>]<br>
+[<A HREF="msg00186.shtml">Date Prev</A>][<A HREF="msg00188.shtml">Date Next</A>][<A HREF="msg00184.shtml">Thread Prev</A>][<A HREF="msg00193.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: A question [FWD]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Aug 1998 10:14:00 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Aug 08, 1998, Geir Eivind Mork wrote:
+
+&gt; On Sat, 8 Aug 1998 16:47:27 +0200, Ralf S. Engelschall wrote:
+&gt; 
+&gt; &gt;Seems like ePerl has some problems on your FreeBSD box with the
+&gt; &gt;dynamic shared object stuff of Perl 5.005_01. Hmmm... Can you
+&gt; &gt;please test if a simple and real Perl script
+&gt; &gt;  #!/usr/local/bin/perl5
+&gt; &gt;  use IO;
+&gt; &gt;  1;
+&gt; 
+&gt; Syntax error in file t.sh at line 2, next 2 tokens "use IO"
+&gt; execution of t.sh aborted due to compilation errors. 
+&gt; 
+&gt; But when I installed perl 5.00401 again, it worked w/o problems. Strange I
+&gt; must say, but I'll use that version of perl forever if that's the only way
+&gt; to use WML, hehe.[...]
+
+Yes, use 5.004. Unless you want to use Threads, the new Perl Compiler or
+mod_perl (memory leaks in 5.004!) there is no real need to upgrade to 5.005,
+of course. But it's strange, because on my FreeBSD box I've installed Perl
+through the FreeBSD Ports, too. And it runs fine. Very strange... But ok, keep
+5.004 running unless 5.005 is really stable... (i.e. 5.005_05 or such a
+version).
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00186.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00188.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00184.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00193.shtml">Convert wysiwyg documents with WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00187"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00187"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

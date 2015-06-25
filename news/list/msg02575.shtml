@@ -1,0 +1,275 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Compiling WML with Perl5.6 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 19 Mar 2002 23:05:28 +0100 (MET) -->
+<!--X-Message-Id: 20020319231645.B20894@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 3C920FD0.33A1D3F8@nortelnetworks.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02575">Date Index</a>][<a href="thrd52.shtml#02575">Thread Index</a>]<br>
+[<A HREF="msg02574.shtml">Date Prev</A>][<A HREF="msg02576.shtml">Date Next</A>][<A HREF="msg02570.shtml">Thread Prev</A>][<A HREF="msg02576.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Compiling WML with Perl5.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 19 Mar 2002 23:16:45 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Mar 15, 2002 at 03:14:24PM +0000, Chris Ebenezer wrote:
+&gt; Hi -
+&gt; 
+&gt; I am experiencing problems compiling wml, and suspect that it's
+&gt; related to the use of perl 5.6 on the system that I'm on.  I've
+&gt; tried wml-2.0.6 wml-2.0.8, wml-SNAPSHOT and wml-2.1a2, with the
+&gt; same result.  I get the following compilation error during the make
+&gt; process :
+&gt; 
+&gt; "eperl_perl5.c", line 58: undefined symbol: boot_attrs
+&gt; "eperl_perl5.c", line 58: warning: improper pointer/integer combination: arg #2
+&gt; "eperl_perl5.c", line 58: undefined symbol: boot_re
+&gt; "eperl_perl5.c", line 58: warning: improper pointer/integer combination: arg #2
+&gt; cc: acomp failed for eperl_perl5.c
+&gt; make: *** [eperl_perl5.o] Error 2
+&gt; 
+&gt; This when using the stock cc compiler,  with gcc i get the same errors
+&gt; flagged.
+&gt; 
+&gt; Details of the system are:
+&gt; 
+&gt; gcc - 2.8.1 
+&gt; OS  - Solaris 5.6
+&gt; perl - 5.6.0
+
+Hi Chris,
+
+I have access to a similar box, and did not experience your problems:
+  gcc - 2.8.1 
+  OS  - Solaris 5.6
+  perl - 5.6.1
+
+I have attached 'perl -V' output, maybe it could give some clue.
+And also config_ac.h and config_sc.h from wml_backend/p3_eperl
+
+Let me know if you find a workaround.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Summary of my perl5 (revision 5.0 version 6 subversion 1) configuration:
+  Platform:
+    osname=solaris, osvers=2.6, archname=sun4-solaris
+    uname='sunos opensource 5.6 generic_105181-08 sun4m sparc sunw,sparcstation-5 '
+    config_args='-d -e -s -Dprefix=/cw -Dinstallprefix=/cw -Dcc=cc -Doptimize=-O2 -pipe -Dlocincpth=/cw/include -Dlibpth=/cw/lib /lib /usr/lib /usr/ccs/lib -Uinstallusrbinperl'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef use5005threads=undef useithreads=undef usemultiplicity=undef
+    useperlio=undef d_sfio=undef uselargefiles=define usesocks=undef
+    use64bitint=undef use64bitall=undef uselongdouble=undef
+  Compiler:
+    cc='cc', ccflags ='-I/cw/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    optimize='-O2 -pipe',
+    cppflags='-I/cw/include'
+    ccversion='', gccversion='2.8.1', gccosandvers='solaris2.6'
+    intsize=4, longsize=4, ptrsize=4, doublesize=8, byteorder=4321
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' '
+    libpth=/cw/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -ldl -lm -lc
+    perllibs=-lsocket -lnsl -ldl -lm -lc
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options: USE_LARGE_FILES
+  Built under solaris
+  Compiled at May 25 2001 13:29:09
+  @INC:
+    /cw/lib/perl5/5.6.1/sun4-solaris
+    /cw/lib/perl5/5.6.1
+    /cw/lib/perl5/site_perl/5.6.1/sun4-solaris
+    /cw/lib/perl5/site_perl/5.6.1
+    /cw/lib/perl5/site_perl
+    .
+</PRE>
+<PRE>
+/* config_ac.h.  Generated automatically by configure.  */
+/* config_ac.h.in.  Generated automatically from configure.in by autoheader.  */
+#ifndef CONFIG_AC_H
+#define CONFIG_AC_H
+/*
+**  config_ac.h -- AUTO configuration header file
+**  Copyright (c) 1996-1999 Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+*/
+
+
+/* Define to empty if the keyword does not work.  */
+/* #undef const */
+
+/* Define if you have the ANSI C header files.  */
+#define STDC_HEADERS 1
+
+/*  defined if Perl support the DynLoader
+    interface for dynamic library loading */
+#define HAVE_PERL_DYNALOADER 1
+
+/*  define type bool for Perl 5 headers if missing */
+#define bool char
+
+/*  define DEBUG if we compile with debugging */
+/* #undef DEBUG_ENABLED */
+
+/*  define if libdmalloc.a is available */
+/* #undef HAVE_DMALLOC */
+
+/* Define if you have the memmove function.  */
+#define HAVE_MEMMOVE 1
+
+/* Define if you have the setegid function.  */
+#define HAVE_SETEGID 1
+
+/* Define if you have the seteuid function.  */
+#define HAVE_SETEUID 1
+
+/* Define if you have the strdup function.  */
+#define HAVE_STRDUP 1
+
+/* Define if you have the &lt;ctype.h&gt; header file.  */
+#define HAVE_CTYPE_H 1
+
+/* Define if you have the &lt;grp.h&gt; header file.  */
+#define HAVE_GRP_H 1
+
+/* Define if you have the &lt;netdb.h&gt; header file.  */
+#define HAVE_NETDB_H 1
+
+/* Define if you have the &lt;netinet/in.h&gt; header file.  */
+#define HAVE_NETINET_IN_H 1
+
+/* Define if you have the &lt;pwd.h&gt; header file.  */
+#define HAVE_PWD_H 1
+
+/* Define if you have the &lt;signal.h&gt; header file.  */
+#define HAVE_SIGNAL_H 1
+
+/* Define if you have the &lt;stdarg.h&gt; header file.  */
+#define HAVE_STDARG_H 1
+
+/* Define if you have the &lt;stdio.h&gt; header file.  */
+#define HAVE_STDIO_H 1
+
+/* Define if you have the &lt;stdlib.h&gt; header file.  */
+#define HAVE_STDLIB_H 1
+
+/* Define if you have the &lt;string.h&gt; header file.  */
+#define HAVE_STRING_H 1
+
+/* Define if you have the &lt;sys/param.h&gt; header file.  */
+#define HAVE_SYS_PARAM_H 1
+
+/* Define if you have the &lt;sys/socket.h&gt; header file.  */
+#define HAVE_SYS_SOCKET_H 1
+
+/* Define if you have the &lt;sys/stat.h&gt; header file.  */
+#define HAVE_SYS_STAT_H 1
+
+/* Define if you have the &lt;sys/types.h&gt; header file.  */
+#define HAVE_SYS_TYPES_H 1
+
+/* Define if you have the &lt;time.h&gt; header file.  */
+#define HAVE_TIME_H 1
+
+/* Define if you have the &lt;unistd.h&gt; header file.  */
+#define HAVE_UNISTD_H 1
+
+#endif /* CONFIG_AC_H */
+</PRE>
+<PRE>
+#ifndef SC_H
+#define SC_H
+/*
+**
+**  sc.h -- STATIC configuration header file
+**  Copyright (c) Ralf S. Engelschall, &lt;rse@engelschall.com&gt;
+**
+*/
+
+#define AC_perl_prog      "/cw/bin/perl"
+#define AC_perl_vers      "5.006"
+#define AC_perl_vnum      500600
+#define AC_perl_archlib   "/cw/lib/perl5/5.6.1/sun4-solaris"
+#define AC_perl_libs      "-lsocket -lnsl -ldl -lm -lc"
+#define AC_perl_dla       "/cw/lib/perl5/5.6.1/sun4-solaris/auto/DynaLoader/DynaLoader.a"
+
+#define AC_prefix         "/usr/local"
+
+#define AC_build_user     "barbier@foo.bar"
+#define AC_build_time_iso "19-Mar-2002"
+
+#endif /* SC_H */
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02576" HREF="msg02576.shtml">Re: Compiling WML with Perl5.6</A></strong>, <em>From:</em> Chris Ebenezer</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02570" HREF="msg02570.shtml">Compiling WML with Perl5.6</A></strong>, <em>From:</em> Chris Ebenezer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02574.shtml">Re: [BUG REPORT] WML 2.0.2-1, redhat linux 7.2 (2.4.7-10)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02576.shtml">Re: Compiling WML with Perl5.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02570.shtml">Compiling WML with Perl5.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02576.shtml">Re: Compiling WML with Perl5.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02575"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02575"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

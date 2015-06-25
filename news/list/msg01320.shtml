@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Automating the creation of buttons -->
+<!--X-From-R13: Ayvire Bnhxfgnqg <cfgnqgNfghq.su&#45;urvyoebaa.qr> -->
+<!--X-Date: Wed, 2 Feb 2000 00:40:40 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.05.10002020016420.8540&#45;100000@lara.stud.fh&#45;heilbronn.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 38976398.A3BC0DE7@research.bell&#45;labs.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01320">Date Index</a>][<a href="thrd27.shtml#01320">Thread Index</a>]<br>
+[<A HREF="msg01319.shtml">Date Prev</A>][<A HREF="msg01321.shtml">Date Next</A>][<A HREF="msg01319.shtml">Thread Prev</A>][<A HREF="msg01329.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Automating the creation of buttons</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Oliver Paukstadt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 2 Feb 2000 00:40:32 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 1 Feb 2000, Tom Limoncelli wrote:
+
+&gt; Does anyone have a good automated method to generate buttons, like the ones
+&gt; on the WML web page?  In theory, GIMP should be programmable enough to do
+&gt; this, but I've found it to be frustrating.
+
+I did button-auto-generation in many ways ;-)
+
+One solution is generating the buttons with the navigation-information
+during the WMLrun, the other Method is generating them with extra
+scripts/make.
+First method is more consitent but a WML run then needs much more time.
+And often it is not needed to regenerate the Buttons every run.
+
+There are many ways to generate the Buttons itself. If they should look
+all the same and only the text differs, generate the empty button manual
+with for example gimp and use gfont or gd with ttf-support to generate the
+text and add it with pnmarith/pnmpaste/pbmmask from the netpbm-package.
+
+For those with too much idel-time is the solution povray ;-) You can
+render great buttons with ttf-texts on it but it takes much time.
+
+Another solution is to use gs and define your buttons in postscript. This
+is a little bit confusing sometimes, because the gs-rip does not interpret
+the ps-sources in the way you meant ist, for example ugly and unwantet 
+peeks and artifacts. And it is very difficult do soft color changes.
+
+I think most important tools for autogenerating images are gfont and gd
+with ttf-support and the pnm/ppm/pgm/pbm-tools (RH: libgr-progs-*.rpm).
+And if you need a raw and empty base-button, use gimp  ;-)
+
+And I think, if you get paid for this job, take the time to learn how
+to use that gimp-script-language from perl ;-)
+
+BYtE Oli
+
++++Oh my god, they killed INIT. ++++++++++++++++++++++++++++++++++++++++++
++++oliver@paukstadt.de+++<A  HREF="http://www.paukstadt.de/">http://www.paukstadt.de/</A> ++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01318" HREF="msg01318.shtml">Automating the creation of buttons</A></strong>, <em>From:</em> Tom Limoncelli</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01319.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01321.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01319.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01329.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01320"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01320"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

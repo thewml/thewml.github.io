@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Convert wysiwyg documents with WML? -->
+<!--X-From-R13: Quevfgvna Xnrtre <puevfgvna.wnrtreNerxgbeng.rgum.pu> -->
+<!--X-Date: Tue, 25 Aug 1998 15:32:48 +0200 (CEST) -->
+<!--X-Message-Id: 3.0.32.19980825152555.0090e420@allegro.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00193">Date Index</a>][<a href="thrd5.shtml#00193">Thread Index</a>]<br>
+[<A HREF="msg00192.shtml">Date Prev</A>][<A HREF="msg00194.shtml">Date Next</A>][<A HREF="msg00187.shtml">Thread Prev</A>][<A HREF="msg00194.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Convert wysiwyg documents with WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Christian Jaeger &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 25 Aug 1998 15:25:55 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!
+
+I'm looking for a system for publishing a medium size site (~100
+documents), and that is suitable for this purpose: I want to write html
+source documents in a wysiwyg editor with only very few formatting (only
+functional formatting), and then convert these raw documents to the ones on
+the Web. So the difference to  html preprocessor systems (like htmlpp) is,
+that I do NOT want to 'program' the layout etc. in the source documents -
+programming should be done only in the conversion routines/settings. The
+raw docs should be entertainable by people who don't know anything about
+the layout (except to give perhaps some directives like writing
+"{tabletype=list}" above a table to give the converter information about
+the kind of table, or writing "{arrow}" which should be replaced by a gif
+with an arrow ...)
+
+So this system will have to replace tags, put whole groups of elements from
+the source document in a table, include a header, copy the contents of h1
+or h2 headers to the title and so on. I've started to program this myself,
+with the help of HTML::TreeBuilder (perl, from Gisle Aas) (it seems to
+become more work than I have time ...)
+
+Now I've found WML, but am not sure if it is suitable for this kind of
+things. Has someone done something similar?
+
+Thanks!
+Chris Jaeger
+
+
+
+________________________________________|______________________________
+                           __   .  . _  |_
+Christian Jaeger             | /| / /_\ | \
+  Pfirsichstr. 9             |/ |/  \_  |_/ -beauftragter des Rektorats
+  8006 Zürich                         Rektorat ETH Zentrum  8092 Zürich
+  01/364 36 92                        HG F 69.2             01/63 22062
+ e: jaegerc@ezinfo.ethz.ch            christian.jaeger@rektorat.ethz.ch
+_______________________________________________________________________
+
+    - Senden Sie von dringenden Mitteilungen eine Kopie an meine -
+                     - private Email-Adresse -
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00194" HREF="msg00194.shtml">Re: Convert wysiwyg documents with WML?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00192.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00194.shtml">Re: Convert wysiwyg documents with WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00187.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00194.shtml">Re: Convert wysiwyg documents with WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00193"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00193"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

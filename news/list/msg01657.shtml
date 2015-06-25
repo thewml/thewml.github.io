@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 30 May 2000 07:20:31 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0005300718150.13232&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000529233904.30624A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01657">Date Index</a>][<a href="thrd33.shtml#01657">Thread Index</a>]<br>
+[<A HREF="msg01656.shtml">Date Prev</A>][<A HREF="msg01658.shtml">Date Next</A>][<A HREF="msg01656.shtml">Thread Prev</A>][<A HREF="msg01658.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 07:20:27 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding [wml] Re: [wml] Re: [wml] e) or f) :...:
+
+*&gt; Here is the proposed syntax for parsing unknown tags:
+*&gt; - they are complex by default
+*&gt; - when there is a trailing slash or when tag name ends with an asterisk, 
+*&gt;   it is a simple tag
+*&gt; 
+*&gt; Sounds good.
+
+yep indeed. It will meen some updating the the standard wml
+packagaes probably ... 
+
+do we need some explicit protection for random &lt;dddd   &gt; structures
+in perl code for example ...
+
+tobi
+*&gt; 
+*&gt; 
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01658" HREF="msg01658.shtml">wishlist: text in rollover,navbar buttons and class for anchor tags</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+<li><strong><A NAME="01659" HREF="msg01659.shtml">Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01656" HREF="msg01656.shtml">Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01656.shtml">Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01658.shtml">wishlist: text in rollover,navbar buttons and class for anchor tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01656.shtml">Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01658.shtml">wishlist: text in rollover,navbar buttons and class for anchor tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01657"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01657"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

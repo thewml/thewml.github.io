@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: My submenus... -->
+<!--X-From-R13: Fvob <guvonhg.fbhypvrNjnanqbb.se> -->
+<!--X-Date: Thu, 5 Aug 1999 15:43:48 +0200 (MET DST) -->
+<!--X-Message-Id: 37A99623.EDBB348F@wanadoo.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00886">Date Index</a>][<a href="thrd19.shtml#00886">Thread Index</a>]<br>
+[<A HREF="msg00885.shtml">Date Prev</A>][<A HREF="msg00888.shtml">Date Next</A>][<A HREF="msg00889.shtml">Thread Prev</A>][<A HREF="msg00892.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>My submenus...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tibo &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 05 Aug 1999 15:48:19 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello everybody,
+
+I'm sure that someone will be able to solve my problem...
+I do have a working navbar with working menus, a bit like that :
+
+  *Item 1
+**Item 2
+  -subitem 1
+  -subitem 2
+  *Item 3
+
+The only point is that subitem 1 and 2 are linked to
+THE SAME PAGE ( you know : href="the_page.html#section1"...).
+How could I do to avoid that?
+I would have liked 2 separated pages (2 different files),
+instead of links in the same page...
+The file contains : " #use ....  title="..." section=item2 "
+Is there a way to specify a second variable, a bit like in the
+example of the gimp's navbar (who! this one, IS a navbar!) ?
+maybe area or subsection.
+If you don't see what I may, go on this URL... and try to follow
+the links of the menu in the top-right box...
+ <A  HREF="http://perso.wanadoo.fr/famille-soulcie/WML/">http://perso.wanadoo.fr/famille-soulcie/WML/</A>
+(the buttons "services" and "contacts/WWW" are not working at
+the moment)
+(you can see my template file : "squelette.wml" in the same
+directory)
+
+Thanks a lot.
+
+Thibaut S.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00885.shtml">gfont SEGV, patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00888.shtml">Re: ./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00889.shtml">Re: gfont SEGV, patch</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00892.shtml">define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00886"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00886"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

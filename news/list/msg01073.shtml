@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: file permissions -->
+<!--X-From-R13: Frq <gfzNjjarg.arg> -->
+<!--X-Date: Tue, 19 Oct 1999 03:57:47 +0200 (MET DST) -->
+<!--X-Message-Id: 380BD030.3D0F97E2@wwnet.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199910130655.CAA25283@ursa.calvin.edu -->
+<!--X-Reference: 19991013115316.A2770@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01073">Date Index</a>][<a href="thrd22.shtml#01073">Thread Index</a>]<br>
+[<A HREF="msg01071.shtml">Date Prev</A>][<A HREF="msg01074.shtml">Date Next</A>][<A HREF="msg01056.shtml">Thread Prev</A>][<A HREF="msg01057.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: file permissions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ted &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Oct 1999 21:58:08 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Please remove from list.
+
+TM
+
+
+Ralf S. Engelschall wrote:
+
+&gt; On Wed, Oct 13, 1999, Ryan VanderBijl wrote:
+&gt;
+&gt; &gt; Is there any trick to having wmk (or wml, or whoever) to make the
+&gt; &gt; output file with 0644 permissions? I've noticed that wmk is smart
+&gt; &gt; enought to make wml take in foobar.wml and output foobar.html, but
+&gt; &gt; when that happens the file permissions are just 0600.
+&gt;
+&gt; Use Pass 9's (slice) ``-o sliceterm:outputfile[@chmodcmd]'' feature.
+&gt;
+&gt;                                        Ralf S. Engelschall
+&gt;                                        rse@engelschall.com
+&gt;                                        www.engelschall.com
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+
+
+
+--
+Ted Maciag
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01055" HREF="msg01055.shtml">file permissions</A></strong>, <em>From:</em> Ryan VanderBijl</li>
+<li><strong><A NAME="01056" HREF="msg01056.shtml">Re: file permissions</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01071.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01074.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01056.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01057.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01073"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01073"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

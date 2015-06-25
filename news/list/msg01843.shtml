@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] Problems with quotes, mp4h and ePerl -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 18 Jul 2000 11:39:55 +0200 (MET DST) -->
+<!--X-Message-Id: 20000718114053.A13346@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717235104.A11625@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0007180005530.14250&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Reference: 20000718004007.A11720@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01843">Date Index</a>][<a href="thrd10.shtml#01843">Thread Index</a>]<br>
+[<A HREF="msg01842.shtml">Date Prev</A>][<A HREF="msg01844.shtml">Date Next</A>][<A HREF="msg01840.shtml">Thread Prev</A>][<A HREF="msg01844.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] Problems with quotes, mp4h and ePerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 11:40:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 18, 2000 at 12:40:07AM +0200, Denis Barbier wrote:
+[...]
+&gt; In conclusion, it is important to understand these points:
+&gt;  * Quotes are used to group words in tag attributes.
+&gt;  * It is impossible to determine whether double quotes are used to group
+&gt;    words or must be printed on output.  For this reason, they are always
+&gt;    removed from output when in attributes (this is a convention).
+[...]
+
+[Fritz, i did not check yesterday how huge your attachment was.
+Please limit posts to this mailing-list to ~10Ko.]
+
+There may be an alternative, let innermost tag decide if quotes must be
+removed, and outer tags do not suppress remaining quotes.  This is
+performed by the patch below.
+With this patch, wml rebuilds your site (i did not check if it does it
+right).
+
+I fear there are some side effects, so it needs more testing.
+But if it works, there is no more problems with quotes and ePerl ;-)
+
+--- wml_backend/p2_mp4h/src/input.c	2000/07/04 20:25:13	1.27
++++ wml_backend/p2_mp4h/src/input.c	2000/07/18 08:48:48
+@@ -1154,9 +1154,6 @@
+ 
+             case READ_ATTRIBUTE:
+             case READ_ATTR_VERB:
+-              type = TOKEN_QUOTE;
+-              break;
+-
+             case READ_ATTR_ASIS:
+             case READ_ATTR_QUOT:
+               obstack_1grow (&amp;token_stack, '"');
+--- wml_backend/p2_mp4h/src/macro.c	2000/07/06 22:36:49	1.30
++++ wml_backend/p2_mp4h/src/macro.c	2000/07/18 08:51:22
+@@ -215,8 +215,9 @@
+ 
+         case TOKEN_QUOTE:
+           in_string = !in_string;
+-          obstack_grow (obs, TOKEN_DATA_TEXT (&amp;td),
+-                  strlen (TOKEN_DATA_TEXT (&amp;td)));
++          if (expansion == READ_ATTR_ASIS || expansion == READ_ATTR_QUOT ||
++                  group_level &gt; 0)
++            obstack_1grow (obs, '"');
+           break;
+ 
+         case TOKEN_QUOTED:
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01844" HREF="msg01844.shtml">Re: [wml] [wml] Problems with quotes, mp4h and ePerl</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01835" HREF="msg01835.shtml">Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01836" HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="01837" HREF="msg01837.shtml">Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01842.shtml">Re: Question about nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01844.shtml">Re: [wml] [wml] Problems with quotes, mp4h and ePerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01840.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01844.shtml">Re: [wml] [wml] Problems with quotes, mp4h and ePerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01843"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01843"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

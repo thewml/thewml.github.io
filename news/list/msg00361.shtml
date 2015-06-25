@@ -1,0 +1,208 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: Egrir Evmrzber <fgrirNpzcunez.hpfs.rqh> -->
+<!--X-Date: Wed, 20 Jan 1999 20:31:04 +0100 (CET) -->
+<!--X-Message-Id: 19990120110312.A263369@cmpharm.ucsf.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00361">Date Index</a>][<a href="thrd8.shtml#00361">Thread Index</a>]<br>
+[<A HREF="msg00360.shtml">Date Prev</A>][<A HREF="msg00362.shtml">Date Next</A>][<A HREF="msg00360.shtml">Thread Prev</A>][<A HREF="msg00379.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Steve Sizemore &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jan 1999 11:03:12 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Steve Sizemore
+Reply-To: steve@cmpharm.ucsf.edu
+
+PROBLEM DESCRIPTION:
+configure fails under Irix 6.5.2
+/bin/sh is ksh, which doesn't work.
+Workaround is to use /sbin/bsh, the bourne shell.
+The configuration log file is appended to this message.
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: mips-sgi-irix6.5
+    Perl: 5.005_51 (/usr/local/bin/perl)
+    User: steve@piglet.ucsf.edu
+    Date: 18-Jan-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 51) configuration:
+  Platform:
+    osname=irix, osvers=6.5, archname=IP32-irix
+    uname='irix piglet 6.5 11051733 ip32 '
+    hint=previous, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc -n32 -mips3', optimize='-O3', gccversion=
+    cppflags='-D_BSD_TYPES -D_BSD_TIME -OPT:Olimit=0:space=on -I/usr/local/include -I/usr/gnu/include -DLANGUAGE_C'
+    ccflags ='-D_BSD_TYPES -D_BSD_TIME -woff 1009,1110,1184 -OPT:Olimit=0:space=on -I/usr/local/include -I/usr/gnu/include -DLANGUAGE_C'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='ld', ldflags =' -L/usr/local/lib32 -L/usr/local/lib -L/usr/gnu/lib'
+    libpth=/usr/local/lib /usr/gnu/lib /usr/lib32 /lib32 /lib /usr/lib
+    libs=-lgdbm -ldb -lm -lc
+    libc=/usr/lib32/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags=' ', lddlflags='-n32 -shared -L/usr/local/lib32 -L/usr/local/lib -L/usr/gnu/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under irix
+  Compiled at Dec 11 1998 13:22:10
+  @INC:
+    /usr/local/lib/perl5/5.00551/irix-n32
+    /usr/local/lib/perl5/5.00551
+    /usr/local/lib/perl5/site_perl/5.00551/irix-n32
+    /usr/local/lib/perl5/site_perl/5.00551
+    .
+
+
+
+
+
+
+Configuring for WML 1.6.8 (12-01-1999)
+creating cache ./config.cache
+checking whether to enable maintainer-specific portions of Makefiles... no
+
+__ CHECK: Build Environment __
+checking host system type... mips-sgi-irix6.5
+checking for built user... steve@piglet.ucsf.edu
+checking for built date... 20-Jan-1999
+
+__ CHECK: Build Utilities __
+checking for gcc... no
+checking for cc... cc
+checking whether the C compiler (cc  ) works... yes
+checking whether the C compiler (cc  ) is a cross-compiler... no
+checking whether we are using GNU C... no
+checking whether cc accepts -g... yes
+checking how to run the C preprocessor... cc -E
+ATTENTION! You are not compiling with a GCC compiler variant.
+           This might be ok, but perhaps Meta-HTML and other stuff
+           could fail to compile. So, try it out, but if it fails
+           please retry with GCC.
+checking whether make sets ${MAKE}... yes
+checking for a BSD compatible install... /usr/local/bin/install -c
+
+__ CHECK: Perl Language __
+checking for Perl language... /usr/local/bin/perl v5.005_51
+checking for MakeMaker's private install paths... ok
+
+__ RESULT: Substituting Files __
+updating cache ./config.cache
+creating ./config.status
+creating Makefile
+creating wml_frontend/Makefile
+creating wml_backend/Makefile
+creating wml_backend/p1_ipp/Makefile
+creating wml_backend/p5_divert/Makefile
+creating wml_backend/p6_asubst/Makefile
+creating wml_backend/p7_htmlfix/Makefile
+creating wml_backend/p8_htmlstrip/Makefile
+creating wml_backend/p9_slice/Makefile
+creating wml_common/Makefile
+creating wml_docs/Makefile
+creating wml_aux/Makefile
+creating wml_aux/txt2html/Makefile
+creating wml_aux/map2html/Makefile
+creating wml_aux/htmlinfo/Makefile
+creating wml_aux/linklint/Makefile
+creating wml_aux/weblint/Makefile
+creating wml_aux/wwwtable/Makefile
+creating wml_misc/Makefile
+creating wml_include/Makefile
+creating wml_include/sys/boot.src
+creating wml_test/Makefile
+
+Configuring for wml_backend/p2_mhc
+running /bin/sh ./configure  --cache-file=../.././config.cache --srcdir=.
+loading cache ../.././config.cache
+checking host system type... mips-sgi-irix6.5
+checking for gcc... (cached) cc
+checking whether the C compiler (cc  ) works... no
+configure: error: installation or configuration problem: C compiler cannot create executables.
+configure: error: ./configure failed for wml_backend/p2_mhc
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00379" HREF="msg00379.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00360.shtml">Re: Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00362.shtml">Re: Building 1.6.8 under Irix 6.5.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00360.shtml">Re: Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00379.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00361"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00361"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

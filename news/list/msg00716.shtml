@@ -1,0 +1,181 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: bug in 1.7.0? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 4 Jun 1999 12:18:28 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990604105300.19256A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199906031956.PAA10109@no.cs.brown.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00716">Date Index</a>][<a href="thrd15.shtml#00716">Thread Index</a>]<br>
+[<A HREF="msg00715.shtml">Date Prev</A>][<A HREF="msg00717.shtml">Date Next</A>][<A HREF="msg00715.shtml">Thread Prev</A>][<A HREF="msg00717.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: bug in 1.7.0?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Jun 1999 12:12:32 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 3 Jun 1999, John Bazik wrote:
+
+&gt; Here's a trivial .wml file:
+&gt; 
+&gt; 	#use wml::des::space
+&gt; 	&lt;space width=3 height=3&gt;
+&gt; 
+&gt; Here's what I get under 1.6.8 (on a linux box):
+&gt; 
+&gt; 	&lt;img src="test.imgdot-1x1-transp.gif" alt="" width="3" height="3"
+&gt; 	align="bottom" border="0"&gt;
+&gt; 
+&gt; Here's what I get under 1.7.0 (on a sun):
+&gt; 
+&gt; 	&lt;img src="test.imgdot-1x1-transp.gif" alt="" width="1" height="1"
+&gt; 	align="bottom" border="0"&gt;
+&gt; 
+&gt; Can anyone else reproduce this?
+
+Yes, i do.
+One trivial workaround is to replace the definition of the &lt;space&gt; tag
+in wml::des::space by
+&lt;define-tag space&gt;
+&lt;imgdot %attributes&gt;
+&lt;/define-tag&gt;
+
+&gt; I spent some time trying to track this down.  The "3" seems to get
+&gt; lost in pass 2 - the perl code in imgdot never sees it.
+&gt; 
+&gt; I tried this:
+&gt; 
+&gt; 	#use wml::std::tags
+&gt; 
+&gt; 	&lt;define-tag mytag2&gt;
+&gt; 	&lt;preserve width&gt;
+&gt; 	&lt;set-var %attributes&gt;
+&gt; 	in mytag2, width is &lt;get-var width&gt;
+&gt; 	&lt;restore width&gt;
+&gt; 	&lt;/define-tag&gt;
+&gt; 
+&gt; 
+&gt; 	&lt;define-tag mytag&gt;
+&gt; 	&lt;preserve width&gt;
+&gt; 	&lt;set-var %attributes&gt;
+&gt; 	in mytag, width is &lt;get-var width&gt;
+&gt; 	&lt;mytag2 width=&lt;get-var width&gt;&gt;
+&gt; 	&lt;restore width&gt;
+&gt; 	&lt;/define-tag&gt;
+&gt; 
+&gt; 	&lt;mytag width=3&gt;
+&gt; 
+&gt; Strangely, the results are the same under both 1.6.8 and 1.7.0:
+&gt; 
+&gt; 	in mytag, width is 3
+&gt; 	in mytag2, width is
+&gt; 
+&gt; Again, does anyone else see this?  This is not right, is it?
+
+This is a ``normal'' behavior. When &lt;mytag&gt; is called,
+%attributes="width=&lt;get-var width&gt;" and not "width=3"!
+Then when &lt;preserve width&gt; is called, the ``width'' variable is
+initialized to null. After that &lt;set-var width=&lt;get-var width&gt;&gt;
+does what you see.
+
+I believe there was a bug in Meta-HTML 5.02 (wml-1.6.8) fixed in version
+5.09 (included in wml-1.7.0).
+Indeed, you may try
+   .../bin/wml -p1 foo.wml &gt; foo.mhtml
+   ..../lib/wml/exec/wml_p2_mhc foo.mhtml
+Mix wml_p2_mhc and wml from WML-1.6.8 and WML-1.7.0 and you'll find the
+problem comes from Meta-HTML 5.09.
+
+Again, this is the normal behavior, and calls like
+   &lt;imgdot width=&lt;get-var width&gt;&gt;
+are hazardous.
+Another workaround is to define &lt;imgdot&gt; as:
+  &lt;define-function imgdot&gt;
+  &lt;preserve base&gt;
+  &lt;preserve width&gt;
+  &lt;preserve height&gt;
+  &lt;preserve color&gt;
+  &lt;preserve align&gt;
+  &lt;preserve noscale&gt;
+  &lt;set-var noscale=*&gt;
+  &lt;set-var %xbody&gt;
+  &lt;:
+etc.
+
+2 points:
+- Removed the whitespace=delete attribute, because perl scripts may
+  be written on a single line which may cause problems.
+- Replace %0 %1 ... %9 by %xbody
+  This variable is like %attributes, but is expanded.
+
+I do not recommend using this syntax, i'm not sure it is really safe.
+
+I planned to check all include files in the wml-1.7.1 release
+
+Thanks for this report.
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00715" HREF="msg00715.shtml">bug in 1.7.0?</A></strong>, <em>From:</em> John Bazik</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00715.shtml">bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00717.shtml">Re: bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00715.shtml">bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00717.shtml">Re: bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00716"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00716"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

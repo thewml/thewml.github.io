@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: use of slices restricted with <img>&#45;tag -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Tue, 21 Dec 1999 10:30:07 +0100 (MET) -->
+<!--X-Message-Id: 199912210910.KAA17125@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991220220412.A787@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01231">Date Index</a>][<a href="thrd25.shtml#01231">Thread Index</a>]<br>
+[<A HREF="msg01230.shtml">Date Prev</A>][<A HREF="msg01232.shtml">Date Next</A>][<A HREF="msg01229.shtml">Thread Prev</A>][<A HREF="msg01216.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: use of slices restricted with &lt;img&gt;-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 21 Dec 1999 10:10:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Mon, 20 Dec 1999 22:04:12 +0100, Xose Manoel Ramos wrote:
+&gt; El Wed, Dec 15, 1999 at 05:12:45PM +0100, Jan Holler contaba:
+&gt;&gt;&gt; An important point in using SPLIT is each section has toi be
+&gt;&gt;&gt; meaningfull.
+&gt;&gt;old memories telling me that you might mean something like a
+&gt;&gt;closed definition? - sorry, has been years.
+&gt; meaningful from WordNet (r) 1.6
+&gt; meaningful
+&gt;      adj : having a meaning or purpose; "a meaningful explanation";
+&gt;      "a meaningful discussion"; "a meaningful pause" [ant: meaningless]
+
+i thought you were using some computer-engineering phrase
+with a special context. but never mind...
+
+&gt;     &lt;a href="index.&lt;es: es&gt;&lt;en: en&gt;.html"&gt;
+&gt; 
+&gt; This is probably not trouble making, but once again you have to
+
+yes, that works well.
+
+&gt; notice Slice is the last pass.... and with some constructs this is a
+&gt; problem.
+
+if you want to make decisions based upon contents of
+"lang-"variables (which are different in each language), 
+you won't get to any solution. we (i at least) have severe 
+problems here.
+
+&gt; I was thinking maybe the important addition in WML was changin from
+&gt; passes to a interpreter that called each front-end as soon as each
+&gt; construct is found in the code. 
+
+wml is not working that way. wml processes streams and
+cannot divide into threads. that's why slices are used at
+the end.
+that is not easy to change because the single steps rely on
+each other and rely on the processorder because of several 
+reasons. one of them is the philosophy of wml itself: put
+together useful tools and use it as a whole.
+but nevertheless why not thinking about a different
+approach? preprocess - process - postprocess?
+
+cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01229" HREF="msg01229.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01230.shtml">How do I start wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01232.shtml">Re: How do I start wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01229.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01216.shtml">slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01231"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01231"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

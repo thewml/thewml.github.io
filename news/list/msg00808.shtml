@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Spaces in filnames -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Mon, 28 Jun 1999 08:52:42 +0200 (MET DST) -->
+<!--X-Message-Id: 87u2rwuzac.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990624182547.26526A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00808">Date Index</a>][<a href="thrd17.shtml#00808">Thread Index</a>]<br>
+[<A HREF="msg00807.shtml">Date Prev</A>][<A HREF="msg00809.shtml">Date Next</A>][<A HREF="msg00803.shtml">Thread Prev</A>][<A HREF="msg00805.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Spaces in filnames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 25 Jun 1999 16:31:55 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; And i strongly believe spaces in URI are forbidden too. IIRC Netscape
+&gt; will skip everything after the space character.
+
+This is right, but not the (admittedly slightly silly) point I was
+making.  I used this as an argument that the restriction on URLs and
+filenames are different, you can access the said file as:
+
+<A  HREF="http://www.hars.de/.../This%20F%EFle%20ha%FE%20%E6%20v%E9ry%20$tr%E1%F1ge%20na%B5e.html">http://www.hars.de/.../This%20F%EFle%20ha%FE%20%E6%20v%E9ry%20$tr%E1%F1ge%20na%B5e.html</A>
+
+This is a perfectly legal URL, and if the server runs under unix it
+should know what to do with it.
+
+&gt; So please use standard filenames ;-)
+
+Yes, I know that my example is a case for the obfuscated http contest,
+but I still think that an unix utility should be able to cope with
+legal unix filenames, if only for æthetic reasons.
+
+If you happen to find a simple solution, fix it, but you are right
+that it is a contrieved problem of little practical relevance.
+
+Yours, Florian.
+
+-- 
++ when hideous hordes of web designers will leave ripped bloodless bodies of
+hosts they parasited upon and convulsively start tearing limbs of each other
+in agony illuminated by artificial light [...], then we know that time has
+come for dêë|||zêïñe++++ &gt;&gt;&gt;&gt; Å.Ñ.Ñ.Ï.H.Î.L.Ä.T.Î.Ö.Ñ      -- www.absurd.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00803" HREF="msg00803.shtml">Re: Spaces in filnames</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00807.shtml">Re: multiple files in command line</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00809.shtml">[ANNOUNCE] WML-1.7.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00803.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00805.shtml">Not skippin passes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00808"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00808"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

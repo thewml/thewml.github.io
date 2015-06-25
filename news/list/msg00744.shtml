@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Forcing dependencies on wmk -->
+<!--X-From-R13: Xbua Pnmvx <wfoNpf.oebja.rqh> -->
+<!--X-Date: Mon, 7 Jun 1999 20:58:07 +0200 (MET DST) -->
+<!--X-Message-Id: 199906071857.OAA00777@no.cs.brown.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00744">Date Index</a>][<a href="thrd16.shtml#00744">Thread Index</a>]<br>
+[<A HREF="msg00743.shtml">Date Prev</A>][<A HREF="msg00745.shtml">Date Next</A>][<A HREF="msg00761.shtml">Thread Prev</A>][<A HREF="msg00751.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Forcing dependencies on wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: John Bazik &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 7 Jun 1999 14:57:30 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; One thing that would be very useful is a way to force a dependency
+&gt; on a file, or a set of files. This would allow you to to have
+&gt; pages that use perl scripts, which grab data from other files, to
+&gt; be made automatically using wmk. Something like
+&gt; 
+&gt; #depends "news/*.wml"
+&gt; 
+&gt; would allow me to get rid of a lot of stuff currently in Makefiles.
+
+Oooh,  I'll second that.  I've got menus driven by text files (to
+keep it simple for my content-providers), which are parsed by
+perl/wml.  I just cleaned up all my Makefiles after finally making
+use of the -M option, and then realized I lost the text-file dependencies.
+
+A "depends" directive would be smooth...
+
+John
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00743.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00745.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00761.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00751.shtml">[BUG REPORT] WML 1.7.1, Linux</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00744"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00744"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Fri, 3 Sep 1999 13:35:57 +0200 (MET DST) -->
+<!--X-Message-Id: 19990903133604.A29823@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00925">Date Index</a>][<a href="thrd19.shtml#00925">Thread Index</a>]<br>
+[<A HREF="msg00923.shtml">Date Prev</A>][<A HREF="msg00924.shtml">Date Next</A>][<A HREF="msg00927.shtml">Thread Prev</A>][<A HREF="msg00928.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 3 Sep 1999 13:36:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.2 (28-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Gerfried Fuchs
+Reply-To: alfie@skater
+
+PROBLEM DESCRIPTION:
+wml doesn't read my ./.wmlrc file anymore. There is only a single line in it:
+-Iincludes
+ But that isn't used anymore...
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.005_02 (/usr/local/bin/perl)
+    User: root@skater.htu.tuwien.ac.at
+    Date: 29-Aug-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+  Platform:
+    osname=linux, osvers=2.2.7, archname=i586-linux
+    uname='linux fatou 2.2.7 #5 smp thu apr 29 12:44:13 mest 1999 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2 -pipe', gccversion=egcs-2.91.66 19990314 (egcs-1.1.2 release)
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Apr 30 1999 22:37:24
+  @INC:
+    /usr/lib/perl5/5.00502/i586-linux
+    /usr/lib/perl5/5.00502
+    /usr/lib/perl5/site_perl/5.005/i586-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00928" HREF="msg00928.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00923.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00924.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00927.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00928.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00925"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00925"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

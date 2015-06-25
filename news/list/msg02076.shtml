@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Suggestion for wml::fmt::url -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 1 Dec 2000 21:54:49 +0100 (MET) -->
+<!--X-Message-Id: 20001201215957.A1715@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001126203647.A22434@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02076">Date Index</a>][<a href="thrd42.shtml#02076">Thread Index</a>]<br>
+[<A HREF="msg02075.shtml">Date Prev</A>][<A HREF="msg02077.shtml">Date Next</A>][<A HREF="msg02074.shtml">Thread Prev</A>][<A HREF="msg02083.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Suggestion for wml::fmt::url</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 1 Dec 2000 21:59:57 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Nov 26, 2000 at 08:36:47PM +0100, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; I have two suggestions for wml::fmt::url:
+&gt; 
+&gt; 1. It's useful to be able to add all parameters (especially target and
+&gt;    class parameters), you can add to some a-href-tag, to url-tags, too.
+&gt; 
+&gt; The easiest way I found to implement this, was to add %attributes to
+&gt; each parameter:
+&gt; 
+&gt; &lt;define-tag url endtag=required&gt;
+&gt; {:\
+&gt;     [[s|\b(<A  HREF="http://\S+">http://\S+</A>)|&lt;a href="$1" %attributes&gt;$1&lt;/a&gt;|g]]\
+&gt;     [[s|\b(<A  HREF="ftp://\S+">ftp://\S+</A>)|&lt;a href="$1" %attributes&gt;$1&lt;/a&gt;|g]]\
+&gt;     [[s|\b(<A  HREF="gopher://\S+">gopher://\S+</A>)|&lt;a href="$1" %attributes&gt;$1&lt;/a&gt;|g]]\
+&gt;     [[s|\b(telnet:\S+)|&lt;a href="$1" %attributes&gt;$1&lt;/a&gt;|g]]\
+&gt;     [[s|\b(<A  HREF="news:\S+">news:\S+</A>)|&lt;a href="$1" %attributes&gt;$1&lt;/a&gt;|g]]\
+&gt;     [[s|\b(<A  HREF="mailto:\S+">mailto:\S+</A>)|&lt;a href="$1" %attributes&gt;$1&lt;/a&gt;|g]]\
+&gt;     %body\
+&gt; :}\
+&gt; &lt;/define-tag&gt;
+
+Welcome Axel,
+
+you should write &lt;attributes-quote %attributes /&gt; instead of %attributes.
+
+I am implementing a mechanism to deal with arbitrary attributes.
+Currently i believe that only wml::des::navbar has been updated in the
+CVS area (not sure, did not work for WML for a while).
+This &lt;url&gt; tag will be defined by
+  &lt;define-tag url endtag=required&gt;
+  {:\
+      [[s|\b(<A  HREF="http://\S+">http://\S+</A>)|&lt;a href="$1" \
+        &lt;attributes-quote &lt;attributes-extract \
+                        :a:(.*) %attributes /&gt; /&gt;&gt;$1&lt;/a&gt;|g]]\
+      ...
+      %body\
+  :}\
+  &lt;/define-tag&gt;
+
+There are some explanations on
+   <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg01797.shtml">http://www.engelschall.com/sw/wml/news/list/msg01797.shtml</A>
+
+&gt; 2. I don't know, if othe people would like this, but it seems useful
+&gt;    (at least to me :-) to linkify e-mail addresses like
+&gt;    &lt;abe@cs.uni-sb.de&gt; or &amp;lt;abe@cs.uni-sb.de&amp;gt;, too. So I added the
+&gt;    following replacements to the above:
+&gt; 
+&gt; [[s|&amp;lt;(\S+?@\S+?)&amp;gt;|&amp;lt;&lt;a href="<A  HREF="mailto:$1">mailto:$1</A>" %attributes&gt;$1&lt;/a&gt;&amp;gt;|g]]
+&gt; [[s|&lt;(\S+?@\S+?)&gt;|&amp;lt;&lt;a href="<A  HREF="mailto:$1">mailto:$1</A>" %attributes&gt;$1&lt;/a&gt;&amp;gt;|g]]
+&gt; 
+&gt; The second line is just for being lazy. Due to HTML tags usually do
+&gt; not contain any "@" before the first white-space, it should work
+&gt; correct.
+
+Sounds good, i will certainly commit this change soon, thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02083" HREF="msg02083.shtml">Re: Suggestion for wml::fmt::url</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02074" HREF="msg02074.shtml">Suggestion for wml::fmt::url</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02075.shtml">Re: [BUG REPORT] WML 2.0.6, Debian Linux 2.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02077.shtml">Suggestions for wml::std::logo</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02074.shtml">Suggestion for wml::fmt::url</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02083.shtml">Re: Suggestion for wml::fmt::url</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02076"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02076"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

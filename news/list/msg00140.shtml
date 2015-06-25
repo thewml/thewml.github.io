@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: a few questions on using wml -->
+<!--X-From-R13: Rnivq Rhssrl <qqhssrlNrntyrfbsg.pbz> -->
+<!--X-Date: Thu, 25 Jun 1998 17:24:31 +0200 (CEST) -->
+<!--X-Message-Id: Pine.LNX.3.96.980625092621.707A&#45;100000@duffey.ml.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m0yotmj&#45;000DHYC@landru.math.uwaterloo.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00140">Date Index</a>][<a href="thrd3.shtml#00140">Thread Index</a>]<br>
+[<A HREF="msg00139.shtml">Date Prev</A>][<A HREF="msg00141.shtml">Date Next</A>][<A HREF="msg00134.shtml">Thread Prev</A>][<A HREF="msg00133.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: a few questions on using wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: David Duffey &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 09:40:56 -0500 (CDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+&gt; The Debian web pages are in the process of being converted to using
+&gt; wml. In the process I have come across a few things I haven't been
+&gt; able to figure out. Is it possible that there are things wml can't
+&gt; do? :)
+
+Really cool! I'd like to take a look at the way you set it up (wml,
+build system).
+ 
+&gt; Since I want the .html files in a different directory from the source
+&gt; a shebang path is used in the files, e.g. #!wml -o ../debian.org/%BASE.html.en
+&gt; What is actually desired is to use a variable to make it easier to move
+&gt; things around later, i.e. #!wml -o $(HTMLDIR)/%BASE.html.en where the
+&gt; variable is set in a .wmlrc file. Is this possible?
+
+I spent a few days trying out different "web build systems" I had
+decided on "chakotay" until I ran across wml, and I ended up with this
+hybrid Makefile (I'm not using wmk).
+
+--start--
+
+HTML = $(shell find . -name "*.wsml" | cut -c3- | sed "s/.wsml/.html/g")
+
+all : $(HTML)
+        @echo Done Compiling
+
+clean :
+        rm -f `find . -name "*.html" -print`
+        rm -f `find . -name "core" -print`
+        rm -f `find . -name "*~" -print`
+        rm -f `find . -name "imgsizer*" -print`
+
+%.html : %.wsml
+        wml -D ROOT~. -E weblint -n -o$@ $&lt;
+
+--end--
+
+Very simplistic, unfortunetly it doesn't handle dependancies :(
+Any, you can see that "*.wsml" are my source files that are to be
+turned into *.html.  I use *.whml for includes, etc...
+
+My point :), you can change the %.html : %wsml block to do whatever
+(directed output, movement, whatever)... It's a little more flexible
+than wmk (although I honestly haven't looked far into wmk).
+
+--
+David Duffey              (785)395-4807
+311 Marlatt Hall          dduffey@ksu.edu
+Manhattan KS 66506-1800
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00132" HREF="msg00132.shtml">a few questions on using wml</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00139.shtml">RE: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00141.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00134.shtml">Re: a few questions on using wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00133.shtml">question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00140"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00140"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

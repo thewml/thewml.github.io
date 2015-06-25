@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Fri, 15 Sep 2000 11:19:50 +0200 (MET DST) -->
+<!--X-Message-Id: 200009150914.e8F9EkW22422@apo.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0009150833230.8124&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01951">Date Index</a>][<a href="thrd40.shtml#01951">Thread Index</a>]<br>
+[<A HREF="msg01950.shtml">Date Prev</A>][<A HREF="msg01952.shtml">Date Next</A>][<A HREF="msg01947.shtml">Thread Prev</A>][<A HREF="msg01952.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri 15 Sep 2000 11:13:34 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Fritz
+
+Fri, 15 Sep 2000 08:35:17 +0200 (MET DST), you wrote:
+
+&gt;&gt; To remove this attribute, write your own epilog program like this:
+&gt; 
+&gt; YES, power to the user! Or, in other words, "if you don't like it, fix
+&gt; it". I at least prefer that to hollering.
+
+:-) Making fun of me?
+I don't want to holler(TM). I do not want to critizise wml
+or anybody contributing to it, not at all. I'm just
+suggesting to focus on production AND on development, but as
+separate branches. Please let me shortly explain why but from
+the point of view of web-mastering (and not developing):
+
+-A constant environment is necessary for long-term
+web-mastering: If one manages 20 sites (with many pages) or
+even more over a period of many years, there is much effort 
+necessary to change the sources to accomplish to the newest 
+development of the central and most important software in
+use. I do appreciate the (necessary) changes towards wml 2.0 though.
+Development is always welcome!
+
+-For newer sites (newly started projects) the work to adapt
+(and the risk to have a failure) is much smaller. The sources 
+are work in progress and therefor well known.
+
+-Not anybody (especially if you are a small company trying
+to build up a base for living and surviving) has the time
+to look at the sources and apply patches (even if the
+knowledge is there. On a productive machine you cannot take 
+the risk if the next update of a page has to be done any 
+minute if one of your customers calls).
+
+-wml's main advantage is the great expandability,
+flexiness and power in its use. This suffers a bit when you
+have to do work-arounds.
+
+-wml's great advantage over "competitors" in "the market" is
+(of course the open-source idea) besides other things the
+possibility to produce very clean and short html-code (if
+you want so). I do agree with your idea: Power to the user.
+
+Please do explain to me why you would not agree with this
+points and why therefor it is a bad idea two have two
+branches (aka linux kernel development).
+
+Cheers and please forgive my hollering. It should not have
+sounded like that.
+ -jan holler(TM)
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01952" HREF="msg01952.shtml">Re: [wml] Re: [wml] Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01947" HREF="msg01947.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01950.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01952.shtml">Re: [wml] Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01947.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01952.shtml">Re: [wml] Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01951"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01951"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

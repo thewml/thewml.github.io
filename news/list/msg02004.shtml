@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ipp: documentation bug -->
+<!--X-From-R13: "Oyoreg DSW@SD" <nervareNgcu.ghjvra.np.ng> -->
+<!--X-Date: Sun, 1 Oct 2000 00:46:00 +0200 (MET DST) -->
+<!--X-Message-Id: 20001001004319.A9622@frithjof -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02004">Date Index</a>][<a href="thrd41.shtml#02004">Thread Index</a>]<br>
+[<A HREF="msg02003.shtml">Date Prev</A>][<A HREF="msg02005.shtml">Date Next</A>][<A HREF="msg02021.shtml">Thread Prev</A>][<A HREF="msg02005.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ipp: documentation bug</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Albert REINER&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 1 Oct 2000 00:43:19 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Saluton,
+
+I'm still using 2.0.1, and on ipp's man page I read:
+
+       -P path
+            This sets up one or more prolog program path which
+            are applied to each single input file just before
+            real processing starts. Use this to pre-process the
+            data. The program gets the input filename to process
+            as its first argument. When it wants to filter it it
+            has to overwrite the file.
+
+The last sentence is clearly wrong, as ipp calls the prolog via:
+
+    #   apply prolog filters
+    foreach $p (@opt_P) {
+        $rc = system("$p &lt;$tmpfile &gt;$tmpfile.f &amp;&amp; mv $tmpfile.f $tmpfile 2&gt;/dev/null");
+        &amp;error("Prolog Filter `$p' failed") if ($rc != 0);
+    }
+
+So instead one might write "The filter has to accept on STDIN and
+write to STDOUT."
+
+Bye,
+
+Albert.
+
+-- 
+
+--------------------------------------------------------------------------
+Albert Reiner                                   &lt;areiner@tph.tuwien.ac.at&gt;
+Deutsch       *       English       *       Esperanto       *       Latine
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02003.shtml">Multilangual Problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02005.shtml">prolog options</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02021.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02005.shtml">prolog options</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02004"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02004"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

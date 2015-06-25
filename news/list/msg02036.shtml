@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: possible patch to WML -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 23 Oct 2000 22:54:47 +0200 (MET DST) -->
+<!--X-Message-Id: 20001023225547.A16550@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: x4n1gk9iul.fsf@backbone.midwestcs.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02036">Date Index</a>][<a href="thrd41.shtml#02036">Thread Index</a>]<br>
+[<A HREF="msg02035.shtml">Date Prev</A>][<A HREF="msg02037.shtml">Date Next</A>][<A HREF="msg02015.shtml">Thread Prev</A>][<A HREF="msg02017.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: possible patch to WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 23 Oct 2000 22:55:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Oct 04, 2000 at 08:28:50PM -0500, Wayne Schlitt wrote:
+
+&gt; Hi.
+&gt; 
+&gt; I'm a newbie web designer, and a newbie to WML, so there may be good
+&gt; reasons why WML works the way it does, but I would like to propose a
+&gt; patch anyway:
+
+Hi Wayne, sorry for this late answer.
+
+[...]
+&gt; Basically, all this patch does is let you *not* set the text, link, alink
+&gt; and vlink colors on the &lt;body&gt; tag.  You have always been able to skip 
+&gt; setting the bgcolor by specifying the color "none", this just extends
+&gt; that functionality.
+&gt; 
+&gt; I have been told that if you set one of these, you should set all
+&gt; because you don't know how the user has set up their defaults on their 
+&gt; browswer and your choice of colors may be bad for what they have
+&gt; choosen.
+
+This remark is fully right, it is why i will use a modified version of
+your patch. A new ``color=none'' attribute prevents setting bgcolor,
+text, link, alink and vlink attributes.
+
+diff -u -r1.15 page.src
+--- page.src	2000/08/03 21:47:26	1.15
++++ page.src	2000/10/23 20:44:22
+@@ -18,7 +18,7 @@
+ #   the new PAGE tag
+ #
+ &lt;define-tag page&gt;
+-&lt;preserve title indent info background bgcolor text link alink vlink
++&lt;preserve title indent info background color bgcolor text link alink vlink
+           onload slices /&gt;
+ &lt;set-var info=* /&gt;
+ &lt;set-var slices=* /&gt;
+@@ -32,11 +32,13 @@
+ {#WML_PAGE_HEAD_&lt;get-var __std_page_cnt /&gt;#}\
+ &lt;/head*&gt;
+ &lt;body*&lt;if &lt;get-var background /&gt; " background=\"&lt;get-var background /&gt;\"" "" /&gt;\
++      &lt;when &lt;not &lt;get-var color /&gt; /&gt;&gt;\
+       &lt;if &lt;get-var bgcolor /&gt; &lt;group &lt;ifeq "&lt;get-var bgcolor /&gt;" "none" "" " bgcolor=\"&lt;get-var bgcolor /&gt;\"" /&gt; /&gt; " bgcolor=\"#ffffff\"" /&gt;\
+       &lt;if &lt;get-var text /&gt; " text=\"&lt;get-var text /&gt;\"" " text=\"#000000\"" /&gt;\
+       &lt;if &lt;get-var link /&gt; " link=\"&lt;get-var link /&gt;\"" " link=\"#333399\"" /&gt;\
+       &lt;if &lt;get-var alink /&gt; " alink=\"&lt;get-var alink /&gt;\"" " alink=\"#9999ff\"" /&gt;\
+       &lt;if &lt;get-var vlink /&gt; " vlink=\"&lt;get-var vlink /&gt;\"" " vlink=\"#000066\"" /&gt;\
++      &lt;/when&gt;\
+       &lt;if &lt;get-var onload /&gt; " onload=\"&lt;get-var onload /&gt;\"" "" /&gt;\
+ &gt;
+ &lt;set-var __i=0 /&gt;
+@@ -54,7 +56,7 @@
+ &lt;/body*&gt;
+ &lt;/html*&gt;&lt;ifeq "&lt;get-var slices /&gt;" "" ":WML_STDPAGE_FOOT]" /&gt;
+ {#WML_PAGE_BODY_&lt;get-var __std_page_cnt /&gt;#:\
+-&lt;restore  title indent info background bgcolor text link alink vlink
++&lt;restore  title indent info background color bgcolor text link alink vlink
+           onload slices /&gt;
+ &lt;/define-tag&gt;
+ 
+Thanks for your suggestion.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02015" HREF="msg02015.shtml">possible patch to WML</A></strong>, <em>From:</em> Wayne Schlitt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02035.shtml">Re: WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02037.shtml">Re: minor problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02015.shtml">possible patch to WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02017.shtml">[BUG REPORT] WML 2.0.4, Win NT</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02036"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02036"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

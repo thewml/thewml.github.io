@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multi Language Support Question -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 20 Jul 2001 17:22:18 +0200 (MET DST) -->
+<!--X-Message-Id: 20010720172935.A13270@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010720160913.A20143@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02323">Date Index</a>][<a href="thrd47.shtml#02323">Thread Index</a>]<br>
+[<A HREF="msg02322.shtml">Date Prev</A>][<A HREF="msg02324.shtml">Date Next</A>][<A HREF="msg02321.shtml">Thread Prev</A>][<A HREF="msg02325.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multi Language Support Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 20 Jul 2001 17:29:35 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jul 20, 2001 at 04:09:13PM +0200, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; Karl-Heinz Marbaise wrote:
+&gt; &gt; Can I define a default behaviour if no slice is defined
+&gt; &gt; in a file, because some parts of my project become
+&gt; &gt; very complicated.
+[...]
+&gt; But, you're right, it would be nice, to have some slice options to
+&gt;   a) produce no file, if the appropriate slice (or slice term) is
+&gt;      empty (or perhaps just contains white spaces) and
+&gt;   b) produce no file, if the appropriate slice doesn't exist.
+&gt; 
+&gt; Those options should IMHO be appliable a) to each -o solely and b) to
+&gt; all -o's
+&gt; 
+&gt; That would make things a lot easier...
+
+I just checked wml_p9_slice and it sounds easy to implement, the only
+problem is about interface specification (how will user tell which file
+must be skipped), any ideas are welcome.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02325" HREF="msg02325.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02322.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02324.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02321.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02325.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02323"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02323"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

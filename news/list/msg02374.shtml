@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug in documentation -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 26 Aug 2001 02:55:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20010826030418.A21387@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200108241212.f7OCCJB05765@powai.creato.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02374">Date Index</a>][<a href="thrd48.shtml#02374">Thread Index</a>]<br>
+[<A HREF="msg02373.shtml">Date Prev</A>][<A HREF="msg02375.shtml">Date Next</A>][<A HREF="msg02373.shtml">Thread Prev</A>][<A HREF="msg02376.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug in documentation</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 26 Aug 2001 03:04:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Aug 24, 2001 at 05:42:19PM +0530, rvg@creato.org wrote:
+&gt; 
+&gt; I think there is a bug in the documentation on
+&gt; <A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mp4h.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mp4h.html</A>
+&gt; 
+&gt; Where the author discusses the %body macro, the output does not seem 
+&gt; consistent with the input source.  Here is the extract from the page
+&gt; 
+&gt; Source:
+&gt; &lt;define-tag mail2 endtag=required whitespace=delete&gt;
+&gt; &lt;set-var %attributes&gt;
+&gt; &lt;a href="mailto:&lt;get-var mail&gt;"&gt;%body&lt;/a&gt;
+&gt; &lt;/define-tag&gt;
+&gt; &lt;mail2 mail="hello@foo.com"&gt;
+&gt; &lt;img src="photo.png" alt="Dr. Foo" border=0&gt;
+&gt; &lt;/mail2&gt;
+&gt; 
+&gt; Output:
+&gt; &lt;a href="<A  HREF="mailto:hello@foo.com">mailto:hello@foo.com</A>"&gt;
+&gt; &lt;img border="0"  &gt;
+&gt; &lt;/a&gt;
+&gt; 
+&gt; However this is the output I get (seems correct to me) when I pass that
+&gt; source through wml.
+&gt; &lt;a href="<A  HREF="mailto:hello@foo.com">mailto:hello@foo.com</A>"&gt;
+&gt; &lt;img src="photo.png" alt="Dr. Foo" border="0"&gt;
+&gt; &lt;/a&gt;
+
+Oh right, the &lt;img&gt; tag is redefined somewhere and must be undefined.
+It has been fixed in CVS, thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02373" HREF="msg02373.shtml">Bug in documentation</A></strong>, <em>From:</em> rvg</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02373.shtml">Bug in documentation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02375.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02373.shtml">Bug in documentation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02376.shtml">Problem with including files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02374"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02374"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

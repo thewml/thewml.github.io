@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13&#45;14 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 8 Oct 1999 02:06:39 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991008020304.4108B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m23dvm3hrb.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01045">Date Index</a>][<a href="thrd21.shtml#01045">Thread Index</a>]<br>
+[<A HREF="msg01044.shtml">Date Prev</A>][<A HREF="msg01046.shtml">Date Next</A>][<A HREF="msg01044.shtml">Thread Prev</A>][<A HREF="msg01046.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 8 Oct 1999 02:05:46 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 8 Oct 1999, Hans Ulrich Niedermann wrote:
+
+&gt; agls00120@cableinet.co.uk writes:
+&gt; 
+&gt; &gt; Package: WML 1.7.4
+&gt; &gt; Operating System: Mandrake 6.0 kernel 2.2.13-14
+&gt; &gt; 
+&gt; &gt; Problem Description:
+&gt; &gt; | I'm having problems compiling. 
+&gt; &gt; | 
+&gt; &gt; | ./configure =ok
+&gt; &gt; | make = ok
+&gt; &gt; | make test = 100% fails
+&gt; 
+&gt; Perhaps the same, but at least a similar problem applies to me (1.7.3
+&gt; package patched to 1.7.4). Error messages:
+&gt; 
+&gt; t/10-wml............ok
+&gt; t/11-wmk............ok
+&gt; t/des-gfont.........ePerl:Error: Perl runtime error (interpreter rc=1)
+&gt; 
+&gt; ---- Contents of STDERR channel: ---------
+&gt; ** wml::des::gfont:
+&gt; sh: gfont: command not found
+[...]
+&gt; And all right, there IS no 'gfont':
+[...]
+&gt; Any clues?
+
+Yes, install gfont ;-)
+It is available at
+    <A  HREF="http://www.engrelschall.com/sw/gfont/">http://www.engrelschall.com/sw/gfont/</A>
+
+But if you don't use wml::des::gfont, you don't need it.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01046" HREF="msg01046.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></strong>, <em>From:</em> Hans Ulrich Niedermann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01044" HREF="msg01044.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></strong>, <em>From:</em> Hans Ulrich Niedermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01044.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01046.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01044.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01046.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01045"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01045"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

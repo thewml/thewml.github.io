@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: auto&#45;adjusted variables: behaviour changed? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 16 Jan 2001 01:32:02 +0100 (MET) -->
+<!--X-Message-Id: 20010116013904.A4065@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010116011053.A22838@jupiter.strijp.Ehv.nl -->
+<!--X-Reference: 20010116011746.A23075@jupiter.strijp.Ehv.nl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02107">Date Index</a>][<a href="thrd43.shtml#02107">Thread Index</a>]<br>
+[<A HREF="msg02106.shtml">Date Prev</A>][<A HREF="msg02108.shtml">Date Next</A>][<A HREF="msg02106.shtml">Thread Prev</A>][<A HREF="msg02108.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: auto-adjusted variables: behaviour changed?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 16 Jan 2001 01:39:04 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jan 16, 2001 at 01:17:46AM +0100, Remco van den Berg wrote:
+&gt; On Tue, Jan 16, 2001 at 01:10:53AM +0100, Remco van den Berg wrote:
+&gt; &gt; 
+&gt; &gt; psvweb@jupiter &gt; make
+&gt; &gt; wml  _src/todolist.phpwml -o todolist.php
+&gt; &gt; 
+&gt; &gt; But in WML version 2.0.6 I see that my auto-adjusted variables get an extra
+&gt; &gt; '../' in front of it. At first I didn't understand it, but I found out that
+&gt; &gt; when I place the source files in the current working directory and I run
+&gt; &gt; 
+&gt; &gt; #&gt; wml todolist.phpwml -o todolist.php
+&gt; &gt; 
+&gt; &gt; the extra '../' in the auto-adjusted variables is gone. And everything works.
+&gt; 
+&gt; I saw in the manual an option "--nocd", but it doesn't work.
+&gt; 
+&gt; Can somebody confirm, that this option should be the solution for my problem?
+&gt; 
+&gt; But if so, then why isn't it working?
+
+Hi Remco, you are right, this option is what you are looking for.
+Unfortunately it seems to be broken (oh damned, i know now why i do not
+like changing command line options parsing).
+
+You have to move
+   $opt_c = 0;
+from line 183 to 171, i.e. with definitions of $opt_r and $opt_v.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02108" HREF="msg02108.shtml">Re: auto-adjusted variables: behaviour changed?</A></strong>, <em>From:</em> Remco van den Berg</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02105" HREF="msg02105.shtml">auto-adjusted variables: behaviour changed?</A></strong>, <em>From:</em> Remco van den Berg</li>
+<li><strong><A NAME="02106" HREF="msg02106.shtml">Re: auto-adjusted variables: behaviour changed?</A></strong>, <em>From:</em> Remco van den Berg</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02106.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02108.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02106.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02108.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02107"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02107"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

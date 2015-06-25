@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.1, Solaris 2.6 -->
+<!--X-From-R13: tnnNhygvpbz.pbz -->
+<!--X-Date: Thu, 1 Jun 2000 19:15:55 +0200 (MET DST) -->
+<!--X-Message-Id: 200006011425.QAA29755@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01678">Date Index</a>][<a href="thrd35.shtml#01678">Thread Index</a>]<br>
+[<A HREF="msg01677.shtml">Date Prev</A>][<A HREF="msg01682.shtml">Date Next</A>][<A HREF="msg01677.shtml">Thread Prev</A>][<A HREF="msg01682.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.1, Solaris 2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 1 Jun 2000 16:25:14 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.1
+Operating System: Solaris 2.6
+
+Problem Description:
+| In wml_backend/p2_mp4h/src the file builtin.c will
+| not compile:
+| "builtin.c", line 807: controlling expressions must have scalar type
+| 
+| Looking at the problem, the variable "remove" is never
+| defined and it picks up the declaration in stdio.h
+| for "int remove(char*)" (as in remove a file).
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01682" HREF="msg01682.shtml">Re: [BUG REPORT] WML 2.0.1, Solaris 2.6</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01677.shtml">Re: BUG</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01682.shtml">Re: [BUG REPORT] WML 2.0.1, Solaris 2.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01677.shtml">Re: BUG</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01682.shtml">Re: [BUG REPORT] WML 2.0.1, Solaris 2.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01678"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01678"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

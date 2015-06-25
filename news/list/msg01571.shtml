@@ -1,0 +1,158 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problem with ifeq under 2.0.0 -->
+<!--X-From-R13: [vpunry Yerff <xerffNuny.fnne.qr> -->
+<!--X-Date: Wed, 17 May 2000 23:06:11 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.10005180016440.22197&#45;100000@hal.saar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01571">Date Index</a>][<a href="thrd33.shtml#01571">Thread Index</a>]<br>
+[<A HREF="msg01570.shtml">Date Prev</A>][<A HREF="msg01572.shtml">Date Next</A>][<A HREF="msg01569.shtml">Thread Prev</A>][<A HREF="msg01572.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problem with ifeq under 2.0.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Kress &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 18 May 2000 00:37:54 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I'm having problems after upgrading from 1.7.4 to 2.0.0. Has someone an
+got idea what happened ? Maybe _I_ did something wrong before, which takes
+revenge on me _now_ ... &gt;;-)
+
+My machine is a freshly installed redhat 6.2 without any upgrades.
+
+I'd like to put page-dependend top-of-page-logos and I want to define them
+in the main template file, where &lt;html&gt;, &lt;body&gt; ... is built together.
+In all other files i'm using the following line to include/use the
+template:
+
+#use blupp.wml area=service page=ae IMG=img SNB_RC=service.wmlsnb
+
+So far ...
+In blupp.wml you can find the following:
+
+&lt;!-- BEGIN select logo --&gt;
+&lt;ifeq "$(area)" "news" &lt;IMG SRC="img/header-news.jpg"&gt;&gt;
+&lt;ifeq "$(area)" "service" &lt;ifeq "$(page)" "al" &lt;IMG SRC="img/header-al.jpg"&gt;&gt; &gt;
+&lt;ifeq "$(area)" "service" &lt;ifeq "$(page)" "oa" &lt;IMG SRC="img/header-oa.jpg"&gt;&gt; &gt;
+&lt;ifeq "$(area)" "service" &lt;ifeq "$(page)" "ae" &lt;IMG SRC="img/header-ae.jpg"&gt;&gt; &gt;
+&lt;ifeq "$(area)" "service" &lt;ifeq "$(page)" "kw" &lt;IMG SRC="img/header-kw.jpg"&gt;&gt; &gt;
+&lt;ifeq "$(area)" "gaestebuch" &lt;IMG SRC="img/header-gaestebuch.jpg"&gt;&gt;
+&lt;!-- END select logo --&gt;
+
+so in this case, the result should be (and ever was):
+
+&lt;!-- BEGIN select logo --&gt;
+&lt;IMG SRC="img/header-ae.jpg"&gt;
+&lt;!-- END select logo --&gt;
+
+But now the result is:
+&lt;!-- BEGIN select logo --&gt;
+ &gt;
+ &gt;
+ &gt;
+ &gt;
+SRC=img/header-news.jpg&gt;
+SRC=img/header-al.jpg &gt;
+SRC=img/header-oa.jpg &gt;
+&lt;IMG&gt;
+SRC=img/header-kw.jpg &gt;
+SRC=img/header-gaestebuch.jpg&gt;
+SRC=img/header-gal.jpg&gt;
+SRC=img/header-presse.jpg&gt;
+ &gt;
+SRC=img/header-email.jpg&gt;
+&lt;!-- END select logo --&gt;
+
+
+In fact, before (i.e. in 1.7.4) I used:
+&lt;!-- BEGIN select logo --&gt;
+&lt;ifeq "$(area)" "news" &lt;prog &lt;IMG SRC="img/header-news.jpg"&gt;&gt; &gt;
+&lt;ifeq "$(area)" "service" &lt;prog &lt;ifeq "$(page)" "al" &lt;prog &lt;IMG SRC="img/header-al.jpg"&gt;&gt; &gt;  &gt;&gt;
+&lt;ifeq "$(area)" "service" &lt;prog &lt;ifeq "$(page)" "oa" &lt;prog &lt;IMG SRC="img/header-oa.jpg"&gt;&gt; &gt;  &gt;&gt;
+&lt;ifeq "$(area)" "service" &lt;prog &lt;ifeq "$(page)" "ae" &lt;prog &lt;IMG SRC="img/header-ae.jpg"&gt;&gt; &gt;  &gt;&gt;
+&lt;ifeq "$(area)" "service" &lt;prog &lt;ifeq "$(page)" "kw" &lt;prog &lt;IMG SRC="img/header-kw.jpg"&gt;&gt; &gt;  &gt;&gt;
+&lt;ifeq "$(area)" "gaestebuch" &lt;prog &lt;IMG SRC="img/header-gaestebuch.jpg"&gt;&gt; &gt;
+&lt;!-- END select logo --&gt;
+
+But this already failed to compile in pass (was it?) 2 under 2.0.0 so I
+removed the &lt;prog ...&gt; tags.
+
+I'd like to use this mechanism aside, i.e. along with a page navbar, which
+is sited somewhere else in the document...
+Maybe I have to combine it with the navbar ?? (I never knew how to do
+that, if it was possible at all).
+
+What am I doing wrong ? :)
+Is there a more elegant or efficient way to solve my problem ?
+
+Thanks for reading and sorry for it was a very long description... :-)
+ciao - Michael
+-- 
+Michael Kress / kress@hal.saar.de / coroner@irc
+<A  HREF="http://pandemonium.abyss.saar.de/~kress">http://pandemonium.abyss.saar.de/~kress</A>
+To increase system performance press CTRL+D now.
+P E N G U I N S   A R E   C O O L.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01572" HREF="msg01572.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01570.shtml">Re: VPATH (was: [ANNOUNCE] WML 2.0)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01572.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01569.shtml">RE: Todo list</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01572.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01571"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01571"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

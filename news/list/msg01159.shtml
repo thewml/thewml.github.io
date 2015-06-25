@@ -1,0 +1,148 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slicing and not&#45;slicing but using the same template(s). -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 25 Nov 1999 19:15:41 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991125103529.22375A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199911241710.SAA04442@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01159">Date Index</a>][<a href="thrd24.shtml#01159">Thread Index</a>]<br>
+[<A HREF="msg01157.shtml">Date Prev</A>][<A HREF="msg01160.shtml">Date Next</A>][<A HREF="msg01157.shtml">Thread Prev</A>][<A HREF="msg01161.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slicing and not-slicing but using the same template(s).</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Nov 1999 10:52:40 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 24 Nov 1999, Jan Holler wrote:
+
+&gt; hi
+
+Hi Jan,
+
+&gt; i have some websites which run under different languages
+&gt; and some which have just one single language.
+&gt; i use one(!) standard-templage as a basic layout for all(!) my
+&gt; websites. on top of that i build the "local" templates 
+&gt; for the certain sites. (two steps of abstraction).
+[...]
+&gt; BUT: i do like to use the same basic page template.
+&gt; i do know that that runs me in some problems,
+
+but if _we_ do not know your problems, what can we do to help you?
+
+&gt; but before i update all my hundereds of sources to be
+&gt; pseudo-"multilingual" like:
+&gt;  #!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html
+&gt; and fix up my basic-template to generate multilingual pages
+&gt; per se, i look for some patchy way.
+&gt;
+&gt; i thought about it for some time and probably don't see the
+&gt; easy way, so if anybody knows the answer, i'd appreciate if
+&gt; that persons shares it with me.
+
+Again, what's your problem?
+
+&gt; basically i thought about using variable or divertions but
+&gt; none of them do work:
+&gt; A. i learned that i can NOT set variables &lt;set-var...&gt; this
+&gt; way (assumed all prior definitions are set):
+&gt;   &lt;de: &lt;set-var foo="deutsch"&gt;&gt;
+&gt;   &lt;fr: &lt;set-var foo="francais"&gt;&gt;
+&gt; because the slicing is done in pass 9 and the variable are
+&gt; set in pass 2. it ends up with foo having the last value.
+
+Right.
+
+&gt; B. the same sad story with divertions. that does NOT work:
+&gt;   &lt;de: &lt;foo="deutsch&gt;&gt;
+&gt;   &lt;fr: &lt;foo="francais"&gt;&gt;
+&gt; because slicing in pass 9 and diverting in pass 5.
+
+Hmmm, it does not work because this is not a diversion. And if it was,
+it would not work anyway, your argument is true in this case.
+
+&gt; so how the heck can i put a value in variable
+&gt; depending on the language which is generated?
+
+&lt;set-var foo="&lt;de: deutsch&gt;&lt;fr: francais&gt;"&gt;
+
+Some hints :
+ 1) read the wml::std::lang manpage
+ 2) tell us which version of WML you are using (some features are new)
+ 3) be consistent: if you want suffix filenames like _d, _e, _f, then
+    define languages with
+     &lt;lang:new id=d short&gt;&lt;lang:new id=e short&gt;&lt;lang:new id=f short&gt;
+
+ 
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01161" HREF="msg01161.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01169" HREF="msg01169.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01157" HREF="msg01157.shtml">Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01157.shtml">Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01160.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01157.shtml">Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01161.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01159"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01159"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

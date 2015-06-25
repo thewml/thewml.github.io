@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: htmlfix problem -->
+<!--X-From-R13: grgfhlnNfrpbz&#45;fvf.pb.wc (Frgfhln Thehxnjn) -->
+<!--X-Date: Tue, 20 Jan 1998 15:08:00 +0100 (MET) -->
+<!--X-Message-Id: 98Jan20.210204jst.27817@spiral.secom&#45;sis.co.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00050">Date Index</a>][<a href="thrd2.shtml#00050">Thread Index</a>]<br>
+[<A HREF="msg00049.shtml">Date Prev</A>][<A HREF="msg00051.shtml">Date Next</A>][<A HREF="msg00049.shtml">Thread Prev</A>][<A HREF="msg00051.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>htmlfix problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Tetsuya Furukawa)</LI>
+<LI><em>Date</em>: Tue, 20 Jan 1998 21:02:25 +0900</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Package: wml-1.5.1
+
+Problem:
+    % echo '&lt;I&gt;foo=bar&lt;/I&gt;' | wml
+    &lt;I&gt;foo="bar&lt;/I"&gt;
+
+To-Fix:
+--- wml_p7_htmlfix/htmlfix.src.orig	Tue Jan 20 20:26:07 1998
++++ wml_p7_htmlfix/htmlfix.src	Tue Jan 20 20:43:10 1998
+@@ -197,7 +197,7 @@
+ #
+ $bufferN = '';
+ while (($prolog, $tag, $epilog) = 
+-       ($buffer =~ m|^(.*?)(&lt;[a-zA-Z_][a-zA-Z0-9-_]*.+?&gt;)(.*)$|s)) {
++       ($buffer =~ m|^(.*?)(&lt;[a-zA-Z_][a-zA-Z0-9-_]*.*?&gt;)(.*)$|s)) {
+     $tag =~ s|([A-Za-z_-]+=)([^\s\f\"\'&gt;]+)([\s\n&gt;])|$1"$2"$3|isg;
+     $tag =~ s|([A-Za-z_-]+=")([0-9A-Fa-f]{6}"[\s\n&gt;])|$1#$2|sg;
+     $bufferN .= $prolog.$tag;
+
+--
+Tetsuya FURUKAWA
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00051" HREF="msg00051.shtml">Re: htmlfix problem</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00049.shtml">ANNOUNCE: WML 1.5.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00051.shtml">Re: htmlfix problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00049.shtml">ANNOUNCE: WML 1.5.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00051.shtml">Re: htmlfix problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00050"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00050"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

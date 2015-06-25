@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Web page margins -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 9 Jul 2001 18:12:33 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.010709180313.jh@inetcom.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010709172336.B1525@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02281">Date Index</a>][<a href="thrd46.shtml#02281">Thread Index</a>]<br>
+[<A HREF="msg02280.shtml">Date Prev</A>][<A HREF="msg02282.shtml">Date Next</A>][<A HREF="msg02280.shtml">Thread Prev</A>][<A HREF="msg02291.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Web page margins</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 09 Jul 2001 18:03:13 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+On 09-Jul-01 Denis Barbier wrote:
+&gt; On Mon, Jul 09, 2001 at 03:41:50PM +0200, Jan Holler wrote:
+&gt;&gt;      &lt;if &lt;get-var marginheight&gt; " marginheight=\"&lt;get-var marginheight&gt;\" \
+&gt;&gt;       topmargin=\"&lt;get-var marginheight&gt;\ "" " topmargin=\"8\""&gt;\
+
+&gt;&gt; I have put an 8 pixel default margin for Explorer so that it displays
+&gt;&gt; the same margins as Netscape if not set by the user.
+
+&gt; no attributes should be added by default since this breaks HTML
+&gt; standards compliance.
+
+Yes, you're right:
+
+      &lt;if &lt;get-var marginwidth&gt; " marginwidth=\"&lt;get-var marginwidth&gt;\" \
+       leftmargin=\"&lt;get-var marginwidth&gt;\"" ""&gt;\
+      &lt;if &lt;get-var marginheight&gt; " marginheight=\"&lt;get-var marginheight&gt;\" \
+      topmargin=\"&lt;get-var marginheight&gt;\ "" ""&gt;\
+
+Cheers!
+ -jan
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02291" HREF="msg02291.shtml">Re: Web page margins</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02280" HREF="msg02280.shtml">Re: Web page margins</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02280.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02282.shtml">article in German Linux Magazin about WMl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02280.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02291.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02281"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02281"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

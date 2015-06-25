@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.99.1 (16&#45;Mar&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 18 Mar 2000 23:03:16 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000318211129.587C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000317232048.A25593@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01444">Date Index</a>][<a href="thrd30.shtml#01444">Thread Index</a>]<br>
+[<A HREF="msg01442.shtml">Date Prev</A>][<A HREF="msg01445.shtml">Date Next</A>][<A HREF="msg01438.shtml">Thread Prev</A>][<A HREF="msg01452.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 18 Mar 2000 22:35:51 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 17 Mar 2000, Anthony Fok wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt;     wml_p1_ipp would fail if the input file (or its included files) contains
+&gt; 
+&gt; 	?$(name)
+[...]
+&gt;     Also, the "$" is escaped if preceded by a "\" regardless of the number
+&gt;     of "\"s.  For example, if test.wml contains the following lines:
+&gt; 
+&gt; 	$(name:#string)
+&gt; 	0 $(name)
+&gt; 	1 \$(name)
+&gt; 	2 \\$(name)
+&gt; 	3 \\\$(name)
+&gt; 	4 \\\\$(name)
+&gt; 
+&gt;     the resulting test.html would be:
+&gt; 
+&gt; 	0 string
+&gt; 	1 $(name)
+&gt; 	2 \$(name)
+&gt; 	3 \\$(name)
+&gt; 	4 \\\$(name)
+&gt; 
+&gt;     whereas most people would probably expect the output to be:
+&gt; 
+&gt; 	0 string
+&gt; 	1 $(name)
+&gt; 	2 \string
+&gt; 	3 \\$(name)
+&gt; 	4 \\string
+&gt; 
+&gt;     Or, perhaps I am getting too picky?  :-)
+
+Have a look at wml::mod::MakeMaker and you will understand why i need
+this feature ;-)
+Of course, the ?$(var) problem is a bug, thanks for reporting it.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01438" HREF="msg01438.shtml">BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01442.shtml">ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01445.shtml">Re: Upgrade problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01438.shtml">BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01452.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01444"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01444"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

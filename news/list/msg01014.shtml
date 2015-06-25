@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Ouput directory other than source directory -->
+<!--X-From-R13: "Rnexb Yevmvp" <qxevmvpNofo&#45;fbsgjner.pbz> -->
+<!--X-Date: Fri, 1 Oct 1999 12:42:07 +0200 (MET DST) -->
+<!--X-Message-Id: NDBBJOMIEJPJILMHKHDJMEELCAAA.dkrizic@bsb&#45;software.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990930021853.A4030@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01014">Date Index</a>][<a href="thrd21.shtml#01014">Thread Index</a>]<br>
+[<A HREF="msg01013.shtml">Date Prev</A>][<A HREF="msg01015.shtml">Date Next</A>][<A HREF="msg01042.shtml">Thread Prev</A>][<A HREF="msg01015.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darko Krizic&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Sep 1999 14:20:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; On Wed, Sep 29, 1999 at 02:39:12PM +0200,
+&gt; barbier@imacs.polytechnique.fr wrote:
+
+&gt; &gt; &gt; &gt;I personnaly have my wml files in ~/Giram.wml and they're output in
+&gt; &gt; &gt; &gt;~/Giram.html using the -o switch.
+&gt; &gt; &gt; &gt;  All the gifs and jpegs are in ~/Giram.html/images and I've
+&gt; made a symbolic
+&gt; &gt; &gt; &gt;links ~/Giram.wml/images that points to ~/Giram.html/images.
+&gt; That way wml
+&gt; &gt; &gt; &gt;find the pictures when it looks for them and the paths are
+&gt; always correct.
+
+&gt; The Debian web site currently uses "make install" to copy all the *.html
+&gt; files etc. to a different directory.  Two reasons that I can think of are:
+
+I "wmk" the pages on one machine and copy the files using "sitecopy -u bsb"
+with the WebDAV protocol to a WebDAV-enabled Apache (Apache + mod_dav). In
+./.sitecopyrc I can specify rules what files to exclude like *.wml,
+Makefile, .wmlrc, .wmkrc.
+
+I think this is the most elegant solution.
+
+...darko
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01015" HREF="msg01015.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01009" HREF="msg01009.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01013.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01015.shtml">RE: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01042.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01015.shtml">RE: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01014"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01014"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

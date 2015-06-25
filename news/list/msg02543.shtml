@@ -1,0 +1,151 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: image sizes, extended navbar:button -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Wed, 6 Mar 2002 12:07:23 +0100 (MET) -->
+<!--X-Message-Id: 3C85F7FB.8010801@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C7BA314.9090703@netngine.hu -->
+<!--X-Reference: 20020306020132.A26392@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02543">Date Index</a>][<a href="thrd51.shtml#02543">Thread Index</a>]<br>
+[<A HREF="msg02542.shtml">Date Prev</A>][<A HREF="msg02544.shtml">Date Next</A>][<A HREF="msg02540.shtml">Thread Prev</A>][<A HREF="msg02546.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: image sizes, extended navbar:button</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 06 Mar 2002 12:05:31 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!
+
+Thanks for the replies! Yes, they are something like what I
+expected after reading all the docs. Will try the image sizes
+thing today, just wanted to be sure that it cannot be relative
+to destination files.
+
+Denis Barbier wrote:
+
+&gt;&gt;&lt;navbar:filter&gt;
+&gt;&gt;   $mcode = s/Onmouseover="/Onmouseover="myextacode; /g
+&gt;&gt;&lt;/navbar:filter&gt;
+&gt;&gt; 
+&gt;&gt;Or how? Will be even more tricky, coz the incons will form
+&gt;&gt;another navbar, which will change the image states in the menu
+&gt;&gt;navbar.
+&gt;&gt;
+&gt;
+&gt;Hmmm, sounds quite hard, maybe you should write your own navbar macros.
+&gt;
+Hope there will be no need. The navbar macros are already quite
+complex. I still wait some response to "nested navbars" mail, I hope
+the answer will not state that I really have to make own navbars. (As
+I surrely won't, because I use WML to use its features not to recode
+them :-)
+
+&gt;
+&gt;But it is really what you want, because your first try is similar to
+&gt;  &lt;navbar:render name=language select="&lt;en&gt;en&lt;/en&gt;&lt;hu&gt;hu&lt;/hu&gt;" nohints&gt;
+&gt;and there is no such id in your navbar.
+&gt;
+Hehe, first I thought this could work. But surelly, no way like this. 
+(because
+the order of passes)
+
+&gt;
+&gt;But you may define something like
+&gt;    &lt;define-tag navbar:render:lang&gt;
+&gt;    &lt;preserve name array-langs l /&gt;
+&gt;&lt;set-var %attributes /&gt;
+&gt;    &lt;set-var array-langs=&lt;lang:list /&gt; /&gt;
+&gt;    &lt;foreach l array-langs&gt;
+&gt;      &lt;subst-in-string "&lt;dUmMy:lang:&lt;get-var l /&gt;&gt;
+&gt;          &lt;navbar:render name=&lt;get-var name /&gt; select=&lt;get-var l /&gt; nohints /&gt;
+&gt;          &lt;/dUmMy:lang:&lt;get-var l /&gt;&gt;" "dUmMy:" "" /&gt;
+&gt;    &lt;/foreach&gt;
+&gt;    &lt;restore name array-langs l /&gt;
+&gt;    &lt;/define-tag&gt;
+&gt;and call it with
+&gt;    &lt;navbar:render:lang name=language nohints&gt;
+&gt;
+&gt;It's tricky, I may explain it in detail if you are interested.
+&gt;
+Fine tricks in this. I tried it, works, I read the code more times, I
+just don't understand one little thing: Why do you use this &lt;DUMMY:
+thing, can't you simple use &lt;&lt;get-var l&gt;&gt;. I did not find &lt;lang:en&gt;
+in the docs, just &lt;lang:area&gt; and &lt;en&gt; but I think this is equal to
+the second one (as it works). But why need the dummy and search-replace
+thing, not simple generating the &lt;en&gt;&lt;navbar..&lt;/en&gt; in the foreach
+loop?
+
+Thanks, this works great now!
+
+Ferenc Veres
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02546" HREF="msg02546.shtml">Re: image sizes, extended navbar:button</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02533" HREF="msg02533.shtml">image sizes, extended navbar:button</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02540" HREF="msg02540.shtml">Re: image sizes, extended navbar:button</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02542.shtml">Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02544.shtml">NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02540.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02546.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02543"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02543"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

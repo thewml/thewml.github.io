@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problem after switching to 2.0.1 -->
+<!--X-From-R13: Yevfuan H [bghxhev <xevfuanNhavincc.pbz> -->
+<!--X-Date: Thu, 22 Jun 2000 07:27:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0006212207370.25621&#45;100000@univapp.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01726">Date Index</a>][<a href="thrd36.shtml#01726">Thread Index</a>]<br>
+[<A HREF="msg01725.shtml">Date Prev</A>][<A HREF="msg01727.shtml">Date Next</A>][<A HREF="msg01725.shtml">Thread Prev</A>][<A HREF="msg01728.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problem after switching to 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Krishna V Motukuri &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 21 Jun 2000 22:28:33 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+   I just switched from 1.7.* to 2.0.1 and now my &lt;define-container&gt; tag
+is not being recognised by the parser. All "define-container" tags appear
+as it is in the html document. I'm not sure what went wrong. I got the new
+tarball from the website itself. Can someone please help with this
+problem?
+
+eg:
+-------------------------
+#use wml::std::tags
+
+&lt;define-container content-submission-form&gt;
+&lt;/define-container&gt;
+
+&lt;title&gt;Test Page&lt;/title&gt;
+&lt;body bgcolor=white&gt;
+Hello World
+&lt;/body&gt;
+-------------------------
+
+produces
+--------------------------
+&lt;define-container content-submission-form&gt;
+&lt;/define-container&gt;
+
+&lt;title&gt;Test Page&lt;/title&gt;
+&lt;body bgcolor=white&gt;
+Hello World
+&lt;/body&gt;
+-------------------------
+
+
+I'm running:
+Redhat 6.2
+gcc version egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
+perl 5.6.0
+
+Thanks,
+Krishna
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01728" HREF="msg01728.shtml">Re: Problem after switching to 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01725.shtml">Re: [BUG REPORT] WML 2.0.0, Linux 2.2.14</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01725.shtml">Re: [BUG REPORT] WML 2.0.0, Linux 2.2.14</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01728.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01726"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01726"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.4, Debian Woody -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 21 Sep 2000 18:18:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20000921182022.A16173@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200009210811.KAA18396@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01979">Date Index</a>][<a href="thrd40.shtml#01979">Thread Index</a>]<br>
+[<A HREF="msg01978.shtml">Date Prev</A>][<A HREF="msg01980.shtml">Date Next</A>][<A HREF="msg01978.shtml">Thread Prev</A>][<A HREF="msg01980.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.4, Debian Woody</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 21 Sep 2000 18:20:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Sep 21, 2000 at 10:11:54AM +0200, wilhelmi@ira.uka.de wrote:
+
+&gt; Problem Description:
+&gt; | Try to process the following file with wml_p2_mp4h:
+&gt; | 
+&gt; | 
+&gt; | &lt;if / a b&gt;
+&gt; | 
+&gt; | 
+&gt; | The Problem seems to be the / in the end of the tested 
+&gt; | string. So &lt;if a / b&gt; works fine. Even &lt;if /a b c&gt;, but
+&gt; | not &lt;if a/ b c&gt;.
+
+Let me know if the patch below fixes this bug.
+
+--- wml_backend/p2_mp4h/src/builtin.c	2000/08/29 20:00:00	1.52
++++ wml_backend/p2_mp4h/src/builtin.c	2000/09/21 16:15:42
+@@ -1478,7 +1478,7 @@
+ 
+   obstack_grow (obs, "&lt;when ", 6);
+   obstack_grow (obs, ARG (1), strlen (ARG (1)));
+-  obstack_1grow (obs, '&gt;');
++  obstack_grow (obs, " &gt;", 2);
+   obstack_grow (obs, ARG (2), strlen (ARG (2)));
+   obstack_grow (obs, "&lt;/when&gt;", 7);
+   if (argc&gt;3)
+@@ -1585,11 +1585,11 @@
+ 
+       obstack_grow (obs, "&lt;when ", 6);
+       dump_args (obs, argc, argv, " ");
+-      obstack_1grow (obs, '&gt;');
++      obstack_grow (obs, " &gt;", 2);
+       obstack_grow (obs, ARGBODY, strlen (ARGBODY));
+       obstack_grow (obs, "&lt;while ", 7);
+       dump_args (obs, argc, argv, " ");
+-      obstack_1grow (obs, '&gt;');
++      obstack_grow (obs, " &gt;", 2);
+       obstack_grow (obs, ARGBODY, strlen (ARGBODY));
+       obstack_grow (obs, "&lt;/while&gt;", 8);
+       obstack_grow (obs, "&lt;/when&gt;", 7);
+@@ -2418,7 +2418,7 @@
+   obstack_grow (obs, ARG (1), strlen (ARG (1)));
+   if (verbatim &amp;&amp; strcmp (verbatim, "true") == 0)
+     obstack_grow (obs, " verbatim=true", 14);
+-  obstack_1grow (obs, '&gt;');
++  obstack_grow (obs, " &gt;", 2);
+   if (alt)
+     obstack_grow (obs, alt, strlen (alt));
+   obstack_grow (obs, "&lt;/__include&gt;", 12);
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01977" HREF="msg01977.shtml">[BUG REPORT] WML 2.0.4, Debian Woody</A></strong>, <em>From:</em> wilhelmi</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01978.shtml">Re: [BUG REPORT] WML 2.0.4, Debian Woody</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01980.shtml">My navbars broken with wml-2.0.3 and wml-2.0.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01978.shtml">Re: [BUG REPORT] WML 2.0.4, Debian Woody</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01980.shtml">My navbars broken with wml-2.0.3 and wml-2.0.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01979"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01979"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE : WML 1.6.8 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Jan 1999 16:14:57 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990114160308.31108A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00311">Date Index</a>][<a href="thrd7.shtml#00311">Thread Index</a>]<br>
+[<A HREF="msg00310.shtml">Date Prev</A>][<A HREF="msg00312.shtml">Date Next</A>][<A HREF="msg00345.shtml">Thread Prev</A>][<A HREF="msg00322.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE : WML 1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 16:06:11 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all WML users,
+
+i am pleased to announce the release of WML 1.6.8 (14-Jan-1999).
+As Ralf writes today, i will maintain this wonderful tool in the future.
+Even if my knowledge and skill in hacking are not those of Ralf, i will
+do my very best. What else should i say?
+Well, i am a PhD student (numerical analysis), will be graduate in a
+couple of weeks, and my company develop scientific applications. Not
+really related to WML? Hmm... yes you are right.
+
+In this release, many bugs have been fixed, it runs faster and i need
+your help to improve it more and more.
+
+Thanks to Ralf to his fantastic job, to everyone who has contributed
+ideas, patches and bug reports, and now, happy WMLing.
+
+WML 1.6.8 is available at <A  HREF="http://www.engelschall.com/sw/wml">http://www.engelschall.com/sw/wml</A>
+
+  Changes between 1.6.7 and 1.6.8:
+    *) Enhanced the tarball process  (13-Jan-1999)
+    *) Fix &lt;import .. format="verbatim"&gt; command (13-Jan-1999)
+    *) Make tarball rolling more flexible (13-Jan-1999)
+    *) Fixed wml_frontend/wml.src (13-Jan-1999)
+    *) Fixed wml_frontend/wml.src (13-Jan-1999)
+    *) Fixed wml_backend/p9_slice/slice.src (13-Jan-1999)
+    *) Added wml_contrib/wml.spec (12-Jan-1999)
+    *) Fixed wml::sys::boot (12-Jan-1999)
+    *) Removed files in wml_backend/p2_mhc/libmhtml (12-Jan-1999)
+    *) Enhanced Pass 1 (IPP) (12-Jan-1999)
+    *) Enhanced wml::des::navbar (12-Jan-1999)
+    *) Fixed wml::des::navbar and wml::des::gfont (12-Jan-1999)
+    *) Enhanced wml::std::box (12-Jan-1999)
+    *) New subdir: wml_contrib/ (07-Jan-1999)
+    *) Fixed WMU (31-Dec-1998)
+    *) Upgrade of File::PathConvert (18-Dec-1998)
+    *) Upgrade of Image::Size (18-Dec-1998)
+    *) Upgrade of Bit::Vector (18-Dec-1998)
+    *) Fixed double-backslash (`\\') handling (01-Nov-1998)
+    *) Fixed `make test' (10-Aug-1998)
+    *) Fixed wml::std::grid (07-Aug-1998)
+    *) Fixed wml::std::logo (07-Aug-1998)
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00322" HREF="msg00322.shtml">Re: ANNOUNCE : WML 1.6.8</A></strong>, <em>From:</em> Steve Sizemore</li>
+<li><strong><A NAME="00327" HREF="msg00327.shtml">RPM Intel binary for Red Hat Linux 5.2</A></strong>, <em>From:</em> Jean-Philippe Pick</li>
+<li><strong><A NAME="00328" HREF="msg00328.shtml">.deb available (was Re: ANNOUNCE : WML 1.6.8)</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="00330" HREF="msg00330.shtml">Re: ANNOUNCE : WML 1.6.8</A></strong>, <em>From:</em> Hans de Graaff</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00312.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00345.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00322.shtml">Re: ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00311"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00311"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Home of WML and other stuff -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 11 Mar 1999 13:54:03 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990311101456.31011B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.10.9903101556370.16198&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00451">Date Index</a>][<a href="thrd10.shtml#00451">Thread Index</a>]<br>
+[<A HREF="msg00450.shtml">Date Prev</A>][<A HREF="msg00452.shtml">Date Next</A>][<A HREF="msg00449.shtml">Thread Prev</A>][<A HREF="msg00453.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Home of WML and other stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 11 Mar 1999 10:40:04 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 10 Mar 1999, Tobias Oetiker wrote:
+
+[snip]
+&gt; what I would like to do is to setup a wml system where the basic 'look and
+&gt; feel' elements are defined in a special file these would be things like
+&gt; colors and names of background gif files. Now the resolution of these names
+&gt; should happen in the first pass so that I can use the real values in every
+&gt; subsequent pass ... 
+&gt; 
+&gt; defining these things in .wmlrc looks a bit strange to me ... I thought
+&gt; having a file with 
+&gt; 
+&gt; #define PageBG=#ffffff
+&gt; #define PageFG=#000000
+&gt; .
+&gt; .
+&gt; .
+&gt; 
+&gt; would be nicer ... 
+
+You're totally right.
+But... all the 9 passes are independant, and require different statements
+(or command-line options) to define variables. When you invoke wml with a
+-D option (idem via .wmlrc), wml translates -Dfoo=bar to 
+* --set foo bar              for pass 2
+* -d foo=var                 for pass 3
+* -Dm4_foo=var               for pass 4, and so on.
+
+If the variable substitution is performed by wml_p1_ipp, an auxiliary
+file has to be written, which contains the definitions.
+After the first pass, wml will read this file and translate variable
+substitutions for the others.
+
+The current solution is better because wml gathers all informations
+before invoking the 9 passes. If you want more flexibility, i can
+- let #define be a synonym of -D in the .wmlrc files
+- add a ``-c file'' wml option to load config files. We have to
+  decide whether this file is read before, after or instead of .wmlrc.
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+** Soutien à Altern ** <A  HREF="http://www.altern.org/defense/">http://www.altern.org/defense/</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00453" HREF="msg00453.shtml">WML wml::std::lang questions</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00449" HREF="msg00449.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00450.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00452.shtml">e-perl error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00449.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00453.shtml">WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00451"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00451"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

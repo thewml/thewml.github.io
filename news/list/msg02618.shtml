@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML under Windows... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 20 Jun 2002 08:56:10 +0200 (MET DST) -->
+<!--X-Message-Id: 20020620070452.GA3960@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020619230533.GA1506@imacs.polytechnique.fr -->
+<!--X-Reference: 002301c217f6$1a9cea00$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02618">Date Index</a>][<a href="thrd53.shtml#02618">Thread Index</a>]<br>
+[<A HREF="msg02617.shtml">Date Prev</A>][<A HREF="msg02619.shtml">Date Next</A>][<A HREF="msg02617.shtml">Thread Prev</A>][<A HREF="msg02619.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 09:04:52 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 20, 2002 at 11:01:50AM +1000, Darryl Smith wrote:
+&gt; Dennis
+&gt; 
+&gt; Thanks. This helped me compile WML with ePERL under Cygwin under
+&gt; Windows. There was a problem with STRIP not being able to find the file
+&gt; (Compiled programs have an EXE extension which is hidden most of the
+&gt; time. Strip does not know this and will not find the file. Commenting
+&gt; out worked).
+&gt; 
+&gt; Now the issue is the WML_INCLUDE. Files such as wml::des::imgbg.pod
+&gt; cannot be created since the ":" cannot be in the filename even under
+&gt; CYGWIN. Any ideas
+
+Manpages for Perl modules also contain colons, which workaround is used
+then?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02619" HREF="msg02619.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02616" HREF="msg02616.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02617" HREF="msg02617.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02617.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02619.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02617.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02619.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02618"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02618"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

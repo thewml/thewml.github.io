@@ -1,0 +1,158 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Fri, 5 Nov 1999 09:03:43 +0100 (MET) -->
+<!--X-Message-Id: 19991104164220.A10745@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199911012205.RAA00474@Aramis.kennesaw.edu -->
+<!--X-Reference: Pine.LNX.3.96.991102100728.1395B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01120">Date Index</a>][<a href="thrd23.shtml#01120">Thread Index</a>]<br>
+[<A HREF="msg01119.shtml">Date Prev</A>][<A HREF="msg01121.shtml">Date Next</A>][<A HREF="msg01112.shtml">Thread Prev</A>][<A HREF="msg01121.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 4 Nov 1999 16:42:20 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis,
+
+On Tue, Nov 02, 1999 at 10:13:34AM +0100, Denis Barbier wrote:
+&gt; On Mon, 1 Nov 1999, Thomas Akin wrote:
+&gt; 
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; 
+&gt; &gt; The std::toc include file uses pass 6 area substitutions internally 
+&gt; &gt; which break when you use a &lt;protect pass=6&gt; around the &lt;toc&gt; tag...
+&gt; [...]
+&gt; 
+&gt; Hi Thomas,
+&gt; 
+&gt; i will have a look on it, but here is a quick answer. The documentation
+&gt; reports that wml::std::toc requires passes 1, 2, 5 and 6. Any
+&gt; protection against one of these passes will break its effect.
+
+
+        But then we get have the the problem of using area
+        substitutions in templates that contain a TOC.
+
+	If I have a template "my.tmpl" that has
+
+	  {:
+	  [[s|(home.page)|&lt;a href="my.home.net"&gt;$1&lt;/a&gt;|igs]]
+	  &lt;&lt;BODY&gt;&gt;
+	  :}
+
+	and I have a wml file test.wml
+
+	  #include wml::std::toc style=ol
+	  #use "my.tmpl"
+
+	  &lt;divert BODY&gt;
+	  &lt;toc&gt;
+
+	  &lt;toc_h1&gt;Do you have a home page?&lt;/toc_h1&gt;
+	  &lt;br&gt;
+	  Yes! Follow this link to see my home page.
+
+	  &lt;/divert BODY&gt;
+
+	I get the output 
+
+          &lt;ol&gt;&lt;li&gt;&lt;a href="#ToC1"&gt;&lt;strong&gt;Do you have a 
+	  &lt;a href="my.home.net"&gt;home page&lt;/a&gt;?&lt;/strong&gt;&lt;/a&gt;
+          &lt;/ol&gt;
+	
+	  &lt;a name="ToC1"&gt;Do you have a &lt;a href="my.home.net"&gt;
+	  home page&lt;/a&gt;?&lt;/a&gt;
+	  &lt;br&gt;
+	  Yes! Follow this link to see my &lt;a href="my.home.net"&gt;
+	  home page&lt;/a&gt;.
+
+        And I have a nested href inside my TOC... Not
+        pretty...
+	
+	The ability to put &lt;protect pass=6&gt; &lt;/protect&gt;
+	around the &lt;toc&gt; tag would fix this problem....
+
+	
+Thanks,
+
+
+Thomas
+
+-- 
+
+---------------------------------------------------------------
+Thomas Akin                       Kennesaw State University
+Networking Instructor             Continuing Education
+CNX, CSA, ICS                     1000 Chastain Road
+takin@kennesaw.edu                Kennesaw, GA 30144-5591
+---------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01121" HREF="msg01121.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01109" HREF="msg01109.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Thomas Akin</li>
+<li><strong><A NAME="01112" HREF="msg01112.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01119.shtml">Re: My previous patch...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01121.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01112.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01121.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01120"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01120"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

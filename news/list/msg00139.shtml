@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: question regarding dependencies with wmk -->
+<!--X-From-R13: =?vfb&#45;8859&#45;1?C?Oyrxfv_@vrzry=S4?= <Oyrxfv@Nurk.sv> -->
+<!--X-Date: Thu, 25 Jun 1998 15:15:49 +0200 (CEST) -->
+<!--X-Message-Id: 81DF3CFD1F30D111BE440060080FAC5F3C2B22@fabmail.hex.fi -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00139">Date Index</a>][<a href="thrd4.shtml#00139">Thread Index</a>]<br>
+[<A HREF="msg00138.shtml">Date Prev</A>][<A HREF="msg00140.shtml">Date Next</A>][<A HREF="msg00141.shtml">Thread Prev</A>][<A HREF="msg00136.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: question regarding dependencies with wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Aleksi Niemelä &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 16:11:34 +0300</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; [...]
+&gt; &gt; OTOH there are sophisticated built tools out there (Cook, 
+&gt; &gt; Bras, etc.) which
+&gt; &gt; are better than Make and should be more easily adaptable to a fully
+&gt; &gt; dependency-aware .html &lt;- .wml generation. Has anybody 
+&gt; I have the same problem... What is Cook, Bras, etc?
+
+I don't know anything of these tools or whether these are good or not,
+but
+here is configuration management link page:
+<A  HREF="http://www.enteract.com/~bradapp/links/scm-links.html">http://www.enteract.com/~bradapp/links/scm-links.html</A>
+
+and these are excerpts from it:
+
+
+Bras:
+<A  HREF="http://wsd.iitb.fhg.de/~kir/brashome/">http://wsd.iitb.fhg.de/~kir/brashome/</A>
+
+Executing commands according to rules instead of in the order in which
+they appear is the great idea which gave us famous make. Bras is a
+similar rule-based tool that uses Tcl like sysntax and has other
+extensions that are more easily used and specified. 
+
+
+Cook:
+<A  HREF="http://www.canb.auug.org.au/~millerp/cook.html">http://www.canb.auug.org.au/~millerp/cook.html</A>
+
+Cook is a tool for constructing files. It is given a set of files to
+create, and recipes of how to create them. In any non-trivial program
+there will be prerequisites to performing the actions necessary to
+creating any file, such as include files. Cook provides a mechanism to
+define these. 
+
+
+	- Aleksi
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00138.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00140.shtml">Re: a few questions on using wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00141.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00136.shtml">ANNOUNCE: WML 1.6.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00139"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00139"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

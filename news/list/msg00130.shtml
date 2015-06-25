@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: configure bug in wml&#45;1.6.5 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 22 Jun 1998 11:53:20 +0200 (CEST) -->
+<!--X-Message-Id: 19980622115317.A12770@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980619200509.26491@yoda.house.net -->
+<!--X-Reference: 19980620100134.A24049@engelschall.com -->
+<!--X-Reference: 19980621184610.01950@yoda.house.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00130">Date Index</a>][<a href="thrd3.shtml#00130">Thread Index</a>]<br>
+[<A HREF="msg00129.shtml">Date Prev</A>][<A HREF="msg00131.shtml">Date Next</A>][<A HREF="msg00129.shtml">Thread Prev</A>][<A HREF="msg00131.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: configure bug in wml-1.6.5</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Jun 1998 11:53:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+&gt; s%@built_user@%csw@yoda.halcyon.com
+&gt; .halcyon.com%g
+^^^^^
+
+ARGL! This is the problem. The hostname is incorrectly determined at your
+machine and the newline caused the problem.  I've to fix the code that
+determines the newline. Can you please give me some hints where the problem
+actually is by sending me the output of "uname -n", "hostname" and "cat
+/etc/resolv.conf"? Because these two commands are used and I've
+to find out where the newline comes from. 
+
+Thanks for your help.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00126" HREF="msg00126.shtml">configure bug in wml-1.6.5</A></strong>, <em>From:</em> Clayton Wheeler</li>
+<li><strong><A NAME="00127" HREF="msg00127.shtml">Re: configure bug in wml-1.6.5</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00129" HREF="msg00129.shtml">Re: configure bug in wml-1.6.5</A></strong>, <em>From:</em> Clayton Wheeler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00129.shtml">Re: configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00131.shtml">RE: configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00129.shtml">Re: configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00131.shtml">RE: configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00130"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00130"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

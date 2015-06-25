@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: new flag? wml &#45;U -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 27 Aug 2001 14:38:13 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.010827143630.jh@inetcom.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010827094300.A4146@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02380">Date Index</a>][<a href="thrd48.shtml#02380">Thread Index</a>]<br>
+[<A HREF="msg02379.shtml">Date Prev</A>][<A HREF="msg02381.shtml">Date Next</A>][<A HREF="msg02375.shtml">Thread Prev</A>][<A HREF="msg02381.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: new flag? wml -U</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 14:36:30 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis
+
+On 27-Aug-01 Denis Barbier wrote:
+&gt; On Thu, Aug 16, 2001 at 04:18:44PM +0200, Jan Holler wrote:
+&gt;&gt; 
+&gt;&gt; I suggest to implement a flag -U to undefine previously with
+&gt;&gt; -D defined variables.
+
+&gt;&gt; &lt;if &lt;var-exists BAR&gt;
+&gt;&gt; &lt;set-var newbar=&lt;get-var bar&gt;&gt;           # or $(BAR) instead of &lt;get-var bar&gt;
+&gt;&gt; &lt;set-var newbar=$(WML_SRC_BASENAME)&gt;
+&gt;&gt; &gt;
+
+&gt; problem is that wml has then to distinguish between
+&gt;   -D foo=bar -U foo
+&gt; and
+&gt;   -U foo -D foo=bar
+&gt; which is not trivial.
+
+Regard the order: last flag wins over earlier flags from the 
+left to the right (.wmlc -&gt; top down). Would that still be 
+complicated to implement in the "command-line"-parsing?
+
+&gt; IMO it is always possible to unset a variable by making it empty,
+&gt; and replace your test by &lt;if &lt;get-var BAR&gt; ...
+
+Thanks. That would work around. But needs some
+extra effort (need to unset it in every file or make
+global changes in some include-file) and is IMHO not 
+that flexible as the described '-U'. (speaking of
+global and hierarchical settings).
+
+ciao
+ -jan
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02381" HREF="msg02381.shtml">Re: new flag? wml -U</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02375" HREF="msg02375.shtml">Re: new flag? wml -U</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02379.shtml">Re: Problem with including files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02381.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02375.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02381.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02380"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02380"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

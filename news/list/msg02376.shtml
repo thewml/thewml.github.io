@@ -1,0 +1,176 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problem with including files -->
+<!--X-From-R13: "=?vfb&#45;8859&#45;2?P?GUT3Lo[tHAcwrzS=?=" <cnjry.grpmnNcbpmgn.sz> -->
+<!--X-Date: Mon, 27 Aug 2001 10:32:16 +0200 (MET DST) -->
+<!--X-Message-Id: 003d01c12ed2$bd51a960$3a140b0a@ptecza -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02376">Date Index</a>][<a href="thrd48.shtml#02376">Thread Index</a>]<br>
+[<A HREF="msg02375.shtml">Date Prev</A>][<A HREF="msg02377.shtml">Date Next</A>][<A HREF="msg02374.shtml">Thread Prev</A>][<A HREF="msg02378.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problem with including files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Pawe&lstrok; T&eogon;cza&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Aug 2001 10:31:58 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!!!
+
+I'm new user of WML (version 1.7.4 from stable Debian 2.2 'Potato' package)
+and I have problem with including files in my WML template (look below).
+In this very simple template I use HTML tables to place page elements, but
+I don't understand why WML includes the .wml file in one place and doesn't
+include the same file in another place.
+
+This is my template:
+
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//PL"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv="content-type" content="text/html; charset=iso-8859-2"&gt;
+  &lt;title&gt;$(Title)&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;table border="1" width="760" align="left" cellpadding="0" cellspacing="0"&gt;
+&lt;!-- banner start --&gt;
+&lt;tr&gt;&lt;td colspan="3"&gt;
+  
+  &lt;!--
+  Here WML includes 'navbar.wml', but this is not place for my navbar.
+  --&gt;
+
+  #include 'navbar.wml' name="menu"
+
+&lt;/td&gt;&lt;/tr&gt;
+&lt;!-- banner end --&gt;
+
+&lt;!-- body start --&gt;
+&lt;tr&gt;
+  &lt;!-- left column start --&gt;
+  &lt;td width="120" valign="top"&gt;
+
+    &lt;!--
+    But here WML doesn't include 'navbar.wml'.
+    --&gt;
+
+    #include 'navbar.wml' name="menu"
+
+  &lt;/td&gt;
+  &lt;!-- left column end --&gt;
+
+  &lt;!-- central column start --&gt;
+  &lt;td width="640"&gt;
+
+    {#BODY#}
+
+    &lt;!--
+    But here WML doesn't include 'info.wml'.
+    --&gt;
+
+    #include 'info.wml'
+
+  &lt;/td&gt;
+  &lt;!-- central column end --&gt;
+
+  &lt;!-- right column start --&gt;
+  &lt;td width="120"&gt;
+
+  &lt;/td&gt;
+  &lt;!-- right column end --&gt;
+&lt;/tr&gt;
+&lt;!-- body end --&gt;
+
+&lt;!-- footer start --&gt;
+&lt;tr&gt;&lt;td colspan="3"&gt;
+
+  &lt;!--
+  Here WML includes 'info.wml', but I want put it into another place.
+  --&gt;
+
+  #include 'info.wml'
+
+&lt;/td&gt;&lt;/tr&gt;
+&lt;!-- footer end --&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+# per default we are in body
+{#BODY:
+
+What I do wrong?
+
+Thanks a lot in advance for any help
+My best regards
+
+Pawel Tecza
+
+
+
+---------------------------------------------------
+<A  HREF="http://POCZTA.interia.pl/">http://POCZTA.interia.pl/</A> - sa powody by korzystac!
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02378" HREF="msg02378.shtml">RE: Problem with including files</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02375.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02377.shtml">Re: WML Roadmap or TODO-List</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02374.shtml">Re: Bug in documentation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02378.shtml">RE: Problem with including files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02376"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02376"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

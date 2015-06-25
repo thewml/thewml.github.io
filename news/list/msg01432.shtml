@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: adding languages -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 17 Mar 2000 10:02:55 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000317090826.15304A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000317072752.73244.qmail@doramail.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01432">Date Index</a>][<a href="thrd9.shtml#01432">Thread Index</a>]<br>
+[<A HREF="msg01431.shtml">Date Prev</A>][<A HREF="msg01433.shtml">Date Next</A>][<A HREF="msg01430.shtml">Thread Prev</A>][<A HREF="msg01584.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: adding languages</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 10:02:49 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 17 Mar 2000, Siu Chung Lau wrote:
+
+&gt; I am doing something like this on all of my templates (.wml - about 50 of them):
+&gt; 
+&gt; #!wml -o (ALL-LANG_*)uLANG_US:/home/philip/wml/common/us/tos.htm \
+&gt;  -o (ALL-LANG_*)uLANG_JP:/home/philip/wml/common/jp/tos.htm \
+&gt;  -o (ALL-LANG_*)uLANG_DE:/home/philip/wml/common/de/tos.htm \
+&gt;  -o (ALL-LANG_*)uLANG_FR:/home/philip/wml/common/fr/tos.htm
+&gt; 
+&gt; #use wml::std::lang
+&gt; 
+&gt; #include '/home/philip/wml/common/translation/define_language.txt'
+[...]
+
+&gt; My problem is, everytime when I add a new language, I have to add a
+&gt; new line to the wml file, let's say, Chinese (cn):
+[...]
+&gt; But I have got more than 50 files to add this line. Is there anyway I
+&gt; can avoid that??
+
+Did you try to put
+ -o (ALL-LANG_*)uLANG_US:/home/philip/wml/common/us/%BASE.htm
+ -o (ALL-LANG_*)uLANG_JP:/home/philip/wml/common/jp/%BASE.htm
+ -o (ALL-LANG_*)uLANG_DE:/home/philip/wml/common/de/%BASE.htm
+ -o (ALL-LANG_*)uLANG_FR:/home/philip/wml/common/fr/%BASE.htm
+in .wmlrc?
+
+Which is your version of WML?
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01430" HREF="msg01430.shtml">No Subject</A></strong>, <em>From:</em> Siu Chung Lau</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01431.shtml">How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01433.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01430.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01584.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01432"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#01432"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

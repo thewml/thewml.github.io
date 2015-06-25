@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.1, Linux 2.0.33 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 2 Sep 1999 11:15:43 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990902105041.8141A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990902083124.16887A&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00919">Date Index</a>][<a href="thrd19.shtml#00919">Thread Index</a>]<br>
+[<A HREF="msg00918.shtml">Date Prev</A>][<A HREF="msg00920.shtml">Date Next</A>][<A HREF="msg00916.shtml">Thread Prev</A>][<A HREF="msg00920.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.1, Linux 2.0.33</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 2 Sep 1999 11:09:09 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 2 Sep 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Using gFONT 1.0.3 I cannot scale the EC-Fonts in a &lt;gfont&gt;-tag. 
+&gt; I have to use face="ECRoman-L" or face="ECRoman-H" to scale them. 
+&gt; With CM-Fonts and with PS-Fonts I have no problems.
+
+You have to patch .../lib/wml/include/des/gfont.wml
+
+--- gfont.wml   1999/06/05 23:22:09
++++ gfont.wml   1999/09/02 08:50:09
+@@ -63,7 +63,7 @@
+     $size = -2 if ($size &lt;= -2);
+     $size =  9 if ($size &gt;= 9);
+     $size += 2;
+-    if ($face =~ /^CM/) {
++    if ($face =~ /^(CM|EC)/) {
+         $size = $gfont_size_CM[$size+2];
+     }
+     else {
+
+&gt; BTW: Do the new gFONT render better than the old? 
+
+No.
+A better rendering needs antialias, and i know nothing about this
+technique.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00920" HREF="msg00920.shtml">Re: [BUG REPORT] WML 1.7.1, Linux 2.0.33</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00916" HREF="msg00916.shtml">[BUG REPORT] WML 1.7.1, Linux 2.0.33</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00918.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00920.shtml">Re: [BUG REPORT] WML 1.7.1, Linux 2.0.33</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00916.shtml">[BUG REPORT] WML 1.7.1, Linux 2.0.33</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00920.shtml">Re: [BUG REPORT] WML 1.7.1, Linux 2.0.33</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00919"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00919"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

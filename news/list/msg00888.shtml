@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ./configure &#45;&#45;prefix fails -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 5 Aug 1999 23:17:44 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990805224531.2577B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.10.9907300202080.25233&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00888">Date Index</a>][<a href="thrd18.shtml#00888">Thread Index</a>]<br>
+[<A HREF="msg00886.shtml">Date Prev</A>][<A HREF="msg00887.shtml">Date Next</A>][<A HREF="msg00884.shtml">Thread Prev</A>][<A HREF="msg00890.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ./configure --prefix fails</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 5 Aug 1999 23:16:59 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 30 Jul 1999, Tobias Oetiker wrote:
+
+&gt; Folks,
+&gt; 
+&gt; I just tried to compile wml (latest SNAP) on several systems here at SDSC and found that
+&gt; there are still problems with the --prefix for systems where siteperl is not
+&gt; installed in a standard location ... there seem to be some issues with
+&gt; MakeMaker in connection with regexp maching on the site-perl path ...
+&gt; 
+&gt; Anyhow, I suggest to add some apropriate perl -0777 -p -e 's|....|ddd|g' code
+&gt; to fix the output of Maefile.PL to make sure the modules actually get
+&gt; installed within the the wml install tree and not in the site-perl directory
+&gt; .. 
+
+Hi tobias,
+
+could you send me more infos on those systems, e.g. the Config.pm and the
+location of your perl system?
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00890" HREF="msg00890.shtml">Re: ./configure --prefix fails</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00884" HREF="msg00884.shtml">./configure --prefix fails</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00886.shtml">My submenus...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00887.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00884.shtml">./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00890.shtml">Re: ./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00888"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00888"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

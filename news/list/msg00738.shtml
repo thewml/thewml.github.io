@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: @beoreg Qerggby <apNbzrqvn.pu> -->
+<!--X-Date: Mon, 7 Jun 1999 16:28:08 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.95.990607162829.29061h&#45;100000@amitaba.omedia.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990607152629.983A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00738">Date Index</a>][<a href="thrd16.shtml#00738">Thread Index</a>]<br>
+[<A HREF="msg00737.shtml">Date Prev</A>][<A HREF="msg00739.shtml">Date Next</A>][<A HREF="msg00737.shtml">Thread Prev</A>][<A HREF="msg00741.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Norbert Crettol &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 7 Jun 1999 16:30:18 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Neither joe does not add a new line at the end of the last line. I had
+problems with configuration files (virtusertables, aliases or so...).
+
+Norbert
+
+-----------------------------------------------------------------
+Omedia sa              Av. de la Gare 38          CH1920 Martigny
+-----------------------------------------------------------------
+Norbert Crettol                                 Internet services
+nc@omedia.ch                                  connexions, conseil
+++41 27 722 04 50     <A  HREF="http://www.omedia.ch">http://www.omedia.ch</A>        creation de Web
+-----------------------------------------------------------------
+
+On Mon, 7 Jun 1999, Denis Barbier wrote:
+
+&gt; On 7 Jun 1999, Fritz Zaucker wrote:
+&gt; 
+&gt; &gt; Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; &gt; 
+&gt; &gt; &gt; All editors put a newline on the last line, so i beieve this bug has no
+&gt; &gt; &gt; consequence in practice.
+&gt; &gt; 
+&gt; &gt; No, as I said in my previous E-Mail, Emacs, for example, does NOT put
+&gt; &gt; a newline behind the last line. I ran in this problem many times with
+&gt; &gt; Makefiles and my own Makefiles have now the following last line:
+&gt; &gt; 
+&gt; &gt; # This is the last line
+&gt; 
+&gt; Thanx Fritz, I didn't know that (and i won't say anything about emacs ;-)
+&gt; 
+&gt; Denis
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00741" HREF="msg00741.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00737" HREF="msg00737.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00737.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00739.shtml">Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00737.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00741.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00738"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00738"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

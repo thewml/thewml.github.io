@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [patch] Re: WML wml::std::lang questions -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Sun, 14 Mar 1999 16:16:26 +0100 (MET) -->
+<!--X-Message-Id: Pine.GSO.4.10.9903141614230.4160&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990314131007.22017A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00479">Date Index</a>][<a href="thrd11.shtml#00479">Thread Index</a>]<br>
+[<A HREF="msg00478.shtml">Date Prev</A>][<A HREF="msg00481.shtml">Date Next</A>][<A HREF="msg00478.shtml">Thread Prev</A>][<A HREF="msg00483.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [patch] Re: WML wml::std::lang questions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 14 Mar 1999 16:16:15 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding Re: [patch] Re: WML wml::std::lang questions:
+
+*&gt; On Sun, 14 Mar 1999, Tobias Oetiker wrote:
+*&gt; 
+*&gt; &gt; why are you using an external command when there is 
+*&gt; &gt; a native chmod already in perl ? try perldoc -f chmod ?
+*&gt; 
+*&gt; As far as i know, the perl builtin chmod allows only numeric modes,
+*&gt; not symbolic ones like ``go-w''
+
+sure ... but I guess you would want to use absolute mods anyway ... what is
+the use of relative in this situation ? Except for the sake of backward
+compatibility with existing scripts ... however, implementing this in perl
+should not be very difficult either ... 
+
+guess I am being of ^'do everything possible in perl-ish ... sorry
+
+tobi
+*&gt; 
+*&gt;    Denis
+*&gt; 
+*&gt; ______________________________________________________________________
+*&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+*&gt; Official Support Mailing List                   sw-wml@engelschall.com
+*&gt; Automated List Manager                       majordomo@engelschall.com
+*&gt; 
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1194  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00478" HREF="msg00478.shtml">Re: [patch] Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00478.shtml">Re: [patch] Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00481.shtml">Minor bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00478.shtml">Re: [patch] Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00483.shtml">WML example sites ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00479"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00479"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

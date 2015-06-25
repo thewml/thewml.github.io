@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: understanding swpage.wml -->
+<!--X-From-R13: Xrss [pQneeryy <wjzNrzcgrpu.pbz> -->
+<!--X-Date: Tue, 22 Feb 2000 04:28:22 +0100 (MET) -->
+<!--X-Message-Id: 4.2.0.58.20000221190723.00a382b0@pplus.shell7.ba.best.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01365">Date Index</a>][<a href="thrd28.shtml#01365">Thread Index</a>]<br>
+[<A HREF="msg01364.shtml">Date Prev</A>][<A HREF="msg01366.shtml">Date Next</A>][<A HREF="msg01364.shtml">Thread Prev</A>][<A HREF="msg01366.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>understanding swpage.wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jeff McCarrell &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 21 Feb 2000 19:27:45 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi.  I am trying to understand how best to use wml, and I have been
+examining swpage.wml.  I have a couple of questions:
+
+What is the top level command that builds all of the pages?  I assume that
+it is some wmk command, perhaps from a Makefile of some sort?
+
+In this fragment:
+
+     74	      &lt;ifeq "$(areaparent)" ""
+     75	          &lt;if &lt;match "&lt;get-var WML_SRC_FILENAME&gt;" "index\\..*"&gt;
+     76	              &lt;set-var areaparent="../"&gt;
+     77	              &lt;set-var areaparent=""&gt;
+     78	          &gt;
+     79	          &lt;set-var areaparent="$(areaparent)"&gt;
+     80	      &gt;
+
+what is the motive for doing this?  I mean, I understand what the code is
+doing, but why do you want the parent directory when the source filename
+starts with index. ?
+
+This code:
+
+    130	..!PAGE_TITLE!&gt;&gt;
+    131	Unknown Page
+    132	&lt;&lt;..
+
+sets up a default for the PAGE_TITLE named diversion.  Why is this a good
+thing to do?  It seems to me that there are a number of other (simpler) 
+ways of
+defining default values for things.  Why is the method of using a default 
+diversion
+used here?
+
+As an observation, the thing about wml that is giving me the most difficulty
+is trying to understand how to put the whole thing together in a sensible way.
+Publishing swpage.wml has been very helpful for me, to see the whole thing
+working together.
+
+A tarball of the site that I could modify and run the passes of 
+individually to examine
+the intermediate output would help too.  Is that available somewhere?
+
+The other meta level question I have is how actively is wml being used?  I 
+know that
+is a subjective question, but if you have an opinion, I'd like to hear it.
+
+Thanks in advance for your help...
+
+-- jeff
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01366" HREF="msg01366.shtml">Re: understanding swpage.wml</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01367" HREF="msg01367.shtml">Re: understanding swpage.wml</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01368" HREF="msg01368.shtml">Re: [wml] understanding swpage.wml</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01364.shtml">understanding</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01366.shtml">Re: understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01364.shtml">understanding</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01366.shtml">Re: understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01365"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01365"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

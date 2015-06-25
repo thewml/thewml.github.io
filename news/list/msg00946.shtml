@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Tue, 7 Sep 1999 17:28:50 +0200 (MET DST) -->
+<!--X-Message-Id: 14293.12043.794295.883293@medusa.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990906142529.A15640@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990906145123.24824A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Reference: 19990907083528.A22649@skater.htu.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00946">Date Index</a>][<a href="thrd20.shtml#00946">Thread Index</a>]<br>
+[<A HREF="msg00945.shtml">Date Prev</A>][<A HREF="msg00947.shtml">Date Next</A>][<A HREF="msg00957.shtml">Thread Prev</A>][<A HREF="msg00930.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Sep 1999 08:28:11 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Gerfried Fuchs writes:
+ &gt; On 06 Sep 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+ &gt; &gt; &gt; -S /usr/local/lib/wml/include/  -I /INCLUDES  -s 'sys/bootmhc.wml' -s
+ &gt; &gt;                                      ^^^^^^^^^
+ &gt; &gt; Now, we have to find why INCLUDES has been replaced by /INCLUDES.
+ &gt; &gt; Any clue?
+ &gt; 
+ &gt;  None at all! As I said - the same tgz-package works at home *scratches*
+ &gt; 
+ &gt; &gt; Try ``cat -v .wmlrc'' to see whether there are control characters in
+ &gt; &gt; your file.
+ &gt; 
+ &gt;  None at all.... I include it here again, just read it in with no
+ &gt; further changes:
+ &gt; --------
+ &gt; -IINCLUDES
+ &gt; --------
+ &gt; 
+ &gt; &gt; Another hint: when redirecting output, it is a good idea to call wml
+ &gt; &gt; with the -q option to suppress printing of '-\|/-\|/-'
+ &gt; 
+ &gt;  O.k., thanks for that :)
+ &gt; 
+ &gt;  I am also using just a tgz'ed copy of the files I have at home and did
+ &gt; put them on the server.....
+ &gt; 
+ &gt;  I think this is a very special problem - well, I think I'll do an alias
+ &gt; for that for a first workaround and wait for the next version; maybe
+ &gt; it's just a collection of strange situations that produces this "error".
+ &gt; I don't really think that it's a bug in wml, I thought that maybe one of
+ &gt; you knows what might be going on here....  Thanks alot anyway, Denis,
+ &gt; for not giving in, just like me at the moment.... *sighs*
+ &gt; 
+
+I'd suggest you reboot the machine that is having problems - could be
+something wedged with the filesystem.  If it is a PC, run scandisk on
+it; if it is Unix, then things should be cleaned up by a reboot.
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00934" HREF="msg00934.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00935" HREF="msg00935.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00939" HREF="msg00939.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00945.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00947.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00957.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00930.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00946"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00946"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

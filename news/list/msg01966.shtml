@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: New mailing list sw&#45;wml&#45;dev -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 16 Sep 2000 20:44:42 +0200 (MET DST) -->
+<!--X-Message-Id: 20000916145013.A19274@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01966">Date Index</a>][<a href="thrd40.shtml#01966">Thread Index</a>]<br>
+[<A HREF="msg01965.shtml">Date Prev</A>][<A HREF="msg01967.shtml">Date Next</A>][<A HREF="msg01992.shtml">Thread Prev</A>][<A HREF="msg01969.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>New mailing list sw-wml-dev</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 16 Sep 2000 14:50:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+The sw-wml-dev mailing-list has been created.
+To subscribe, send a mail to majordomo@engelschall.com with in body
+   subscribe sw-wml-dev you@domain.dom
+Warning: *not* in subject
+
+  Why a new ML?
+  =-=-=-=-=-=-=
+
+I read pros and cons of creating a new ML.  Both have valid arguments.
+In the past i asked for help several times without much effect.  Of
+course some people did help, but there is still a lot to do and i do
+not have time to perform all tasks.
+So this new list could ease contributions to the WML development.
+
+  What is sw-wml-dev for?
+  =-=-=-=-=-=-=-=-=-=-=-=
+
+The first goal of this list is to discuss topics about WML development,
+e.g. the stable/unstable discussion, repartition of workload between
+contributors, who do what, how to improve WML compilation, etc.
+
+  What sw-wml-dev is not
+  =-=-=-=-=-=-=-=-=-=-=-
+
+This is not a place for discussions about changes or improvements in WML
+syntax.  All changes in WML syntax _must_ be discussed on sw-wml to let
+every WML users know if those changes have undesirable side-effects.
+
+Basically this new ML should have no influence on the sw-wml ML because
+topics discussed on sw-wml-dev did previously only occur between Ralf
+and i by private mail.
+
+So now that this list is up, you have to make it alive ;-)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01969" HREF="msg01969.shtml">Re: New mailing list sw-wml-dev</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01965.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01967.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01992.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01969.shtml">Re: New mailing list sw-wml-dev</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01966"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01966"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

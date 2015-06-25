@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Automatic button generation (Was: Substitution of asteriks) -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Mon, 29 Mar 1999 18:00:35 +0200 (MET DST) -->
+<!--X-Message-Id: 87bthcmglj.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.10.9903170952240.7703&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Reference: 87pv61ncvb.fsf@vlxhars.desy.de -->
+<!--X-Reference: m1hfrdkf3c.fsf@foobar.ee.ethz.ch -->
+<!--X-Reference: 87hfrca9ob.fsf_&#45;_@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00520">Date Index</a>][<a href="thrd11.shtml#00520">Thread Index</a>]<br>
+[<A HREF="msg00519.shtml">Date Prev</A>][<A HREF="msg00521.shtml">Date Next</A>][<A HREF="msg00511.shtml">Thread Prev</A>][<A HREF="msg00509.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Automatic button generation (Was: Substitution of asteriks)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 29 Mar 1999 17:59:52 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I wrote on the topic of automatic buton generation:
+&gt; If I find some more time to test (and document :-)) it, I will release
+&gt; the code later this week.
+
+I put it up yesterday, there are some slight changes to the syntax I
+mentioned in the last post, you may find it under
+<A  HREF="http://www.hars.de/www/wml_navbars.html">http://www.hars.de/www/wml_navbars.html</A>
+
+I didn't give it very thorough checks, and I had some really weird
+problems using perlmagick (the effect of pen=&gt;"#00ddff" in an Annotate
+statement depended on the size of the image and the name of the
+font...  But the version of perlmagick distributed with Debian 2.0
+seems to be very old, so this may be irrelevant to people using
+Perlmagick 4.2).  I'd welcome any feedback.
+
+Yours, Florian.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00489" HREF="msg00489.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="00504" HREF="msg00504.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Florian Hars</li>
+<li><strong><A NAME="00506" HREF="msg00506.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00511" HREF="msg00511.shtml">Automatic button generation (Was: Substitution of asteriks)</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00519.shtml">Re: WML for Windows 98</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00521.shtml">problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00511.shtml">Automatic button generation (Was: Substitution of asteriks)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00509.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00520"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00520"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,222 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem with PS fonts on big&#45;endian platforms (patch included) -->
+<!--X-From-R13: Terqrevp Zr [bhry <Terqrevp.Zr[bhryNvevfn.se> -->
+<!--X-Date: Wed, 21 Jul 1999 15:22:45 +0200 (MET DST) -->
+<!--X-Message-Id: 3795C927.45D302F6@irisa.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 19990719151410.A27709@doit.wisc.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00864">Date Index</a>][<a href="thrd18.shtml#00864">Thread Index</a>]<br>
+[<A HREF="msg00863.shtml">Date Prev</A>][<A HREF="msg00865.shtml">Date Next</A>][<A HREF="msg00863.shtml">Thread Prev</A>][<A HREF="msg00865.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem with PS fonts on big-endian platforms (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Frederic Le Mouel &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 21 Jul 1999 15:20:39 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Dave Plonka wrote:
+&gt; 
+&gt; On big-endian architectures, gfont failed :)
+
+Great patch, thanks. It works well now :)
+
+&gt; I'm gathering that the rest of the user-base is on Intel hence they didn't 
+&gt; bump into this issue.
+
+My system is Solaris and I noticed this bug but I didn't find (and even try
+to find) how to solve :)
+
+I also have a little configuration problem with the perl detection. I modify
+a bit your patch to take that into account.
+
+Regards, Fred.
+
+-- 
+Frédéric Le Mouël, Ph.D. Student        | Email: Frederic.LeMouel@irisa.fr
+IRISA/INRIA, Solidor Group, Office E307 | Phone: (+33|0)2 99 84 73 04
+Campus Universitaire de Beaulieu        | Fax  : (+33|0)2 99 84 25 29
+35042 Rennes Cedex, France              | <A  HREF="http://www.irisa.fr/prive/flemouel">http://www.irisa.fr/prive/flemouel</A></PRE>
+<PRE>
+*** configure.in.orig	Fri Sep  5 21:28:19 1997
+--- configure.in	Wed Jul 21 14:31:10 1999
+***************
+*** 27,32 ****
+--- 27,33 ----
+  AC_CONFIGURE_PART(CHECK: C Compiler and Perl Interpreter)
+  AC_PROG_CC
+  AC_PROG_CPP
++ AC_C_BIGENDIAN
+  AC_MSG_CHECKING([for Perl language])
+  TMPFILE=/tmp/ac.$$
+  rm -f $TMPFILE
+***************
+*** 34,45 ****
+  c=0
+  for dir in `echo $PATH | sed -e 's/:/ /g'` /tmp; do
+      for perl in perl5 perl miniperl; do
+!          if test -x "$dir/$perl"; then
+!              perl="$dir/$perl"
+!              version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ with.*//'`
+!              versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+!              versionnum=`expr $versionnum - $c`
+!              echo "$versionnum $version $perl" &gt;&gt;$TMPFILE
+           fi
+      done
+      c=`expr $c + 1`
+--- 35,48 ----
+  c=0
+  for dir in `echo $PATH | sed -e 's/:/ /g'` /tmp; do
+      for perl in perl5 perl miniperl; do
+!          if test -f "$dir/$perl"; then
+!              if test -x "$dir/$perl"; then
+!                  perl="$dir/$perl"
+!                  version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
+!                  versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+!                  versionnum=`expr $versionnum - $c`
+!                  echo "$versionnum $version $perl" &gt;&gt;$TMPFILE
+!              fi
+           fi
+      done
+      c=`expr $c + 1`
+*** gfont_pxtogdf.c.orig	Fri Sep  5 13:51:38 1997
+--- gfont_pxtogdf.c	Mon Jul 19 11:35:23 1999
+***************
+*** 239,244 ****
+--- 239,250 ----
+  
+  void Put32(FILE *fp, int i)
+  {
++ #ifndef WORDS_BIGENDIAN /* { */
++     i = (((i &amp; 0xff000000L) &gt;&gt; 24) | 
++          ((i &amp; 0x00ff0000L) &gt;&gt;  8) |
++          ((i &amp; 0x0000ff00L) &lt;&lt;  8) |
++          ((i &amp; 0x000000ffL) &lt;&lt; 24));
++ #endif /* } */
+      fwrite(&amp;i, sizeof(int), 1, fp);
+      return;
+  }
+*** gfont_gd.c.orig	Fri Sep  5 13:32:51 1997
+--- gfont_gd.c	Mon Jul 19 10:54:14 1999
+***************
+*** 2674,2713 ****
+  /*****************/
+  
+  /*
+!  *  Byte Conversion -- Hilfsroutinen fuer das alte
+!  *  Problem High-Endian vs. Little-Endian !!
+   */
+- unsigned short gdIntern_convert_short(unsigned short z)
+- {
+-     char *teststring;
+-     short t;
+- 
+-     t = 0x4142;
+- 
+-     teststring = (char *)&amp;t;
+- 
+-     if(teststring[0] == 'B' &amp;&amp; teststring[1] == 'A')
+-         return(z);
+-     else
+-         return(((z &amp; 0xff00U) &gt;&gt; 8) | ((z &amp; 0x00ffU) &lt;&lt; 8));
+- }
+  unsigned long gdIntern_convert_long(unsigned long z)
+  {
+!     char *teststring;
+!     unsigned long t;
+! 
+!     t = 0x41424344;
+! 
+!     teststring = (char *)&amp;t;
+! 
+!     if(teststring[0] == 'D' &amp;&amp; teststring[1] == 'C' &amp;&amp;
+!        teststring[2] == 'B' &amp;&amp; teststring[3] == 'A')
+!         return(z);
+!     else
+!         return(((z &amp; 0xff000000L) &gt;&gt; 24) | 
+!                ((z &amp; 0x00ff0000L) &gt;&gt;  8) |
+!                ((z &amp; 0x0000ff00L) &lt;&lt;  8) |
+!                ((z &amp; 0x000000ffL) &lt;&lt; 24));
+  }
+  
+  gdFontPtr gdFontCreateFromGdf(FILE *in)
+--- 2674,2691 ----
+  /*****************/
+  
+  /*
+!  *  Byte Conversion
+   */
+  unsigned long gdIntern_convert_long(unsigned long z)
+  {
+! #ifdef WORDS_BIGENDIAN /* { */
+!     return(z);
+! #else /* }{ */
+!     return(((z &amp; 0xff000000L) &gt;&gt; 24) | 
+!            ((z &amp; 0x00ff0000L) &gt;&gt;  8) |
+!            ((z &amp; 0x0000ff00L) &lt;&lt;  8) |
+!            ((z &amp; 0x000000ffL) &lt;&lt; 24));
+! #endif /* } */
+  }
+  
+  gdFontPtr gdFontCreateFromGdf(FILE *in)
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00865" HREF="msg00865.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Dave Plonka</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00863" HREF="msg00863.shtml">gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Dave Plonka</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00863.shtml">gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00865.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00863.shtml">gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00865.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00864"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00864"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

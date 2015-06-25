@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Template tarball -->
+<!--X-From-R13: Ivyyvnz [beevf <jezNonatry.qrzba.pb.hx> -->
+<!--X-Date: Thu, 9 May 2002 14:00:18 +0200 (MET DST) -->
+<!--X-Message-Id: 20020509114313.A2630@bangel.demon.co.uk -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020508202907.D29851@bangel.demon.co.uk -->
+<!--X-Reference: 1020896001.23500.5.camel@tomk32 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02603">Date Index</a>][<a href="thrd53.shtml#02603">Thread Index</a>]<br>
+[<A HREF="msg02602.shtml">Date Prev</A>][<A HREF="msg02604.shtml">Date Next</A>][<A HREF="msg02601.shtml">Thread Prev</A>][<A HREF="msg02605.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Template tarball</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: William Morris &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 9 May 2002 11:43:14 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; I also found none :-(
+&gt; but I've hidden a link on my own page to the crappy source of my
+&gt; website, but don't search for it!
+
+Lucky I know exactly where it is then. Thanks :-)  
+
+&gt; &gt; Also, I don't see a Makefile.  I know that wmk exists, but is standard
+&gt; &gt; make not used in the build process?
+&gt; .wmkrc is what you search, but if you would read the man-page first....
+
+I was really refering to the explicit use of make in addition to wmk.
+For example, it would be nice to "make clean" or "make depend" as
+one might in a C source tree.  Alternatively it would be nice to
+generate the html files and the images in a separate directory (tree)
+so that the source tree remains clean.  I thought 'make' might be in
+normal use to this end.
+
+Thanks for replying
+-- 
+William Morris
+william@bangel.demon.co.uk
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02605" HREF="msg02605.shtml">Re: Template tarball</A></strong>, <em>From:</em> Alexander Leidinger</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02600" HREF="msg02600.shtml">Template tarball</A></strong>, <em>From:</em> William Morris</li>
+<li><strong><A NAME="02601" HREF="msg02601.shtml">Re: Template tarball</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02602.shtml">WML as a top-down replacement for XSLT</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02604.shtml">Re: WML as a top-down replacement for XSLT</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02601.shtml">Re: Template tarball</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02605.shtml">Re: Template tarball</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02603"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02603"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Feature request: removal of "unwanted" tags -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Wed, 28 Jan 1998 18:33:45 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980128100735.19790A&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1iur5x9a9.fsf_&#45;_@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00063">Date Index</a>][<a href="thrd2.shtml#00063">Thread Index</a>]<br>
+[<A HREF="msg00062.shtml">Date Prev</A>][<A HREF="msg00064.shtml">Date Next</A>][<A HREF="msg00062.shtml">Thread Prev</A>][<A HREF="msg00064.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Feature request: removal of &quot;unwanted&quot; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 28 Jan 1998 10:10:12 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Perhaps in the mean time you could override tags -- so that &lt;b&gt; expands to
+""? I hope I'm remembering correctly that one of the things you can do is
+redefine existing tags...
+
+Now, I know this isn't perfect since it's a "allow it unless explicitly
+denied" solution, rather than a "deny it unless explicity allowed." But,
+perhaps it'll work since there's a presumably finite set of tags you want
+to disallow.
+
+jim
+
+-- 
+[L]inux has an installed base conservatively estimated at around 3 million
+users.... [V]endors say that most of the top companies in the US have bought
+the OS - but that few will readily admit to running their multimillion-dollar
+corporations on code put together by a band of software idealists. -- _Wired_
+
+On 28 Jan 1998, Fritz Zaucker wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I am designing a small set of tags for the web-pages of our site. The
+&gt; idea is to give a list of these agreed on tags to the authors of our
+&gt; various pages. They are then "allowed" to only use these tags and no
+&gt; others. Especially the use of "standard HTML tags" would be
+&gt; "forbidden".
+&gt; 
+&gt; It would be nice to have a mechanism the tell WML which tags are ok in
+&gt; the WML input files. WML should then remove all other tags (I guess in
+&gt; path 1) and may be send a message to STDERR about what it removed.
+&gt; 
+&gt; I guess it would be easy enough to use an external filter, but may be
+&gt; this be easily included as a standard feature?
+&gt; 
+&gt; Cheers,
+&gt; Fritz
+&gt; 
+&gt; P.S.: Please don't send me messages about "power to the user,
+&gt;       ...". The idea is to find an agreement with the people involved
+&gt;       and just to force ourselves to eliminate WYSIWYG markup. A
+&gt;       wml-lint, so to speak.
+&gt; 
+&gt;       Of course, one could even implement a command-line switch so
+&gt;       that one can either remove unwanted tags or just warn about them.
+&gt; 
+&gt; -- 
+&gt; Dr. Fritz Zaucker, Head IT Support Group
+&gt; Department of Electrical Engineering,  Federal Institute of Technology
+&gt; ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+&gt; Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://www.ee-staff.ethz.ch/~zaucker/">http://www.ee-staff.ethz.ch/~zaucker/</A>
+&gt; E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00064" HREF="msg00064.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00060" HREF="msg00060.shtml">Feature request: removal of &quot;unwanted&quot; tags</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00062.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00064.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00062.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00064.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00063"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00063"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

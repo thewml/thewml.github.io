@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: slices: <img> and <set&#45;var> problem (again) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 13 Dec 1999 15:42:42 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991205194759.13125A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912130940.KAA01204@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01221">Date Index</a>][<a href="thrd25.shtml#01221">Thread Index</a>]<br>
+[<A HREF="msg01220.shtml">Date Prev</A>][<A HREF="msg01222.shtml">Date Next</A>][<A HREF="msg01220.shtml">Thread Prev</A>][<A HREF="msg01222.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 5 Dec 1999 20:14:45 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 13 Dec 1999, Jan Holler wrote:
+
+[...]
+&gt; but let's go ahead with the problems: this simple example
+&gt; does not work and shows well where i have a hard time to
+&gt; understand the consistency of wml here.
+&gt; 
+&gt; #!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html \
+&gt;     -o (ALL-LANG_*)uLANG_FR:%BASE_f.html
+&gt; 
+&gt; #use wml::std::lang
+&gt; &lt;lang:new id=de short&gt;
+&gt; &lt;lang:new id=fr short&gt;
+&gt; 
+&gt; &lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&gt; 
+&gt; &lt;set-var bar = "&lt;de: german&gt;&lt;fr: french&gt;" &gt;
+&gt; &lt;de&gt; 2. German bar is: &lt;get-var bar&gt; &lt;/de&gt;
+&gt; &lt;fr&gt; 3. French bar is: &lt;get-var bar&gt; &lt;/fr&gt;
+&gt; 
+&gt; &lt;/body&gt;&lt;/html&gt;
+&gt; 
+&gt; output is for test.html:
+&gt;  2. German bar is: germanfrench 
+&gt; german
+&gt; 
+&gt; and for test_f.html:
+&gt; french
+&gt;  3. French bar is: germanfrench 
+&gt; 
+&gt; yes. this is really the output. that should not happen!
+
+I disagree, this output is correct. I know this is not intuitive,
+but it reflects current slice grammar.
+A solution is to implement the LANG_*@ notation, but i failed.
+You may also try
+  #!wml -o (ALL-LANG_*)uLANG_DE@:%BASE.html \
+      -o (ALL-LANG_*)uLANG_FR@:%BASE_f.html
+but you have to patch the wml binary.
+After the comment ``create output file listfor epilog filters'',
+add an @ sign after ``^x()'' (2 lines modified).
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01220" HREF="msg01220.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01220.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01222.shtml">Recursive #include problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01220.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01222.shtml">Recursive #include problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01221"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01221"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

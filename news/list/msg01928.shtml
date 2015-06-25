@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML 2.0.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 5 Sep 2000 08:35:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20000905011101.A15091@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01928">Date Index</a>][<a href="thrd39.shtml#01928">Thread Index</a>]<br>
+[<A HREF="msg01927.shtml">Date Prev</A>][<A HREF="msg01929.shtml">Date Next</A>][<A HREF="msg01927.shtml">Thread Prev</A>][<A HREF="msg01929.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML 2.0.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 5 Sep 2000 01:11:01 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi there,
+
+WML 2.0.3 is available at
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-2.0.3.tar.gz">http://www.engelschall.com/sw/wml/distrib/wml-2.0.3.tar.gz</A>
+
+Below is a short summary of changes, see
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/latest/ChangeLog">http://www.engelschall.com/sw/wml/distrib/latest/ChangeLog</A>
+for a more verbose description.
+Thanks to all contributors for their help.
+
+  Changes between 2.0.2 and 2.0.3:
+    *) Fix compilation of ePerl with threaded Perl 5.6.0 (03-Sep-2000)
+    *) Fix wml_intro.pod (03-Sep-2000)
+    *) Upgrade to mp4h 1.1.1 (31-Aug-2000)
+    *) Fix problems with @-sign in some module files (29-Aug-2000)
+    *) Upgrade to Slice 1.3.7 (29-Aug-2000)
+    *) Fix compilation of Bit::Vector with perl &lt; 5.005 (29-Aug-2000)
+    *) Upgraded to GNU shtool 1.5.1 (08-Aug-2000)
+    *) Upgrade of tidy (06-Aug-2000)
+    *) Fix wml_p1_ipp (05-Aug-2000)
+    *) New variables WML_SRC_TIME and WML_GEN_TIME (04-Aug-2000)
+    *) Add alternative for mouse events (03-Aug-2000)
+    *) Add `summary' attribute in tables (03-Aug-2000)
+    *) Fix protection in wml (01-Aug-2000)
+    *) Allow nestable &lt;protect&gt; tags (31-Jul-2000)
+    *) Improve processing speed on large files (30-Jul-2000)
+    *) Upgrade of Bit::Vector (24-Jul-2000)
+    *) Update all WML module files for XHTML 1.0 (21-Jul-2000)
+    *) Add support for modifiers in regexps in wml_p2_mp4h (21-Jul-2000)
+    *) Finish import of PCRE in wml_p2_mp4h (21-Jul-2000)
+    *) Many fixes for multilingual navbars (21-Jul-2000)
+    *) Improve wml::std::lang (20-Jul-2000)
+    *) Use Perl regular expressions in wml_p2_mp4h (20-Jul-2000)
+    *) Improve &lt;javascript&gt; tag in wml::std::tags (19-Jul-2000)
+    *) Fix wml_p1_ipp (19-Jul-2000)
+    *) Improve wml::std::lang (19-Jul-2000)
+    *) Fix file name and line numbers on warnings (18-Jul-2000)
+    *) Fix a bug when using both -M and -W1 flags (16-Jul-2000)
+    *) Upgrade of the Bare Bones Guide to HTML (13-Jul-2000)
+    *) Upgrade of tidy (13-Jul-2000)
+    *) Internal changes in mp4h about regular expressions (06-Jul-2000)
+    *) Fix boolean operators (05-Jul-2000)
+    *) Improve &lt;preserve&gt;/&lt;restore&gt; stuff (05-Jul-2000)
+    *) Fix whitespace in wml::des::preload (03-Jul-2000)
+    *) Rewrite wml::*::all files (03-Jul-2000)
+    *) Upgraded to GNU shtool 1.5.0 (01-Jul-2000)
+    *) Enhanced wml::std::tags' &lt;javascript&gt; tag (27-Jun-2000)
+    *) Fix wml::sys::all manpage (27-Jun-2000)
+    *) Fix escaped quotes in wml::std::href (24-Jun-2000)
+    *) Fix &lt;divert&gt; in wml::std::tags (24-Jun-2000)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01927.shtml">Re: From version 1.7 to 2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01929.shtml">Bug reporting</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01927.shtml">Re: From version 1.7 to 2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01929.shtml">Bug reporting</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01928"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01928"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

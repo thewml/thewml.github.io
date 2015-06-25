@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont installation problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 14 Apr 1999 10:53:59 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990414104510.27668A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990413172211.12698B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00577">Date Index</a>][<a href="thrd13.shtml#00577">Thread Index</a>]<br>
+[<A HREF="msg00576.shtml">Date Prev</A>][<A HREF="msg00578.shtml">Date Next</A>][<A HREF="msg00576.shtml">Thread Prev</A>][<A HREF="msg00578.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont installation problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 14 Apr 1999 10:48:15 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 13 Apr 1999, Denis Barbier wrote:
+
+&gt; Go under gfont-1.0.2 and type
+&gt;    patch -p1 &lt; the_name_of_the_patch_below
+[...]
+
+Frederic's solution is better. Below is the modified patch.
+
+Denis
+
+--- gfont-1.0.2/configure	Tue Sep 16 11:30:35 1997
++++ gfont-1.0.2/configure	Fri Dec 18 13:19:55 1998
+@@ -805,7 +805,7 @@
+     for perl in perl5 perl miniperl; do
+          if test -x "$dir/$perl"; then
+              perl="$dir/$perl"
+-             version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ with.*//'`
++             version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
+              versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+              versionnum=`expr $versionnum - $c`
+              echo "$versionnum $version $perl" &gt;&gt;$TMPFILE
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00578" HREF="msg00578.shtml">Re: gfont installation problem</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00576" HREF="msg00576.shtml">Re: gfont installation problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00576.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00578.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00576.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00578.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00577"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00577"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

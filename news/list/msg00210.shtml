@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: TOC tag (table of contents) -->
+<!--X-From-R13: "Rnivq Vneevf" <quneevfNqeu.arg> -->
+<!--X-Date: Fri, 11 Sep 1998 19:25:20 +0200 (CEST) -->
+<!--X-Message-Id: 000f01bddda6$28fe3560$0500a8c0@delf.delf -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 19980911094321.A13293@zeus.advatech.ro -->
+<!--X-Derived: bin00019.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00210">Date Index</a>][<a href="thrd5.shtml#00210">Thread Index</a>]<br>
+[<A HREF="msg00209.shtml">Date Prev</A>][<A HREF="msg00211.shtml">Date Next</A>][<A HREF="msg00209.shtml">Thread Prev</A>][<A HREF="msg00213.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: TOC tag (table of contents)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;David Harris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 11 Sep 1998 13:03:55 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+Viorel Anghel wrote:
+&gt; I recently "discovered" the &lt;toc&gt; tag (wml::std::toc) and is very usefull.
+&gt; But, is there any expert which can rewrite (or add a style to) "toc" in
+order
+&gt; to use nested lists?
+
+Good idea.
+
+I just modified wml::std::toc to implement some new styles, "list",
+"list-ol", and "list-ul" to implement a table of contents using nested
+lists. I think this should work for what you want. The "list-ol" style uses
+ordered lists so that the list items have numbers, while the "list-ul" style
+uses unordered lists for bullets. The style "list" is just an alias to
+"list-ul".
+
+If you want to change the style of the lists, such as adding an option to
+the &lt;ul&gt; or &lt;ol&gt; tags, just modify the diversions TOC_L and TOC_UNL. This
+will override the  "list-ol" or "list-ul" settings. For example, to create
+an un-ordered list with style=box, use the following:
+
+---
+#use "where-you-install-file" style=list
+
+..TOC_L&gt;&gt;&lt;ul style="box"&gt;&lt;&lt;..
+..TOC_UNL&gt;&gt;&lt;/ul&gt;&lt;&lt;..
+---
+
+I've attached the modified toc.wml file from the $(WML_HOME)/lib/include/std
+directory. I hope it goes through the list server. This is, of course, free
+for all to use.
+
+ - David Harris
+   Principal Engineer, DRH Internet Services
+
+
+</PRE>
+<P><A HREF="bin00019.bin" >mytoc.wml</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00209" HREF="msg00209.shtml">TOC tag (table of contents)</A></strong>, <em>From:</em> Viorel Anghel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00209.shtml">TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00211.shtml">RE: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00209.shtml">TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00213.shtml">Re: FW: TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00210"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00210"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

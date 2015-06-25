@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: newbie help needed converting 1.7.4 &#45;> 2.0.4 -->
+<!--X-From-R13: "revp n . Tneevf" <rnsneevfNny.hzprf.rqh> -->
+<!--X-Date: Thu, 28 Sep 2000 15:47:37 +0200 (MET DST) -->
+<!--X-Message-Id: 20000928094551.A21316@eafarris.al.umces.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000928084137.A21158@eafarris.al.umces.edu -->
+<!--X-Reference: 20000928151716.A31329@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01998">Date Index</a>][<a href="thrd41.shtml#01998">Thread Index</a>]<br>
+[<A HREF="msg01997.shtml">Date Prev</A>][<A HREF="msg01999.shtml">Date Next</A>][<A HREF="msg01997.shtml">Thread Prev</A>][<A HREF="msg02002.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;eric a . Farris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 28 Sep 2000 09:45:51 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Sep 28, 2000 at 03:17:17PM +0200, Denis Barbier wrote:
+&gt; On Thu, Sep 28, 2000 at 08:41:37AM -0400, eric a . Farris wrote:
+&gt; &gt; #use wml::all
+&gt; 
+&gt; Remove the line above...
+&gt; 
+&gt; &gt; &lt;define-tag p whitespace=delete endtag=required&gt;
+&gt; &gt; &lt;p*&gt;&lt;font face="Trebuchet MS, Arial, Helvetica, Swiss, sans-serif"&gt;%body&lt;/font&gt;&lt;/p&gt;
+&gt; &gt; &lt;/define-tag&gt;
+&gt; 
+&gt; and replace &lt;/p&gt; by &lt;/p*&gt;
+&gt; 
+
+clean compile now. many thanks.
+
+-- 
+eric a. Farris  eafarris@al.umces.edu  www.bigfoot.com/~eafarris
+Systems Administrator
+Appalachian Laboratory, UMCES  www.al.umces.edu
+
+This message composed in an MFCE (Microsoft Free Computing Environment).
+Courtesy of Debian GNU/Linux  www.debian.org
+
+Seeing isn't believing; believing is seeing.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01996" HREF="msg01996.shtml">newbie help needed converting 1.7.4 -&gt; 2.0.4</A></strong>, <em>From:</em> eric a . Farris</li>
+<li><strong><A NAME="01997" HREF="msg01997.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01997.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01999.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01997.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02002.shtml">Mehrsprachiger Navigationbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01998"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#01998"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

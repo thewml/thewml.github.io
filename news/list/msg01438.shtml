@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.99.1 (16&#45;Mar&#45;2000) -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Sat, 18 Mar 2000 17:15:19 +0100 (MET) -->
+<!--X-Message-Id: 20000317232048.A25593@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01438">Date Index</a>][<a href="thrd30.shtml#01438">Thread Index</a>]<br>
+[<A HREF="msg01439.shtml">Date Prev</A>][<A HREF="msg01441.shtml">Date Next</A>][<A HREF="msg01453.shtml">Thread Prev</A>][<A HREF="msg01444.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 23:20:48 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.99.1 (16-Mar-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Anthony Fok
+Reply-To: foka@ualberta.ca
+
+PROBLEM DESCRIPTION:
+
+    wml_p1_ipp would fail if the input file (or its included files) contains
+
+	?$(name)
+
+    i.e., a question mark before the variable.  WML 1.7.4 didn't seem to
+    have this problem.  The bug showed up when I tried processing a page
+    with a link to a graphical counter:
+
+	&lt;IMG src="<A  HREF="http://www.ualberta.ca/htbin/Geo-counter.gif?$">http://www.ualberta.ca/htbin/Geo-counter.gif?$</A>(counter).gif"&gt;
+
+    where counter="ualberta-reg-fok1000-olvc", for example.
+
+    Also, the "$" is escaped if preceded by a "\" regardless of the number
+    of "\"s.  For example, if test.wml contains the following lines:
+
+	$(name:#string)
+	0 $(name)
+	1 \$(name)
+	2 \\$(name)
+	3 \\\$(name)
+	4 \\\\$(name)
+
+    the resulting test.html would be:
+
+	0 string
+	1 $(name)
+	2 \$(name)
+	3 \\$(name)
+	4 \\\$(name)
+
+    whereas most people would probably expect the output to be:
+
+	0 string
+	1 $(name)
+	2 \string
+	3 \\$(name)
+	4 \\string
+
+    Or, perhaps I am getting too picky?  :-)
+
+    Thanks in advance.
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu2
+    Perl: 5.005_03 (/home/foka/debian/wml-1.99.1/wml_test/TEST.root/bin/perl)
+    User: foka@ualberta.ca
+    Date: 17-Mar-2000
+Built Location:
+    Prefix: /home/foka/debian/wml-1.99.1/wml_test/TEST.root
+    BinDir: /home/foka/debian/wml-1.99.1/wml_test/TEST.root/bin
+    LibDir: /home/foka/debian/wml-1.99.1/wml_test/TEST.root/lib/wml
+    ManDir: /home/foka/debian/wml-1.99.1/wml_test/TEST.root/man
+
+Used Perl System:
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01444" HREF="msg01444.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01452" HREF="msg01452.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01439.shtml">align (1.99.1)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01441.shtml">[BUG REPORT] WML 1.99.0, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01453.shtml">Re: align (1.99.1)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01444.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01438"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01438"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

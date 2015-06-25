@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multi Language Support Question -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 22 Jul 2001 01:34:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20010722014253.B18862@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010720160913.A20143@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010720172935.A13270@imacs.polytechnique.fr -->
+<!--X-Reference: 20010721015833.B26357@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010721135022.A16695@imacs.polytechnique.fr -->
+<!--X-Reference: 20010721163935.A32553@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010721165643.B32553@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010722012927.A18862@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02333">Date Index</a>][<a href="thrd47.shtml#02333">Thread Index</a>]<br>
+[<A HREF="msg02332.shtml">Date Prev</A>][<A HREF="msg02334.shtml">Date Next</A>][<A HREF="msg02332.shtml">Thread Prev</A>][<A HREF="msg02330.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multi Language Support Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 22 Jul 2001 01:42:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jul 22, 2001 at 01:29:27AM +0200, Denis Barbier wrote:
+[...]
+&gt; An alpha release of Slice is available at
+&gt;    <A  HREF="http://www.engelschall.com/sw/slice/distrib/slice-1.3a801.tar.gz">http://www.engelschall.com/sw/slice/distrib/slice-1.3a801.tar.gz</A>
+
+Grrr, there is an error in slice_pass3.pl l.57, replace $cmd by $cmds.
+A new tarball will be uploaded in few minutes, sorry.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02323" HREF="msg02323.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02325" HREF="msg02325.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02327" HREF="msg02327.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02328" HREF="msg02328.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02329" HREF="msg02329.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02332" HREF="msg02332.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02332.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02334.shtml">Re: Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02332.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02330.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02333"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02333"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

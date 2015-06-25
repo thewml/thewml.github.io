@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug report: selecting non existant slices is treated as an error -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 20 Jan 1999 19:02:24 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990120180517.32571A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199901201647.IAA06115@medusa.surefirev.com. -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00360">Date Index</a>][<a href="thrd8.shtml#00360">Thread Index</a>]<br>
+[<A HREF="msg00359.shtml">Date Prev</A>][<A HREF="msg00361.shtml">Date Next</A>][<A HREF="msg00358.shtml">Thread Prev</A>][<A HREF="msg00361.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug report: selecting non existant slices is treated as an error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jan 1999 18:18:39 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 20 Jan 1999, Michael McNamara wrote:
+
+&gt; 	&lt;ifdef SCBETA thenstring elsestring&gt; feature, 
+&gt; but my then and else strings have white space in them.  Is there a 
+&gt; what to escape the white space?
+[...]
+
+&lt;ifeq &lt;get-var SCBETA&gt; "" "thenstring" "elsestring"&gt;
+
+You may also take a look at the &lt;prog&gt; and &lt;concat&gt; tags into the doc.
+
+[...]
+&gt; 	If a page is processed by wml with a command line that is
+&gt; selecting slices that don't exist in the page, it is treated as an
+&gt; error.  I feel this is the wrong behavior. At most, wml should warn.
+
+I agree. Another workaround is to test whether slices are in the source
+file before launching wml. In my pages i have french and english
+versions, text is surrounded by &lt;f&gt;&lt;/f&gt; or &lt;e&gt;&lt;/e&gt;.
+In the Makefile, there is
+%.f.html %.e.html: %.wml
+      @if `grep '&lt;e&gt;' $&lt;  &gt;/dev/null 2&gt;&amp;1`; then \
+        cmd='wml -o \(ALL-LANG_*\)+LANG_F:$*.f.html \
+                 -o \(ALL-LANG_*\)+LANG_E:$*.e.html $&lt;'; \
+      else \
+        cmd="wml -o \(ALL-LANG_*\)+LANG_F:$@ $&lt;"; \
+      fi; \
+      echo $$cmd; \
+      eval $$cmd
+
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00358" HREF="msg00358.shtml">Bug report: selecting non existant slices is treated as an error</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00359.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00361.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00358.shtml">Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00361.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00360"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00360"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML by example -->
+<!--X-From-R13: "Fubznf D. Ybyy" <gbzx32Ngbzx32.qr> -->
+<!--X-Date: Tue, 9 Oct 2001 22:16:18 +0200 (MET DST) -->
+<!--X-Message-Id: 20011009204809.A7853@tomk32.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011003140431.A321@wanadoo.es -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02398">Date Index</a>][<a href="thrd48.shtml#02398">Thread Index</a>]<br>
+[<A HREF="msg02397.shtml">Date Prev</A>][<A HREF="msg02399.shtml">Date Next</A>][<A HREF="msg02395.shtml">Thread Prev</A>][<A HREF="msg02399.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML by example</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Thomas R. Koll&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 9 Oct 2001 20:48:09 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Oct 03, 2001 at 02:04:31PM +0200, Horacio wrote:
+&gt; Any address where I can see sample pages and templates of
+&gt; - wml with css
+use CSS like u do it with normal html, place it dircetly into
+your &lt;head&gt; (at any other place the &lt;style&gt; tag is invalid) or in
+a separate file (much easier, less traffic). I'm using a lot of
+CSS on my own pages, never had any problems :)
+
+&gt; - wml with xml ?
+never mixed both :(
+
+-- 
+<A  HREF="http://www.TomK32.de">http://www.TomK32.de</A> -- just a geek trying to change the world
+<A  HREF="http://diary.TomK32.de">http://diary.TomK32.de</A> -- things you never wanted to know.....
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02399" HREF="msg02399.shtml">Re: WML by example</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02395" HREF="msg02395.shtml">WML by example</A></strong>, <em>From:</em> Horacio</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02397.shtml">Problems with using &lt;gfont&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02399.shtml">Re: WML by example</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02395.shtml">WML by example</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02399.shtml">Re: WML by example</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02398"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02398"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

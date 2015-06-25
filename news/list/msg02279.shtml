@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Web page margins -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 9 Jul 2001 15:52:14 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.010709154150.jh@inetcom.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010709132849.I6665@fedro.lettere.unipd.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02279">Date Index</a>][<a href="thrd46.shtml#02279">Thread Index</a>]<br>
+[<A HREF="msg02278.shtml">Date Prev</A>][<A HREF="msg02280.shtml">Date Next</A>][<A HREF="msg02278.shtml">Thread Prev</A>][<A HREF="msg02280.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Web page margins</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 09 Jul 2001 15:41:50 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+On 09-Jul-01 Alvise Belotti wrote:
+&gt; If you prefer setting this margin to 0, you have tu put 
+&gt; something like MARGINWIDTH=0 MARGINHEIGHT=0 LEFTMARGIN=0 TOPMARGIN=0
+&gt; inside &lt;body&gt; (NS and IE behaves differently in this respect, obviously :-).
+&gt; The problem lies in that if you put that instructions inside &lt;page&gt; they are
+&gt; silently discarded.
+
+I patched info.wml (wml 1.74):
+
+In the fist part you could add:
+
+     &lt;preserve marginwidth&gt;
+     &lt;preserve marginheight&gt;
+
+Inside &lt;body ....&gt; you add:
+
+     &lt;if &lt;get-var marginwidth&gt; " marginwidth=\"&lt;get-var marginwidth&gt;\" \
+      leftmargin=\"&lt;get-var marginwidth&gt;\"" "leftmargin=\"8\""&gt;\
+     &lt;if &lt;get-var marginheight&gt; " marginheight=\"&lt;get-var marginheight&gt;\" \
+      topmargin=\"&lt;get-var marginheight&gt;\ "" " topmargin=\"8\""&gt;\
+
+Near the end you should add, when preserved before.
+
+     &lt;restore marginheight&gt;
+     &lt;restore marginwidth&gt;
+
+I have put an 8 pixel default margin for Explorer so that it displays
+the same margins as Netscape if not set by the user.
+
+Cheers!
+ -jan
+
+-- 
+  Holler iNetCom
+  <A  HREF="http://www.inetcom.ch/">http://www.inetcom.ch/</A>  tel: +41 31 3725450  fax: 51
+  zinggstr. 16, 3007 bern, schweiz
+  postanschrift: postfach, 3000 bern 23
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02280" HREF="msg02280.shtml">Re: Web page margins</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02278" HREF="msg02278.shtml">Web page margins</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02278.shtml">Web page margins</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02280.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02278.shtml">Web page margins</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02280.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02279"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02279"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: toc for <h1> only? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 29 Dec 1999 20:33:54 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991229200915.373A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 386A29A0.9ABC0B57@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01245">Date Index</a>][<a href="thrd26.shtml#01245">Thread Index</a>]<br>
+[<A HREF="msg01244.shtml">Date Prev</A>][<A HREF="msg01246.shtml">Date Next</A>][<A HREF="msg01244.shtml">Thread Prev</A>][<A HREF="msg01247.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: toc for &lt;h1&gt; only?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Dec 1999 20:32:20 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 29 Dec 1999, Werner Heuser wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I have just started to build my Linux with Laptop Computers
+&gt; page with WML 1.7.4 (06-Oct-1999). Should have done it earlier ;-)
+&gt; 
+&gt; I would like to use a TOC which contains &lt;h1&gt; headers
+&gt; only. Though I tried different approaches I don't get this to work.
+&gt; The standard as in the man page:
+&gt; 
+&gt; #use wml::std::toc
+&gt; &lt;toc&gt;
+&gt; 
+&gt; works well. 
+&gt; 
+&gt; But the remaining part of the man page I probably don't understand
+&gt; exactly. 
+&gt; 
+&gt;        Alternatively you can use the &lt;toc_hN&gt; tags to insert its
+&gt;        body (can be empty!) at the current location and into the
+&gt;        Table Of Contents. If specified, the alt attribute is
+&gt;        included into the ToC instead of the body.
+&gt; 
+&gt; #use wml::std::toc
+&gt; &lt;toc_h1&gt;
+&gt; 
+&gt; doesn't work as desired.
+
+Hi Werner,
+
+the &lt;toc_hN&gt; tags behave like &lt;hN&gt;, except that body text is not
+surrounded by &lt;hN&gt; HTML tags in output file.
+
+Example:
+  #use wml::std::toc style=pre
+
+  &lt;h1&gt;Chapter 1&lt;/h1&gt;
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+  &lt;h2&gt;Section 2&lt;/h2&gt;
+  &lt;toc_h1&gt;Chapter 2&lt;/toc_h1&gt;
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+  &lt;h2&gt;Section 2&lt;/h2&gt;
+
+Output:
+  &lt;H1&gt;&lt;a name="ToC1"&gt;Chapter 1&lt;/a&gt;&lt;/H1&gt;
+  &lt;H2&gt;&lt;a name="ToC2"&gt;Section 1&lt;/a&gt;&lt;/H2&gt;
+  &lt;H2&gt;&lt;a name="ToC3"&gt;Section 2&lt;/a&gt;&lt;/H2&gt;
+  &lt;a name="ToC4"&gt;Chapter 2&lt;/a&gt;
+  &lt;H2&gt;&lt;a name="ToC5"&gt;Section 1&lt;/a&gt;&lt;/H2&gt;
+  &lt;H2&gt;&lt;a name="ToC6"&gt;Section 2&lt;/a&gt;&lt;/H2&gt;
+  &lt;pre&gt;
+  &lt;a href="#ToC1"&gt;&lt;strong&gt;Chapter 1&lt;/strong&gt;&lt;/a&gt;
+      &lt;a href="#ToC2"&gt;&lt;strong&gt;Section 1&lt;/strong&gt;&lt;/a&gt;
+      &lt;a href="#ToC3"&gt;&lt;strong&gt;Section 2&lt;/strong&gt;&lt;/a&gt;
+  &lt;a href="#ToC4"&gt;&lt;strong&gt;Chapter 2&lt;/strong&gt;&lt;/a&gt;
+      &lt;a href="#ToC5"&gt;&lt;strong&gt;Section 1&lt;/strong&gt;&lt;/a&gt;
+      &lt;a href="#ToC6"&gt;&lt;strong&gt;Section 2&lt;/strong&gt;&lt;/a&gt;
+  &lt;/pre&gt;
+
+With the ALT attribute, you may specify which entry will be inserted
+into the ToC, for instance,
+ 
+  &lt;toc_h1 alt="List of Appendices"&gt;&lt;/toc_h1&gt;
+  &lt;h2&gt;Appendix A&lt;/h2&gt;
+  &lt;h2&gt;Appendix B&lt;/h2&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01247" HREF="msg01247.shtml">Re: toc for &lt;h1&gt; only?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01244" HREF="msg01244.shtml">toc for &lt;h1&gt; only?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01244.shtml">toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01246.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01244.shtml">toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01247.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01245"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01245"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

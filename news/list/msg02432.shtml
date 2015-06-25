@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: mp4h warning in 2.0.8 -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Sun, 11 Nov 2001 13:40:05 +0100 (MET) -->
+<!--X-Message-Id: 3BE7DC60.DBB6D509@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3BE7A9D2.ECB3115B@snafu.de -->
+<!--X-Reference: 20011106125438.A26030@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02432">Date Index</a>][<a href="thrd49.shtml#02432">Thread Index</a>]<br>
+[<A HREF="msg02431.shtml">Date Prev</A>][<A HREF="msg02433.shtml">Date Next</A>][<A HREF="msg02431.shtml">Thread Prev</A>][<A HREF="msg02434.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: mp4h warning in 2.0.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 06 Nov 2001 13:49:36 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+...
+&gt; Good catch, there was indeed a bug in wml::std::toc, which is there
+&gt; for a long time. A fix is attached.
+The patch works fine.
+
+Werner
+-- 
+|=| Werner Heuser = Keplerstr. 11A = D-10589 Berlin = Germany
+|=| &lt;wehe_AT_mobilix.org&gt;      T. 0049 - (0)30 - 349 53 86
+|=| <A  HREF="http://MobiliX.org">http://MobiliX.org</A>         UniX on Mobile Systems: HOWTOs,Software
+|=| <A  HREF="http://Xtops.DE">http://Xtops.DE</A>            Laptops+PDAs pre-installed with UniX
+|*| This is no time for phony rhetoric -- Lou Reed
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02429" HREF="msg02429.shtml">mp4h warning in 2.0.8</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02431" HREF="msg02431.shtml">Re: mp4h warning in 2.0.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02431.shtml">Re: mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02433.shtml">name of generated output-file</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02431.shtml">Re: mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02434.shtml">mp4h tries to read perl code</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02432"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02432"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

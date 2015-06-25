@@ -1,0 +1,559 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Core / Slice (Pass 9)</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:37"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+<br />
+<ul class="navbarnestnest">
+<li>
+<a href="./wml_p1_ipp.html">p1_ipp</a>
+</li>
+<li>
+<a href="./wml_p2_mp4h.html">p2_mp4h</a>
+</li>
+<li>
+<a href="./wml_p3_eperl.html">p3_eperl</a>
+</li>
+<li>
+<a href="./wml_p4_gm4.html">p4_gm4</a>
+</li>
+<li>
+<a href="./wml_p5_divert.html">p5_divert</a>
+</li>
+<li>
+<a href="./wml_p6_asubst.html">p6_asubst</a>
+</li>
+<li>
+<a href="./wml_p7_htmlfix.html">p7_htmlfix</a>
+</li>
+<li>
+<a href="./wml_p8_htmlstrip.html">p8_htmlstrip</a>
+</li>
+<li>
+<b>p9_slice</b>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Core / Slice (Pass 9)</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Slice -- Extract pre-defined slices from an ASCII file</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+		<li><a href="#input_principle">Input Principle</a></li>
+		<li><a href="#output_selection_scheme">Output Selection Scheme</a></li>
+		<li><a href="#advanced_selection__slice_levels">Advanced Selection: Slice Levels</a></li>
+	</ul>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#special_feature">SPECIAL FEATURE</a></li>
+	<li><a href="#example">EXAMPLE</a></li>
+	<li><a href="#restriction">RESTRICTION</a></li>
+	<li><a href="#copyright">COPYRIGHT</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+	<li><a href="#authors">AUTHORS</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>Slice -- Extract pre-defined slices from an ASCII file</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>slice</strong>
+[<strong>-v</strong>]
+[<strong>-y</strong> <em>outputpolicy</em>]
+[<strong>-o</strong> <em>sliceterm</em>:<em>outputfile</em>[@<em>chmodcmd</em>][#<em>outputpolicy</em>] ..]
+[<em>inputfile</em>]</p>
+<p><strong>slice</strong>
+[<strong>-V</strong>]
+[<strong>-h</strong>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>@SLICE_VERSION@</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>
+</p>
+<h2><a name="input_principle">Input Principle</a></h2>
+<p>The <em>slice</em> program reads <em>inputfile</em> (or from <em>STDIN</em> if <em>inputfile</em> is
+not given or equal ``<code>-</code>'') and divides its already prepared ASCII contents
+into possibly overlapping areas, called <em>slices</em>. These slices are
+determined by enclosing blocks defined by begin and end delimiters which have
+to be <em>already</em> in the file. These block delimiters use the syntax</p>
+<pre>
+  [NAME: ... :NAME]</pre>
+<p>or alternatively (if there is no misinterpretation possible, i.e. no
+overlapping or stacked slices)</p>
+<pre>
+  [NAME: ... :]</pre>
+<p>The <em>NAME</em> identifier has to match against the regular expression
+``<code>[_A-Z0-9]+</code>'', i.e. <em>NAME</em> is a string consisting only of uppercase
+letters, digits or underscore characters.</p>
+<p>There can be as many such slice definitions as you like and there can be more
+than one slice with the same name. The resulting slice is the union of all
+equal named slices. Actually use this to spread a big slice over disjunct
+peaces of <em>inputfile</em>.</p>
+<p>
+</p>
+<h2><a name="output_selection_scheme">Output Selection Scheme</a></h2>
+<p>The final output data gets calculated by a slice term consisting of slice
+names and set theory operators. The following syntax is recognized (in order
+of <code>LR(1)</code> grammar parsing) for slice terms:</p>
+<dl>
+<dt><strong><a name="item_slice_term__3a_3a_3d_name">SLICE_TERM ::= <code>NAME</code></a></strong>
+<dd>
+<p>The slice NAME itself. This name has to match against the regex
+``<code>[_A-Z0-9*{}]+</code>''. Here two cases are possible: <code>NAME</code> is either a plain
+slice name consisting only of uppercase letters, digits or an underscore
+character. Or it is a wildcarded slice name indicated by an asterisk
+character.</p>
+</dd>
+<dd>
+<p>The first variant just expands to the union of all slices named exactly
+<code>NAME</code>. The second variant expands to the union of all slices which match
+against the wildcard pattern <code>NAME</code>. Here the asterisk has the semantical
+meaning of none or any number of characters. There is one special case,
+when the asterisk is immediately followed by characters enclosed within
+braces, it means none or any number of characters, but not this sequence
+of characters.</p>
+</dd>
+</li>
+<dt><strong><a name="item_slice_term__3a_3a_3d__21name__7c__7ename">SLICE_TERM ::= <code>!NAME</code> | <code>~NAME</code></a></strong>
+<dd>
+<p>The <strong>complement</strong> of slice NAME (i.e. ALL\NAME).</p>
+</dd>
+<dd>
+<p>In formula: {x in ALL: x <strong>not</strong> in NAME}</p>
+</dd>
+</li>
+<dt><strong><a name="item_slice_term__3a_3a_3d_name1xname2_2c_name1_5ename2">SLICE_TERM ::= <code>NAME1xNAME2</code>, <code>NAME1^NAME2</code></a></strong>
+<dd>
+<p>The <strong>exclusive-or</strong> relation between slice NAME1 and slice NAME2. In set theory
+also called <strong>symmetric difference</strong>: (NAME1uNAME2)\(NAME1nNAME2) or alternatively
+(NAME1n!NAME2)u(!NAME1nNAME2).</p>
+</dd>
+<dd>
+<p>In formula: {x in ALL: (x in NAME1 or x in NAME2) and not (x in NAME1 and x in
+NAME2)}.</p>
+</dd>
+</li>
+<dt><strong><a name="item_slice_term__3a_3a_3d_name1_5cname2_2c_name1_2dname">SLICE_TERM ::= <code>NAME1\NAME2</code>, <code>NAME1-NAME2</code></a></strong>
+<dd>
+<p>The <strong>difference</strong> of slice NAME1 and slice NAME2, i.e. NAME1 minus NAME2.</p>
+</dd>
+<dd>
+<p>In formula: {x in ALL: x in NAME1 <strong>and</strong> x <strong>not</strong> in NAME2}</p>
+</dd>
+</li>
+<dt><strong><a name="item_slice_term__3a_3a_3d_name1nname2__7c_name1_25name2">SLICE_TERM ::= <code>NAME1nNAME2</code> | <code>NAME1%NAME2</code></a></strong>
+<dd>
+<p>The <strong>intersection</strong> of slice NAME1 and slice NAME2.</p>
+</dd>
+<dd>
+<p>In formula: {x in ALL: x in NAME1 <strong>and</strong> x in NAME2}</p>
+</dd>
+</li>
+<dt><strong><a name="item_slice_term__3a_3a_3d_name1uname2_2c_name1_2bname2">SLICE_TERM ::= <code>NAME1uNAME2</code>, <code>NAME1+NAME2</code></a></strong>
+<dd>
+<p>The <strong>union</strong> of slice NAME1 and slice NAME2.</p>
+</dd>
+<dd>
+<p>In formula: {x in ALL: x in NAME1 <strong>or</strong> x in NAME2}</p>
+</dd>
+</li>
+<dt><strong><a name="item_slice_term__3a_3a_3d__28_slice_term__29">SLICE_TERM ::= <code>(</code> SLICE_TERM <code>)</code></a></strong>
+<dd>
+<p>A grouped slice term. Use this to force a different order of evaluation.
+By default, all operators are left-associative, except complement which
+is right-associative. Operators are listed below from lowest to highest
+precedence:</p>
+</dd>
+<dd>
+<pre>
+    -  u  x  n  !</pre>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="advanced_selection__slice_levels">Advanced Selection: Slice Levels</a></h2>
+<p>Because slices can be overlapping and stacked, a definition level is assigned
+to each slice while the input is parsed. These levels range from 1 to the
+maximum encountered (the level 0 is the whole file, i.e. <a href="#item_all"><code>ALL</code></a>). When a
+slice begins, it is assigned the lowest free level, beginning with level 1. As
+long as one level is in use, it cannot be assigned again until the end
+delimiter of the corresponding slice is seen.</p>
+<p>An example:</p>
+<pre>
+     [A:[B::B]:A][C:[D:[E::C]:D][F::E]:F]</pre>
+<pre>
+  3                     E-----------E
+  2      B--B        D--------D
+  1   A--------A  C--------C     F-----F
+  0</pre>
+<p>Here slice A is assigned level 1. Then B is assigned level 2 because level 1
+is still in use by A. Then the end of B is reached, level 2 is freed. Then
+the end of A is reached and level 1 is also free now, so C is assigned level 1
+again. Now only level 1 is in use, so D is assigned level 2. Then E is
+assigned level 3. Then the end of C is seen and level 1 freed. Then the end of
+D is seen and level 2 is freed. Now F begins and because only level 3 is in
+use, it gets level 1 assigned. Then the end of E frees level 3 and the end of
+F frees level 1. Finally no levels are still in use. This indicates that the
+slicing is correct.</p>
+<p>If there are any used levels left at the end of this process this indicates an
+input error and <em>slice</em> responds with an error message displaying the still
+open slices.</p>
+<p>This complicated level mechanism is needed for granular set operations where
+particular slices should be included or excluded only. So, to make life
+easier, a few pseudo-slices are automatically defined:</p>
+<dl>
+<dt><strong><a name="item_defn"><code>DEFn</code></a></strong>
+<dd>
+<p>The union of all user-defined slices at exactly level n (0 &lt;= n &lt;= oo).</p>
+</dd>
+</li>
+<dt><strong><a name="item_undefn"><code>UNDEFn</code></a></strong>
+<dd>
+<p>The union of all <strong>non</strong>-user-defined slices at exactly level n (0 &lt;= n &lt;= oo).
+This actually is just <code>!DEFn</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_def"><code>DEF</code></a></strong>
+<dd>
+<p>The union of all user-defined slices at <strong>all</strong> levels, beginning at level
+<strong>1</strong>. This actually is the union of all <a href="#item_defn"><code>DEFn</code></a> slices.</p>
+</dd>
+</li>
+<dt><strong><a name="item_undef"><code>UNDEF</code></a></strong>
+<dd>
+<p>The union of all <strong>non</strong>-user-defined slices at <strong>all</strong> levels, beginning with
+<strong>1</strong>. This actually is just <code>!DEF</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_all"><code>ALL</code></a></strong>
+<dd>
+<p>The whole file. This actually is just <code>UNDEF0</code>, because at level 0 there are
+no user defined slices, so all is undefined.</p>
+</dd>
+</li>
+<dt><strong><a name="item_name_40"><em>NAME</em><code>@</code></a></strong>
+<dd>
+<p>This is the slice <em>NAME</em> minus the union of all <a href="#item_defn"><code>DEFn</code></a> slices with <code>min(NAME)</code>
+&lt;= n &lt;= oo. Here <code>min(NAME)</code> is the lowest level plus one where <em>NAME</em> ever
+occurred. You can read this as ``NAME without all other slices at higher
+levels which overwrite it''. This sounds a little bit crazy, but actually is
+the most important construct. Try to understand it or your slice terms become
+very complicated.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__5b_2dy_outputpolicy_5d">[<strong>-y</strong> <em>outputpolicy</em>]</a></strong>
+<dd>
+<p>This flag changes output policy depending on events: <code>u</code> when an
+undefined set is encountered, <code>w</code> for an unmatched wildcard set, <code>z</code> when
+output is empty and <code>s</code> if it only consists of whitespace characters.
+Each letter is followed by a digit telling which action is bound to such
+events: <code>0</code> to ignore such events, <code>1</code> to display a warning message
+and continue, <code>2</code> to skip concerned file and continue, and <code>3</code> to
+abort with an error message.</p>
+</dd>
+<dd>
+<p>This flag consists of one or more events specifications, and default is
+<code>u0w0s0z0</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__5b_2do_sliceterm_3aoutputfile_5b_40chmodcmd_5d_5b">[<strong>-o</strong> <em>sliceterm</em>:<em>outputfile</em>[@<em>chmodcmd</em>][#<em>outputpolicy</em>] ..]</a></strong>
+<dd>
+<p>This redirects the output to a file. Usually the whole file will be send to
+<code>STDOUT</code> (same as <code>ALL:-</code>). You can use this option <em>more than once</em> to
+output to more than one file while the corresponding <em>sliceterm</em> determines
+which output data will be included into each output file.</p>
+</dd>
+<dd>
+<p>The optional <em>chmodcmd</em> string is intended for specifying options for the
+<em>chmod</em> command, which is applied to <em>outputfile</em> after writing. For
+instance use ``<code>a+r</code>'' to make sure the file is readable by a webserver of
+``<code>u+x</code>'' to create a file with the execution bit set (usually used for SSI
+files on a webserver with the <code>XBitHack</code> option available).</p>
+</dd>
+<dd>
+<p>The optional <em>outputpolicy</em> string allows changing output policy for
+only this output file without changing its global meaning. See above
+for informations on output policy.</p>
+</dd>
+<dd>
+<p>Be careful here: When you use parenthesis or asterisks inside <em>sliceterm</em> you
+have to make sure it is really passed to <em>slice</em> this way, i.e. usually you
+have to escape these characters from interpolation by the used shell. Do this
+either by adding backslashes in front of these characters or just surround the
+complete option argument with single quotes ('').</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-v</strong></a></strong>
+<dd>
+<p>This sets verbose mode where some processing information will be given on the
+console for debugging purpose.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-V</strong></a></strong>
+<dd>
+<p>Displays the version identification string.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dh"><strong>-h</strong></a></strong>
+<dd>
+<p>Displays the usage page.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="special_feature">SPECIAL FEATURE</a></h1>
+<p>Sometimes it can be very useful to be able to provide command line options
+directly within the input file, for instance to setup one or more <strong>-o</strong>
+options. For this <em>slice</em> recognizes lines of the form</p>
+<pre>
+   %!slice OPTIONS</pre>
+<p>in the input file and automatically adds OPTIONS to the argument line options.
+These lines have to start in column 0.</p>
+<p>Example:</p>
+<pre>
+   %!slice -oTOC:contents.txt</pre>
+<p>
+</p>
+<hr />
+<h1><a name="example">EXAMPLE</a></h1>
+<p>Assume the following simple multi-language article file <em>article.src</em>,
+written in HTML:</p>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;[EN:Titlepage:][DE:Titelseite:]&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;</pre>
+<pre>
+  &lt;center&gt;
+  &lt;h1&gt;[EN:The Title itself:][DE:Der Titel selbst:]&lt;/h1&gt;
+  &lt;/center&gt;</pre>
+<pre>
+  &lt;blockquote&gt;
+  [EN:...English Abstract...:]
+  [DE:...Deutsche Zusammenfassung...:]
+  &lt;/blockquote&gt;</pre>
+<pre>
+  [EN:...English Text...:]
+  [DE:...Deutscher Text...:]</pre>
+<pre>
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+<p>The command</p>
+<pre>
+  slice -o ENuUNDEF:article.html.en -o DEuUNDEF:article.html.de</pre>
+<p>then creates the following to files:</p>
+<dl>
+<dt><strong><a name="item_article_2ehtml_2een_3a"><em>article.html.en</em>:</a></strong>
+<dd>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Titlepage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;center&gt;
+  &lt;h1&gt;The Title itself&lt;/h1&gt;
+  &lt;/center&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;blockquote&gt;
+  ...English Abstract...
+  &lt;/blockquote&gt;</pre>
+</dd>
+<dd>
+<pre>
+  ...English Text...
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+</dd>
+<dt><strong><a name="item_article_2ehtml_2ede_3a"><em>article.html.de</em>:</a></strong>
+<dd>
+<pre>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Titelseite&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;center&gt;
+  &lt;h1&gt;Der Titel selbst&lt;/h1&gt;
+  &lt;/center&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;blockquote&gt;
+  ...Deutsche Zusammenfassung...
+  &lt;/blockquote&gt;</pre>
+</dd>
+<dd>
+<pre>
+  ...Deutscher Text...
+  &lt;/body&gt;
+  &lt;/html&gt;</pre>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="restriction">RESTRICTION</a></h1>
+<p>The current implementation only handles anonymous end delimiters ``<code>:]</code>''
+correct in clear cases where no mis-interpretation is possible, i.e. when no
+overlapping occurs. For instance in</p>
+<pre>
+   ...[A:...[B:...:A]...:]...</pre>
+<p>the end delimiter is not correctly assign to the `B' slice. So, be careful
+when using anonymous end delimiters in overlapping situations. Pure stacking
+like</p>
+<pre>
+   ...[A:...[B:...:]...:]...</pre>
+<p>is allowed and handled correctly, but only when you interpret this as</p>
+<pre>
+   ...[A:...[B:...:B]...:A]...</pre>
+<p>
+</p>
+<hr />
+<h1><a name="copyright">COPYRIGHT</a></h1>
+<pre>
+  Copyright (c) 1997-2002 Ralf S. Engelschall.
+  Copyright (c) 1999-2002 Denis Barbier.</pre>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p>Slice Home: <a href="http://www.engelschall.com/sw/slice/">http://www.engelschall.com/sw/slice/</a></p>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+  Ralf S. Engelschall
+  rse@engelschall.com
+  www.engelschall.com</pre>
+<pre>
+  Denis Barbier
+  barbier@engelschall.com</pre>
+
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

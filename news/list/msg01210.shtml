@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: SGML&#45;formatting with WML -->
+<!--X-From-R13: n2651866Nfznvy.hav&#45;xbrya.qr ("=?WEA&#45;8859&#45;1?C?Rvex Te=T6zotra?=") -->
+<!--X-Date: Wed, 8 Dec 1999 23:16:29 +0100 (MET) -->
+<!--X-Message-Id: 199912082217.XAA00583@fairy.fairground -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912081513.QAA06695@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01210">Date Index</a>][<a href="thrd25.shtml#01210">Thread Index</a>]<br>
+[<A HREF="msg01208.shtml">Date Prev</A>][<A HREF="msg01211.shtml">Date Next</A>][<A HREF="msg01204.shtml">Thread Prev</A>][<A HREF="msg01207.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: SGML-formatting with WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (&quot;Dirk Frömbgen&quot;)</LI>
+<LI><em>Date</em>: Wed, 8 Dec 1999 23:17:18 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt;&gt;&gt;&gt;&gt; "Stephane" == Stephane Bortzmeyer &lt;bortzmeyer@pasteur.fr&gt; writes:
+
+    &gt;&gt; Has anyone ever thought of using WML as a batch formatter
+    &gt;&gt; for SGML input?
+
+    &gt; I tried wml --includefile=foobar.wml over my SGML sources
+    &gt; (actually XML) and, yes, it works fine. So does M4 if you
+    &gt; need a processing not available in your SGML environment :-)
+
+I see, but what I have in mind is POSTprocessing pure SGML,
+not PREprocessing a mixture of SGML and WML, which is actually
+neither of both.  In SGML lingo, I want to process an SGML
+application with WML, thus avoiding tree transformations à
+la DSSSL and all the overhead involved.  This application is
+a Web site formatter.  Come to think of it, LaTeX doesn't do
+tree transformations, either, and has nevertheless worked out
+quite well.  I like M4 and considered it for this job first,
+but there seems to be only one M4 macro package for generating
+HTML, stdlib.m4 by Jones, if I recall correctly, but it's not
+free and only for HTML3.2, which is not enough for my purposes.
+
+    &gt; The symbols used by WML could lead to problems. What if you
+    &gt; have a line beginning with '#' in your SGML source?
+
+No big deal, because WML will never get to see any of my SGML
+source.  As I said, it would be just one more language on top
+of WML.  I would have to make WML more usable for nontechnical
+people this way.  Theoretically speaking, I'm considering adding
+a formal document grammar to WML; so far, it has none.
+
+    &gt;&gt; This would allow WML to be used with structured editors.
+
+    &gt; Well, if they refuse elements which do not belong to the
+    &gt; DTD, what will be left to WML?
+
+I'm considering converting the ESIS for a private DTD to WML.
+As this is an obvious idea and a straightforward procedure, I
+wonder if anybody has done it or is planning on doing it shortly.
+
+Bye,
+	Dirk
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01204" HREF="msg01204.shtml">Re: SGML-formatting with WML</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01208.shtml">Re: Using &lt;rollover&gt; etc. from EPerl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01211.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01204.shtml">Re: SGML-formatting with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01207.shtml">SGML to WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01210"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01210"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

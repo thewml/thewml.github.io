@@ -1,0 +1,148 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: any chance to se PHP incorporated in wml? -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNsfo.ue> -->
+<!--X-Date: Sun, 4 Apr 1999 17:22:45 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9904041028110.1114&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9904031523110.10271&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00546">Date Index</a>][<a href="thrd12.shtml#00546">Thread Index</a>]<br>
+[<A HREF="msg00545.shtml">Date Prev</A>][<A HREF="msg00547.shtml">Date Next</A>][<A HREF="msg00545.shtml">Thread Prev</A>][<A HREF="msg00547.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: any chance to se PHP incorporated in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 4 Apr 1999 10:44:32 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 3 Apr 1999, Jim Hebert wrote:
+
+&gt;On Sat, 3 Apr 1999, Davor Cengija wrote:
+&gt;
+&gt;&gt;        yes, it works. thanks and appologies for such a newbie question.
+&gt;&gt;        the only problem is that i have to run wml twice since i need
+&gt;&gt;        an additional pass 3 in some cases, but simple makefile will
+&gt;&gt;        fix that. thanks again.
+&gt;
+&gt;I didn't think it was newbie at all! =)
+
+       heh... thanks.
+
+&gt;
+&gt;Can you explain in what situation you would need to pass 3's?
+&gt;
+
+       i have to code a really big table (67 models of fiat, lancia
+       and alfa with all of the technical details about every single
+       model). i just tought i could make few arrays, like
+
+       &lt;?php
+
+       $speed = "150 167 187 212..........";
+       $speed_array = explode(" ", $speed);
+
+       ?&gt;
+
+       and so on.
+
+       then i coded &lt;xtable&gt; tag with a few 'for' loops in order to
+       easily create whichever &lt;table&gt; i need. of course i could do
+       it in perl, but i don't speak perl :-).
+
+       after wmk i have :
+
+ &lt;:
+{
+    my $options = qq|border="1"|;
+    my $tmpfile = "/tmp/wml.wwwtable.$$.tmp";
+    local (*FP);
+    open(FP, "&gt;$tmpfile");
+    print FP "\&lt;\wwwtable $options&gt;\n";
+    print FP &lt;&lt;'__XTABLE__EOT'
+(1, 1)
+PANDA 1.1 4X4 KAT
+(1, 2)
+153.162.2
+(1, 3)
+40
+(1, 4)
+       etc etc
+
+       which requires another pass 3. i read xtable docs and it is
+       obvious why i need 2 passes no. 3.
+
+       i tried few wml files with no PHP and wmk made just the right
+       thing.
+
+&gt;Also, you do know that, at very worst, you could ran pass 3 twice by using
+&gt;the wml flags to just select pass 3...
+
+       yes, i know. thanks.
+-- 
+      v
+Davor Cengija
+Davor.Cengija@fsb.hr
+---------------------------------
+"The Remorse Of The Sugar Junkie"
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00545" HREF="msg00545.shtml">Re: any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00545.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00547.shtml">cannot load /tmp/wml.7925.tmp2 for unprotection</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00545.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00547.shtml">cannot load /tmp/wml.7925.tmp2 for unprotection</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00546"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00546"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

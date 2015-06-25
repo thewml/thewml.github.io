@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Some help -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Wed, 20 Jan 1999 18:03:50 +0100 (CET) -->
+<!--X-Message-Id: 199901201651.IAA06732@medusa.surefirev.com. -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A5F45E.3851E9A7@tid.es -->
+<!--X-Reference: Pine.LNX.3.96.990120170316.31341A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00359">Date Index</a>][<a href="thrd8.shtml#00359">Thread Index</a>]<br>
+[<A HREF="msg00358.shtml">Date Prev</A>][<A HREF="msg00360.shtml">Date Next</A>][<A HREF="msg00357.shtml">Thread Prev</A>][<A HREF="msg00363.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Some help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jan 1999 08:51:59 -0800 (PST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Powerful answer!.  I vote that this Question and Answer be added to
+wml_tutorial.1
+
+Denis Barbier writes:
+ &gt; On Wed, 20 Jan 1999, Ismael Olea wrote:
+ &gt; 
+ &gt; &gt; Hi!
+ &gt; &gt; 
+ &gt; &gt; 	I've to update a web tree created with wml. I've got a problem: we
+ &gt; &gt; mantain a ftp site with a number of docs, each doc is presented in 6
+ &gt; &gt; different formats; we need a web page automaticaly generated with urls
+ &gt; &gt; to all these files. Can I do this with wml? I know shell scripting but I
+ &gt; &gt; prefer an integrated solution.
+ &gt; &gt; 
+ &gt; &gt; 	Thanks in advance.
+ &gt; 
+ &gt; Hi,
+ &gt; 
+ &gt; here is a solution using only pass 2. Keep in mind your html page
+ &gt; will be compiled off-line, so you should recompile it everytime
+ &gt; a file is added/deleted, or process it through a cron job.
+ &gt; 
+ &gt; ## List of suffixes
+ &gt; &lt;set-var suffixes[]= "doc
+ &gt;     txt
+ &gt;     sgml
+ &gt;     html
+ &gt;     ps
+ &gt;     dvi"&gt;
+ &gt; 
+ &gt; ## Define the magic command
+ &gt; &lt;define-tag list-doc-files&gt;
+ &gt; &lt;set-var i=0&gt;
+ &gt; &lt;while &lt;get-var suffixes[i]&gt;&gt;
+ &gt;       &lt;set-var file="%0.&lt;get-var suffixes[i]&gt;"&gt;
+ &gt;       &lt;if &lt;get-file-properties &lt;get-var file&gt;&gt;
+ &gt;          &lt;prog &lt;a href="&lt;get-var file&gt;"&gt;&lt;get-var file&gt;&lt;/a&gt;&gt;&gt;
+ &gt;       &lt;increment i&gt;
+ &gt;     &lt;/while&gt;
+ &gt; &lt;/define-tag&gt;
+ &gt; 
+ &gt; ## Example :
+ &gt; &lt;list-doc-files "path/to/foo"&gt;
+ &gt; 
+ &gt; If path/to/foo.txt and path/to/foo.html exist, output is:
+ &gt;     &lt;a href="path/to/foo.txt"&gt;path/to/foo.txt&lt;/a&gt;
+ &gt;     &lt;a href="path/to/foo.html"&gt;path/to/foo.html&lt;/a&gt;
+ &gt; 
+ &gt; 
+ &gt;    Denis
+ &gt; 
+ &gt; --
+ &gt; D. Barbier
+ &gt; <A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+ &gt; 
+ &gt; ______________________________________________________________________
+ &gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+ &gt; Official Support Mailing List                   sw-wml@engelschall.com
+ &gt; Automated List Manager                       majordomo@engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00363" HREF="msg00363.shtml">Re: Some help</A></strong>, <em>From:</em> Ismael Olea</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00356" HREF="msg00356.shtml">Some help</A></strong>, <em>From:</em> Ismael Olea</li>
+<li><strong><A NAME="00357" HREF="msg00357.shtml">Re: Some help</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00358.shtml">Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00360.shtml">Re: Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00357.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00363.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00359"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00359"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

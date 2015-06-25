@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Examples: WML Itself -->
+<!--X-From-R13: "Egrcura ina Stzbaq" <finartzbNgehrfcrpgen.pbz> -->
+<!--X-Date: Tue, 23 Dec 1997 19:16:29 +0100 (MET) -->
+<!--X-Message-Id: 199712231749.MAA30050@plymouth.truespectra.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00009">Date Index</a>][<a href="thread.shtml#00009">Thread Index</a>]<br>
+[<A HREF="msg00008.shtml">Date Prev</A>][<A HREF="msg00010.shtml">Date Next</A>][<A HREF="msg00007.shtml">Thread Prev</A>][<A HREF="msg00010.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Examples: WML Itself</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Stephen van Egmond&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Dec 97 12:39:31 EST</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I thought I would show off my use of WML a little bit.
+
+<A  HREF="http://www.truespectra.com/">http://www.truespectra.com/</A>
+
+The front page is a "special case", and all the other ones are built
+off of a template that looks like this:
+
+#use wml::usr::ts
+&lt;tspage title="TrueSpectra Products"&gt;
+&lt;nav place="Products"&gt;
+&lt;divider&gt;                     
+
+.. content goes here  ...
+
+&lt;/tspage&gt;
+
+The &lt;nav place="..."&gt; tag is what generates that tree-like navigator along
+the side.  I have a directory contains the various navigation targets, 
+for instance:
+
+$ ls ~/nav/Products*
+
+/home/www/nav/Products
+/home/www/nav/Products_Beta.testing
+/home/www/nav/Products_Online.ordering
+/home/www/nav/Products_PhotoGraphics
+/home/www/nav/Products_PhotoGraphics_OS2
+/home/www/nav/Products_PhotoGraphics_PRO.for.OS2
+/home/www/nav/Products_PhotoGraphics_Windows   
+
+These names are then used to generate the links to the files themselves;
+in the last case, the corresponding URL is understood to be
+
+<A  HREF="http://www.truespectra.com/products/photographics/windows.html">http://www.truespectra.com/products/photographics/windows.html</A>
+
+_ is the directory separator
+. is a space
+
+The script figures out which parts of the tree to expose and does it,
+generating corresponding style sheet and other markup.  (The pages
+degrade from IE / Netscape 4 to Lynx)
+
+Scripts &amp;c. available on request.
+
+/Steve
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00008.shtml">ANNOUNCE: WML 1.4.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00010.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00007.shtml">Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00010.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00009"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00009"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

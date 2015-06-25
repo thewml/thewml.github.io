@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: relative path variable similiar to &#45;D VAR~. -->
+<!--X-From-R13: <gernplNqrovna.bet> (Xnzrf O. Fernpl) -->
+<!--X-Date: Wed, 9 Sep 1998 03:07:15 +0200 (CEST) -->
+<!--X-Message-Id: E0zGWoi&#45;0004ed&#45;00@landru.math.uwaterloo.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00206">Date Index</a>][<a href="thrd5.shtml#00206">Thread Index</a>]<br>
+[<A HREF="msg00205.shtml">Date Prev</A>][<A HREF="msg00207.shtml">Date Next</A>][<A HREF="msg00205.shtml">Thread Prev</A>][<A HREF="msg00207.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>relative path variable similiar to -D VAR~.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt; (James A. Treacy)</LI>
+<LI><em>Date</em>: Tue, 8 Sep 1998 19:04:56 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+What I'm looking for is having a variable that does the opposite
+of '-D ROOT~.'. This gives the relative path to the directory you started
+in. I'd like the path of my current directory relative to where I
+started. Is this actually available already or have I missed a simple
+means of computing it?
+
+In case I've made this sound more complicate then it is, here is an
+example.
+   top wml directory: webwml
+   current directory: webwml/a/b
+I'd like an easy way to retrieve 'a/b'.
+
+
+As an aside, some people voiced some interest in my use of the wml for
+the Debian web pages. There are two things we do that complicate matters
+somewhat. First, the pages are mirrored (using rsync mostly) to a
+number of places around the world. This necessatated that the html files
+be placed in a different directory from the source so the .wml files
+aren't mirrored unnecessarily. This took a bit of work with Makefiles
+to get to work correctly.
+
+Second, there are translations of the web pages in progress. This is
+where the use of wml really comes in handy. To begin a translation one simply
+extracts a copy of the english pages from CVS, copies the directory structure
+to a new directory and makes a few modifications to the template files. Then they
+can start translating pages as they wish. All the details of headers, footers
+and the multiple scripts used are hidden from the translators.
+
+Since the pages are served using content negotiation, it is not necessary that
+every page be translated (although that should be a goal). Translations are in
+separate files, instead of using the nice features of pass 9 in wml, because we
+are distributed all over the world and it was felt that this would allow
+translators greater freedom to make small modifications for issues particular to
+using Debian in their language.
+
+As you can see this is an organizational nightmare and would never work
+except for the fact that Debian has many wonderful volunteers.
+It's also amazing that this is all done using free tools (apache, wml, perl)
+that are better than any commercial equivalents out there.
+
+Jay Treacy
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00205.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00207.shtml">Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00205.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00207.shtml">Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00206"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00206"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.2 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Thu, 19 Feb 1998 10:56:31 +0100 (MET) -->
+<!--X-Message-Id: 199802190956.KAA07037@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00103">Date Index</a>][<a href="thrd3.shtml#00103">Thread Index</a>]<br>
+[<A HREF="msg00102.shtml">Date Prev</A>][<A HREF="msg00104.shtml">Date Next</A>][<A HREF="msg00396.shtml">Thread Prev</A>][<A HREF="msg00104.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Thu, 19 Feb 1998 10:56:29 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now available:
+
+Website META Language, Version 1.6.2
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+ <A  HREF="ftp://www.engelschall.com/sw/wml/">ftp://www.engelschall.com/sw/wml/</A>
+
+The entry from the ChangeLog file:
+
+  Changes between 1.6.1 and 1.6.2:
+      980216 - fixed wml_faq.pod [Thanks to Robin Stephenson
+               &lt;robin@gbhap.com&gt; for hint]
+             - added "eperlfilter" attribute to &lt;pod&gt; and
+               &lt;import&gt; tags to allow post-filtering by an ePerl
+               function.
+      980217 - fixed FSF address and added --best option
+               for gzip on creating the tarball.  [Thanks to
+               Anthony Fok &lt;foka@gpu.srv.ualberta.ca&gt; for patch]
+             - fixed version comparison in the new WMu frontend
+               [Thanks to Alvise Belotti
+               &lt;alvise@lettere.unipd.it&gt; for hint]
+      980218 - removed bogus X%1X debugging stuff from
+               wml::std::lang which I forgot to remove.
+             - added new &lt;lang:star:href:&gt; tag to wml::std::lang
+             - Upgraded Bit::Vector from 5.0b2 to 5.0b4
+             - Fixed domainname determination in configure
+             - Upgraded to Slice 1.3.2
+      980219 - adjusted ANNOUNCE file
+             - stripped down the Meta-HTML documentation
+               so only features remain WML's Meta-HTML has
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00102.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00104.shtml">invoking wml in current perl interpreter?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00396.shtml">Re: including files depending on language</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00104.shtml">invoking wml in current perl interpreter?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00103"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00103"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Combining slices and divert -->
+<!--X-From-R13: Knaa [hyyre <zhyyrelNhx.voz.pbz> -->
+<!--X-Date: Thu, 14 Jan 1999 16:25:44 +0100 (CET) -->
+<!--X-Message-Id: 5060100027956470000002L002*@MHS -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00314">Date Index</a>][<a href="thrd7.shtml#00314">Thread Index</a>]<br>
+[<A HREF="msg00313.shtml">Date Prev</A>][<A HREF="msg00315.shtml">Date Next</A>][<A HREF="msg00331.shtml">Thread Prev</A>][<A HREF="msg00321.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Combining slices and divert</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Yann Muller &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 15:28:56 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I have almost finished converting my old site to use WML but I have a few
+questions to be able to finish it.
+My site is both in French and in English but some pages contain both French
+and English. So I'd like to have the French part at the top of the French page
+and the English part first in the English page. Makes sense?
+I tried to do it this way:
+
+&lt;EN&gt;&lt;DUMP ENGLISH&gt;&lt;DUMP FRENCH&gt;&lt;/EN&gt;
+&lt;FR&gt;&lt;DUMP FRENCH&gt;&lt;DUMP ENGLISH&gt;&lt;/FR&gt;
+
+&lt;DIVERT FRENCH&gt;
+  Some text with more language tags (French text has English title anyway)
+&lt;/DIVERT&gt;
+&lt;DIVERT ENGLISH&gt;
+  Some text with more language tags
+&lt;/DIVERT&gt;
+
+But I have an error message saying:
+  ** Slice:Error: Some slices were not closed:
+  ** WML:Break: Error in pass 9 (rc=1).
+
+Well I have slices in the diverted areas and the dumps are in slices so
+problems were to be expected. But is there a way to do what I want?
+
+
+To other questions:
+When using a #!wml ... line in the WML files, wmk rebuilds every file. Is there
+a way aroud it (other than using a make file)?
+Is there an easy way to build the HTML files in a different directory tree than
+the WML files?
+Thank you for any help.
+
+Greetings,
+Yann.
+
+     Yann Muller        Tel: Ext: (44|0)1705 565733   Int: 255733
+     Notes: Yann Muller/UK/IBM    e-mail: mullery@uk.ibm.com
+     Network Management Development - AIX Solutions
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00321" HREF="msg00321.shtml">Re: Combining slices and divert</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00313.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00315.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00331.shtml">Re: ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00321.shtml">Re: Combining slices and divert</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00314"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00314"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with ifeq under 2.0.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 19 May 2000 11:19:45 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000519105751.7266A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0005191000390.30521&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01579">Date Index</a>][<a href="thrd33.shtml#01579">Thread Index</a>]<br>
+[<A HREF="msg01578.shtml">Date Prev</A>][<A HREF="msg01583.shtml">Date Next</A>][<A HREF="msg01586.shtml">Thread Prev</A>][<A HREF="msg01578.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with ifeq under 2.0.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 19 May 2000 11:19:16 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 19 May 2000, Franz Knipp wrote:
+
+[...]
+&gt; I think, this should be treated as bug - the interface to the user must be
+&gt; transparent, independent if it's a HTML or a defined tag. The user (which
+&gt; may not know the secrets inside the included modules) cannot distinguish
+&gt; between tags, which are defined by WML, and standard HTML tags.
+
+Agree.
+
+&gt; In fact, some HTML tags can be and are redefined by WML (which means
+&gt; substituted by a WML tag with the same name) e. g. &lt;head&gt;.
+&gt; 
+&gt; Let's solve it!
+
+One solution is to remove the &lt;if&gt; tag (and friends).  This is certainly
+not what you expected, but it is a good idea.  Now let's see whether
+there is a better issue.
+
+I send a description of quoting mechanism in a separate post (later, maybe
+this afternoon if i have time).
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01586" HREF="msg01586.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01578.shtml">there's still a bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01583.shtml">Bug report - Pass 2: &lt;group&gt; tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01586.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01578.shtml">there's still a bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01579"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01579"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

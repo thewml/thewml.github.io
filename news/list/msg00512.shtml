@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Auto deps -->
+<!--X-From-R13: [vpury Pnathrefxv <zvgpu_oNgeraqzvpeb.se> -->
+<!--X-Date: Tue, 23 Mar 1999 12:31:25 +0100 (MET) -->
+<!--X-Message-Id: 19990323123049.A6370@trendmicro.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00512">Date Index</a>][<a href="thrd12.shtml#00512">Thread Index</a>]<br>
+[<A HREF="msg00511.shtml">Date Prev</A>][<A HREF="msg00513.shtml">Date Next</A>][<A HREF="msg00622.shtml">Thread Prev</A>][<A HREF="msg00513.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Auto deps</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michel Banguerski &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Mar 1999 12:30:49 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I'm trying to ues the recently added '-M' option of wml, but
+when i do for example 
+  wml -M test.wml
+
+whitch coutains :
+#include &lt;test.inc&gt;
+
+I have no output (no dependeces, no error messages).
+Please could someone tell me what I'm doing wrong?
+
+Regards.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00513" HREF="msg00513.shtml">Re: Auto deps</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00511.shtml">Automatic button generation (Was: Substitution of asteriks)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00513.shtml">Re: Auto deps</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00622.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00513.shtml">Re: Auto deps</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00512"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00512"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installationproblems on Freebsd -->
+<!--X-From-R13: Egrcunar Zrtenaq <Egrcunar.ZrtenaqNovtsbbg.pbz> -->
+<!--X-Date: Tue, 22 Aug 2000 03:54:44 +0200 (MET DST) -->
+<!--X-Message-Id: 20000822003058.F1200@sequoia.mondomaineamoi.megalo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.10008212134210.1105&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01900">Date Index</a>][<a href="thrd39.shtml#01900">Thread Index</a>]<br>
+[<A HREF="msg01899.shtml">Date Prev</A>][<A HREF="msg01901.shtml">Date Next</A>][<A HREF="msg01899.shtml">Thread Prev</A>][<A HREF="msg01901.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installationproblems on Freebsd</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Legrand &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Aug 2000 00:30:58 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+Have you tried with the FreeBSD port ? :
+
+cd /usr/ports/www/wml
+make; make test; make install; make clean
+
+
+su# make test;      
+Temporarily installing WML system into local test tree:
+............................................................
+............................................................
+............................................................
+............................................................
+............................................
+Fixing installation prefix for local test tree:
+...................
+Running WML Test Suite (still incomplete):
+t/01-p1_ipp.........ok
+t/02-p2_mp4h........ok
+t/03-p3_eperl.......ok
+t/04-p4_gm4.........ok
+t/05-p5_divert......ok
+t/06-p6_asubst......ok
+t/07-p7_htmlfix.....ok
+t/08-p8_htmlstrip...ok
+t/09-p9_slice.......ok
+t/10-wml............ok
+t/11-wmk............ok
+t/des-gfont.........(skipped) ok
+t/des-navbar........ok
+t/des-space.........ok
+t/des-typography....ok
+t/std-grid..........ok
+t/std-lang..........ok
+t/std-toc...........ok
+All tests successful.
+Files=18,  Tests=59, 130 wallclock secs (48.89 cusr +  5.78 csys = 54.67 CPU)
+
+
+This is with FreeBSD 4.1-STABLE and the port is for wml 2.0.2
+
+
+On Mon, Aug 21, 2000 at 09:58:42PM +0200, Wolfgang Dautermann wrote:
+&gt; Hi,
+&gt; 
+&gt; I've problems installing wml (neither 2.0.2 nor the current snapshot
+&gt; works) on a Freebsd-System; Installation on Linux works perfect. But I
+&gt; would like to have wml on that system too. 
+&gt; 
+&gt; ...
+
+-- 
+Stephane.Legrand@bigfoot.com
+FreeBSD Francophone : <A  HREF="http://www.freebsd-fr.org/">http://www.freebsd-fr.org/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01901" HREF="msg01901.shtml">Re: Installationproblems on Freebsd</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01899" HREF="msg01899.shtml">Installationproblems on Freebsd</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01899.shtml">Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01901.shtml">Re: Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01899.shtml">Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01901.shtml">Re: Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01900"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01900"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

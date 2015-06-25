@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Specifying an alternate output extension -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 2 Dec 1999 09:00:15 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991202090708.19224A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.9912010202510.19676&#45;100000@ace.ulyssis.student.kuleuven.ac.be -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01177">Date Index</a>][<a href="thrd25.shtml#01177">Thread Index</a>]<br>
+[<A HREF="msg01176.shtml">Date Prev</A>][<A HREF="msg01178.shtml">Date Next</A>][<A HREF="msg01165.shtml">Thread Prev</A>][<A HREF="msg01167.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Specifying an alternate output extension</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 2 Dec 1999 09:09:05 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 1 Dec 1999, scratch wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I remember there was a discussion on the list about giving all your wml
+&gt; output files another name/location on the fly (without using shebang lines
+&gt; in every .wml file). Unfortunately, I can't seem to find it in the
+&gt; archives anymore. So here it goes:
+&gt; 
+&gt; I'd like to put some line in .wmkrc or .wmlrc (someone please explain the
+&gt; difference to me):
+
+Wmk reads .wmkrc whereas wml reads .wmlrc ;)
+
+&gt; -o $(WML_SRC_BASE).shtml
+&gt; 
+&gt; and then execute 'wmk' in a directory with .wml files, so that .shtml
+&gt; files are generated and not .html files. Unfortunately, the WML_SRC_BASE
+&gt; environment variable is not getting parsed.
+&gt; 
+&gt; Can anyone help me?
+
+ -o %BASE.shtml
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01165" HREF="msg01165.shtml">Specifying an alternate output extension</A></strong>, <em>From:</em> scratch</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01176.shtml">Re: recursive &lt;when&gt; &lt;/when&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01178.shtml">[HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01165.shtml">Specifying an alternate output extension</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01167.shtml">conditionel include</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01177"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01177"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

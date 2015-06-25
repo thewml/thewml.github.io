@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG] Last call for comments before WML 2.0.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 16 Jun 2000 08:25:24 +0200 (MET DST) -->
+<!--X-Message-Id: 20000616082723.A12627@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000615185321.A11716@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01719">Date Index</a>][<a href="thrd36.shtml#01719">Thread Index</a>]<br>
+[<A HREF="msg01718.shtml">Date Prev</A>][<A HREF="msg01720.shtml">Date Next</A>][<A HREF="msg01718.shtml">Thread Prev</A>][<A HREF="msg01720.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG] Last call for comments before WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 16 Jun 2000 08:27:23 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 15, 2000 at 06:53:21PM +0200, Denis Barbier wrote:
+
+&gt; Hear hear,
+&gt; 
+&gt; WML 2.0.2 will be hopefully released next week.  It would be great
+&gt; if it was intensively tested before this date.  There has been some
+&gt; tests, of course, e.g. the whole WML website has been rebuilt with
+&gt; wml-SNAP, but there are surely some nasty bugs hidden in files i do
+&gt; not use.
+[...]
+
+FYI, i have compiled the whole Debian website with wml-SNAP, and
+had to change 5 lines only (i think it is usually processed through
+WML 1.7.4).  So i am quite confident with the new mp4h syntax.
+As Debian site do not use WML module files, there may still be bugs
+in those files.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01718" HREF="msg01718.shtml">[LONG] Last call for comments before WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01718.shtml">[LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01720.shtml">relative links</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01718.shtml">[LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01720.shtml">relative links</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01719"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01719"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2, sparc&#45;sun&#45;solaris2.6 -->
+<!--X-From-R13: cybaxnNqbvg.jvfp.rqh -->
+<!--X-Date: Sat, 17 Jul 1999 00:25:51 +0200 (MET DST) -->
+<!--X-Message-Id: 199907162225.AAA20859@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00858">Date Index</a>][<a href="thrd18.shtml#00858">Thread Index</a>]<br>
+[<A HREF="msg00857.shtml">Date Prev</A>][<A HREF="msg00860.shtml">Date Next</A>][<A HREF="msg00846.shtml">Thread Prev</A>][<A HREF="msg00859.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sat, 17 Jul 1999 00:25:48 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2
+Operating System: sparc-sun-solaris2.6
+
+Problem Description:
+| In working with navbars I noticed that it messes up "absolute" URLs
+| on buttons unless they are use HTTP as in "http://...".
+| 
+| The root of the problem is in "wml_include/des/navbar.src" which contains
+| a quick and dirty regexp which decides that a URL is absolute only if it
+| contains "http".
+| 
+| Please see my accompanying post to the "sw-wml" mailing
+| list for full details and a patch.
+| 
+| Thanks!
+| Dave
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00859" HREF="msg00859.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00857.shtml">navbar problem with non-HTTP URLs (patch included)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00860.shtml">Re: print &quot;&lt;DIV ...&quot;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00846.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00859.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00858"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00858"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: rendering of tables -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Fri, 27 Oct 2000 08:39:53 +0200 (MET DST) -->
+<!--X-Message-Id: 39F92D24.75D0C75A@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02042">Date Index</a>][<a href="thrd41.shtml#02042">Thread Index</a>]<br>
+[<A HREF="msg02041.shtml">Date Prev</A>][<A HREF="msg02043.shtml">Date Next</A>][<A HREF="msg02041.shtml">Thread Prev</A>][<A HREF="msg02043.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>rendering of tables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 27 Oct 2000 08:22:12 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I'm reworking my HTML tables and have just started to work
+with the &lt;xtable&gt; tag. Now I'm looking for a method do
+create different tables from one (&lt;xtable&gt;) database.
+
+As far as I understand, there is no difference between
+"setting" up the table data and "rendering" them (like let's
+say in the &lt;navbar ..&gt; tags). Example:
+
+setting up the table data:
+
+&lt;cell:define 1,1&gt;content&lt;/cell:define&gt;
+&lt;cell:define 2,1&gt;content&lt;/cell:define&gt;
+
+...
+
+rendering the table:
+
+&lt;cell:render *,1&gt;print column 1&lt;/cell:render&gt;
+
+Can you point me into a  direction to get a solution?
+
+I have thought about converting my HTML tables into a CSV
+file or another database format and then creating the 
+tables from these database. But this is an errorprone
+method and also I would like to stay with WML.
+
+Werner
+
+-- 
+-= MobiliX  - Home of the Linux-Laptop-Guide <A  HREF="http://mobilix.org">http://mobilix.org</A> =-
+-= Xtops.DE - Laptops and PDAs with Linux <A  HREF="http://xtops.de">http://xtops.de</A>       =-
+
+FromX-Mozilla-Status: 0009 2000
+X-Mozilla-Status: 0801
+X-Mozilla-Status2: 00000000
+FCC: /C|/PROGRAMME/NETSCAPE/Users/r2d2c3po/mail/Sent
+Message-ID: &lt;39F92EFE.B976D30C@snafu.de&gt;
+Date: Fri, 27 Oct 2000 08:30:06 +0100
+From: Werner Heuser &lt;wehe@snafu.de&gt;
+Organization: Xtops.DE
+X-Mozilla-Draft-Info: internal/draft; vcard=0; receipt=0; uuencode=0; html=0; linewidth=0
+X-Mailer: Mozilla 4.74 [en] (Win95; U)
+X-Accept-Language: en,de-DE
+MIME-Version: 1.0
+To: DEBIAN-LAPTOP &lt;debian-laptop@lists.debian.org&gt;
+Subject: new 'linux-laptop' list
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+since the `linux-laptop` list provided by majordomo@vger.rutgers.edu
+doesn't seem available anymore, MobiliX offers a new list now.
+
+You may subscribe via the `linux-laptop` subscription page:
+<A  HREF="http://mobilix.org/mobilix_ml.html">http://mobilix.org/mobilix_ml.html</A>
+
+Werner
+
+-- 
+-= MobiliX  - Home of the Linux-Laptop-Guide <A  HREF="http://mobilix.org">http://mobilix.org</A> =-
+-= Xtops.DE - Laptops and PDAs with Linux <A  HREF="http://xtops.de">http://xtops.de</A>       =-
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02043" HREF="msg02043.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02041.shtml">Re: [BUG REPORT] WML 2.0.5, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02043.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02041.shtml">Re: [BUG REPORT] WML 2.0.5, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02043.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02042"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02042"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wmk &#45;M (was: doc error in wmk man page?) -->
+<!--X-From-R13: Vnaf Gyevpu @vrqreznaa <hyvNavrqreznaa.oo.onjhr.qr> -->
+<!--X-Date: Tue, 9 Nov 1999 08:20:03 +0100 (MET) -->
+<!--X-Message-Id: m2vh7c1uo9.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991108110109.12777A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01130">Date Index</a>][<a href="thrd24.shtml#01130">Thread Index</a>]<br>
+[<A HREF="msg01129.shtml">Date Prev</A>][<A HREF="msg01131.shtml">Date Next</A>][<A HREF="msg01126.shtml">Thread Prev</A>][<A HREF="msg01125.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wmk -M (was: doc error in wmk man page?)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Hans Ulrich Niedermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 08 Nov 1999 23:32:22 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+thanks a lot for the patch.
+
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+[ Patch for wmk to recognise -M option of wml ]
+
+I was just testing it and stumbled over "wmk -M" working for some
+files but not for others. I suspect wmk processes the -M option as any
+other wml option, i.e. performing its own dependecy checks and then
+sometimes deciding that wml doesn't need to be run. In this case no
+dependency information will be printed.
+
+OK, probably I find a way to adapt my quite complex web site Makefile
+system not to rely on "wml -M" and using "wmk *.wml" instead, so this
+is not urgent. 
+
+Thinking more about it, I'm asking myself if it does make sense at all
+for wmk to pass the -M option. Perhaps it would be better not to
+handle -M in wmk because it makes no sense and putting an according
+not into wmk(1)?
+
+Just some random thoughts...
+
+ULi
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01126" HREF="msg01126.shtml">Re: doc error in wmk man page?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01129.shtml">Re: Navbar in two languages</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01131.shtml">empty eperl man file</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01126.shtml">Re: doc error in wmk man page?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01125.shtml">Navbar in two languages</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01130"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01130"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

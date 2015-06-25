@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: use of slices restricted with <img>&#45;tag -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Sun, 12 Dec 1999 15:30:06 +0100 (MET) -->
+<!--X-Message-Id: 199912121419.PAA32300@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01215">Date Index</a>][<a href="thrd25.shtml#01215">Thread Index</a>]<br>
+[<A HREF="msg01214.shtml">Date Prev</A>][<A HREF="msg01216.shtml">Date Next</A>][<A HREF="msg01217.shtml">Thread Prev</A>][<A HREF="msg01218.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>use of slices restricted with &lt;img&gt;-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Dec 1999 15:19:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hi
+while working on my sources and implementing all those
+hints i got recently i run into some new problem. since i
+know that i do not know all different things about wml i
+let you make the decision if i'm right and besides calling
+htmlfix on each html-file again what to do about it:
+
+supposed the files image.gif and image_f.gif are there 
+test.wml is:
+---------------------
+#!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html \
+    -o (ALL-LANG_*)uLANG_FR:%BASE_f.html
+
+#use wml::std::lang
+&lt;lang:new id=de short&gt;
+&lt;lang:new id=fr short&gt;
+
+&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;img src="$(ROOTIMG)/t_akt&lt;de: &gt;&lt;fr: _f&gt;_lo.gif"&gt;
+&lt;/body&gt;&lt;/html&gt;
+---------------------
+
+compile it:
+$ wml -E "weblint -s" test.wml
+line 2: setting WIDTH and HEIGHT attributes on IMG tag can
+improve rendering performance on some browsers.
+
+test.html:
+&lt;img src="image.gif"&gt;
+
+test_f.html
+&lt;img src="image_f.gif"&gt;
+
+so how is that?
+cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01218" HREF="msg01218.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01214.shtml">Yet another slice with no navigation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01216.shtml">slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01217.shtml">Re: Yet another slice with no navigation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01218.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01215"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01215"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

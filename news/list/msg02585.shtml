@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <toc_hN>  together with language slices? -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Wed, 3 Apr 2002 14:05:11 +0200 (MET DST) -->
+<!--X-Message-Id: 3CAAF02F.7060100@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02585">Date Index</a>][<a href="thrd52.shtml#02585">Thread Index</a>]<br>
+[<A HREF="msg02584.shtml">Date Prev</A>][<A HREF="msg02586.shtml">Date Next</A>][<A HREF="msg02584.shtml">Thread Prev</A>][<A HREF="msg02590.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;toc_hN&gt;  together with language slices?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 03 Apr 2002 12:06:07 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi guys,
+
+since I didn't get a reply when I first asked this question, I though I'd 
+try again :-)
+
+What's the easiest way to use &lt;toc_hN&gt; constructs when also using
+language slices?
+
+The "simple" aproach below results in *all* headers being collected
+for the toc in *all* slices:
+
+&lt;d&gt;
+&lt;toc_h1&gt;German toc entry&lt;/toc_h1&gt;
+&lt;/d&gt;
+&lt;e&gt;
+&lt;toc_h1&gt;English toc entry&lt;/toc_h1&gt;
+&lt;/e&gt;
+
+
+So does
+
+&lt;toc_h1&gt;&lt;d&gt;German toc entry&lt;/d&gt;&lt;e&gt;English toc entry&lt;/e&gt;&lt;/toc_h1&gt;
+
+
+Any ideas?
+
+Thanks in advance for any pointers!
+
+Stephan
+
+-- 
+
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+ &gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+ &gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02584.shtml">nested #CONTENT#</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02586.shtml">Re: breadcrumb navigation trail</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02584.shtml">nested #CONTENT#</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02590.shtml">name of current WML file</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02585"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02585"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

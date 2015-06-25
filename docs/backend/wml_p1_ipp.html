@@ -1,0 +1,581 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Core / IPP (Pass 1)</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:36"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+<br />
+<ul class="navbarnestnest">
+<li>
+<b>p1_ipp</b>
+</li>
+<li>
+<a href="./wml_p2_mp4h.html">p2_mp4h</a>
+</li>
+<li>
+<a href="./wml_p3_eperl.html">p3_eperl</a>
+</li>
+<li>
+<a href="./wml_p4_gm4.html">p4_gm4</a>
+</li>
+<li>
+<a href="./wml_p5_divert.html">p5_divert</a>
+</li>
+<li>
+<a href="./wml_p6_asubst.html">p6_asubst</a>
+</li>
+<li>
+<a href="./wml_p7_htmlfix.html">p7_htmlfix</a>
+</li>
+<li>
+<a href="./wml_p8_htmlstrip.html">p8_htmlstrip</a>
+</li>
+<li>
+<a href="./wml_p9_slice.html">p9_slice</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Core / IPP (Pass 1)</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ipp - Include Pre-Processor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+		<li><a href="#using_wildcards"><strong>Using Wildcards</strong></a></li>
+		<li><a href="#special__use__variant"><strong>Special `Use' Variant</strong></a></li>
+		<li><a href="#special__depends__variant"><strong>Special `Depends' Variant</strong></a></li>
+		<li><a href="#input_line_synchronization"><strong>Input Line Synchronization</strong></a></li>
+		<li><a href="#include_variables"><strong>Include Variables</strong></a></li>
+		<li><a href="#implicit_ipp_variables"><strong>Implicit IPP Variables</strong></a></li>
+		<li><a href="#comments"><strong>Comments</strong></a></li>
+		<li><a href="#endoffile_stopping"><strong>End-Of-File Stopping</strong></a></li>
+		<li><a href="#endofline_continuation"><strong>End-Of-Line Continuation</strong></a></li>
+	</ul>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#authors">AUTHORS</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>ipp - Include Pre-Processor</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>ipp</strong>
+[<strong>-D</strong> <em>name</em><strong>=</strong><em>value</em>]
+[<strong>-S</strong> <em>includedir</em>]
+[<strong>-I</strong> <em>includedir</em>]
+[<strong>-s</strong> <em>includefile</em>]
+[<strong>-i</strong> <em>includefile</em>]
+[<strong>-M</strong> <em>options</em>]
+[<strong>-P</strong> <em>path</em>]
+[<strong>-m</strong> <em>mapfile</em>]
+[<strong>-N</strong> <em>nosynclines</em>]
+[<strong>-o</strong> <em>outputfile</em>]
+[<strong>-v</strong>]
+<em>inputfile</em> ...</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The <em>ipp</em> program reads all <em>inputfile</em>s and recursively expands all</p>
+<pre>
+<p>directives by substituting the directive with the contents of the file.  The
+output is send to <em>stdout</em> or to <em>outputfile</em>. The files are searched
+according to the following scheme:</p>
+<dl>
+<dt><strong><a name="item__23include__27file_27"><strong>#include 'file'</strong></a></strong>
+
+<dd>
+<p>The file is searched in the current working directory <strong>only</strong>. Use
+this to force the loading of a local file.</p>
+</dd>
+</li>
+<dt><strong><a name="item__23include__22file_22"><strong>#include ``file''</strong></a></strong>
+
+<dd>
+<p>The file is searched in all directories given by the <strong>-I</strong> option in the
+right-to-left order they are specified on the command line.  Note that
+a <strong>-I .</strong> implicit option is automatically appended to command-line
+options, then files are first searched in current directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__23include__3cfile_3e"><strong>#include &lt;file&gt;</strong></a></strong>
+
+<dd>
+<p>First the file is searched in the system wide <code>ipp</code> include directory
+specified with the <strong>-S</strong> option. Second if it was not not found there it is
+searched for in all directories given by the <strong>-I</strong> option.</p>
+</dd>
+</li>
+</dl>
+<p>And it provides eight additional features:</p>
+<p>
+</p>
+<h2><a name="using_wildcards"><strong>Using Wildcards</strong></a></h2>
+<p>These characters have a special meaning in filenames:</p>
+<ul>
+<li><strong><a name="item_matches_any_string_2c_including_the_null_string_2e"><code>*</code>   Matches any string, including the null string.</a></strong>
+
+<dt><strong><a name="item__3f_matches_any_single_character_2e"><code>?</code>   Matches any single character.</a></strong>
+
+<dt><strong><a name="item__5b_2e_2e_2e_5d_like_bracketed_expressions_in_rege"><code>[...]</code>  Like bracketed expressions in regexps, matches any of the
+             enclosed characters.</a></strong>
+
+</ul>
+<p>If you want to include all your templates, you may write</p>
+<pre>
+<p>With the following parameters you can control the order and the number
+of included files using the <strong>#include 'pattern'</strong> directive:</p>
+<dl>
+<dt><strong><a name="item_date"><code>IPP_SORT=scheme</code>     Specify a sort criterion to include files.
+          There are actually 3 different criteria : date (files are
+          sorted according to their last modification time), name
+          (this is the default) and numeric (filenames are sorted
+          numerically).</a></strong>
+
+<dt><strong><a name="item_ipp_reverse_3dscheme_as_above_2c_but_resulting_lis"><code>IPP_REVERSE=scheme</code>  As above, but resulting list of filenames
+          is sorted in reverse order.</a></strong>
+
+<dt><strong><a name="item_ipp_max_3dnmax_only_nmax_files_are_included_2e"><code>IPP_MAX=nmax</code>        Only <em>nmax</em> files are included.</a></strong>
+
+</dl>
+<p>If you want to include the 5 newest include files of the news directory
+with file names like <code>20000131.inc</code>, you may write:</p>
+<pre>
+<p>In the files included with the <code>#include 'pattern'</code> directive, the
+following variables are set and can be read using <code>$(name)</code>:</p>
+<dl>
+<dt><strong><a name="item_ipp_this_the_full_name_of_the_included_source_file"><code>IPP_THIS</code>  the full name of the included source file including
+                       path and extension</a></strong>
+
+<dt><strong><a name="item_ipp_prev_the_full_name_of_the_previous_included_fi"><code>IPP_PREV</code>  the full name of the previous included file, unset
+                       in the first file</a></strong>
+
+<dt><strong><a name="item_ipp_next_the_full_name_of_the_next_included_file_2"><code>IPP_NEXT</code>  the full name of the next included file, unset
+                       in the last file</a></strong>
+
+</dl>
+<p>Keep in mind that a directive without wildcards does not set these
+variables.</p>
+<p>
+</p>
+<h2><a name="special__use__variant"><strong>Special `Use' Variant</strong></a></h2>
+<p>In analogon to Perl's <code>use</code> statement, <em>ipp</em> provides a special variant of
+<code>#include</code>:</p>
+<pre>
+<p>This internally is equivalent to the directive</p>
+<pre>
+<p>plus the special semantic that the include file is included (=used) only once,
+i.e. multiple inclusion is automatically avoided. In other words</p>
+<pre>
+<p>results in three inclusions of 'file'. Two from the <code>#include</code>'s and only
+once from the <code>#use</code> directives.</p>
+<p>
+</p>
+<h2><a name="special__depends__variant"><strong>Special `Depends' Variant</strong></a></h2>
+<p>You can easily write fragments of Makefiles with the <strong>-M</strong> flag (see
+below) to keep tracks of which files the output file depends on, When
+<code>ipp</code> is invoked as a piece of <code>WML</code>, the final output file may depend
+on other files.  You can tell <code>ipp</code> about these hidden dependencies by
+using the <code>#depends</code> variant , e.g.</p>
+<pre>
+<p>The contents of the file is not inserted, only informations about
+dependencies are updated.</p>
+<p>
+</p>
+<h2><a name="input_line_synchronization"><strong>Input Line Synchronization</strong></a></h2>
+<p>All include commands insert some special stuff to help <code>WML</code> keeping
+track of input line numbers.  This feature may be disabled by appending
+the string <code>IPP_NOSYNCLINES</code> to the <code>#include</code> (or its variants)
+command.  See also the <code>-N</code> flag.</p>
+<p>
+</p>
+<h2><a name="include_variables"><strong>Include Variables</strong></a></h2>
+<p>You can add</p>
+<pre>
+   name[=value]</pre>
+<p>pairs at the end of <code>#include</code> (and <code>#use</code>) directives to let <code>$(name)</code>
+interpolate to <code>value</code> (or <code>1</code> if <code>=value</code> is missing) in this include file
+and all its recursively included files.</p>
+<p>There are the following forms of the <code>$(name)</code> syntax, similar to the
+functionality any Bourne Shell provides:</p>
+<dl>
+<dt><strong><a name="item_o__24_28name_29">o <strong><code>$(name)</code></strong></a></strong>
+<dd>
+<p>`Use Only Value': The standard interpolation.</p>
+</dd>
+<dd>
+<pre>
+ if (exists(name))
+     expandto(valueof(name))
+ else
+     expandto(&quot;&quot;)</pre>
+</dd>
+</li>
+<dt><strong><a name="item_o__24_28name_3dstring_29">o <strong><code>$(name=string)</code></strong></a></strong>
+<dd>
+<p>`Assign Value': Set a variable.</p>
+</dd>
+<dd>
+<pre>
+ name := string</pre>
+</dd>
+</li>
+<dt><strong><a name="item_o__24_28name_3a_2dstring_29">o <strong><code>$(name:-string)</code></strong></a></strong>
+<dd>
+<p>`Use Default String': The standard interpolation
+with a default value.</p>
+</dd>
+<dd>
+<pre>
+ if (exists(name))
+     expandto(valueof(name))
+ else
+     expandto(string)</pre>
+</dd>
+</li>
+<dt><strong><a name="item_o__24_28name_3a_3dstring_29">o <strong><code>$(name:=string)</code></strong></a></strong>
+<dd>
+<p>`Use Default String and Assign': The standard interpolation with a default
+value and additional assignment for later use.</p>
+</dd>
+<dd>
+<pre>
+ if (exists(name))
+     expandto(valueof(name))
+ else
+     expandto(string)
+     name := string</pre>
+</dd>
+</li>
+<dt><strong><a name="item_o__24_28name_3a_2bstring_29">o <strong><code>$(name:+string)</code></strong></a></strong>
+<dd>
+<p>`Use Alternate String'. The replacement interpolation.</p>
+</dd>
+<dd>
+<pre>
+ if (exists(name))
+     expandto(string)
+ else
+     expandto(&quot;&quot;)</pre>
+</dd>
+</li>
+<dt><strong><a name="item_o__24_28name_3a_2astring_29">o <strong><code>$(name:*string)</code></strong></a></strong>
+<dd>
+<p>`Use Negative Alternate String'. The replacement interpolation with negated
+logic.</p>
+</dd>
+<dd>
+<pre>
+ if (exists(name))
+     expandto(&quot;&quot;)
+ else
+     expandto(string)</pre>
+</dd>
+</li>
+<dt><strong><a name="item_o__24_28name_3a_3fstring_29">o <strong><code>$(name:?string)</code></strong></a></strong>
+<dd>
+<p>`Indicate Error If Unset'. The error message interpolation. This can also be
+used in conjunction with the above variants.</p>
+</dd>
+<dd>
+<pre>
+ if (exists(name))
+     expandto(valueof(name))
+ else
+     Error(string)</pre>
+</dd>
+</li>
+</dl>
+<p>Previous constructs may be nested when variable expansion contains no
+parenthesis. You may for instance need these forms:</p>
+<p>`Set a variable if unset'.</p>
+<pre>
+  $(var=$(var:-string))</pre>
+<p>`Redefine a variable if it is already set.'</p>
+<pre>
+  $(var=$(var:+string))</pre>
+<p>Notice that nested expressions are not handled as shells do. In shells
+expressions are treated from left to right, whereas <code>ipp</code> treat inner
+expressions first. With this example below</p>
+<pre>
+  $(foo=bar)
+  $(foo:-$(foo=quux))</pre>
+<p>Bourne shells will show <code>bar</code> whereas <code>ipp</code> will print <code>quux</code>.</p>
+<p>It is also possible to undefine a variable. To do so, assign an empty
+value to this variable, e.g.</p>
+<pre>
+  $(foo=)</pre>
+<p>Notice the possibility to do simple If-Then-Else constructs:</p>
+<pre>
+  $(foo:+string_when_set)$(foo:*string_when_not_set)</pre>
+<p>This is equivalent to the following pseudo-code:</p>
+<pre>
+  if (exists(foo))
+      expandto(string_when_set)
+  else
+      expandto(string_when_not_set)</pre>
+<p>
+</p>
+<h2><a name="implicit_ipp_variables"><strong>Implicit IPP Variables</strong></a></h2>
+<p>The strings <code>__FILE__</code> and <code>__LINE__</code> are always substituted by the
+currently processed include file and the current line number.</p>
+<p>
+</p>
+<h2><a name="comments"><strong>Comments</strong></a></h2>
+<p>IPP provides support for up-to-end-of-line comments.
+This type of comment is like the one found in Bourne-Shell or Perl, i.e. any
+line which starts with a sharp symbol (`<code>#</code>') is entirely (i.e. including the
+newline at the end) removed from the input. Additionally these lines can have
+whitespaces in front of the sharp symbol. When you really need a sharp symbol
+at the start of a line you can use <code>\#</code>, i.e. prefix it with an escaping
+backslash.</p>
+<p>
+</p>
+<h2><a name="endoffile_stopping"><strong>End-Of-File Stopping</strong></a></h2>
+<p>It stops processing the current include file when a line containing just</p>
+<pre>
+  __END__</pre>
+<p>occurs. Use this to append POD documents to include files for documentation
+purposes as in Perl. You can use <code>__END__</code> in constructs like
+<code>$(SHORTENING:+__END__)</code>, so that the processing is only stopped
+when the variable SHORTENING is set.</p>
+<p>
+</p>
+<h2><a name="endofline_continuation"><strong>End-Of-Line Continuation</strong></a></h2>
+<p>It removes all occurences of the pattern</p>
+<pre>
+  \&lt;whitespace&gt;*&lt;newline&gt;&lt;whitespace&gt;*</pre>
+<p>Use this to let one or more lines to be concatenated.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2dd_name_3dvalue"><strong>-D</strong> <em>name</em><strong>=</strong><em>value</em></a></strong>
+<dd>
+<p>Defines a variable the for the initial <em>inputfile</em> the same way you define
+ones with the <strong>#include</strong> for include files. The variable can be interpolated
+via <code>$(name)</code> in all files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ds_includedir"><strong>-S</strong> <em>includedir</em></a></strong>
+<dd>
+<p>Adds a system wide include directory. You can use this option more than once.
+The files are searched in right-to-left order.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2di_includedir"><strong>-I</strong> <em>includedir</em></a></strong>
+<dd>
+<p>This adds an entry to the include path where include files are searched for.
+You can use this option more than once. The files are searched in
+right-to-left order. The current working directory is always appended as the
+last directory to this list, and so is searched first.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ds_includefile"><strong>-s</strong> <em>includefile</em></a></strong>
+<dd>
+<p>Pre-load a particular include file, i.e. virtually adds a</p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<p>in front of <em>inputfile</em>. Use this to automatically load default system
+include files. You can also use the syntax <code>type::category::file</code>
+which leads to a virtually added</p>
+</dd>
+<dd>
+<pre>
+</dd>
+</li>
+<dt><strong><a name="item__2di_includefile"><strong>-i</strong> <em>includefile</em></a></strong>
+
+<dd>
+<p>Pre-loads a particular include file, i.e. virtually adds a</p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<p>in front of <em>inputfile</em>. Use this to automatically load default user include
+files.   You can also use the syntax <code>type::category::file</code> which leads to a
+virtually added</p>
+</dd>
+<dd>
+<pre>
+</dd>
+</li>
+<dt><strong><a name="item__2dm_options"><strong>-M</strong> <em>options</em></a></strong>
+
+<dd>
+<p>Output a rule suitable for `make' describing the dependencies of each output
+file, as `gcc' does. It has only sense when the <strong>-o</strong> option is used.</p>
+</dd>
+<dd>
+<p>The <strong>D</strong> flag option writes the rule to a dependency file. The name of
+this file is obtained by replacing the suffix of the output file by ``.d''.</p>
+</dd>
+<dd>
+<p>The <strong>M</strong> flag option deletes the system files from the list of dependencies.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dp_path"><strong>-P</strong> <em>path</em></a></strong>
+
+<dd>
+<p>This sets up one or more prolog program <em>path</em> which are applied to each
+single input file just before real processing starts. Use this to pre-process
+the data.  Each program receives the data to act on as STDIN and has to
+produce the filtered data on STDOUT.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dm_mapfile"><strong>-m</strong> <em>mapfile</em></a></strong>
+
+<dd>
+<p>This adds an entry to the list of mapfiles where a mapping between obsolete
+include file names and current ones can be found.  You can use this option
+more than once. The mapfiles can contain the following lines:</p>
+</dd>
+<dd>
+<pre>
+   &lt;blank line&gt;
+   &lt;oldname&gt;[,&lt;oldname&gt;] &lt;newname&gt; \[S|W|E: &lt;text&gt;\]</pre>
+</dd>
+<dd>
+<p>Example:</p>
+</dd>
+<dd>
+<pre>
+   &lt;std/headfoot.wml&gt;,wml::std::headfoot wml::OBSOLETE::std::headfoot [S]</pre>
+</dd>
+</li>
+<dt><strong><a name="item__2dn_nosynclines"><strong>-N</strong> <em>nosynclines</em></a></strong>
+<dd>
+<p>By default, WML inserts some instructions to synchronize line numbers,
+which are then interpreted in passes 2 and 3. This option disables this
+feature.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_outputfile"><strong>-o</strong> <em>outputfile</em></a></strong>
+<dd>
+<p>This redirects the output to <em>outputfile</em>. Usually the output
+will be send to <code>stdout</code> if no such option is specified or
+<em>outputfile</em> is ``<code>-</code>''.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-v</strong></a></strong>
+<dd>
+<p>This sets verbose mode where some processing information will be given on the
+console.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com</pre>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com</pre>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

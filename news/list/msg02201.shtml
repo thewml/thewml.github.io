@@ -1,0 +1,247 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.2, Linux 2.0.36 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 17 Apr 2001 00:47:25 +0200 (MET DST) -->
+<!--X-Message-Id: 20010417005639.A31432@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 200104101545.RAA00542@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02201">Date Index</a>][<a href="thrd45.shtml#02201">Thread Index</a>]<br>
+[<A HREF="msg02200.shtml">Date Prev</A>][<A HREF="msg02202.shtml">Date Next</A>][<A HREF="msg02199.shtml">Thread Prev</A>][<A HREF="msg02200.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.2, Linux 2.0.36</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 17 Apr 2001 00:56:40 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Apr 10, 2001 at 05:45:49PM +0200, Aymeric.PoulainMaubant@jipo.comNOSPAMPLEASE wrote:
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 2.0.2
+&gt; Operating System: Linux 2.0.36
+&gt; 
+&gt; Problem Description:
+&gt; | Short Description :   when a source file contains a
+&gt; | &lt;protect 9&gt; zone, its code is never dumped on
+&gt; | STDOUT if ones want to dump on STDOUT and on
+&gt; | a classical outputfile.
+&gt; | 
+&gt; | 
+&gt; | [nota. I checked more recent versions of WML (&gt;2.02)
+&gt; | and the bug listed below is still there]
+&gt; | 
+&gt; | Long Description, and hack :
+&gt; | 
+&gt; | Try to wml this file :
+&gt; | -------------------%&lt;---------------
+&gt; | #!wml --outputfile=ALL:- --outputfile=ALL:protect9.html 
+&gt; | 
+&gt; | aaa
+&gt; | 
+&gt; | &lt;protect pass=9&gt;
+&gt; | bbb
+&gt; | &lt;/protect&gt;
+&gt; | -------------------%&lt;---------------
+&gt; | 
+&gt; | This gives :
+&gt; | 
+&gt; | ----------------------
+&gt; | % wml protect9.wml 
+&gt; | aaa
+&gt; | -=P[000000]=-
+&gt; | % more protect9.html 
+&gt; | aaa
+&gt; | 
+&gt; | bbb
+&gt; | %
+&gt; | ----------------------
+&gt; | 
+&gt; | See what happens ? The &lt;protect 9&gt; part dumped
+&gt; | to STDOUT get never unprotected.
+&gt; | 
+&gt; | This happens only when one wants a STDOUT &amp;&amp; one
+&gt; | or more classical outputfiles in the same run.
+&gt; | This is due to the fact that in the wml frontend,
+&gt; | the subroutine ProcessOutfiles does not treat STDOUT
+&gt; | fairly, imho : STDOUT is not included in the
+&gt; | @outfiles array.
+
+Good catch, Aymeric.
+Here is a slightly modified patch (against current CVS version), i find
+it a little bit simpler.
+Thanks for your help.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: wml.src
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_frontend/wml.src,v
+retrieving revision 1.68
+diff -u -u -r1.68 wml.src
+--- wml.src	2001/02/21 00:11:11	1.68
++++ wml.src	2001/04/16 22:42:21
+@@ -868,10 +868,10 @@
+         }
+         close(SLICE);
+         if ($#ARGV &gt; -1) {
++            $out_istmp = 0;
+             &amp;ProcessOptions();
+             &amp;ProcessOutfiles();
+             $opt = "$verbose $out";
+-            $out_istmp = 0;
+         }
+         @ARGV = @ARGVLINE;
+     }
+@@ -990,6 +990,15 @@
+ unshift(@opt_D, "WML_VERSION=$VERSION");
+ unshift(@opt_D, "WML_TMPDIR=$tmpdir");
+ 
++#   Create temporary file names as soon as $src_suffix is set
++$tmp[0] = "$tmpdir/wml.$$.tmp1" . $src_suffix;
++$tmp[1] = "$tmpdir/wml.$$.tmp2" . $src_suffix;
++$tmp[2] = "$tmpdir/wml.$$.tmp3" . $src_suffix;
++$tmp[3] = "$tmpdir/wml.$$.tmp4" . $src_suffix;
++
++#   Flag set if some output goes to stdout
++$out_istmp = 0;
++
+ #
+ #   generate options
+ #
+@@ -1090,26 +1099,31 @@
+     $out = '';
+     @outfiles = ();
+     foreach $o (@opt_o) {
+-        next if ($o eq '-' || $o =~ m|\*[^:]*$|);
++        next if ($o =~ m|\*[^:]*$|);
+ 
+         #   create option
+-        $out .= " -o '".&amp;quotearg($o)."'";
++        if ($o eq '-' or $o =~ m/:-$/) {
++            $out .= " -o '".&amp;quotearg($tmp[3])."'";
++            $out_istmp = 1;
++        } else {
++            $out .= " -o '".&amp;quotearg($o)."'";
++        }
+ 
+         #   unquote the filename
+         $o =~ s|^(['"])(.*)\1$|$2|;
+     
+         #   create output file list for epilog filters
+         if ($o =~ m|^([_A-Z0-9~!+u%n\-\\^x*{}()@]+):(.+)\@(.+)$|) {
+-            push(@outfiles, $2) if ($2 ne '-');
++            push(@outfiles, ($2 ne '-' ? $2 : $tmp[3]));
+         }
+         elsif ($o =~ m|^([_A-Z0-9~!+u%n\-\\^x*{}()@]+):(.+)$|) {
+-            push(@outfiles, $2) if ($2 ne '-');
++            push(@outfiles, ($2 ne '-' ? $2 : $tmp[3]));
+         }
+         elsif ($o =~ m|^(.+)\@(.+)$|) {
+-            push(@outfiles, $1) if ($1 ne '-');
++            push(@outfiles, ($1 ne '-' ? $1 : $tmp[3]));
+         }
+         else {
+-            push(@outfiles, $o) if ($o ne '-');
++            push(@outfiles, ($o ne '-' ? $o : $tmp[3]));
+         }
+     }
+ }
+@@ -1125,12 +1139,6 @@
+     $optimize = "-O$opt_O";
+ }
+ 
+-#   Add the original suffix to temporary files
+-$tmp[0] = "$tmpdir/wml.$$.tmp1" . $src_suffix;
+-$tmp[1] = "$tmpdir/wml.$$.tmp2" . $src_suffix;
+-$tmp[2] = "$tmpdir/wml.$$.tmp3" . $src_suffix;
+-$tmp[3] = "$tmpdir/wml.$$.tmp4" . $src_suffix;
+-
+ if (not $src_istmp) {
+     #  Input file is copied because of the protect/unprotect stuff
+     $fpin = new IO::File;
+@@ -1153,7 +1161,6 @@
+     $cnt   = 0;
+ }
+ 
+-$out_istmp = 0;
+ if ($out eq '') {
+     $out = " -o$tmp[3]";
+     $out_istmp = 1;
+@@ -1293,7 +1300,7 @@
+     }
+     close(FP);
+ }
+-elsif ($out_istmp) {
++if ($out_istmp) {
+     &amp;unprotect($tmp[3], 9);
+     open(FP, "&lt;$tmp[3]");
+     while (&lt;FP&gt;) {
+@@ -1301,7 +1308,7 @@
+     }
+     close(FP);
+ }
+-elsif ($#outfiles &gt; -1) {
++if ($#outfiles &gt; -1) {
+     #   unprotect all outputfiles
+     foreach $o (@outfiles) {
+         &amp;unprotect($o, 9);
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02199" HREF="msg02199.shtml">[BUG REPORT] WML 2.0.2, Linux 2.0.36</A></strong>, <em>From:</em> Aymeric.PoulainMaubant</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02200.shtml">[BUG REPORT] WML 2.0.6, cygwin 1.1.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02202.shtml">Re: [BUG REPORT] WML 2.0.6, cygwin 1.1.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02199.shtml">[BUG REPORT] WML 2.0.2, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02200.shtml">[BUG REPORT] WML 2.0.6, cygwin 1.1.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02201"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02201"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

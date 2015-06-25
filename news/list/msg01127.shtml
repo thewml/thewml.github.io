@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Navbar in two languages -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 8 Nov 1999 12:17:00 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991108110538.12777B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.9911072003030.3057&#45;100000@fhtupc07.tu&#45;graz.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01127">Date Index</a>][<a href="thrd24.shtml#01127">Thread Index</a>]<br>
+[<A HREF="msg01126.shtml">Date Prev</A>][<A HREF="msg01128.shtml">Date Next</A>][<A HREF="msg01125.shtml">Thread Prev</A>][<A HREF="msg01129.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Navbar in two languages</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 8 Nov 1999 11:49:18 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 7 Nov 1999, Wolfgang Dautermann wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I try to make a webpage in german and english. There is a navbar at the
+&gt; left and I try to use different images in the german and english version.
+&gt; 
+&gt; But neither
+&gt; 
+&gt; # 1st try
+&gt; &lt;de&gt;  
+&gt;   &lt;navbar:button id=kultur url="$(ROOT)/kultur/" txt="Kultur" 
+&gt;                  img=navbar-kultur-*.gif&gt;
+&gt; &lt;/de&gt;
+&gt; &lt;en&gt;
+&gt;   &lt;navbar:button id=kultur url="$(ROOT)/kultur/index.en.html" txt="Culture"    
+&gt;                  img=navbar-kultur-en-*.gif&gt;
+&gt; &lt;/en&gt;
+&gt; 
+&gt; nor
+&gt; 
+&gt; # 2nd try
+&gt; &lt;navbar:button id=suche url="$(ROOT)/search/&lt;en: index.en.html&gt;"
+&gt; txt="&lt;de: Suche&gt;&lt;en: Search&gt;" img=navbar-suche-&lt;en: en-&gt;*.gif&gt;
+&gt; 
+&gt; works as I want. In my first attempt wml prints both the "Kultur" and
+&gt; "Culture" button (in both languages), in my second attempt wml refuses to
+&gt; load the images (It  seems that txt="&lt;de: Suche&gt;&lt;en: Search&gt;" does work
+&gt; correctly, but not the  img=navbar-suche-&lt;en: en-&gt;*.gif&gt; - part).
+&gt; 
+&gt; My question now is: How is the correct way to generate multi-language
+&gt; navigation bars? Is ist possible?
+
+This one works:
+  &lt;navbar:button id=suche
+                 url="$(ROOT)/search/&lt;en: index.en.html&gt;"
+                 txt="&lt;de: Suche&gt;&lt;en: Search&gt;"
+                 img=navbar-suche-&lt;protect pass=3&gt;&lt;en: en-&gt;&lt;/protect&gt;*.gif&gt;
+
+But i prefer this syntax:
+  &lt;navbar:button id=suche
+                 url="&lt;lang:star: $(ROOT)/search/index.*.html&gt;"
+                 txt="&lt;de: Suche&gt;&lt;en: Search&gt;"
+                 img=navbar-suche-&lt;lang:star: *&gt;-*.gif&gt;
+
+In this case, you have to change the filenames of the German version
+to index.de.html, navbar-suche-de-std.gif,....
+
+An alternative is to define one navbar by language and write
+  &lt;en&gt;&lt;navbar:render name=main-en&gt;&lt;/en&gt;
+  &lt;de&gt;&lt;navbar:render name=main-de&gt;&lt;/de&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01125" HREF="msg01125.shtml">Navbar in two languages</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01126.shtml">Re: doc error in wmk man page?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01128.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01125.shtml">Navbar in two languages</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01129.shtml">Re: Navbar in two languages</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01127"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01127"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

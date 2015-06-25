@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: rollover and slice -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Thu, 29 Jul 1999 20:05:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990729193535.843H&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990728220020.602B&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00882">Date Index</a>][<a href="thrd18.shtml#00882">Thread Index</a>]<br>
+[<A HREF="msg00880.shtml">Date Prev</A>][<A HREF="msg00883.shtml">Date Next</A>][<A HREF="msg00881.shtml">Thread Prev</A>][<A HREF="msg00883.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: rollover and slice</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Jul 1999 20:05:13 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis,
+
+&gt;If you have 20 buttons with rollover, you don't want to insert 20
+&gt;definitions of the ro_imgNormal and ro_imgOver routines.
+&gt;So they are written only once.
+
+I presumed that it is a feature, not a bug ;-)
+
+&gt;2) write slices inside rollover
+
+Thank you! I tried number 2 and it works fine.
+
+&gt;One workaround is to write an epilog filter
+
+I was deeply impressed that it works on the first try.
+
+Thanks!
+
+BTW: Where can I learn more about the filter-function?
+
+I always use tidy after wml, but this makes the files bigger. Is
+there a possibility to use tidy before htmlstrip eliminates the
+blank lines? Or shall I use html-clean as final-final cleanup?
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Literatur und Satire per E-Mail
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00883" HREF="msg00883.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00887" HREF="msg00887.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00881" HREF="msg00881.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00880.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00883.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00881.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00883.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00882"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00882"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

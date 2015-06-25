@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml::std::lang -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 18 Feb 1998 08:50:34 +0100 (MET) -->
+<!--X-Message-Id: 199802180750.IAA25175@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980217234832.58307@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00101">Date Index</a>][<a href="thrd3.shtml#00101">Thread Index</a>]<br>
+[<A HREF="msg00100.shtml">Date Prev</A>][<A HREF="msg00102.shtml">Date Next</A>][<A HREF="msg00100.shtml">Thread Prev</A>][<A HREF="msg00383.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml::std::lang</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 18 Feb 1998 08:50:31 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Stefan `Sec` Zehl, in a previous mail you wrote:
+
+&gt; I just looked at the manpage for "wml::std::lang" because i want to
+&gt; translate some pages of mine. There is the:
+&gt; 
+&gt; &lt;href name="The Hyperlink" url="&lt;lang:star: index.*.html&gt;"&gt;
+&gt; 
+&gt; method for hyperlinks. This is lacking one (for me important) feature. I
+&gt; don't want to translate my _whole_ tree at once, so i'd like it to make
+&gt; links to "index.de.html" and "index.en.html" only if they exist. If one
+&gt; of them doesn't, it should just link to "index.html" (as a form of
+&gt; fallback) - Does anybody here have an idea how to accomplish that ?
+
+Good question. I've started with &lt;lang:star:&gt; now and created
+a specialized version named &lt;lang:star:href:&gt; which has the
+following additional feature:
+
+1. it tests for the existence and if it doesn't exist it
+   used the value without the star.
+   
+2. Because just removing the star from index.*.html would
+   lead to index..html instead of index.html and because one often wants
+   really more complicated fallbacks, it recognizes the syntax
+   ``value|alt-value'' where alt-value is then the fallback.
+
+With this new tag you can write:
+
+&lt;href name="The Hyperlink" url="&lt;lang:star:href: index.*.html|index.html&gt;"&gt;
+
+which means use index.xx.html when it exists else index.html. Here is the
+definition of the tag which I find useful for the other users, so I've added
+to wml::std::lang for WML 1.6.2 now. It reads ugly because a lot of Meta-HTML
+stuff was needed. Sorry, but hate Meta-HTML, too :-( But it's the best choice
+for Pass 2 we currently have...
+
+===========================================
+&lt;define-tag lang:star:href:&gt;
+&lt;ifeq &lt;match "%attributes" ".+\\|.*" action=report&gt; true &lt;prog
+    &lt;set-var __str=&lt;match "%attributes" "^[^|]+" action=extract&gt;&gt;
+    &lt;set-var __alt=&lt;match "%attributes" "[^|]*$" action=extract&gt;&gt;
+&gt; &lt;prog
+    &lt;set-var __str="%attributes"&gt;
+    &lt;set-var __alt=&lt;match "%attributes" "\\*" action=delete&gt;&gt;
+&gt;&gt;
+&lt;set-var __i=0&gt;
+&lt;while &lt;get-var __languages[__i]&gt;&gt;
+    &lt;set-var __url=&lt;subst-in-string "&lt;get-var __str&gt;" 
+                    "\\*" "&lt;get-var __languages[__i]&gt;"&gt;&gt;
+    &lt;: if (-f "&lt;get-var __url&gt;") { _:&gt;
+        &lt;suck&gt;&lt;subst-in-string
+               "[LANG_&lt;upcase &lt;get-var __languages[__i]&gt;&gt;:&lt;get-var __str&gt;:]"
+               "\\*" "&lt;get-var __languages[__i]&gt;"&gt;&lt;suck&gt;
+    &lt;: } else { _:&gt;
+        &lt;suck&gt;[LANG_&lt;upcase &lt;get-var __languages[__i]&gt;&gt;:&lt;get-var __alt&gt;:]&lt;suck&gt;
+    &lt;: } :&gt;
+    &lt;increment __i&gt;
+&lt;/while&gt;
+&lt;/define-tag&gt;
+===========================================
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00100" HREF="msg00100.shtml">wml::std::lang</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00100.shtml">wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00102.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00100.shtml">wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00383.shtml">wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00101"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00101"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

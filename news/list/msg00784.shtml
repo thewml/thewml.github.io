@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: help, completely lost.... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 22 Jun 1999 13:40:12 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990622125543.15605E&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990622104406.B23634@erm1.u&#45;strasbg.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00784">Date Index</a>][<a href="thrd17.shtml#00784">Thread Index</a>]<br>
+[<A HREF="msg00783.shtml">Date Prev</A>][<A HREF="msg00785.shtml">Date Next</A>][<A HREF="msg00786.shtml">Thread Prev</A>][<A HREF="msg00788.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: help, completely lost....</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Jun 1999 13:34:05 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 22 Jun 1999, Bruno Boettcher wrote:
+
+&gt; BTW is there somewhere any example on how to make a navigation bar for slides?
+&gt; The documentation is quite hard to read, and the tutorial has lots of
+&gt; examples, 
+&gt; but not the things that i want to do....
+
+Here is what i did for a recent presentation:
+&lt;define-tag visit-tour-next&gt;
+&lt;:
+    my $next = '';
+    if ( -f "visit-tour" ) {
+        open(FP, "&lt; visit-tour") or die "Cannot open visit-tour";
+        local($/) = undef;
+        my $links = ' ' . &lt;FP&gt;;
+        close(FP);
+        if ($links =~ m|\s$(WML_SRC_BASENAME)\s+(.*?)\s|s ) {
+            $next = $1 . ".html";
+        }
+    }
+    if ($next eq '') {
+        print "&lt;img src=\"$(EXPO_IMG_BASE)/conf.gif\" \
+                    alt=\"Linux Expo June 17/18 1999\"&gt;";
+    }
+    else {
+        print "&lt;a href=\"$next\"&gt;&lt;img \
+                    src=\"$(EXPO_IMG_BASE)/conf.gif\" \
+                    alt=\"Next\" border=0&gt;&lt;/a&gt;";
+    }
+:&gt;
+I then inserted the &lt;visit-tour-next&gt; tag in the navbar.
+In each sub-directory, the ``visit-tour'' file contains the sequence of
+pages, e.g. in top/visit-tour
+  intro plan chap1/index conc refs
+In top/chap1/visit-tour
+  index sect1 sect2 sect3 ../conc
+
+Another solution is to define menus in navigation bars (with wml-1.7.1).
+For instance,
+&lt;navbar:define name=main&gt;
+#   Suppress all links except up, prev, next
+    &lt;navbar:filter&gt;
+        my ($mcode) = @_;
+        $mcode =~ s/SUPPRESS_FROM_THIS.*SUPPRESS_TO_THIS//s;
+        return $mcode;
+    &lt;/navbar:filter&gt;
+
+    &lt;navbar:prolog pas=next&gt;SUPPRESS_FROM_THIS&lt;/navbar:prolog&gt;
+    &lt;navbar:button id=chap1 menu=chap1 url="chap1.html" txt="chap1"&gt;
+
+    &lt;navbar:button id=chap2 menu=chap2 url="chap2.html" txt="chap2"&gt;
+
+    &lt;navbar:epilog pos=next&gt;SUPPRESS_TO_THIS&lt;/navbar:epilog&gt;
+    &lt;navbar:button id=chap3 menu=chap3 url="chap3.html" txt="chap3"&gt;
+
+    &lt;navbar:button url="#UP#"   txt="[ UP ]"&gt;
+    &lt;navbar:button url="#PREV#" txt="[PREV]"&gt;
+    &lt;navbar:button url="#NEXT#" txt="[NEXT]"&gt;
+&lt;/navbar:define&gt;
+&lt;navbar:define name=chap1&gt;
+    &lt;navbar:button id=sect1-1 url="sect1-1.html" txt="sect1"&gt;
+    &lt;navbar:button id=sect2-1 url="sect2-1.html" txt="sect2"&gt;
+    &lt;navbar:button id=sect3-1 url="sect3-1.html" txt="sect3"&gt;
+&lt;/navbar:define&gt;
+and so on.
+The up/prev/next links will be computed automatically.
+
+If your slides are just a big picture with navigation bars, i suggest
+you to make this image clickable. Click on it to go to the next slide.
+To go back, use the right button.
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00788" HREF="msg00788.shtml">&lt;preserve notypo&gt; causing problems???</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00782" HREF="msg00782.shtml">help, completely lost....</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00783.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00785.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00786.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00788.shtml">&lt;preserve notypo&gt; causing problems???</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00784"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00784"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

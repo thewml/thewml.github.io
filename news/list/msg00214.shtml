@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml 1.6.7 and IO 1.19 vs 1.20 -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Tue, 6 Oct 1998 07:01:40 +0200 (CEST) -->
+<!--X-Message-Id: 199810060237.TAA07868@seer.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00214">Date Index</a>][<a href="thrd5.shtml#00214">Thread Index</a>]<br>
+[<A HREF="msg00213.shtml">Date Prev</A>][<A HREF="msg00215.shtml">Date Next</A>][<A HREF="msg00213.shtml">Thread Prev</A>][<A HREF="msg00215.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml 1.6.7 and IO 1.19 vs 1.20</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 5 Oct 1998 19:37:54 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I have tried various things here, and finally had to resort to backing
+up to 1.6.6.
+
+I have 1.6.6 tarball.
+
+I download update patch
+I expand the tarball in a directory 
+I apply the patch to the tarball
+I run configure
+I run make
+I run install.
+I run a script and get:
+
+
+medusa 3 &gt; wml ../src/emacs_install.html -V3 --includefile=../defs.h --o ../rel/emacs_install.html
+IO object version 1.19 does not match $IO:: 1.20 at /usr/local/lib/perl5/sun4-solaris/5.00404/DynaLoader.pm line 185.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/site_perl/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /usr/local/bin/wml line 55.
+
+I look at INSTALL file
+
+I figure out that 1.6.7 is using a newer IO thingy than that I have
+locally: (from the ChangeLog)
+      970802 - Upgraded IO Perl module from version 1.19 to 1.20
+
+I destroy my build directory
+I expand the tarball in a directory 
+I apply the patch to the tarball
+I run configure --with-openworld
+I run make
+I run install.
+I run a script and get the same error!
+
+Must I update my perl?
+
+I am running:
+medusa 5 &gt; perl -v
+
+This is perl, version 5.004_04 built for sun4-solaris
+
+Copyright 1987-1997, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5.0 source kit.
+
+-- 
+    /\     Michael McNamara             &lt;mac@surefirev.com&gt;
+   /\//    SureFire Verification Inc.   408-374-4100 x 100
+  /\///\   &lt;<A  HREF="http://www.surefirev.com">http://www.surefirev.com</A>&gt;   408-374-4174 FAX
+ _\///\/        Formerly Silicon Sorcery
+  \//\/    Get my verilog emacs mode from
+    \/     &lt;<A  HREF="http://www.surefirev.com/verilog-mode.html">http://www.surefirev.com/verilog-mode.html</A>&gt;
+                                     
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00213.shtml">Re: FW: TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00215.shtml">Creting Thumbnails</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00213.shtml">Re: FW: TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00215.shtml">Creting Thumbnails</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00214"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00214"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

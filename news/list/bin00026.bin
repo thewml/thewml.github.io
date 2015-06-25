@@ -1,0 +1,28 @@
+--- wmk.org	Fri Jan 12 23:30:52 2001
++++ wmk	Sat Jan 13 00:43:20 2001
+@@ -590,7 +590,7 @@
+         my @outfiles = ();
+         my $s = $opts;
+         $s =~ s|-o\s*["']?(?:[^:]+:(?!:))?([^\s\@'"]+)|push(@outfiles, $1), ''|sge;
+-        $skipable = &skipable($file, @outfiles);
++        $skipable = &skipable($file, $opts, @outfiles);
+     }
+     else {
+         $skipable = 0;
+@@ -614,14 +614,14 @@
+ #   is file skipable because not newer than
+ #   any of its output files
+ sub skipable {
+-    my ($file, @outfiles) = @_;
++    my ($file, $opts, @outfiles) = @_;
+     my ($skipable, $outfile, $t, $dep, $incl);
+     my (@IS, @OS);
+ 
+     $skipable = 1;
+     @IS = stat($file);
+     local($/) = undef;
+-    open(DEP, "$wml_ipp -odummy $file |");
++    open(DEP, "$wml_ipp $opts $file |");
+     $dep = <DEP>;
+     close(DEP);
+     $dep =~ s/\\\s+/ /sg;

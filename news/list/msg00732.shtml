@@ -1,0 +1,165 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Sun, 6 Jun 1999 17:36:18 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990606172901.709D&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00732">Date Index</a>][<a href="thrd16.shtml#00732">Thread Index</a>]<br>
+[<A HREF="msg00731.shtml">Date Prev</A>][<A HREF="msg00733.shtml">Date Next</A>][<A HREF="msg00730.shtml">Thread Prev</A>][<A HREF="msg00733.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 6 Jun 1999 17:35:48 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
++------------------------------------------------------+
+| Please complete this bug report message by at least  |
+| specifing the correct reply-to e-mail address and    |
+| the detailed problem description.                    |
++------------------------------------------------------+
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.1 (05-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Jan Ulrich Hasecke
+Reply-To: juh@pironet.de
+
+PROBLEM DESCRIPTION:
+
+When I use grid inside a file, which goes as &lt;&lt;BODY&gt;&gt; through a
+template-file, the table is not rendered.
+
+#use wml::std::grid
+&lt;grid layout=3x19 align="rlr" valign="b" padding="3" border=1&gt;
+&lt;cell&gt;&lt;b&gt;Rang&lt;/b&gt;&lt;/cell&gt;&lt;cell&gt;&lt;b&gt;Land&lt;/b&gt;&lt;/cell&gt;&lt;cell&gt;&lt;b&gt;Jahresgehalt in $&lt;/b&gt;&lt;/cell&gt;
+&lt;cell&gt;1&lt;/cell&gt;&lt;cell&gt;USA&lt;/cell&gt;&lt;cell&gt;1.072.400&lt;/cell&gt;
+&lt;cell&gt;2&lt;/cell&gt;&lt;cell&gt;Brasilien&lt;/cell&gt;&lt;cell&gt;701.219&lt;/cell&gt;
+(...)
+&lt;/grid&gt;
+
+When using the same grid-definition directly inside a file (and using
+no template-file), the table is rendered.
+
+Bug or my Fault?
+Ciao!
+juh
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.004_03 (/usr/bin/perl)
+    User: juh@hasecke.hasecke
+    Date: 05-Jun-1999
+Built Location:
+    Prefix: /opt/wml
+    BinDir: /opt/wml/bin
+    LibDir: /opt/wml/lib
+    ManDir: /opt/wml/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.0.33, archname=i386-linux
+    uname='linux buildmeister.caldera.com 2.0.33 #1 thu mar 12 20:36:04 mst 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O6 -m486 -fomit-frame-pointer -pipe', gccversion=2.7.2.3
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, randbits=31
+  Linker and Libraries:
+    ld='cc', ldflags =''
+    libpth=/lib /usr/lib
+    libs=-lgdbm -ldb -ldl -lm -lc
+    libc=/lib/libc.so.5.4.38, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared'
+
+
+Characteristics of this binary (from libperl): 
+  Locally applied patches:
+  	COL_SECURITY1 - 'perl -e'-tmp-race fix (by Theo de Raadt/Todd Miller)
+  Built under linux
+  Compiled at Mar 20 1998 09:33:50
+  @INC:
+    /usr/lib/perl5/i386-linux/5.00403
+    /usr/lib/perl5
+    /usr/lib/perl5/site-perl/i386-linux
+    /usr/lib/perl5/site-perl
+    .
+
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00731.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00733.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00730.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00733.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00732"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00732"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

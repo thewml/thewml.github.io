@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RPM for WML 1.6.7 -->
+<!--X-From-R13: Xbeqna Pnxre <wooNvagreybt.pbz> -->
+<!--X-Date: Sun, 9 Aug 1998 17:49:51 +0200 (CEST) -->
+<!--X-Message-Id: Pine.BSI.3.96r.980809111026.17367C&#45;100000@shell1.interlog.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.3.95q.980808171315.14377A&#45;100000@mykonos.informatik.tu&#45;chemnitz.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00188">Date Index</a>][<a href="thrd4.shtml#00188">Thread Index</a>]<br>
+[<A HREF="msg00187.shtml">Date Prev</A>][<A HREF="msg00189.shtml">Date Next</A>][<A HREF="msg00186.shtml">Thread Prev</A>][<A HREF="msg00189.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RPM for WML 1.6.7</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jordan Baker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Aug 1998 11:12:38 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 8 Aug 1998, Torsten Naumann wrote:
+
+&gt; On Fri, 7 Aug 1998, Jordan Baker wrote:
+&gt; 
+&gt; &gt; I'm not sure if anyone out there is already doing this, if so, let me know
+&gt; &gt; and I'll stop. :)
+&gt; 
+&gt; I've done this for the releases 1.6.6 and 1.6.7. I used a spec file
+&gt; from an other packager which I found very useful. Take a look at
+&gt; 
+&gt; <A  HREF="http://www.tu-chemnitz.de/~tna/rpms/">http://www.tu-chemnitz.de/~tna/rpms/</A>
+&gt; <A  HREF="http://www.tu-chemnitz.de/~tna/srpms/">http://www.tu-chemnitz.de/~tna/srpms/</A>
+&gt; 
+&gt; You can do the packaging of wml, no problem. I don't know wether I can
+&gt; do this very quickly after announcing new releases.
+
+Thanks for letting me know..
+
+I'll do it for the next little while, if I am unable to do it, I'll the
+list know.
+
+What I'll probably do is take a look at your SPECS files and make sure I'm
+not missing anything, though I'm fairly certain I'm not...
+
+Creating RPMs is not quite as easy as I thought.. I had to creatively use
+the find command to mark all the directories and files seperately.  You'd
+think it would be down to a science by now..
+
+anyway, ttyl...
+
+ ----------
+Jordan Baker
+jbb@interlog.com
+(416) 922-0224
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00186" HREF="msg00186.shtml">Re: RPM for WML 1.6.7</A></strong>, <em>From:</em> Torsten Naumann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00187.shtml">Re: A question [FWD]</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00189.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00186.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00189.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00188"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00188"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

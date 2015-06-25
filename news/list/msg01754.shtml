@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 24 Jun 2000 20:31:36 +0200 (MET DST) -->
+<!--X-Message-Id: 20000624203316.A3037@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000623221857.A1617@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0006241827130.29286&#45;100000@drwho.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01754">Date Index</a>][<a href="thrd36.shtml#01754">Thread Index</a>]<br>
+[<A HREF="msg01753.shtml">Date Prev</A>][<A HREF="msg01755.shtml">Date Next</A>][<A HREF="msg01753.shtml">Thread Prev</A>][<A HREF="msg01757.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 24 Jun 2000 20:33:16 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Jun 24, 2000 at 06:28:27PM +0200, Fritz Zaucker wrote:
+&gt; &gt; No, since WML 1.7.3 it is recommended to write {#TITLE#} to prevent
+&gt; &gt; problems with pass 2. Oh shit wml_intro(7) mentions both syntaxes.
+&gt; &gt; All references to ..&gt;&gt;, &lt;&lt;.. and &lt;&lt;NAME&gt;&gt; must be removed from
+&gt; &gt; documentation, except a note in wml_p5_divert.
+&gt; 
+&gt; How do I do
+&gt; 
+&gt;     ..!NAME&gt;&gt;bla&lt;&lt;..
+&gt; 
+&gt; with &lt;divert&gt;?  &lt;divert !NAME&gt;bla bla&lt;/divert&gt; doesnt seem to work.
+
+Good question.
+I will fix `divert' this way:
+  &lt;define-tag divert endtag=required&gt;\
+  &lt;enter %0&gt;%body&lt;leave &lt;match "%0" "!" action=delete&gt;&gt;\
+  &lt;/define-tag&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01742" HREF="msg01742.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01753" HREF="msg01753.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01753.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01755.shtml">Re: [wml] CSS support and XML namespaces</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01753.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01757.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01754"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01754"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

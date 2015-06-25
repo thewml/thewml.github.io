@@ -1,0 +1,152 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: help, completely lost.... -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Tue, 22 Jun 1999 17:32:27 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9906221129260.13464&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990622162859.16900A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00786">Date Index</a>][<a href="thrd17.shtml#00786">Thread Index</a>]<br>
+[<A HREF="msg00785.shtml">Date Prev</A>][<A HREF="msg00787.shtml">Date Next</A>][<A HREF="msg00785.shtml">Thread Prev</A>][<A HREF="msg00784.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: help, completely lost....</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Jun 1999 11:32:22 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Sorry if this is the densest comment ever, but why not just write the
+readme in very simple html and make the text version with lynx -dump
+instead?
+
+Seems to me that you know html, so that can't be the reason, and surely
+writing a tag here or there is no less difficult than learning wierd rules
+like "make the ==== underlines exactly the same length as the line before
+it."
+
+*shrug*
+
+My .02.
+
+jim
+
+On Tue, 22 Jun 1999, Denis Barbier wrote:
+
+&gt; On Tue, 22 Jun 1999, Bruno Boettcher wrote:
+&gt; 
+&gt; &gt; still on my readme.... 
+&gt; &gt; got the includ working, its really nice thought: i have hte regular README
+&gt; &gt; file which is 100% ASCII, and a wrapper with wml constructs, that includes
+&gt; &gt; this file and permits to generate html, really nice, and it spares me to write
+&gt; &gt; a perl script to do the same....
+&gt; &gt; 
+&gt; &gt; now besides the missing first headline, i noticed another problem with the
+&gt; &gt; url's.... in case you couldn't retrieve the file from
+&gt; &gt; <A  HREF="http://yoda.u-strasbg.fr/~bboett/README">http://yoda.u-strasbg.fr/~bboett/README</A> i put the relevant sections here:
+&gt; &gt; 
+&gt; &gt; #use wml::fmt::isolatin
+&gt; &gt; #use wml::fmt::url
+&gt; &gt; &lt;isolatin&gt;&lt;url&gt;
+&gt; &gt; &lt;HTML&gt;
+&gt; &gt; &lt;text&gt;
+&gt; [...]
+&gt; 
+&gt; First, remove the isolatin and url tags, they  are useless.
+&gt; Take care of nestings, you should write
+&gt; &lt;html&gt;
+&gt; &lt;head&gt;
+&gt;   &lt;title&gt;your title&lt;/title&gt;
+&gt; &lt;/head&gt;
+&gt; &lt;body&gt;
+&gt; &lt;text&gt;
+&gt; ... your text here
+&gt; &lt;/text&gt;
+&gt; &lt;/html&gt;
+&gt; 
+&gt; For your headings, the ==...== line must have exactly the same length
+&gt; as the header it underlines. So write
+&gt;   JTRADER, implementing Manager - Factory pattern
+&gt;   ===============================================
+&gt;   ...
+&gt;   QUICK - INSTALL
+&gt;   ===============
+&gt;   ...
+&gt; 
+&gt; Otherwise, it is a line of separation, not a heading.
+&gt; 
+&gt; Denis
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+"[T]hey said something to the effect that Linux has 'the tendency not to 
+crash.' ... It's like me listing 'the tendency not to murder people' as one of
+my good character traits. :-&gt; It seems that people have grown so accustomed to
+buggy OS's that when Linux simply does what it's supposed to do, it comes 
+across as something new and different." Scott Webster on linux-biz 20 Feb 1999
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00785" HREF="msg00785.shtml">Re: help, completely lost....</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00785.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00787.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00785.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00784.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00786"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00786"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

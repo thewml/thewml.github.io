@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Misterious Behavior of WML calling WML -->
+<!--X-From-R13: Ayvire Bnhxfgnqg <cfgnqgNfghq.su&#45;urvyoebaa.qr> -->
+<!--X-Date: Thu, 3 Sep 1998 00:24:12 +0200 (CEST) -->
+<!--X-Message-Id: Pine.LNX.3.95.980902201238.26619B&#45;100000@lemming.stud.fh&#45;heilbronn.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.980902173750.17744A&#45;100000@lemming.stud.fh&#45;heilbronn.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00201">Date Index</a>][<a href="thrd5.shtml#00201">Thread Index</a>]<br>
+[<A HREF="msg00200.shtml">Date Prev</A>][<A HREF="msg00202.shtml">Date Next</A>][<A HREF="msg00200.shtml">Thread Prev</A>][<A HREF="msg00202.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Misterious Behavior of WML calling WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Oliver Paukstadt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 2 Sep 1998 20:19:21 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 2 Sep 1998, Oliver Paukstadt wrote:
+
+&gt; HY HY
+&gt; 
+&gt; Found it. Seems to be the sed making the trouble. It's not gnu, it's irix
+&gt; ;-(
+&gt; 
+
+The sed was one problem, but there was another.
+I solved in a bit hacky way: I delete the whole environment except the
+PATH before starting wml. This looks like this:
+
+system("unset `env | perl -e 'foreach(grep(!/^PATH=/,
+&lt;STDIN&gt;)){s/^([^=]*)=.*\$/\$1/igs;print \"\$_\\n\";}' ` 
+; cd $Daten/$dir ; wml -qs $file");
+
+Not very nice, but it's now 
+eperl calling sh calling perl and calling wml.
+
+Does Anyone know a shorter Statement to delete all the Environment except
+path? Perl prefered, because of the ugly sh on irix5.3...
+
+BYtE Oli
+
++++tEkknO, schwEIss Und grEllEs lIcht - bIs dIE wElt zUsAmmEnbrIcht !+++++
++++oliver@paukstadt.de+++<A  HREF="http://www.paukstadt.de++++++++++++++++++++++++++">http://www.paukstadt.de++++++++++++++++++++++++++</A>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00202" HREF="msg00202.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00200" HREF="msg00200.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00200.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00202.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00200.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00202.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00201"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00201"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

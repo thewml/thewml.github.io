@@ -1,0 +1,333 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: newbie help needed converting 1.7.4 &#45;> 2.0.4 -->
+<!--X-From-R13: "revp n . Tneevf" <rnsneevfNny.hzprf.rqh> -->
+<!--X-Date: Thu, 28 Sep 2000 14:41:54 +0200 (MET DST) -->
+<!--X-Message-Id: 20000928084137.A21158@eafarris.al.umces.edu -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01996">Date Index</a>][<a href="thrd40.shtml#01996">Thread Index</a>]<br>
+[<A HREF="msg01995.shtml">Date Prev</A>][<A HREF="msg01997.shtml">Date Next</A>][<A HREF="msg02001.shtml">Thread Prev</A>][<A HREF="msg01997.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>newbie help needed converting 1.7.4 -&gt; 2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;eric a . Farris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 28 Sep 2000 08:41:37 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I'm fairly new to wml, and a lot of what appears on this list is way
+beyond me. I'm having what i hope is a simple problem converting our
+site from WML 1.7.4 (Debian potato) to WML 2.0.4 (Debian woody).
+
+I started by just changing my &lt;define-container&gt;s to &lt;define-tag&gt;s
+and tried a make. many pages compile just fine (with some warnings),
+but some fail. here's the results of a make on a failing file:
+
+-- BEGIN PASTED TEXT --
+eafarris@eafarris:/var/www$ wmk education.wml
+/usr/bin/wml -n -o education.html education.wml
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:tl_template.wml:32: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:9: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:21: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:33: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: Warning:education.wml:45: `&lt;/p&gt;' found without begin tag
+/usr/lib/wml/exec/wml_p2_mp4h: ERROR:education.wml:45: EOF when reading argument of the `set-var' tag
+** WML:Break: Error in Pass 2 (rc=1).
+** WMk:Break: Error in WML (rc=256)
+-- END PASTED TEXT --
+
+the file (attached, along with all the source files it depends on)
+isn't complicated at all; i'm doing no ePerl or tricks like that. some
+diversion, though pages that compile without errors do the same thing. my
+main concern is, of course, the error, but the warnings puzzle me as
+well. those pages that compile without errors still float those warnings
+about &lt;/p&gt; tags.
+
+attached to this message are the education.wml file and its dependencies
+(w/o graphics :) thanks in advance for any help you can give to me, or
+at least pointing me in the right direction to debug this further. there
+are no problems with the source under WML 1.7.4.
+
+-- 
+eric a. Farris  eafarris@al.umces.edu  www.bigfoot.com/~eafarris
+Systems Administrator
+Appalachian Laboratory, UMCES  www.al.umces.edu
+
+Linux: From each according to his ability, to each according to his need.
+
+Trim your feeble lamp, my brother / Some poor sailor, tempest-tossed,
+Trying now, to make the harbor, / In the darkness may be lost.
+</PRE>
+<PRE>
+#include 'tl_template.wml'
+
+..PAGETITLE&gt;&gt;Education -- UMCES-AL&lt;&lt;..
+..PAGEPREFIX&gt;&gt;education&lt;&lt;..
+
+..LEFTSIDE&gt;&gt;
+&lt;navbar:render name=main select=education&gt;
+&lt;&lt;..
+&lt;p&gt;The &lt;href url="<A  HREF="http://www.al.umces.edu/">http://www.al.umces.edu/</A>" name="Appalachian Laboratory (AL)"&gt; of the \
+&lt;href url="<A  HREF="http://www.umces.edu/">http://www.umces.edu/</A>" name="University of Maryland Center for Environmental Science (UMCES)"&gt; \
+has a strong history of involvement in graduate education. Although not part of a \
+degree-granting campus, AL plays a leadership role in both the \
+&lt;href url="<A  HREF="http://www.mees.umd.edu">http://www.mees.umd.edu</A>" name="Marine - Estuarine - Environmental Sciences (MEES) Program"&gt; \
+at the &lt;href url="<A  HREF="http://www.umcp.umd.edu/">http://www.umcp.umd.edu/</A>" name="University of Maryland, College Park (UMCP)"&gt; \
+and the graduate programs of the \
+&lt;href url="<A  HREF="http://www.frostburg.edu/dept/biol/bioldept.htm">http://www.frostburg.edu/dept/biol/bioldept.htm</A>" name="Department of Biology"&gt; at \
+&lt;href url="<A  HREF="http://www.frostburg.edu/">http://www.frostburg.edu/</A>" name="Frostburg State University (FSU)"&gt;. Both the courses \
+offered and types of student research directed by AL faculty reflect strengths in landscape \
+and watershed ecology, aquatic ecology, conservation and restoration ecology, and evolutionary \
+and behavioral ecology.&lt;/p&gt; 
+
+&lt;myfont&gt;
+&lt;toc&gt;
+&lt;/myfont&gt;
+
+&lt;eos&gt;
+
+&lt;h1 align="right"&gt;&lt;myfont&gt;Degree Options&lt;/myfont&gt;&lt;/h1&gt;
+
+&lt;h2&gt;&lt;myfont&gt;UMCP MEES Program&lt;/myfont&gt;&lt;/h2&gt;
+
+&lt;p&gt;The &lt;href url="<A  HREF="http://www.mees.umd.edu/">http://www.mees.umd.edu/</A>" name="MEES Program"&gt; is an inter-disciplinary \
+effort of the &lt;href url="<A  HREF="http://www.usm.edu/">http://www.usm.edu/</A>" name="University System of Maryland"&gt;, and \
+grants both M.S. and Ph.D. degrees. MEES is organized around six areas of specialization (AOSs):&lt;/p&gt;
+&lt;myfont&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Ecology&lt;/li&gt;
+  &lt;li&gt;Environmental science (with a subprogram in environmental management / policy)&lt;/li&gt;
+  &lt;li&gt;Oceanography (both physical and biological)&lt;/li&gt;
+  &lt;li&gt;Environmental molecular biology / biotechnology&lt;/li&gt;
+  &lt;li&gt;Environmental chemistry&lt;/li&gt;
+  &lt;li&gt;Fisheries science (including fisheries ecology, fisheries management, and aquaculture)&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/myfont&gt;
+
+&lt;p&gt;The four areas most likely of interest to students of AL faculty include \
+ecology, environmental science, fisheries science, and environmental chemistry. \
+The general MEES requirements and individual AOS requirements are minimal, so that \
+MEES can be responsive to both student and faculty needs. Faculty associated with \
+the MEES program represent at least six campuses of the System. Notably, UMCES and \
+UMCP comprise over half of the faculty associated with MEES. Further information on \
+the MEES Program, associated faculty, coursework, and admissions can be obtained from:&lt;/p&gt;
+&lt;myfont&gt;
+ &lt;ul&gt;
+  &lt;li&gt;The &lt;href url="<A  HREF="http://www.mees.umd.edu">http://www.mees.umd.edu</A>" name="MEES Home Page"&gt;&lt;/li&gt;
+  &lt;li&gt;The &lt;href url="<A  HREF="http://www.inform.umd.edu/EdRes/GradInfo/Graduate_Catalog/">http://www.inform.umd.edu/EdRes/GradInfo/Graduate_Catalog/</A>" name="UMCP Graduate Catalog"&gt;&lt;/li&gt;
+  &lt;li&gt;The MEES Program Guide (available from the MEES Program office; please call 301.405.6938)&lt;/li&gt;
+  &lt;li&gt;The MEES Director (Dr. Ken Paynter; 301-405-6938 or via email: &lt;href url="<A  HREF="mailto:paynter@zool.umd.edu">mailto:paynter@zool.umd.edu</A>" name="paynter@zool.umd.edu"&gt;).&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/myfont&gt;
+
+&lt;eos&gt;
+
+&lt;h2&gt;&lt;myfont&gt;Frostburg State University&lt;/myfont&gt;&lt;/h2&gt;
+
+&lt;p&gt;Through its &lt;href url="<A  HREF="http://www.frostburg.edu/dept/biol/biolmain.htm">http://www.frostburg.edu/dept/biol/biolmain.htm</A>" name="Department of Biology"&gt;, \
+&lt;href url="<A  HREF="http://www.frostburg.edu/">http://www.frostburg.edu/</A>" name="Frostburg State University"&gt; offers M.S. degrees \
+in either Wildlife / Fisheries Biology (WFB), or Applied Ecology and Conservation Biology (AECB). \
+AL faculty direct graduate students in either of these degree programs. Both programs have core \
+course requirements. Elective courses to complete degrees in WFB or AECB generally come from four \
+departments: Biology, Geography, Economics, and Mathematics. Currently the AL faculty and administration \
+are pursuing the potential for a sub-program in Landscape and Watershed Ecology within FSU's AECB degree. \
+Further information on FSU graduate programs, degree requirements, and admissions materials can be obtained from:&lt;/p&gt;
+&lt;myfont&gt;
+ &lt;ul&gt;
+  &lt;li&gt;The &lt;href url="http:/www.frostburg.edu/grad/bios.htm" name="Master of Science: Biological Sciences web page"&gt;&lt;/li&gt;
+  &lt;li&gt;The FSU graduate catalog (available from the Registrar's Office; 301.687.4736)&lt;/li&gt;
+  &lt;li&gt;The Department of Biology's Graduate Program Coordinator (Dr. Gwen Brewer; 301.687.4306 or via e-mail: &lt;href url="<A  HREF="mailto:gbrewer@frostburg.edu">mailto:gbrewer@frostburg.edu</A>" name="gbrewer@frostburg.edu"&gt;).&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/myfont&gt;
+
+&lt;eos&gt;
+
+&lt;h1 align="right"&gt;&lt;myfont&gt;Student Admission and Support&lt;/myfont&gt;&lt;/h1&gt;
+&lt;p&gt;Admission to either the UMCP MEES Program or the FSU graduate program is competitive from two points of view. \
+First, applicants are judged on their academic merits. Second, before academically eligible students are \
+admitted, they must be accepted by a faculty advisor; many such students are not accepted into these \
+graduate programs for lack of an advisor. Thus, prospective students interested in working with AL \
+faculty advisors should correspond directly with &lt;href url="/newsite/faculty" name="AL faculty members"&gt; \
+having similar research interests about potential research projects and assistantships.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Most AL graduate students are supported by research assistantships based on faculty grants or contracts. \
+In addition, there are a limited number of competitively awarded teaching assistantships available. \
+Outstanding applicants may also be nominated by the MEES Program for highly competitive UMCP Graduate \
+School Fellowships.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Currently, AL students within the MEES Program generally maintain residence in College Park for one \
+to two years - depending on the amount and type of coursework needed - before moving onto full-time research \
+at AL. Students enrolled in FSU M.S. programs generally reside in &lt;href url="<A  HREF="http://www.ci.frostburg.md.us/">http://www.ci.frostburg.md.us/</A>" name=Frostburg&gt; \
+throughout their degree program.&lt;/p&gt;
+
+&lt;eos&gt;
+
+&lt;h1 align="right"&gt;&lt;myfont&gt;Contacts for Graduate Education at AL&lt;/myfont&gt;&lt;/h1&gt;
+&lt;p&gt;Prospective students are encouraged to solicit general information and become familiar with the \
+graduate program of interest before contacting AL faculty. Specific questions about the programs \
+should be directed to the MEES Program Director or FSU Biology Graduate Program Director (see contacts above). \
+Questions concerning AL research assistantships should be directed to individual faculty members. \
+Our &lt;href url="/newsite/faculty/index.html" name="faculty page"&gt; has a listing of faculty and their research interests.&lt;/p&gt;
+
+&lt;eos&gt;
+</PRE>
+<PRE>
+# topleveltemplate.wml -- template for top level pages
+#                         ea Farris Oct 1999
+#
+# this is the template file used by top-level pages. it
+# includes the navbar file and the global mytags file.
+
+#use wml::std::grid
+#use wml::std::href
+#use wml::std::info
+#use wml::std::page
+#use wml::std::toc style=ul
+#use wml::std::tags
+
+#include '/var/www/mytags.wml'
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "<A  HREF="http://www.w3.org/TR/REC-html40/loose.dtd">http://www.w3.org/TR/REC-html40/loose.dtd</A>"&gt;
+
+&lt;page info text="#003952"&gt;
+&lt;head&gt;
+  &lt;title&gt;&lt;&lt;PAGETITLE&gt;&gt;&lt;/title&gt;
+&lt;!-- &lt;link rel=stylesheet type="text/css" href="/alstyles.css"&gt; --&gt;
+&lt;/head&gt;
+&lt;grid layout=2x1 border=0 padding=5 width=95%&gt;
+ &lt;cell width=155&gt;&lt;href url="/index.html" image="&lt;get-var ROOT&gt;/images/home.jpg" name="Appalachian Laboratory Home Page"&gt;
+ &lt;br&gt;&lt;br&gt;
+ &lt;&lt;LEFTSIDE&gt;&gt;&lt;br&gt;
+ &lt;leftsidefooter&gt;&lt;/cell&gt;
+ &lt;cell width=*&gt;
+ &lt;a name=top&gt;&lt;img src="&lt;get-var ROOT&gt;/images/&lt;&lt;PAGEPREFIX&gt;&gt;-title.jpg" alt="&lt;&lt;PAGETITLE&gt;&gt;"&gt;&lt;/a&gt;&lt;br&gt;
+ &lt;&lt;BODY&gt;&gt;&lt;/cell&gt;
+&lt;/grid&gt;
+
+&lt;footer&gt;
+
+#include '/var/www/tl_navbar.wml'
+
+..BODY&gt;&gt;
+</PRE>
+<PRE>
+# mytags.wml -- user defined tags for AL website
+#               ea Farris, Oct 1999
+#
+# this file should be #include-d in each template file
+# it includes user-defined tags used throughout the site
+
+# TAGS DEFINED IN THIS FILE
+# &lt;eos&gt; -- specifies the end of a section, including a "back to top" link
+# &lt;footer&gt; -- specifies the footer that appears on the bottom of each page
+# &lt;leftsidefooter&gt; -- specifies the footer that appears below the menu on the left side of tl pages
+# &lt;email address&gt; -- converts "address" to &lt;a href=<A  HREF="mailto:address">mailto:address</A>&gt;address&lt;/a&gt;
+# &lt;p&gt; -- redefines standard paragraph tag with font information
+# &lt;myfont&gt; -- container that expands to the proper font face= tag
+
+#use wml::all
+
+&lt;define-tag eos&gt;
+&lt;protect pass=2&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font face="Trebuchet MS, Arial, Helvetica, Swiss, sans-serif" size=1&gt;&lt;a href=#top&gt;Back to top&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;/protect&gt;
+&lt;hr&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag footer&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;div align="right"&gt;&lt;font size="1"&gt;Please address any comments, suggestions, or questions \
+to the &lt;href name="webmaster" url="<A  HREF="mailto:webmaster@al.umces.edu">mailto:webmaster@al.umces.edu</A>"&gt;.&lt;br&gt;
+Source file &lt;get-var WML_SRC_FILENAME&gt; last modified &lt;get-var WML_SRC_ISOTIME&gt; by &lt;get-var WML_SRC_REALNAME&gt;.&lt;/font&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag leftsidefooter&gt;
+&lt;protect pass=2&gt;
+&lt;p align="left"&gt;&lt;font face="Trebuchet MS, Arial, Helvetica, Swiss, sans-serif" size="1"&gt;UMCES Appalachian&lt;br&gt;
+Laboratory&lt;br&gt;
+301 Braddock Rd.&lt;br&gt;
+Frostburg, MD 21532&lt;br&gt;&lt;br&gt;
+Tel: 301.689.7100&lt;br&gt;
+Fax: 301.689.7200&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;a href="<A  HREF="mailto:pitelka@al.umces.edu">mailto:pitelka@al.umces.edu</A>"&gt;Dr. Louis F. Pitelka&lt;/a&gt;&lt;br&gt;
+Director&lt;br&gt;
+Tel: 301.689.7101&lt;/font&gt;&lt;/p&gt;
+&lt;/protect&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag email whitespace=delete&gt;
+&lt;preserve address&gt;
+&lt;a href="<A  HREF="mailto:%0">mailto:%0</A>"&gt;%0&lt;/a&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag p whitespace=delete endtag=required&gt;
+&lt;p*&gt;&lt;font face="Trebuchet MS, Arial, Helvetica, Swiss, sans-serif"&gt;%body&lt;/font&gt;&lt;/p&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag myfont whitespace=delete endtag=required&gt;
+&lt;font face="Trebuchet MS, Arial, Helvetica, Swiss, sans-serif"&gt;%body&lt;/font&gt;
+&lt;/define-tag&gt;
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01997" HREF="msg01997.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01995.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01997.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02001.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01997.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01996"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01996"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Sun, 5 Sep 1999 23:31:58 +0200 (MET DST) -->
+<!--X-Message-Id: 19990905233158.A10170@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990903133604.A29823@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990905223649.1502B&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00929">Date Index</a>][<a href="thrd19.shtml#00929">Thread Index</a>]<br>
+[<A HREF="msg00928.shtml">Date Prev</A>][<A HREF="msg00930.shtml">Date Next</A>][<A HREF="msg00928.shtml">Thread Prev</A>][<A HREF="msg00932.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 5 Sep 1999 23:31:58 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+	Hi!
+
+On 05 Sep 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; On Fri, 3 Sep 1999, Gerfried Fuchs wrote:
+&gt; 
+&gt; &gt; wml doesn't read my ./.wmlrc file anymore. There is only a single line in it:
+&gt; &gt; -Iincludes
+&gt; &gt;  But that isn't used anymore...
+&gt; 
+&gt; Could you elaborate on this?
+&gt; I can't reproduce your problem.
+
+ Well, it happens only on this one machine... I don't know why. I had
+1.7.2 running already with this working. But then we had to install
+linux again after a hard-disk crash (SuSE 6.1 that was) and I had to
+recompile wml. After that it didn't work anymore and I sadly can't find
+where the bug can be. I don't really think that it's a bug in wml - but
+it's a bug that happens in wml, if you know what I mean ;/
+
+ I can't reproduce it really for myself for I have a running 1.7.2
+version at home (with SuSE 6.0 on the other hand)....  It's only that I
+haven't got a clue where to start searching for what's going wrong and
+I'm not handy with strace, gdb or that stuff. If one could give me a
+helping hand I would be greatful!
+
+ It happens when I both run wmk or wml on a single file. Maybe the error
+message itself is more of a help?
+
+alfie@skater:~/WWW/WML &gt; ls -a
+./              HELP            alfie.wml       index.html      music.wml
+../             INCLUDES/       disclaimer.wml  index.wml       pics@
+.wmlrc          abb.wml         frame.wmk       missing.wml     wml.wml
+alfie@skater:~/WWW/WML &gt; cat .wmlrc
+-IINCLUDES
+alfie@skater:~/WWW/WML &gt; ls INCLUDES/
+frame.wmi  href.wmi   tags.wmi
+alfie@skater:~/WWW/WML &gt; wml abb.wml
+** IPP:Error: file not found: frame.wmi
+** WML:Break: Error in Pass 1 (rc=1).
+alfie@skater:~/WWW/WML &gt; wmk
+** IPP:Error: file not found: frame.wmi
+** WML:Break: Error in Pass 123456789 (rc=1).
+/usr/local/bin/wml -n -o../abb.html abb.wml  (skipped)
+** IPP:Error: file not found: frame.wmi
+** WML:Break: Error in Pass 123456789 (rc=1).
+/usr/local/bin/wml -n -o../alfie/index.html alfie.wml  (skipped)
+...
+
+ I hope someone has got a clue - it's a little annoying to always have
+to type "wmk -IINCLUDES" ;-/
+
+ TIA a lot!
+Alfie
+-- 
+/earth is 98% full ... please delete anyone you can.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00932" HREF="msg00932.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00925" HREF="msg00925.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00928" HREF="msg00928.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00928.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00930.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00928.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00932.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00929"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00929"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

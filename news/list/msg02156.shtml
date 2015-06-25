@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: std/href.wml space after links -->
+<!--X-From-R13: wrna&#45;zvpury.fnhintrNpyho&#45;vagrearg.se -->
+<!--X-Date: Thu, 8 Mar 2001 12:48:53 +0100 (MET) -->
+<!--X-Message-Id: mnet1.984052119.8853.jean&#45;michel.sauvage@club&#45;internet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02156">Date Index</a>][<a href="thrd44.shtml#02156">Thread Index</a>]<br>
+[<A HREF="msg02155.shtml">Date Prev</A>][<A HREF="msg02157.shtml">Date Next</A>][<A HREF="msg02154.shtml">Thread Prev</A>][<A HREF="msg02157.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>std/href.wml space after links</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 8 Mar 2001 12:48:39 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+There's a very little 'bug' in wml 2.0.6 wml::std::href,
+at the end of define-tag, just before restore, you may find:
+--
+...&lt;/a&gt;
+"...
+&lt;restore...
+--
+
+This adds a space after all links, even with &lt;suck&gt;.
+
+(it looks bad with text links enclosed with brackets)
+
+So, you may remove LF to have:
+--
+...&lt;/a&gt;"...
+&lt;restore..
+--
+
+Jean-Michel SAUVAGE
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02155.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02157.shtml">Is there a syntax-file for vim?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02154.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02157.shtml">Is there a syntax-file for vim?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02156"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02156"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

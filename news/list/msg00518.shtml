@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML for Windows 98 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 29 Mar 1999 12:47:10 +0200 (MET DST) -->
+<!--X-Message-Id: 19990329124626.A2938@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36FF46BC.4D85FD51@telin.nl -->
+<!--X-Reference: m13e2ozir0.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00518">Date Index</a>][<a href="thrd12.shtml#00518">Thread Index</a>]<br>
+[<A HREF="msg00517.shtml">Date Prev</A>][<A HREF="msg00519.shtml">Date Next</A>][<A HREF="msg00517.shtml">Thread Prev</A>][<A HREF="msg00519.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML for Windows 98</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 29 Mar 1999 12:46:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Mar 29, 1999, Fritz Zaucker wrote:
+
+&gt;[...]
+&gt; I have no idea if it would be possible to port it to Windows, but I
+&gt; doubt that anybody has the inclination to do so. You don't want to run
+&gt; a serious web site on a Windows box anyway.
+
+It should be possible to port WML to the Win32 platform when one ports
+Meta-HTML and ePerl, because Perl is already ported and the remaining parts
+are mainly Perl sources. But I don't think this is a useful thing, because the
+performance under Win32 will horrible, I'm sure.
+
+&gt; There is documentation on the web site, not the complete man pages I
+&gt; believe.
+
+There should be HTML versions of _all_ manual pages under
+<A  HREF="http://www.engelschall.com/sw/wml/docs/">http://www.engelschall.com/sw/wml/docs/</A>. Perhaps some were not updated the
+last weeks. But the list should be complete.
+
+&gt; P.S.: And yes, WML is REALLY cool. Just install Linux on your PC and
+&gt;       you are in business.
+
+Yeah, that's the important message. Thanks, Fritz. Forget the Win32 platform.
+It's not worth thinking about it IMHO.... when someone contributes a port of
+WML to Win32, fine. But when not, don't think about it too long.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00516" HREF="msg00516.shtml">WML for Windows 98</A></strong>, <em>From:</em> Pedro Alexandre Martins</li>
+<li><strong><A NAME="00517" HREF="msg00517.shtml">Re: WML for Windows 98</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00517.shtml">Re: WML for Windows 98</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00519.shtml">Re: WML for Windows 98</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00517.shtml">Re: WML for Windows 98</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00519.shtml">Re: WML for Windows 98</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00518"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00518"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.6 (25&#45;Oct&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 17 May 2001 23:11:41 +0200 (MET DST) -->
+<!--X-Message-Id: 20010517231956.A7502@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200104220449.f3M4nQO17964@pretender.boolean.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02242">Date Index</a>][<a href="thrd45.shtml#02242">Thread Index</a>]<br>
+[<A HREF="msg02241.shtml">Date Prev</A>][<A HREF="msg02243.shtml">Date Next</A>][<A HREF="msg02208.shtml">Thread Prev</A>][<A HREF="msg02243.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 17 May 2001 23:19:56 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Apr 22, 2001 at 04:49:26AM +0000, Kurt Zeilenga wrote:
+&gt; 
+&gt; htmlfix appears to be trimming the trailing "/" from unquoted attributes.
+&gt; 
+&gt; The following input:
+&gt; 
+&gt; &lt;ol&gt;
+&gt; &lt;li&gt;&lt;a href=/&gt;BAD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href=/ &gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="/"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/">http://www.example.net/</A>&gt;BAD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/">http://www.example.net/</A> &gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/">http://www.example.net/</A>"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>&gt;BAD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A> &gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>"&gt;GOOD&lt;/a&gt;
+&gt; &lt;/ol&gt;
+&gt; 
+&gt; produces
+&gt; 
+&gt; &lt;ol&gt;
+&gt; &lt;li&gt;&lt;a href=&gt;BAD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="/"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="/"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net">http://www.example.net</A>"&gt;BAD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/">http://www.example.net/</A>"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/">http://www.example.net/</A>"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo">http://www.example.net/foo</A>"&gt;BAD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>"&gt;GOOD&lt;/a&gt;
+&gt; &lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>"&gt;GOOD&lt;/a&gt;
+&gt; &lt;/ol&gt;
+&gt; 
+&gt; Note the 1,4,7 list items.
+
+Hi Kurt,
+
+this is due to mp4h and not htmlfix, in order to allow processing of
+XHTML documents. I could not provide a solution to distinguish between
+xml trailing slashes and slashes being part of last attribute, sorry.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02243" HREF="msg02243.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></strong>, <em>From:</em> Kurt D. Zeilenga</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02208" HREF="msg02208.shtml">BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></strong>, <em>From:</em> Kurt Zeilenga</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02241.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02243.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02208.shtml">BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02243.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02242"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02242"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

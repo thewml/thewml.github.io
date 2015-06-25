@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ePerl and language&#45;dependent output -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 Jul 2000 18:19:32 +0200 (MET DST) -->
+<!--X-Message-Id: 20000717181520.B10794@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0007171327280.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01828">Date Index</a>][<a href="thrd37.shtml#01828">Thread Index</a>]<br>
+[<A HREF="msg01827.shtml">Date Prev</A>][<A HREF="msg01829.shtml">Date Next</A>][<A HREF="msg01822.shtml">Thread Prev</A>][<A HREF="msg01829.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ePerl and language-dependent output</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 18:15:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 17, 2000 at 01:31:56PM +0200, Stephan Petersen wrote:
+
+[...]
+&gt; But when I simply enclose this into &lt;d: ... &gt;, like this
+&gt; 
+&gt; &lt;d:
+&gt; &lt;set-var myvar="xyz"&gt;
+&gt; &lt;perl&gt;
+&gt;     my $myperlvar = qq/&lt;get-var myvar&gt;/;
+&gt;     print "The value of myperlvar is $myperlvar\n";
+&gt; &lt;/perl&gt;
+&gt; &gt;
+&gt; 
+&gt; I get an ePerl error (Can't locate object method "is" via package
+&gt; "xyz" at ...).
+[...]
+
+The problem is that quotes in attributes are used to group words and so
+must be removed in output.
+For instance, what output do you expect with
+   &lt;e: "Hello, world!"&gt;
+?
+
+You should use the short form only with few words, as above. And write
+  &lt;d&gt;
+  &lt;set-var myvar="xyz"&gt;
+  &lt;perl&gt;
+      my $myperlvar = qq/&lt;get-var myvar&gt;/;
+      print "The value of myperlvar is $myperlvar\n";
+  &lt;/perl&gt;
+  &lt;/d&gt;
+
+&gt; Apart from the question where I made a mistake (conceptually?), what
+&gt; is the best way to solve the original problem, i.e. making the output
+&gt; from ePerl language-dependent? The rest of the multilingual features
+&gt; of wml work fine for me, btw.
+
+Adding this feature has never gone to the top of my TODO list.
+It is not very hard, you simply have to manage a stack of current
+languages.  When entering in a language area, put its name onto the
+stack, and pop up when leaving area. So current language is always the
+value found at top of the stack.
+
+If you want, try the code below.  The lang:current variable should
+always contain current language.
+
+  #use wml::std::lang
+  
+  &lt;set-var __lang:stack=&gt;
+  
+  &lt;define-tag lang:push whitespace=delete&gt;
+    &lt;set-var lang:current="%0"&gt;
+    &lt;array-push __lang:stack %0&gt;
+  &lt;/define-tag&gt;
+  &lt;define-tag lang:pop whitespace=delete&gt;
+    &lt;set-var lang:current="&lt;array-pop __lang:stack&gt;"&gt;
+  &lt;/define-tag&gt;
+  
+  &lt;define-tag lang:new&gt;
+  &lt;preserve id short&gt;
+  &lt;set-var short=*&gt;
+  &lt;set-var %attributes&gt;
+  &lt;set-var __ok=1&gt;\
+  &lt;set-var __i=0&gt;\
+  &lt;while &lt;get-var __languages[&lt;get-var __i&gt;]&gt;&gt;\
+     &lt;ifeq "&lt;get-var __languages[&lt;get-var __i&gt;]&gt;" "&lt;get-var id&gt;" &lt;set-var __ok=0&gt;&gt;
+  &lt;increment __i&gt;
+  &lt;/while&gt;
+  &lt;when &lt;eq "&lt;get-var __ok&gt;" 1&gt;&gt;
+    &lt;array-push __languages &lt;get-var id&gt;&gt;
+    &lt;subst-in-string 
+          "=LT=define-tag lang:&lt;get-var id&gt;: attributes=verbatim&gt;[LANG_&lt;upcase &lt;get-var id&gt;&gt;:=LT=lang:push &lt;get-var id&gt;&gt;%%attributes=LT=lang:pop&gt;:]=LT=/define-tag&gt;
+           =LT=define-tag lang:&lt;get-var id&gt; endtag=required&gt;[LANG_&lt;upcase &lt;get-var id&gt;&gt;:=LT=lang:push &lt;get-var id&gt;&gt;%%body=LT=lang:pop&gt;:]=LT=/define-tag&gt;" 
+       "=LT=" "&lt;"
+    &gt;
+    &lt;when &lt;not &lt;get-var short&gt;&gt;&gt;
+    &lt;subst-in-string 
+          "=LT=define-tag &lt;get-var id&gt;: attributes=verbatim&gt;[LANG_&lt;upcase &lt;get-var id&gt;&gt;:=LT=lang:push &lt;get-var id&gt;&gt;%%attributes=LT=lang:pop&gt;:]=LT=/define-tag&gt;
+           =LT=define-tag &lt;get-var id&gt; endtag=required&gt;[LANG_&lt;upcase &lt;get-var id&gt;&gt;:=LT=lang:push &lt;get-var id&gt;&gt;%%body=LT=lang:pop&gt;:]=LT=/define-tag&gt;" 
+       "=LT=" "&lt;"
+    &gt;
+    &lt;/when&gt;
+  &lt;/when&gt;
+  &lt;restore  id short&gt;
+  &lt;/define-tag&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01829" HREF="msg01829.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01845" HREF="msg01845.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01822" HREF="msg01822.shtml">ePerl and language-dependent output</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01827.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01829.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01822.shtml">ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01829.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01828"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01828"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

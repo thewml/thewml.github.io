@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Frames -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Thu, 10 Dec 1998 03:10:49 +0100 (CET) -->
+<!--X-Message-Id: 199812091841.KAA09727@seer.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199812091702.JAA02556@seer.surefirev.com -->
+<!--X-Reference: 19981209193618.B2209@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00268">Date Index</a>][<a href="thrd6.shtml#00268">Thread Index</a>]<br>
+[<A HREF="msg00267.shtml">Date Prev</A>][<A HREF="msg00269.shtml">Date Next</A>][<A HREF="msg00267.shtml">Thread Prev</A>][<A HREF="msg00271.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Frames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 9 Dec 1998 10:41:23 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Ralf S. Engelschall writes:
+ &gt; On Wed, Dec 09, 1998, Michael McNamara wrote:
+ &gt; 
+ &gt; &gt;   What support is there for frames and the navbar?  I love the
+ &gt; &gt; navbar, it makes adding page n+1 so much easier. In fact it is so
+ &gt; &gt; good, that no support for frames is quite liveable.
+ &gt; &gt; 
+ &gt; &gt;   However, for slow links, I'd like to use frames, to load
+ &gt; &gt; content into a window, keeping the navigation in a separate frame.
+ &gt; &gt;[...]
+ &gt; 
+ &gt; Hmmm... usually when you use a frame, as you said, the navbar is in the frame
+ &gt; which stays permanently on the screen.  Then there is usually no need for a
+ &gt; navbar generation tool like wml::des::navbar. Because the navbar is pure
+ &gt; static and stays inside a _single_ page.  wml::des::navbar is for generating
+ &gt; navbars for _different_ pages where each page needs a slightly different
+ &gt; navbar. So I still don't see the point you address. What is your (syntactical
+ &gt; and semantical) wish for a frame support in wml::des::navbar?
+ &gt; 
+
+	I am wondering is if I can get the automatic java script
+changing of navbar gifs from the 'normal' to 'over' to 'selected'
+features, but cause the effect of selecting a menu item be to load a
+url into another frame.
+
+	-mac
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00271" HREF="msg00271.shtml">Re: Frames</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="00292" HREF="msg00292.shtml">Re: Frames</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00266" HREF="msg00266.shtml">Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+<li><strong><A NAME="00267" HREF="msg00267.shtml">Re: Frames</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00267.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00269.shtml">Blank lines (once more)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00267.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00271.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00268"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00268"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

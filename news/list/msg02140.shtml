@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Why does <set&#45;var %body> not work? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 20 Feb 2001 10:14:54 +0100 (MET) -->
+<!--X-Message-Id: 20010220102135.A9799@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010219231141.A24595@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010220001349.A8016@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02140">Date Index</a>][<a href="thrd43.shtml#02140">Thread Index</a>]<br>
+[<A HREF="msg02139.shtml">Date Prev</A>][<A HREF="msg02141.shtml">Date Next</A>][<A HREF="msg02136.shtml">Thread Prev</A>][<A HREF="msg02141.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Why does &lt;set-var %body&gt; not work?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 10:21:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 20, 2001 at 12:13:49AM +0100, Denis Barbier wrote:
+[...]
+&gt; Hi Axel,
+&gt; here is what i did:
+&gt; 
+&gt;  prompt$ cat test.wml
+&gt;    &lt;define-tag CONFIGURATION endtag=required&gt;\
+&gt;    &lt;set-var %body&gt;\
+&gt;    &lt;/define-tag&gt;
+&gt;    &lt;set-var DESTINATION="/fnord/"
+&gt;             TITLE="example"
+&gt;             BASE="foobar"
+&gt;             SUFFIX="html"
+&gt;             DESC="Example"&gt;
+&gt;    &lt;CONFIGURATION&gt;
+&gt;            DESTINATION="/fnord/"
+&gt;            TITLE="example"
+&gt;            BASE="foobar"
+&gt;            SUFFIX="html"
+&gt;            DESC="Example"
+&gt;    &lt;/CONFIGURATION&gt;
+&gt;    
+&gt;    &lt;get-var DESTINATION&gt;
+&gt;  prompt$ ~/wml-2.0.4/bin/wml test.wml
+&gt;  /fnord/
+&gt; 
+&gt; Looks good to me.
+
+As suggested by Axel in a private mail, this answer does not have any
+sense, sorry.  In fact, %body is treated as a single entity, and i
+currantly see no way to have it parsed as an array of attributes.
+
+It seems fairly easy to add a new function, say &lt;disjoin&gt;, for doing
+this job. Will send a patch soon (i.e. within 24 hours).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02141" HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02134" HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02136" HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02139.shtml">I am back ;)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02140"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02140"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

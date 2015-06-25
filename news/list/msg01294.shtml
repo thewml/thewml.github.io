@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Questions... -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Sun, 23 Jan 2000 16:45:05 +0100 (MET) -->
+<!--X-Message-Id: 14475.8551.131301.949547@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000123150850.265A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01294">Date Index</a>][<a href="thrd27.shtml#01294">Thread Index</a>]<br>
+[<A HREF="msg01293.shtml">Date Prev</A>][<A HREF="msg01295.shtml">Date Next</A>][<A HREF="msg01293.shtml">Thread Prev</A>][<A HREF="msg01295.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Questions...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 23 Jan 2000 16:44:22 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier writes:
+ &gt; On Sun, 23 Jan 2000, Carsten Wartmann wrote:
+ &gt; 
+ &gt; [...]
+ &gt; &gt; I want to have a news and quicklinks area on my site, so I thought it
+ &gt; &gt; would be the easiest to make directories "news" and "quicks" which
+ &gt; &gt; contain simple files like i.e. NewVersion1.72.wml:
+ &gt; &gt; 
+ &gt; &gt; &lt;date&gt;12.12.1999&lt;/date&gt;
+ &gt; &gt; &lt;link&gt;www.blender.nl&lt;/link&gt;
+ &gt; &gt; &lt;text&gt;Blender Version 1.72&lt;/text&gt;
+ &gt; &gt; 
+ &gt; &gt; and let wml render them into a nice table (the tags are definied in my 
+ &gt; &gt; common.wml).
+[···]
+ &gt; &gt; This works some kind, but naturally the tags didn´t get expanded,
+ &gt; &gt; because perl is pass 3... I tried to call wml with the option -p
+ &gt; &gt; 1-3,1-9 but this didn´t work, it does the passes this way:
+ &gt; &gt; 1,1,2,2,3,3,... (why?)
+ &gt; 
+ &gt; Passes are sorted. You have to put an exclamation mark after pass
+ &gt; specification to let this unsorted. As i did not know whether this is a
+ &gt; good idea, i did not document this feature. It is documented in
+ &gt; wml-SNAP.
+
+Aha! I´ll try (carefuly ;-)
+
+ &gt; &gt; Maybe I´m totally wrong with my idea and someone could point me into
+ &gt; &gt; the right direction.
+ &gt; 
+ &gt; There are many solutions. The simplest is
+ &gt; 
+ &gt; #include "common.tmpl"
+ &gt; #include "news/*.inc"
+
+Obvious idea... Thanks.
+
+ &gt; In lines above, i replaced .wml suffix because this suffix should be
+ &gt; reserved for input file only.
+
+Yes, this comes to my mind this night... It also makes it easier to
+recursively wmk over a site.
+
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01293" HREF="msg01293.shtml">Re: Questions...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01293.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01295.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01293.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01295.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01294"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01294"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

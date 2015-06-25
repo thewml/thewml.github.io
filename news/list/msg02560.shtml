@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: sources vor www.novas.org -->
+<!--X-From-R13: Eronfgvna.PebfvtN@binf.bet -->
+<!--X-Date: Wed, 13 Mar 2002 12:13:21 +0100 (MET) -->
+<!--X-Message-Id: OF87596235.5F018307&#45;ON80256B7B.003C4F7A&#45;80256B7B.003D9B0B@LocalDomain -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02560">Date Index</a>][<a href="thrd52.shtml#02560">Thread Index</a>]<br>
+[<A HREF="msg02559.shtml">Date Prev</A>][<A HREF="msg02561.shtml">Date Next</A>][<A HREF="msg02558.shtml">Thread Prev</A>][<A HREF="msg02561.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: sources vor www.novas.org</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Wed, 13 Mar 2002 11:12:53 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+yep, the sources in my little extract were out-of-date and incomplete. I
+have uploaded the lot now, you can just download all the current source
+files at your pleasure. The files are not linked to anywhere, so you have
+to make educated guesses. My "include" fliles are called "*.inc", and live
+mostly in the root directory, a *nav.inc in each directory holds navbar
+definitions, and there are .wmlrc files and a .wml for every .html you see
+on the site.  As I said before, everything has grown while I learned wml,
+(well to be honest I re-wrote once, halfway up my learning-curve), so a lot
+more -Dname ~ definition - type  magic could be used in .wmlrc files and
+references to directories are hard-coded in the wml so you can't just copy
+a wml to a different place and expect it to work. When someone uses my
+templates and improves them, please let me know so that I (layzy sod) can
+benefit too... long live gpl. Ahem, there is no license attached of course,
+as I can't be bothered and have not cleared this "publish sources" policy
+with my bosses, so I guess it's "public domain". I guess tomorrow M$ is
+going to download everything, copyright it, and sue me for not paying a
+license fee to them :-)
+Start with  <A  HREF="http://www.novas.org/index.wml">http://www.novas.org/index.wml</A>, and find everything
+
+seb
+
+ -----------------------------
+Sebastian Brosig
+Data Analyst
+Novas-Ouvertures
+Tel. 0870 901 9716
+Fax 0151 709 5200
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02561" HREF="msg02561.shtml">Re: sources vor www.novas.org</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02559.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02561.shtml">Re: sources vor www.novas.org</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02558.shtml">Re: preselected nested navbar items-idea,patch</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02561.shtml">Re: sources vor www.novas.org</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02560"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02560"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

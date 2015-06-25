@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question regarding dependencies with wmk -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 25 Jun 1998 12:50:40 +0200 (CEST) -->
+<!--X-Message-Id: 19980625125038.B2699@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m0yowSm&#45;000DHYC@landru.math.uwaterloo.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00135">Date Index</a>][<a href="thrd3.shtml#00135">Thread Index</a>]<br>
+[<A HREF="msg00134.shtml">Date Prev</A>][<A HREF="msg00136.shtml">Date Next</A>][<A HREF="msg00133.shtml">Thread Prev</A>][<A HREF="msg00137.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question regarding dependencies with wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 12:50:38 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 24, 1998, James A. Treacy wrote:
+
+&gt; When I initially started using wmk, it seemed to catch dependencies well.
+&gt; Starting I don't know when, modifying any file included using #use
+&gt; doesn't cause the file containing the #use to be remade.
+&gt; Any ideas?
+
+I'm not sure if I understand your question correctly (english is not my native
+language). But WMk only looks for direct "outputfile &lt;- inputfile" dependecies
+while inputfiles are determined via .wml extension and outputfiles via
+corresponding .html extensions (or shebang lines). WMk is not a real
+dependency tool like Make, i.e. it doesn't indirect dependecies by checkng
+the files referenced via #use or #include statements.
+
+If you really need such things I recommend you to do a different approach:
+Write a Perl script which extracts the #use/#include lines from the input
+files and calculates depencecies. It then generates Makefiles out of these
+depencies and insert "wmk" calls for the targets in these Makefiles.
+
+Or sees anybody an easy way how we can add indirect dependecies to WMk?  IMHO
+its not really trivial, i.e. would need more hacking than I've currectly time
+for. But when someone contributes a patch I'd be happy to include this
+functionality into WMk.
+
+OTOH there are sophisticated built tools out there (Cook, Bras, etc.) which
+are better than Make and should be more easily adaptable to a fully
+dependency-aware .html &lt;- .wml generation. Has anybody already experiences on
+this topic? How do others run WMk or WML?
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00137" HREF="msg00137.shtml">Re: question regarding dependencies with wmk</A></strong>, <em>From:</em> Viorel Anghel</li>
+<li><strong><A NAME="00141" HREF="msg00141.shtml">Re: question regarding dependencies with wmk</A></strong>, <em>From:</em> Tomasz Cholewo</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00133" HREF="msg00133.shtml">question regarding dependencies with wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00134.shtml">Re: a few questions on using wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00136.shtml">ANNOUNCE: WML 1.6.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00133.shtml">question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00137.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00135"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00135"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

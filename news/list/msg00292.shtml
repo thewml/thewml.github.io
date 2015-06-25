@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Frames -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 31 Dec 1998 17:06:44 +0100 (CET) -->
+<!--X-Message-Id: 19981231170642.A23224@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199812091702.JAA02556@seer.surefirev.com -->
+<!--X-Reference: 19981209193618.B2209@engelschall.com -->
+<!--X-Reference: 199812091841.KAA09727@seer.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00292">Date Index</a>][<a href="thrd6.shtml#00292">Thread Index</a>]<br>
+[<A HREF="msg00291.shtml">Date Prev</A>][<A HREF="msg00293.shtml">Date Next</A>][<A HREF="msg00277.shtml">Thread Prev</A>][<A HREF="msg00269.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Frames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 31 Dec 1998 17:06:42 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Dec 09, 1998, Michael McNamara wrote:
+
+&gt; Ralf S. Engelschall writes:
+&gt;  &gt; On Wed, Dec 09, 1998, Michael McNamara wrote:
+&gt;  &gt; 
+&gt;  &gt; &gt;   What support is there for frames and the navbar?  I love the
+&gt;  &gt; &gt; navbar, it makes adding page n+1 so much easier. In fact it is so
+&gt;  &gt; &gt; good, that no support for frames is quite liveable.
+&gt;  &gt; &gt; 
+&gt;  &gt; &gt;   However, for slow links, I'd like to use frames, to load
+&gt;  &gt; &gt; content into a window, keeping the navigation in a separate frame.
+&gt;  &gt; &gt;[...]
+&gt;  &gt; 
+&gt;  &gt; Hmmm... usually when you use a frame, as you said, the navbar is in the frame
+&gt;  &gt; which stays permanently on the screen.  Then there is usually no need for a
+&gt;  &gt; navbar generation tool like wml::des::navbar. Because the navbar is pure
+&gt;  &gt; static and stays inside a _single_ page.  wml::des::navbar is for generating
+&gt;  &gt; navbars for _different_ pages where each page needs a slightly different
+&gt;  &gt; navbar. So I still don't see the point you address. What is your (syntactical
+&gt;  &gt; and semantical) wish for a frame support in wml::des::navbar?
+&gt;  &gt; 
+&gt; 
+&gt; 	I am wondering is if I can get the automatic java script
+&gt; changing of navbar gifs from the 'normal' to 'over' to 'selected'
+&gt; features, but cause the effect of selecting a menu item be to load a
+&gt; url into another frame.
+
+Sorry, a little bit late to ask, but I'm very busy :-(
+
+You mean that one can use wml::des::navbar to create a navbar for a navigation
+frame? Hmmm... shouldn't this be just a matter of using &lt;base
+target=OtherFrameName&gt; in the navigation frame?
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00266" HREF="msg00266.shtml">Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+<li><strong><A NAME="00267" HREF="msg00267.shtml">Re: Frames</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00268" HREF="msg00268.shtml">Re: Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00291.shtml">Re: [patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00293.shtml">Timing: first results : 30%</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00277.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00269.shtml">Blank lines (once more)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00292"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00292"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

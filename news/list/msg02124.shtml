@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Escaping double quotes in mp4h -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 1 Feb 2001 15:11:42 +0100 (MET) -->
+<!--X-Message-Id: 20010201151903.A10219@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3A795E1C.1000708@xanadu.ru -->
+<!--X-Reference: XFMail.010201145123.jh@inetcom.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02124">Date Index</a>][<a href="thrd43.shtml#02124">Thread Index</a>]<br>
+[<A HREF="msg02123.shtml">Date Prev</A>][<A HREF="msg02125.shtml">Date Next</A>][<A HREF="msg02123.shtml">Thread Prev</A>][<A HREF="msg02132.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Escaping double quotes in mp4h</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Feb 2001 15:19:03 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Feb 01, 2001 at 02:51:23PM +0100, Jan Holler wrote:
+&gt; 
+&gt; On 01-Feb-01 Petr Andreyev wrote:
+&gt; &gt; Is the behavior of the following code normal?
+&gt; 
+&gt; Shouldn't be IMHO. Just use the tag &amp;quot; for "
+&gt; to have a work-around.
+
+Hi,
+
+i will try to find in archives a thread explaining why this has been
+done so, and yes this is the normal behaviour, as described in toplevel
+README.mp4h
+
+BTW i have been inactive for months on WML, i will be back soon ;o)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02122" HREF="msg02122.shtml">Escaping double quotes in mp4h</A></strong>, <em>From:</em> Petr Andreyev</li>
+<li><strong><A NAME="02123" HREF="msg02123.shtml">RE: Escaping double quotes in mp4h</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02123.shtml">RE: Escaping double quotes in mp4h</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02125.shtml">&lt;define-tag in combination with &lt;navbar:define</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02123.shtml">RE: Escaping double quotes in mp4h</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02132.shtml">Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02124"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02124"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

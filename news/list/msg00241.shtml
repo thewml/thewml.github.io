@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation failed -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Sat, 7 Nov 1998 13:02:03 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981107124150.746B&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.02.9811071058001.7713&#45;100000@solar02.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00241">Date Index</a>][<a href="thrd6.shtml#00241">Thread Index</a>]<br>
+[<A HREF="msg00240.shtml">Date Prev</A>][<A HREF="msg00242.shtml">Date Next</A>][<A HREF="msg00240.shtml">Thread Prev</A>][<A HREF="msg00242.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation failed</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 7 Nov 1998 12:46:28 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 7 Nov 1998, Florian Hars wrote:
+
+&gt; On 6 Nov 1998, David Mentr'e wrote:
+&gt; &gt; I have the same installation problem as Jan : bad Getopt::Long version
+&gt; &gt; number.
+&gt; &gt; 
+&gt; &gt; However, in wml_common, there is a getoptlong with the right version
+&gt; &gt; number (2.18 for wml 1.6.7). I suppose Ralf put it here on purpose. ;)
+
+
+&gt; IIRC I had that problem (or a different version number problem) too, and
+&gt; just said "make install" after I discovered the right version somewhere in
+&gt; the wml-distribution, and it worked.
+
+So my problem is that I understand nothing about all this and cannot
+install wml. I don't want to install a new perl because to many programs
+depend on my current perl-Version. 
+
+Is there a version of wml which I can use with my perl-5.004_03-2 ?
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://literatur.lake.de/in/sudelbuch">http://literatur.lake.de/in/sudelbuch</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00242" HREF="msg00242.shtml">Re: Installation failed</A></strong>, <em>From:</em> David Mentr'e</li>
+<li><strong><A NAME="00243" HREF="msg00243.shtml">Re: Installation failed</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00240" HREF="msg00240.shtml">Re: Installation failed</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00240.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00242.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00240.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00242.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00241"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00241"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

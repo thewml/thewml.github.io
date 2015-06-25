@@ -1,0 +1,168 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Placing files -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Tue, 25 May 1999 17:48:26 +0200 (MET DST) -->
+<!--X-Message-Id: 14154.50051.232141.281523@medusa.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990524182246.A207@meu.debian -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00691">Date Index</a>][<a href="thrd15.shtml#00691">Thread Index</a>]<br>
+[<A HREF="msg00690.shtml">Date Prev</A>][<A HREF="msg00692.shtml">Date Next</A>][<A HREF="msg00690.shtml">Thread Prev</A>][<A HREF="msg00694.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Placing files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 25 May 1999 08:47:44 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Xose Manoel Ramos writes:
+ &gt; Hi!
+ &gt; 
+ &gt; I just wanted a tip...
+ &gt; 
+ &gt; When creating web pages using WML... What to do?
+ &gt; 
+ &gt;   * Mix the .html files in the same directory where the .wml files
+ &gt;   are
+ &gt; 
+ &gt;   * Have the .wml files in one directory, and the .html in other
+ &gt; 
+ &gt;   * Create test .html files mixed with the .wml, and then move them
+ &gt;   to it's own directory
+ &gt; 
+ &gt; Probably that's not a big deal, but I am just beginning with a few
+ &gt; pages, probably in the future this kind of decissions will avoid
+ &gt; having a mess.  
+ &gt; 
+
+I have a top level directory, that has a makefile. 
+
+I have a src directory, that contains the .wml files, also .cgi files
+(some that I run through wml) and also image files.  
+
+I run the image files through interlace and color minimization
+filters, to make my page easier for folks to view with slow
+connections.
+
+I have a rel directory, that is built and populated by the makefile.
+
+I use mirror to copy my rel directory to my actual web server. I've
+modified the mirror script to retain the executable nature of the cgi
+scripts.
+
+I use cvs to provide revision control on the Makefile and the src
+directory.
+
+This allows me to be certain that what is on my web site can be built
+from my source, and that my source can be reclaimed from revision
+control.
+
+Tricks in the Makefile are included below.  By ... I mean fill in more
+of your file names.
+
+dirs = $(addprefix rel/, img cgi SC ... ) 
+
+WMLOPTS=-q --includefile=../defs.h -DROOT~. 
+
+HTML= index.html company.html news.html  ...
+HTMLR:=$(addprefix rel/, $(HTML))
+TXT:=   $(addprefix rel/, ChangeLog.txt .htaccess) \
+HTMLCGIR :=$(addprefix rel/, cgi/pela.cgi cgi/license.cgi cgi/bug.cgi ) 
+
+# The gifs are run through interlace
+GIFS=$(addprefix rel/img/, \
+	sfv1logo.gif sfv2logo.gif sfvlogo.gif \
+	check.gif ... )
+JPGS=$(addprefix rel/img/, newback.jpg ... )
+COPYLIST=$(JPGS) $(TXT) $(PASS) $(DATA) $(RELEASES)
+
+# public targets
+release: $(dirs) $(COPYLIST) $(GIFS) $(HTMLR) $(HTMLCGIR) 
+	@echo "Web pages released"
+clean:
+	rm -rf rel
+install: release
+	@echo "installing Mac's released web page"
+	mirror -pextwebpage
+# workhorse routines
+GDEP=defs.h Makefile $(addprefix rel/img/, $(BUTTONGIFS))
+$(HTMLR): rel/% : src/% $(GDEP)
+	(cd src; wml ../$&lt; $(WMLOPTS) --o ../$@ )
+$(HTMLCGIR): rel/% : src/% $(GDEP)
+	(cd src; wml ../$&lt; $(WMLOPTS) --o ../$@ )
+	chmod 755 $@ 
+$(CGI): rel/% : src/% 
+	cp $&lt; $@
+	chmod 755 $@ 
+$(COPYLIST): rel/% : src/% 
+	cp -fp $&lt; $@
+$(GIFS): rel/% : src/% 
+	interlace $&lt; &gt; $@
+$(dirs) : 
+	-mkdir -m 755 -p $@
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00689" HREF="msg00689.shtml">Placing files</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00690.shtml">Re: Placing files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00692.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00690.shtml">Re: Placing files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00694.shtml">shebang line with filename-variable</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00691"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00691"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

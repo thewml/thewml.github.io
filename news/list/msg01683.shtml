@@ -1,0 +1,234 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: Pevna Vngpu <oevNragebcl.pap.vsbxe.bet> -->
+<!--X-Date: Fri, 2 Jun 2000 08:38:53 +0200 (MET DST) -->
+<!--X-Message-Id: 20000601230619.A20117@entropy.cnc.ifokr.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01683">Date Index</a>][<a href="thrd34.shtml#01683">Thread Index</a>]<br>
+[<A HREF="msg01682.shtml">Date Prev</A>][<A HREF="msg01684.shtml">Date Next</A>][<A HREF="msg01688.shtml">Thread Prev</A>][<A HREF="msg01686.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Brian Hatch &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Jun 2000 23:06:19 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.1 (23-May-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Brian Hatch
+Reply-To: bri@ifokr.org
+Subject:  wml incorrectly munging \" in perl
+
+PROBLEM DESCRIPTION:
+
+\" being corrupted in perl print statements
+
+The following test.wml file
+
+	&lt;:  print "&lt;a href=\"$variable\" &gt; \n"; :&gt;
+
+survives pass 1 fine.  In pass 2 it becomes (in it's entirety)
+	&lt;:
+	BEGIN {
+	    unshift @INC, qw(
+		/opt/pkgs/wml-2.0.1/lib/perl/lib
+		/opt/pkgs/wml-2.0.1/lib/perl/lib/sparc-linux
+	    );
+
+	    $^W = 0;
+	}
+	:&gt;m4_changequote()m4_changequote(`,')m4_dnl
+	m4_define(`m4_noquotes', `m4_changequote()')m4_dnl
+	m4_define(`m4_quotes',   `m4_changequote`'')m4_dnl
+	m4_noquotes()m4_dnl
+	m4_changecom()m4_dnl
+	&lt;:  print "&lt;a href="$variable"&gt; \n"; :&gt;
+
+Note the '\' was lost before the " in the print statement.  Pass 3
+dies with the obvious error 
+	"Scalar found where operator expected at /tmp/wml.20070.tmp1.wml line 15"
+
+
+The following is a list of test strings I ran.  If it was munged
+incorrectly (ie the backslash(es) dissapeared), it is noted to
+ the right.  All others passed fine.
+
+
+print "&lt;\"$var&gt;\n";
+print "&lt;\"$var&gt;\n";
+print "&lt; \"$var&gt;\n";
+print "&lt; \"$var &gt;\n";
+print "&lt;a\"$var&gt;\n";
+print "&lt;a\"$var&gt;\n";
+print "&lt;a \"$var&gt;\n";           # fails
+print "&lt;a \"$var &gt;\n";          # fails
+
+print "&lt;\"$var\"&gt;\n";
+print "&lt;\"$var\"&gt;\n";
+print "&lt; \"$var\"&gt;\n";
+print "&lt; \"$var \"&gt;\n";
+print "&lt;a\"$var\"&gt;\n";
+print "&lt;a\"$var\"&gt;\n";
+print "&lt;a \"$var\"&gt;\n";         # fails
+print "&lt;a \"$var \"&gt;\n";        # fails
+
+print "&lt;q\"$var&gt;\n";
+print "&lt;q\"$var&gt;\n";
+print "&lt;q \"$var&gt;\n";           # fails
+print "&lt;q \"$var &gt;\n";          # fails
+print "&lt;q\"$var\"&gt;\n";
+print "&lt;q\"$var\"&gt;\n";
+print "&lt;q \"$var\"&gt;\n";         # fails
+print "&lt;q \"$var \"&gt;\n";        # fails
+
+print "&lt;;\"$var&gt;\n";
+print "&lt;;\"$var&gt;\n";
+print "&lt;; \"$var&gt;\n";
+print "&lt;; \"$var &gt;\n";
+print "&lt;;\"$var\"&gt;\n";
+print "&lt;;\"$var\"&gt;\n";
+print "&lt;; \"$var\"&gt;\n";
+print "&lt;; \"$var \"&gt;\n";
+
+print "&lt;1\"$var&gt;\n";
+print "&lt;1\"$var&gt;\n";
+print "&lt;1 \"$var&gt;\n";
+print "&lt;1 \"$var &gt;\n";
+print "&lt;1\"$var\"&gt;\n";
+print "&lt;1\"$var\"&gt;\n";
+print "&lt;1 \"$var\"&gt;\n";
+print "&lt;1 \"$var \"&gt;\n";
+
+
+
+I ran across this error when trying to create the index from
+www.openssl.org/index.wml (after downloading .wmlrc, openssl.wml)
+
+the lines failing there are 343 and 344 which exhibit the exact same
+problem.  Said lines are:
+
+            print "&lt;tr bgcolor=\"$col\"&gt;\n";
+            print "  &lt;td align=right&gt;&lt;font face=\"Arial,Helvetica\"&gt;&lt;b&gt;$1:&lt;/b&gt;&lt;/font&gt;&lt;/td&gt; &lt;td&gt;&amp;nbsp;&amp;nbsp;$2&lt;/td&gt;\n";
+
+
+
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sparc-whatever-linux-gnu2
+    Perl: 5.005 (/usr/bin/perl)
+    User: bri@entropy.cnc.ifokr.org
+    Date: 31-May-2000
+Built Location:
+    Prefix: /opt/pkgs/wml-2.0.1
+    BinDir: /opt/pkgs/wml-2.0.1/bin
+    LibDir: /opt/pkgs/wml-2.0.1/lib
+    ManDir: /opt/pkgs/wml-2.0.1/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.2.14-1.3.0, archname=sparc-linux
+    uname='linux bart.devel.redhat.com 2.2.14-1.3.0 #1 tue jan 18 21:54:57 est 2000 sparc unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=undef, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=8
+    alignbytes=8, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Feb  2 2000 15:46:09
+  %ENV:
+    PERL="/usr/bin/perl"
+    PERL5="/usr/bin/perl"
+    PERL5_005_03="/usr/bin/perl"
+  @INC:
+    /usr/lib/perl5/5.00503/sparc-linux
+    /usr/lib/perl5/5.00503
+    /usr/lib/perl5/site_perl/5.005/sparc-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01686" HREF="msg01686.shtml">Re: wml incorrectly munging \&quot; in perl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01682.shtml">Re: [BUG REPORT] WML 2.0.1, Solaris 2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01684.shtml">Re: wishlist: text in rollover,navbar buttons and class for anchortags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01688.shtml">Re: embedding ePerl commands in grid cells</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01686.shtml">Re: wml incorrectly munging \&quot; in perl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01683"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01683"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

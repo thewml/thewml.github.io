@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [ANNOUNCE] WML 1.99.0 -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Fri, 17 Mar 2000 13:31:50 +0100 (MET) -->
+<!--X-Message-Id: 14543.30952.363562.76994@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000314183523.2811A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01433">Date Index</a>][<a href="thrd29.shtml#01433">Thread Index</a>]<br>
+[<A HREF="msg01432.shtml">Date Prev</A>][<A HREF="msg01434.shtml">Date Next</A>][<A HREF="msg01429.shtml">Thread Prev</A>][<A HREF="msg01440.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [ANNOUNCE] WML 1.99.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 15 Mar 2000 12:54:34 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier writes:
+ &gt; Hi folks,
+ &gt; 
+ &gt; i just released WML-1.99.0. My intention is to provide quick releases
+ &gt; until WML 2.0 ; this 1.99.x branch is between stable and unstable.
+ &gt; 
+ &gt; A feature freeze is planned in a couple of weeks, some points are still
+ &gt; under discussion, so proposals are welcome.
+
+I make a speach about WML at the BeLUG (Berlin Linux User Group) about 
+WML, so now I have to look at 1.99.0 ;-)
+
+ &gt;       - Meta-HTML is replaced by Mp4h for Pass 2: the new parser has a
+ &gt;         syntax very similar to the one of Meta-HTML, and tags have been
+ &gt;         defined to ensure maximum compatibility.  Please read
+ &gt;         README.mp4h and the wml_p2_mp4h documentation for details on how
+ &gt;         to migrate from Meta-HTML to mp4h.
+
+Hmm, this fears me a bit... Is it possible to go with 2 versions at
+the same time? I don´t want to mess my site at this point...
+
+Thanks,
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01440" HREF="msg01440.shtml">Re: [ANNOUNCE] WML 1.99.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01427" HREF="msg01427.shtml">[ANNOUNCE] WML 1.99.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01432.shtml">Re: adding languages</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01434.shtml">Re: How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01429.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01440.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01433"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01433"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Timing: first results : 30% -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 4 Jan 1999 11:04:38 +0100 (CET) -->
+<!--X-Message-Id: 19990104110435.B19257@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990104091044.1294A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00296">Date Index</a>][<a href="thrd7.shtml#00296">Thread Index</a>]<br>
+[<A HREF="msg00295.shtml">Date Prev</A>][<A HREF="msg00297.shtml">Date Next</A>][<A HREF="msg00293.shtml">Thread Prev</A>][<A HREF="msg00294.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Timing: first results : 30%</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 4 Jan 1999 11:04:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 04, 1999, Denis Barbier wrote:
+
+&gt; Happy new year, all.
+&gt; 
+&gt; This week-end i found interesting improvements in execution time.
+&gt; Here is a typical timing when building my site pages:
+&gt; 
+&gt; ** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+&gt; ** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+&gt; ** WML:Verbose: 0.89 | 7.97  7.53  5.23 0.16 0.14 0.10 0.36 0.31 0.63 | 23.32
+&gt;                        ^^^^
+&gt;                      look here
+&gt; 
+&gt; The first pass is the most significant, even if actions during this pass
+&gt; are quite simple and straightforward. It's why i proposed to include
+&gt; files verbatim. In fact, most of the time is spent in comment block parser.
+&gt; When disabling this parser, timing becomes
+&gt; 
+&gt; ** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+&gt; ** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+&gt; ** WML:Verbose: 0.82 | 0.66  7.49  5.01 0.17 0.14 0.08 0.34 0.31 0.63 | 15.65
+&gt; 
+&gt; In my source files, i have a line
+&gt; #include "packages.wml"
+&gt; This file ``packages.wml'' contains ``#use'' directives ; in this case,
+&gt; it includes 10 packages. I type
+&gt; prompt&gt; wml -p1 packages.wml &gt; packages.pass1
+&gt; and replace the previous line by
+&gt; #include "packages.pass1"
+&gt; 
+&gt; Results are:
+&gt; ** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+&gt; ** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+&gt; ** WML:Verbose: 0.82 | 0.53  7.43  5.09 0.16 0.15 0.09 0.33 0.33 0.69 | 15.62
+&gt; 
+&gt; &gt;From 8 seconds to half a second, this is really nice. Now one has to
+&gt; work on steps 2 and 3.
+
+Hey, that's fantastic!  Actually the block comments are just a goodie which
+usually aren't used such widely. So the speed increase should be noticeable to
+a lot of users.
+
+&gt; Here is the patch i wrote. It is really simple, and needed minimal
+&gt; testings. It invokes parseblock only if a sequence '/*' is found in
+&gt; input files. Perl gurus may want to optimize BlockParser.pm, i can't.
+
+Yes, the BlockParser stuff is slow because it contains a real parser which
+also understands nested blocks, etc. Perhaps too much functionality.  Hmmmm...
+but interesting to now this.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00293" HREF="msg00293.shtml">Timing: first results : 30%</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00295.shtml">[patch navbar.src] Single quotes problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00297.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00293.shtml">Timing: first results : 30%</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00294.shtml">[patch] wrong display of timers when using --pass</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00296"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00296"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

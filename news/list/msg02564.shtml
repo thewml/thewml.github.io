@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Thu, 14 Mar 2002 13:01:14 +0100 (MET) -->
+<!--X-Message-Id: 3C9090B6.5000507@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Reference: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02564">Date Index</a>][<a href="thrd52.shtml#02564">Thread Index</a>]<br>
+[<A HREF="msg02563.shtml">Date Prev</A>][<A HREF="msg02565.shtml">Date Next</A>][<A HREF="msg02563.shtml">Thread Prev</A>][<A HREF="msg02566.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Mar 2002 12:59:50 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+There are 2 threads on the same subject. Ones reading the mail archives 
+later
+will get mad on this :)
+
+&gt;I've put an old example at
+&gt;   <A  HREF="http://www.engelschall.com/sw/wml/tmp/www.gimp.org/">http://www.engelschall.com/sw/wml/tmp/www.gimp.org/</A>
+&gt;[this is a temporary location]
+&gt;
+&gt;AFAICT I played with this example when trying to figure how to deal with
+&gt;nested navbars, but I can't remember exactly if this was a good example
+&gt;
+WOW! Is gimp.org still on wml? Fine refernece :)
+In this example I saw the same thing: (even if I did not really see 
+because the menu
+has no "active color") So when you select "clone tool", "documentation" or
+"core tools" will not be active coloured. Am I right? Still have to download
+the exmaple and compare to the one I tested according to Novas.org examples.
+
+Dennis: my patch is BUGGY, according to this new fact that submenu items
+can be directly selected. because I set the subitem selection to 0, and 
+selected
+state to 0 as well. I will change it back to "$select","$subselected", 
+but in this
+case I need a way to turn OFF subselected state in the &lt;navbar:define&gt;.
+Which always overwrites the "menu=" inherited setting. But how do you
+add a "&lt;navbar:define not subselected&gt;", there is no way, because this 
+is not
+a name=value pair, just a flag, which can be turn ON only, not OFF. :-?
+
+Too bad. Still testing today.
+
+Thanks for the ideas. I hope you understand my problem. If not, then I
+upload the test site with original and modified navbar.wml, you will
+exactly see what I need.
+
+Ferenc
+
+
+&gt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02566" HREF="msg02566.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02563.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02565.shtml">Re: nested navbar (sources of www.novas.org)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02563.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02566.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02564"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02564"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question regarding dependencies with wmk -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 25 Jun 1998 14:50:15 +0200 (CEST) -->
+<!--X-Message-Id: 19980625145013.A22388@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m0yowSm&#45;000DHYC@landru.math.uwaterloo.ca -->
+<!--X-Reference: 19980625125038.B2699@engelschall.com -->
+<!--X-Reference: 19980625143850.54208@zeus.advatech.ro -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00138">Date Index</a>][<a href="thrd4.shtml#00138">Thread Index</a>]<br>
+[<A HREF="msg00137.shtml">Date Prev</A>][<A HREF="msg00139.shtml">Date Next</A>][<A HREF="msg00137.shtml">Thread Prev</A>][<A HREF="msg00141.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question regarding dependencies with wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 14:50:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 25, 1998, Viorel Anghel wrote:
+
+&gt; On Thu, Jun 25, 1998 at 12:50:38PM +0200, Ralf S. Engelschall wrote:
+&gt; [...]
+&gt; &gt; OTOH there are sophisticated built tools out there (Cook, Bras, etc.) which
+&gt; &gt; are better than Make and should be more easily adaptable to a fully
+&gt; &gt; dependency-aware .html &lt;- .wml generation. Has anybody already experiences on
+&gt; &gt; this topic? How do others run WMk or WML?
+&gt; 
+&gt; I have the same problem... What is Cook, Bras, etc?
+
+They are built-systems, usually more powerful than plain "Make".  Try them out
+to find the tool which suits your particular situation best.  Here are the
+URLs:
+
+Cook: <A  HREF="http://www.canb.auug.org.au/~millerp/cook.html">http://www.canb.auug.org.au/~millerp/cook.html</A>
+      <A  HREF="ftp://ftp.agso.gov.au/pub/Aegis/">ftp://ftp.agso.gov.au/pub/Aegis/</A>
+
+Bras: <A  HREF="http://wsd.iitb.fhg.de/~kir/brashome/">http://wsd.iitb.fhg.de/~kir/brashome/</A>
+
+Odin: <A  HREF="ftp://ftp.cs.colorado.edu/pub/distribs/odin/">ftp://ftp.cs.colorado.edu/pub/distribs/odin/</A>
+
+Cons: CPAN
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00133" HREF="msg00133.shtml">question regarding dependencies with wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="00135" HREF="msg00135.shtml">Re: question regarding dependencies with wmk</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00137" HREF="msg00137.shtml">Re: question regarding dependencies with wmk</A></strong>, <em>From:</em> Viorel Anghel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00137.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00139.shtml">RE: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00137.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00141.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00138"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00138"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

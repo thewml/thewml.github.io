@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: It's time... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 9 May 1999 11:02:13 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990509104732.32694B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990508172731.A70919@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00638">Date Index</a>][<a href="thrd14.shtml#00638">Thread Index</a>]<br>
+[<A HREF="msg00637.shtml">Date Prev</A>][<A HREF="msg00639.shtml">Date Next</A>][<A HREF="msg00636.shtml">Thread Prev</A>][<A HREF="msg00629.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: It's time...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 May 1999 10:56:28 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 8 May 1999, Ralf S. Engelschall wrote:
+
+&gt; On Sat, May 08, 1999, Denis Barbier wrote:
+&gt; 
+&gt; &gt; On Fri, 7 May 1999, Stefan `Sec` Zehl wrote:
+&gt; &gt; 
+&gt; &gt; &gt; What about the slices inside slices problem I posted about ?
+&gt; &gt; 
+&gt; &gt; i see no solution to this problem, sorry.
+&gt; &gt; Does anyone want to patch slice.src?
+&gt; 
+&gt; Please do not change this particular slice.src, it was generated out of the
+&gt; original sources. I've placed the "assembled" slice program in the WML source
+&gt; tree instead of the full sources, because the original intention was that
+&gt; Slice is always maintained externally as a stand-alone package.
+
+Hi Ralf, i'll do what you suggest.
+
+The problem Stefan report is that
+   [A:[A:x:]:]
+causes an error (not caused by missing ending slice name).
+
+I have found a workaround, but it will not solve Stefan's problem.
+Indeed, Stefan tries to write something like
+   [LANG_EN:en [LANG_EN:en [LANG_DE:de:]:]:]
+
+-o ALL-LANG_*+LANG_EN gives
+   en en de
+-o ALL-LANG_*+LANG_DE gives
+   de
+
+So Stefan, you can't nest language slices.
+
+Denis
+PS: Below is a proposed patch
+--- slice.src	1999/03/16 18:26:36	1.6
++++ slice.src	1999/05/09 08:24:52
+@@ -712,15 +712,15 @@
+             $L = &amp;alloclevel();                 # allocate next free level
+ 
+             push(@CURRENT_SLICE_NAMES, $name1); # remember name  for end delimiter
+-            $CURRENT_LEVEL_BRAIN{"$name1"} = $L;# remember level for end delimiter
++            $CURRENT_LEVEL_BRAIN{"$name1"} .=  ":$L";# remember level for end delimiter
+             if ($CFG-&gt;{SLICE}-&gt;{MINLEVELS}-&gt;{"$name1"} eq '' or 
+                 $CFG-&gt;{SLICE}-&gt;{MINLEVELS}-&gt;{"$name1"} &gt; $L) {
+                 $CFG-&gt;{SLICE}-&gt;{MINLEVELS}-&gt;{"$name1"} = $L;
+             }
+ 
+             #  now begin entry with LEVEL:START
+-            $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$name1"} .= 
+-                 ($CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$name1"} ? ',' : '') . "$L:$pos"; 
++            $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$name1:$L"} .= 
++                 ($CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$name1:$L"} ? ',' : '') . "$L:$pos"; 
+ 
+             #  adjust notice about highest level
+             $CFG-&gt;{SLICE}-&gt;{MAXLEVEL} = ($CFG-&gt;{SLICE}-&gt;{MAXLEVEL} &lt; $L ? 
+@@ -740,14 +740,15 @@
+ 
+             $namex = pop(@CURRENT_SLICE_NAMES);      # take remembered name
+             $name2 = $namex if ($name2 eq '');       # fill name because of shortcut syntax
+-            $L     = $CURRENT_LEVEL_BRAIN{"$name2"}; # take remembered level
++            $CURRENT_LEVEL_BRAIN{"$name2"} =~ s|:(\d+)$||; # take remembered level
++            $L = $1;
+ 
+             &amp;clearlevel($L);                         # de-allocate level
+ 
+             # now end entry with :END
+-            $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$name2"} .= ":$pos";
++            $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$name2:$L"} .= ":$pos";
+ 
+-            &amp;verbose("    slice `$name2': end at $pos\n");
++            &amp;verbose("    slice `$name2': end at $pos, level $L\n");
+ 
+             $pos++;
+             $open--;
+@@ -825,6 +826,15 @@
+     $n = length($CFG-&gt;{INPUT}-&gt;{PLAIN})+1;
+     $set  = new Bit::Vector($n); # working set
+     $setA = new Bit::Vector($n); # "all" set
++
++    #   restore slice names
++    foreach $slice (keys(%{$CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}})) {
++        $asc = $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{$slice};
++        delete $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{$slice};
++        $slice =~ s|:\d+$||g;
++        $CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{$slice} .=
++                 ($CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}-&gt;{"$slice"} ? ',' : '') . $asc;
++    }
+ 
+     #   convert ASCII representation to real internal set objects
+     foreach $slice (keys(%{$CFG-&gt;{SLICE}-&gt;{SET}-&gt;{ASC}})) {
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00636" HREF="msg00636.shtml">Re: It's time...</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00637.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00639.shtml">trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00636.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00629.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00638"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00638"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,173 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Idea how not to need future enhancement of WML &#45; Environment -->
+<!--X-From-R13: [ngguvnf Preauneqg <zngguoNthkuntra.arg> -->
+<!--X-Date: Tue, 4 Jul 2000 10:02:26 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.10007032218590.330&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0006251109520.12703&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01778">Date Index</a>][<a href="thrd32.shtml#01778">Thread Index</a>]<br>
+[<A HREF="msg01777.shtml">Date Prev</A>][<A HREF="msg01779.shtml">Date Next</A>][<A HREF="msg01772.shtml">Thread Prev</A>][<A HREF="msg01779.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Idea how not to need future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Matthias Bernhardt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 3 Jul 2000 22:29:42 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 25 Jun 2000, Franz Knipp wrote:
+
+FK&gt; Imagine the following tags, defined by &lt;define-tag&gt;:
+FK&gt; 
+FK&gt; &lt;red:text&gt;
+FK&gt; &lt;red:box&gt;
+FK&gt; &lt;red:picture&gt;
+FK&gt; 
+FK&gt; &lt;blue:text&gt;
+FK&gt; &lt;blue:box&gt;
+FK&gt; &lt;blue:picture&gt;
+FK&gt; 
+FK&gt; Further we think of the following complex tags:
+FK&gt; 
+FK&gt; &lt;red&gt;
+FK&gt; &lt;blue&gt;
+FK&gt; 
+FK&gt; The following is an example of a wml page:
+FK&gt; 
+FK&gt; &lt;red&gt;
+FK&gt; &lt;red:box&gt;
+FK&gt; &lt;red:text&gt;This is a little text&lt;/red:text&gt;
+FK&gt; &lt;/red:box&gt;
+FK&gt; &lt;red:picture src="foobar.png"&gt;
+FK&gt; &lt;/red&gt;
+FK&gt; 
+FK&gt; &lt;blue&gt;
+FK&gt; &lt;blue:box&gt;
+FK&gt; &lt;blue:text&gt;This is another text&lt;/blue:text&gt;
+FK&gt; &lt;/blue:box&gt;
+FK&gt; &lt;blue:picture src="foobar.png"&gt;
+FK&gt; &lt;/blue&gt;
+FK&gt; 
+FK&gt; **** And now the proposed changes:
+FK&gt; 
+FK&gt; &lt;red&gt; and &lt;blue&gt; are defined as so-called environments. That means (in a
+FK&gt; LaTeX-thinking way), that inside of an environment the meaning could be
+FK&gt; different. The previous example could be written with &lt;red&gt; and &lt;blue&gt;
+FK&gt; defined as environments:
+FK&gt; 
+FK&gt; &lt;red&gt;
+FK&gt; &lt;box&gt;
+FK&gt; &lt;text&gt;This is a little text&lt;/text&gt;
+FK&gt; &lt;/box&gt;
+FK&gt; &lt;picture src="foobar.png"&gt;
+FK&gt; &lt;/red&gt;
+FK&gt; 
+FK&gt; &lt;blue&gt;
+FK&gt; &lt;box&gt;
+FK&gt; &lt;text&gt;This is another text&lt;/text&gt;
+FK&gt; &lt;/box&gt;
+FK&gt; &lt;picture src="foobar.png"&gt;
+FK&gt; &lt;/blue&gt;
+FK&gt; 
+FK&gt; This way we can offer a syntax more like OOP - the name of the `methods´
+FK&gt; (&lt;box&gt;, &lt;text&gt;, &lt;picture&gt;) remains to be the same in different `objects´
+FK&gt; (&lt;red&gt;, &lt;blue&gt;).
+FK&gt; 
+FK&gt; Do you get the idea? I see a lot of benefits (smarter writing, changed
+FK&gt; behaviour depending on the context, ...) and no disadvantages (because it
+FK&gt; is fully backward compatible).
+
+Don't make WML too complicated. You can already get what you
+want, if you just define the tags like this:
+
+&lt;define-container red&gt;
+&lt;preserve color&gt;
+&lt;set-var color=red&gt;
+%body
+&lt;restore color&gt;
+&lt;/define-container&gt;
+
+&lt;define-container text&gt;
+&lt;font color="&lt;get-var color&gt;"&gt;%body&lt;/font&gt;
+&lt;/define-container&gt;
+
+The other entities would be quite like that. Please don't blame
+me for using the &lt;font&gt;-tag, it's just an example ...
+
+Surely it's a bit more complicated but after those last weeks of
+detail discussions how to implement that new mp4h stuff, I'm
+afraid this list would turn into a OOP-principles-lounge if
+that's gonna be implemented, too. So please consider using that
+"workaround" instead of making wml objective.
+
+Greets, Matthias
+
+
+----------------------------------------------------------------
+<A  HREF="http://www.guxhagen.net/matthb/">http://www.guxhagen.net/matthb/</A>       <A  HREF="mailto:matthb@guxhagen.net">mailto:matthb@guxhagen.net</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01779" HREF="msg01779.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01782" HREF="msg01782.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01756" HREF="msg01756.shtml">Re: Idea of future enhancement of WML - Environment</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01777.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01779.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01772.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01779.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01778"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01778"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

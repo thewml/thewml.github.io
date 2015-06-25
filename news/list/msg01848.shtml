@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ePerl and language&#45;dependent output -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 18 Jul 2000 13:40:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20000718134122.A13786@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000718125839.A13479@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.LNX.4.21.0007181323220.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01848">Date Index</a>][<a href="thrd37.shtml#01848">Thread Index</a>]<br>
+[<A HREF="msg01847.shtml">Date Prev</A>][<A HREF="msg01849.shtml">Date Next</A>][<A HREF="msg01847.shtml">Thread Prev</A>][<A HREF="msg01849.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ePerl and language-dependent output</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 13:41:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 18, 2000 at 01:29:08PM +0200, Stephan Petersen wrote:
+
+&gt; &gt; &gt; Is there a way to make the per-language calls inside 
+&gt; &gt; &gt; &lt;define-tag get_current_lang&gt; more elegant and "automatic" (so that when
+&gt; &gt; &gt; new languages are addes, they're automatically processed too)?
+&gt; &gt; 
+&gt; &gt; Just use perl_get_current_lang instead of get_current_lang ;-)
+&gt; &gt; Quite surprisingly it does what you want.
+&gt; 
+&gt; But not when the call to &lt;perl_get_current_lang&gt; is *outside* of any
+&gt; language-dependent section, right? I mean,
+&gt; 
+&gt; &lt;body&gt;
+&gt; &lt;perl_get_current_lang&gt;
+&gt; &lt;/body&gt;
+&gt; 
+&gt; won't work, at least according to my experiments, and what (little) I
+&gt; understand of wml passes :-)
+
+But 
+  &lt;body&gt;
+  &lt;get_current_lang&gt;
+  &lt;/body&gt;
+will produce the same output.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01849" HREF="msg01849.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01846" HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01847" HREF="msg01847.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01847.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01849.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01847.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01849.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01848"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01848"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

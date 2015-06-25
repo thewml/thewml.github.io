@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: #!/usr/local/bin/wml -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Wed, 3 Mar 1999 10:58:27 +0100 (CET) -->
+<!--X-Message-Id: 19990303101245.A21383@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990301134222.A16369@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990301162452.820B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: 19990302151703.A24129@skater.htu.tuwien.ac.at -->
+<!--X-Reference: 19990302151919.A77752@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00422">Date Index</a>][<a href="thrd10.shtml#00422">Thread Index</a>]<br>
+[<A HREF="msg00421.shtml">Date Prev</A>][<A HREF="msg00423.shtml">Date Next</A>][<A HREF="msg00421.shtml">Thread Prev</A>][<A HREF="msg00423.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: #!/usr/local/bin/wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 3 Mar 1999 10:12:45 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 02 Mar 1999, Ralf S. Engelschall &lt;rse@engelschall.com&gt; wrote:
+&gt; Yes, shebangs are a feature of the Unix executable loader.
+
+ So now I'm at the right point ;)  Does the kernel check if the program
+is an ELF-File? Hmmm, is there any way around that problem? Has anyone
+written a wrapper in c for that or anything similar?
+ I can understand why it's not possible to put a non-binary file in
+there; but sometimes it would be great!
+
+ Alfie
+-- 
+Spouse, n.:
+        Someone who'll stand by you through all the trouble you
+wouldn't have had if you'd stayed single.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00423" HREF="msg00423.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00414" HREF="msg00414.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00415" HREF="msg00415.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00420" HREF="msg00420.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00421" HREF="msg00421.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00421.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00423.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00421.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00423.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00422"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00422"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

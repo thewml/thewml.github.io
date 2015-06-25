@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problems with wml::des::rollover -->
+<!--X-From-R13: wnpxNarrqyr.zhqfunex.bet -->
+<!--X-Date: Fri, 31 Mar 2000 23:23:20 +0200 (MET DST) -->
+<!--X-Message-Id: 20000331142337.M13737@needle.mudshark.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01500">Date Index</a>][<a href="thrd31.shtml#01500">Thread Index</a>]<br>
+[<A HREF="msg01499.shtml">Date Prev</A>][<A HREF="msg01510.shtml">Date Next</A>][<A HREF="msg01499.shtml">Thread Prev</A>][<A HREF="msg01510.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problems with wml::des::rollover</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 31 Mar 2000 14:23:37 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hello, I've been using wml to build a medium sized site, and I've
+run into a bit of a problem using wml::des::rollover. 
+
+The problem seems to be in some of the javascript it generates. 
+
+After browsing around quite a bit, netscape starts displaying the following
+message:
+
+---
+JavaScript Error:
+<A  HREF="http://coffey.nanuc.ualberta.ca/general/">http://coffey.nanuc.ualberta.ca/general/</A>,
+line 24:
+
+document[imgName] has no properties. 
+---
+
+15:&lt;!-- Hiding the code
+16:function ro_imgNormal(imgName) {
+17:    if (document.images) {
+18:        document[imgName].src = eval(imgName + "_n.src");
+19:        self.status = '';
+20:    }
+21:}
+22:function ro_imgOver(imgName, descript) {
+23:    if (document.images) {
+24:        document[imgName].src = eval(imgName + "_o.src");
+25:        self.status = descript;
+26:    }
+27:}
+28:// done hiding --&gt;
+
+---
+
+Is this because I'm using the rollover tag wrong? 
+Is there something I can do to stop this?
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01499.shtml">wml &amp; perl 5.6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01510.shtml">is wmb from 1.99.3 working?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01499.shtml">wml &amp; perl 5.6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01510.shtml">is wmb from 1.99.3 working?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01500"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01500"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

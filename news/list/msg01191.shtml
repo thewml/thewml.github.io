@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Using <rollover> etc. from EPerl -->
+<!--X-From-R13: Quevfgbcu Epuzvgm <pfpuzvgmNpnfgbe.hav&#45;gevre.qr> -->
+<!--X-Date: Sat, 4 Dec 1999 11:17:37 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991203102715.23522A&#45;100000@infcip55.uni&#45;trier.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01191">Date Index</a>][<a href="thrd25.shtml#01191">Thread Index</a>]<br>
+[<A HREF="msg01192.shtml">Date Prev</A>][<A HREF="msg01193.shtml">Date Next</A>][<A HREF="msg01195.shtml">Thread Prev</A>][<A HREF="msg01208.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Using &lt;rollover&gt; etc. from EPerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Christoph Schmitz &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 3 Dec 1999 10:36:48 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I wondered if there was any possibility of using tags from wml::des::*
+and others from EPerl. That is, suppose you want to render a fancy 
+navigation bar from EPerl, something like
+	&lt;:
+		...
+		foreach ( ... ) {
+			print "&lt;rollover ...&gt;\n";
+		}
+	:&gt;
+
+(Of course, it *doesn't* work like this. But you get the idea.)
+
+Or maybe you might want to use &lt;href&gt; tags in EPerl.
+
+A trick (?) I came up with is to tweak .../bin/wml itself so that
+the array containing the passes to be executed is no longer sorted prior
+to execution. Thus, I can force wml to execute EPerl first, something
+like -p3,1-9. But I have a gut feeling that this might be dangerous...
+(Why?)
+
+Another possbility might be to put all the stuff from wml::des::* etc.
+into Perl modules which could be called from EPerl, so that one could
+write
+	&lt;:
+		foreach (...) {
+			print WML::DES::rollover (..., ..., ...);
+		}
+	:&gt;
+
+Or is there any other solution?
+
+Thanks,
+
+Christoph
+
+-- Christoph Schmitz &lt;cschmitz(at)stud.informatik.uni-trier.de&gt; --
+The function of the expert is not to be more right than other people,
+but to be wrong for more sophisticated reasons.
+                -- Dr. David Butler, British psephologist
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01208" HREF="msg01208.shtml">Re: Using &lt;rollover&gt; etc. from EPerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01192.shtml">[BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01193.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01195.shtml">Re: [BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01208.shtml">Re: Using &lt;rollover&gt; etc. from EPerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01191"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01191"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

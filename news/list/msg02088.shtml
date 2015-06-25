@@ -1,0 +1,193 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Another bug?  [wml 2.0.6] -->
+<!--X-From-R13: Yra [pUybguyra <zptyxNnegybtvk.pbz> -->
+<!--X-Date: Sun, 17 Dec 2000 23:02:24 +0100 (MET) -->
+<!--X-Message-Id: 877l4yd7vu.fsf@ralf.artlogix.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02088">Date Index</a>][<a href="thrd42.shtml#02088">Thread Index</a>]<br>
+[<A HREF="msg02087.shtml">Date Prev</A>][<A HREF="msg02089.shtml">Date Next</A>][<A HREF="msg02086.shtml">Thread Prev</A>][<A HREF="msg02089.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Another bug?  [wml 2.0.6]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ken McGlothlen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 17 Dec 2000 14:01:57 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I just don't understand this one.  I've abridged the original files
+extensively, but this excerpt still shows the problem.  This is in WML 2.0.6,
+of course.
+
+===============================================================================
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;test&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body bgcolor = "#ffffff"&gt;
+
+#use wml::std::tags
+#use wml::des::typography
+
+&lt;perl&gt;
+{
+    #  &amp;smallcap() takes an attribute string and a body, and generates
+    #  smallcaps using &lt;font&gt; tags.  The only attribute recognized is lcsize,
+    #  which specifies the size of the "lowercaps."
+
+    use locale;
+    sub smallcap {
+	my( $attr, $body ) = @_;
+	my( %attr ) = ($attr =~ /(\S+)="(.*?)"/g);
+	my( $lcsize ) = $attr{"lcsize"} ? $attr{"lcsize"} : "-1";
+	my( $result ) = "";
+	while( $body ) {
+	    if( $body =~ /^(&lt;[^&gt;]+&gt;|[^a-z]+|&amp;\w+;)(.*)$/ ) {
+		# got a tag or non-lowercase characters or entities
+		$result .= $1;
+		$body = $2;
+	    } elsif( $body =~ /^([a-z]+)(.*)$/ ) {
+		# got lowercase characters
+		$result .= qq{&lt;font size="$lcsize"&gt;} . uc( $1 ) . "&lt;/font&gt;";
+		$body = $2;
+	    }
+	}
+	return( $result );
+    }
+}
+&lt;/perl&gt;
+
+&lt;define-tag sc endtag="required"&gt;\
+&lt;:= &amp;smallcap( qq{&lt;attributes-quote %attributes&gt;}, qq{%body} ) :&gt;\
+&lt;/define-tag&gt;
+
+&lt;define-tag titleblock endtag="required"&gt;
+&lt;hr&gt;
+&lt;center&gt;
+&lt;table width="80%"&gt;
+&lt;tr&gt;
+	&lt;td align="center"&gt;&lt;b&gt;\
+		&lt;font size="+3"&gt;&lt;sc lcsize="+2"&gt;%body&lt;/sc&gt;&lt;/font&gt;&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag xtitleblock endtag="required"&gt;
+&lt;hr&gt;
+&lt;center&gt;
+&lt;table width="80%"&gt;
+&lt;tr&gt;
+	&lt;td align="center"&gt;%body&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;hr&gt;
+&lt;/define-tag&gt;
+
+&lt;titleblock&gt;This is a Test&lt;/titleblock&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+===============================================================================
+
+This works beautifully, producing
+
+===============================================================================
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#ffffff"&gt;
+&lt;hr&gt;
+&lt;div align="center"&gt;
+&lt;table width="80%" summary=""&gt;
+&lt;tr&gt;
+	&lt;td align="center"&gt;&lt;b&gt;&lt;font size="+3"&gt;T&lt;font size="+2"&gt;HIS&lt;/font&gt; &lt;font size="+2"&gt;IS&lt;/font&gt; &lt;font size="+2"&gt;A&lt;/font&gt; T&lt;font size="+2"&gt;EST&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+===============================================================================
+
+(I don't know what that summary="" bit is in the &lt;table&gt; tag, but. . . .)  But
+if I replace the &lt;titleblock&gt;...&lt;/titleblock&gt; bit with
+
+===============================================================================
+&lt;xtitleblock&gt;&lt;font size="+3"&gt;&lt;b&gt;&lt;sc lcsize="+2"&gt;This is a
+Test&lt;/sc&gt;&lt;/b&gt;&lt;/font&gt;&lt;/xtitleblock&gt;
+===============================================================================
+
+wml appears to go into an infinite loop.  When I eventually break, I get
+
+	ePerl: **INTERRUPT**
+	** WML:Break: Error in Pass 3 (rc=1).
+
+So what's going on here?  Did I miss something?
+
+						---Ken McGlothlen
+						   mcglk@artlogix.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02089" HREF="msg02089.shtml">Re: Another bug?  [wml 2.0.6]</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02087.shtml">Re: small problem with wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02089.shtml">Re: Another bug?  [wml 2.0.6]</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02086.shtml">feeding wml with xml files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02089.shtml">Re: Another bug?  [wml 2.0.6]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02088"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02088"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

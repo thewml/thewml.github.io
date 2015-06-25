@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Perl error: wml::des::space (Solaris) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 21 May 1999 18:24:13 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990521181402.2818A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3in1z7g7xv.fsf@luzi.e&#45;technik.uni&#45;dortmund.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00682">Date Index</a>][<a href="thrd9.shtml#00682">Thread Index</a>]<br>
+[<A HREF="msg00681.shtml">Date Prev</A>][<A HREF="msg00683.shtml">Date Next</A>][<A HREF="msg00655.shtml">Thread Prev</A>][<A HREF="msg00378.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Perl error: wml::des::space (Solaris)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 21 May 1999 18:18:17 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 14 May 1999, Bjoern_Hesse wrote:
+
+&gt; Hi,
+&gt; 
+&gt; i posted my problem some time ago (3 month) but it is still there in the
+&gt; actuall snapshot release.
+&gt; The use of wml::des::space fails on my solaris box.
+&gt; I have an error log attached.
+
+Hi Bjoern,
+
+thanks to the Frederic's post, i have fixed many bugs in the
+wml-SNAP-199905211801.tar.gz snapshot. Your problems may vanish.
+I ran tests on Solaris 5.6 with perl 5.00502 and ``make test'' reported
+no error.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00655" HREF="msg00655.shtml">Perl error: wml::des::space (Solaris)</A></strong>, <em>From:</em> Bjoern_Hesse</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00681.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00683.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00655.shtml">Perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00378.shtml">Re: emacs mode</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00682"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00682"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

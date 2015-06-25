@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: OK, so it's elegant, now what?  :) -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Thu, 24 Jun 1999 18:05:19 +0200 (MET DST) -->
+<!--X-Message-Id: 877lotlh49.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 001701bebda0$a201da40$066cb997@reichel.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00801">Date Index</a>][<a href="thrd17.shtml#00801">Thread Index</a>]<br>
+[<A HREF="msg00800.shtml">Date Prev</A>][<A HREF="msg00802.shtml">Date Next</A>][<A HREF="msg00793.shtml">Thread Prev</A>][<A HREF="msg00794.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: OK, so it's elegant, now what?  :)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 24 Jun 1999 18:04:38 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+"Dennis Reichel" &lt;dennis@reichel.net&gt; writes:
+&gt; Where do the labor savings enter?
+
+As Ralf already said, if you know wml well you already save a lot of
+typing on a single page. But the real strength is when you have a set
+of pages that should look similar.
+If I just want to make a quick little page to make an argument in an
+usenet discussions, I just use my normal templates and have two
+advantages: The page I have to write is far shorter than a minimal
+html-page, and its design and navigation structure are seamlessly
+integrated into the rest of my site.
+Another example: I made some pages on computer graphics while I was a
+student several years ago and which are still accessed on a more or
+less regular basis. When I moved to my new site, I just took everyting
+in the body of these pages, added some lines of wml, put them into the
+definition of my navbars, and now they look like the rest of my new
+site, with just a quarter of an hour work.
+ 
+&gt; At what relative complexity or size site does WML become a useful tool?
+
+The more interesting question would be at which complexity WML stops
+being a useful tool, but I guess that depends on the quality of your
+planing...
+
+&gt; How is WML likened to CSS (cascading style sheets)
+
+Technially - not at all.
+Conceptually - well, if you design your wml well, you might regard wml
+as some sort of "server sided style sheets". You can define wml-tags for
+all the structural elements of your pages and then define the layout
+in an include file, and if you want to change your layout, all you
+have to do is to change the include file and call wml -af in your top
+directory. 
+
+Yours, Florian.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00792" HREF="msg00792.shtml">OK, so it's elegant, now what?  :)</A></strong>, <em>From:</em> Dennis Reichel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00800.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00802.shtml">Spaces in filnames</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00793.shtml">Re: OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00794.shtml">need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00801"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00801"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

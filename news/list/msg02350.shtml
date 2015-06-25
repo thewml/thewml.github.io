@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <break> when using included <while> tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 3 Aug 2001 06:00:33 +0200 (MET DST) -->
+<!--X-Message-Id: 20010802013636.A30503@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010731110342.A82960@itesec.hsc.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02350">Date Index</a>][<a href="thrd48.shtml#02350">Thread Index</a>]<br>
+[<A HREF="msg02349.shtml">Date Prev</A>][<A HREF="msg02351.shtml">Date Next</A>][<A HREF="msg02343.shtml">Thread Prev</A>][<A HREF="msg02351.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;break&gt; when using included &lt;while&gt; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 2 Aug 2001 01:36:36 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 31, 2001 at 11:03:42AM +0200, Ghislaine Labouret wrote:
+&gt; Is there a way to make the &lt;break&gt; tag act on the _current_ while loop,
+&gt; instead of the innermost one? Or maybe another way to get the same 
+&gt; result...
+&gt; 
+&gt; To make myself clear, here is the current behaviour of this tag:
+&gt; 
+&gt; Exemple from the doc:
+&gt; Source
+&gt;   &lt;set-var i=10&gt;
+&gt;   &lt;while &lt;gt &lt;get-var i&gt; 0&gt;&gt;;;;
+&gt;     &lt;get-var i&gt; &lt;decrement i&gt;;;;
+&gt;     &lt;ifeq &lt;get-var i&gt; 5 &lt;break&gt;&gt;;;;
+&gt;   &lt;/while&gt;
+&gt; Output
+&gt; 10 9 8 7 6
+&gt; 
+&gt; But if I add another while loop, than the &lt;break&gt; affects the next
+&gt; instance of that inner loop, which is not what I want:
+&gt; Source
+&gt;   &lt;set-var i=10&gt;
+&gt;   &lt;while &lt;gt &lt;get-var i&gt; 0&gt;&gt;;;;
+&gt;     &lt;get-var i&gt; &lt;decrement i&gt;;;;
+&gt;   &lt;ifeq &lt;get-var i&gt; 5 &lt;break&gt;&gt;;;;
+&gt;     &lt;set-var j=1&gt;
+&gt;     &lt;while &lt;lt &lt;get-var j&gt; 3&gt;&gt;;;;
+&gt;       &lt;get-var j&gt; &lt;increment j&gt;;;;
+&gt;     &lt;/while&gt;
+&gt;   &lt;/while&gt;
+&gt; Output
+&gt; 10
+&gt;   1 2
+&gt; 9
+&gt;   1 2
+&gt; 8
+&gt;   1 2
+&gt; 7
+&gt;   1 2
+&gt; 6
+&gt; 5
+&gt;   1 2
+&gt; 4
+&gt;   1 2
+&gt; 3
+&gt;   1 2
+&gt; 2
+&gt;   1 2
+&gt; 1
+&gt;   1 2
+
+Hi Ghislaine,
+
+this is obviously a bug.  In fact, I should have never introduced this
+&lt;break&gt; tag, because I cannot find a solution to make it work as
+expected :(
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02343" HREF="msg02343.shtml">&lt;break&gt; when using included &lt;while&gt; tags</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02349.shtml">Re: &lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02351.shtml">How can I avoid auto adjustment?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02343.shtml">&lt;break&gt; when using included &lt;while&gt; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02351.shtml">How can I avoid auto adjustment?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02350"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02350"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

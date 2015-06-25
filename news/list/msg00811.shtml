@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 30 Jun 1999 23:04:11 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990630224940.27099A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199906291711.TAA00313@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00811">Date Index</a>][<a href="thrd17.shtml#00811">Thread Index</a>]<br>
+[<A HREF="msg00810.shtml">Date Prev</A>][<A HREF="msg00812.shtml">Date Next</A>][<A HREF="msg00810.shtml">Thread Prev</A>][<A HREF="msg00812.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 30 Jun 1999 22:58:01 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 29 Jun 1999 simes@bpfh.net wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.2 and current CVS snapshot
+&gt; Operating System: SunOS 5.5.1
+&gt; 
+&gt; Problem Description:
+&gt; | The processing of the -D option always strips off a
+&gt; | trailing " on the option, even if that quote has been
+&gt; | escaped by a \. Thus the option
+&gt; | 
+&gt; |  -DFOO="moo \"bar\""
+&gt; | 
+&gt; | Results in things like
+&gt; | 
+&gt; |   --set "FOO" "moo \"bar\"
+&gt; | 
+&gt; | Being sent into meta-html. The problem was with the
+&gt; | regex which splits the values from @opt_D up for the
+&gt; | backends which use it. The regex was:
+&gt; | 
+&gt; |   ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+&gt; | 
+&gt; | I have corrected this to the following, which handles
+&gt; | trailing " correctly and leaves escaped " along so that
+&gt; | the correct thing happens. The new regex is:
+&gt; | 
+&gt; | ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+
+It's much more complicated :-(
+In all versions, spaces and quotes are invalid when defining variables.
+One problem is that command-line arguments are parsed by the shell
+whereas .wmlrc and shebang-line are parsed by Perl by something like
+    split(' ', $string);
+Then your example is split into 
+    -DFOO="moo
+    \"bar\""
+
+I have no solution, sorry.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00812" HREF="msg00812.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00810" HREF="msg00810.shtml">[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> simes</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00810.shtml">[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00812.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00810.shtml">[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00812.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00811"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00811"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: http://www.nokia.com/corporate/wap/future_wap.html -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Thu, 16 Sep 1999 18:11:44 +0200 (MET DST) -->
+<!--X-Message-Id: m13dwekf9k.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990915140204.A23907@dungeon.inka.de -->
+<!--X-Reference: 19990916154526.A97514@engelschall.com -->
+<!--X-Reference: 19990916160036.B22036@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00970">Date Index</a>][<a href="thrd20.shtml#00970">Thread Index</a>]<br>
+[<A HREF="msg00969.shtml">Date Prev</A>][<A HREF="msg00971.shtml">Date Next</A>][<A HREF="msg00969.shtml">Thread Prev</A>][<A HREF="msg00976.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: http://www.nokia.com/corporate/wap/future_wap.html</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 16 Sep 1999 18:11:35 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Stefan `Sec` Zehl &lt;sec@42.org&gt; writes:
+
+&gt; On Thu, Sep 16, 1999 at 03:45:26PM +0200, Ralf S. Engelschall wrote:
+&gt; &gt; There are lots of things in the world which are abbreviated "WML".  As long as
+&gt; &gt; nobody doesn't complain I think there is no problem with the fact that our
+&gt; &gt; package also has this abbreviation. And even if someone would complain I would
+&gt; &gt; certainly not immediately do any reaction, I think... Don't panic just because
+&gt; &gt; you see "WML" also in other areas. 
+&gt; 
+&gt; The only problem IIRC with WAP is, that their files also end in .wml and
+&gt; need a special content-type upon serving. That conflicts with our .wml
+&gt; files which should be delivered as text/plain. But I personally have no
+&gt; connection with WAP and thus don't have a problem :)
+
+I had pointed this conflict out some days ago already and think it is
+a potential problem. Of course you can tell your WAP users to name
+their files something other than .wml and use whatever they (or you)
+choose in your mime-type file. Not nice, though.
+
+The lesson to learn is: never use three letter appreviations (thanks,
+MS-DOS ...)
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00976" HREF="msg00976.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00967" HREF="msg00967.shtml">http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> Rainer Jung</li>
+<li><strong><A NAME="00968" HREF="msg00968.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00969" HREF="msg00969.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00969.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00971.shtml">May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00969.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00976.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00970"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00970"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

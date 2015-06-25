@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem with PS fonts on big&#45;endian platforms (patch included) -->
+<!--X-From-R13: Rnir Bybaxn <cybaxnNqbvg.jvfp.rqh> -->
+<!--X-Date: Wed, 21 Jul 1999 18:06:40 +0200 (MET DST) -->
+<!--X-Message-Id: 19990721110634.A14952@doit.wisc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990719151410.A27709@doit.wisc.edu -->
+<!--X-Reference: 3795C927.45D302F6@irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00865">Date Index</a>][<a href="thrd18.shtml#00865">Thread Index</a>]<br>
+[<A HREF="msg00864.shtml">Date Prev</A>][<A HREF="msg00866.shtml">Date Next</A>][<A HREF="msg00864.shtml">Thread Prev</A>][<A HREF="msg00866.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem with PS fonts on big-endian platforms (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Dave Plonka &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 21 Jul 1999 11:06:34 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jul 21, 1999 at 03:20:39PM +0200, Frederic Le Mouel wrote:
+&gt; Dave Plonka wrote:
+&gt; &gt; 
+&gt; &gt; On big-endian architectures, gfont failed :)
+&gt; 
+&gt; Great patch, thanks. It works well now :)
+
+Great - I'm glad the trouble of preparing the patch wasn't for naught.
+
+&gt; &gt; I'm gathering that the rest of the user-base is on Intel hence they didn't 
+&gt; &gt; bump into this issue.
+&gt; 
+&gt; My system is Solaris and I noticed this bug but I didn't find (and even try
+&gt; to find) how to solve :)
+
+I pretty much had to step through the source in gdb since "gfont" didn't
+report that it found the ".gdf" file to be invalid.  Without the patch,
+gfont acted the same as when the ".gdf" is not found by proceeding to
+invoke "gfont_pxtogdf" to recreate the invalid file *again*.
+
+That it ended up to be the byte-order issue was insideous to find because
+the gfont source *did* have byte-swap code which got invoked no
+non-little-endian platforms, it was just that corresponding source for
+"gfont_pxtogdf" didn't.  In gdb, I noticed that a value of 256 was being 
+written into the ".gdf" file and was subsequently being read out (and
+interpreted) as 65536 - Eureka!
+
+&gt; I also have a little configuration problem with the perl detection. I modify
+&gt; a bit your patch to take that into account.
+
+You're certainly right - I should have mentioned that since gfont's
+configure will not run with only my patch - users will need to get the
+fix for testing the perl version as well.  (I sent that as a bug report
+and others have similarly discussed this in the list.)
+
+As an aside, my autoconf familiarity is apparently lacking - anyone know,
+off the top of their head, how to surpress autoconf's innocuous warning:
+
+   warning: AC_TRY_RUN called without default to allow cross compiling
+
+because of my introduction of AC_C_BIGENDIAN?
+
+Thanks,
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00866" HREF="msg00866.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00863" HREF="msg00863.shtml">gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Dave Plonka</li>
+<li><strong><A NAME="00864" HREF="msg00864.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00864.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00866.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00864.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00866.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00865"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00865"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

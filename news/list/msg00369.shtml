@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: how to use wml_auxiliareise (htmlinfo, etc)? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 25 Jan 1999 14:07:14 +0100 (CET) -->
+<!--X-Message-Id: 19990125140712.B14583@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990125142615.B3087@zeus.advatech.ro -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00369">Date Index</a>][<a href="thrd8.shtml#00369">Thread Index</a>]<br>
+[<A HREF="msg00368.shtml">Date Prev</A>][<A HREF="msg00370.shtml">Date Next</A>][<A HREF="msg00367.shtml">Thread Prev</A>][<A HREF="msg00377.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: how to use wml_auxiliareise (htmlinfo, etc)?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Jan 1999 14:07:12 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 25, 1999, Viorel Anghel wrote:
+
+&gt; How can i use auxiliaries like htmlinfo, weblint, linklint from wml package?
+&gt; 
+&gt; I tried (unsuccesfull) something like
+&gt; wmk -X htmlinfo file.wml
+&gt; 
+&gt; Something wrong with my wml distribution or what?
+
+Ops, no: the wmk is broken at this point. Seems
+like I've forgotten to do the expansion for -X in wmk.
+For -E in wml it's done. But as a workaround you
+can use `wmk -X /absolute/path/to/htmlinfo file.wml', of course.
+
+Denis: I've no time to test it, but I propose the appended
+patch for wml and wmk to fix and cleanup this stuff.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+Index: wml.src
+===================================================================
+RCS file: /e/wml/cvs/wml/wml_frontend/wml.src,v
+retrieving revision 1.4
+diff -u -r1.4 wml.src
+--- wml.src	1999/01/18 10:53:52	1.4
++++ wml.src	1999/01/25 13:05:13
+@@ -1148,9 +1148,6 @@
+                 $e = "@libdir@/exec/wml_aux_linklint$1";
+                 $e .= " -nocache -one -summary" if ($1 eq '');
+             }
+-            elsif ($e =~ m|^tdist(.*)|) {
+-                $e = "@libdir@/exec/wml_aux_tdist$1";
+-            }
+             &amp;verbose(2, "EPILOG: $e $o\n");
+             system("$e $o");
+         }
+Index: wmk.src
+===================================================================
+RCS file: /e/wml/cvs/wml/wml_frontend/wmk.src,v
+retrieving revision 1.2
+diff -u -r1.2 wmk.src
+--- wmk.src	1999/01/12 14:24:30	1.2
++++ wmk.src	1999/01/25 13:05:21
+@@ -271,7 +271,16 @@
+                         &amp;process_file("$dir/$file", $dir, $file);
+                     }
+                     foreach $exec (@opt_X_CUR) {
+-                        $exec =~ s|^tdist|@libdir@/exec/wml_aux_tdist|;
++                        if ($exec =~ m|^htmlinfo(.*)|) {
++                            $exec = "@libdir@/exec/wml_aux_htmlinfo$1";
++                        }
++                        elsif ($exec =~ m|^weblint(.*)|) {
++                            $exec = "@libdir@/exec/wml_aux_weblint$1";
++                        }
++                        elsif ($exec =~ m|^linklint(.*)|) {
++                            $exec = "@libdir@/exec/wml_aux_linklint$1";
++                            $exec .= " -nocache -one -summary" if ($1 eq '');
++                        }
+                         system($exec);
+                     }
+                 }
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00377" HREF="msg00377.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00367" HREF="msg00367.shtml">how to use wml_auxiliareise (htmlinfo, etc)?</A></strong>, <em>From:</em> Viorel Anghel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00368.shtml">Re: vim syntax file?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00370.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00367.shtml">how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00377.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00369"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00369"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug in 2.0.8 navbar, limiting submenu depth to 2. -->
+<!--X-From-R13: Xbunaarf Tenaxra <wsenaxraNwsenaxra.qr> -->
+<!--X-Date: Sat, 26 Jan 2002 10:49:07 +0100 (MET) -->
+<!--X-Message-Id: 20020126104823.K15183@jfranken.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02485">Date Index</a>][<a href="thrd50.shtml#02485">Thread Index</a>]<br>
+[<A HREF="msg02484.shtml">Date Prev</A>][<A HREF="msg02486.shtml">Date Next</A>][<A HREF="msg02481.shtml">Thread Prev</A>][<A HREF="msg02486.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug in 2.0.8 navbar, limiting submenu depth to 2.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Johannes Franken &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 26 Jan 2002 10:48:25 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I use wml::des::navbar to render a navigation bar with a maxdepth of 4.
+The submenu tree corresponds to the underlying filesystem structure.
+
+After upgrading from 1.7.4 to 2.0.8, I found all navbar images and links
+of depth 3+ aiming at wrong directories. 
+
+For example at depth 3 something should be
+	"../../images/file.gif"
+but pass 3 made it
+	"/images/file.gif"
+
+urlbase, imgbase, $(ROOT) and $(IMG_BASE) were set ok.
+I traced the error back to wml::des::navbar calling 
+canonpath() from wml::sup::path.
+
+Seems like Ralf had tried to simplify line 50 
+of /usr/lib/wml/include/sup/path.wml from
+	$path =~ s|([^/.][^/.]*)/\.\.||;    # Version 1.7.4
+to
+	$path =~ s|[^/]+/\.\.||;            # Version 2.0.8
+
+That line is supposed to cut unnecessary parts off pathes,
+e.g. transforming 
+	"wrongdir/../rightdir/images/file.gif"
+to 
+	"rightdir/images/file.gif"
+
+The regex now matches the first ".." of "../../images/file.gif" as 
+"stepping down some subdir unneccesarily", so it should be 
+corrected to
+
+	$path =~ s|[^/.]+/\.\.||;            # Version 2.0.9?
+
+-- 
+Johannes Franken
+  
+Professional unix/network development
+<A  HREF="mailto:jfranken@jfranken.de">mailto:jfranken@jfranken.de</A>
+<A  HREF="http://www.jfranken.de/">http://www.jfranken.de/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02484.shtml">Re: presentation of WML at CLT4 Chemnitz (Germany)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02486.shtml">&lt;rollover&gt; tag and multiple languages (WML 2.0.7)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02481.shtml">Help needed with hierarchical subnavigation bars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02486.shtml">&lt;rollover&gt; tag and multiple languages (WML 2.0.7)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02485"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02485"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

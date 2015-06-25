@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML wml::std::lang questions -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 12 Mar 1999 07:19:43 +0100 (CET) -->
+<!--X-Message-Id: m1r9qv4rsl.fsf@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990311181959.1816A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00456">Date Index</a>][<a href="thrd10.shtml#00456">Thread Index</a>]<br>
+[<A HREF="msg00455.shtml">Date Prev</A>][<A HREF="msg00457.shtml">Date Next</A>][<A HREF="msg00455.shtml">Thread Prev</A>][<A HREF="msg00461.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML wml::std::lang questions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 11 Mar 1999 22:53:14 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+&gt; It does not really matter, but -o(ALL-LANG_*)+LANG_EN is easier to
+&gt; understand. It means all slices minus the ones relative to linguas
+&gt; plus LANG_EN. Even not technical people will find this simple :o)
+
+The problem is that we are talking about REALLY non-technical people.
+
+One reason of using WML in our environment is that adding and
+modifying context can be nicely separated from the HTML design.
+
+Ideally that would mean that the "editors" have to only learn very few
+&lt;tags&gt; and everything else works automatically.
+
+To make nav-bars work one already needs some "complicated" #include or
+#use statement at the beginning of an input file. 
+
+The shebang line adds just one more thing to it.
+
+&gt; Moreover, you can replace ``index'' by ``%BASE'' as explained in wml(1).
+
+That was one feature we were looking for, great that it's there!!!
+ 
+&gt; But it is only available on the shebang line, so i see no solution
+&gt; to your problem (except with a makefile).
+
+I almost think we might indeed want some make based approach that
+would ultimately also deal with the nav-bar issues. I guess we have to
+look into that. With the right preprocessor one could just put files
+into a directory structure and have the preprocessor do all the magic
+with nav-bars, etc.
+
+&gt; One could write -o(ALL-LANG_*)+LANG_IT:%BASE.it.html in the .wmlrc
+&gt; files, this feature will go in my to-do list. 
+
+Can you put it at the top   ;-)
+
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00461" HREF="msg00461.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+<li><strong><A NAME="00464" HREF="msg00464.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00455" HREF="msg00455.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00455.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00457.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00455.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00461.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00456"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00456"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

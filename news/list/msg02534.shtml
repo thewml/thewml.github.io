@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: nested navbars -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Wed, 27 Feb 2002 16:58:59 +0100 (MET) -->
+<!--X-Message-Id: 3C7D01D1.4090108@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02534">Date Index</a>][<a href="thrd3.shtml#02534">Thread Index</a>]<br>
+[<A HREF="msg02533.shtml">Date Prev</A>][<A HREF="msg02535.shtml">Date Next</A>][<A HREF="msg00543.shtml">Thread Prev</A>][<A HREF="msg00100.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Feb 2002 16:57:05 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all!
+
+I was planning to use sub navbars. The problem was that it was
+rendered in the main navbar. I would like to share the idea how
+I resolved this, some users might see this useful. I did not see this
+idea in other templates, neither in documentation. Maybe because
+the documentation sections have not much relation to each other,
+so pass2 cannot refer to pass5. :-?
+
+Simple use a divert in subnavbar, like in
+&lt;navbar:header&gt; {#SUBMENU#: &lt;TABLE etc your code &lt;/navbar:header&gt;
+
+Close the divert in navbar:footer with :#SUBMENU#} &lt;/navbar:footer&gt;
+and voila: this eliminates the submenu from your main menu. :-)
+
+Then simple display it on any place you need {#SUBMENU#}.
+
+Buggy method. Later I noticed. The javascript preloads are still
+rendered in place of the original sub navbar, and that puts in
+some newline characters, which breaks the menu. Any idea how to
+move the javascript as well?? Hmm... the idea was so fine :(
+And I need something like this very badly.
+
+How can I set selected and subselected items in the submenu?
+Can I somehow access the &lt;navbar:render&gt; of it, or some other
+way doing this? I have made a 3rd level of the menu as well,
+like on:
+<A  HREF="http://www.netngine.hu/webdesign_h.html">http://www.netngine.hu/webdesign_h.html</A>
+
+But the little menu never shows up, because the second level
+menu (linked to main menu's services button as menu=) cannot
+select the "webdesign" menu, so it's another "menu=" never
+happens to run. Any ideas are welcomed.
+
+I upload the current template to <A  HREF="http://www.netngine.hu/wml/">http://www.netngine.hu/wml/</A>
+but do not take this too serious, it has a lot of things to
+fix and do, probalby. This is what I could do in 2 weeks in
+WML. :-)
+
+Please help! :-)
+
+Thanks,
+Ferenc
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02533.shtml">image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02535.shtml">breadcrumb navigation trail</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00543.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00100.shtml">wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02534"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#02534"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

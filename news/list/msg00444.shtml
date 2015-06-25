@@ -1,0 +1,175 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Home of WML and other stuff -->
+<!--X-From-R13: Bnhy Ecbanty <cnoybNnpzrqvn.qr> -->
+<!--X-Date: Wed, 10 Mar 1999 13:10:19 +0100 (CET) -->
+<!--X-Message-Id: 19990310125958.A1245@luna.office.acmedia.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990309163746.22806C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: m1iucalfo3.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00444">Date Index</a>][<a href="thrd10.shtml#00444">Thread Index</a>]<br>
+[<A HREF="msg00443.shtml">Date Prev</A>][<A HREF="msg00445.shtml">Date Next</A>][<A HREF="msg00443.shtml">Thread Prev</A>][<A HREF="msg00445.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Home of WML and other stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Paul Sponagl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 10 Mar 1999 12:59:58 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+as you're talking of wml-generated sites i want to mention the Site
+<A  HREF="http://www.freeware.de">http://www.freeware.de</A>.
+
+Heiko, our office neighbor and the maintainer/owner of this Site
+asked us to help him with the redesign. First we thought of using
+PHP-Mysql, but then we decided to use WML :-)
+
+Now Heiko is able to create a bunch of pages while editing one single
+file like this:
+
+---------------------------
+#include header.inc
+&lt;page foo.shtml&gt;
+&lt;software ..... &gt;
+text
+&lt;/software&gt;
+&lt;software ..... &gt;
+text
+&lt;/software&gt;
+&lt;/page&gt;
+
+&lt;page bar.shtml&gt;
+&lt;software ..... &gt;
+text
+&lt;/software&gt;
+...
+&lt;/page&gt;
+#include footer.inc
+---------------------
+
+and the detail-pages like this:
+----------------------------
+#include header.inc
+&lt;software_detail ..... &gt;
+text
+&lt;/software&gt;
+
+&lt;software_detail ..... &gt;
+text
+&lt;/software&gt;
+#include footer.inc
+----------------------------
+
+I think that could be of common interest because the biggest
+difficulty was to check how much pages and software_details where used
+in META-HTML to prepare the slices.
+
+With this in the footer:
+
+&lt;subst-in-page %AAAAAAAARRGGGG% &lt;get-var slicename&gt;&gt;
+
+and this for the pages(or software_details):
+
+&lt;define-container page&gt;
+&lt;set-var slicename="&lt;get-var slicename&gt;S"&gt;
+%!slice -o&lt;get-var slicename&gt;uUNDEF:%0
+[&lt;get-var slicename&gt;:
+%body
+:&lt;get-var slicename&gt;]
+&lt;/define-container&gt;
+
+and that for the title of each single page
+
+&lt;define-tag ftitle&gt;
+..TITLE&gt;&gt;
+&lt;title&gt;Freeware - for free people %0
+&lt;:
+my $maxpage= length('%AAAAAAAARRGGGG%') || 0;
+if($maxpage &gt; 1) {
+ foreach(1..$maxpage) { 
+  print '[',S x $_,':',$_,':',S x $_,']'; 
+ }
+}
+:&gt;
+&lt;/title&gt;
+&lt;&lt;..
+&lt;/define-tag&gt;
+
+it worked!
+
+Maybe one can use this somewhere ... somehow ;-) 
+
+Bye 
+Paul
+
+
+-- 
+Lang erwartet, endlich da:
+Buy-World, E-Commerce fuer alle
+<A  HREF="http://www.acmedia.de">http://www.acmedia.de</A> <A  HREF="http://www.buy-world.de">http://www.buy-world.de</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00445" HREF="msg00445.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00441" HREF="msg00441.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00442" HREF="msg00442.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00443.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00445.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00443.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00445.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00444"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00444"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

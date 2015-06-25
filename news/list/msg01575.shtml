@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with ifeq under 2.0.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 19 May 2000 01:05:03 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000519005853.4839B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0005181302240.25995&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01575">Date Index</a>][<a href="thrd33.shtml#01575">Thread Index</a>]<br>
+[<A HREF="msg01574.shtml">Date Prev</A>][<A HREF="msg01576.shtml">Date Next</A>][<A HREF="msg01582.shtml">Thread Prev</A>][<A HREF="msg01576.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with ifeq under 2.0.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 19 May 2000 01:04:54 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 18 May 2000, Franz Knipp wrote:
+
+&gt; Hello!
+&gt; 
+&gt; On Wed, 17 May 2000, Denis Barbier wrote:
+&gt; &gt; read the file README.mp4h in top-level directory, it describes what to
+&gt; &gt; do with this expression (and why it is broken now):
+&gt; &gt;       &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+&gt; 
+&gt; I read README.mp4h and found the following line:
+&gt; 
+&gt;     In mp4h, unknown tags are simply considered as normal text.
+&gt; 
+&gt; I think, that &lt;group ...&gt; should be known to mp4h, but:
+&gt; 
+&gt; &lt;ifeq 0 0 &lt;group &lt;img src="foo.png" alt=""&gt;&gt;&gt;
+&gt; 
+&gt; doesn't work, too.
+
+It works as expected (in my mind ;-))
+
+&gt; Is this an error in mp4h or do I have to change all of this into:
+&gt; 
+&gt; &lt;ifeq 0 0 &lt;group "&lt;img src=\"foo.png\" alt=\"\"&gt;"&gt;&gt;
+&gt; 
+&gt; to get it working?
+
+You have to.  Or write
+  &lt;ifeq 0 0 "&lt;img src=\"foo.png\" alt=\"\"&gt;"&gt;
+
+Note that these problems does not occur with the &lt;when&gt; tag, which
+should be preferred in all circumstances.
+
+&gt; Keep in mind, that &lt;prog ...&gt; from wml::sys::compat1 doesn't work right,
+&gt; if the additional quotes are necessary!
+
+This module implements rough compatibility, which is sufficient in most
+cases.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01576" HREF="msg01576.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01582" HREF="msg01582.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01574.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01576.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01582.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01576.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01575"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01575"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

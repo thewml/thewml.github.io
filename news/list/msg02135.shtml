@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Why does <set&#45;var %body> not work? -->
+<!--X-From-R13: Brge Oaqerlri <crgeNknanqh.eh> -->
+<!--X-Date: Tue, 20 Feb 2001 00:05:00 +0100 (MET) -->
+<!--X-Message-Id: Pine.WNT.4.32.0102192345580.228&#45;100000@turm.infra.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010219231141.A24595@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02135">Date Index</a>][<a href="thrd43.shtml#02135">Thread Index</a>]<br>
+[<A HREF="msg02134.shtml">Date Prev</A>][<A HREF="msg02136.shtml">Date Next</A>][<A HREF="msg02134.shtml">Thread Prev</A>][<A HREF="msg02136.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Why does &lt;set-var %body&gt; not work?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Petr Andreyev &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 00:02:12 +0100 (=?koi8-r?Q?Westeurop=E4ische_Normalzeit?=)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Alex!
+
+I can only try to explain why the construction with foraech doesn't work.
+Probably it assigns the values to variables which have names with leading
+spaces. The WML-passes with big numbers make from several space-characters
+one - so you don't see the extra spaces in the output (The key is ...).
+
+The solution could be, for instance, to insert
+&lt;subst-in-var x "^ *" "" /&gt;
+&lt;subst-in-var x " *$" "" /&gt;
+just after the &lt;foreach x array&gt; in your construction.
+
+Allthough, simply &lt;set-var x /&gt; still doesn't work. And it would be
+interesting to know the reason. Probably it tries to assign an empty value to
+a variable named 'key=value' that is with a name with the equal sign inside.
+
+--
+Petr
+
+&gt; BTW: Even splitting %body manually via &lt;foreach&gt; didn't work:
+&gt;
+&gt; &lt;define-tag CONFIGURATION endtag=required&gt;\
+&gt; &lt;set-var array="%body"&gt;;;; Works
+&gt; &lt;foreach x array&gt;;;; Works
+&gt; 	Setting &lt;get-var &lt;attributes-quote x&gt;&gt;...;;; Works
+&gt; 	&lt;set-var key=&lt;match &lt;get-var &lt;attributes-quote x&gt;&gt; "=.*$" action=delete&gt;&gt;
+&gt; 	&lt;set-var val=&lt;match &lt;get-var &lt;attributes-quote x&gt;&gt; "^[^=]+=" action=delete&gt;&gt;
+&gt; 		The key is &lt;get-var key&gt;;;; Works
+&gt; 		The value is &lt;get-var val&gt;;;; Works
+&gt; 	&lt;set-var &lt;get-var key&gt;=&lt;get-var val&gt;&gt;;;; Works not
+&gt; 	&lt;set-var &lt;group &lt;get-var key&gt;=&lt;get-var val&gt;&gt;&gt;;;; Works not
+&gt; 	&lt;set-var &lt;attributes-quote &lt;get-var key&gt;=&lt;get-var val&gt;&gt;&gt;;;; Works not
+&gt; &lt;/foreach&gt;
+&gt; &lt;/define-tag&gt;
+&gt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02134" HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02135"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02135"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

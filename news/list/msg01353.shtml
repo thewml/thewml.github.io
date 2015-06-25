@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Automating the creation of buttons -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Thu, 10 Feb 2000 19:20:52 +0100 (MET) -->
+<!--X-Message-Id: 20000210105921.A6074@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000131133135.31013A&#45;101000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Reference: 38976398.A3BC0DE7@research.bell&#45;labs.com -->
+<!--X-Reference: 20000203141040.B506@perolo -->
+<!--X-Reference: 20000204165407.B2845@matavnet.hu -->
+<!--X-Reference: tpapp@matavnet.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01353">Date Index</a>][<a href="thrd27.shtml#01353">Thread Index</a>]<br>
+[<A HREF="msg01352.shtml">Date Prev</A>][<A HREF="msg01354.shtml">Date Next</A>][<A HREF="msg01344.shtml">Thread Prev</A>][<A HREF="msg01330.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Automating the creation of buttons</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 10 Feb 2000 10:59:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Fri, Feb 04, 2000 at 04:54:08PM +0100, Tamas Papp contaba:
+
+&gt;Does GD do anti-aliasing? It's a must for small buttons, I guess,
+&gt;otherwise they become unreadable.
+
+GD does anti-aliasing with TTF fonts (because the FreeType library
+that uses, does it), but so far, it does not do it with the lines and
+circles it draws.
+
+I am using a quite old GD version. I should check the latest ones to
+see if this is changing, but I think it does not.
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01313" HREF="msg01313.shtml">Proposed modification of the #include '' directive</A></strong>, <em>From:</em> Franz Knipp</li>
+<li><strong><A NAME="01318" HREF="msg01318.shtml">Automating the creation of buttons</A></strong>, <em>From:</em> Tom Limoncelli</li>
+<li><strong><A NAME="01329" HREF="msg01329.shtml">Re: Automating the creation of buttons</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="01344" HREF="msg01344.shtml">Re: Automating the creation of buttons</A></strong>, <em>From:</em> Tamas Papp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01352.shtml">Re: WML port to Win32</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01354.shtml">[HELP] New macro-processor for pass 2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01344.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01330.shtml">Re: [wml] Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01353"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01353"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

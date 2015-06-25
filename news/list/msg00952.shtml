@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Wed, 8 Sep 1999 08:21:18 +0200 (MET DST) -->
+<!--X-Message-Id: 19990908082123.A29574@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990907083528.A22649@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990907134001.14154A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00952">Date Index</a>][<a href="thrd19.shtml#00952">Thread Index</a>]<br>
+[<A HREF="msg00951.shtml">Date Prev</A>][<A HREF="msg00953.shtml">Date Next</A>][<A HREF="msg00943.shtml">Thread Prev</A>][<A HREF="msg00953.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 8 Sep 1999 08:21:23 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+	Hi!
+
+On 07 Sep 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; On Tue, 7 Sep 1999, Gerfried Fuchs wrote:
+&gt; 
+&gt; &gt; On 06 Sep 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; &gt; &gt; &gt; -S /usr/local/lib/wml/include/  -I /INCLUDES  -s 'sys/bootmhc.wml' -s
+&gt; &gt; &gt;                                      ^^^^^^^^^
+&gt; &gt; &gt; Now, we have to find why INCLUDES has been replaced by /INCLUDES.
+&gt; &gt; &gt; Any clue?
+&gt; &gt; 
+&gt; &gt;  None at all! As I said - the same tgz-package works at home *scratches*
+&gt; 
+&gt; Ok. I am 96.3% sure it is related to perl.
+
+ Just because I said I don't have a clue? ;-))
+
+&gt; Which version of File::PathConvert do you have?
+&gt; I experienced problems with 0.85 similar to yours, do you use the one
+&gt; shipped with WML (0.83) or another one?
+
+ Yes, it's 0.85. I start cpan every now and then and update the
+packages, and compilied with the --with-openworld switch. Let's see how
+it's working now:
+make distclean
+./configure --without-openworld
+make
+make test
+make install
+
+ Well, make test didn't work on the final test (wml) in the last of the
+four tests... But that happened already before. I don't think this is
+really a mistake (it happened at home, also).
+ If you like, here is the line:
+
+Failed Test  Status Wstat Total Fail  Failed  List of failed
+-------------------------------------------------------------------------------
+t/10-wml.t                    4    1  25.00%  4
+Failed 1/10 test scripts, 90.00% okay. 1/30 subtests failed, 96.67% okay.
+
+ Nope, same behavior here... Or is there some other way to use the 0.83
+from the package than the new 0.85? It still checks for the installed
+packages? What for is the --with-openworld switch then, if it's not
+honoured? *scratches*  Should I remove the package completely from the
+perl-tree? Which files should I remove then?
+
+ Alfie [puzzled about the --with-openworld switch]
+P.S.: I hope that I'm not too much of a work for you :-( But this is
+really annoying...
+-- 
+Commitment, n.:
+        Commitment can be illustrated by a breakfast of ham and eggs.
+The chicken was involved, the pig was committed.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00953" HREF="msg00953.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00939" HREF="msg00939.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00943" HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00951.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00953.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00953.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00952"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00952"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

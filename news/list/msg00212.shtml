@@ -1,0 +1,486 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Speeding up WML / real&#45;time WML -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 14 Sep 1998 17:38:50 +0200 (CEST) -->
+<!--X-Message-Id: m1yarm946m.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 001701bddda8$19cab080$0500a8c0@delf.delf -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00212">Date Index</a>][<a href="thrd5.shtml#00212">Thread Index</a>]<br>
+[<A HREF="msg00211.shtml">Date Prev</A>][<A HREF="msg00213.shtml">Date Next</A>][<A HREF="msg00211.shtml">Thread Prev</A>][<A HREF="msg00209.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Speeding up WML / real-time WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 14 Sep 1998 16:09:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+"David Harris" &lt;dharris@drh.net&gt; writes:
+
+&gt; Because this directly replaces the installation file, running another "make"
+&gt; or "make install" will overwrite this. Yes, call me lazy for not modifying
+&gt; the source file used by the makefile.
+
+Here is a patch file that should work against the distributed source
+and which can be applied BEFORE make/install:
+
+
+--- wml_p1_ipp	Mon Sep 14 15:59:23 1998
++++ wml_p1_ipp.fast	Mon Sep 14 15:59:27 1998
+@@ -1,24 +1,23 @@
+-#!/usr/sepp/sbin/perl
+-eval 'exec /usr/sepp/sbin/perl -S $0 ${1+"$@"}'
++#!/usr/drwho/local/bin/perl
++eval 'exec /usr/drwho/local/bin/perl -S $0 ${1+"$@"}'
+     if $running_under_some_shell;
+ ##
+ ##  IPP -- Include Pre-Processor
+-##  Copyright (c) 1997,1998 Ralf S. Engelschall, All Rights Reserved. 
++##  Copyright (c) 1997,1998 Ralf S. Engelschall, All Rights Reserved.
+ ##
+ 
+ require 5.003;
+ 
+ BEGIN { $^W = 0; } # get rid of nasty warnings
+ 
+-use lib "/usr/pack/wml-1.6.7-za/lib/perl/lib";
+-use lib "/usr/pack/wml-1.6.7-za/lib/perl/lib/sun4-solaris/5.00401";
+-use lib "/usr/pack/wml-1.6.7-za/lib/perl/lib/site_perl";
+-use lib "/usr/pack/wml-1.6.7-za/lib/perl/lib/site_perl/sun4-solaris";
++use lib "/usr/pack/wml-1.6.4-za/lib/perl/lib";
++use lib "/usr/pack/wml-1.6.4-za/lib/perl/lib/sun4-solaris/5.00401";
++use lib "/usr/pack/wml-1.6.4-za/lib/perl/lib/site_perl";
++use lib "/usr/pack/wml-1.6.4-za/lib/perl/lib/site_perl/sun4-solaris";
+ 
+ use Getopt::Long 2.13;
+ use IO::Handle 1.15;
+ use IO::File 1.06;
+-use Text::BlockParser qw(parseblock);
+ use File::Find;
+ use Cwd;
+ 
+@@ -191,46 +190,50 @@
+ }
+ 
+ sub ProcessFile {
+-    my ($mode, $delimiter, $file, $level, $noid, %arg) = @_;
+-    my ($in, $found, $line, $type, %argO, $out, $store);
++    my ($mode, $delimiter, $file, $level, $noid, $open_spec, %arg) = @_;
++    my ($in, $found, $line, $type, %argO, $store, $continued);
+ 
+-    #
+-    #   search for file
+-    #
+-    $found = 0;
+-    if ($delimiter eq '&lt;') {
+-        foreach $dir (@opt_S) {
+-            if (-f "$dir/$file") {
+-                $file = "$dir/$file";
+-                $found = 1;
+-            }
+-        }
+-    }
+-    if ($delimiter eq '&lt;' or $delimiter eq '"') {
+-        foreach $dir (@opt_I) {
+-            if (-f "$dir/$file") {
+-                $file = "$dir/$file";
+-                $found = 1;
+-            }
+-        }
+-    }
+-    if ($delimiter eq '&lt;' or $delimiter eq '"' or $delimiter eq "'") {
+-        if (-f $file) {
+-            $found = 1;
+-        }
+-    }
+-    &amp;error("file not found: $file") if not $found;
+-
+-    #
+-    #   stop if file was still included some time before
+-    #
+-    if (not $noid) {
+-        $id = &amp;CanonPath($file);
+-        if ($mode eq 'use') {
+-            return '' if ($INCLUDES{$id} == 1);
+-        }
+-        $INCLUDES{$id} = 1;
+-    }
++	# Dont do this if $file is not a filename
++	unless ( $open_spec )
++	{
++	    #
++	    #   search for file
++	    #
++	    $found = 0;
++	    if ($delimiter eq '&lt;') {
++	        foreach $dir (@opt_S) {
++	            if (-f "$dir/$file") {
++	                $file = "$dir/$file";
++	                $found = 1;
++	            }
++	        }
++	    }
++	    if ($delimiter eq '&lt;' or $delimiter eq '"') {
++	        foreach $dir (@opt_I) {
++	            if (-f "$dir/$file") {
++	                $file = "$dir/$file";
++	                $found = 1;
++	            }
++	        }
++	    }
++	    if ($delimiter eq '&lt;' or $delimiter eq '"' or $delimiter eq "'") {
++	        if (-f $file) {
++	            $found = 1;
++	        }
++	    }
++	    &amp;error("file not found: $file") if not $found;
++
++	    #
++	    #   stop if file was still included some time before
++	    #
++	    if (not $noid) {
++	        $id = &amp;CanonPath($file);
++	        if ($mode eq 'use') {
++	            return '' if ($INCLUDES{$id} == 1);
++	        }
++	        $INCLUDES{$id} = 1;
++	    }
++	}
+ 
+     #
+     #   process the file
+@@ -238,12 +241,27 @@
+     $in = new IO::File;
+     &amp;verbose($level, "|");
+     &amp;verbose($level, "+-- $file");
+-    $in-&gt;open("&lt;$file");
++    $in-&gt;open($open_spec ? "$file" : "&lt;$file");
+     $store  = '';
+-    $out    = '';
+     $line   = 0;
+-    while ($l = &lt;$in&gt;) {
+-        $line++;
++	$continued = 0;
++
++    while ( ! $in-&gt;eof )
++    {
++
++		#
++		#	Read in a new line, if needed
++		#
++
++		if ( $continued )
++		{
++			$continued = 0;
++		}
++		else
++		{
++	    	$l = &lt;$in&gt;;
++    	    $line++;
++		}
+ 
+         #
+         #   Variable Interpolation
+@@ -267,11 +285,59 @@
+         #   remove one preceding backslash
+         $l =~ s/\\(\$\([a-zA-Z0-9_]+.*?\))/$1/g;
+ 
++		#
++		#	Hack out block comments
++		#
++
++		if ( $l =~ m/\/\*/ )
++		{
++			my $precomment;
++			my $buf;
++			my $matched;
++			my $level = 1;
++
++			$l =~ m/\/\*(.*)$/s;
++			$buf = $1;
++			$precomment = substr($l, 0, length($l) - length($buf) - 2);
++
++			print $out $precomment;
++			
++			while ( 1 )
++			{
++				if ( $buf eq '\n' )
++				{
++					$buf = &lt;$in&gt;;
++					$line++;
++					last if ( $in-&gt;eof );
++				}
++
++				if ( ($matched, $buf) = ( $buf =~ m/(\/\*|\*\/)(.*)$/s ) )
++				{
++					$level += $matched eq '/*' ? 1 : -1;
++					last if $level == 0;
++				}
++				else
++				{
++					$buf = &lt;$in&gt;;
++					$line++;
++					last if ( $in-&gt;eof );
++				}
++				
++			}
++
++			last if ( $in-&gt;eof );
++
++			#	continue parsing the rest of this line
++			$l = $buf;
++			$continued = 1;
++			next;
++		}
++
+         #
+         #   ``#include'' and ``#use'' directives
+         #
+ 
+-        if (($cmd, $file, $args) = ($l =~ m/^#(use|include)\s+(\S+)(.*)$/)) {
++        if ( ( ($cmd, $file, $args) = ($l =~ m/^#(use|include)\s+(\S+)(.*)$/) ) &amp;&amp; !$continued ) {
+             #   set arguments
+             %argO = %arg;
+             &amp;setargs(\%arg, $args);
+@@ -294,7 +360,7 @@
+             }
+ 
+             #   now recurse down
+-            $out .= &amp;ProcessFile($cmd, $type, $file, $level+1, 0, %arg);
++            &amp;ProcessFile($cmd, $type, $file, $level+1, 0, 0,%arg);
+ 
+             #   reset arguments
+             %arg = %argO;
+@@ -303,7 +369,7 @@
+         #
+         #   ``__END__'' feature
+         #
+-        elsif ($l =~ m|^\s*__END__\s*\n?$|) {
++        elsif ( $l =~ m|^\s*__END__\s*\n?$|) {
+             last;
+         }
+ 
+@@ -311,6 +377,9 @@
+         #   plain text
+         #
+         else {
++			#	remove EOL comments
++			$l = "" if ( !$continued &amp;&amp; $l =~ m/^[ \t]*#/ );
++
+             #   line-continuation support
+             if ($store ne '') {
+                 $l =~ s|^\s+||;
+@@ -319,14 +388,13 @@
+                 $store .= $1;
+                 next;
+             }
+-            $out .= $store.$l;
++            print $out $store;
++            print $out $l;
+             $store = '';
+         }
+     }
+-    $out .= $store;
++    print $out $store;
+     $in-&gt;close();
+-
+-    return $out;
+ }
+ 
+ #
+@@ -349,6 +417,19 @@
+ }
+ 
+ #
++#  create output file, $out
++#
++if ($opt_o eq '-') {
++    $out = new IO::Handle;
++    $out-&gt;fdopen(fileno(STDOUT), "w");
++}
++else {
++    $out = new IO::File;
++    $out-&gt;open("&gt;$opt_o");
++}
++
++
++#
+ #   process the pre-loaded include files
+ #
+ $tmpfile = "/tmp/ipp.$$.tmp";
+@@ -371,80 +452,58 @@
+     print $tmp "#include \"$file\"\n";
+ }
+ $tmp-&gt;close();
+-$outbuf .= &amp;ProcessFile('include', "'", $tmpfile, 0, 1, %arg);
++&amp;ProcessFile('include', "'", $tmpfile, 0, 1, 0, %arg);
+ unlink($tmpfile);
+ 
+ #
+ #   process real files
+ #
+-foreach $file (@ARGV) {
+-    #   read input file
+-    if ($file eq '-') {
+-        $in = new IO::Handle;
+-        $in-&gt;fdopen(fileno(STDIN), 'r');
+-        local ($/) = undef;
+-        $inbuf = &lt;$in&gt;;
+-        $in-&gt;close;
+-    }
+-    else {
+-        $in = new IO::File;
+-        $in-&gt;open($file);
+-        local ($/) = undef;
+-        $inbuf = &lt;$in&gt;;
+-        $in-&gt;close;
+-    }
+ 
+-    #   create temporary working file
+-    $tmpfile = "/tmp/ipp.$$.tmp";
+-    $tmp = new IO::File;
+-    $tmp-&gt;open("&gt;$tmpfile");
+-    print $tmp $inbuf;
+-    $tmp-&gt;close();
++if ( $#ARGV == -1 &amp;&amp; $#opt_P == -1 )
++{
++	$open_spec = '-';
++}
++elsif ( $#ARGV == 0 &amp;&amp; $#opt_P == -1 )
++{
++	$file_name = $ARGV[0];
++}
++else
++{
++	$open_spec =
++		" cat " .
++		join " ", map { $_ eq '-' ? '-' : ( my $fname, ($fname = $_) =~ s/"/\\"/g, qq["$fname"] )[2] } @ARGV
++		;
+ 
+     #   apply prolog filters
+     foreach $p (@opt_P) {
+-        $rc = system("$p &lt;$tmpfile &gt;$tmpfile.f &amp;&amp; mv $tmpfile.f $tmpfile 2&gt;/dev/null");
+-        &amp;error("Prolog Filter `$p' failed") if ($rc != 0);
++		$open_spec .= "| $p"
+     }
+ 
+-    #   process file via IPP filter
+-    $outbuf .= &amp;ProcessFile('include', "'", $tmpfile, 0, 1, %arg);
+-
+-    #   cleanup
+-    unlink($tmpfile);
++	$open_spec .= "|"
++	
+ }
+ 
+-#
+-#   Comment Support
+-#
+-
+-#   EOL-comments
+-1 while ($outbuf =~ s/^([ \t]*)#[^\n]*\n//s); # special  case: at begin
+-$outbuf =~ s/\n[ \t]*#[^\n]*(?=\n)//sg;       # standard case: in the middle
+-$outbuf =~ s/\n[ \t]*#[^\n]*\n?$/\n/s;        # special  case: at end
+-#   $outbuf =~ s/^([ \t]*)\\(#)/$1$2/mg;      # remove escaping backslash
+-
+-#   Block-comments
+-$outbuf = parseblock($outbuf, 
+-                     sub { return '' }, 0,             # just discard the stuff 
+-                     quotemeta('/*'), quotemeta('*/'), # the delimiters
+-                     0, 1, '"', "\\", '"');            # the escapes, etc.
++if ( $open_spec ne '' )
++{
++	&amp;ProcessFile('include', "'", $open_spec, 0, 1, 1, %arg);
++}
++else
++{
++	&amp;ProcessFile('include', "'", $file_name, 0, 1, 1, %arg);
++}
+ 
+ 
+ #
+-#  create output file
++#  close output file
+ #
+-if ($opt_o eq '-') {
+-    $out = new IO::Handle;
+-    $out-&gt;fdopen(fileno(STDOUT), "w");
+-}
+-else {
+-    $out = new IO::File;
+-    $out-&gt;open("&gt;$opt_o");
+-}
+-print $out $outbuf;
+ $out-&gt;close();
+ 
++#   die gracefully
++exit(0);
++
++##EOF##
++();
++
+ #   die gracefully
+ exit(0);
+ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00211" HREF="msg00211.shtml">RE: Speeding up WML / real-time WML</A></strong>, <em>From:</em> David Harris</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00211.shtml">RE: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00213.shtml">Re: FW: TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00211.shtml">RE: Speeding up WML / real-time WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00209.shtml">TOC tag (table of contents)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00212"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00212"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

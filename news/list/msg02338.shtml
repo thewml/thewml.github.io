@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml 2.0.7: ePerl printf -->
+<!--X-From-R13: Yney&#45;Vrvam [neonvfr <xzneonvfrNdvf&#45;flfgrzunhf.qr> -->
+<!--X-Date: Tue, 31 Jul 2001 08:19:11 +0200 (MET DST) -->
+<!--X-Message-Id: 3B664DA7.FEB0DBE1@qis&#45;systemhaus.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15RP8e&#45;0000KC&#45;00@braindead.automatedproperties.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02338">Date Index</a>][<a href="thrd47.shtml#02338">Thread Index</a>]<br>
+[<A HREF="msg02337.shtml">Date Prev</A>][<A HREF="msg02339.shtml">Date Next</A>][<A HREF="msg02337.shtml">Thread Prev</A>][<A HREF="msg02340.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml 2.0.7: ePerl printf</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Karl-Heinz Marbaise &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 31 Jul 2001 08:18:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi there,
+
+i just have a little problem with WML.
+
+Here little cut out of my code:
+
+  my $output = $weekdays{'de'}{'short'}[$wday] . " " .
+               $month{'de'}{'short'}[$mon] . " " .
+               $mday . " ";
+  $output = $output . sprintf ('%2d', $hour);
+  print $output;
+  printf STDOUT '%02d:%02d:%02d UTC %04d', $hour, $min, $sec, $year;
+
+My questions is now, why does the simple print $output
+work correctley but the printf STDOUT does only produce
+"d:d:d UTC d" in output HTML file?
+Am I not allowed to use printf in ePerl?
+
+Thanks in advance.
+-- 
+Dipl.-Ing. Karl Heinz Marbaise | Phone: +49 (241) 4 13 26 - 48
+QIS Systemhaus GmbH Aachen     | Fax  : +49 (241) 4 13 26 - 40
+Juelicher Strasse 338          | Internet: <A  HREF="http://www.qis-systemhaus.de">http://www.qis-systemhaus.de</A>
+52070 Aachen                   | e-mail  : kmarbaise@qis-systemhaus.de
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02340" HREF="msg02340.shtml">Re: wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02344" HREF="msg02344.shtml">Re: wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Klaus Brand</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02337" HREF="msg02337.shtml">xhtml vs. wml</A></strong>, <em>From:</em> Warren Turkal</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02337.shtml">xhtml vs. wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02339.shtml">Re: xhtml vs. wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02337.shtml">xhtml vs. wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02340.shtml">Re: wml 2.0.7: ePerl printf</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02338"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02338"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

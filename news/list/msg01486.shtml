@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [1.99.4] BUG REPORT: system(3pl) doesn't return exit value -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.eurva.qr> -->
+<!--X-Date: Tue, 28 Mar 2000 19:53:20 +0200 (MET DST) -->
+<!--X-Message-Id: 20000328165454.G2002@spinnaker.rhein.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01486">Date Index</a>][<a href="thrd31.shtml#01486">Thread Index</a>]<br>
+[<A HREF="msg01485.shtml">Date Prev</A>][<A HREF="msg01488.shtml">Date Next</A>][<A HREF="msg01493.shtml">Thread Prev</A>][<A HREF="msg01488.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[1.99.4] BUG REPORT: system(3pl) doesn't return exit value</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Mar 2000 16:54:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+In wml_frontend/wml.src I find the following:
+
+            $rc = system("$e $o");
+            #   Tidy returns 1 on warnings and 2 on errors :(
+            $rc = 0 if ($rc == 1 and $e =~ m|@libdir@/exec/wml_aux_tidy|);
+
+This doesn't work like expected, because the perl system() call
+doesn't return the exit value of the excuted command.  The perl
+documentation (perldoc -f system) says:
+
+ The return value is the exit status of the program as returned by the
+ C&lt;wait()&gt; call.  To get the actual exit value divide by 256.  See
+ also L&lt;/exec&gt;.  This is I&lt;NOT&gt; what you want to use to capture the
+ output from a command, for that you should use merely backticks or
+ C&lt;qx//&gt;, as described in L&lt;perlop/"`STRING`"&gt;.
+
+So you have either to divide $rc by 256 or test $rc == 256 (instead of
+$rc == 1).
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01485.shtml">Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01488.shtml">[1.99.4] BUG REPORT: imgbg inserts linefeeds</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01493.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01488.shtml">[1.99.4] BUG REPORT: imgbg inserts linefeeds</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01486"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01486"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Web page margins -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 13 Jul 2001 00:16:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20010713002427.A19039@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010712215031.A18398@imacs.polytechnique.fr -->
+<!--X-Reference: XFMail.010712165230.jh@inetcom.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02293">Date Index</a>][<a href="thrd46.shtml#02293">Thread Index</a>]<br>
+[<A HREF="msg02292.shtml">Date Prev</A>][<A HREF="msg02294.shtml">Date Next</A>][<A HREF="msg02292.shtml">Thread Prev</A>][<A HREF="msg02295.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Web page margins</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 13 Jul 2001 00:24:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jul 12, 2001 at 04:52:30PM -0400, Jan Holler wrote:
+&gt; 
+&gt; On 12-Jul-01 Denis Barbier wrote:
+&gt; &gt; On Mon, Jul 09, 2001 at 06:03:13PM +0200, Jan Holler wrote:
+&gt; &gt;&gt;       &lt;if &lt;get-var marginwidth&gt; " marginwidth=\"&lt;get-var marginwidth&gt;\" \
+&gt; &gt;&gt;        leftmargin=\"&lt;get-var marginwidth&gt;\"" ""&gt;\
+&gt; 
+&gt; &gt; Okay, this is fine.
+&gt; &gt; But may I suggest we talk again about `runtime' attributes?
+&gt; 
+&gt; &gt;   &lt;page :body:marginwidth="8" :body:marginheight="8"
+&gt; &gt;         :body:leftmargin="8"  :body:topmargin="8"&gt;
+&gt; &gt; 
+&gt; &gt; I would like to hear comments to improve this feature, which adds extra
+&gt; &gt; flexibility by letting user add any attribute in HTML tags.
+&gt; 
+&gt; I think this is a good idea. Makes it most flexible. One
+&gt; still can use variables though?
+&gt; 
+&gt; &lt;page :body:marginwidth="$(MARGINWIDTH)" ... 
+
+Sure, define such a variable in your .wmlrc by instance.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02295" HREF="msg02295.shtml">Re: Web page margins</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02291" HREF="msg02291.shtml">Re: Web page margins</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02292" HREF="msg02292.shtml">Re: Web page margins</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02292.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02294.shtml">ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02292.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02295.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02293"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02293"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

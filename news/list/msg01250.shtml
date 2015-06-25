@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: toc for <h1> only? -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Fri, 31 Dec 1999 07:56:35 +0100 (MET) -->
+<!--X-Message-Id: 386BA8DC.95EF9965@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991230115031.21913A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01250">Date Index</a>][<a href="thrd26.shtml#01250">Thread Index</a>]<br>
+[<A HREF="msg01249.shtml">Date Prev</A>][<A HREF="msg01251.shtml">Date Next</A>][<A HREF="msg01248.shtml">Thread Prev</A>][<A HREF="msg01249.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: toc for &lt;h1&gt; only?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Dec 1999 19:47:56 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+...
+&gt; I will try to improve it in future releases.
+
+Hi Denis,
+
+your suggestion worked right out of the box. Also I learned
+much about some internals of WML.
+
+&gt; I will try to improve it in future releases.
+
+This would be my Wanted Most Label ;-)
+
+I dare to say, that I would like it as configurable as
+the &lt;navbar&gt; feature, for instance the ToC is surrounded
+by &lt;pre&gt; tags, so it's not as easy to trim the style.
+
+But anyway this is up to you and I will find a solution
+by myself for now.
+
+Thank you
+-werner-
+-- 
+Werner Heuser                       | Stop nuclear power now!       /~~
+LiLAC - Linux with Laptop Computers |                              /~~~
+Berlin, Germany                     |                             /~~~~
+T. +49 30 349 53 86             <A  HREF="http://www.snafu.de/~wehe/index_li.html">http://www.snafu.de/~wehe/index_li.html</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01248" HREF="msg01248.shtml">Re: toc for &lt;h1&gt; only?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01249.shtml">WML-Server down?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01251.shtml">Re: WML-Server down?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01248.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01249.shtml">WML-Server down?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01250"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01250"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

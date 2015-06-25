@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml locale problem -->
+<!--X-From-R13: [vpunry Yerff <xerffNuny.fnne.qr> -->
+<!--X-Date: Mon, 17 Jun 2002 20:30:28 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.44.0206172018470.1722&#45;100000@hal.saar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02614">Date Index</a>][<a href="thrd53.shtml#02614">Thread Index</a>]<br>
+[<A HREF="msg02613.shtml">Date Prev</A>][<A HREF="msg02615.shtml">Date Next</A>][<A HREF="msg02613.shtml">Thread Prev</A>][<A HREF="msg02615.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml locale problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Kress &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jun 2002 20:28:43 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+kHello,
+
+I'm trying wml 2.0.8 under perl 5.6.1-34 (RH 7.2 upgraded to 7.3)
+but I'm getting trouble with the compilation of pages in pass 3:
+
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+/usr/bin/wml -n '-o(ALL-LANG_*)+LANG_EN:en.photos_1.shtml' 
+'-o(ALL-LANG_*)+LANG_DE:de.photos_1.shtml' photos_1.wml
+ePerl:Error: Perl parsing error (interpreter rc=22)
+
+---- Contents of STDERR channel: ---------
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+LC_ALL = "0",
+ line 40    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+LC_ALL = "0",
+ line 40    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Can't open perl script "/tmp/wml.32132.tmp1.wml": Invalid argument
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+** WMk:Break: Error in WML (rc=256)
+make: *** [photos_1] Error 1
+
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+
+I read the perllocale man page and there it says to temporarily set LC_ALL 
+to "C", and I tried all of them: "de_DE", "en_US", "en_EN", "C" and 
+nothing worked. I also set the var. LANG to some values but none of these 
+things worked. :-( 
+
+Can you please help me out ?
+
+Maybe my pages are the reason for not working  - they used to work under 
+1.7.0 which was my long time working version but with newer redhat 
+environments it doesn't work anymore. OK, so I decided to upgrade to 2.0.8 
+which doesn't work either (but @ least compiles).
+
+The header of a page looks like this: 
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+#!wml -o(ALL-LANG_*)+LANG_EN:en.photos_1.shtml 
+-o(ALL-LANG_*)+LANG_DE:de.photos_1.shtml
+
+#use wml::mk area=photos page=self IMG=img SNB_RC=photos.wmlsnb
+
+&lt;title&gt;Homepage &lt;de: von&gt;&lt;en: of&gt; Michael Kress - Photos&lt;/title&gt;
+...etc.
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+
+in mk.wml I use:
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+#use wml::std::tags
+#use wml::std::info
+#use wml::std::lang
+#use wml::des::navbar
+#use wml::des::space
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+...etc.
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+
+I can't understand this - or did something change in the way one uses 
+multilanguage features in wml ? Do I come from stone age ? ;-)
+
+Thanks for your help
+
+   Michael
+
+
+
+-- 
+Michael Kress / kress@hal.saar.de / please use pgp (key on hp)
+<A  HREF="http://www.michael-kress.de">http://www.michael-kress.de</A> / <A  HREF="http://kress.net">http://kress.net</A>
+To increase system performance press CTRL+D now.
+P E N G U I N S   A R E   C O O L.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02615" HREF="msg02615.shtml">Re: wml locale problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02613.shtml">Re: [BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02615.shtml">Re: wml locale problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02613.shtml">Re: [BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02615.shtml">Re: wml locale problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02614"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02614"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

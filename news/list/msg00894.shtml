@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: define&#45;container, preserve and &#45;Dvarname -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Sun, 15 Aug 1999 12:57:03 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.9908141506320.3909&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990813002230.303C&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00894">Date Index</a>][<a href="thrd19.shtml#00894">Thread Index</a>]<br>
+[<A HREF="msg00893.shtml">Date Prev</A>][<A HREF="msg00895.shtml">Date Next</A>][<A HREF="msg00893.shtml">Thread Prev</A>][<A HREF="msg00895.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: define-container, preserve and -Dvarname</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 14 Aug 1999 15:17:24 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 13 Aug 1999, Denis Barbier wrote:
+
+&gt;On Wed, 11 Aug 1999, Davor Cengija wrote:
+&gt;
+&gt;&gt; 	I have a &lt;define-container&gt; tag which can have three values for an
+&gt;&gt; 	attribute: first is the default, hardcoded; the second is per-page
+&gt;&gt; 	default, called with -D option in #!wml -Dvarname=value and the third one is the
+&gt;&gt; 	specified value for each call.
+&gt;[snip long description of this problem]
+&gt;
+&gt;Hi Davor,
+&gt;
+&gt;i don't have time to investigate too much your problem, sorry, but i'm
+&gt;sure there is a solution. Did you have a close look at the wml_p1_ipp
+&gt;manpage ?
+
+	Obviously not too good:-) but...
+&gt;
+&gt;Below is an example, i'm sure you can easily adapt it to your own needs:
+&gt;(not tested, may contain bugs)
+&gt;
+&gt;&lt;define-container tbl&gt;
+&gt;&lt;preserve bgcolor&gt;
+&gt;&lt;preserve title&gt;
+&gt;&lt;set-var %attributes&gt;
+&gt;#  this variable will be ``red'' if no -Dbgcolor attribute is set,
+&gt;#  otherwise it takes this value.
+&gt;&lt;ifeq "&lt;get-var bgcolor&gt;" "" &lt;set-var bgcolor="$(bgcolor:-red)"&gt;&gt;
+
+	... that solves the problem, thanks! Reading the wml_p1_ipp
+	manpage I also found that... 
+&gt;#  everything below is unchanged
+&gt;&lt;ifeq "&lt;get-var title&gt;" "" &lt;set-var title="YOU MUST HAVE A TITLE!!"&gt;&gt;
+
+	... here I can state title="$(title:?[You must have a title])"
+
+	&lt;preserve&gt; and &lt;restore&gt; now act as they should.
+
+	Thanks for the help.
+	
+	Davor
+
+-- 
+      v
+Davor Cengija
+davor@linuxfan.com
+===================================
+"Please allow 30 days for delivery"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00893" HREF="msg00893.shtml">Re: define-container, preserve and -Dvarname</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00893.shtml">Re: define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00895.shtml">[BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00893.shtml">Re: define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00895.shtml">[BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00894"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00894"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

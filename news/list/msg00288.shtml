@@ -1,0 +1,169 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [Patch] Borders again with gfont -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 31 Dec 1998 11:36:37 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981231110433.21547A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00288">Date Index</a>][<a href="thrd7.shtml#00288">Thread Index</a>]<br>
+[<A HREF="msg00287.shtml">Date Prev</A>][<A HREF="msg00289.shtml">Date Next</A>][<A HREF="msg00287.shtml">Thread Prev</A>][<A HREF="msg00289.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[Patch] Borders again with gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 31 Dec 1998 11:15:13 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i rewrite my previous patch to work when cropping.
+Greetings and happy new year
+
+   Denis
+
+--- gfont-1.0.2/gfont_main.c	Tue Sep 16 10:09:22 1997
++++ gfont-1.0.2/gfont_main.c	Thu Dec 31 10:53:24 1998
+@@ -216,6 +216,8 @@
+     fprintf(stderr, "Rendering Parameters:\n");
+     fprintf(stderr, "   -b, --background=RRGGBB  set background color (default: `ffffff')\n");
+     fprintf(stderr, "   -f, --foreground=RRGGBB  set foreground color (default: `000000')\n");
++    fprintf(stderr, "   -B, --border=N           set border width (default: `0')\n");
++    fprintf(stderr, "   -C, --bordercolor=RRGGBB set border color (default: `000000')\n");
+     fprintf(stderr, "   -F, --fontname=NAME      set specific font (default `CMBoldface-V')\n");
+     fprintf(stderr, "   -G, --gdf-path=DIR       add DIR to the path where GdF files are searched\n");
+     fprintf(stderr, "\n");
+@@ -244,6 +246,8 @@
+     { "output-file", 1, NULL, 'o' },
+     { "verbose",     0, NULL, 'v' },
+     { "version",     0, NULL, 'V' },
++    { "border",      1, NULL, 'B' },
++    { "bordercolor", 1, NULL, 'C' },
+     { "help",        0, NULL, 'h' }
+ };
+ 
+@@ -268,6 +272,8 @@
+     char *outputfile = "out.gif";
+     int bg_r, bg_g, bg_b;
+     int fg_r, fg_g, fg_b;
++    int bfg, bfg_r, bfg_g, bfg_b;
++    int border = 0;
+     char c;
+     char *string;
+     char *font = "CMBoldface-V";
+@@ -282,10 +288,11 @@
+ 
+     hextriple2gdcolor("ffffff", &amp;bg_r, &amp;bg_g, &amp;bg_b);
+     hextriple2gdcolor("000000", &amp;fg_r, &amp;fg_g, &amp;fg_b);
++    hextriple2gdcolor("000000", &amp;bfg_r, &amp;bfg_g, &amp;bfg_b);
+ 
+     /*  parse the option arguments */
+     opterr = 0;
+-    while ((c = getopt_long(argc, argv, ":b:f:a:F:G:cir:o:vVh", options, NULL)) != -1) {
++    while ((c = getopt_long(argc, argv, ":b:f:B:C:a:F:G:cir:o:vVh", options, NULL)) != -1) {
+         if (optarg == NULL) 
+             optarg = "(null)";
+         switch (c) {
+@@ -296,6 +303,12 @@
+             case 'f':
+                 hextriple2gdcolor(optarg, &amp;fg_r, &amp;fg_g, &amp;fg_b);
+                 break;
++            case 'B':
++                border = atoi(optarg);
++                break;
++            case 'C':
++                hextriple2gdcolor(optarg, &amp;bfg_r, &amp;bfg_g, &amp;bfg_b);
++                break;
+             case 'a':
+                 antialias = atoi(optarg);
+                 break;
+@@ -423,6 +436,9 @@
+                     cont = 0;
+         y = (y &lt; gdImageSY(ip) ? y+1 : y);
+         nH = nH - ((gdImageSY(ip) - 1) - y);
++        /* Add borders */
++        nW += 2*border;
++        nH += 2*border;
+         Verbose("%d x %d, origin: (%d,%d)\n", nW, nH, nX, nY);
+ 
+         Verbose("Allocating new image: ");
+@@ -436,7 +452,7 @@
+         Verbose("Done\n");
+ 
+         Verbose("Copying image: ");
+-        gdImageCopy(ipn, ip, 0, 0, nX, nY, nW, nH);
++        gdImageCopy(ipn, ip, border, border, nX, nY, nW-2*border, nH-2*border);
+         Verbose("Done\n");
+ 
+         Verbose("Freeing old image: ");
+@@ -499,6 +515,13 @@
+         gdImageDestroy(ip);
+         ip = ipn;
+         Verbose("Done\n");
++    }
++    if (border) {
++      Verbose("Border: %d pixels: ",border);
++      bfg = gdImageColorAllocate(ip, bfg_r, bfg_g, bfg_b);         
++        for (x = 0; x &lt; border; x++) 
++           gdImageRectangle(ip, x, x, nW-1-x, nH-1-x, bfg);
++      Verbose("Done\n");
+     }
+ 
+     Verbose("Exporting image to GIF file: ");
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00287.shtml">[Patch wml::des::imgbg] Gradients</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00289.shtml">[patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00287.shtml">[Patch wml::des::imgbg] Gradients</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00289.shtml">[patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00288"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00288"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

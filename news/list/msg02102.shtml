@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Automagical Directory Creation? -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Fri, 5 Jan 2001 09:39:36 +0100 (MET) -->
+<!--X-Message-Id: 20010105093921.A23188@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02102">Date Index</a>][<a href="thrd43.shtml#02102">Thread Index</a>]<br>
+[<A HREF="msg02101.shtml">Date Prev</A>][<A HREF="msg02103.shtml">Date Next</A>][<A HREF="msg02101.shtml">Thread Prev</A>][<A HREF="msg02116.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Automagical Directory Creation?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 Jan 2001 09:39:23 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+One question or feature request:
+
+Is there an easy way to let WML create the directory, in which the
+target HTML file should got to, if that directory doesn't exist? (This
+makes only sense, if you use e.g. &lt;lang:star:slice: /target-path&gt; to
+set the directory where the target file should reside in.) I didn't
+find anything about such a feature in the documentation or faq.
+
+Before we (means my employer) started using WML, we had a self-written
+and not very flexible C++ program to combine templates and content.
+The target directory was given in the header section of the content
+file. If the directory didn't exist, this program created the
+necessary hierachy. Just because all people here are used to have all
+content files in one directory and let them create HTML files in the
+whole web tree, we continued with this policy after we changed to WML.
+
+But with WML I get always error messages like "cannot load
+/home/www/htdocs/About/Addresses/index.de.html for unprotection at
+/usr/local/bin/wml line 720." if some directory does not exist. (In
+that case, /home/www/htdocs/About/ had no subdirectories...)
+
+Were I just blind? If not, I would appreciate, if such a (IMHO very
+useful) feature could be offered in future releases of WML.
+
+Because of this automagical directory creation usually is done
+silently, there should be a switch, which enables or disables this
+feature. And of course, the default should be not to create any
+directories.
+
+(For a long time, we had two directories called organisations and
+ organizations and thought that there were just one. Reason was a typo
+ in one of the content files.)
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02116" HREF="msg02116.shtml">RE: Automagical Directory Creation?</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02101.shtml">Need some Zen to whilst writing MP4H/eperl macros along with  output slices</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02103.shtml">wmk problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02101.shtml">Need some Zen to whilst writing MP4H/eperl macros along with  output slices</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02116.shtml">RE: Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02102"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02102"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

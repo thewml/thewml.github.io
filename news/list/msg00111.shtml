@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.3 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Thu, 5 Mar 1998 13:02:17 +0100 (MET) -->
+<!--X-Message-Id: 199803051202.NAA16193@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00111">Date Index</a>][<a href="thrd3.shtml#00111">Thread Index</a>]<br>
+[<A HREF="msg00110.shtml">Date Prev</A>][<A HREF="msg00112.shtml">Date Next</A>][<A HREF="msg00109.shtml">Thread Prev</A>][<A HREF="msg00112.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Thu, 5 Mar 1998 13:02:15 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now available:
+Website META Language, Version 1.6.3
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+ <A  HREF="ftp://ftp.engelschall.com/sw/wml/">ftp://ftp.engelschall.com/sw/wml/</A>
+
+The entry from the ChangeLog file:
+
+  Changes between 1.6.2 and 1.6.3:
+      980219 - fixed typo in wml::std::lang manpage
+      980222 - made the non-GCC warning just a more harmless
+               attention message in the configure script.
+      980223 - removed config.args entry from config/Makefile
+      980228 - let wml::std::toc create markup code which is more
+               weblint-proof [Thanks to Andy Hawkins
+               &lt;andy@gently.demon.co.uk&gt; for hint]
+      980302 - Upgrade Bit::Vector 5.0b4 to 5.0 final release
+             - Changed temporary filenames in WMb frontend
+               to avoid problems with at least XEMacs 
+               [Thanks to Karl M. Hegbloom
+               &lt;karlheg@bittersweet.inetarena.com&gt; for hint]
+             - Fixed typo in wml_tutorial.pod [Thanks to Stefan
+               `Sec` Zehl &lt;sec@42.org&gt; for hint]
+      980304 - Fixed replacement for nested &lt;center&gt;..&lt;/center&gt;
+               constructs in HTMLfix [Thanks to Stefan `Sec` Zehl
+               &lt;sec@42.org&gt; for hint]
+             - Fixed the system() call for Pass 2: the arguments
+               were not correctly escaped. Thanks to Graham
+               Hughes &lt;thrag@treepeople.dyn.ml.org&gt; and Anthony
+               Fok &lt;foka@debian.org&gt; for hint]
+             - Fixed various typo bugs in a lot of sources
+               [Thanks to Anthony Fok &lt;foka@debian.org&gt; for
+               patch]
+             - Fixed WMu's key handling
+             - now %DIR and %BASE are interpolated on the WML
+               shebang line which is useful for multi-lingual
+               pages [Thanks to Stefan `Sec` Zehl &lt;sec@42.org&gt;
+               for hint]
+             - added a second box variant to &lt;box&gt; from
+               wml::std::box which is a headlined one. The layout
+               idea is stolen from the QMail homepage but now
+               implemented via WML.
+             - now the &lt;lang:area&gt;...&lt;/lang:area&gt; container tag
+               from wml::std::lang supports a special `(/)' tag
+               inside its body to switch back to no special
+               language.  pages [Thanks to Stefan `Sec` Zehl
+               &lt;sec@42.org&gt; for idea]
+      980305 - Solved Bit::Vector license conflict by now
+               obtaining a special license for WML directly from
+               the author of Bit::Vector. This is needed because
+               WML can be used free or charge both in educational
+               _AND_ commercial environments while Bit::Vector is
+               usually not allowed to be used in commercial
+               environments without paying.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00112" HREF="msg00112.shtml">Re: ANNOUNCE: WML 1.6.3</A></strong>, <em>From:</em> David Mentre</li>
+<li><strong><A NAME="00113" HREF="msg00113.shtml">Re: ANNOUNCE: WML 1.6.3</A></strong>, <em>From:</em> Niels Larsen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00110.shtml">Re: invoking wml in current perl interpreter?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00112.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00109.shtml">Webdesign Magnifying Glass</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00112.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00111"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00111"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

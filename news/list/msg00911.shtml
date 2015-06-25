@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question about the images locations ... -->
+<!--X-From-R13: Qnvyynhq @vpbynf <apNfvs.fbyhgvbaf.se> -->
+<!--X-Date: Mon, 30 Aug 1999 15:49:14 +0200 (MET DST) -->
+<!--X-Message-Id: 37CA4CF8.79B7A804@solutions.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990829181101.566A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00911">Date Index</a>][<a href="thrd19.shtml#00911">Thread Index</a>]<br>
+[<A HREF="msg00910.shtml">Date Prev</A>][<A HREF="msg00912.shtml">Date Next</A>][<A HREF="msg00908.shtml">Thread Prev</A>][<A HREF="msg00913.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question about the images locations ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Caillaud Nicolas &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 30 Aug 1999 11:20:56 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+
+&gt;
+&gt; the -o option is used only to redirect output, it is not used by WML to
+&gt; deduce relative links. Writing files in another directory is not a
+&gt; trivial task. Moreover, how will you manage sub-directories ?
+
+&gt; Anyway, here is a solution to your problem : put
+&gt;   {:[[s|( src="?)www/(images)|\1\2|g]]
+&gt; and
+&gt;   :}
+
+&gt;
+&gt; around your text.
+
+ok, it's clear enough ... yhank you
+
+now another question about the filter in navbar
+I've just tried to use it in my navbar
+I've read the ineline doc and the mailling list archive, where there is
+examples
+when I try to put
+&lt;navbar:filter&gt;
+    my ($mcode) = @_;
+    return $mcode;
+&lt;/navbar:filter&gt;
+I get an error :
+ePerl : Error : ....
+undefined subroutine &amp;main:: called at :tmp:wml.xxxx
+any idea ?
+I'm working on a Solaris 2.6 station with wml 1.7.2
+
+thanks
+
+&gt;
+&gt; These commands are documented in wml_p6_asubst(1).
+&gt;
+&gt; --
+&gt; Denis Barbier
+&gt; WML Maintainer
+&gt;
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+
+--
+Caillaud Nicolas          Solutions En Ligne   Tel: +33.1.44.61.81.33
+<A  HREF="mailto:nc@solutions.fr">mailto:nc@solutions.fr</A>    La Grande Arche BC   Fax: +33.1.44.61.81.34
+                           92044 Paris La Defense
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00913" HREF="msg00913.shtml">Re: question about the images locations ...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00908" HREF="msg00908.shtml">Re: question about the images locations ...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00910.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00912.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00908.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00913.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00911"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00911"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

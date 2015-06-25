@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: some typos in help -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Tue, 26 Feb 2002 15:37:00 +0100 (MET) -->
+<!--X-Message-Id: 3C7B9C6D.3060601@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C7A5158.9020902@netngine.hu -->
+<!--X-Reference: 20020225224327.A6033@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02532">Date Index</a>][<a href="thrd51.shtml#02532">Thread Index</a>]<br>
+[<A HREF="msg02531.shtml">Date Prev</A>][<A HREF="msg02533.shtml">Date Next</A>][<A HREF="msg02528.shtml">Thread Prev</A>][<A HREF="msg02526.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: some typos in help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Feb 2002 15:32:13 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi There!
+
+Thanks for the fast reply!
+
+Denis Barbier wrote:
+
+&gt;&gt;s/my ($mycode, /my ($mycode);\nmy (/
+&gt;&gt;
+&gt;
+&gt;Not ok, but there is an error few lines above, it should be:
+&gt;    $markup_code = &amp;{$func}($markup_code, $CFG, $select);
+&gt;
+Yes, then there was a bug even. Anyway, how can I use this feature?
+The example is too simple. What is in $CFG, what is in $select?
+Its ok, that you want users to write documentation, but some author
+must keep this in hands. So now, I am writing it, but you are doing
+the tracking. :
+
+&gt;&gt;Patches are welcome ;)
+&gt;&gt;
+Patching the documentation and sending paragraphs to you? :-) Well,
+probably as learning more I will forget this kind of problems, even if
+I think it could make beginners' life easier.
+
+&gt;
+&gt;No, you may either try wmk or use Makefiles.
+&gt;In any case, did you try wmd?  It helps a lot browsing documentation.
+&gt;
+Ok, I did not know wmk. It will be okay. Thanks. And yes, I know
+wmd, using it frequently.
+
+&gt;&gt;While if it was documented better, it would be
+&gt;&gt;easier for "beginners". Hope you agree.
+&gt;&gt;
+&gt;
+&gt;Sure, Ralf did write very nice documentation, but I must say I did not 
+&gt;try to improve it, because I feel unable to write good documentation.
+&gt;And I believe that documentation is much more useful when it is written
+&gt;by users and not developers (this is true for programs I develop, and is
+&gt;of course wrong with the ones I am using ;o)).
+&gt;
+Hahaha! Well, the documentation is very good, just needs some fixes.
+Ok, I don't know what then. If I run in more typos I will send them.
+Probably more serious questions will come as well.
+
+Best Regards,
+Ferenc
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02524" HREF="msg02524.shtml">some typos in help</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02528" HREF="msg02528.shtml">Re: some typos in help</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02531.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02533.shtml">image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02528.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02526.shtml">user references</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02532"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02532"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

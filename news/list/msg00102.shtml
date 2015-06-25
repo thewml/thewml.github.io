@@ -1,0 +1,205 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested navbars -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 18 Feb 1998 12:19:40 +0100 (MET) -->
+<!--X-Message-Id: 199802181119.MAA12350@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1btw65f5x.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00102">Date Index</a>][<a href="thrd3.shtml#00102">Thread Index</a>]<br>
+[<A HREF="msg00101.shtml">Date Prev</A>][<A HREF="msg00103.shtml">Date Next</A>][<A HREF="msg00099.shtml">Thread Prev</A>][<A HREF="msg00105.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 18 Feb 1998 12:19:37 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; Hmmm, this looks pretty good!
+&gt; 
+&gt; However (as always, there is one more feature missing ...):
+&gt; 
+&gt; If you look at <A  HREF="http://ee-staff.ethz.ch/~zaucker/test/">http://ee-staff.ethz.ch/~zaucker/test/</A> and there select
+&gt; the link "Aktuelles" and below that "Präsident" you will see that you
+&gt; can't jump back to "Aktuelles" (this should be clearer if you look at
+&gt; the pages).
+&gt; 
+&gt; This is because I could not figure out how to make the link active in
+&gt; the main bar.
+&gt; 
+&gt; Note, this must be an option, not hard wired, as there are also pages
+&gt; that don't have a sub navbar and there it obviously makes sense to
+&gt; deactivate the link.
+&gt; 
+&gt; Any solution for that?
+
+Sure, for this case wml::des::navbar provides the `subselected' feature.  I've
+uses it now according to the value the include parameter `subarea'.  If
+subarea is set to "none" this means no subarea is selected and thus leading to
+all subareas surrounded with hyperlinks but the main area rendered without a
+hyperlink (because when no subarea is selected this implies that the main area
+is selected). But when subarea is not "none" then this means a subarea is
+selected and this the subarea is rendered without the hyperlink and the main
+area now gets a hyperlink. Voala!
+
+Here is the updated navbar2.inc file:
+
+==========================
+##
+##  navbar2.inc -- support nested navbar with two levels
+##  Copyright (c) 1998 Ralf S. Engelschall, All Rights Reserved. 
+##
+
+#   we are based on the original navbar tags
+#use wml::des::navbar
+#use wml::des::space
+
+#   the container tag for definition of the
+#   main navbar or a sub navbar
+&lt;define-container nb:define&gt;
+&lt;ifeq "%0" "main" &lt;prog
+    &lt;navbar:define name="main"&gt;
+      &lt;navbar:header&gt;
+        &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+        &lt;&lt;FILLER&gt;&gt;
+      &lt;/navbar:header&gt;
+      &lt;navbar:prolog&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
+      &lt;/navbar:prolog&gt;
+      %body
+      &lt;navbar:epilog type=S&gt;
+        &lt;/b&gt;
+        #   HERE IS THE NESTING!
+        &lt;&lt;SNB&gt;&gt;
+        &lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:epilog type=SS&gt;
+        &lt;/b&gt;
+        #   HERE IS THE NESTING!
+        &lt;&lt;SNB&gt;&gt;
+        &lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:epilog&gt;
+        &lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:footer&gt;
+        &lt;/table&gt;
+      &lt;/navbar:footer&gt;
+    &lt;/navbar:define&gt;
+&gt; &lt;prog
+    &lt;navbar:define name="%1"&gt;
+      &lt;navbar:header&gt;
+        &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+        &lt;tr&gt;
+        &lt;td&gt;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &lt;/td&gt;
+        &lt;td&gt;
+        &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+      &lt;/navbar:header&gt;
+      &lt;navbar:prolog&gt;
+        &lt;tr&gt;&lt;td&gt;
+      &lt;/navbar:prolog&gt;
+      %body
+      &lt;navbar:epilog&gt;
+        &lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:footer&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/navbar:footer&gt;
+    &lt;/navbar:define&gt;
+&gt;&gt;
+&lt;/define-container&gt;
+
+#   the filler has to be coded separately to avoid
+#   pass conflicts (sorry)
+..FILLER&gt;&gt;&lt;space width=200&gt;&lt;&lt;..
+
+#   the tag for defining a particular button
+&lt;define-tag nb:button&gt;
+&lt;navbar:button id="%0" txt="%1" url="%2"&gt;
+&lt;/define-tag&gt;
+
+#   and finally the nested rendering
+&lt;define-tag nb:render&gt;
+&lt;navbar:render name=main select=%0 &lt;ifeq "%1" "none" "" "subselected"&gt;&gt;
+..SNB&gt;&gt;
+&lt;navbar:render name=%0 select=%1 &lt;ifeq "%1" "none" "subselected"&gt;&gt;
+&lt;&lt;..
+&lt;/define-tag&gt;
+==========================
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00105" HREF="msg00105.shtml">WML for dummies (path evaluation order)</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00099" HREF="msg00099.shtml">Re: Nested navbars</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00101.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00103.shtml">ANNOUNCE: WML 1.6.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00099.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00105.shtml">WML for dummies (path evaluation order)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00102"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00102"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: xtable bug -->
+<!--X-From-R13: Ineera Fhexny <jghexnyNpoh.rqh> -->
+<!--X-Date: Thu, 19 Jul 2001 04:43:08 +0200 (MET DST) -->
+<!--X-Message-Id: E15N3lv&#45;0000lb&#45;00@braindead.automatedproperties.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02305">Date Index</a>][<a href="thrd47.shtml#02305">Thread Index</a>]<br>
+[<A HREF="msg02304.shtml">Date Prev</A>][<A HREF="msg02306.shtml">Date Next</A>][<A HREF="msg02304.shtml">Thread Prev</A>][<A HREF="msg02309.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>xtable bug</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Warren Turkal &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 18 Jul 2001 22:42:39 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Code to reproduce error:
+&lt;xtable&gt;
+(1,1)
+  Hello
+(10,1)
+  , World!
+&lt;/xtable&gt;
+
+What it does:
+In table position (1,1), "Hello" is printed, which is correct.  In 
+table position (10,1), "Hello, World!" is generated, which is incorrect.
+
+What it should do:
+It should only generate ", World!" in table position (10,1).
+
+--Warren
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02309" HREF="msg02309.shtml">Re: xtable bug</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02304.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02306.shtml">Grid question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02304.shtml">Re: BUG: &lt;PROTECT&gt; does not accept uppercase PASS parameters:</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02309.shtml">Re: xtable bug</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02305"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02305"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

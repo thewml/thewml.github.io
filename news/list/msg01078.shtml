@@ -1,0 +1,89 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML ?, Linux &#45; Kernel 2.0.36 -->
+<!--X-From-R13: zexbeNssk.qr -->
+<!--X-Date: Wed, 20 Oct 1999 08:23:17 +0200 (MET DST) -->
+<!--X-Message-Id: 199910181923.VAA14436@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01078">Date Index</a>][<a href="thrd22.shtml#01078">Thread Index</a>]<br>
+[<A HREF="msg01077.shtml">Date Prev</A>][<A HREF="msg01079.shtml">Date Next</A>][<A HREF="msg01076.shtml">Thread Prev</A>][<A HREF="msg01079.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML ?, Linux - Kernel 2.0.36</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 18 Oct 1999 21:23:39 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML ?
+Operating System: Linux - Kernel 2.0.36
+
+Problem Description:
+| Hallo Ralf,
+| 1. wenn ich in einer wml-Datei eine Variable, oder sonstigen wml-Befehl in pre-Tags angebe, so wird nicht der Quellcode in die HTML-Datei geschrieben, sondern nur &lt;pre&gt;&lt;/pre&gt;.
+| 2. wenn ich eine box mittels width=100% über den ganzen Bildschirm legen will, so funktioniert dies nicht, da das width-Tag im HTML-Code nur in der 2. Tabelle auftaucht.
+| Ansonsten find' ich WML supergenial.
+| 
+| Danke, Korbinian Pauli
+| 
+| mrkor@ffx.de
+| <A  HREF="http://www.ffx.de/mrkor">http://www.ffx.de/mrkor</A> 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01077.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01079.shtml">Perl-Errors when LANG=de in .bashrc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01076.shtml">[BUG REPORT] WML 1.7.4, Redhat linux 6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01079.shtml">Perl-Errors when LANG=de in .bashrc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01078"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01078"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

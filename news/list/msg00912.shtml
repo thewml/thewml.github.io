@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question about the images locations ... -->
+<!--X-From-R13: @vpbynf Qnvyynhq <apNfvs.fbyhgvbaf.se> -->
+<!--X-Date: Mon, 30 Aug 1999 15:49:14 +0200 (MET DST) -->
+<!--X-Message-Id: 37CA6E74.B5BD1A57@solutions.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990829181101.566A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00912">Date Index</a>][<a href="thrd19.shtml#00912">Thread Index</a>]<br>
+[<A HREF="msg00911.shtml">Date Prev</A>][<A HREF="msg00913.shtml">Date Next</A>][<A HREF="msg00915.shtml">Thread Prev</A>][<A HREF="msg00909.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question about the images locations ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nicolas Caillaud &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 30 Aug 1999 13:43:48 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+
+&gt; On 27 Aug 1999, Caillaud Nicolas wrote:
+&gt;
+&gt; &gt; Hi
+&gt; Anyway, here is a solution to your problem : put
+&gt;   {:[[s|( src="?)www/(images)|\1\2|g]]
+&gt; and
+&gt;   :}
+&gt; around your text.
+&gt; These commands are documented in wml_p6_asubst(1).
+
+thanks ...
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00908" HREF="msg00908.shtml">Re: question about the images locations ...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00911.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00913.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00915.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00909.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00912"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00912"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

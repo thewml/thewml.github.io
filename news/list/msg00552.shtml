@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Daily Snapshot as .tar.gz -->
+<!--X-From-R13: Tybevna Yhruareg <fhgbxNtzk.qr> -->
+<!--X-Date: Thu, 8 Apr 1999 01:17:56 +0200 (MET DST) -->
+<!--X-Message-Id: 19990408011741.A20219@gmx.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00552">Date Index</a>][<a href="thrd13.shtml#00552">Thread Index</a>]<br>
+[<A HREF="msg00551.shtml">Date Prev</A>][<A HREF="msg00553.shtml">Date Next</A>][<A HREF="msg00581.shtml">Thread Prev</A>][<A HREF="msg00554.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Daily Snapshot as .tar.gz</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Kuehnert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Apr 1999 01:17:41 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Salut tout le monde,
+
+I just wanted to download the newest snapshot of wml as a .tar.gz file
+(developing stopped a bit and I wanted to spend some time improving several
+minor things), but it doesn't work:
+
+------
+sutok@pallas(p0) ~&gt; wget <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+--01:15:05--  <A  HREF="http://www.engelschall.com:80/sw/wml/distrib/">http://www.engelschall.com:80/sw/wml/distrib/</A>
+           =&gt; `index.html.1'
+Connecting to localhost:8080... connected!
+HTTP proxy request sent, fetching headers... done.
+Length: 10,539 [text/html]
+
+    0K -&gt; ..........
+
+01:15:07 (285.89 KB/s) - `index.html.1' saved [10539/10539]
+
+The mail in /var/spool/mail/sutok has been read.
+sutok@pallas(p0) ~&gt; grep SNAP index.html.1
+ 1673983 Apr  7 06:01:50 1999 &lt;a
+href="wml-SNAP-199904070600.tar.gz"&gt;wml-SNAP-19
+9904070600.tar.gz&lt;/a&gt;
+sutok@pallas(p0) ~&gt; wget
+<A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP-1999">http://www.engelschall.com/sw/wml/distrib/wml-SNAP-1999</A>
+04070600.tar.gz
+--01:15:40--
+<A  HREF="http://www.engelschall.com:80/sw/wml/distrib/wml-SNAP-199904070600">http://www.engelschall.com:80/sw/wml/distrib/wml-SNAP-199904070600</A>
+.tar.gz
+           =&gt; `wml-SNAP-199904070600.tar.gz.1'
+Connecting to localhost:8080... connected!
+HTTP proxy request sent, fetching headers... done.
+01:15:42 ERROR 404: Not Found.
+-----------                                                     
+
+Hmm... Isn't there another possibility to get to an update? CVS? diffs? FTPed
+daily snapshots as a .tar.gz? Frankly, the web interface to the recent source
+tree doesn't satisfy me too much.
+
+Grosses bises, :-)
+  Florian
+-- 
+"Also diese Folge war nun mal wieder absolut genial (ich weiß, das habt
+ihr schon öfters von mir gehört, aber diesmal stimmts wirklich)"
+  -- Simon Paquet in drsb5
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00554" HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00551.shtml">I like this navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00553.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00581.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00552"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00552"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

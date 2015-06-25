@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: wml&#45;1.7.4 and debian/potato -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Wed, 23 Feb 2000 12:11:05 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0002221623140.7034&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01371">Date Index</a>][<a href="thrd28.shtml#01371">Thread Index</a>]<br>
+[<A HREF="msg01370.shtml">Date Prev</A>][<A HREF="msg01373.shtml">Date Next</A>][<A HREF="msg01382.shtml">Thread Prev</A>][<A HREF="msg01376.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: wml-1.7.4 and debian/potato</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Feb 2000 16:46:25 +0000 (/etc/localtime)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+due to an update of my web server I encounter the following problems
+"make"ing wml.
+
+I don't want to use the deb package because I want to do test several
+changes in the source.
+
+I get the following error messages:
+
+wml-1.7.4/wml_backend/p3_eperl$ make
+cc -rdynamic -L/usr/local/lib -L/usr/lib/perl5/5.005/i386-linux/CORE  -o
+eperl eperl_main.o eperl_perl5.o eperl_parse.o eperl_pp.o eperl_sys.o
+eperl_http.o eperl_getopt.o eperl_debug.o eperl_config.o eperl_version.o
+eperl_readme.o eperl_license.o eperl_logo.o eperl_powered.o
+/usr/lib/perl5/5.005/i386-linux/auto/DynaLoader/DynaLoader.a -lperl -lnsl
+-lndbm -lgdbm -ldbm -ldb -ldl -lm -lc -lposix -lcrypt 
+/usr/bin/ld: cannot find -lgdbm
+collect2: ld returned 1 exit status
+make: *** [eperl] Error 1
+
+but libgdbm exists:
+
+$ ldconfig -v | grep libgdbm
+	libgdbm.so.2 (libc6) =&gt; /usr/lib/libgdbm.so.2
+	libgdbm.so.1 (libc6) =&gt; /usr/lib/libgdbm.so.1
+
+But if you do:
+
+wml-1.7.4$ make
+
+The procedure doesn't stop because of this error, therefore it wasn't easy
+to find it. Furthermore the ""$(MAKE) install prefix=$$root"" in
+wml_test/Makefile fails due the absence of eperl, but it isn't shown as
+failure (the installation process seems correct) - as result you get lots
+of:
+
+wml-1.7.4$ make test
+
+[...] Can't locate File/PathConvert.pm in @INC [...]
+
+because this file (and other wml_common stuff) has never been copied to
+the TEST.root directory.
+
+I am neither root on this machine nor a specialist on debian systems (I
+got wml working on RedHat and older debian systems without such
+problems) - so please help me.
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01376" HREF="msg01376.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></strong>, <em>From:</em> Anthony Fok</li>
+<li><strong><A NAME="01379" HREF="msg01379.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+<li><strong><A NAME="01390" HREF="msg01390.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01370.shtml">Re: Debian gfont 1.0.2 with Umlaute</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01373.shtml">Re: Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01382.shtml">Re: Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01376.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01371"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01371"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,215 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Questions about wml -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 4 Feb 1998 14:53:46 +0100 (MET) -->
+<!--X-Message-Id: 199802041353.OAA27110@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980204121634.51807@fedro -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00076">Date Index</a>][<a href="thrd2.shtml#00076">Thread Index</a>]<br>
+[<A HREF="msg00075.shtml">Date Prev</A>][<A HREF="msg00077.shtml">Date Next</A>][<A HREF="msg00075.shtml">Thread Prev</A>][<A HREF="msg00078.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Questions about wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 4 Feb 1998 14:53:43 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Alvise Belotti, in a previous mail you wrote:
+
+&gt; I'm a absolute beginner with this toolkit and I'm definitively not a
+&gt; programmer at all.;-)
+&gt; But I'm actively learning ;-)
+
+No problem, but perhaps expect some non-trivial problems of understanding when
+you want to use WML in depth later. Because a lot of stuff is of
+programming-type...
+
+&gt; Ok, my questions
+&gt; 1) wml::std:page appear not to include the &lt;!DOCTYPE....&gt; statement;
+&gt; is my impression correct? - If yes, is this a bug or a feature?
+
+Correct. This was intended by me. Why? Hmmm... not easy to explain, but I try
+it: The &lt;!DOCTYPE&gt; is a SGML feature specifing which particular Document Type
+Description (DTD) should be used to parse the document itself. In SGML land
+this is fine, because there the parsers are real SGML parsers which strictly
+parse according to this DTD. So, when you say there that you are using XYZ V2
+then this really means that the document is only accepted by the SGML parser
+when it really conforms to XYZ V2. If not, your document is bad.
+
+Now have a look at HTML land. Ok, while in the meantime HTML has a real
+corresponding SGML DTD, the browsers parser are not strict SGML parsers. They
+are fare away from a strict parser. So, the &lt;!DOCTYPE&gt; is practically useless
+on the web, because
+
+ 1. When your document says its type is XYZ V.N and it is not 100% of this
+    type your document is broken and would the browsers parsers 100% correct
+    they would refuse it to render completely.
+
+ 2. When your document says its type is XYZ V.N and the browser
+    (perhaps Lynx) only understands XYZ V.(N-1) your document
+    theoretically should be refused too. But it isn't because
+    the browsers parsers are not strict SGML parsers. 
+
+So, whenever you are 100% sure your page is compliant to XYZ V.N, ok, then use
+the &lt;!DOCTYPE&gt; tag for fun, even when you know that no browser is interested
+in it. But when you are not 100% sure (which is 99% if the time on the web
+because of proprietary tags, etc.) you should avoid to declare you are XYZ
+V.N, because you aren't.
+
+As a practical implication of this problem I and most other page writers
+decided to completely avoid the &lt;!DOCTYPE&gt; because on the web it is de-facto
+useless.
+
+&gt; 2) I like have the tags all in uppercase (i.e. &lt;FOO&gt;&lt;/FOO&gt;), but  I
+&gt; use elvis (a vi clone) and switching to uppercase is very annoying; is a
+&gt; bad idea to fix it in pass 7 ? (perhaps this is possible yet, but I'
+&gt; don't know how)
+
+See wml::std::case(3). In short: Just add the line
+
+  #use wml::std::case global=upper
+
+to the top of your WML source file and all your tags are automatically
+translated to upper case.
+
+&gt; 3) If I know well, in wml::des::navbar I can use &lt;navbar
+&gt; imgstar=std:sel:ovr ...&gt; then &lt;nb_button img=foo-*.gif...&gt; and
+&gt; the resulting tags are:&lt;nb_button img=foo-std.gif..&gt;, &lt;nb_button
+&gt; img=foo-sel.gif..&gt;, u.s.w., whith the asterisk substituded by the string
+&gt; in imgstar option.
+
+Not exactly. The result is not three &lt;nb_button&gt; tags, the result is one tag
+reading:
+
+   &lt;nb_button img="foo-std.gif:foo-sel.gif:foo-ovr.gif" ...&gt;
+
+The imgstar attribute is a shorthand to avoid those ugly reading img= tags.
+
+&gt;  ok, now i'm building a web site in three languages and I'm using a
+&gt;  lot of statements of wml::std::lang and wml::std::href; I'm writing
+&gt;  something like this:
+&gt; 
+&gt;  &lt;href="\
+&gt;  url="&lt;it: index1.it.html&gt;"\
+&gt;  "&lt;en: index1.en.html&gt;"\
+&gt;  "&lt;es: index1.es.html&gt;
+&gt;  "&gt;
+&gt;  u.s.w.
+
+Are you sure about your syntax? Because the above is incorrect syntax. 
+I thing what you really mean is
+
+   &lt;href url="\
+   &lt;it: index1.it.html&gt;\
+   &lt;en: index1.en.html&gt;\
+   &lt;es: index1.es.html&gt;\
+   "&gt;
+
+&gt;  I'd love a tag like &lt;langstar=it:en:es&gt; and then
+&gt; 
+&gt;  &lt;href="\
+&gt;  url="&lt;it: index1.*.html&gt;"\
+&gt;  "&lt;en: index1.*.html&gt;"\
+&gt;  "&lt;es: index1.*.html&gt;
+&gt;  "&gt;
+&gt; Is this possible yet? Or maybe in the future?
+
+Oh, I see the point. Good idea. But what you really want is this, isn't it?:
+  
+   &lt;href url="&lt;lang:star: index1.*.html&gt;"&gt;
+
+This should be no problem. Here it is:
+
+    &lt;define-tag lang:star:&gt;
+    &lt;set-var __i=0&gt;\
+    &lt;while &lt;get-var __languages[__i]&gt;&gt;\
+    &lt;subst-in-string
+        "[LANG_&lt;upcase &lt;get-var __languages[__i]&gt;&gt;:%attributes:]"
+        "\\*" "&lt;get-var __languages[__i]&gt;"&gt;\
+    &lt;increment __i&gt;\
+    &lt;/while&gt;\
+    &lt;/define-tag&gt;"
+
+Because I find it cool and useful enough, I've added it to wml::std::lang for
+WML 1.6.0 now. Thanks for the idea. I thing at least Fritz Zaucker likes this
+new tag because he uses exactly such a &lt;href ...&gt; on his multi-lingual pages
+;_)
+
+&gt; Last question: I could write to the ML, and read it on the web, but no
+&gt; mail reach my e-mail box;
+&gt; is this the right working mode of the ML?
+
+As I can see in Majordomo's logfile you have send just the inital subscription
+mail, but not replied to Majordomos reply asking you to confirm this
+subscription. Look in your mail receive folder. Majordomo said what
+confirmation you should send back or try again from the beginning.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00078" HREF="msg00078.shtml">Re: Questions about wml</A></strong>, <em>From:</em> David Mentre</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00075" HREF="msg00075.shtml">Questions about wml</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00075.shtml">Questions about wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00077.shtml">I'm trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00075.shtml">Questions about wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00078.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00076"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00076"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: slices inside slices? -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Tue, 4 May 1999 02:54:59 +0200 (MET DST) -->
+<!--X-Message-Id: 19990504025446.A6794@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00598">Date Index</a>][<a href="thrd14.shtml#00598">Thread Index</a>]<br>
+[<A HREF="msg00597.shtml">Date Prev</A>][<A HREF="msg00599.shtml">Date Next</A>][<A HREF="msg00597.shtml">Thread Prev</A>][<A HREF="msg00599.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>slices inside slices?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 4 May 1999 02:54:46 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I played a bit with wml tonight a bit. I want to incrementally convert
+my webpages to multi-language ones.
+
+I wanted to use &lt;lang:star:href&gt; to make the links 'automatically' pick
+up when other pages got translated, too.
+
+But, slices don't work when nested inside themselfes.
+
+| btl:~&gt;echo '
+| #use wml::std::lang
+| &lt;lang:new id=de short&gt;
+| &lt;lang:new id=en short&gt;
+| 
+| Referenziere: &lt;lang:star:href: index.*.html|index.html&gt;
+| 
+| &lt;/lang:area&gt;
+| '|wml -o '(ALL-LANG_*)uLANG_DE:-'    
+
+gives
+
+| Referenziere:index.html
+
+That works fine.
+
+Now, if I want to use this in a ultilanguage -page:
+
+| btl:~&gt;echo '
+| #use wml::std::lang
+| &lt;lang:new id=de short&gt;
+| &lt;lang:new id=en short&gt;
+| &lt;lang:area&gt; 
+| 
+| (de) Referenziere: &lt;lang:star:href: index.*.html|index.html&gt;
+| (en) Referencing : &lt;lang:star:href: index.*.html|index.html&gt;
+| (/)
+| 
+| &lt;/lang:area&gt;
+| '|wml -o '(ALL-LANG_*)uLANG_DE:-'
+
+gives: 
+
+** Slice:Error: Some slices were not closed:
+** WML:Break: Error in Pass 9 (rc=1).
+
+What can I do here ?
+
+CU,
+    Sec
+-- 
+  1. Never challenge a sysadmin to do anything you don't actually want
+  him or her to do.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00597.shtml">gfont in navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00599.shtml">Date ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00597.shtml">gfont in navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00599.shtml">Date ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00598"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00598"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

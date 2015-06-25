@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbar (sources of www.novas.org) -->
+<!--X-From-R13: Eronfgvna.PebfvtN@binf.bet -->
+<!--X-Date: Wed, 13 Mar 2002 19:44:19 +0100 (MET) -->
+<!--X-Message-Id: OFB1371F08.3D23283D&#45;ON80256B7B.004F51EF&#45;80256B7B.0050985F@LocalDomain -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02562">Date Index</a>][<a href="thrd52.shtml#02562">Thread Index</a>]<br>
+[<A HREF="msg02561.shtml">Date Prev</A>][<A HREF="msg02563.shtml">Date Next</A>][<A HREF="msg02561.shtml">Thread Prev</A>][<A HREF="msg02565.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbar (sources of www.novas.org)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Wed, 13 Mar 2002 14:40:18 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+&gt; Seems to be undocumented feature to me: if you call a navbar, with
+&gt; "select=VALUE" where value is an id of a subnavbar, then it can
+&gt; find the necessary subnavbar and render it. Or what?
+
+well, to be precise, select=VALUE where VALUE is the ID of an item in a
+sub-navbar,
+   which is
+    a) mentioned as menu= in the paren navbar
+    b) defined (i.e.#included  in the source of files appearing in that
+submenu)
+
+originally I had all navbars and sub-navbars in one file for the whole
+site, but that takes longer to wmk and also has a global "namespace" for
+item IDs. We have lots of submenus with similar structure and I want to be
+able to use different items in different directories (-&gt; submenus) with
+identical names.
+
+I learned this (after much poking around in the dark) in the second (more
+complicated) example in the wml::des::navbar documentation.
+
+
+
+
+ I don't
+&gt; understand!!! Anyway, the main menu item is not selected in this
+&gt; case! Or if you provide "subselected" then both main menu and active
+submenu will be links.-----------------------------
+Sebastian Brosig
+Data Analyst
+Novas-Ouvertures
+Tel. 0870 901 9716
+Fax 0151 709 5200
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02565" HREF="msg02565.shtml">Re: nested navbar (sources of www.novas.org)</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02561.shtml">Re: sources vor www.novas.org</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02563.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02561.shtml">Re: sources vor www.novas.org</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02565.shtml">Re: nested navbar (sources of www.novas.org)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02562"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02562"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

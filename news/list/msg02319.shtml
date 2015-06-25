@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <navbar> bug? -->
+<!--X-From-R13: Ineera Fhexny <jghexnyNpoh.rqh> -->
+<!--X-Date: Fri, 20 Jul 2001 15:00:27 +0200 (MET DST) -->
+<!--X-Message-Id: E15NZsG&#45;0003w3&#45;00@braindead.automatedproperties.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02319">Date Index</a>][<a href="thrd47.shtml#02319">Thread Index</a>]<br>
+[<A HREF="msg02318.shtml">Date Prev</A>][<A HREF="msg02320.shtml">Date Next</A>][<A HREF="msg02311.shtml">Thread Prev</A>][<A HREF="msg02320.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;navbar&gt; bug?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Warren Turkal &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 20 Jul 2001 08:59:19 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am reading the docs and it says that the imgstar attribute is used to 
+make your buttons change graphics on different events in the order 
+std:selected:hover.  However, when I use it in the following way IE 
+asks me to debug the script in the page and netscape does not run the 
+script in the page.
+
+Ex code:
+#use wml::des::navbar
+ 
+&lt;navbar:define name="leftNavBar"
+  imgstar=std:sel:ovr
+  imgbase=$(ROOT)/pics/nav_buttons&gt;
+  &lt;navbar:header&gt;
+    &lt;p&gt;
+  &lt;/navbar:header&gt;
+  &lt;navbar:button img="nav_button_home-*.png"
+    id="homeButton"
+    alias="leftNavButton"
+    txt="Goto to the home page"
+    url="index.html"/&gt;
+  &lt;navbar:epilog&gt;
+    &lt;br/&gt;
+  &lt;/navbar:epilog&gt;
+  &lt;navbar:footer&gt;
+  &lt;/navbar:footer&gt;
+&lt;/navbar:define&gt;
+
+NOTE: If I take the imgstar out, all is good.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02320" HREF="msg02320.shtml">Re: &lt;navbar&gt; bug?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02318.shtml">Re: xtable bug</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02320.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02311.shtml">Re: [wml] Just some thoughts on WML and type maps / meta files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02320.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02319"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02319"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

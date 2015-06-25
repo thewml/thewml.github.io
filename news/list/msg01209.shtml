@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Minor problems -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 8 Dec 1999 23:04:12 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991208223954.1862A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 864sdudvdd.fsf@peakpeak.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01209">Date Index</a>][<a href="thrd25.shtml#01209">Thread Index</a>]<br>
+[<A HREF="msg01207.shtml">Date Prev</A>][<A HREF="msg01208.shtml">Date Next</A>][<A HREF="msg01198.shtml">Thread Prev</A>][<A HREF="msg01200.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Minor problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 8 Dec 1999 23:03:28 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 7 Dec 1999 socket@peakpeak.com wrote:
+
+[...]
+&gt; The following code is for a very simple text navigation bar that
+&gt; appears on <A  HREF="http://www.peakpeak.com/~socket/">http://www.peakpeak.com/~socket/</A>.
+[...]
+&gt; As you can see from my (admittedly hairy) code, I don't plan on using
+&gt; images or hints in the navigation bar (though I might in the future),
+&gt; and would like some help in finding a way to prevent the unnecessary
+&gt; and broken javascript from being generated.  If there is a better way
+&gt; to generate this sort of navbar, please tell me.
+
+Florian Hars suggested a nohints attribute to &lt;navbar:render&gt;.
+This tag has been implemented in WML 1.7.3. Alternatively you may try
+his modified navbar (should be at <A  HREF="http://www.hars.de/www/navbar-FH.wml">http://www.hars.de/www/navbar-FH.wml</A>).
+
+&gt; I just made an attempt at upgrading wml 1.7.4 and got the following
+&gt; error in the wml_backend/p3_eperl directory:
+&gt; 
+&gt; ld: cannot open -lgdbm: No such file or directory
+&gt; 
+&gt; I use debian, and installed libgdbmg1_1.7.3-25.deb after getting this
+&gt; error (which still occurs even after the install), but isn't the
+&gt; configure script in the base directory supposed to catch this sort of
+&gt; thing?  The debian archive says about gdbm, "This library is no longer
+&gt; supported by the FSF, and hasn't been worked on in several years --
+&gt; for new applications, please consider libdb instead, and also consider
+&gt; migrating old applications..."  Perhaps this should be put on the
+&gt; to-do list for eperl.
+
+No, this is a Perl problem. Run ``perl -V:libs'' and you will see why
+ePerl tries to build against all those libraries.
+
+You have to install libgdbmg1-dev_1.7.3-25.deb
+
+&gt; Are there particular features added in the newer versions I should
+&gt; employ to improve the readability or maintainability of my code?
+
+Don't know. Read the ChangeLog by browsing the latest release.
+
+&gt; There is no need to reply immediately, I'm at the end of a semester
+&gt; and have a lot of more important things to work on than automated
+&gt; javascript issues and fine-tuning my site.
+&gt; 
+&gt; Danke schön!
+
+Bitte sehr.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01198" HREF="msg01198.shtml">Minor problems</A></strong>, <em>From:</em> socket</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01207.shtml">SGML to WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01208.shtml">Re: Using &lt;rollover&gt; etc. from EPerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01198.shtml">Minor problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01200.shtml">OT: WML friendly newsgroup</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01209"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01209"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

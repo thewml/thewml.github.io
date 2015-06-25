@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Thu, 14 Mar 2002 16:27:14 +0100 (MET) -->
+<!--X-Message-Id: 3C90C0E8.1020301@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Reference: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Reference: 3C9090B6.5000507@netngine.hu -->
+<!--X-Reference: 20020314134406.A14457@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02567">Date Index</a>][<a href="thrd52.shtml#02567">Thread Index</a>]<br>
+[<A HREF="msg02566.shtml">Date Prev</A>][<A HREF="msg02568.shtml">Date Next</A>][<A HREF="msg02566.shtml">Thread Prev</A>][<A HREF="msg02568.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Mar 2002 16:25:28 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Interesting, most of the pages I dealt with use coloring to show the active
+item, while none of the sent examples do :)
+
+&gt;
+&gt;A 'selected' button is not active, since it is assumed to be the current
+&gt;page.  The 'subselected' state is only a clickable 'selected' button, it
+&gt;has nothing to do with colors.  To be more precise, layout for
+&gt;
+It has, becase type will be SS, and imgstar third element will be used. 
+To keep
+it simple I refer to this with colors in the future (and past), ok? Like 
+if you had
+imgstar="-gray:-red:-red".
+
+&gt;
+&gt;'subselected' items is by default the same as 'normal' items, because
+&gt;both are active.  In your case, simply redefine 'subselected' layout,
+&gt;e.g. copy all definitions with type=S and replace type=S by type=SS
+&gt;
+Imgstar third element, isn't it? I did never use the S,N,SS things yet, 
+or just
+a very few times. imgstar does all I need actually.
+
+&gt;
+&gt;So, if you do want intermediate buttons to be clickable, no changes are
+&gt;needed.  Otherwise, wml::des::navbar must be patched, but this looks
+&gt;strange to me.
+&gt;
+Yes, this is true. But still one problem exists, which is not that bad: 
+if you have
+all menus in 1 file, all submenu names must be unique.
+
+<A  HREF="http://test.multigraph.com/imedeen/">http://test.multigraph.com/imedeen/</A> shows a page where the left menu is
+generated with <A  HREF="http://test.multigraph.com/imedeen/Menu-left.wmlt">http://test.multigraph.com/imedeen/Menu-left.wmlt</A> running
+<A  HREF="http://test.multigraph.com/imedeen/menugen.sh.txt">http://test.multigraph.com/imedeen/menugen.sh.txt</A> :-)
+
+In this example I can do anything with menu. But... (I don't check it, 
+because I think
+I did, and I already spent a half hour preparing this stuff for this 
+email :). So, if
+you use unchanged wml codes,
+1. you cannot alter state of the main menu items, while now -&gt;
+   - when you are in the first submenu of any mainmenu the main button 
+is unactive
+   - when you are on the second, third, the parent menu becomes active.
+2. the main menu "Az on bore" remains blue, while I can set selected 
+state on any
+   submenu item. I think, originally it would be yellow (shame on me if 
+not :-)
+
+The second part is much important, especially when the menus are not on 
+the same
+place.
+
+The old problem came up again: the rendered javascript breaks my html. 
+You can see
+a bit more place under the selected menu, just becasuse the javascript 
+goes into the
+same TD cell as the image is in.
+&lt;TD&gt;&lt;IMG....&gt;
+&lt;SCRIPT...
+...
+&lt;/TD&gt; &lt;-this is in the subnavbar
+
+So this creates a space under the menu which has open submenu. Can we 
+create any way
+to divert the javascript? Or do you have other ideas? Maybe could we 
+somehow define
+something like &lt;navbar:jsfunc&gt; but for all javascript stuff? Maybe
+&lt;navbar:jsprolog&gt;{#ALLJS#: &lt;/navbar:jsprolog&gt;
+&lt;navbar:jsepilog&gt;:#ALLJS#}&lt;/navbar:jsepilog&gt;  Just an idea. There must 
+be a nicer way.
+
+Ferenc
+ps: there are some lame things in the html, because I use others' html, 
+will fix that.
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02568" HREF="msg02568.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02569" HREF="msg02569.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02564" HREF="msg02564.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02566" HREF="msg02566.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02566.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02568.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02566.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02568.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02567"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02567"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

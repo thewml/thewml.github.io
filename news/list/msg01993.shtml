@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml::std::case (wml 2.0.4) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 27 Sep 2000 22:56:10 +0200 (MET DST) -->
+<!--X-Message-Id: 20000927225809.A27884@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200009271208.VAA26837@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01993">Date Index</a>][<a href="thrd40.shtml#01993">Thread Index</a>]<br>
+[<A HREF="msg01992.shtml">Date Prev</A>][<A HREF="msg01994.shtml">Date Next</A>][<A HREF="msg01991.shtml">Thread Prev</A>][<A HREF="msg01994.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml::std::case (wml 2.0.4)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Sep 2000 22:58:09 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Sep 27, 2000 at 09:08:12PM +0900, Nobuyuki Tsuchimura wrote:
+&gt; Hi,
+&gt; 
+&gt;   This is not a serious problem.
+&gt; "&lt;case:upper&gt;&lt;/PRE&gt;&lt;/case:upper&gt;" isn't upper on wml 2.0.4.
+&gt; wml 2.0.0 is OK.
+
+Good catch, thanks for your report.
+The patch below fixes this buglet.
+
+Index: wml_backend/p8_htmlstrip/htmlstrip.src
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_backend/p8_htmlstrip/htmlstrip.src,v
+retrieving revision 1.8
+diff -u -u -r1.8 htmlstrip.src
+--- wml_backend/p8_htmlstrip/htmlstrip.src	2000/08/01 21:33:18	1.8
++++ wml_backend/p8_htmlstrip/htmlstrip.src	2000/09/27 20:29:54
+@@ -301,20 +301,21 @@
+             $OUTPUT .= $o;
+ 
+             #   if end tag not found, extend string
+-            if ($epilog =~ s|^(.*?)&lt;/$tagname&gt;||is) {
++            if ($epilog =~ s|^(.*?)(&lt;/$tagname&gt;)||is) {
+                 $body   = $1;
++                $endtag = $2;
+             }
+             else {
+                 $INPUT = $curtag . $epilog . $NEXT;
+                 last;
+             }
+ 
+-            $str = sprintf "found &lt;/$tagname&gt; at position %d",
++            $str = sprintf "found $endtag at position %d",
+                 $loc+$pos+length($body);
+             &amp;verbose($str);
+             $OUTPUT .= $curtag if (not $TAGS{$tagname});
+             $OUTPUT .= &amp;StripPreformatted($body);
+-            $OUTPUT .= "&lt;/$tagname&gt;" if (not $TAGS{$tagname});
++            $OUTPUT .= $endtag if (not $TAGS{$tagname});
+             $loc  += $pos + length($body) + length($curtag);
+             $INPUT = $epilog;
+             next;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01991" HREF="msg01991.shtml">wml::std::case (wml 2.0.4)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01992.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01994.shtml">diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01991.shtml">wml::std::case (wml 2.0.4)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01994.shtml">diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01993"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01993"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

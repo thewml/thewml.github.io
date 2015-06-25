@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Sun, 28 May 2000 19:00:21 +0200 (MET DST) -->
+<!--X-Message-Id: 200005281636.SAA29308@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000528131515.A68648@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01643">Date Index</a>][<a href="thrd34.shtml#01643">Thread Index</a>]<br>
+[<A HREF="msg01644.shtml">Date Prev</A>][<A HREF="msg01645.shtml">Date Next</A>][<A HREF="msg01639.shtml">Thread Prev</A>][<A HREF="msg01632.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun 28 May 2000 18:36:10 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Sun, 28 May 2000 13:15:15 +0200, Ralf S. Engelschall wrote:
+
+&gt; On Sat, May 27, 2000, Denis Barbier wrote:
+&gt;&gt; What to do with HTML tags?
+&gt;&gt;    b) `&lt;img' is not defined, but is parsed as a valid tag.
+&gt;&gt;         &lt;ifneq
+&gt;&gt;             0                    1st attribute
+&gt;&gt;             0                    2nd attr.
+&gt;&gt;             &lt;img src="foo.png"&gt;  3th attr.
+&gt;&gt;         &gt;                        end of the `ifneq' tag
+&gt; 
+&gt; I vote for keeping the current variant b), because it is more intuitive
+&gt; for human readers.
+
+Me too. Expand recursively tags inside the &lt;img&gt;-tag if
+necessary: ... &lt;img src="&lt;get-var "foo"&gt;"&gt; ...
+Cheers!
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01639" HREF="msg01639.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01644.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01645.shtml">Re: possible bug in &lt;box&gt; ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01639.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01632.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01643"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01643"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

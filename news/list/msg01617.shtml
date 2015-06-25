@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 26 May 2000 10:20:28 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0005261009030.7374&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200005260755.JAA25504@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01617">Date Index</a>][<a href="thrd33.shtml#01617">Thread Index</a>]<br>
+[<A HREF="msg01616.shtml">Date Prev</A>][<A HREF="msg01618.shtml">Date Next</A>][<A HREF="msg01616.shtml">Thread Prev</A>][<A HREF="msg01618.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 26 May 2000 10:20:21 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding [wml] Re: WML 2.0.1:
+
+*&gt; &gt; So, therefore I've the following suggestion: let's us speak about the
+*&gt; &gt; grammar of mp4h before producing three other versions in sequence with
+*&gt; &gt; changing syntax...
+
+OK folks, the problem here is that we have a multi pass compiler
+where the individual passes do not know about each other ... 
+
+lets have an example .... &lt;BLA&gt;&lt;/BLA&gt; and &lt;BLB&gt;&lt;/BLB&gt; are complex
+tags both defined in mp4h:
+
+
+1) &lt;H1&gt;hello&lt;BLA&gt;hello&lt;/H1&gt;&lt;/BLA&gt;
+
+2) &lt;BLB&gt;hello&lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+
+3) &lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+
+4) &lt;BLA&gt;&lt;perl&gt;print "&lt;BLB&gt;"&lt;/perl&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+
+5) &lt;BLA&gt;&lt;BLA&gt;&lt;perl&gt;print "&lt;/BLA&gt;"&lt;/perl&gt;&lt;/BLA&gt;
+
+6) &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt; or &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+
+7) &lt;BLA &lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt;
+
+what should now happen when each of the lines above gets processed ...
+
+
+*&gt; Has anyone tried to use the old MetaHTML with wml 2.0.x in
+*&gt; case one gets stuck with unsolvable problems with his old 
+*&gt; code?
+
+you don't want MetaHTML ... beleive me ...
+
+cheers
+tobi
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01618" HREF="msg01618.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01620" HREF="msg01620.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01621" HREF="msg01621.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="01624" HREF="msg01624.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01616" HREF="msg01616.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01616.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01618.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01616.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01618.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01617"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01617"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

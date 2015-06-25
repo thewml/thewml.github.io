@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: y2k readiness of wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 20 May 1999 16:15:03 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990520133641.11400A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3743DD93.DDE5F6F4@its.monash.edu.au -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00678">Date Index</a>][<a href="thrd9.shtml#00678">Thread Index</a>]<br>
+[<A HREF="msg00677.shtml">Date Prev</A>][<A HREF="msg00679.shtml">Date Next</A>][<A HREF="msg00676.shtml">Thread Prev</A>][<A HREF="msg00679.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: y2k readiness of wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 May 1999 16:09:02 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 20 May 1999, Oliver Daly wrote:
+
+&gt; Thanks Ralf, that's fine. I understand the situation with Open source products and don't
+&gt; expect a definitive statement,
+&gt; however if people do have any information regarding y2k issues, it is helpful.
+
+Hi Oliver,
+
+As Ralf stated, free softwares come without any warranty, including y2k
+issues. But unlike commercial softwares, we won't ask any charge for
+patches.
+
+About specific WML issues:
+- Yes, pieces of WML do use dates.
+- Yes, WML might still have bugs (John Bazik reported one a couple of
+  weeks ago).
+- I just checked source code and found few places where problems could
+  occur.
+- But don't panic, they affect only
+    * the maintainer
+    * those who use one of these variables on their web pages
+        WML_SRC_CTIME WML_SRC_ISOTIME WML_GEN_CTIME WML_GEN_ISOTIME
+- So i can't imagine how those bugs could break anything.
+  If you don't use these variables to write ``Last modified on ...'',
+  you can sleep on your two ears (French idiom ;-)
+- WML is a collection of perl and C programs. Robustness of WML strongly
+  depends on robustness of your architecture.
+- And again if i am told of a bug, be sure i will try to fix it.
+  For no charge ;-)
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00679" HREF="msg00679.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00676" HREF="msg00676.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> Oliver Daly</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00677.shtml">Bugs report</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00679.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00676.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00679.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00678"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00678"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

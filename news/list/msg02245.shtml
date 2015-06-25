@@ -1,0 +1,81 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.6, Debian GNU/Linux (unstable) -->
+<!--X-From-R13: zunggnNtah.bet -->
+<!--X-Date: Fri, 25 May 2001 21:13:36 +0200 (MET DST) -->
+<!--X-Message-Id: 200105081254.OAA19781@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02245">Date Index</a>][<a href="thrd45.shtml#02245">Thread Index</a>]<br>
+[<A HREF="msg02244.shtml">Date Prev</A>][<A HREF="msg02246.shtml">Date Next</A>][<A HREF="msg02244.shtml">Thread Prev</A>][<A HREF="msg02246.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.6, Debian GNU/Linux (unstable)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 8 May 2001 14:54:35 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.6
+Operating System: Debian GNU/Linux (unstable)
+
+Problem Description:
+| seems &lt;lang:current&gt; is not working.
+| &lt;lang:list&gt; works, though.  Weird...
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02244.shtml">Change in &lt;tli&gt; wml::des::typography</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02246.shtml">[BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02244.shtml">Change in &lt;tli&gt; wml::des::typography</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02246.shtml">[BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02245"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02245"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

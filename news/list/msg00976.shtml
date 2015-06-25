@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: http://www.nokia.com/corporate/wap/future_wap.html -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 19 Sep 1999 00:40:16 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990918235534.2136C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m13dwekf9k.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00976">Date Index</a>][<a href="thrd20.shtml#00976">Thread Index</a>]<br>
+[<A HREF="msg00977.shtml">Date Prev</A>][<A HREF="msg00978.shtml">Date Next</A>][<A HREF="msg00970.shtml">Thread Prev</A>][<A HREF="msg01074.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: http://www.nokia.com/corporate/wap/future_wap.html</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 19 Sep 1999 00:39:32 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 16 Sep 1999, Fritz Zaucker wrote:
+
+&gt; I had pointed this conflict out some days ago already and think it is
+&gt; a potential problem. Of course you can tell your WAP users to name
+&gt; their files something other than .wml and use whatever they (or you)
+&gt; choose in your mime-type file. Not nice, though.
+&gt; 
+&gt; The lesson to learn is: never use three letter appreviations (thanks,
+&gt; MS-DOS ...)
+
+I agree with your last sentence, but i'm not sure there is a real
+problem. Smart browsers should allow the user to customize how
+to render certain mime-types (but i don't know whether they do).
+
+Anyway, i will not change the name of WML modules, not to break
+compatibility. But you can change your template and input file
+suffixes ; if this breaks something, be sure i will fix WML.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01074" HREF="msg01074.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00970" HREF="msg00970.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00977.shtml">Re: [BUG REPORT] WML 1.7.2, RedHat Linux 5.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00978.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00970.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01074.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00976"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00976"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

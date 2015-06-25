@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: a) or b) -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Sat, 27 May 2000 22:41:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20000527224028.B24912@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000527120310.A10271@matrix.42.org -->
+<!--X-Reference: Pine.GSO.4.21.0005271745460.2545&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01636">Date Index</a>][<a href="thrd34.shtml#01636">Thread Index</a>]<br>
+[<A HREF="msg01635.shtml">Date Prev</A>][<A HREF="msg01637.shtml">Date Next</A>][<A HREF="msg01633.shtml">Thread Prev</A>][<A HREF="msg01639.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: a) or b)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 27 May 2000 22:40:29 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, May 27, 2000 at 05:51:22PM +0200, Tobias Oetiker wrote:
+&gt; Sec,
+&gt; 
+&gt; The problem is not &lt;ifeq in particular ... this thing with having
+&gt; &lt;else&gt; is certainly a good idea for this problem, but we have to
+&gt; find a general sollution to the tag nesting problem and the fact
+&gt; that we have a mixed bag of known and unknown tags ... completely
+&gt; aside of the &lt;ifeq problem ...
+
+Okay, I was maybe too specific.
+
+I think a) is better. It's clean, easy to understand and
+straightforward. I don't think &lt;&gt; should 'quote' spaces.
+
+I agree that this is ugly with the current ifeq syntax. So I think it's
+time to change the ifeq syntax :)
+
+&gt; Regarding Denis question, I think solution b) is a good. Especially
+&gt; if you think about the case where you think about first working
+&gt; with normal html tags and then gradually replacing them with WML
+&gt; defined tags. In case a) this would mean to rewrite all the pages
+&gt; where you have been using the non defined tag because its parsing
+&gt; is suddenly changed around ... 
+
+The parsing doesn't "change around" spaces are delimiters, and they
+should be imho :)
+
+CU,
+    Sec
+-- 
+Try without debug options. The debug mode of ircd has not been properly         
+debugged, and it is known to be unstable.                                       
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01630" HREF="msg01630.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="01633" HREF="msg01633.shtml">a) or b)</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01635.shtml">c) or d)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01637.shtml">Re: c) or d)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01633.shtml">a) or b)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01639.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01636"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01636"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

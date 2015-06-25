@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: name of current WML file -->
+<!--X-From-R13: avpxry.qrNtzk.qr -->
+<!--X-Date: Mon, 15 Apr 2002 20:00:16 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0204151950480.1929&#45;100000@doppelkorn -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02590">Date Index</a>][<a href="thrd52.shtml#02590">Thread Index</a>]<br>
+[<A HREF="msg02589.shtml">Date Prev</A>][<A HREF="msg02591.shtml">Date Next</A>][<A HREF="msg02585.shtml">Thread Prev</A>][<A HREF="msg02591.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>name of current WML file</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 15 Apr 2002 19:58:26 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I want to create a multi-language page with a macro for code like this:
+
+&lt;a href="../en/pagename.html"&gt;english version&lt;/a&gt;
+&lt;a href="../de/pagename.html"&gt;english version&lt;/a&gt;
+
+for a source file "pagename.wml". How do a write a macro that returns the name
+of the WML file being processed at the moment? (*not* the include file in
+which the macro is defined, and without directory and extension)
+
+TIA
+Niklas
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02591" HREF="msg02591.shtml">Re: name of current WML file</A></strong>, <em>From:</em> Johannes Franken</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02589.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02591.shtml">Re: name of current WML file</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02585.shtml">&lt;toc_hN&gt;  together with language slices?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02591.shtml">Re: name of current WML file</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02590"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02590"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

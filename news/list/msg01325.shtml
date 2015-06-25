@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New #include tag &#45; changes to <box> -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 2 Feb 2000 22:34:45 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000202211009.1628A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000202112552.25646A&#45;101000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01325">Date Index</a>][<a href="thrd27.shtml#01325">Thread Index</a>]<br>
+[<A HREF="msg01324.shtml">Date Prev</A>][<A HREF="msg01326.shtml">Date Next</A>][<A HREF="msg01323.shtml">Thread Prev</A>][<A HREF="msg01324.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New #include tag - changes to &lt;box&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 2 Feb 2000 21:14:31 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 2 Feb 2000, Franz Knipp wrote:
+
+&gt; Hello,
+&gt; 
+&gt; first I want to introduce a page where you can `wonder' about the
+&gt; extensions to the #include tag ;-) There's more to come, furthermore there
+&gt; will be a few more extensions to this directive. But I'm on the way to
+&gt; produce the "eierlegende Wollmichsau" (I don't know a translation,
+&gt; sorry) which can solve all your problems ;-)))))))
+&gt; 
+&gt; Ok, not really, but you'll see...
+&gt; 
+&gt; ... click to <A  HREF="http://www.knipp.org/wml/">http://www.knipp.org/wml/</A>
+&gt; 
+&gt; Furthermore, I attached a little patch to extend the &lt;box&gt; tag with an
+&gt; align parameter as I used it on this demo page. To me it seems real useful
+&gt; and almost better than nesting the box in another table more. As usual, I
+&gt; documented the new tag in the documentation part ;-)
+
+Hi Franz,
+
+thanks for your patches, including documentation is really nice.
+I am overbooked those days, i'll look into your code this week-end.
+
+PS: I prefer diffs in the unified output format (diff -u).
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01323" HREF="msg01323.shtml">New #include tag - changes to &lt;box&gt;</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01324.shtml">BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01326.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01323.shtml">New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01324.shtml">BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01325"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01325"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

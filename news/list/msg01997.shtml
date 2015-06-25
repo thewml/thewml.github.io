@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: newbie help needed converting 1.7.4 &#45;> 2.0.4 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 28 Sep 2000 15:15:16 +0200 (MET DST) -->
+<!--X-Message-Id: 20000928151716.A31329@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000928084137.A21158@eafarris.al.umces.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01997">Date Index</a>][<a href="thrd40.shtml#01997">Thread Index</a>]<br>
+[<A HREF="msg01996.shtml">Date Prev</A>][<A HREF="msg01998.shtml">Date Next</A>][<A HREF="msg01996.shtml">Thread Prev</A>][<A HREF="msg01998.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 28 Sep 2000 15:17:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Sep 28, 2000 at 08:41:37AM -0400, eric a . Farris wrote:
+
+&gt; I'm fairly new to wml, and a lot of what appears on this list is way
+&gt; beyond me. I'm having what i hope is a simple problem converting our
+&gt; site from WML 1.7.4 (Debian potato) to WML 2.0.4 (Debian woody).
+
+Hi Eric, here is a quick fix, i'll have a closer look later.
+
+&gt; # mytags.wml -- user defined tags for AL website
+&gt; #               ea Farris, Oct 1999
+[...]
+&gt; #use wml::all
+
+Remove the line above...
+
+&gt; &lt;define-tag p whitespace=delete endtag=required&gt;
+&gt; &lt;p*&gt;&lt;font face="Trebuchet MS, Arial, Helvetica, Swiss, sans-serif"&gt;%body&lt;/font&gt;&lt;/p&gt;
+&gt; &lt;/define-tag&gt;
+
+and replace &lt;/p&gt; by &lt;/p*&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01998" HREF="msg01998.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></strong>, <em>From:</em> eric a . Farris</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01996" HREF="msg01996.shtml">newbie help needed converting 1.7.4 -&gt; 2.0.4</A></strong>, <em>From:</em> eric a . Farris</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01996.shtml">newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01998.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01996.shtml">newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01998.shtml">Re: newbie help needed converting 1.7.4 -&gt; 2.0.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01997"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01997"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML under Windows... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 9 Jun 2002 11:20:14 +0200 (MET DST) -->
+<!--X-Message-Id: 20020608204023.GA4108@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 001401c20eb9$5edfa950$4601a8c0@DELL8000 -->
+<!--X-Reference: 001501c20ec2$e1983c50$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02608">Date Index</a>][<a href="thrd53.shtml#02608">Thread Index</a>]<br>
+[<A HREF="msg02607.shtml">Date Prev</A>][<A HREF="msg02609.shtml">Date Next</A>][<A HREF="msg02607.shtml">Thread Prev</A>][<A HREF="msg02609.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 Jun 2002 22:40:23 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Jun 08, 2002 at 06:02:42PM +1000, Darryl Smith wrote:
+&gt; Further to this... I just downloaded CYGWIN (www.CYGWIN.COM) that sort
+&gt; of allows what I want. I am compiling up the WML and I get 
+
+Get what? ;)
+As far as I can tell, WML has never been tested on MS-Windows.  After
+installing Perl and Cygwin, you could try to compile wml_p3_eperl,
+everything else should work without much trouble.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02609" HREF="msg02609.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02606" HREF="msg02606.shtml">WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+<li><strong><A NAME="02607" HREF="msg02607.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02607.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02609.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02607.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02609.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02608"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02608"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

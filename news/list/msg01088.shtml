@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4, Redhat 6.0 -->
+<!--X-From-R13: <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 22 Oct 1999 13:24:29 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991022132302.15373A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199910192104.XAA08410@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01088">Date Index</a>][<a href="thrd22.shtml#01088">Thread Index</a>]<br>
+[<A HREF="msg01087.shtml">Date Prev</A>][<A HREF="msg01089.shtml">Date Next</A>][<A HREF="msg01075.shtml">Thread Prev</A>][<A HREF="msg01076.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4, Redhat 6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 22 Oct 1999 13:31:10 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 19 Oct 1999 hortiz@neurobio.upr.clu.edu wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.4
+&gt; Operating System: Redhat 6.0
+&gt; 
+&gt; Problem Description:
+&gt; | xtables can't nest
+
+Indeed. I'll provide a patch this WE. Meanwhile you can replace inner
+xtable tags by wwwtable, like
+&lt;xtable&gt;
+   &lt;wwwtable&gt;
+   &lt;/wwwtable&gt;
+&lt;/xtable&gt;
+This is a workaround, not a recommandation!
+
+About the caption problem, it is really strange because examples in
+documentation don't work as expected. The patch below fix this.
+
+Thanx for these reports.
+
+
+--- wwwtable.orig   Fri Oct 22 13:20:47 1999
++++ wwwtable        Fri Oct 22 13:21:40 1999
+@@ -311,7 +311,7 @@
+     $initial_text =~ s/^[\n\s]*//;
+     $initial_text =~ s/[\n\s]*$//;
+ 
+-    print "$indent$initial_text" if length("$initial_text");
++    $table .= "$indent$initial_text" if length("$initial_text");
+ 
+     for ($row = 1; $row &lt;= $max_row; $row++){
+ 
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01075" HREF="msg01075.shtml">[BUG REPORT] WML 1.7.4, Redhat 6.0</A></strong>, <em>From:</em> hortiz</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01087.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01089.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01075.shtml">[BUG REPORT] WML 1.7.4, Redhat 6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01076.shtml">[BUG REPORT] WML 1.7.4, Redhat linux 6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01088"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01088"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

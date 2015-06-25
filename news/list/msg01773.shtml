@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] CSS support and XML namespaces -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 30 Jun 2000 11:30:40 +0200 (MET DST) -->
+<!--X-Message-Id: 20000630113218.A2192@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000624000013.B2015@imacs.polytechnique.fr -->
+<!--X-Reference: 20000625013453.G26164@ummagumma -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01773">Date Index</a>][<a href="thrd36.shtml#01773">Thread Index</a>]<br>
+[<A HREF="msg01772.shtml">Date Prev</A>][<A HREF="msg01774.shtml">Date Next</A>][<A HREF="msg01755.shtml">Thread Prev</A>][<A HREF="msg01758.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] CSS support and XML namespaces</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 30 Jun 2000 11:32:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jun 25, 2000 at 01:34:53AM +0000, Tom Gilbert wrote:
+
+&gt; * Denis Barbier (barbier@imacs.polytechnique.fr) wrote:
+&gt; &gt; Second, after reading <A  HREF="http://www.w3.org/TR/REC-xml-names/">http://www.w3.org/TR/REC-xml-names/</A> i still do not
+&gt; &gt; undertand what XML namespaces are for.  Could a XML user explain if this
+&gt; &gt; notion is valuable for us?
+&gt; 
+&gt; <A  HREF="http://www.jclark.com/xml/xmlns.htm">http://www.jclark.com/xml/xmlns.htm</A> is a reasonable reference on this
+&gt; stuff.
+
+Very good reference, thanks.
+
+&gt; Basically, it is simply to prevent collisions when multiple documents
+&gt; are merged. So if an xml document describing suppliers has a &lt;name&gt; tag
+&gt; for each one, it won't clash with the &lt;name&gt; tag from a document
+&gt; describing clients, because one would be &lt;supplier:name&gt; and the other
+&gt; would be &lt;client:name&gt;.
+&gt; 
+&gt; I guess you kinda use the same thing already, I mean what is
+&gt; &lt;perl:print&gt; if it isn't namespace:command?
+&gt; 
+&gt; How useful it would be to you though, I can't really say, it depends
+&gt; where you want to go with it ;-)
+
+I am evaluating what has to be done to prevent name collisions between
+third-party modules (if there are some one day ;-)).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01744" HREF="msg01744.shtml">[wml] CSS support and XML namespaces</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01755" HREF="msg01755.shtml">Re: [wml] CSS support and XML namespaces</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01772.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01774.shtml">http://www.ee.ethz.ch ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01755.shtml">Re: [wml] CSS support and XML namespaces</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01758.shtml">[BUG REPORT] WML 2.0.2, Solaris2.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01773"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01773"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

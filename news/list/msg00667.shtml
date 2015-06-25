@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug report -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 May 1999 21:21:25 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990517182800.8461A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199905171531.RAA05148@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00667">Date Index</a>][<a href="thrd9.shtml#00667">Thread Index</a>]<br>
+[<A HREF="msg00666.shtml">Date Prev</A>][<A HREF="msg00668.shtml">Date Next</A>][<A HREF="msg00665.shtml">Thread Prev</A>][<A HREF="msg00668.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug report</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 May 1999 21:15:12 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 17 May 1999, Fritz Zaucker wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt; wmk produces a 
+&gt; 
+&gt;     -ooutputfile optionI 
+&gt; 
+&gt; for wml. This is not good if -o lines are specified in the .wmlrc
+&gt; file.
+
+You're right. I didn't understand this problem when you reported it few
+weeks ago, it's clear now.
+
+&gt; I tried to add an option to wmk (-N) that would suppress the creation
+&gt; of the -o line for wml. This is a rather trivial patch which I'd
+&gt; happily submit.
+
+Go ahead ;-)
+
+&gt; However, when I tried to put -N into the .wmkrc file (and this is what
+&gt; would be needed in conjunction with the -o lines in .wmlrc) I noticed,
+&gt; that .wmkrc is only read if wmk process a directory and not when it
+&gt; processes a single file.
+&gt;
+&gt; Looks to me as if the code for reading .wmkrc is at the wrong place
+&gt; (inside sub determine_files).
+
+I agree, why are the .wmkrc files read in this routine?
+
+&gt; Cheers,
+&gt; Fritz
+&gt; 
+&gt; P.S.: Or would the fix to my problem be that wml ignores command line
+&gt;       option -o if it finds one in .wmlrc? That would work for my
+&gt;       particular situation, but might be confusing in general.
+
+No, command-line options _must_ override those in .wmlrc.
+
+In the next release, output files might even be computed on-the-fly
+before pass 9, so i think one should inform wml (or wmk).
+Don't know how. Your `-N' flag is a good idea. Or we could use a special
+shebang line, e.g #!wml --auto-outputfiles
+Another idea is to replace call to `wml -o outputfile' by
+    wml inputfile &gt;tmpfile
+    if size(tmpfile)&gt;0 then mv tmpfile outputfile
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00668" HREF="msg00668.shtml">Re: Bug report</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="00669" HREF="msg00669.shtml">Re: Bug report</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00665" HREF="msg00665.shtml">No Subject</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00666.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00668.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00665.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00668.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00667"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00667"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

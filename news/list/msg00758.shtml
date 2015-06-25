@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 8 Jun 1999 22:08:34 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990608214816.16086A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990608183541.A567@ganymede -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00758">Date Index</a>][<a href="thrd16.shtml#00758">Thread Index</a>]<br>
+[<A HREF="msg00757.shtml">Date Prev</A>][<A HREF="msg00759.shtml">Date Next</A>][<A HREF="msg00755.shtml">Thread Prev</A>][<A HREF="msg00921.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 8 Jun 1999 22:07:20 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 8 Jun 1999, Alexander Graefe wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; wmk doesn't check dependency information. If I #include a template file,
+&gt; run wmk, change the template file and re-run wmk, all files are skipped
+&gt; instead of being processed.
+
+I can't believe that :(
+The patch below fixes this bug.
+
+Let's talk about dependancy. If you type ``wml -MMD'' the dependancies
+are put into the file ``${WML_SRC_BASENAME}.d''
+Now a Makefile may include all these .d files. But these files must be
+rebuild too, so i wonder whether it's safe to have this line
+  foo.html foo.d: foo.wml twmplate1.tml template2.tmpl
+into foo.d
+
+Any idea?
+
+Thanks for the report, Alexander
+
+Denis
+
+--- wml_frontend/wmk.src	1999/06/08 00:14:28	1.11
++++ wml_frontend/wmk.src	1999/06/08 19:40:10
+@@ -576,7 +576,7 @@
+ 
+     $skipable = 1;
+     @IS = stat($file);
+-    open(DEP, "$wml_ipp $file |");
++    open(DEP, "$wml_ipp -odummy $file |");
+     @deps = &lt;DEP&gt;;
+     close(DEP);
+     $dep = join(' ',@deps);
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00755" HREF="msg00755.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Alexander Graefe</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00757.shtml">Re: Is there a better way to do this?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00759.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00755.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00921.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00758"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00758"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

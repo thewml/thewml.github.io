@@ -1,0 +1,89 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Compiling WML 2.0.6 on IRIX 6.5.x -->
+<!--X-From-R13: Dboreg Behf <Dboreg.BehfNshj.rqh.cy> -->
+<!--X-Date: Sun, 31 Dec 2000 22:04:22 +0100 (MET) -->
+<!--X-Message-Id: Pine.SGI.3.96.1001229135735.428968A&#45;100000@soliton -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02099">Date Index</a>][<a href="thrd42.shtml#02099">Thread Index</a>]<br>
+[<A HREF="msg02098.shtml">Date Prev</A>][<A HREF="msg02100.shtml">Date Next</A>][<A HREF="msg02097.shtml">Thread Prev</A>][<A HREF="msg02100.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Compiling WML 2.0.6 on IRIX 6.5.x</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Robert Prus &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 29 Dec 2000 14:04:17 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am trying to compile WML 2.0.6 on IRIX 6.5 with GCC 2.95.2 and perl
+5.7.0/5.6.0.
+
+After compilation, when I make tests (make test) allmost all tests fail.
+
+Where is a problem?
+
+Compilation with native C/C++ compilers and native perl (5.004_04) fails too.
+
+Robert Prus
+
+robert@fuw.edu.pl
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02100" HREF="msg02100.shtml">Re: Compiling WML 2.0.6 on IRIX 6.5.x</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02098.shtml">Best practices for creating multi-lingual documents</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02100.shtml">Re: Compiling WML 2.0.6 on IRIX 6.5.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02097.shtml">[BUG REPORT] WML 2.0.6, Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02100.shtml">Re: Compiling WML 2.0.6 on IRIX 6.5.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02099"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02099"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

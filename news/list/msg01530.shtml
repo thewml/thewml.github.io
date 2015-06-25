@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WMK dependencies -->
+<!--X-From-R13: [ngguvnf Preauneqg <zngguoNthkuntra.arg> -->
+<!--X-Date: Tue, 18 Apr 2000 22:05:32 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.10004182141320.322&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000409233856.9105A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01530">Date Index</a>][<a href="thrd23.shtml#01530">Thread Index</a>]<br>
+[<A HREF="msg01529.shtml">Date Prev</A>][<A HREF="msg01531.shtml">Date Next</A>][<A HREF="msg01521.shtml">Thread Prev</A>][<A HREF="msg01531.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WMK dependencies</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Matthias Bernhardt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Apr 2000 21:53:14 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 9 Apr 2000, Denis Barbier wrote:
+
+DB&gt; [...]
+DB&gt; &gt; wmk should not skip .wml-files using #influde=file if file has changed.
+DB&gt; [...]
+DB&gt; 
+DB&gt; IIRC wmk skip system files but not user files, e.g.
+DB&gt; #include &lt;foo/bar.wml&gt;
+DB&gt;    is skipped but not
+DB&gt; #include "foo/bar.wml"
+DB&gt; 
+DB&gt; The reason is that system files are presumably immutable (and it saves
+DB&gt; time).
+
+For my own part I prefer Makefiles anyway. But I'm currently
+missing a feature that allows to extract dependencies in a
+fashion like makedepend does. Makedepend itself is confused by
+the notation of the wml::std::xxx files and the #use statement,
+apart from that it is incapable of extracting the include
+directories out of the .wmlrc files.
+
+Since WMK already does all this interpretation, would it make
+sense to include a switch that lets wmk output the dependencies
+found rather than actually remaking the file?
+Would it make sense then to add parameters that allow to choose
+whether or not to care for "system files", as well in depend
+mode as in normal operation?
+Would it otherwise make sense to write an auxiliary program,
+called e.g. "wmakedepend" with the full functionality of
+makedepend combined with the understanding of wml?
+
+regards, Matthias
+
+
+----------------------------------------------------------------
+<A  HREF="http://www.guxhagen.net/matthb/">http://www.guxhagen.net/matthb/</A>       <A  HREF="mailto:matthb@guxhagen.net">mailto:matthb@guxhagen.net</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01531" HREF="msg01531.shtml">Re: WMK dependencies</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01533" HREF="msg01533.shtml">Re: WMK dependencies</A></strong>, <em>From:</em> Michael Attili</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01521" HREF="msg01521.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01529.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01531.shtml">Re: WMK dependencies</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01521.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01531.shtml">Re: WMK dependencies</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01530"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01530"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

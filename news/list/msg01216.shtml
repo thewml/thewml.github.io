@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: slices: <img> and <set&#45;var> problem (again) -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Sun, 12 Dec 1999 16:30:05 +0100 (MET) -->
+<!--X-Message-Id: 199912121524.QAA32368@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01216">Date Index</a>][<a href="thrd25.shtml#01216">Thread Index</a>]<br>
+[<A HREF="msg01215.shtml">Date Prev</A>][<A HREF="msg01217.shtml">Date Next</A>][<A HREF="msg01231.shtml">Thread Prev</A>][<A HREF="msg01219.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Dec 1999 16:24:09 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hi
+until now i run into two major "flaws" with slices
+and those two are bothering me (and sooner or later you if
+you want to create multilingual sites). the problem is,
+that slicing must(!) be done after all other passes,
+because the file "splits up" in several files.
+i know a (very unelegant) way to work around the 
+&lt;set-var&gt;-problem. but it leads to very redundant code in 
+the templates and much more variable-settings in my 
+include-files. 
+the &lt;img&gt;-problem ist relatively easy to solve: just run
+htmlfix manually over the outputs after wml is done.
+
+the example, let's say we have:
+
+#!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html \
+    -o (ALL-LANG_*)uLANG_FR:%BASE_f.html
+
+#use wml::std::lang
+&lt;lang:new id=de short&gt;
+&lt;lang:new id=fr short&gt;
+
+&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+# first problem:
+&lt;set-var foo = &lt;de: yes&gt;&lt;fr: no&gt;&gt;
+&lt;if &lt;match &lt;get-var foo&gt; "no"&gt;
+"french is set to no"
+"german is set to yes"
+&gt;
+# second problem:
+&lt;img src="$(ROOTIMG)/t_akt&lt;de: &gt;&lt;fr: _f&gt;_lo.gif"&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+the text is always: "french is set to no"
+and the &lt;img&gt; is missing height and width.
+
+after pass 6 part of the code is:
+&lt;img src="images[LANG_DE::][LANG_FR:_f:].gif"&gt;
+no chance for htmlfix to get to its data.
+
+i think we should really think about that, since the sites
+get more and more graphically designed and having at least
+an english version next to your main language gets more and
+more common too.
+
+comments please.
+
+cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01219" HREF="msg01219.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01215.shtml">use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01217.shtml">Re: Yet another slice with no navigation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01231.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01219.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01216"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01216"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

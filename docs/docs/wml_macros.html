@@ -1,0 +1,954 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Tutorial</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:37"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Tutorial</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Macros - Writing powerful WML macros</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#introduction">INTRODUCTION</a></li>
+	<ul>
+		<li><a href="#definitions">Definitions</a></li>
+		<li><a href="#first_contact">First contact</a></li>
+		<li><a href="#about_simple_tags">About Simple Tags</a></li>
+	</ul>
+	<li><a href="#defining_new_tags">DEFINING NEW TAGS</a></li>
+	<ul>
+		<li><a href="#special_text">Special Text</a></li>
+	</ul>
+	<li><a href="#whitespaces">WHITESPACES</a></li>
+	<li><a href="#macros_with_attributes">MACROS WITH ATTRIBUTES</a></li>
+	<li><a href="#quoting_and_grouping">QUOTING AND GROUPING</a></li>
+	<li><a href="#expansion">EXPANSION</a></li>
+	<li><a href="#mixing_mp4h_and_eperl">MIXING MP4H AND EPERL</a></li>
+	<ul>
+		<li><a href="#nested_eperl_macros_do_not_work">Nested ePerl macros do not work</a></li>
+		<li><a href="#first_try_to_solve_this_problem">First try to solve this problem</a></li>
+		<li><a href="#macros_defined_by_the_wml__std__tags_module">Macros defined by the wml::std::tags module</a></li>
+		<li><a href="#how_to_use_these_macros">How to use these macros</a></li>
+		<li><a href="#examples">Examples</a></li>
+	</ul>
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>WML Macros - Writing powerful WML macros</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This tutorial is a guide for writing macros in WML. It should help
+beginners to write their first templates, but also give useful hints to
+write tricky macros. To take best benefit of this document, it is
+highly recommended to read documentation of individual passes first.</p>
+<p>Following examples are compiled with</p>
+<pre>
+  wml -q -p123 test.wml</pre>
+<p>Most of them could be passed through <em>wml_p2_mp4h</em> only, but the line
+below is more generic.</p>
+<p>
+</p>
+<hr />
+<h1><a name="introduction">INTRODUCTION</a></h1>
+<p>
+</p>
+<h2><a name="definitions">Definitions</a></h2>
+<p>These definitions are those used in this document, they may differ from
+those of the W3C because i do not want to enter into deep details.</p>
+<ul>
+<li>
+<p>A <em>tag</em> is a portion of text enclosed between bracket angles, like</p>
+<pre>
+     &lt;a&gt;
+     &lt;/table&gt;
+     &lt;!-- hey this is a comment --&gt;
+     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</pre>
+</li>
+<li>
+<p>A <em>start</em> tag is a tag which begins an <em>element</em> (see below). It
+consists of a left angle bracket, followed by the element name, optional
+<em>attributes</em> (see below), and a right angle bracket. All these are
+start tags:</p>
+<pre>
+     &lt;a href=&quot;#name&quot;&gt;
+     &lt;td&gt;
+     &lt;meta name=&quot;generator&quot; content=&quot;vi&quot;&gt;</pre>
+</li>
+<li>
+<p>An <em>end</em> tag is a tag which ends an <em>element</em> (see below). It
+consists of a left angle bracket, a slash, the element name, and a
+right angle bracket, like in</p>
+<pre>
+     &lt;/table&gt;
+     &lt;/a&gt;</pre>
+<p>This tag cannot contain attributes.</p>
+</li>
+<li>
+<p>An <em>element</em> is an elementary unit of the document. It mainly consists
+of pair of start and end tags, like in</p>
+<pre>
+     &lt;a href=&quot;#name&quot;&gt;Click here&lt;/a&gt;</pre>
+</li>
+<li>
+<p>The <em>body</em> of an element is the portion of text contained between the
+start and the end tags. In the example above, there is one element,
+which name is <code>a</code>, and its body is ``<code>Click here</code>''.</p>
+</li>
+<li>
+<p><em>Attributes</em> are parameters to make elements more flexible.
+They must be put in the start tag. An element may have any number of
+attributes, which are separated by one or more spaces, tabulations or
+newlines. Each element may define which attributes are mandatory and
+which are optional.</p>
+<pre>
+     &lt;img src=&quot;logo.png&quot; alt=&quot;Logo&quot;
+          title=&quot;Our nice and beautiful logo&quot;&gt;</pre>
+<p>The <code>img</code> element has 3 attributes</p>
+</li>
+<li>
+<p>A <em>simple tag</em> is an element without end tag.</p>
+</li>
+<li>
+<p>A <em>complex tag</em> is an element with start and end tags.</p>
+</li>
+</ul>
+<p>
+</p>
+<h2><a name="first_contact">First contact</a></h2>
+<p>Basically all macro definitions are performed with the
+<code>&lt;define-tag&gt;</code>. Here is a trivial example:</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo&gt;
+  2| bar
+  3| &lt;/define-tag&gt;
+  4| &lt;FOO&gt;</pre>
+<p>Output:</p>
+<pre>
+  1|
+  2|
+  3| bar
+  4|</pre>
+<p>Whereas trivial this example shows some interesting points:</p>
+<ul>
+<li>
+<p>Newlines are preserved, there is the same number of lines on input and
+output, but we will discuss about whitespaces in detail below.</p>
+</li>
+<li>
+<p>Tag names are case insensitive.</p>
+</li>
+</ul>
+<p>
+</p>
+<h2><a name="about_simple_tags">About Simple Tags</a></h2>
+<p>In HTML simple tags are an element without end tag, e.g.</p>
+<pre>
+    &lt;br&gt;</pre>
+<p>But XML specifies that simple tags must be written with one of these 2
+forms:</p>
+<pre>
+    &lt;br&gt;&lt;/br&gt;
+    &lt;br/&gt;</pre>
+<p>i.e. either as a complex tag, without body, or by adding a trailing
+slash to the start tag. The first one will not work with WML, and also
+may confuse HTML browsers, and so should be avoided. You have to choose
+to write this trailing slash or not, WML works with both forms.</p>
+<p>In this document, i will now always write simple tags with this trailing
+slash, to conform to the new XHTML standard. This is my preferred
+writing of input text, but one may still continue without this trailing
+slash. You decide to which syntax you want to conform to.</p>
+<p>On the other hand, HTML browsers may be confused by
+XHTML syntax, so output text does not contain this trailing slash.
+This seems contradictory, but with this approach our input files are
+ready to be processed by future XML tools, and we only have to run WML
+with adequate flags to produce XHTML compliant pages.</p>
+<p>
+</p>
+<hr />
+<h1><a name="defining_new_tags">DEFINING NEW TAGS</a></h1>
+<p>Each time a known element is found in input text, it is removed and its
+replacement text is put here. After that, this replacement text is
+scanned in case it contains other macros.</p>
+<p>All user macros are defined with the <code>define-tag</code> element. Its first
+attribute is the macro name which is defined, and its body function is
+the replacement text which is inserted in lieu of this macro.</p>
+<p>Let us begin with a simple example:</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag homepage&gt;<a href="http://www.engelschall.com/sw/wml/&lt;/define-tag&gt">http://www.engelschall.com/sw/wml/&lt;/define-tag&gt</a>;
+  2| &lt;homepage/&gt;</pre>
+<p>Output:</p>
+<pre>
+  1|
+  2| <a href="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</a></pre>
+<p>Defining a complex tag is no more difficult, just add an
+<code>endtag=required</code> attribute.</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo endtag=required&gt;bar&lt;/define-tag&gt;
+  2| &lt;foo&gt;baz&lt;/foo&gt;
+ 
+Output:</pre>
+<pre>
+  1|
+  2| bar</pre>
+<p>
+</p>
+<h2><a name="special_text">Special Text</a></h2>
+<p>Some strings have a special meaning when found in replacement text, to
+allow full customization of macros:</p>
+<dl>
+<dt><strong><a name="item__0">%0 %1 ...</a></strong>
+<dd>
+<p>Attributes: <a href="#item__0"><code>%0</code></a> is the first attribute, <code>%1</code> the second, and so on.</p>
+</dd>
+</li>
+<dt><strong><a name="item__name">%name</a></strong>
+<dd>
+<p>Macro name</p>
+</dd>
+</li>
+<dt><strong><a name="item__attributes">%attributes</a></strong>
+<dd>
+<p>Space-separated list of all attributes</p>
+</dd>
+</li>
+<dt><strong><a name="item__body">%body</a></strong>
+<dd>
+<p>Macro body (for complex tags only)</p>
+</dd>
+</li>
+<dt><strong><a name="item___">%#</a></strong>
+<dd>
+<p>Number of arguments</p>
+</dd>
+</li>
+<dt><strong><a name="item___">%%</a></strong>
+<dd>
+<p>A percent sign</p>
+</dd>
+</li>
+</dl>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo endtag=required&gt;
+  2| Macro name:          %name
+  3| Number of arguments: %#
+  4| First argument:      %0
+  5| Second argument:     %1
+  6| All arguments:       %attributes
+  7| Body macro:          %body
+  8| &lt;/define-tag&gt;
+  9| &lt;foo Here are attributes&gt;
+ 10| And the body
+ 11| goes here.
+ 12| &lt;/foo&gt;</pre>
+<p>Output:</p>
+<pre>
+  1|
+  2|
+  3| Macro name:          foo
+  4| Number of arguments: 3
+  5| First argument:      Here
+  6| Second argument:     are
+  7| All arguments:       Here are attributes
+  8| Body macro:
+  9| And the body
+ 10| goes here.
+ 11|
+ 12|</pre>
+<p>These special strings may also be altered by modifiers, which are a set
+of letters (one or more) put after the percent sign. These modifiers,
+and their actions, are:</p>
+<dl>
+<dt><strong><a name="item_u">U (Unexpanded)</a></strong>
+<dd>
+<p>Text is replaced, but not expanded (see section about expansion for
+details).</p>
+</dd>
+</li>
+<dt><strong><a name="item_a">A (Array)</a></strong>
+<dd>
+<p>Lists are separated by newlines instead of spaces. This modifier makes
+sense with <a href="#item__attributes"><code>%attributes</code></a> only.</p>
+</dd>
+<dd>
+<p>Input:</p>
+</dd>
+<dd>
+<pre>
+  1| &lt;define-tag foo endtag=required&gt;
+  2| First argument:      %A0
+  3| All arguments:       %Aattributes
+  4| Body macro:          %Abody
+  5| &lt;/define-tag&gt;
+  6| &lt;foo Here are attributes&gt;
+  7| And the body
+  8| goes here.
+  9| &lt;/foo&gt;</pre>
+</dd>
+<dd>
+<p>Output:</p>
+</dd>
+<dd>
+<pre>
+  1|
+  2|
+  3| First argument:      Here
+  4| All arguments:       Here
+  5| are
+  6| attributes
+  7| Body macro:
+  8| And the body
+  9| goes here.
+ 10|
+ 11|</pre>
+</dd>
+</li>
+</dl>
+<p>Note that these sequences are replaced when macro is read, after what
+replacement text is scanned again. This is very important, because you
+should never write constructs like</p>
+<pre>
+   &lt;if &lt;get-var foo /&gt; %body /&gt;</pre>
+<p>Indded, <a href="#item__body"><code>%body</code></a> is replaced <em>before</em> <code>&lt;if&gt;</code> element is
+scanned, which may cause unpredictable results. A better solution is</p>
+<pre>
+   &lt;if &lt;get-var foo /&gt; &quot;%body&quot; /&gt;</pre>
+<p>but it will cause trouble when <a href="#item__body"><code>%body</code></a> contains double quotes. For
+this reason, you should never use <code>&lt;if&gt;</code> (and derivatives)
+tests when one of its arguments is a special sequence. Use instead</p>
+<pre>
+   &lt;when &lt;get-var foo /&gt;&gt;
+   %body
+   &lt;/when&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="whitespaces">WHITESPACES</a></h1>
+<p>Previous examples show that expansion prints lots of unused newlines.
+There are some techniques to remove them. The first one is with pass 1,
+by putting a backslash at end of line, which will discard this end of
+line.</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo&gt;\
+  2| bar\
+  3| &lt;/define-tag&gt;\
+  4| &lt;FOO/&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| bar</pre>
+<p>Another solution is to specify <code>whitespace=delete</code> when defining
+macros, e.g.</p>
+<pre>
+  1| &lt;define-tag foo whitespace=delete&gt;
+  2| bar
+  3| &lt;/define-tag&gt;
+  4| &lt;FOO/&gt;</pre>
+<p>Output:</p>
+<pre>
+  1|
+  1| bar</pre>
+<p>The first line is caused by newline after <code>&lt;/define-tag&gt;</code> which
+is not discarded.</p>
+<p>When this attribute is used, all trailing and leading whitespaces are removed,
+and also newlines outside of angle brackets.</p>
+<p>
+</p>
+<hr />
+<h1><a name="macros_with_attributes">MACROS WITH ATTRIBUTES</a></h1>
+<p>One nice feature of WML is its ability to deal with arbitrary attributes.
+There are many ways to define macros accepting attributes, we will
+discuss here the one used in all WML modules, and is so the standard
+way.</p>
+<p>Attributes are stored in variables, because HTML syntax <code>attribute=value</code>
+is very closed to assignment to variables. In order to keep variables
+local, a mechanism of push/pop is used. Here is an example</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag href whitespace=delete&gt;
+  2| &lt;preserve url /&gt;
+  3| &lt;preserve name /&gt;
+  4| &lt;set-var %attributes /&gt;
+  5| &lt;if &lt;get-var name /&gt; &quot;&quot;
+  6|   &lt;set-var name=&quot;&lt;tt&gt;&lt;get-var url /&gt;&lt;/tt&gt;&quot; /&gt; /&gt;
+  7| &lt;a href=&quot;&lt;get-var url /&gt;&quot;&gt;&lt;get-var name /&gt;&lt;/a&gt;
+  8| &lt;restore name /&gt;
+  9| &lt;restore url /&gt;
+ 10| &lt;/define-tag&gt;
+ 11| &lt;href url=&quot;<a href="http://www.w3.org/&quot">http://www.w3.org/&quot</a>; /&gt;</pre>
+<p>Output:</p>
+<pre>
+  1|
+  2| &lt;a href=&quot;<a href="http://www.w3.org/">http://www.w3.org/</a>&quot;&gt;&lt;tt&gt;<a href="http://www.w3.org/&lt;/tt&gt;&lt;/a&gt">http://www.w3.org/&lt;/tt&gt;&lt;/a&gt</a>;</pre>
+<p>The <code>&lt;preserve&gt;</code> tag pushes the variable passed in argument in
+top of a stack and clears this variable. So this variable is non-null
+only when it has been assigned via <code>&lt;set-var %attributes&gt;</code>.
+The <code>&lt;resstore&lt;gt</code>&gt; tag pops the value at top of the stack and sets
+the variable passed in argument to this value.</p>
+<p>In HTML some attributes are valid without value.
+This attribute may be detected with</p>
+<p>Input:</p>
+<pre>
+  1| #use wml::std::info
+  2| &lt;define-tag head whitespace=delete&gt;
+  3| &lt;preserve title&gt;
+  4| &lt;preserve info&gt;
+  5| &lt;set-var info=*&gt;
+  6| &lt;set-var %attributes&gt;
+  7| &lt;head*&gt;
+  8| &lt;ifeq &quot;&lt;get-var info&gt;&quot; &quot;&quot; &lt;info style=meta&gt;&gt;
+  9| &lt;if &quot;&lt;get-var title&gt;&quot; &quot;&lt;title*&gt;&lt;get-var title&gt;&lt;/title*&gt;&quot;&gt;
+ 10| &lt;/head*&gt;
+ 11| &lt;restore info&gt;
+ 12| &lt;restore title&gt;
+ 13| &lt;/define-tag&gt;
+ 14| &lt;head title=&quot;Test page 1&quot;&gt;
+ 15| &lt;head info title=&quot;Test page 2&quot;&gt;</pre>
+<p>Output: (only non-blank lines are printed)</p>
+<pre>
+     &lt;head&gt;&lt;title&gt;Test page 1&lt;/title&gt;&lt;/head&gt;
+     &lt;head&gt;
+     &lt;nostrip&gt;&lt;meta name=&quot;Author&quot;    content=&quot;Denis Barbier, barbier@localhost&quot;&gt;
+     &lt;meta name=&quot;Generator&quot; content=&quot;WML 2.0.2 (21-Jun-2000)&quot;&gt;
+     &lt;meta name=&quot;Modified&quot;  content=&quot;2000-05-09 23:57:31&quot;&gt;
+     &lt;/nostrip&gt;
+     &lt;title&gt;Test page 2&lt;/title&gt;&lt;/head&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="quoting_and_grouping">QUOTING AND GROUPING</a></h1>
+<p>In HTML it is possible to specify attributes containing several words,
+by quoting them with single or double quotes. WML knows only double
+quotes.</p>
+<pre>
+  1| &lt;define-tag foo&gt;\
+  2| Number of arguments: %#
+  3| First argument:      %0
+  4| &lt;/define-tag&gt;\
+  5| &lt;foo Here are attributes /&gt;\
+  6| &lt;foo &quot;Here are&quot; attributes /&gt;\</pre>
+<p>Output:</p>
+<pre>
+  1| Number of arguments: 3
+  2| First argument:      Here
+  3| Number of arguments: 2
+  4| First argument:      Here are</pre>
+<p>
+</p>
+<hr />
+<h1><a name="expansion">EXPANSION</a></h1>
+<p>In this section, all examples are processed with the command line</p>
+<pre>
+   wml -W2,-dat -q -p123</pre>
+<p>and all output lines beginning with <code>trace</code> are generated by these
+debug flags.</p>
+<p>This section is harder to understand, but one can work with WML without
+understanding it, because these notions are required in rare cases
+(mostly when writing macros for WML tutorials).</p>
+<p>By default, macros are expanded when tags are scanned.</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo&gt;%attributes&lt;/define-tag&gt;\
+  2| &lt;define-tag bar&gt;baz&lt;/define-tag&gt;\
+  3| &lt;foo name=&quot;&lt;bar/&gt;&quot; /&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| trace: -1- &lt;define-tag foo&gt;
+  2| trace: -1- &lt;define-tag bar&gt;
+  3| trace: -2- &lt;bar&gt;
+  4| trace: -1- &lt;foo name=baz&gt;
+  5| name=baz</pre>
+<p>We see that the <code>&lt;bar&gt;</code> macro is processed first (digit between
+hyphens represent enesting level), and then <code>&lt;foo&gt;</code>.
+Indeed WML finds the <code>foo</code> name. As this is a macro name, attributes are
+searched for. When scanning attributes, it finds the <code>&lt;bar&gt;</code>.
+As this macro has no attribute, it is now replaced by its replacement
+text, after that scanning of <code>&lt;foo&gt;</code> attributes is finished.</p>
+<p>Consider now</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo attributes=verbatim&gt;%attributes&lt;/define-tag&gt;\
+  2| &lt;define-tag bar&gt;baz&lt;/define-tag&gt;\
+  3| &lt;foo name=&quot;&lt;bar/&gt;&quot; /&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| trace: -1- &lt;define-tag foo&gt;
+  2| trace: -1- &lt;define-tag bar&gt;
+  3| trace: -2- &lt;bar&gt;
+  4| trace: -1- &lt;foo name=&lt;bar&gt;&gt;
+  5| trace: -1- &lt;bar&gt;
+  6| name=baz</pre>
+<p>The <code>attributes=verbatim</code> attribute tells WML that when scanning this
+macro attributes, no expansion is performed. So the four first lines
+are now easy to understand. But after <code>&lt;foo&gt;</code> is expanded into</p>
+<pre>
+   name=&lt;bar&gt;</pre>
+<p>this text is scanned again and <code>&lt;bar&gt;</code> is expanded in turn.</p>
+<p>The solution to forbid this expansion is to use the <a href="#item_u"><code>U</code></a> modifier,
+explained in section <strong>Special Text</strong>.</p>
+<p>Input:</p>
+<pre>
+  1| &lt;define-tag foo attributes=verbatim&gt;%Uattributes&lt;/define-tag&gt;\
+  2| &lt;define-tag bar&gt;baz&lt;/define-tag&gt;\
+  3| &lt;foo name=&quot;&lt;bar/&gt;&quot; /&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| trace: -1- &lt;define-tag foo&gt;
+  2| trace: -1- &lt;define-tag bar&gt;
+  3| trace: -2- &lt;bar&gt;
+  4| trace: -1- &lt;foo name=&lt;bar&gt;&gt;
+  5| name=&lt;bar&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="mixing_mp4h_and_eperl">MIXING MP4H AND EPERL</a></h1>
+<p>After these preliminaries it is time to see how to mix <em>mp4h</em> and
+<em>ePerl</em>. The following section is a bit tricky, you may skip to
+section <strong>How to use these macros</strong> to quickly learn which changes are
+needed.</p>
+<p>
+</p>
+<h2><a name="nested_eperl_macros_do_not_work">Nested ePerl macros do not work</a></h2>
+<p>Consider this macro:</p>
+<pre>
+   &lt;define-tag show-attr&gt;&lt;: print &quot;attrs:%attributes&quot;; :&gt;&lt;/define-tag&gt;</pre>
+<p>At first look, it behaves like</p>
+<pre>
+   &lt;define-tag show-attr-ok&gt;attrs:%attributes&lt;/define-tag&gt;</pre>
+<p>But what happens when these macros are nested?</p>
+<p>Input:</p>
+<pre>
+  1| &lt;show-attr-ok &lt;show-attr-ok 0 /&gt; /&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| attrs:attrs:0</pre>
+<p>It works fine! On the other hand,</p>
+<p>Input:</p>
+<pre>
+  1| &lt;show-attr &lt;show-attr 0 /&gt; /&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| ePerl:Error: Perl parsing error (interpreter rc=255)
+  2|
+  3| ---- Contents of STDERR channel: ---------
+  4| Backslash found where operator expected at /tmp/wml.1183.tmp1.wml line
+  5| 10, near &quot;&quot;attrs:&lt;: print attrs:0; print &quot;\&quot;
+  6|         (Missing operator before \?)
+  7| syntax error at /tmp/wml.1183.tmp1.wml line 10, near &quot;&quot;attrs:&lt;: print
+  8| attrs:0; print &quot;\&quot;
+  9| Execution of /tmp/wml.1151.tmp1.wml aborted due to compilation errors.
+ 10| ------------------------------------------
+ 11| ** WML:Break: Error in Pass 3 (rc=74).</pre>
+<p>Huh, looks like something went wrong. Output after pass 2 is</p>
+<pre>
+  1| &lt;: print &quot;attrs:&lt;: print attrs:0; :&gt;&quot;; :&gt;</pre>
+<p>And because ePerl commands cannot be nested, an error is reported
+(if you do not understand why we have this text after pass 2, reread
+previous section).</p>
+<p>This example is simplistic, and a workaround is trivial (use
+<code>&lt;show-attr-ok&gt;</code> instead), but there are many cases where these
+problems are much more difficult to track. For instance if you nest
+macros defined in WML modules, you do not know whether they use ePerl
+code or not.</p>
+<p>
+</p>
+<h2><a name="first_try_to_solve_this_problem">First try to solve this problem</a></h2>
+<p>One problem is that ePerl commands cannot be nested, according to its
+documentation. So our first try is to count nested levels and print
+ePerl delimeters when in outer mode only.</p>
+<p>Input:</p>
+<pre>
+  1| &lt;set-var __perl:level=0 /&gt;\
+  2| &lt;define-tag perl endtag=required whitespace=delete&gt;
+  3| &lt;increment __perl:level /&gt;
+  4| &lt;when &lt;eq &lt;get-var __perl:level /&gt; 1 /&gt;&gt;
+  5| &lt;: %body :&gt;
+  6| &lt;/when&gt;
+  7| &lt;when &lt;neq &lt;get-var __perl:level /&gt; 1 /&gt;&gt;
+  8| %body
+  9| &lt;/when&gt;
+ 10| &lt;decrement __perl:level /&gt;
+ 11| &lt;/define-tag&gt;\
+ 12| &lt;define-tag add1 endtag=required&gt;\
+ 13| &lt;perl&gt;$a += 1; %body&lt;/perl&gt;\
+ 14| &lt;/define-tag&gt;\
+ 15| &lt;add1&gt;&lt;add1&gt;&lt;add1&gt;&lt;/add1&gt;&lt;/add1&gt;&lt;/add1&gt;
+ 16| &lt;:= $a :&gt;</pre>
+<p>Output:</p>
+<pre>
+  1|
+  2| 3</pre>
+<p>Another example (lines 1-11 are left unchanged)</p>
+<p>Input:</p>
+<pre>
+ 12| &lt;define-tag remove-letter endtag=required whitespace=delete&gt;
+ 13| &lt;perl&gt;
+ 14|   $string = q|%body|; $string =~ s|%0||g; print $string;
+ 15| &lt;/perl&gt;
+ 16| &lt;/define-tag&gt;\
+ 17| &lt;remove-letter e&gt;Hello this is a test&lt;/remove-letter&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| Hllo this is a tst</pre>
+<p>With previous definitions, here is what happens when nesting
+<code>&lt;remove-letter&gt;</code> tags:</p>
+<p>Input:</p>
+<pre>
+ 17| &lt;remove-letter s&gt;&lt;remove-letter e&gt;\
+ 18| Hello this is a test\
+ 19| &lt;/remove-letter&gt;&lt;/remove-letter&gt;</pre>
+<p>Output:</p>
+<pre>
+  1| ePerl:Error: Perl parsing error (interpreter rc=255)
+  2|
+  3| ---- Contents of STDERR channel: ---------
+  4| Bareword found where operator expected at /tmp/wml.1198.tmp1.wml
+  5| line 10, near &quot;q|$string = q|Hello&quot;
+  6| syntax error at /tmp/wml.1198.tmp1.wml line 10, near &quot;q|$string =
+  7| q|Hello this &quot;syntax error at /tmp/wml.1198.tmp1.wml line 10, near &quot;;|&quot;
+  8| Execution of /tmp/wml.1198.tmp1.wml aborted due to compilation errors.
+  9| ------------------------------------------
+ 10| ** WML:Break: Error in Pass 3 (rc=74).</pre>
+<p>To understand why this error is reported, we run only the first two passes
+to see which input is sent to ePerl:</p>
+<pre>
+    prompt$ wml -q -p12 qaz.wml
+    &lt;: $string = q|$string = q|Hello this is a test|; $string =~ s|e||g;
+    print $string;|; $string =~ s|s||g; print $string; :&gt;</pre>
+<p>As expected ePerl delimiters are only put around the whole sentence, and
+are not nested. But we can see this is not sufficient, because the
+<a href="#item__body"><code>%body</code></a> directive was replaced by ePerl code, and not a string.</p>
+<p>In one word, there will be trouble whenever special sequences
+(<code>%&lt;digit&gt;</code>, <a href="#item__body"><code>%body</code></a>, <a href="#item__attributes"><code>%attributes</code></a>, ...) appear within ePerl
+delimiters, because you can not ensure that replacement text does not
+contain ePerl commands too.</p>
+<p>
+</p>
+<h2><a name="macros_defined_by_the_wml__std__tags_module">Macros defined by the wml::std::tags module</a></h2>
+<p>The <em><a href="../incl/wml::std::tags</em>.html">wml::std::tags</em></a>(3) module provides a solution to deal with nested
+ePerl commands. Previous example may be written like this</p>
+<p>Input:</p>
+<pre>
+  1| #use wml::std::tags
+  2|
+  3| &lt;define-tag remove-letter endtag=required whitespace=delete&gt;
+  4| &lt;perl&gt;
+  5| &lt;perl:assign $string&gt;%body&lt;/perl:assign&gt;
+  6| &lt;perl:assign $letter&gt;%0&lt;/perl:assign&gt;
+  7| $string =~ s|$letter||g;
+  8| &lt;perl:print: $string /&gt;
+  9| &lt;/perl&gt;
+ 10| &lt;/define-tag&gt;\
+ 11| &lt;remove-letter s&gt;&lt;remove-letter e&gt;\
+ 12| Hello this is a test\
+ 13| &lt;/remove-letter&gt;&lt;/remove-letter&gt;</pre>
+<p>Output:</p>
+<pre>
+      ...61 empty lines...
+  62| Hllo thi i a tt
+  63|
+  64|</pre>
+<p>How this works is beyond the scope of this document, and we will focus
+on commands provided by the <em>wml::std::tags</em> module, and how to use
+them. In the list below, pseudo-perl commands show an equivalent form
+of these macros.</p>
+<dl>
+<dt><strong><a name="item__3cperl_3avar__2f_3e">&lt;perl:var /&gt;</a></strong>
+<dd>
+<p>This macro expands to a Perl variable, which is different in all nested
+levels.</p>
+</dd>
+<dd>
+<pre>
+    $perl_var&lt;get-var __perl:level /&gt;</pre>
+</dd>
+</li>
+<dt><strong><a name="item__3cperl_3aprint_3estring_3c_2fperl_3aprint_3e">&lt;perl:print&gt;string&lt;/perl:print&gt;</a></strong>
+<dd>
+<p>This complex tag prints its body.</p>
+</dd>
+<dd>
+<pre>
+   print qq(string);</pre>
+</dd>
+</li>
+<dt><strong><a name="item__3cperl_3aprint_3a_string__2f_3e">&lt;perl:print: string /&gt;</a></strong>
+<dd>
+<p>This simple tag prints its attributes.</p>
+</dd>
+<dd>
+<pre>
+   print string;</pre>
+</dd>
+</li>
+<dt><strong><a name="item__3cperl_3aprint_3avar__2f_3e">&lt;perl:print:var /&gt;</a></strong>
+<dd>
+<p>Prints the <code>&lt;perl:var&gt;</code> variable</p>
+</dd>
+<dd>
+<pre>
+  print $perl_var&lt;get-var __perl:level /&gt;;</pre>
+</dd>
+</li>
+<dt><strong><a name="item__3cperl_3aassign__24variable_3evalue_3c_2fperl_3aa">&lt;perl:assign $variable&gt;value&lt;/perl:assign&gt;</a></strong>
+<dd>
+<p>Assign a Perl variable. If there is no attribute, value is assigned to
+<code>&lt;perl:var&gt;</code>.</p>
+</dd>
+<dd>
+<pre>
+   $variable = qq(value);</pre>
+</dd>
+</li>
+<dt><strong><a name="item__3cperl_3aassign_3asq__24variable_3evalue_3c_2fper">&lt;perl:assign:sq $variable&gt;value&lt;/perl:assign&gt;</a></strong>
+<dd>
+<p>Assign a Perl variable. If there is no attribute, value is assigned to
+<code>&lt;perl:var&gt;</code>.</p>
+</dd>
+<dd>
+<pre>
+   $variable = q(value);</pre>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="how_to_use_these_macros">How to use these macros</a></h2>
+<p>Now that we know our problem has a solution, you are certainly impatient
+to learn how to proceed. There are two golden rules:</p>
+<ol>
+<li>
+<p>Never write special sequences (<code>%&lt;digit&gt;</code>, <a href="#item__body"><code>%body</code></a>,
+<a href="#item__attributes"><code>%attributes</code></a>, ...) inside a Perl statement.</p>
+</li>
+<li>
+<p>Never use the Perl <code>print</code> statement, nor its derivatives.</p>
+</li>
+</ol>
+<p>First rule tells to replace</p>
+<pre>
+  $var1 = qq|%body|;
+  $var2 = q|%body|;</pre>
+<p>by</p>
+<pre>
+  &lt;perl:assign $var1&gt;%body&lt;/perl:assign&gt;
+  &lt;perl:assign:sq $var2&gt;%body&lt;/perl:assign:sq&gt;</pre>
+<p>and second rule</p>
+<pre>
+  print $string;
+  print &quot;&lt;img src=\&quot;$src\&quot; alt=\&quot;$alt\&quot;&gt;&quot;;</pre>
+<p>by</p>
+<pre>
+  &lt;perl:print: $string&gt;
+  &lt;perl:print&gt;&lt;img src=&quot;$src&quot; alt=&quot;$alt&quot;&gt;&lt;/perl:print&gt;</pre>
+<p>
+</p>
+<h2><a name="examples">Examples</a></h2>
+<p>Example 1: simplified version of <code>wml::des::lowsrc</code></p>
+<p>Non-nestable version:</p>
+<pre>
+  &lt;define-tag lowsrc&gt;
+  &lt;:
+  _lbrace_
+      my $src = '%0';
+      my $lowsrc = $src;
+      $lowsrc =~ s|\.(_lbrack_^._rbrack_+)$|.lowsrc.$1|;
+      system(&quot;convert -monochrome $src $lowsrc&quot;);
+      print &quot;lowsrc=\&quot;$lowsrc\&quot;&quot;;
+  _rbrace_
+  :&gt;
+  &lt;/define-tag&gt;</pre>
+<p>Nestable version:</p>
+<pre>
+  &lt;define-tag lowsrc&gt;
+  &lt;perl&gt;
+  _lbrace_
+      my $src;
+      &lt;perl:assign:sq $src&gt;%0&lt;/perl:assign:sq&gt;
+      my $lowsrc = $src;
+      $lowsrc =~ s|\.(_lbrack_^._rbrack_+)$|.lowsrc.$1|;
+      system(&quot;convert -monochrome $src $lowsrc&quot;);
+      &lt;perl:print&gt; lowsrc=&quot;$lowsrc&quot;&lt;/perl:print&gt;
+  _rbrace_
+  &lt;/perl&gt;
+  &lt;/define-tag&gt;</pre>
+<p>The first change (assignment to <code>$src</code>) allows attribute to be an ePerl
+command, and second change (print result) allows this macro to appear
+inside ePerl commands. As you see, this is fairly straightforward, and
+you may look how WML modules are written.</p>
+<p>In all previous examples and definitions, output was printed to standard
+output. But sometimes it is printed to filehandles. Here is how to
+proceed, with an example taken from <code>wml::fmt::xtable</code>.</p>
+<p>Non-nestable version:</p>
+<pre>
+  &lt;define-tag xtable endtag=required&gt;
+  &lt;:
+  _lbrace_
+      my $options = qq|%attributes|;
+      my $tmpfile = &quot;&lt;get-var WML_TMPDIR&gt;/wml.table.$$.tmp&quot;;
+      local (*FP);
+      open(FP, &quot;&gt;$tmpfile&quot;);
+      print FP &quot;&lt;&quot; . &quot;wwwtable $options&gt;\n&quot;;
+      print FP &lt;&lt;'__XTABLE__EOT'
+  %body
+  __XTABLE__EOT
+  ;
+      print FP &quot;&lt;&quot; . &quot;/wwwtable&gt;\n&quot;;
+      close(FP);
+      open(FP, &quot;$WML_LOC_LIBDIR/exec/wml_aux_freetable -w $tmpfile|&quot;);
+      local ($/) = undef;
+      print &lt;FP&gt;;
+      close(FP);
+      unlink(&quot;$tmpfile&quot;);
+  _rbrace_
+  :&gt;
+  &lt;/define-tag&gt;</pre>
+<p>Nestable version:</p>
+<pre>
+  &lt;set-var __xtable:level=0 /&gt;
+  &lt;define-tag xtable endtag=required&gt;
+  &lt;increment __xtable:level /&gt;
+  &lt;perl filehandle=&quot;FH_XTABLE&quot;&gt;
+  _lbrace_
+      my $tmpfile = &quot;&lt;get-var WML_TMPDIR /&gt;/wml.table.$$.tmp&quot;;
+      my $options;
+      &lt;perl:assign $options&gt;%attributes&lt;/perl:assign&gt;;
+      &lt;when &lt;eq &lt;get-var __xtable:level /&gt; 1 /&gt;&gt;
+      local *FH_XTABLE;
+      open(FH_XTABLE, &quot;&gt;$tmpfile&quot;);
+      &lt;/when&gt;
+      &lt;perl:assign&gt;
+      &lt;wwwtable $options&gt;
+          %body
+      &lt;/wwwtable&gt;
+      &lt;/perl:assign&gt;
+  &lt;/perl&gt;
+  &lt;perl&gt;
+      &lt;when &lt;eq &lt;get-var __xtable:level /&gt; 1 /&gt;&gt;
+      print FH_XTABLE &lt;perl:var/&gt;;
+      close(FH_XTABLE);
+      open(FH_XTABLE_IN,
+         &quot;&lt;get-var WML_LOC_LIBDIR /&gt;/exec/wml_aux_freetable -w $tmpfile |&quot;);
+      local ($/) = undef;
+      &lt;perl:var/&gt; = &lt;*FH_XTABLE_IN&gt;;
+      close(FH_XTABLE_IN);
+      &lt;perl:print:var/&gt;
+      unlink(&quot;$tmpfile&quot;);
+      &lt;/when&gt;
+  _rbrace_
+  &lt;/perl&gt;
+  &lt;decrement __xtable:level /&gt;
+  &lt;/define-tag&gt;</pre>
+<p>Filehandles are defined via attributes to the <code>perl</code> tag. All
+subsequent calls to <code>&lt;perl:print&gt;</code> are then printed to this
+filehandle.</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com</pre>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: how to use wml_auxiliareise (htmlinfo, etc)? -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Mon, 25 Jan 1999 16:18:31 +0100 (CET) -->
+<!--X-Message-Id: 199901251445.PAA21319@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: vang@altavista.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00370">Date Index</a>][<a href="thrd8.shtml#00370">Thread Index</a>]<br>
+[<A HREF="msg00369.shtml">Date Prev</A>][<A HREF="msg00371.shtml">Date Next</A>][<A HREF="msg00377.shtml">Thread Prev</A>][<A HREF="msg00374.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: how to use wml_auxiliareise (htmlinfo, etc)?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Jan 1999 15:45:44 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Monday 25 January 1999, at 14 h 26, the keyboard of Viorel Anghel 
+&lt;vang@altavista.net&gt; wrote:
+
+&gt; How can i use auxiliaries like htmlinfo, weblint, linklint from wml package?
+
+I use:
+
+wml --epilog weblint foobar.wml
+
+quite often. This catches my HTML mistakes and WML faults like extensive use 
+of JavaScript :-)
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00369.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00371.shtml">Re: vim syntax file? Yesss</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00377.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00374.shtml">[BUG REPORT] WML 1.6.8, Digital (DEC) OSF/1 4.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00370"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00370"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

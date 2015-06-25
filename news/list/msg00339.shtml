@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 17 Jan 1999 15:25:16 +0100 (CET) -->
+<!--X-Message-Id: 19990117152514.A160@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A06357.3A7CFBDA@topitmagic.de -->
+<!--X-Reference: 36A1DFBA.AD006C5E@topitmagic.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00339">Date Index</a>][<a href="thrd8.shtml#00339">Thread Index</a>]<br>
+[<A HREF="msg00338.shtml">Date Prev</A>][<A HREF="msg00340.shtml">Date Next</A>][<A HREF="msg00338.shtml">Thread Prev</A>][<A HREF="msg00340.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Jan 1999 15:25:14 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jan 17, 1999, CHristian Niss wrote:
+
+&gt; I have reduced my problem to the fact, that I donot have 
+&gt; setpgrp in my system ... the configure-script therefore
+&gt; stops in wml_backend/p2_mhc line 1645 ...
+&gt; 
+&gt; Which rpm do I have to install to get some kind of setpgrp ???
+
+A quick grep inside wml_backend/p2_mhc showed that the check for setpgrp in
+Meta-HTML's Autoconf stuff is obsolete and not really needed.  When you've
+Autoconf installed, just remove the line reading "AC_FUNC_SETPGRP" in
+wml_backend/p2_mhc/configure.in and run "autoconf" in this directory to get a
+fixed configure script. When you don't have Autoconf installed, remove just
+the lines 1645-1692 from the configure script.
+
+Denis: I've now removed the AC_FUNC_SETPGRP. Same for the VFORK check
+       because that's also no longer needed in our stripped down
+       Meta-HTML version.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00340" HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00342" HREF="msg00342.shtml">No installation problems with 1.6.8</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00332" HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00338" HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00339"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00339"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

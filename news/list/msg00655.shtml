@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Perl error: wml::des::space (Solaris) -->
+<!--X-From-R13: urffrNyhmv.r&#45;grpuavx.hav&#45;qbegzhaq.qr ("Pwbrea_Vrffr") -->
+<!--X-Date: Fri, 14 May 1999 14:20:57 +0200 (MET DST) -->
+<!--X-Message-Id: 3in1z7g7xv.fsf@luzi.e&#45;technik.uni&#45;dortmund.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3iiudm6rwy.fsf@luzi.e&#45;technik.uni&#45;dortmund.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00655">Date Index</a>][<a href="thrd9.shtml#00655">Thread Index</a>]<br>
+[<A HREF="msg00654.shtml">Date Prev</A>][<A HREF="msg00656.shtml">Date Next</A>][<A HREF="msg00381.shtml">Thread Prev</A>][<A HREF="msg00682.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Perl error: wml::des::space (Solaris)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (&quot;Bjoern_Hesse&quot;)</LI>
+<LI><em>Date</em>: 14 May 1999 14:19:24 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi,
+
+i posted my problem some time ago (3 month) but it is still there in the
+actuall snapshot release.
+The use of wml::des::space fails on my solaris box.
+I have an error log attached.
+
+Bjoern
+
+&lt;-- Begin Error Log --&gt;
+magi:/home/hesse/lang/wml 60&gt; wml --version
+This is WML Version 1.6.8 (12-01-1999)
+[SNIP]
+        * This is not correct! I have installed the SNAPSHOT:
+        wml-SNAP-199905140601.tar.gz
+        from May, 14.
+
+magi:/home/hesse/lang/wml 61&gt; uname -a
+SunOS magi 5.5 Generic_103093-25 sun4u sparc SUNW,Ultra-1
+
+magi:/home/hesse/lang/wml 62&gt; more error.wml
+#use wml::des::space
+
+magi:/home/hesse/lang/wml 63&gt; wmk error.wml
+/opt/gnu/bin/wml -n -oerror.html error.wml
+ePerl:Error: Perl parsing error (interpreter rc=2)
+ 
+---- Contents of STDERR channel: ---------
+Can't load '/opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so' for module IO: ld.so.1: /opt/gnu/lib/wml/exec/wml_p3_eperl: fatal: relocation error: file /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so: symbol main: referenced symbol not found at /opt/gnu/lib/perl5/5.00503/sun4-solaris/DynaLoader.pm line 169.
+ 
+ at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Handle.pm line 241
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /tmp/wml.8621.tmp1 line 100.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+** WMk:Break: Error in WML (rc=256)
+&lt;-- End Error Log --&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00682" HREF="msg00682.shtml">Re: Perl error: wml::des::space (Solaris)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00381" HREF="msg00381.shtml">perl error: wml::des::space (Solaris)</A></strong>, <em>From:</em> Bjoern_Hesse</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00654.shtml">Re: [RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00656.shtml">Re: [RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00381.shtml">perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00682.shtml">Re: Perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00655"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00655"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

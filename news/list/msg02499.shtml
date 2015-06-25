@@ -1,0 +1,177 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested slices and variables -->
+<!--X-From-R13: Xrna&#45;[vpury <wzf.qrovnaNpyho&#45;vagrearg.se> -->
+<!--X-Date: Sun, 10 Feb 2002 03:02:06 +0100 (MET) -->
+<!--X-Message-Id: 3C657ED5.3090407@club&#45;internet.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20020209194708.A41097@itesec.hsc.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02499">Date Index</a>][<a href="thrd50.shtml#02499">Thread Index</a>]<br>
+[<A HREF="msg02498.shtml">Date Prev</A>][<A HREF="msg02500.shtml">Date Next</A>][<A HREF="msg02498.shtml">Thread Prev</A>][<A HREF="msg02500.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested slices and variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jean-Michel &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 09 Feb 2002 20:56:05 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Ghislaine Labouret wrote:
+
+&gt; When nesting languages slices into another one like this :
+&gt; 
+&gt; &lt;en: &lt;fr: français&gt;&lt;en: english&gt;&gt;
+&gt; 
+&gt; the output is, as I expected :
+&gt; - nothing in the .fr file
+&gt; - "english" in the .en file
+&gt; 
+&gt; But, if the inside slices come from a variable, like this :
+&gt; 
+&gt; &lt;set-var foo="&lt;fr: français&gt;&lt;en: english&gt;"&gt;
+&gt; &lt;en: &lt;get-var foo&gt;&gt;
+&gt; 
+&gt; the output becomes this :
+&gt; - "français" in the .fr file
+&gt; - "françaisenglish" in the .en file
+&gt; 
+&gt; Is this a feature or a bug?
+&gt; 
+&gt; 
+&gt; Sincerely,
+
+
+Hello,
+
+you'll have an answer with pass 2 output :
+
+   bash-2.05a$ wml -p1-2 test.wml
+
+   (see attachments)
+
+
+and with slice man page, section "Advanced Selection: Slice Levels", you 
+may see that your test.wml produces:
+
+Level
+|
+v
+
+2          [LANG_EN:english:LANG_EN]
+1 [LANG_EN:                         :LANG_EN]
+0
+
+after "Without variable:"
+
+
+and
+
+2          [LANG_FR:français:LANG_FR][LANG_EN:english:LANG_EN]
+1 [LANG_EN:                                                   :LANG_EN]
+0
+after "With variable:"
+
+etc.
+
+
+During pass 9 (slice) since the word "français" is include
+in level 1 LANG_EN it appears in output. QED
+
+
+
+I think it will be a good idea to have languages slices in the same 
+level ;-)
+
+
+Cordially,
+
+Jean-Michel
+
+&lt;fr:
+PS:
+il y a plusieurs façons intéressantes de traiter facilement les grandes 
+quantités de textes multilingues avec wml, comme cela dépasse la réponse 
+à ce mail tu peux me demander directement...
+ &gt;
+
+
+
+
+ 
+
+</PRE>
+<PRE>
+&lt;:# line 0 "/tmp/ipp.11677.tmp":&gt;
+&lt;:# line 0 "test.wml":&gt;
+&lt;:# line 0 "/usr/lib/wml/include/std/lang.wml":&gt;
+&lt;:# line 0 "/usr/lib/wml/include/mod/version.wml":&gt;
+&lt;:# line 8 "/usr/lib/wml/include/std/lang.wml":&gt;
+  
+  
+&lt;:# line 0 "/usr/lib/wml/include/std/tags.wml":&gt;
+&lt;:# line 7 "/usr/lib/wml/include/std/tags.wml":&gt;
+  
+  
+&lt;:# line 11 "/usr/lib/wml/include/std/lang.wml":&gt;
+&lt;:# line 1 "test.wml":&gt;
+%!slice -o LANG_FRuUNDEF:test.html.fr -o LANG_ENuUNDEF:test.html.en
+Without variable: [LANG_EN:[LANG_EN:english:LANG_EN]:LANG_EN]
+With variable: [LANG_EN:[LANG_FR:français:LANG_FR][LANG_EN:english:LANG_EN]:LANG_EN]
+Workarounds:
+With language-dependant variables: [LANG_EN:english:LANG_EN]
+With tag: [LANG_EN:[LANG_EN:english:LANG_EN]:LANG_EN]
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02496" HREF="msg02496.shtml">Nested slices and variables</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02498.shtml">Re: Nested slices and variables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02500.shtml">xtable and mp4h error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02498.shtml">Re: Nested slices and variables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02500.shtml">xtable and mp4h error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02499"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02499"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

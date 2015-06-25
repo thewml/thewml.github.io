@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Frames -->
+<!--X-From-R13: Xna Vbyyre <wubNcvatarg.pu> -->
+<!--X-Date: Thu, 10 Dec 1998 11:51:42 +0100 (CET) -->
+<!--X-Message-Id: 98121009111102.00486@apogee.aponet.priv -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199812091841.KAA09727@seer.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00271">Date Index</a>][<a href="thrd6.shtml#00271">Thread Index</a>]<br>
+[<A HREF="msg00270.shtml">Date Prev</A>][<A HREF="msg00272.shtml">Date Next</A>][<A HREF="msg00268.shtml">Thread Prev</A>][<A HREF="msg00272.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Frames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 10 Dec 1998 08:52:38 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 09 Dec 1998, Michael McNamara wrote:
+&gt;	I am wondering is if I can get the automatic java script
+&gt;changing of navbar gifs from the 'normal' to 'over' to 'selected'
+&gt;features, but cause the effect of selecting a menu item be to load a
+&gt;url into another frame.
+
+i use my own tag-definitions and some variables with templates
+to solve this. it's working, but is not very portable. i have to modify the
+include files for every new site, but then i get exactly what i want.
+see <A  HREF="http://www.snf.ch/nfp42/">http://www.snf.ch/nfp42/</A>  (it's a very academic site, at the moment 
+german only, but prepared for multi-language-support).
+it's my second project fully based on WML, so the code is
+not very sophisticated and probably hard to read. but let me know 
+if you want to see it anyway.
+
+ciao
+ -jh
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00272" HREF="msg00272.shtml">Re: Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00268" HREF="msg00268.shtml">Re: Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00270.shtml">variables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00272.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00268.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00272.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00271"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00271"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Feature request: removal of "unwanted" tags -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 28 Jan 1998 13:17:42 +0100 (MET) -->
+<!--X-Message-Id: 199801281217.NAA03236@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1iur5x9a9.fsf_&#45;_@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00061">Date Index</a>][<a href="thrd2.shtml#00061">Thread Index</a>]<br>
+[<A HREF="msg00060.shtml">Date Prev</A>][<A HREF="msg00062.shtml">Date Next</A>][<A HREF="msg00060.shtml">Thread Prev</A>][<A HREF="msg00062.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Feature request: removal of &quot;unwanted&quot; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 28 Jan 1998 13:17:40 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; I am designing a small set of tags for the web-pages of our site. The
+&gt; idea is to give a list of these agreed on tags to the authors of our
+&gt; various pages. They are then "allowed" to only use these tags and no
+&gt; others. Especially the use of "standard HTML tags" would be
+&gt; "forbidden".
+&gt; 
+&gt; It would be nice to have a mechanism the tell WML which tags are ok in
+&gt; the WML input files. WML should then remove all other tags (I guess in
+&gt; path 1) and may be send a message to STDERR about what it removed.
+&gt; 
+&gt; I guess it would be easy enough to use an external filter, but may be
+&gt; this be easily included as a standard feature?
+
+&gt; P.S.: Please don't send me messages about "power to the user,
+&gt;       ...". The idea is to find an agreement with the people involved
+&gt;       and just to force ourselves to eliminate WYSIWYG markup. A
+&gt;       wml-lint, so to speak.
+&gt; 
+&gt;       Of course, one could even implement a command-line switch so
+&gt;       that one can either remove unwanted tags or just warn about them.
+
+Currently I think the most flexible way to integrate this cleanly without
+doing quick hacks is to add a -P/--prolog=PATH flag to WML, similar to the
+already existing -E/--epilog=PATH flag. While the PATH of -E is a filter which
+is applied to all(!) outputfiles the PATH of -P could be a filter which is
+applied to the input file. 
+
+There is only one decision remaining: the problem of include files.  When -P
+just filters the input file, we don't get the include files.  Alternatively we
+could apply the filter _after_ pass 1 (IPP), so we also get the include files.
+But this approach is a little bit unusual and not very intuitive to the user.
+Hmmmm...
+
+On the other hand, it is not useful to filter the include files, because you
+really need some WML stuff to produce the final HTML output. So it is only
+useful to filter the single input file itself.
+
+BTW: The filtering script itself is not very complicated. 
+     I'll write one for WML 1.6.0. What should it do. My
+     current todo-entry is as following:
+
+     o wml_aux/tagfilter/
+
+       -f &lt;configfile&gt;  where to find the config file
+       -w               just warn but don't remove anything
+
+       The &lt;configfile&gt; then has lines of the form
+       ``[SC] tagname''
+       where S means single tag and C means container-tag.
+
+Any more ideas?
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00062" HREF="msg00062.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00060" HREF="msg00060.shtml">Feature request: removal of &quot;unwanted&quot; tags</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00060.shtml">Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00062.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00060.shtml">Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00062.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00061"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00061"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

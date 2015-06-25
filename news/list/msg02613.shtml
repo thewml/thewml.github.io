@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.8, all -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 16 Jun 2002 21:24:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20020616193308.GA2617@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200206152226.AAA27410@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02613">Date Index</a>][<a href="thrd53.shtml#02613">Thread Index</a>]<br>
+[<A HREF="msg02612.shtml">Date Prev</A>][<A HREF="msg02614.shtml">Date Next</A>][<A HREF="msg02612.shtml">Thread Prev</A>][<A HREF="msg02614.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.8, all</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 16 Jun 2002 21:33:08 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jun 16, 2002 at 12:26:38AM +0200, WMLbug-20020615@leo.0n3.org wrote:
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 2.0.8
+&gt; Operating System: all
+&gt; 
+&gt; Problem Description:
+&gt; | BUG in wml-sup-path-20-Sep-2000:
+&gt; | 
+&gt; | o canonpath('.///') returns '/' not './'
+&gt; | 
+&gt; | see diff below !
+&gt; | 
+&gt; | regards - Richard
+
+Hi Richard,
+
+&gt; | --- path.src.orig       Sat Jun 15 23:57:26 2002
+&gt; | +++ path.src    Sun Jun 16 00:10:32 2002
+&gt; | @@ -41,13 +41,13 @@
+&gt; |  sub canonpath {
+&gt; |      my ($path) = @_;
+&gt; |  
+&gt; | -    $pathL = '';
+&gt; | +    my $pathL = '';
+&gt; |      while ($path ne $pathL) {
+&gt; |          $pathL = $path;
+&gt; |          $path =~ s|//|/|g;
+
+This substitution was wrong, and has been replaced by
+             $path =~ s|/+|/|g;
+Your latest change was then not needed, but all others have been
+applied.
+
+&gt; |          $path =~ s|/\./|/|g;
+&gt; | -        $path =~ s|/\.$|/|g;
+&gt; | -        $path =~ s|^\./(.)|$1|g;
+&gt; | +        $path =~ s|/\.$|/|;
+&gt; | +        $path =~ s|^\./([^/])|$1|;
+&gt; |          $path =~ s|([^/.][^/.]*)/\.\.||;
+&gt; |      }
+&gt; |      return $path;
+
+Thanks for your bugreport.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02612" HREF="msg02612.shtml">[BUG REPORT] WML 2.0.8, all</A></strong>, <em>From:</em> WMLbug-20020615</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02612.shtml">[BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02614.shtml">wml locale problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02612.shtml">[BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02614.shtml">wml locale problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02613"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02613"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

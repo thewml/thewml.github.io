@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.0 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 9 Feb 1998 16:34:34 +0100 (MET) -->
+<!--X-Message-Id: 199802091534.QAA12867@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980209153422.25404@zeus.advatech.ro -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00084">Date Index</a>][<a href="thrd2.shtml#00084">Thread Index</a>]<br>
+[<A HREF="msg00083.shtml">Date Prev</A>][<A HREF="msg00085.shtml">Date Next</A>][<A HREF="msg00083.shtml">Thread Prev</A>][<A HREF="msg00085.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 9 Feb 1998 16:34:31 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello vang@ely.leader.ro, in a previous mail you wrote:
+
+&gt; `Screenshot':
+
+;-)
+
+&gt; make[1]: Entering directory /home/vang/wml-1.6.0/wml_test'
+&gt; Temporarily installing WML system into local test tree:
+&gt; ............................................................
+&gt; ............................................................
+&gt; ............................................................
+&gt; ............................................................
+&gt; ...................................
+&gt; Fixing installation prefix for local test tree:
+&gt; ..................
+&gt; Running WML Test Suite (still incomplete):
+&gt; t/01-wml............** IPP:Error: Bad argument to option ':
+&gt; WML_GEN_REALNAME=
+&gt; ok
+&gt; t/02-p1_ipp.........** IPP:Error: Bad argument to option ':
+&gt; WML_GEN_REALNAME=
+&gt; ok
+&gt; All tests successful.
+&gt; Files=2,  Tests=4,  6 secs ( 3.98 cusr  0.71 csys =  4.69 cpu)
+&gt; make[1]: Leaving directory /home/vang/wml-1.6.0/wml_test'
+
+Hmmm... very interesting. Do you have a $HOME/.wmlrc file or any other stuff
+which sets WML_GEN_REALNAME? I never saw this although my PORTING.test script
+also ran "make test" on the tested platforms. Hmmm... is this only for "make
+test" or does IPP flames you also on normal operation? If yes, can you please
+send us a "wml -v2" run where we can see how IPP is called?
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00085" HREF="msg00085.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> vang</li>
+<li><strong><A NAME="00086" HREF="msg00086.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> vang</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00083" HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> vang</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00085.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00083.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00085.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00084"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00084"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

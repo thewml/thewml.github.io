@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: use of slices restricted with <img>&#45;tag -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Wed, 15 Dec 1999 10:54:34 +0100 (MET) -->
+<!--X-Message-Id: 19991214154830.A283@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912121419.PAA32300@ns.inetcom.loc -->
+<!--X-Reference: jh@inetcom.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01225">Date Index</a>][<a href="thrd25.shtml#01225">Thread Index</a>]<br>
+[<A HREF="msg01224.shtml">Date Prev</A>][<A HREF="msg01226.shtml">Date Next</A>][<A HREF="msg01218.shtml">Thread Prev</A>][<A HREF="msg01227.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: use of slices restricted with &lt;img&gt;-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Dec 1999 15:48:30 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Sun, Dec 12, 1999 at 03:19:30PM +0100, Jan Holler contaba:
+
+&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&gt;&lt;img src="$(ROOTIMG)/t_akt&lt;de: &gt;&lt;fr: _f&gt;_lo.gif"&gt;
+&gt;&lt;/body&gt;&lt;/html&gt;
+
+IMHO this is taking things too far away. You can save some types, but
+SPLIT was not designed to this kind of things, at least for building
+up a word with several pieces...
+
+This can be solved easily with:
+
+&lt;de: &lt;img src="$(ROOTIMG)/t_akt_lo.gif"&gt;&gt;
+&lt;fr: &lt;img src="$(ROOTIMG)/t_akt_f_lo.gif"&gt;&gt;
+
+I know is pretty obvious!!
+
+If you explain me what is so important in using your syntax but
+typing a few less letters. I think it is not such a big problem to
+use another syntax.
+
+An important point in using SPLIT is each section has toi be
+meaningfull.
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+12/14	(12/14/1946) NYC voted to be the UN headquarters. 
+12/14	(12/14/1503) Nostradamus (born Michel de Notredame), French prophet. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01227" HREF="msg01227.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01215" HREF="msg01215.shtml">use of slices restricted with &lt;img&gt;-tag</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01224.shtml">Tip: Language specification in header</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01226.shtml">Re: Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01218.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01227.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01225"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01225"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

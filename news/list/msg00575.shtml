@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont installation problem -->
+<!--X-From-R13: Terqrevp Zr [bhry <Terqrevp.Zr[bhryNvevfn.se> -->
+<!--X-Date: Tue, 13 Apr 1999 16:46:05 +0200 (MET DST) -->
+<!--X-Message-Id: 371358A9.6D03F9ED@irisa.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9904131630560.22047&#45;100000@gtt&#45;ixs.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00575">Date Index</a>][<a href="thrd13.shtml#00575">Thread Index</a>]<br>
+[<A HREF="msg00574.shtml">Date Prev</A>][<A HREF="msg00576.shtml">Date Next</A>][<A HREF="msg00574.shtml">Thread Prev</A>][<A HREF="msg00576.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont installation problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Frederic Le Mouel &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 13 Apr 1999 16:46:01 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Stephan Petersen wrote:
+&gt; 
+&gt; Hi there,
+
+Hi
+
+&gt; checking for Perl language... expr: syntax error
+&gt; built v5.004_04
+&gt; configure: error: required program perl'' not found
+
+I have the same problem. I change, in the configure file, the Perl checking
+like that (same as WML configure file) :
+
+echo $ac_n "checking for Perl language""... $ac_c" 1&gt;&amp;6
+echo "configure:800: checking for Perl language" &gt;&amp;5
+TMPFILE=/tmp/ac.$$
+rm -f $TMPFILE
+touch $TMPFILE
+c=0
+for dir in `echo $PATH | sed -e 's/:/ /g'` /tmp; do
+    for perl in perl5 perl miniperl; do
+         if test -f "$dir/$perl"; then
+             if test -x "$dir/$perl"; then
+                 perl="$dir/$perl"
+                 version=`$perl -v | grep version | sed -e 's/.* version //' -e
+'s/ built.*//' -e 's/ with.*//'`
+                 versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+                 versionnum=`expr $versionnum - $c`
+                 echo "$versionnum $version $perl" &gt;&gt;$TMPFILE
+             fi
+         fi
+    done
+    c=`expr $c + 1`
+done
+perlvers="`cat $TMPFILE | sort -u | tail -1 | cut '-d ' -f2`"
+perlprog="`cat $TMPFILE | sort -u | tail -1 | cut '-d ' -f3`"
+rm -f $TMPFILE
+PATH_PERL=$perlprog
+echo "$ac_t""$perlprog v$perlvers" 1&gt;&amp;6
+
+if test -f $PATH_PERL; then
+        :
+else
+    { echo "configure: error: required program ``perl'' not found" 1&gt;&amp;2; exit 1;
+}
+fi 
+
+-- 
+Frédéric Le Mouël, Ph.D. Student, Solidor Group, Office E307
+IRISA-INRIA, Campus de Beaulieu, 35042 Rennes Cedex, France
+Email: Frederic.LeMouel@irisa.fr, Phone: (+33|0)2 99 84 73 04
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00574" HREF="msg00574.shtml">gfont installation problem</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00574.shtml">gfont installation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00576.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00574.shtml">gfont installation problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00576.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00575"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00575"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

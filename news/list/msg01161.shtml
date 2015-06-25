@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slicing and not&#45;slicing but using the same template(s). -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Fri, 26 Nov 1999 22:44:47 +0100 (MET) -->
+<!--X-Message-Id: 199911260827.JAA07860@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991125103529.22375A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01161">Date Index</a>][<a href="thrd24.shtml#01161">Thread Index</a>]<br>
+[<A HREF="msg01158.shtml">Date Prev</A>][<A HREF="msg01162.shtml">Date Next</A>][<A HREF="msg01159.shtml">Thread Prev</A>][<A HREF="msg01169.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slicing and not-slicing but using the same template(s).</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 26 Nov 1999 09:27:11 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis
+
+Thu, 25 Nov 1999 10:52:40 +0100 (CET), you wrote:
+
+&gt; but if _we_ do not know your problems, what can we do to help you?
+
+i did describe it, didn't i?
+
+&gt;&gt; so how the heck can i put a value in variable
+&gt;&gt; depending on the language which is generated?
+&gt; 
+&gt; &lt;set-var foo="&lt;de: deutsch&gt;&lt;fr: francais&gt;"&gt;
+
+great. (you did understand the problem after all.)
+i knew it's probably a simple answer. thank you. 
+
+&gt; Some hints :
+&gt;  1) read the wml::std::lang manpage
+
+yes i did. add your hint above then. i could 
+not find it there.
+
+&gt;  2) tell us which version of WML you are using (some features are new)
+
+This is WML Version 1.7a305 (06-Jul-1999)
+
+&gt;  3) be consistent: if you want suffix filenames like _d, _e, _f, then
+&gt;     define languages with
+&gt;      &lt;lang:new id=d short&gt;&lt;lang:new id=e short&gt;&lt;lang:new id=f short&gt;
+
+yeah, of course. i did not want to paste all that basic
+code here.
+
+thanks
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01159" HREF="msg01159.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01158.shtml">Re: slice-problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01162.shtml">output file ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01159.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01169.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01161"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01161"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

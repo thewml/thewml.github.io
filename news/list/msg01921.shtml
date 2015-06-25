@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: troubles with wml::std::lang -->
+<!--X-From-R13: Rnivqr Bhevpryyv <nchevprNgva.vg> -->
+<!--X-Date: Wed, 30 Aug 2000 13:53:27 +0200 (MET DST) -->
+<!--X-Message-Id: 20000830135550.A664@Davide -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01921">Date Index</a>][<a href="thrd39.shtml#01921">Thread Index</a>]<br>
+[<A HREF="msg01920.shtml">Date Prev</A>][<A HREF="msg01922.shtml">Date Next</A>][<A HREF="msg01920.shtml">Thread Prev</A>][<A HREF="msg01922.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>troubles with wml::std::lang</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davide Puricelli &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 30 Aug 2000 13:55:50 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi, I'm using wml 2.0.2 and as man wml::std::lang suggests, I put these lines
+into my test.wml:
+
+#!wml -o (ALL-LANG_*)+LANG_EN:index.html.en \
+      -o (ALL-LANG_*)+LANG_IT:index.html.it
+
+but I get this error:
+
+evo@natalie:~$ wmk -f test.wml
+/usr/bin/wml -n -o '(ALL-LANG_*)+LANG_EN:index.html.en' -o '(ALL-LANG_*)+LANG_IT:index.html.it' test.wml
+** Slice:Error: no existing slice matches `LANG_*'
+** WML:Break: Error in Pass 9 (rc=1).
+** WMk:Break: Error in WML (rc=256)
+
+Any idea?
+
+Regards,
+-- 
+Davide Puricelli, evo@windnet.it | apurice@tin.it
+Debian Developer: evo@debian.org | <A  HREF="http://www.debian.org">http://www.debian.org</A>
+PGP key:  finger evo@debian.org
+UIN: 2885982
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01920.shtml">Re: wml editors on windows</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01922.shtml">Re: troubles with wml::std::lang</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01920.shtml">Re: wml editors on windows</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01922.shtml">Re: troubles with wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01921"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01921"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

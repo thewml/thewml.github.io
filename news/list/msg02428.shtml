@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: img&#45;dimensions in navbars -->
+<!--X-From-R13: Tevgm Vrvaevpuzrlre <sevgm.urvaevpuzrlreNsreahav&#45;untra.qr> -->
+<!--X-Date: Tue, 6 Nov 2001 07:58:23 +0100 (MET) -->
+<!--X-Message-Id: 20011106065746.3a6fdd01.fritz.heinrichmeyer@fernuni&#45;hagen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011105235316.A2518@imacs.polytechnique.fr -->
+<!--X-Reference: 20011106073028.Y617&#45;100000@amber.wg.oertel.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02428">Date Index</a>][<a href="thrd49.shtml#02428">Thread Index</a>]<br>
+[<A HREF="msg02427.shtml">Date Prev</A>][<A HREF="msg02429.shtml">Date Next</A>][<A HREF="msg02426.shtml">Thread Prev</A>][<A HREF="msg02427.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: img-dimensions in navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Heinrichmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 6 Nov 2001 06:57:46 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 6 Nov 2001 07:37:45 +0100 (CET)
+"Clemens Oertel" &lt;oertel@uni-tuebingen.de&gt; wrote:
+
+&gt; Hi Denis, hi everyone else,
+&gt; 
+&gt; |DB&gt;Image dimensions are automatically added during pass 7, so if they
+are
+&gt; |DB&gt;not, there is something you forgot to mention.
+&gt; 
+&gt; Just out of curiosity: How do you do that? All wml got at this point is
+an url
+&gt; pointing at some image which might be stored in Bangladesh or might not
+even
+&gt; exist yet.
+
+this only works if you use relative links to images also valid in file
+space. Everybody uses relative links ..
+
+-- 
+Fritz Heinrichmeyer <A  HREF="mailto:fritz.heinrichmeyer@fernuni-hagen.de">mailto:fritz.heinrichmeyer@fernuni-hagen.de</A>
+FernUniversitaet Hagen, LG ES, 58084 Hagen (Germany)
+tel:+49 2331/987-1166 fax:987-355 <A  HREF="http://www-es.fernuni-hagen.de/~jfh">http://www-es.fernuni-hagen.de/~jfh</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02425" HREF="msg02425.shtml">Re: img-dimensions in navbars</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02426" HREF="msg02426.shtml">Re: img-dimensions in navbars</A></strong>, <em>From:</em> Clemens Oertel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02427.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02429.shtml">mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02426.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02427.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02428"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02428"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

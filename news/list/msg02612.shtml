@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.8, all -->
+<!--X-From-R13: I[Zoht&#45;20020615Nyrb.0a3.bet -->
+<!--X-Date: Sun, 16 Jun 2002 11:45:11 +0200 (MET DST) -->
+<!--X-Message-Id: 200206152226.AAA27410@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02612">Date Index</a>][<a href="thrd53.shtml#02612">Thread Index</a>]<br>
+[<A HREF="msg02611.shtml">Date Prev</A>][<A HREF="msg02613.shtml">Date Next</A>][<A HREF="msg02610.shtml">Thread Prev</A>][<A HREF="msg02613.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.8, all</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sun, 16 Jun 2002 00:26:38 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.8
+Operating System: all
+
+Problem Description:
+| BUG in wml-sup-path-20-Sep-2000:
+| 
+| o canonpath('.///') returns '/' not './'
+| 
+| see diff below !
+| 
+| regards - Richard
+| 
+| __FIX__:
+| 
+| --- path.src.orig       Sat Jun 15 23:57:26 2002
+| +++ path.src    Sun Jun 16 00:10:32 2002
+| @@ -41,13 +41,13 @@
+|  sub canonpath {
+|      my ($path) = @_;
+|  
+| -    $pathL = '';
+| +    my $pathL = '';
+|      while ($path ne $pathL) {
+|          $pathL = $path;
+|          $path =~ s|//|/|g;
+|          $path =~ s|/\./|/|g;
+| -        $path =~ s|/\.$|/|g;
+| -        $path =~ s|^\./(.)|$1|g;
+| +        $path =~ s|/\.$|/|;
+| +        $path =~ s|^\./([^/])|$1|;
+|          $path =~ s|([^/.][^/.]*)/\.\.||;
+|      }
+|      return $path;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02613" HREF="msg02613.shtml">Re: [BUG REPORT] WML 2.0.8, all</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02611.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02613.shtml">Re: [BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02610.shtml">make errors - curses.h not found &amp; problem resolved..</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02613.shtml">Re: [BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02612"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02612"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

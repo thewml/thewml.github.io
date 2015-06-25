@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Fri, 4 Feb 2000 15:32:47 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000204140855.11289B&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000202211946.1628C&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01340">Date Index</a>][<a href="thrd27.shtml#01340">Thread Index</a>]<br>
+[<A HREF="msg01339.shtml">Date Prev</A>][<A HREF="msg01341.shtml">Date Next</A>][<A HREF="msg01333.shtml">Thread Prev</A>][<A HREF="msg01327.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Feb 2000 14:13:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+On Wed, 2 Feb 2000, Denis Barbier wrote:
+&gt; &gt; I tried wml-1.7.4 and wml-SNAP after upgrading my Debian 2.1 perl to
+&gt; &gt; unstable. 
+
+&gt; &gt; t/10-wml............Can't locate File/PathConvert.pm in @INC (@INC
+&gt; [...]
+
+I've got the same problems after upgrading RedHat 5.1 to RedHat 6.1 (which
+included the update of perl)...
+
+My solution was:
+
+$ make distclean          (or installing wml-1.7.4.tar.gz to another path)
+$ ./configure --prefix=/path/to/wml
+$ make
+$ make test
+$ make install
+
+... and everything worked as expected ;-)
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01333" HREF="msg01333.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01339.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01341.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01333.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01327.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01340"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01340"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

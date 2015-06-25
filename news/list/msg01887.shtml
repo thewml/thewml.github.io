@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml don't compile on NetBSD -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Wed, 9 Aug 2000 07:26:36 +0200 (MET DST) -->
+<!--X-Message-Id: 20000809071824.A55239@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: XFMail.000808225522.borrmann@trash.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01887">Date Index</a>][<a href="thrd38.shtml#01887">Thread Index</a>]<br>
+[<A HREF="msg01886.shtml">Date Prev</A>][<A HREF="msg01888.shtml">Date Next</A>][<A HREF="msg01886.shtml">Thread Prev</A>][<A HREF="msg01888.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml don't compile on NetBSD</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 9 Aug 2000 07:18:24 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Aug 08, 2000, Micha Borrmann wrote:
+
+&gt; I was downloading the version 2.0.2 and I was trying to compile it on
+&gt; NetBSD-1.4.2 (i386). But the compile job don't run completely :(
+&gt; 
+&gt; Can anybody help me? Here are the last lines of the make process, the lines
+&gt; before are looking ok, but if anybody need more details, no problem.
+&gt; 
+&gt; Thanks in advance!
+&gt; 
+&gt; Micha
+&gt; 
+&gt; &lt;=== wml_frontend
+&gt; ===&gt; wml_aux (all)
+&gt; ===&gt; wml_aux/iselect (all)
+&gt; gcc -O2 -I. -o iselect_main.o -c iselect_main.c
+&gt; gcc -O2 -I. -o iselect_browse.o -c iselect_browse.c
+&gt; iselect_browse.c: In function `iSelect_InputField':
+&gt; iselect_browse.c:175: `KEY_MIN' undeclared (first use in this function)
+&gt; iselect_browse.c:175: (Each undeclared identifier is reported only once
+&gt; iselect_browse.c:175: for each function it appears in.)
+&gt; iselect_browse.c:175: `KEY_MAX' undeclared (first use in this function)
+&gt; iselect_browse.c: In function `iSelect_Draw':
+&gt; iselect_browse.c:283: `A_NORMAL' undeclared (first use in this function)
+&gt; iselect_browse.c:285: `A_BOLD' undeclared (first use in this function)
+&gt; iselect_browse.c:290: `A_REVERSE' undeclared (first use in this function)
+&gt; iselect_browse.c: In function `iSelect_Browser':
+
+Seems like NetBSD uses an anchient NCurses library (I guess an NCurses 1.x
+version). Read the WML INSTALL document: You either have to install a newer
+NCurses and direct WML/iSelect to it or you have to use SLang/Curses.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01886" HREF="msg01886.shtml">wml don't compile on NetBSD</A></strong>, <em>From:</em> Micha Borrmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01886.shtml">wml don't compile on NetBSD</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01888.shtml">Mail to Web</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01886.shtml">wml don't compile on NetBSD</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01888.shtml">Mail to Web</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01887"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01887"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

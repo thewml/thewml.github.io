@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] e) or f) : unknown tags parsing -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 30 May 2000 00:11:06 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000529233904.30624A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0005292220230.988&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01656">Date Index</a>][<a href="thrd33.shtml#01656">Thread Index</a>]<br>
+[<A HREF="msg01655.shtml">Date Prev</A>][<A HREF="msg01657.shtml">Date Next</A>][<A HREF="msg01655.shtml">Thread Prev</A>][<A HREF="msg01657.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] e) or f) : unknown tags parsing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 00:09:42 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 29 May 2000, Tobias Oetiker wrote:
+
+[...]
+&gt; So how about this:
+&gt; 
+&gt; In the old metahtml it was possible to protect a tag (maybe this
+&gt; is still the case today) by putting a * into the tag name
+&gt; &lt;table*&gt;....&lt;/table*&gt; so how about requiering these starts to be
+&gt; present in all tags which should be parsed as simple  tags and
+&gt; never redefined by wml ... 
+
+This is indeed still possible, because it is not handled by pass 2, but
+by wml itself.  In few words, an asterisk is allowed in tag name, so
+even if &lt;table&gt; is defined, &lt;table*&gt; is not (until specifically
+redefined) and asterisks are removed after pass 2.
+
+&gt; For Denis example this would look like this
+&gt; 
+&gt; &lt;XXX&gt;&lt;/XXX&gt; and &lt;YYY&gt;&lt;/YYY&gt; are complex tags
+&gt; 
+&gt; In a Navbar like environment we want to do something like this:
+&gt; 
+&gt; &lt;XXX&gt;&lt;TABLE&gt;&lt;/XXX&gt; &lt;YYY&gt;&lt;/TABLE&gt;&lt;/YYY&gt;
+&gt; 
+&gt; Using strict parsing this would not be allowed on the other hand if
+&gt; we at some point redefine &lt;TABLE&gt; in wml everything will break.
+&gt; 
+&gt; So instead we require that the user marks table as NON parsable
+&gt; simple tags by writing:
+&gt; 
+&gt; &lt;XXX&gt;&lt;TABLE*&gt;&lt;/XXX&gt; &lt;YYY&gt;&lt;/TABLE*&gt;&lt;/YYY&gt; 
+&gt; 
+&gt; &lt;TABLE&gt; will now always remain &lt;TABLE&gt; in this context even if I
+&gt; redefine the normal &lt;TABLE&gt; tag to have some other meaning eg to
+&gt; work with layers or some other new technique ...
+
+Yeap, great idea.
+
+&gt; As for the xhtml parsing rules I would love to see them added
+&gt; optionally ... 
+
+&lt;irony&gt;
+Sure, everyone agrees that WML is too simple, having different
+behaviours depending on some command line options will make WML more
+spicey ;-)
+&lt;/irony&gt;
+
+&gt; &lt;BR*/&gt; or &lt;BR*&gt; for that matter ... 
+
+But &lt;br&gt; is a simple tag, so &lt;br/&gt; is sufficient ;-)
+
+Here is the proposed syntax for parsing unknown tags:
+- they are complex by default
+- when there is a trailing slash or when tag name ends with an asterisk, 
+  it is a simple tag
+
+Sounds good.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01657" HREF="msg01657.shtml">Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01655" HREF="msg01655.shtml">Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01655.shtml">Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01657.shtml">Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01655.shtml">Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01657.shtml">Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01656"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01656"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

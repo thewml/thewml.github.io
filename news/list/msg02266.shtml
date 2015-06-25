@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Recommended handling of sites with subdirs? -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Wed, 20 Jun 2001 15:01:15 +0200 (MET DST) -->
+<!--X-Message-Id: 3B309F20.FA0DAAAA@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3B29B645.D46695E1@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Reference: 20010617235412.C31210@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02266">Date Index</a>][<a href="thrd46.shtml#02266">Thread Index</a>]<br>
+[<A HREF="msg02265.shtml">Date Prev</A>][<A HREF="msg02267.shtml">Date Next</A>][<A HREF="msg02263.shtml">Thread Prev</A>][<A HREF="msg02269.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Recommended handling of sites with subdirs?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jun 2001 15:03:28 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+Hi Denis,
+
+thanks a lot for your hints.
+
+&gt; Here are some basics.  Put
+&gt;    -I templates
+&gt; in your top-level .wmlrc after moving your macro files under templates/.
+&gt; Then you may include them via #include "file".
+&gt; 
+&gt; And the line
+&gt;    -D ROOT~.
+&gt; in that .wmlrc lets you define relative links, because $(ROOT) get
+&gt; this way always expanded to `\.|\.\.(/\.\.)*' (with a Perl-regexp
+&gt; syntax) to match the top-level directory (see last section in
+&gt; wml_intro(7)).
+
+
+Actually, I'm using both features already, but I wasn't aware of
+what exactly -D ROOT~. does :-) I'll have to check it out in more
+detail.
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02269" HREF="msg02269.shtml">Re: Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> tri§h</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02259" HREF="msg02259.shtml">Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> Stephan Petersen</li>
+<li><strong><A NAME="02263" HREF="msg02263.shtml">Re: Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02265.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02267.shtml">WML 2.0.7</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02263.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02269.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02266"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02266"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

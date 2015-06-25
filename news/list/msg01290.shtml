@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Sat, 22 Jan 2000 13:57:31 +0100 (MET) -->
+<!--X-Message-Id: 14473.42961.662607.459141@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m12BffQ&#45;001GKgC@mero.imago&#45;viva.de -->
+<!--X-Reference: Pine.LNX.3.96.1000121191128.5290A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01290">Date Index</a>][<a href="thrd23.shtml#01290">Thread Index</a>]<br>
+[<A HREF="msg01289.shtml">Date Prev</A>][<A HREF="msg01291.shtml">Date Next</A>][<A HREF="msg01289.shtml">Thread Prev</A>][<A HREF="msg01291.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 22 Jan 2000 13:54:31 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier writes:
+ &gt; On Fri, 21 Jan 2000, Carsten Wartmann wrote:
+ &gt; 
+ &gt; &gt; PROBLEM DESCRIPTION:
+[···]
+ &gt; &gt; Also it wasn't possible to compile (not make install of course) wml
+ &gt; &gt; under a user account, it fails to compile Readkey and getoptlong 
+[···]
+ &gt; &gt; There is also an error while "make test", which I can't figure out.
+ &gt; [...]
+ &gt; &gt; t/des-gfont.........ePerl:Error: Perl runtime error (interpreter rc=1)
+ &gt; &gt; 
+ &gt; &gt; ---- Contents of STDERR channel: ---------
+ &gt; &gt; ** wml::des::gfont:
+ &gt; &gt; sh: gfont: command not found
+ &gt; &gt; ------------------------------------------
+ &gt; 
+ &gt; The gfont program is not installed. running this test in this case does
+ &gt; not make sense, i have to fix it.
+
+What is this gfont? I didn´t see it in the requirements text?
+
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01288" HREF="msg01288.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Carsten Wartmann</li>
+<li><strong><A NAME="01289" HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01291.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01291.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01290"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01290"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

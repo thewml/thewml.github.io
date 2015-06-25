@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Plans for WML 2.0.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 1 Aug 2000 13:59:55 +0200 (MET DST) -->
+<!--X-Message-Id: 20000801140026.A30733@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000801101726.A30370@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0008011322140.11026&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01870">Date Index</a>][<a href="thrd38.shtml#01870">Thread Index</a>]<br>
+[<A HREF="msg01869.shtml">Date Prev</A>][<A HREF="msg01871.shtml">Date Next</A>][<A HREF="msg01869.shtml">Thread Prev</A>][<A HREF="msg01871.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Plans for WML 2.0.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 1 Aug 2000 14:00:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Aug 01, 2000 at 01:24:18PM +0200, Tobias Oetiker wrote:
+
+&gt; *&gt; Hi,
+&gt; *&gt; 
+&gt; *&gt; i will be away next week for 3 weeks, without net connectivity.
+&gt; *&gt; During my vacation, i plan reading books on Perl regular expressions
+&gt; *&gt; (especially how to reduce regexp processing time) and writing efficient
+&gt; *&gt; C programs. Tell me if you know good books (or eventually URL pointers)
+&gt; *&gt; on these topics (even classical ones). Please do not reply to this
+&gt; *&gt; mailing-list when sending your advice.
+&gt; 
+&gt; for regular expressions you certainly want to read the regexp book
+&gt; from o'reily ... this is simply the best ...
+
+Hi Tobias, is this `Mastering Regular Expressions' by Friedl?
+
+&gt; *&gt; WML 2.0.3 will be released at my coming back, after some final checks.
+&gt; *&gt; If some of you could test current snapshot and report whether it works
+&gt; *&gt; or not, it would help me a lot.  It contains no known bugs, works well
+&gt; *&gt; with my input files, but almost all modules have been updated, so some
+&gt; *&gt; bugs may have been introduced.
+&gt; 
+&gt; the current snampshot (31.7 seems to work fine)
+&gt; 
+&gt; it tunes out though that the perl pass has become half as fast from
+&gt; the previous release 2.0.2 to the current snapshot :-( 
+
+Huh?
+But the only changes in ePerl were to make it compile under Perl 5.6.0.  
+Could you put somewhere a tarball containing files affected by this
+slowing down?
+
+Thanks
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01871" HREF="msg01871.shtml">Re: [wml] Re: [wml] Plans for WML 2.0.3</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01868" HREF="msg01868.shtml">Plans for WML 2.0.3</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01869" HREF="msg01869.shtml">Re: [wml] Plans for WML 2.0.3</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01869.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01871.shtml">Re: [wml] Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01869.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01871.shtml">Re: [wml] Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01870"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01870"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

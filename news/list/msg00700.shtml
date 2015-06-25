@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: shebang line with filename&#45;variable -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 27 May 1999 09:51:50 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990527094325.26803A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990526094807.650C&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00700">Date Index</a>][<a href="thrd15.shtml#00700">Thread Index</a>]<br>
+[<A HREF="msg00699.shtml">Date Prev</A>][<A HREF="msg00701.shtml">Date Next</A>][<A HREF="msg00694.shtml">Thread Prev</A>][<A HREF="msg00697.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: shebang line with filename-variable</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 27 May 1999 09:45:55 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 26 May 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Can I use in a shebang line a filename-variable
+&gt; 
+&gt; something like this
+&gt; #!wml -o (ALL-LANG_*)uLANG_DE:$(WML_SOURCE_FILENAME).html
+&gt; 
+&gt; which will result in a html-file with the same name as the
+&gt; source-file.
+
+Reread the documentation, everything you need in in the wml manpage ;)
+#!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00694" HREF="msg00694.shtml">shebang line with filename-variable</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00699.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00701.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00694.shtml">shebang line with filename-variable</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00697.shtml">Slice-1.3.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00700"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00700"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

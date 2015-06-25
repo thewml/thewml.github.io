@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: problem with rollover -->
+<!--X-From-R13: Qnvyynhq @vpbynf <apnvyynhqNnygrea.bet> -->
+<!--X-Date: Sun, 29 Aug 1999 22:46:58 +0200 (MET DST) -->
+<!--X-Message-Id: 37C99596.FDA8F9D9@altern.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990828222015.8492A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00907">Date Index</a>][<a href="thrd19.shtml#00907">Thread Index</a>]<br>
+[<A HREF="msg00906.shtml">Date Prev</A>][<A HREF="msg00908.shtml">Date Next</A>][<A HREF="msg00905.shtml">Thread Prev</A>][<A HREF="msg00916.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: problem with rollover</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Caillaud Nicolas &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 29 Aug 1999 22:18:30 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+
+&gt; On Fri, 27 Aug 1999, Caillaud Nicolas wrote:
+&gt;
+&gt; &gt; Here is the problem :
+&gt; &gt; when the first rollover tag is in a slice, the javascript handling the
+&gt; &gt; onMouseOver is generated in that slice
+
+............
+
+&gt;
+&gt; Yes, take a look at
+&gt;        <A  HREF="http://www.engelschall.com/sw/wml/news/list/885.html">http://www.engelschall.com/sw/wml/news/list/885.html</A>
+&gt; This mailing-list is archived and you can perform keyword search
+&gt; on it ;-)
+
+thanks for that pointer
+
+&gt;
+&gt;
+&gt; &gt; Does a patch exist to handle this problem ?
+&gt; &gt; In fact, a work around is to define a rollover outside all slices, at the
+&gt; &gt; beginning of the file, but ...........
+&gt;
+&gt; but what?
+
+oh .... nothing .. :)
+
+&gt;
+
+&gt;
+&gt;
+&gt; --
+&gt; Denis Barbier
+&gt; WML Maintainer
+&gt;
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00905" HREF="msg00905.shtml">Re: problem with rollover</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00906.shtml">question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00908.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00905.shtml">Re: problem with rollover</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00916.shtml">[BUG REPORT] WML 1.7.1, Linux 2.0.33</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00907"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00907"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Problem after switching to 2.0.1 -->
+<!--X-From-R13: Yevfuan H [bghxhev <xevfuanNhavincc.pbz> -->
+<!--X-Date: Fri, 23 Jun 2000 02:56:55 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0006221754510.12208&#45;100000@univapp.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 002501bfdc9b$a57f7ae0$d90bfea9@pc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01734">Date Index</a>][<a href="thrd36.shtml#01734">Thread Index</a>]<br>
+[<A HREF="msg01733.shtml">Date Prev</A>][<A HREF="msg01735.shtml">Date Next</A>][<A HREF="msg01732.shtml">Thread Prev</A>][<A HREF="msg01727.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Problem after switching to 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Krishna V Motukuri &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Jun 2000 17:57:36 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Well, it worked for me, i.e Perl 5.6.0. I still have to do what Denis said
+and see if that fixes the compatibility problem I have. Will let you know
+if everything goes okay.
+
+What problem were you getting with 5.6.0??
+
+Btw, if I wasn't clear, I was using perl 5.00504 with wml 1.7.x
+After switching to perl 5.6.0, I never used wml. I just upgraded to wml
+2.0 and tested the code.
+
+Krishna
+
+On Thu, 22 Jun 2000, Santiago Erquicia wrote:
+
+&gt; How did you get it work with perl 5.6.0??  I've switch to Mandrake 7.1 and
+&gt; that is the version of perl and I didn't know how to use it.
+&gt; 
+&gt; Thanks
+&gt; -----Mensaje original-----
+&gt; De: Krishna V Motukuri &lt;krishna@univapp.com&gt;
+&gt; Para: sw-wml@engelschall.com &lt;sw-wml@engelschall.com&gt;
+&gt; Fecha: Jueves, 22 de Junio de 2000 02:30 a.m.
+&gt; Asunto: Problem after switching to 2.0.1
+&gt; 
+&gt; 
+&gt; &gt;Hi,
+&gt; &gt;   I just switched from 1.7.* to 2.0.1 and now my &lt;define-container&gt; tag
+&gt; &gt;is not being recognised by the parser. All "define-container" tags appear
+&gt; &gt;as it is in the html document. I'm not sure what went wrong. I got the new
+&gt; &gt;tarball from the website itself. Can someone please help with this
+&gt; &gt;problem?
+&gt; &gt;
+&gt; &gt;eg:
+&gt; &gt;-------------------------
+&gt; &gt;#use wml::std::tags
+&gt; &gt;
+&gt; &gt;&lt;define-container content-submission-form&gt;
+&gt; &gt;&lt;/define-container&gt;
+&gt; &gt;
+&gt; &gt;&lt;title&gt;Test Page&lt;/title&gt;
+&gt; &gt;&lt;body bgcolor=white&gt;
+&gt; &gt;Hello World
+&gt; &gt;&lt;/body&gt;
+&gt; &gt;-------------------------
+&gt; &gt;
+&gt; &gt;produces
+&gt; &gt;--------------------------
+&gt; &gt;&lt;define-container content-submission-form&gt;
+&gt; &gt;&lt;/define-container&gt;
+&gt; &gt;
+&gt; &gt;&lt;title&gt;Test Page&lt;/title&gt;
+&gt; &gt;&lt;body bgcolor=white&gt;
+&gt; &gt;Hello World
+&gt; &gt;&lt;/body&gt;
+&gt; &gt;-------------------------
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;I'm running:
+&gt; &gt;Redhat 6.2
+&gt; &gt;gcc version egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
+&gt; &gt;perl 5.6.0
+&gt; &gt;
+&gt; &gt;Thanks,
+&gt; &gt;Krishna
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;______________________________________________________________________
+&gt; &gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; &gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt; &gt;Automated List Manager                       majordomo@engelschall.com
+&gt; &gt;
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01731" HREF="msg01731.shtml">RE: Problem after switching to 2.0.1</A></strong>, <em>From:</em> Santiago Erquicia</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01735.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01732.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01734"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01734"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

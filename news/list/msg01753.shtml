@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Sat, 24 Jun 2000 18:28:32 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0006241827130.29286&#45;100000@drwho.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000623221857.A1617@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01753">Date Index</a>][<a href="thrd36.shtml#01753">Thread Index</a>]<br>
+[<A HREF="msg01752.shtml">Date Prev</A>][<A HREF="msg01754.shtml">Date Next</A>][<A HREF="msg01752.shtml">Thread Prev</A>][<A HREF="msg01754.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 24 Jun 2000 18:28:27 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; No, since WML 1.7.3 it is recommended to write {#TITLE#} to prevent
+&gt; problems with pass 2. Oh shit wml_intro(7) mentions both syntaxes.
+&gt; All references to ..&gt;&gt;, &lt;&lt;.. and &lt;&lt;NAME&gt;&gt; must be removed from
+&gt; documentation, except a note in wml_p5_divert.
+
+How do I do
+
+    ..!NAME&gt;&gt;bla&lt;&lt;..
+
+with &lt;divert&gt;?  &lt;divert !NAME&gt;bla bla&lt;/divert&gt; doesnt seem to work.
+
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01754" HREF="msg01754.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01742" HREF="msg01742.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01752.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01754.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01752.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01754.shtml">Re: [wml] Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01753"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01753"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,636 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Introduction</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:37"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Introduction</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Introduction - An introduction to WML's basic concepts</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+		<li><a href="#concept_1__sequential_filtering_scheme">CONCEPT 1: SEQUENTIAL FILTERING SCHEME</a></li>
+		<li><a href="#concept_2__wmlrc_file_hierarchy_and_wmlopts_variable">CONCEPT 2: WMLRC FILE HIERARCHY AND WMLOPTS VARIABLE</a></li>
+		<li><a href="#concept_3__autoadjusted_url_and_filename_variables">CONCEPT 3: AUTO-ADJUSTED URL AND FILENAME VARIABLES</a></li>
+	</ul>
+	<li><a href="#more_information">MORE INFORMATION</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>WML Introduction - An introduction to WML's basic concepts</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>WML is a free HTML generation toolkit for Unix, internally consisting of 9
+independent languages. The main idea of WML is a sequential filtering scheme
+where each language provides one of 9 processing passes. So the frontend
+<em>wml</em> reads <em>inputfile</em> (or from <code>stdin</code> if <em>inputfile</em> is a dash or
+completely missing), applies passes 1-9 (or only the <em>passes</em> specified by
+<strong>-p</strong>) and finally produces one or more <em>outputfile</em>s.</p>
+<p>WML implements a total of three essential concepts which interact with each
+other:</p>
+<p>
+</p>
+<h2><a name="concept_1__sequential_filtering_scheme">CONCEPT 1: SEQUENTIAL FILTERING SCHEME</a></h2>
+<p>This concept implements the various language features by making use of maximum
+software leverage, i.e. WML is built on top of 9 languages which are run in a
+well-ordered fashion by the <em>wml</em> frontend.</p>
+<dl>
+<dt><strong><a name="item_pass_1_3a_source_reading_and_include_file_expansio"><strong>Pass 1: Source Reading and Include File Expansion</strong></a></strong>
+<dd>
+<pre>
+ Processing:     explicit
+ Implementation: Include Pre-Processor (IPP)
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p1_ipp.html">wml_p1_ipp</a>(1)</pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>This first pass reads <em>inputfile</em> and expands all inlined include file
+directives by (perhaps recursively) substituting them with the contents of the
+corresponding file. The file itself will be read from the current working
+directory or from a list of dedicated include directories (compiled in ones
+and also given via option <strong>-I</strong>). When <code>name=value</code> pairs are appended to the
+include directive <code>$(name)</code> is expanded to <code>value</code> in this particular
+include file and all its recursively included files. Additionally this Pass
+provides an End-Of-Line continuation feature and three special strings.
+``<code>__FILE__</code>'' and ``<code>__LINE__</code>'' expand to the current include file and
+line number while ``<code>__END__</code>'' terminates the reading of the current include
+file.</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<pre>
+  some text which is \
+      continued at this line</pre>
+</dd>
+<dd>
+<pre>
+  $(name)</pre>
+</dd>
+<dd>
+<pre>
+  __FILE__, __LINE__
+  __END__</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+  This FooBar, contained in file __FILE__, line __LINE__.</pre>
+</dd>
+<dd>
+<pre>
+  __END__
+  Documentation of FooBar...</pre>
+</dd>
+<dt><strong><a name="item_pass_2_3a_high_2dlevel_macro_construct_expansion"><strong>Pass 2: High-Level Macro Construct Expansion</strong></a></strong>
+<dd>
+<pre>
+ Processing:     explicit
+ Implementation: Macro Processor for HTML Documents (mp4h)
+ Author:         Denis Barbier &lt;barbier@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p2_mp4h.html">wml_p2_mp4h</a>(1)
+                 <a href="http://www.engelschall.com/sw/mp4h/">http://www.engelschall.com/sw/mp4h/</a></pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>This is the HTML-like macro definition and expansion pass. Here new HTML
+tags are defined via <code>&lt;define-tag foo&gt;</code> and later expanded at
+the location of their usage (<code>&lt;foo&gt;</code>. The goal of this pass is
+to create new HTML tags which encapsulate either raw text or even
+programmed functionality of Pass 3 (ePerl).</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+  &lt;define-tag foo&gt;
+  ...%attributes...
+  &lt;/define-tag&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;define-tag bar endtag=required&gt;
+  ...%attributes...%body...
+  &lt;/define-tag&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;foo ...&gt;
+  &lt;bar ...&gt;...&lt;/bar&gt;</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+  &lt;define-tag me&gt;RSE&lt;/define-tag&gt;
+  This is &lt;me&gt;.</pre>
+</dd>
+<dt><strong><a name="item_pass_3_3a_programming_construct_expansion"><strong>Pass 3: Programming Construct Expansion</strong></a></strong>
+<dd>
+<pre>
+ Processing:     explicit
+ Implementation: Embedded Perl 5 Language (ePerl)
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p3_eperl.html">wml_p3_eperl</a>(1)
+                 <a href="http://www.engelschall.com/sw/eperl/">http://www.engelschall.com/sw/eperl/</a></pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>In this pass the real programming takes place. The used language is Larry
+Wall's Perl 5 scripting language. The language constructs are bristled into
+the HTML markup code by the use of begin (<code>&lt;:</code>) and end (<code>:&gt;</code>)
+delimiters. Additionally this pass provides some nice shortcut: First a
+&lt;#if..#elsif..#else..#endif&gt; construct which gets expanded to the
+corresponding Perl construct, second a shorthand (<code>&lt;:= ...:&gt;</code>) for
+the construct (<code>&lt;: print ...:&gt;</code> which is used most of the time. And
+there is a container tag in <em>wml::std::tags</em> which provides the more
+high-level container tag <code>&lt;perl&gt;</code>.</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+  &lt;perl&gt; ...Perl 5 constructs... &lt;/perl&gt;
+  &lt;: ...Perl 5 constructs... :&gt;
+  &lt;:= ... :&gt;</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<pre>
+  &lt;perl&gt;
+  sub isotime _lbrace_
+      my ($time) = @_;
+  
+      my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) =
+          localtime($time);
+      my ($str) = sprintf(&quot;%04d-%02d-%02d %02d:%02d:%02d&quot;,
+           $year+1900, $mon+1, $mday, $hour, $min, $sec);
+      return $str;
+  _rbrace_
+  &lt;/perl&gt;</pre>
+</dd>
+<dd>
+<pre>
+  The current date is &lt;:= &amp;isotime(time()) :&gt;.</pre>
+</dd>
+<dt><strong><a name="item_pass_4_3a_low_2dlevel_macro_construct_expansion"><strong>Pass 4: Low-Level Macro Construct Expansion</strong></a></strong>
+<dd>
+<pre>
+ Processing:     explicit
+ Implementation: GNU m4
+ Author:         Ren'e Seindal (FSF)
+ See Also:       <a href="../backend/wml_p4_gm4.html">wml_p4_gm4</a>(1)
+                 <a href="http://www.gnu.mit.edu/">http://www.gnu.mit.edu/</a></pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>In this pass another macro processor run takes place. While in pass 2 a macro
+processor with a HTML-like syntax was used for high-level macro programming,
+this pass uses a macro processor for low-level programming. Mainly this pass
+is intended to provide low-level symbol and function definitions
+(<code>m4_define()</code>. There is a definition in <em>wml::std::tags</em> which provides a
+more high-level usage via the <code>&lt;symbol&gt;</code> tag.</p>
+</dd>
+<dd>
+<p><em>Notice:</em> This pass is run under a special environment: First, all m4 builtin
+macros have to be prefixed with ``<code>m4_</code>''. Second, all variables which are
+defined by WML (both internal ones and the ones from the <strong>-D</strong> option) are
+directly accessible via symbols prefixed with <code>m4_</code>, i.e. variable <code>NAME</code> is
+interpolated when <code>m4_NAME</code> occurs. Third, the quoting characters are
+disabled per default to prevent problems with the generated content. If you
+need quotes (for instance in include files) you have to enable them via
+<code>m4</code><code>_quotes</code> and disable them later via <code>m4</code><code>_noquotes</code>.</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+  m4_quotes
+  m4_define(`name', `value')
+  m4_noquotes</pre>
+</dd>
+<dd>
+<pre>
+  &lt;symbol name value&gt;</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+  &lt;symbol bar BAZ&gt;</pre>
+</dd>
+<dd>
+<pre>
+  foo bar quux</pre>
+</dd>
+<dt><strong><a name="item_pass_5_3a_diversion_filter"><strong>Pass 5: Diversion Filter</strong></a></strong>
+<dd>
+<pre>
+ Processing:     explicit
+ Implementation: Divert
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p5_divert.html">wml_p5_divert</a>(1)</pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>In this pass a flexible and powerful diversion filter is applied. This is
+intended to provide a mechanism to change and intermix the order of data
+blocks. Do not intermix this with neither the general macro mechanisms of pass
+2 and 4 nor the less powerful <code>divert</code> mechanism of GNU m4. The idea is to
+define <em>locations</em> (via <code>_lbrace_#NAME#_rbrace_</code>) at any point and fill
+such locations later by diverting the data flow to it (via <code>_lbrace_#NAME#:</code>
+and <code>:#NAME#_rbrace_</code>) at another point. What makes this filter such powerful is
+the fact that both the definition points and the diversion points can be done
+in any order and they can even be nested. Again WML provides high-level
+support tags in <em>wml::std::tags</em> for this functionality.</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+  _lbrace_#NAME#_rbrace_
+  &lt;dump NAME&gt;</pre>
+</dd>
+<dd>
+<pre>
+  _lbrace_#NAME#:
+  data for location `NAME'
+  :##_rbrace_</pre>
+</dd>
+<dd>
+<pre>
+  &lt;enter NAME&gt;
+  data for location `NAME'
+  &lt;leave&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;divert NAME&gt;
+  data for location `NAME'
+  &lt;/divert&gt;</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+  &lt;table&gt;
+  &lt;tr&gt;
+  &lt;td&gt;&lt;dump LBORDER&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;dump BODY&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;dump RBORDER&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/table&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;divert LBORDER&gt;
+  Stuff for the left border
+  &lt;/divert&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;divert RBORDER&gt;
+  Stuff for the right border
+  &lt;/divert&gt;</pre>
+</dd>
+<dd>
+<pre>
+  &lt;divert BODY&gt;
+  The main data
+  &lt;/divert&gt;</pre>
+</dd>
+<dt><strong><a name="item_pass_6_3a_character_and_string_substitution"><strong>Pass 6: Character and String Substitution</strong></a></strong>
+<dd>
+<pre>
+ Processing:     explicit
+ Implementation: Area Subst (ASubst)
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p6_asubst.html">wml_p6_asubst</a>(1)</pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>In this pass single characters or substrings are substituted within dedicated
+areas (delimited by <code>_lbrace_: ... :_rbrace_</code>). The intend is to support ISO-Latin-1 or
+other special characters which will be entered as 8 Bit character codes and
+are substituted by their HTML entity-encoding string. Do not intermix this
+with macro-expansion of Pass 2 or 4. This is generalized regular expression
+based substitution pass where you can use Perl's <code>s/../../</code> and <code>tr/../../</code>
+commands to specify the substitutions. These can be placed anywhere inside the
+substitution area and just have to be marked by <code>_lbrack__lbrack_..._rbrack__rbrack_</code> delimiters. But the
+commands are always applied to the whole area.</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+  _lbrace_: ...text.._lbrack__lbrack_s/../../flags_rbrack__rbrack_..
+     ...text.._lbrack__lbrack_tr/../../flags_rbrack__rbrack_.. :_rbrace_</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+  _lbrace_: _lbrack__lbrack_s|ä|&amp;auml;|_rbrack__rbrack_ _lbrack__lbrack_s|ü|&amp;uuml;|_rbrack__rbrack_
+  Foo Bar Baz Quux with Umlauts ä and ü
+  :_rbrace_</pre>
+</dd>
+<dt><strong><a name="item_pass_7_3a_markup_code_fixup"><strong>Pass 7: Markup Code Fixup</strong></a></strong>
+<dd>
+<pre>
+ Processing:     implicit
+ Implementation: HTMLfix
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p7_htmlfix.html">wml_p7_htmlfix</a>(1)</pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>In this pass some commonly known HTML markup code fixups are done. For
+instance missing <code>WIDTH</code> and <code>HEIGHT</code> attributes for all <code>IMG</code> tags are
+calculated and added, <code>ALT</code> tags are added where missing, missing `<code>#</code>'
+characters in front of hextriple color attributes are added, numeric attribute
+values are surrounded by quotes, obsolete HTML markup code like the
+proprietary <code>&lt;center&gt;</code> tag is replaced by new standard HTML 3.2 tags
+(<code>&lt;div align=center&gt;</code>), etc. pp.</p>
+</dd>
+<dt><strong><a name="item_pass_8_3a_markup_code_stripping"><strong>Pass 8: Markup Code Stripping</strong></a></strong>
+<dd>
+<pre>
+ Processing:     implicit
+ Implementation: HTMLstrip
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p8_htmlfix.html">wml_p8_htmlfix</a>(1)</pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>Because macro definitions add newlines to the output (or you have to always
+use ``<code>...</code>&lt;<code>/define-tag</code>&gt;<code>;;;</code>'', etc), additional comments
+shell-style would be useful and whitespaces can often be stripped from HTML
+markup code without changing the result, this special HTML markup code
+reducement pass is done. The amount of stripping can be controlled by the WML
+option <strong>-O</strong>. Default is <strong>-O2</strong> which does a really good job without
+destroying anything. There is one special feature one should know: This pass
+recognizes pre-formatted areas ( <code>&lt;pre&gt;..&lt;/pre&gt;</code>) and skips
+them. Additionally when you want some area of your input file Threaten like
+pre-formatted, then this Pass also supports its own container tag named
+<code>&lt;nostrip&gt;...&lt;/nostrip&gt;</code>. This has the same effect like
+<code>&lt;pre&gt;</code> but is itself stripped, too.</p>
+</dd>
+<dt><strong><a name="item_pass_9_3a_markup_code_splitting_and_output_generat"><strong>Pass 9: Markup Code Splitting and Output Generation</strong></a></strong>
+<dd>
+<pre>
+ Processing:     implicit/explicit
+ Implementation: Slice
+ Author:         Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+ See Also:       <a href="../backend/wml_p9_slice.html">wml_p9_slice</a>(1)
+                 <a href="http://www.engelschall.com/sw/slice/">http://www.engelschall.com/sw/slice/</a></pre>
+</dd>
+<dd>
+<p><strong>Description:</strong></p>
+</dd>
+<dd>
+<p>The last and final pass is a really tricky one again, because one feature is
+still not implemented. We need some way to conditionally create output to
+different output files. To accomplish this another source file construct
+(<code>_lbrack_NAME:...:NAME_rbrack_</code>) is recognized which defines so-called <em>slices</em>. Those
+slices are (possibly overlapped or nested) named areas of the input file which
+can be used via WML's <strong>-o</strong> option. This option can contain a <em>slice-term</em> in
+front of the filename which selects the slices to be written to the output
+file. Such slice-terms are actually set theory terms where slices with the
+same name define a set.</p>
+</dd>
+<dd>
+<p><strong>Summary Of Essential Features:</strong></p>
+</dd>
+<dd>
+<pre>
+  _lbrack_NAME: ... :NAME_rbrack_
+  _lbrack_NAME: ... :_rbrack_</pre>
+</dd>
+<dd>
+<p><strong>Example:</strong></p>
+</dd>
+<dd>
+<pre>
+  _lbrack_EN:Welcome to:_rbrack__lbrack_DE:Willkommen zu:_rbrack_ Foo Bar Baz Quux!</pre>
+</dd>
+</dl>
+<p>
+</p>
+<h2><a name="concept_2__wmlrc_file_hierarchy_and_wmlopts_variable">CONCEPT 2: WMLRC FILE HIERARCHY AND WMLOPTS VARIABLE</a></h2>
+<p>The second essential idea of WML is the use of <em>.wmlrc</em> files and a
+<code>WMLOPTS</code> environment variable for additionally command line options. On
+startup the frontend <em>wml</em> first processes all options found in <code>WMLOPTS</code>,
+then it reads all options from <em>$HOME/.wmlrc</em> followed by the options of all
+<em>.wmlrc</em> files found in all parent directories (i.e. <em>../.wmlrc</em>,
+<em>../../.wmlrc</em>, etc) of the directory containing input file. And finally it
+processes all options given on the command line. For instance this feature
+provides you with the ability to setup defaults via <strong>-D</strong> options in the
+<em>.wmlrc</em> file at the top of your Webarea.</p>
+<p>And there is one more special case: The option form</p>
+<pre>
+   -DNAME~VALUE</pre>
+<p>is always sticky to its location, i.e. it always gets evaluated for its local
+directory context instead of the current working directory where <em>wml</em> was
+started. Use this to easily introduce path or URL variables which adjust
+automatically to the current context of the generated webpage.</p>
+<p>
+</p>
+<h2><a name="concept_3__autoadjusted_url_and_filename_variables">CONCEPT 3: AUTO-ADJUSTED URL AND FILENAME VARIABLES</a></h2>
+<p>The third essential idea of WML is the above shortly described variable
+adjustment concept which can be used via variable interpolation. The frontend
+<em>wml</em> provides a <strong>-D</strong> option for defining variables which get interpolated
+in each pass:</p>
+<pre>
+  -DNAME=VALUE
+  -DNAME~VALUE</pre>
+<p>For both forms the value can be interpolated via &lt;<code>get-var NAME</code>&gt;
+inside Pass 2 and via <code>&lt;:=$NAME:&gt;</code> in Pass 3. The difference between
+the two forms is the tricky part of adjustment here:</p>
+<dl>
+<dt><strong><a name="item__2dd_name_3dvalue"><code>-D NAME=VALUE</code></a></strong>
+<dd>
+<p>Here the variable NAME gets statically set to VALUE. Each time you interpolate
+the variable the result is exactly VALUE.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dd_name_7evalue"><code>-D NAME~VALUE</code></a></strong>
+<dd>
+<p>Here the variable NAME gets initialized with VALUE and VALUE will be treated
+as either a (not fully qualified) URL or filename. When you interpolate the
+variable the result is VALUE if the current working directory is the same as
+where you used the <strong>-D</strong> option (either where you run the frontend <em>wml</em> or a
+<em>.wmlrc</em> file). Else the result is VALUE relative path-adjusted for the
+current working directory.</p>
+</dd>
+</li>
+</dl>
+<p>On the first look this seems useless, but combined with CONCEPT 2 this
+provides a very essential feature. Here it provides a powerful mechanism to
+automatically let URLs or pathnames re-calculated for the local context. For
+instance when you define <code>-DROOT~.</code> in your top-level <em>.wmlrc</em> file then the
+variable <code>ROOT</code> will be interpolated to `<code>.</code>' at the top-level, to `<code>..</code>'
+at the first subdir level, to `<code>../..</code>' at the second subdir level, etc. Use
+this for creating navigation bars or URL references across subtrees.</p>
+<p>
+</p>
+<hr />
+<h1><a name="more_information">MORE INFORMATION</a></h1>
+<p>Now you've seen the various core languages of WML. For a step-by-step
+introduction to this functionality and to see real examples, I recommend you
+to read the WML tutorial in <code><a href="../docs/wml_tutorial.html">wml_tutorial</a>(7)</code> now.</p>
+<p>Additionally can can step through the set of available standard include files
+WML ships with. Start with the top-level include file <a href="../incl/wml::all.html">wml::all</a>(3).</p>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p><a href="../docs/wml_tutorial.html">wml_tutorial</a>(7),
+<a href="../docs/wml_tags.html">wml_tags</a>(7).</p>
+<p><a href="../backend/wml_p1_ipp.html">wml_p1_ipp</a>(1),
+<a href="../backend/wml_p2_mp4h.html">wml_p2_mp4h</a>(1),
+<a href="../backend/wml_p3_eperl.html">wml_p3_eperl</a>(1),
+<a href="../backend/wml_p4_gm4.html">wml_p4_gm4</a>(1),
+<a href="../backend/wml_p5_divert.html">wml_p5_divert</a>(1),
+<a href="../backend/wml_p6_asubst.html">wml_p6_asubst</a>(1),
+<a href="../backend/wml_p7_htmlfix.html">wml_p7_htmlfix</a>(1),
+<a href="../backend/wml_p8_htmlstrip.html">wml_p8_htmlstrip</a>(1),
+<a href="../backend/wml_p9_slice.html">wml_p9_slice</a>(1).</p>
+<p><a href="../incl/wml::all.html">wml::all</a>(3)</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

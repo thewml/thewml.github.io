@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Substitution of asteriks -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 22 Mar 1999 14:11:41 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990322120152.23613A&#45;200000@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 87pv61ncvb.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00509">Date Index</a>][<a href="thrd11.shtml#00509">Thread Index</a>]<br>
+[<A HREF="msg00508.shtml">Date Prev</A>][<A HREF="msg00510.shtml">Date Next</A>][<A HREF="msg00520.shtml">Thread Prev</A>][<A HREF="msg00510.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Substitution of asteriks</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Mar 1999 14:05:12 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 22 Mar 1999, Florian Hars wrote:
+
+&gt; Tobias Oetiker &lt;oetiker@ee.ethz.ch&gt; writes:
+&gt; &gt; *&gt; Is-it possible to combine two substitution of asteriks ?
+&gt; &gt; sure, but the syntax must be
+&gt; &gt; &lt;navbar:button img = &lt;lang:star: Icons-*&gt;-*.gif&gt;
+&gt; 
+&gt; This way you will get something like 
+&gt; &lt;img src="[LANG_EN: Icons-en-n.gif][LANG_DE: Icons-de-n.gif]"&gt;
+&gt; and since the slice-pass comes after the html fixup pass in wml 1.6.8
+&gt; (IIRC Denis made some remarks about moving the fixup to the end of the
+&gt; pipline, where it belongs, what happend to this in SNAP?) this will
+&gt; not give you height and width attributes for your images.
+
+Changing slice order implies a lot of changes: directory names, file
+names, Makefiles, and of course wml itself.
+I am working on it.
+
+&gt; The other way at least for your problem is my solution which I
+&gt; mentioned last week, which uses the hashmark (#) for the lang
+&gt; substitution:
+&gt; &lt;navbar:button img=Icons-#-*.gif&gt;
+&gt; and produces:
+&gt; [LANG_EN: &lt;img src=Icons-en-n.gif&gt;][LANG_DE: ...]
+&gt; which will be properly handeled by the fixup pass (and it saves you
+&gt; some keystrokes, too :-)).
+
+The latter argument is not very important, the navbars are defined once
+so saving 20 keystrokes does not really matter. The advantage of your
+solution is to be htmlfix friendly. Its drawback is to be confusing for
+beginners, i presume the ``img=&lt;lang:star: Icons-*&gt;-*.gif&gt;'' is more
+intuitive (and will be even more when documented :o) or even
+``img=Icons-&lt;lang:star: *&gt;-*.gif&gt;''. This is my preferred one.
+
+Unfortunately, it doe not work, as you know.
+One workaround is to write
+    img=Icons-&lt;protect pass=3&gt;&lt;lang:star: *&gt;&lt;/protect&gt;-*.gif&gt;
+and to apply the attached patch.
+IMHO, it performs exactly what we want.
+Any opinion? What does ``IIRC'' mean?
+
+Florian, i will put your mynavbar.wml into the wml_contrib, and rename it.
+Is navbar-hars.wml a good choice? Maybe you want to do some changes,
+e.g. inserting a link to <A  HREF="http://www.hars.de/www/mynavbar.wml">http://www.hars.de/www/mynavbar.wml</A>. In this
+case, send a mail off the list with your file attached.
+
+Thanks.
+
+    Denis
+
+--
+Dr D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+</PRE>
+<PRE>
+--- wml	1999/03/18 15:00:32	1.9
++++ wml	1999/03/22 11:54:39
+@@ -632,7 +632,7 @@
+ 
+ sub unprotect {
+     my ($file, $pass) = @_;
+-    my ($fp, $data, $prefix, $key, $s);
++    my ($fp, $data, $prefix, $key, $s, @keys);
+ 
+     $fp = new IO::File;
+     $fp-&gt;open("&lt;$file") || die "cannot load $file for unprotection";
+@@ -641,6 +641,7 @@
+         $data .= $_;
+     }
+     $fp-&gt;close;
++    @keys = ();
+     $fp-&gt;open("&gt;$file") || die "cannot load $file for unprotection";
+     while ($data =~ m|^(.*?)-=P\[(\d+)\]=-(.*)$|is) {
+         ($prefix, $key, $data) = ($1, $2, $3);
+@@ -648,7 +649,7 @@
+         if ($pass &gt;= $s-&gt;{PE}) {
+             $fp-&gt;print($prefix);
+             $fp-&gt;print($s-&gt;{BODY});
+-            $PROTECT_STORAGE{$key} = undef if $pass &lt; 9;
++            push(@keys, $key);
+         }
+         else {
+             $fp-&gt;print($prefix."-=P[$key]=-");
+@@ -656,6 +657,9 @@
+     }
+     $fp-&gt;print($data);
+     $fp-&gt;close;
++    foreach $key (@keys) {
++        $PROTECT_STORAGE{$key} = undef if $pass &lt; 9;
++    }
+ }
+ 
+ sub pass1 {
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00510" HREF="msg00510.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00504" HREF="msg00504.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00508.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00510.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00520.shtml">Re: Automatic button generation (Was: Substitution of asteriks)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00510.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00509"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00509"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

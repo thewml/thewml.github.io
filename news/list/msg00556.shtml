@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Daily Snapshot as .tar.gz -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 8 Apr 1999 14:24:58 +0200 (MET DST) -->
+<!--X-Message-Id: 19990408142243.A4116@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990408011741.A20219@gmx.de -->
+<!--X-Reference: Pine.LNX.3.96.990408042123.26832B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00556">Date Index</a>][<a href="thrd13.shtml#00556">Thread Index</a>]<br>
+[<A HREF="msg00555.shtml">Date Prev</A>][<A HREF="msg00557.shtml">Date Next</A>][<A HREF="msg00558.shtml">Thread Prev</A>][<A HREF="msg00561.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Daily Snapshot as .tar.gz</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Apr 1999 14:22:43 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Apr 08, 1999, Denis Barbier wrote:
+
+&gt; &gt; I just wanted to download the newest snapshot of wml as a .tar.gz file
+&gt; &gt; (developing stopped a bit and I wanted to spend some time improving several
+&gt; &gt; minor things),
+&gt; 
+&gt; you're welcome :o)
+&gt; In <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A> you have a pointer to the
+&gt; latest snapshot (wml-SNAP-[0-9]*.tar.gz) so i don't understand the
+&gt; subject of your post.
+&gt; 
+&gt; &gt; ------
+&gt; &gt; sutok@pallas(p0) ~&gt; wget <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+&gt; [snip]
+&gt; 
+&gt; Ralf, could you please change the write permissions of the ftp repository
+&gt; so that i can let the latest snapshot available from
+&gt;    <A  HREF="ftp://ftp.engelschall.com/sw/wml">ftp://ftp.engelschall.com/sw/wml</A>
+&gt; 
+&gt; When it's done,
+&gt;     wget -g <A  HREF="ftp://ftp.engelschall.com/sw/wml/wml-SNAP-*.tar.gz">ftp://ftp.engelschall.com/sw/wml/wml-SNAP-*.tar.gz</A>
+&gt; should work.
+
+Whe WGet client is per default blocked on www.engelschall.com because too much
+crazy people in the past tried to download the _ENTIRE_ websize (&gt; 100MB) with
+WGet. So I blocked this nasty client totally. When you want to use WGet you've
+to use a different User-Agent ;-)
+
+&gt; About the diffs, it's a good idea. Ralf, do you remember why you stopped
+&gt; distributing diff files? 
+
+Have I stopped? I can't remember. Actually the diffs are useful, of course.
+So feel free to start it again, Denis. The scripts for it should still stay
+inside the webtree under distrib/.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00552" HREF="msg00552.shtml">Daily Snapshot as .tar.gz</A></strong>, <em>From:</em> Florian Kuehnert</li>
+<li><strong><A NAME="00554" HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00555.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00557.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00558.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00561.shtml">bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00556"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00556"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: m4 und divert -->
+<!--X-From-R13: "Buvyvcc [rvfra" <cuvyvccNzrvfra.arg> -->
+<!--X-Date: Mon, 17 Dec 2001 12:31:34 +0100 (MET) -->
+<!--X-Message-Id: 000801c186ee$27d39280$3300a8c0@TOnline -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02465">Date Index</a>][<a href="thrd50.shtml#02465">Thread Index</a>]<br>
+[<A HREF="msg02464.shtml">Date Prev</A>][<A HREF="msg02466.shtml">Date Next</A>][<A HREF="msg02461.shtml">Thread Prev</A>][<A HREF="msg02466.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>m4 und divert</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Philipp Meisen&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Dec 2001 12:29:56 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<TABLE><TR><TD BGCOLOR="#ffffff" STYLE="background-color: #ffffff; ">
+
+
+<DIV><FONT face=Arial size=2>Could someone gibe me an example, why&nbsp;I should 
+use divert&nbsp;and m4?</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>Here my example, why I ask</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>with divert:</FONT></DIV>
+<DIV><FONT face=Arial size=2>{#TEST#:lalala:##}</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>Ausgabe: {#TEST#}</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>with m4:</FONT></DIV>
+<DIV><FONT face=Arial size=2>m4_define(TEST, lalala)</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>Ausgabe: TEST</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>I mean where is the different? In my 
+opinion&nbsp;everything I can realize with m4 I also can realize with 
+divert...</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial size=2>Please explain me the different</FONT></DIV>
+<DIV><FONT face=Arial size=2></FONT>&nbsp;</DIV>
+<DIV>
+<DIV><FONT face=Arial size=2>thx Philipp</FONT></DIV>
+<DIV>&nbsp;</DIV></DIV>
+</TD></TR></TABLE>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02466" HREF="msg02466.shtml">Re: m4 und divert</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02467" HREF="msg02467.shtml">Re: m4 und divert</A></strong>, <em>From:</em> Sandip Bhattacharya</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02464.shtml">Re: Cleaning up the HTML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02466.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02461.shtml">Re: Extra attributes in &lt;href&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02466.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02465"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02465"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

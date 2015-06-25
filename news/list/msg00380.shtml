@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml&#45;1.6.8: bug in etc/newvers -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 1 Feb 1999 16:29:46 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990201161947.7667A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199901220927.KAA11227@chewie -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00380">Date Index</a>][<a href="thrd8.shtml#00380">Thread Index</a>]<br>
+[<A HREF="msg00379.shtml">Date Prev</A>][<A HREF="msg00381.shtml">Date Next</A>][<A HREF="msg00364.shtml">Thread Prev</A>][<A HREF="msg00366.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml-1.6.8: bug in etc/newvers</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Feb 1999 16:22:09 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 22 Jan 1999, Steffen Zahn wrote:
+
+&gt; getopt without args returns exit code 2, and now newvers feels the need
+&gt; to compile its own getopt. For some reason it trys to start gcc as
+&gt; /usr/local/bin/gcc, and that does not exist, gcc can be started
+&gt; as /usr/gnu/bin/gcc or simply gcc here.
+
+Hi Steffen,
+are you sure /usr/local/bin/gcc does not exist? I think it does, but is
+not executable. Right?
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00364" HREF="msg00364.shtml">wml-1.6.8: bug in etc/newvers</A></strong>, <em>From:</em> Steffen Zahn</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00379.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00381.shtml">perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00364.shtml">wml-1.6.8: bug in etc/newvers</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00366.shtml">vim syntax file?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00380"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00380"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

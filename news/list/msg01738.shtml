@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 23 Jun 2000 20:25:19 +0200 (MET DST) -->
+<!--X-Message-Id: 20000623202701.A1386@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000623010848.C31710@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0006231811230.23254&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01738">Date Index</a>][<a href="thrd36.shtml#01738">Thread Index</a>]<br>
+[<A HREF="msg01737.shtml">Date Prev</A>][<A HREF="msg01739.shtml">Date Next</A>][<A HREF="msg01737.shtml">Thread Prev</A>][<A HREF="msg01741.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jun 2000 20:27:01 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 23, 2000 at 06:14:15PM +0200, Fritz Zaucker wrote:
+
+&gt; Hi Denis,
+&gt; 
+&gt; looks pretty good. I just can't figure out one thing, though:
+&gt; 
+&gt; How do I do the following correctly (I hope it's clear from the context):
+&gt; 
+&gt; &lt;if &lt;match "&lt;get-var HREF /&gt;" "^(ht|f)tp://" /&gt; 
+&gt;    &lt;group (off-site) /&gt;
+&gt;    &lt;group &lt;!--#config timefmt="%e&amp;nbsp;%b&amp;nbsp;%Y" --&gt; /&gt;
+&gt; /&gt;
+
+Hi Fritz,
+
+you may use quotes as usual:
+
+  &lt;if &lt;match "&lt;get-var HREF /&gt;" "^(ht|f)tp://" /&gt; 
+     "(off-site)"
+     "&lt;!--#config timefmt=\"%e&amp;nbsp;%b&amp;nbsp;%Y\" --&gt;"
+  /&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01741" HREF="msg01741.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01733" HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01737" HREF="msg01737.shtml">Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01737.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01739.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01737.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01741.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01738"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01738"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

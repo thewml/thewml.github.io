@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Filtering with wml, security considerations? -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Fri, 30 Jan 1998 00:26:02 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980129140821.27514F&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00068">Date Index</a>][<a href="thrd2.shtml#00068">Thread Index</a>]<br>
+[<A HREF="msg00067.shtml">Date Prev</A>][<A HREF="msg00069.shtml">Date Next</A>][<A HREF="msg00067.shtml">Thread Prev</A>][<A HREF="msg00069.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Filtering with wml, security considerations?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Jan 1998 14:16:47 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I'm working on a project, which, in a nutshell, would allow people to type
+in some text in a form and have it appear as a web page. I would like to
+make the wml facilities availible to persons, within the confines of
+security. The cgi would presumably take the input, pipe it to wml, and
+grab the output for posting as it saw fit. I'll bet I'll have to turn off
+some of the passes...
+
+I'm pertty sure e-perl is out, right? I don't want people to be able to
+execute commands on the system by embedding some e-perl that creats a
+setuid shell for the userid running the cgi.
+
+OTOH, I'm not concerned all *that* much about
+things like #include including /etc/passwd -- call
+
+I recall there being some stuff in m4 that I might not like too -- that
+would let them run arbitary commands on the machine. Right?
+
+What else are potential gotchas, and solutions? I assume for many of these
+things disallowing certain passes to take place with be the big answer.
+However, perhaps some standard neutralizer could be prepended to the user
+input would would alias away or otherwise hide some of the problematic
+commands? Perl is probably highly problematic and I'll bet it has to be
+turned off, but perhaps there'd be a way to alias away (or equivalent) the
+1 or 2 bad m4 commands or other problems?
+
+Thanks,
+jim
+
+-- 
+[L]inux has an installed base conservatively estimated at around 3 million
+users.... [V]endors say that most of the top companies in the US have bought
+the OS - but that few will readily admit to running their multimillion-dollar
+corporations on code put together by a band of software idealists. -- _Wired_
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00069" HREF="msg00069.shtml">conflict between passes</A></strong>, <em>From:</em> Zhao Yue</li>
+<li><strong><A NAME="00070" HREF="msg00070.shtml">Re: Filtering with wml, security considerations?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00067.shtml">Webdesign presentation (german)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00069.shtml">conflict between passes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00067.shtml">Webdesign presentation (german)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00069.shtml">conflict between passes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00068"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00068"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

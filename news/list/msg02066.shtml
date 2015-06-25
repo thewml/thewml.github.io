@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: eperl&#45;mode for (X)Emacs -->
+<!--X-From-R13: Dnsnry Znobvffvrer <ensnryNvpc.vact.se> -->
+<!--X-Date: Wed, 22 Nov 2000 12:33:34 +0100 (MET) -->
+<!--X-Message-Id: 20001122123230.C22569@icp.inpg.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02066">Date Index</a>][<a href="thrd42.shtml#02066">Thread Index</a>]<br>
+[<A HREF="msg02065.shtml">Date Prev</A>][<A HREF="msg02067.shtml">Date Next</A>][<A HREF="msg02065.shtml">Thread Prev</A>][<A HREF="msg02067.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>eperl-mode for (X)Emacs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rafael Laboissiere &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 22 Nov 2000 12:32:30 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I looked at the sw-eperl and sw-wml archives and could not find any pointer
+to an existing wml/eperl mode for Emacs.  I wrote then an eperl-mode that
+works with XEmacs.  Incidentally, it allows me to define a handy WML mode
+(based on html-mode + eperl-mode).
+
+You will find the files at 
+
+    <A  HREF="http://people.debian.org/~rafael/wml-mode/">http://people.debian.org/~rafael/wml-mode/</A>
+
+The eperl-mode is extensively based on extents, so it only works in XEmacs.
+I know that there exists a compatibility libray called lucid.el for FSF
+Emacs, but I did not try it yet.
+
+The eperl-mode is actually a minor mode that highlights the ePerl chunks in
+the buffer.  When the cursor is over a chunk, it is possible to edit that
+chunk in a separate, temporary buffer that is put in cperl-mode. This is
+done with a key sequnce (by default "C-c space space", but this is
+customizable). After editing, the same key sequence will allow the
+installation of the chunk back into the buffer.
+
+The wml-mode that you will find in the web site above is really minimalistic
+and is not yet finished.  It uses psgml-mode as the major mode and calls
+eperl-mode.  This is very handy, as the whole buffer is in SGML[HTML] mode
+but the chunks are edited in cperl-mode. I made this file (wml-mode.el)
+available just as an base example for a more elaborated WML mode.
+
+Comments, as well as help on porting to FSF Emacs will be appreciated.
+
+-- 
+Rafael Laboissiere &lt;rafael@debian.org&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02067" HREF="msg02067.shtml">Re: eperl-mode for (X)Emacs</A></strong>, <em>From:</em> Thomas R. Koll</li>
+<li><strong><A NAME="02068" HREF="msg02068.shtml">RE: eperl-mode for (X)Emacs</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02065.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02067.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02065.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02067.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02066"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02066"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

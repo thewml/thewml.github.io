@@ -1,0 +1,316 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Recursive #include problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 28 Dec 1999 13:30:17 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991228132925.8347A&#45;200000@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 38559368.D21EFFB@mail.dotcom.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01238">Date Index</a>][<a href="thrd26.shtml#01238">Thread Index</a>]<br>
+[<A HREF="msg01237.shtml">Date Prev</A>][<A HREF="msg01239.shtml">Date Next</A>][<A HREF="msg01222.shtml">Thread Prev</A>][<A HREF="msg01239.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Recursive #include problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Dec 1999 13:34:04 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 14 Dec 1999, Gilles Lamiral wrote:
+
+&gt; Hello,
+&gt; 
+&gt; Consider this problem:
+&gt; 
+&gt; O) make directories top/dir1/dir2/
+&gt; 
+&gt; 1) make a empty file named top/ancestors
+&gt; 
+&gt; 2) make a file named top/dir1/ancestors with the content:
+&gt;    #include '../ancestors'
+&gt; 
+&gt; 3) make a file named top/dir1/dir2/ancestors with the content:
+&gt;    #include '../ancestors'
+&gt; 
+&gt; 4) go into the  top/dir1/dir2/ directory and type:
+&gt;    $ wml ancestors
+&gt; 
+&gt; wml goes in deep recursion in the first phase.  It should not.  It
+&gt; should if the include directive were #include './ancestors'.
+&gt; Recursion is not well treated.  The phase 1 is just like the cpp job.
+[...]
+
+Phase 1 is more than the cpp job, because prolog filters may be applied.
+A patch is attached. It will go under CVS after some checks.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+--- wml_backend/p1_ipp/ipp.src	1999/09/21 15:31:52	1.21
++++ wml_backend/p1_ipp/ipp.src	1999/12/28 12:07:02
+@@ -134,6 +134,7 @@
+ #
+ 
+ %INCLUDES = ();
++@DIR      = ();
+ $outbuf   = '';
+ 
+ sub setargs {
+@@ -186,21 +187,6 @@
+     return $file;
+ }
+ 
+-sub CanonPath {
+-    my ($path) = @_;
+-
+-    $pathL = '';
+-    while ($path ne $pathL) {
+-        $pathL = $path;
+-        $path =~ s|//|/|g;
+-        $path =~ s|/\./|/|g;
+-        $path =~ s|/\.$|/|g;
+-        $path =~ s|^\./(.)|$1|g;
+-        $path =~ s|([^/.][^/.]*)/\.\.||;
+-    }
+-    return $path;
+-}
+-
+ sub PatternProcess {
+     my ($mode, $delimiter, $dirname, $pattern, $ext, $level, $noid, %arg) = @_;
+     my ($dir, $out, $test, @ls);
+@@ -219,7 +205,7 @@
+             closedir DIR;
+             foreach (@ls) {
+                 next if (m|/\.+$| or m|^\.+$|);
+-                $out .= &amp;ProcessFile($mode, $delimiter, "$dirname/$_$ext", $level, $noid, %arg);
++                $out .= &amp;ProcessFile($mode, $delimiter, "$dirname/$_$ext", '', $level, $noid, %arg);
+             }
+         }
+     }
+@@ -230,7 +216,7 @@
+             closedir DIR;
+             foreach (@ls) {
+                 next if (m|/\.+$| or m|^\.+$|);
+-                $out .= &amp;ProcessFile($mode, $delimiter, "$dirname/$_$ext", $level, $noid, %arg);
++                $out .= &amp;ProcessFile($mode, $delimiter, "$dirname/$_$ext", '', $level, $noid, %arg);
+             }
+         }
+     }
+@@ -242,7 +228,7 @@
+             closedir DIR;
+             foreach (@ls) {
+                 next if (m|/\.+$| or m|^\.+$|);
+-                $out .= &amp;ProcessFile($mode, $delimiter, "$dirname/$_$ext", $level, $noid, %arg);
++                $out .= &amp;ProcessFile($mode, $delimiter, "$dirname/$_$ext", '', $level, $noid, %arg);
+             }
+         }
+     }
+@@ -250,7 +236,7 @@
+ }
+ 
+ sub ProcessFile {
+-    my ($mode, $delimiter, $file, $level, $noid, %arg) = @_;
++    my ($mode, $delimiter, $file, $dir, $level, $noid, %arg) = @_;
+     my ($in, $found, $line, $incfile, $type, %argO, $out, $store);
+ 
+     #
+@@ -320,16 +306,16 @@
+     #
+     #   stop if file was still included some time before
+     #
++    $file = File::PathConvert::realpath($file);
+     if (not $noid) {
+-        $id = &amp;CanonPath($file);
+         if ($mode eq 'use') {
+-            return '' if (exists $INCLUDES{$id});
++            return '' if (exists $INCLUDES{$file});
+         }
+         if ($delimiter eq '&lt;') {
+-            $INCLUDES{$id} = 1;
++            $INCLUDES{$file} = 1;
+         }
+         else {
+-            $INCLUDES{$id} = 2;
++            $INCLUDES{$file} = 2;
+         }
+     }
+     #
+@@ -340,13 +326,23 @@
+     #
+     #   process the file
+     #
+-    $in = new IO::File;
+     &amp;verbose($level, "|");
+     &amp;verbose($level, "+-- $file");
++
++    #   stores current working directory and change directory
++    push(@DIR, Cwd::cwd);
++    if ($dir eq '') {
++        $dir = File::PathConvert::realpath($file);
++        $dir =~ s|/+[^/]*$||;
++    }
++    chdir $dir || die "Unable to chdir";
++
++    $in = new IO::File;
+     $in-&gt;open("&lt;$file");
+     $line   = 0;
+     $out    = '';
+     $store  = '';
++
+     while ($l = &lt;$in&gt;) {
+         $line++;
+ 
+@@ -404,7 +400,7 @@
+             }
+ 
+             #   now recurse down
+-            $out .= &amp;ProcessFile($cmd, $type, $incfile, $level+1, 0, %arg);
++            $out .= &amp;ProcessFile($cmd, $type, $incfile, '', $level+1, 0, %arg);
+ 
+             #   reset arguments
+             %arg = %argO;
+@@ -442,6 +438,10 @@
+     $out .= $store;
+     $in-&gt;close();
+ 
++    #   go back to previous working directory
++    $dir = pop(@DIR);
++    chdir $dir || die "Unable to chdir";
++
+     return $out;
+ }
+ 
+@@ -492,7 +492,7 @@
+     }
+ }
+ $tmp-&gt;close();
+-$outbuf .= &amp;ProcessFile('include', "'", $tmpfile, 0, 1, %arg);
++$outbuf .= &amp;ProcessFile('include', "'", $tmpfile, Cwd::cwd, 0, 1, %arg);
+ unlink($tmpfile);
+ 
+ #
+@@ -528,7 +528,7 @@
+     }
+ 
+     #   process file via IPP filter
+-    $outbuf .= &amp;ProcessFile('include', "'", $tmpfile, 0, 1, %arg);
++    $outbuf .= &amp;ProcessFile('include', "'", $tmpfile, $arg{"WML_SRC_DIRNAME"}, 0, 1, %arg);
+ 
+     #   cleanup
+     unlink($tmpfile);
+--- wml_frontend/wml.src	1999/11/30 17:02:59	1.36
++++ wml_frontend/wml.src	1999/12/28 12:02:22
+@@ -904,12 +904,16 @@
+     $src_realname = $gen_realname;
+ }
+ else {
+-    $src_dirname = $cwd;
+-    $src_filename = $src;
+-    $src_filename =~ s|^.*/+||;
+-    $src_basename = $src_filename;
+-    $src_basename =~ s|(\.[a-zA-Z0-9]+)$||;
+-    $src_suffix   = $1;
++    if ($src =~ m|/|) {
++      ($path = $src) =~ s|/+[^/]*$||;
++      $src_dirname = File::PathConvert::realpath("$path");
++    } else {
++      $src_dirname = $cwd;
++    }
++    ($src_filename = $src) =~ s|^.*/+||;
++    ($src_basename = $src_filename) =~ s|(\.[a-zA-Z0-9]+)$||;
++    $src_suffix    = $1;
++
+     ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+      $atime,$mtime,$ctime,$blksize,$blocks) = stat($src);
+     $src_ctime = &amp;ctime($mtime);
+@@ -1110,26 +1114,9 @@
+ $tmp[2] = "$tmpdir/wml.$$.tmp3" . $src_suffix;
+ $tmp[3] = "$tmpdir/wml.$$.tmp4" . $src_suffix;
+ 
+-if (not $src_istmp) {
+-    $fpin = new IO::File;
+-    $fpin-&gt;open("&lt;$src");
+-    $fpout = new IO::File;
+-    $fpout-&gt;open("&gt;$tmp[0]");
+-    while (&lt;$fpin&gt;) {
+-        $fpout-&gt;print($_);
+-    }
+-    $fpout-&gt;close;
+-    $fpin-&gt;close;
+-
+-    $from  = $tmp[0];
+-    $to    = $tmp[1];
+-    $cnt   = 1;
+-}
+-else {
+-    $from  = $src;
+-    $to    = $tmp[0];
+-    $cnt   = 0;
+-}
++$from  = $src;
++$to    = $tmp[0];
++$cnt   = 0;
+ 
+ $out_istmp = 0;
+ if ($out eq '') {
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01239" HREF="msg01239.shtml">Re: Recursive #include problem</A></strong>, <em>From:</em> Gilles Lamiral</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01222" HREF="msg01222.shtml">Recursive #include problem</A></strong>, <em>From:</em> Gilles Lamiral</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01237.shtml">Re: Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01239.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01222.shtml">Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01239.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01238"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01238"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

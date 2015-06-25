@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [RFC] Slices within slices -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Fri, 14 May 1999 13:30:02 +0200 (MET DST) -->
+<!--X-Message-Id: 19990514132954.A18514@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990512191642.25929B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00654">Date Index</a>][<a href="thrd15.shtml#00654">Thread Index</a>]<br>
+[<A HREF="msg00653.shtml">Date Prev</A>][<A HREF="msg00655.shtml">Date Next</A>][<A HREF="msg00650.shtml">Thread Prev</A>][<A HREF="msg00656.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [RFC] Slices within slices</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 14 May 1999 13:29:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, May 12, 1999 at 07:17:31PM +0200, Denis Barbier wrote:
+&gt; Here are my reflexions.
+&gt; The problem is: with those slices,
+&gt; 
+&gt;       DE         EN               DE         EN
+&gt;     +-----+    +-----+          +-----+    +-----+
+&gt;             DE                          EN
+&gt;   +---------------------+     +---------------------+
+&gt; 
+&gt; how to extract english and german text?
+&gt; 1) Slices with the same name couldn't be nested, it has been fixed.
+&gt; 2) When writing the german part, the german slice inside the english
+&gt;    text must be discarded. To do this, put an ``@'' after the slice
+&gt;    name (it's in the doc).
+&gt; 3) But... in this case the slices above will be equivalent to
+&gt;             DE                          EN
+&gt;   +---------------------+     +---------------------+
+&gt;    which is not what we want.
+
+My problem is, I don't understand your graphics. I'm not really sure
+what you're meaning.
+
+So I can just express what I was expecting to happen.
+
+I think
+[LANG_DE: Text [LANG_DE:more:] [LANG_EN:text_en:] :]             
+when processed with '(ALL-LANG_*)uLANG_DE:-'
+
+Should expand to "Text more" and drop text_en.
+
+And when processing 
+[LANG_EN: Text [LANG_DE:more:] [LANG_EN:text_en:] :]             
+with the same options
+to expand to "" (i.e. nothing)
+
+That means, I expect the condition of nested slices to be logically
+AND'ed - Only print the content if the condition of all nested slices
+are met.
+
+Hope I have clarified things,
+    Sec
+-- 
+  1. Never challenge a sysadmin to do anything you don't actually want
+  him or her to do.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00656" HREF="msg00656.shtml">Re: [RFC] Slices within slices</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00650" HREF="msg00650.shtml">[RFC] Slices within slices</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00653.shtml">Re: using WML for the firt time - slices...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00655.shtml">Perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00650.shtml">[RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00656.shtml">Re: [RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00654"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00654"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

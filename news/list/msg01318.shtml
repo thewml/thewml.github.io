@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Automating the creation of buttons -->
+<!--X-From-R13: Fbz Zvzbapryyv <gnyNerfrnepu.oryy&#45;ynof.pbz> -->
+<!--X-Date: Tue, 1 Feb 2000 23:42:10 +0100 (MET) -->
+<!--X-Message-Id: 38976398.A3BC0DE7@research.bell&#45;labs.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000131133135.31013A&#45;101000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01318">Date Index</a>][<a href="thrd27.shtml#01318">Thread Index</a>]<br>
+[<A HREF="msg01317.shtml">Date Prev</A>][<A HREF="msg01319.shtml">Date Next</A>][<A HREF="msg01317.shtml">Thread Prev</A>][<A HREF="msg01319.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Automating the creation of buttons</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tom Limoncelli &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 01 Feb 2000 17:52:08 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+[ Warning: this is a little off-topic.  I did check with engelshall first. ]
+
+Does anyone have a good automated method to generate buttons, like the ones
+on the WML web page?  In theory, GIMP should be programmable enough to do
+this, but I've found it to be frustrating.
+
+I have a situation where I need to create buttons with the same color, and
+then come back a week or two later and make more buttons and have the same
+colors, etc.  Doing this by hand is difficult and error-prone.  Isn't this a
+good job for "make"?
+
+My GIMP experience:  I spend half a day trying and gave up.  The language is
+terrible and the documentation is worse (at one point it admits that this
+isn't the best thing since sliced bread).  Ok, maybe I should try harder
+(and I'm sure I will).  However, if someone has already figured it out, I'd
+gladly not have to re-invent the wheel.  I'll even offer to maintain it as a
+GPL'ed package or something.
+
+I figure that fellow WML users would appreciate what I'm describing here,
+since you obviously feel the same way about generating, not editing,
+HTML/web pages.
+
+Thanks in advance!
+
+--tal
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01319" HREF="msg01319.shtml">Re: Automating the creation of buttons</A></strong>, <em>From:</em> Valentin v. Seggern</li>
+<li><strong><A NAME="01320" HREF="msg01320.shtml">Re: Automating the creation of buttons</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+<li><strong><A NAME="01330" HREF="msg01330.shtml">Re: [wml] Automating the creation of buttons</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01313" HREF="msg01313.shtml">Proposed modification of the #include '' directive</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01317.shtml">Re: Proposed modification of the #include '' directive</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01319.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01317.shtml">Re: Proposed modification of the #include '' directive</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01319.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01318"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01318"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

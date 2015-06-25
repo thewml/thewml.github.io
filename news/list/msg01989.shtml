@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Help needed: I want to choose a random link -->
+<!--X-From-R13: pfNpf75.qr -->
+<!--X-Date: Wed, 27 Sep 2000 10:49:22 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000926132206.15982A&#45;100000@infcip9.uni&#45;trier.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000915153642.B28596@pironet.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01989">Date Index</a>][<a href="thrd40.shtml#01989">Thread Index</a>]<br>
+[<A HREF="msg01988.shtml">Date Prev</A>][<A HREF="msg01990.shtml">Date Next</A>][<A HREF="msg01971.shtml">Thread Prev</A>][<A HREF="msg01992.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Help needed: I want to choose a random link</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 26 Sep 2000 13:44:41 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 15 Sep 2000, Jan Ulrich Hasecke wrote:
+
+&gt; Hi all!
+&gt; 
+&gt; I think I am truly the only wml-users with no
+&gt; perl-knowledge. O.K. I've read the first chapter of the german
+&gt; Llama-Book. ;-)
+
+&gt; I want to make pages with random tipps to other pages. Like this: 
+&gt; 
+&gt; |  Foo bar. But read this too!
+&gt; |  Link 1
+&gt; |  Link 2
+&gt; |  Link 3
+&gt; 
+
+I don't know if this is really what you want to do, but if how 
+about this:
+
+--- SNIP ---
+&lt;define-tag random-href&gt;
+&lt;preserve filename&gt;
+&lt;set-var %attributes&gt;
+
+&lt;:
+	$filename = "&lt;get-var filename&gt;";
+	open FILE, "&lt;$filename" or die;
+	
+	@data = ();
+
+	while (&lt;FILE&gt;) {
+		chomp;
+		my ($name, $href) = split /;/; 
+		push @data, [ $name, $href ];
+	}
+
+	close FILE;
+	
+	($name, $href) = @{$data[rand(@data)]};
+
+	print "&lt;a href=$href&gt;$name&lt;/a&gt;";
+	
+:&gt;
+
+&lt;/define-tag&gt;
+
+# Use like this:
+
+&lt;random-href filename="random.txt"&gt;
+--- SNIP ---
+
+random.txt has the format
+
+First Random Link;<A  HREF="http://www.ran.dom">http://www.ran.dom</A>
+Second Random Link;<A  HREF="http://www.foo.bar">http://www.foo.bar</A>
+
+etc. You'd have to generate this list of possible link targets
+by hand or using the find command or whatever.
+
+Used like this, &lt;random-href&gt; generates a random &lt;a href...&gt; out
+of the list in the file given in the filename attribute.
+(Beware: the link is "random" in the moment of generation, but in the
+generated HTML it is a plain hyperlink, of course.)
+
+The above code is far from elegant (in fact, I never used it in practice, 
+I wrote it right now), as it reads the list of URLs on every invocation;
+for small lists this might be sufficient, though. If you faced efficiency
+problems, you'd need one tag to initialize the @data array with the 
+link list (everything but the last two lines of code) and one tag to emit
+a random href (the last two lines). If you wanted to do that correctly,
+you'd need a way to name different link lists and specify in the "generate
+random link now"-tag which one of the link lists to use. (That's when
+the Camel book enters the scene ;-) So let's stick with reading the one
+global list every time.
+
+But is this really what you want? If you want to give the user a different
+link each time he or she clicks on the hyperlink, you'd probably need to 
+use JavaScript or CGI scripts or something similar (i. e., some technique
+that is able to generate a redirect or something on the fly) -
+which would be out of the scope of this list, I assume.
+
+Good luck,
+
+Christoph
+
+-- 
+-- Christoph Schmitz &lt;cs@cs75.de&gt; | <A  HREF="http://www.cs75.de">http://www.cs75.de</A> --
+Yes, but what was she in prison for? I wondered. And then my Automated
+Mental Plot Analyzer hummed to life ...  
+           -- Roger Ebert on "The Spitfire Grill"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01992" HREF="msg01992.shtml">Re: Help needed: I want to choose a random link</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01963" HREF="msg01963.shtml">Help needed: I want to choose a random link</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01988.shtml">Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01990.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01971.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01992.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01989"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01989"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

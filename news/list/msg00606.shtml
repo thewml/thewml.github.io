@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Running WML from WML? -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Wed, 5 May 1999 18:46:02 +0200 (MET DST) -->
+<!--X-Message-Id: 199905051645.SAA20155@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: stephane@sources.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00606">Date Index</a>][<a href="thrd12.shtml#00606">Thread Index</a>]<br>
+[<A HREF="msg00605.shtml">Date Prev</A>][<A HREF="msg00607.shtml">Date Next</A>][<A HREF="msg00503.shtml">Thread Prev</A>][<A HREF="msg00609.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Running WML from WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 05 May 1999 18:45:49 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Saturday 20 March 1999, at 22 h 38, the keyboard of Stephane Bortzmeyer 
+&lt;stephane@sources.org&gt; wrote:
+
+&gt; in private if you want), I want to run WML from WML in pass 3 (ePerl):
+
+BTW, the same bug occurs if you run wml from an ePerl CGI as well. 
+ 
+&gt; foreach $key (keys (%ENV)) {
+&gt;     if ($key =~ /^SCRIPT_SRC/) {
+&gt; 	delete $ENV{$key};
+&gt;     }
+&gt; }
+
+And you need to delete VERSION_* as well (ePerl environment variables).
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00609" HREF="msg00609.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00605.shtml">Re: New WML-generated website: www.modssl.org</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00607.shtml">Bug in gfont?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00503.shtml">Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00609.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00606"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00606"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

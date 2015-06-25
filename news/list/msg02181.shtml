@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: problem: attributes being used as body -->
+<!--X-From-R13: wrss pbirl <wrss.pbirlNcbobk.pbz> -->
+<!--X-Date: Mon, 26 Mar 2001 15:13:45 +0200 (MET DST) -->
+<!--X-Message-Id: 20010326081240.Q31036@jeffcovey.net -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Derived: pgp00006.pgp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02181">Date Index</a>][<a href="thrd44.shtml#02181">Thread Index</a>]<br>
+[<A HREF="msg02180.shtml">Date Prev</A>][<A HREF="msg02182.shtml">Date Next</A>][<A HREF="msg02180.shtml">Thread Prev</A>][<A HREF="msg02182.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>problem: attributes being used as body</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: jeff covey &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Mar 2001 08:12:40 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+i've been using wml for months with no problems, but i woke up this
+morning and my site looked like hell.  the only changes i made
+yesterday were made by updating my debian testing distribution, mainly
+upgrading to perl 5.6.0-20.  i'm running wml 1.7.4.
+
+
+the front page should have a table of "what's new" items that looks
+like:
+
+<A  HREF="http://jeffcovey.net/new/2000.html">http://jeffcovey.net/new/2000.html</A>
+
+instead, it now looks like:
+
+<A  HREF="http://jeffcovey.net/">http://jeffcovey.net/</A>
+
+the macros for building the table are defined at the bottom of:
+
+<A  HREF="http://jeffcovey.net/.lib/definitions.wml">http://jeffcovey.net/.lib/definitions.wml</A>
+
+you can see how they're used at:
+
+<A  HREF="http://jeffcovey.net/.source/index.wml">http://jeffcovey.net/.source/index.wml</A>
+
+
+what's happening now is that the attributes are being used as the
+body, the body is being inserted after the macro has been expanded,
+and then the macro's closing tag is included in the output.  for
+example, this:
+
+&lt;newitem 03/16/2001 "crab canon"&gt;
+i added a crab canon by bach to my &lt;ref scores&gt; section.
+&lt;/newitem&gt;
+
+should result in this:
+
+  &lt;tr&gt;
+    &lt;td bgcolor="#CCFFCC" align="right"&gt;03/16/2001&lt;/td&gt;
+    &lt;td bgcolor="#FFCC99"&gt;crab canon&lt;/td&gt;
+    &lt;td bgcolor="#FFFFCC"&gt;&lt;p&gt;i added a crab canon by bach to my &lt;a href="/music/scores/"&gt;scores&lt;/a&gt; section.&lt;/td&gt;
+  &lt;/tr&gt;
+
+but is instead giving this:
+
+  &lt;tr&gt;
+    &lt;td bgcolor="#CCFFCC" align="right"&gt;03/16/2001&lt;/td&gt;
+    &lt;td bgcolor="#FFCC99"&gt;crab canon&lt;/td&gt;
+    &lt;td bgcolor="#FFFFCC"&gt;&lt;p&gt;03/16/2001 "crab canon"&lt;/td&gt;
+  &lt;/tr&gt;
+i added a crab canon by bach to my &lt;a href=""&gt;scores&lt;/a&gt; section.
+&lt;/newitem&gt;
+
+
+what can i do to fix it?
+
+thanks,
+
+-- 
+|----------------------------------------------------------------------------|
+| jeff covey jeff.covey@pobox.com <A  HREF="http://pobox.com/~jeff.covey/">http://pobox.com/~jeff.covey/</A> 410-669-4926 |
+|----------------------------------------------------------------------------|
+|        the luminous rabbit shall be to him as the voice of conscience.     |
+|----------------------------------------------------------------------------|
+</PRE>
+<P><A HREF="pgp00006.pgp" >PGP signature</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02182" HREF="msg02182.shtml">Re: problem: attributes being used as body</A></strong>, <em>From:</em> Thomas R. Koll</li>
+<li><strong><A NAME="02183" HREF="msg02183.shtml">Re: problem: attributes being used as body</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02180.shtml">Re: patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02182.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02180.shtml">Re: patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02182.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02181"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02181"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

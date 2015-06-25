@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Mon, 7 Jun 1999 12:31:11 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990607120554.2241B&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990607094243.23527A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00733">Date Index</a>][<a href="thrd16.shtml#00733">Thread Index</a>]<br>
+[<A HREF="msg00732.shtml">Date Prev</A>][<A HREF="msg00734.shtml">Date Next</A>][<A HREF="msg00732.shtml">Thread Prev</A>][<A HREF="msg00734.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 7 Jun 1999 12:30:23 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 7 Jun 1999, Denis Barbier wrote:
+
+&gt;On Sun, 6 Jun 1999, Jan Ulrich Hasecke wrote:
+&gt;
+&gt;&gt; PROBLEM DESCRIPTION:
+&gt;&gt; 
+&gt;&gt; When I use grid inside a file, which goes as &lt;&lt;BODY&gt;&gt; through a
+&gt;&gt; template-file, the table is not rendered.
+
+&gt;Can't reproduce this problem.
+&gt;Could you send me an example ? Or explain how to use the one above.
+
+Oh,oh!
+
+I tried to isolate the error and discovered that it was my fault.
+
+The grid-endtag &lt;/grid&gt; was on the last line of my input file.
+There must be a newline after the endtag &lt;/grid&gt; and it works.
+
+So NO BUG, but my fault. :-( or better :-), because nobody must do
+a workaround.
+
+Should there always be a newline after the last line, if it
+contains a tag?
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00734" HREF="msg00734.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00735" HREF="msg00735.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00732.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00734.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00732.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00734.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00733"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00733"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

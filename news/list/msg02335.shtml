@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ePerl within <xtable> tags -->
+<!--X-From-R13: Qbyva Driryrl <pbyvaNglffra.vg> -->
+<!--X-Date: Thu, 26 Jul 2001 21:16:16 +0200 (MET DST) -->
+<!--X-Message-Id: 3B606C3A.9E8D5C10@tyssen.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02335">Date Index</a>][<a href="thrd47.shtml#02335">Thread Index</a>]<br>
+[<A HREF="msg02334.shtml">Date Prev</A>][<A HREF="msg02336.shtml">Date Next</A>][<A HREF="msg02324.shtml">Thread Prev</A>][<A HREF="msg02336.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ePerl within &lt;xtable&gt; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Colin Reveley &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 26 Jul 2001 20:15:06 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hi there. I'm getting the following error, which I can't figure out.
+
+I can embed perl code fine, but if I try to embed some code inside
+&lt;xtable&gt; tags I get an 
+error (I am using wml 2.0.7 on a SuSE linux system 7.1, glibc 2.2-7)
+
+#!wml
+#use wml::fmt::xtable
+
+&lt;xtable&gt;
+&lt;:
+print "hello\n";
+:&gt; 
+&lt;/xtable&gt;
+
+
+gives the error:
+
+
+
+ePerl:Error: Perl parsing error (interpreter rc=255)
+ 
+---- Contents of STDERR channel: ---------
+Can't find string terminator "EPERL_EOT" anywhere before EOF at
+/tmp/wml.921.tmp1.wml line 157.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).      
+
+
+can you help at all?
+
+many thanks
+-- 
+-----------------------------------------------------------------
+Colin Reveley					Colin@tyssen.it
+Partner						91 Brick Lane
+tyssen it					E1 6Ql
+www.tyssen.it					+447968435749		
+-----------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02336" HREF="msg02336.shtml">Re: ePerl within &lt;xtable&gt; tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02334.shtml">Re: Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02336.shtml">Re: ePerl within &lt;xtable&gt; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02324.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02336.shtml">Re: ePerl within &lt;xtable&gt; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02335"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02335"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

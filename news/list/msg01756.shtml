@@ -1,0 +1,162 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Idea of future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Sun, 25 Jun 2000 15:47:02 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0006251109520.12703&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000624001600.B1869@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01756">Date Index</a>][<a href="thrd32.shtml#01756">Thread Index</a>]<br>
+[<A HREF="msg01755.shtml">Date Prev</A>][<A HREF="msg01757.shtml">Date Next</A>][<A HREF="msg01746.shtml">Thread Prev</A>][<A HREF="msg01772.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Idea of future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 25 Jun 2000 11:29:56 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello folks!
+
+First of all: Congratulations to family Engelschall!
+
+On Sat, 24 Jun 2000, Denis Barbier wrote:
+&gt; i do not like this idea, because it is very confusing. And i could not
+&gt; imagine the benefits of this approach. Could you send a nice example?
+
+Ok - I'll try:
+
+Imagine the following tags, defined by &lt;define-tag&gt;:
+
+&lt;red:text&gt;
+&lt;red:box&gt;
+&lt;red:picture&gt;
+
+&lt;blue:text&gt;
+&lt;blue:box&gt;
+&lt;blue:picture&gt;
+
+Further we think of the following complex tags:
+
+&lt;red&gt;
+&lt;blue&gt;
+
+The following is an example of a wml page:
+
+&lt;red&gt;
+&lt;red:box&gt;
+&lt;red:text&gt;This is a little text&lt;/red:text&gt;
+&lt;/red:box&gt;
+&lt;red:picture src="foobar.png"&gt;
+&lt;/red&gt;
+
+&lt;blue&gt;
+&lt;blue:box&gt;
+&lt;blue:text&gt;This is another text&lt;/blue:text&gt;
+&lt;/blue:box&gt;
+&lt;blue:picture src="foobar.png"&gt;
+&lt;/blue&gt;
+
+**** And now the proposed changes:
+
+&lt;red&gt; and &lt;blue&gt; are defined as so-called environments. That means (in a
+LaTeX-thinking way), that inside of an environment the meaning could be
+different. The previous example could be written with &lt;red&gt; and &lt;blue&gt;
+defined as environments:
+
+&lt;red&gt;
+&lt;box&gt;
+&lt;text&gt;This is a little text&lt;/text&gt;
+&lt;/box&gt;
+&lt;picture src="foobar.png"&gt;
+&lt;/red&gt;
+
+&lt;blue&gt;
+&lt;box&gt;
+&lt;text&gt;This is another text&lt;/text&gt;
+&lt;/box&gt;
+&lt;picture src="foobar.png"&gt;
+&lt;/blue&gt;
+
+This way we can offer a syntax more like OOP - the name of the `methods´
+(&lt;box&gt;, &lt;text&gt;, &lt;picture&gt;) remains to be the same in different `objects´
+(&lt;red&gt;, &lt;blue&gt;).
+
+Do you get the idea? I see a lot of benefits (smarter writing, changed
+behaviour depending on the context, ...) and no disadvantages (because it
+is fully backward compatible).
+
+Greetings from Austria,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                       Mobil: +43 676 485 95 50
+A-1180 Wien, Gentzgasse 129/1/5, Austria            TEL: +43  1  478 18 01
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01772" HREF="msg01772.shtml">Re: Idea of future enhancement of WML - Environment</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01778" HREF="msg01778.shtml">Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01746" HREF="msg01746.shtml">Re: Idea of future enhancement of WML - Environment</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01755.shtml">Re: [wml] CSS support and XML namespaces</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01757.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01746.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01772.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01756"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01756"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: your mail -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 10 Sep 1999 09:02:12 +0200 (MET DST) -->
+<!--X-Message-Id: m1puzrqmfl.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990909202529.280A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00960">Date Index</a>][<a href="thrd9.shtml#00960">Thread Index</a>]<br>
+[<A HREF="msg00959.shtml">Date Prev</A>][<A HREF="msg00961.shtml">Date Next</A>][<A HREF="msg00959.shtml">Thread Prev</A>][<A HREF="msg00963.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: your mail</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 10 Sep 1999 09:02:06 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+&gt; On Wed, 8 Sep 1999, Fritz Zaucker wrote:
+&gt; 
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; 
+&gt; &gt; &lt;url&gt;At our web site (<A  HREF="http://www.ee.ethz.ch/">http://www.ee.ethz.ch/</A>) ...&lt;/url&gt;
+&gt; &gt; 
+&gt; &gt; gets translated into 
+&gt; &gt; 
+&gt; &gt; At our web site (&lt;a
+&gt; &gt; href="<A  HREF="http://www.ee.ethz.ch/">http://www.ee.ethz.ch/</A>)"&gt;<A  HREF="http://www.ee.ethz.ch/">http://www.ee.ethz.ch/</A>)&lt;/a&gt; ...
+&gt; &gt; 
+&gt; &gt; NOTE: The URL includes the closing parenthesis )
+&gt; 
+&gt; You're right.
+&gt; 
+&gt; After reading the RFC1738, i think that parenthesis are valid characters
+&gt; within URLs. 
+
+Oh my god ....
+
+&gt; But now i believe that &lt;url&gt; is an help tag, and so is not intended
+&gt; to be fully RFC compliant. I will remove the last character of the URL
+&gt; if one of ['"?!.;:)&gt;] (brackets are not included in this list).
+&gt; Any comment?
+
+How about an optional argument to like &lt;url RFC&gt; that make's the tag
+RFC-compliant and by default make it "reasonable" as you suggested?
+
+To be honest, I don't like non-compliant approaches very much, but it
+just seems silly this way.
+
+Another option would be to at least have a way to escape the "funny
+characters", although, I guess, to allow MS-type URLs one would have
+to use at least a double backslash for an escape sequenz. Not
+particularly nice ...
+
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00963" HREF="msg00963.shtml">Bug in &lt;url&gt; (was Re: your mail)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00959" HREF="msg00959.shtml">Re: your mail</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00959.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00961.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00959.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00963.shtml">Bug in &lt;url&gt; (was Re: your mail)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00960"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00960"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

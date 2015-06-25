@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Spaces in filnames -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Thu, 24 Jun 1999 18:07:30 +0200 (MET DST) -->
+<!--X-Message-Id: 87674dlh0h.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00802">Date Index</a>][<a href="thrd17.shtml#00802">Thread Index</a>]<br>
+[<A HREF="msg00801.shtml">Date Prev</A>][<A HREF="msg00803.shtml">Date Next</A>][<A HREF="msg00978.shtml">Thread Prev</A>][<A HREF="msg00803.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Spaces in filnames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 24 Jun 1999 18:06:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I tried to process a file named 'This Fïle haþ æ véry $tráñge naµe.wml', 
+and wml 1.7.1 failed miserably, I had to use
+$ wml -o th.html 'This Fïle haþ æ véry $tráñge naµe.wml'
+$ mv th.html 'This Fïle haþ æ véry $tráñge naµe.html'
+(The result is on <A  HREF="http://www.hars.de/.../">http://www.hars.de/.../</A>)
+
+This is a bit annoying, since it breaks wmk -af.
+
+Yours, Florian.
+
+-- 
++ when hideous hordes of web designers will leave ripped bloodless bodies of
+hosts they parasited upon and convulsively start tearing limbs of each other
+in agony illuminated by artificial light [...], then we know that time has
+come for dêë|||zêïñe++++ &gt;&gt;&gt;&gt; Å.Ñ.Ñ.Ï.H.Î.L.Ä.T.Î.Ö.Ñ      -- www.absurd.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00803" HREF="msg00803.shtml">Re: Spaces in filnames</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00801.shtml">Re: OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00803.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00978.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00803.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00802"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00802"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

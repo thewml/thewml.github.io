@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML example sites ... -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Wed, 17 Mar 1999 09:10:57 +0100 (MET) -->
+<!--X-Message-Id: 19990317091012.A14232@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990314131007.22017A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: 36EF20DC.8C9B584A@savera.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00487">Date Index</a>][<a href="thrd11.shtml#00487">Thread Index</a>]<br>
+[<A HREF="msg00486.shtml">Date Prev</A>][<A HREF="msg00488.shtml">Date Next</A>][<A HREF="msg00485.shtml">Thread Prev</A>][<A HREF="msg00457.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML example sites ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Mar 1999 09:10:12 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Mar 16, 1999, Ramarao Kanneganti wrote:
+
+&gt; We are designing a largish site (close to 100 pages or so) using wml. I
+&gt; am trying to see what look goes best. Most of the sites cited in WML do
+&gt; not have the wml source code available. I wish few more people would
+&gt; make .wml's available.
+&gt; 
+&gt; I must say that I like the <A  HREF="http://www.openssl.org">http://www.openssl.org</A> site the best of the
+&gt; lot where I could see the wml sources. Ralf, along with being a great
+&gt; programmer, has an innate sense of good design, it seems. 
+
+Thanks.
+
+&gt; However, I
+&gt; cannot see how he is generating his site: it uses local wml module
+&gt; called wml::openssl
+
+The openssl.wml file you can grab directly from the top-level:
+<A  HREF="http://www.openssl.org/openssl.wml">http://www.openssl.org/openssl.wml</A>
+
+&gt; Can I get my hands on that module? Do others have similar modules?
+
+Denis, perhaps you can add another field to the
+<A  HREF="http://www.engelschall.com/sw/wml/example/refs.db">http://www.engelschall.com/sw/wml/example/refs.db</A> database with optional
+hyperlinks to the .wml source of the sites' template?  BTW, the "Submit New
+Entry" form on <A  HREF="http://www.engelschall.com/sw/wml/example/refs.phtml">http://www.engelschall.com/sw/wml/example/refs.phtml</A> seems to
+be broken: It just see the header and the submit button, but no fields (using
+Netscape 4.08).
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00478" HREF="msg00478.shtml">Re: [patch] Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00483" HREF="msg00483.shtml">WML example sites ...</A></strong>, <em>From:</em> Ramarao Kanneganti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00486.shtml">[BUG REPORT] WML This is WML Version 1.6.8 (12-01-1999), SunOS ursa 5.5.1 Generic_103640-24 sun4u sparc SUNW,Ultra-2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00488.shtml">Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00485.shtml">Re: WML example sites ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00457.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00487"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00487"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

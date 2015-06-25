@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: ynam+hfrargNjfy.pu -->
+<!--X-Date: Thu, 16 Aug 2001 13:20:33 +0200 (MET DST) -->
+<!--X-Message-Id: uvgjomeuh.fsf@wsl.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02364">Date Index</a>][<a href="thrd10.shtml#02364">Thread Index</a>]<br>
+[<A HREF="msg02363.shtml">Date Prev</A>][<A HREF="msg02365.shtml">Date Next</A>][<A HREF="msg02214.shtml">Thread Prev</A>][<A HREF="msg02588.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: 16 Aug 2001 13:19:50 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Did anybody succeed to install WML under Cygwin on Windows NT. With
+the latest versions of Cygwin and WML (I think) make stops on my
+system with the following error:
+
+gcc -s -s -L/usr/local/lib -L/usr/lib/perl5/5.6.1/cygwin/CORE -o eperl
+eperl_main.o eperl_perl5.o eperl_parse.o eperl_pp.o eperl_sys.o
+eperl_http.o eperl_getopt.o eperl_debug.o eperl_config.o
+eperl_version.o eperl_readme.o eperl_license.o eperl_logo.o
+eperl_powered.o
+/usr/lib/perl5/5.6.1/cygwin/auto/DynaLoader/DynaLoader.a -lperl -lgdbm
+-lcrypt
+/usr/lib/gcc-lib/i686-pc-cygwin/2.95.3-5/../../../../i686-pc-cygwin/bin/ld:
+cannot find -lperl
+collect2: ld returned 1 exit status
+make[2]: *** [eperl] Error 1
+make[2]: Leaving directory `/cygdrive/c/lanz/programs/downloads/wml/wml-2.0.7.tar/wml-2.0.7/wml_backend/p3_eperl'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/cygdrive/c/lanz/programs/downloads/wml/wml-2.0.7.tar/wml-2.0.7/wml_backend'
+make: *** [all] Error 1
+
+Help highly appreciated! Adrian.
+
+PS: Further reports about difficulties encountered and work arounds
+found setting up a complete WML system (gFonts, ImageMagick,
+GhostScript and so on) under Cygwin would be nice ;-)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02363.shtml">RE: Creating both frames and non-frames versions of a website?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02365.shtml">new flag? wml -U</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02214.shtml">Re: [wml] Re: your mail</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02588.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02364"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#02364"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

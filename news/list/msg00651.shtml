@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.6.8, Linux -->
+<!--X-From-R13: gbzNqnrzba.qr -->
+<!--X-Date: Thu, 13 May 1999 13:00:48 +0200 (MET DST) -->
+<!--X-Message-Id: 199905122157.XAA13848@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00651">Date Index</a>][<a href="thrd15.shtml#00651">Thread Index</a>]<br>
+[<A HREF="msg00650.shtml">Date Prev</A>][<A HREF="msg00652.shtml">Date Next</A>][<A HREF="msg00656.shtml">Thread Prev</A>][<A HREF="msg00652.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.6.8, Linux</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Wed, 12 May 1999 23:57:45 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.6.8
+Operating System: Linux
+
+Problem Description:
+| Hallo,
+| 
+| Ich benutze Deine Software WML, die ich übrigens super 
+| cool finde. Jedoch gibt es ein kleines Problemchen:
+| Ich habe mittels &lt;grid&gt; eine Tabelle erstellt:
+| &lt;grid border=0 cellpadding=3&gt;
+| ...
+| &lt;/grid&gt;
+| Die Tabelle wird vorschriftsmässig generiert, aber
+| der cellpadding Parameter wird auf "0" gesetzt ("cellpadding="0")
+| Ich muss ihn also anschliessend manuell anpassen...
+| 
+| Hast Du eine Idee, woran das liegt? Vielleicht mache ich 
+| ja auch irgendwas falsch?
+| 
+| 
+| Thomas
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00652" HREF="msg00652.shtml">Re: [BUG REPORT] WML 1.6.8, Linux</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00650.shtml">[RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00652.shtml">Re: [BUG REPORT] WML 1.6.8, Linux</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00656.shtml">Re: [RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00652.shtml">Re: [BUG REPORT] WML 1.6.8, Linux</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00651"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00651"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

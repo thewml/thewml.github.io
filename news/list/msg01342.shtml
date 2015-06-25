@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: setting output dir in .wmlrc -->
+<!--X-From-R13: Fubznf Yryyare <Fubznf.YP.YryyareNcnegare.ozj.qr> -->
+<!--X-Date: Fri, 4 Feb 2000 16:13:35 +0100 (MET) -->
+<!--X-Message-Id: 389AEC8B.51D7777F@partner.bmw.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000203232241.631W&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01342">Date Index</a>][<a href="thrd27.shtml#01342">Thread Index</a>]<br>
+[<A HREF="msg01341.shtml">Date Prev</A>][<A HREF="msg01344.shtml">Date Next</A>][<A HREF="msg01331.shtml">Thread Prev</A>][<A HREF="msg01323.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>setting output dir in .wmlrc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Kellner &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 04 Feb 2000 16:13:15 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I've got a question concerning the .wmlrc files:
+
+I've got one .wmlrc in, say, /wwwroot/dir1, which reads
+-D ROOT=/wwwroot
+-o /wwwroot/dir2/%BASE.htm
+
+and another one in a subdir /wwwroot/dir1/sub:
+-D ROOT=/wwwroot
+-o /wwwroot/dir2/sub/%BASE.htm
+
+The goal I'd like to achieve with this, is to
+output the files generated from /wwwroot/dir1/
+to /wwwroot/dir2 and those from /wwwroot/dir1/sub/
+to /wwwroot/dir2/sub/.
+
+But wml writes all files *both* into
+/wwwroot/dir2 *and* /wwwroot/dir2/sub/.
+
+Does anybody know a solution for this (without
+editing all source files and setting the output
+dir in their headers)?
+
+
+thanks in advance &amp; best regards,
+Thomas Kellner
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01331" HREF="msg01331.shtml">Re: [wml] Automating the creation of buttons</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01341.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01344.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01331.shtml">Re: [wml] Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01323.shtml">New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01342"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01342"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

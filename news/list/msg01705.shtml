@@ -1,0 +1,152 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: compilation problems -->
+<!--X-From-R13: "fNz" <ga&#45;fnzNargpbheevre.pbz> -->
+<!--X-Date: Thu, 8 Jun 2000 08:16:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.10006080125380.5476&#45;100000@avant&#45;garde.7ouma.tn -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01705">Date Index</a>][<a href="thrd35.shtml#01705">Thread Index</a>]<br>
+[<A HREF="msg01704.shtml">Date Prev</A>][<A HREF="msg01706.shtml">Date Next</A>][<A HREF="msg01712.shtml">Thread Prev</A>][<A HREF="msg01707.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>compilation problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;nospam@thanx&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Jun 2000 01:41:17 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+	i have some problems compiling wml.
+	for now, i managed to solve the pb that occurs when compiling the
+	eperl module. it seems like a configure script pb. this is a
+	sample from the makefile generated:
+
+----------------------------------------------------------begin
+# ------------------------------------------------
+#   DEFINITIONS
+# ------------------------------------------------
+
+#   imported Perl 5 parameters
+perl_prog       = /usr/bin/perl
+perl_cc         = 
+perl_optimize   = 
+perl_ccflags    = 
+perl_ldflags    = 
+perl_libs       = 
+perl_dla        = 
+perl_ccdlflags  = 
+perl_cccdlflags = 
+perl_archlib    = 
+---------------------------------------------------------end
+	
+	which i modified and become:
+
+-------------------------------------------------------begin
+# ------------------------------------------------
+#   DEFINITIONS
+# ------------------------------------------------
+
+#   imported Perl 5 parameters
+perl_prog       = /usr/bin/perl
+perl_cc         = gcc
+perl_optimize   = -O2
+perl_ccflags    = 
+perl_ldflags    = -lm -lcrypt
+perl_libs       = 
+perl_dla        = 
+perl_ccdlflags  = 
+perl_cccdlflags = 
+perl_archlib    = /usr/lib/perl5/i386-linux/5.00404
+
+---------------------------------------------------------end
+
+	the eperl module compiled without problems.
+
+	now i have another problem and it seems like modifying every
+	Makefile is not the solution. 
+	here is a log sample from the compilation process.
+
+--------------------------------------------------------begin
+make[1]: Leaving directory `/home/sam/wml-2.0.1/wml_backend'
+&lt;=== wml_backend
+===&gt; wml_common (all)
+make[1]: Entering directory `/home/sam/wml-2.0.1/wml_common'
+===&gt; wml_common/bitvector (all)
+Checking if your kit is complete...
+Global symbol "%Config" requires explicit package name at
+/usr/lib/perl5/ExtUtils/Manifest.pm line 27.
+Compilation failed in require at (eval 1) line 400.
+make[2]: Entering directory `/home/sam/wml-2.0.1/wml_common/bitvector'
+make[2]: *** No rule to make target `pure_all'.  Stop.
+make[2]: Leaving directory `/home/sam/wml-2.0.1/wml_common/bitvector'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/home/sam/wml-2.0.1/wml_common'
+make: *** [all] Error 1
+
+---------------------------------------------------------end
+	
+	i'm running Linux RH5.2 with perl5.004_04 on a i586
+
+	please cc to me i'm not subscribed. (not yet)
+	
+							s@m
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01707" HREF="msg01707.shtml">Re: compilation problems</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01704.shtml">Problems moving from 1.7.4 to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01706.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01712.shtml">Re: Include misunderstanding</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01707.shtml">Re: compilation problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01705"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01705"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

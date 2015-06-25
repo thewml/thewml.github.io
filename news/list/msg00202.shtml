@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Misterious Behavior of WML calling WML -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frp+jzyN42.bet> -->
+<!--X-Date: Thu, 3 Sep 1998 11:55:44 +0200 (CEST) -->
+<!--X-Message-Id: 19980903115318.A649@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.980902173750.17744A&#45;100000@lemming.stud.fh&#45;heilbronn.de -->
+<!--X-Reference: Pine.LNX.3.95.980902201238.26619B&#45;100000@lemming.stud.fh&#45;heilbronn.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00202">Date Index</a>][<a href="thrd5.shtml#00202">Thread Index</a>]<br>
+[<A HREF="msg00201.shtml">Date Prev</A>][<A HREF="msg00203.shtml">Date Next</A>][<A HREF="msg00201.shtml">Thread Prev</A>][<A HREF="msg00203.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Misterious Behavior of WML calling WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Sep 1998 11:53:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Sep 02, 1998 at 08:19:21PM +0200, Oliver Paukstadt wrote:
+&gt; The sed was one problem, but there was another.
+&gt; I solved in a bit hacky way: I delete the whole environment except the
+&gt; PATH before starting wml. This looks like this:
+&gt; 
+&gt; system("unset `env | perl -e 'foreach(grep(!/^PATH=/,
+&gt; &lt;STDIN&gt;)){s/^([^=]*)=.*\$/\$1/igs;print \"\$_\\n\";}' ` 
+&gt; ; cd $Daten/$dir ; wml -qs $file");
+&gt; 
+&gt; Not very nice, but it's now 
+&gt; eperl calling sh calling perl and calling wml.
+&gt; 
+&gt; Does Anyone know a shorter Statement to delete all the Environment except
+&gt; path? Perl prefered, because of the ugly sh on irix5.3...
+
+foreach $key (keys %ENV) {
+    delete $ENV{$key} if $key ne "PATH";
+}
+
+should do that.
+
+CU,
+    Sec
+-- 
+Die Zahl 42 kommt erstaunlich oft vor, dafuer das sie so ungebraeuchlich ist.
+                                                   &lt;nick@roses.de&gt; am 20.8.97
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00203" HREF="msg00203.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00200" HREF="msg00200.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+<li><strong><A NAME="00201" HREF="msg00201.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00201.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00203.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00201.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00203.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00202"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00202"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

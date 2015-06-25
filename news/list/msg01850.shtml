@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ePerl and language&#45;dependent output -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 18 Jul 2000 14:27:05 +0200 (MET DST) -->
+<!--X-Message-Id: 20000718142807.A13898@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000718134122.A13786@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.LNX.4.21.0007181405340.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01850">Date Index</a>][<a href="thrd37.shtml#01850">Thread Index</a>]<br>
+[<A HREF="msg01849.shtml">Date Prev</A>][<A HREF="msg01851.shtml">Date Next</A>][<A HREF="msg01849.shtml">Thread Prev</A>][<A HREF="msg01851.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ePerl and language-dependent output</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 14:28:07 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 18, 2000 at 02:12:21PM +0200, Stephan Petersen wrote:
+
+&gt; &gt; &gt; But not when the call to &lt;perl_get_current_lang&gt; is *outside* of any
+&gt; &gt; &gt; language-dependent section, right? I mean,
+&gt; &gt; &gt; 
+&gt; &gt; &gt; &lt;body&gt;
+&gt; &gt; &gt; &lt;perl_get_current_lang&gt;
+&gt; &gt; &gt; &lt;/body&gt;
+&gt; &gt; &gt; 
+&gt; &gt; &gt; won't work, at least according to my experiments, and what (little) I
+&gt; &gt; &gt; understand of wml passes :-)
+&gt; &gt; 
+&gt; &gt; But 
+&gt; &gt;   &lt;body&gt;
+&gt; &gt;   &lt;get_current_lang&gt;
+&gt; &gt;   &lt;/body&gt;
+&gt; &gt; will produce the same output.
+[...]
+&gt; Did you really try it out?
+
+No.
+
+&gt; If I just use &lt;perl_get_current_lang&gt;, the output will be the same in
+&gt; both html files, independent of the actual language. If I use
+&gt; &lt;get_current_lang&gt;, and thus branch off into the various languages, it
+&gt; works fine...
+
+Indeed, i did not understand what this tag was for. 
+It is not clear yet what you have in mind, but you may try this to
+produce outpuut in all languages:
+
+* with mp4h
+  &lt;foreach l __languages&gt;
+    &lt;subst-in-string
+       "=LT=&lt;get-var l&gt;&gt;=LT=perl_get_current_lang&gt;=LT=/&lt;get-var l&gt;&gt;"
+       "=LT=" "&lt;"&gt;
+  &lt;/foreach&gt;
+    Strings are evaluated first, then `=LT=' is replaced by `&lt;', and
+    resulting string is evaluated again.
+
+* with ePerl
+  &lt;:
+    foreach (split("\n", qq/&lt;get-var __languages&gt;/)) {
+       my $slice = "LANG_" . $_;
+       $slice =~ tr/[a-z]/[A-Z]/;
+       print "[$slice:The current language is $_\n:$slice]";
+    }
+  :&gt;
+
+With the latter, you may define an hash array and prints a nice language
+name.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01851" HREF="msg01851.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01848" HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01849" HREF="msg01849.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01849.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01851.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01849.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01851.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01850"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01850"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

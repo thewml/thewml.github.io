@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: use of slices restricted with <img>&#45;tag -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 12 Dec 1999 17:04:22 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991212164052.391A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912121419.PAA32300@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01218">Date Index</a>][<a href="thrd25.shtml#01218">Thread Index</a>]<br>
+[<A HREF="msg01217.shtml">Date Prev</A>][<A HREF="msg01219.shtml">Date Next</A>][<A HREF="msg01215.shtml">Thread Prev</A>][<A HREF="msg01225.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: use of slices restricted with &lt;img&gt;-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Dec 1999 17:03:51 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 12 Dec 1999, Jan Holler wrote:
+
+&gt; hi
+&gt; while working on my sources and implementing all those
+&gt; hints i got recently i run into some new problem. since i
+&gt; know that i do not know all different things about wml i
+&gt; let you make the decision if i'm right and besides calling
+&gt; htmlfix on each html-file again what to do about it:
+&gt; 
+&gt; supposed the files image.gif and image_f.gif are there 
+&gt; test.wml is:
+&gt; ---------------------
+&gt; #!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html \
+&gt;     -o (ALL-LANG_*)uLANG_FR:%BASE_f.html
+&gt; 
+&gt; #use wml::std::lang
+&gt; &lt;lang:new id=de short&gt;
+&gt; &lt;lang:new id=fr short&gt;
+&gt; 
+&gt; &lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&gt; &lt;img src="$(ROOTIMG)/t_akt&lt;de: &gt;&lt;fr: _f&gt;_lo.gif"&gt;
+&gt; &lt;/body&gt;&lt;/html&gt;
+&gt; ---------------------
+&gt; 
+&gt; compile it:
+&gt; $ wml -E "weblint -s" test.wml
+&gt; line 2: setting WIDTH and HEIGHT attributes on IMG tag can
+&gt; improve rendering performance on some browsers.
+&gt; 
+&gt; test.html:
+&gt; &lt;img src="image.gif"&gt;
+&gt; 
+&gt; test_f.html
+&gt; &lt;img src="image_f.gif"&gt;
+&gt; 
+&gt; so how is that?
+&gt; cheers
+&gt;  -jan
+
+Hi Jan,
+
+to understand what happens, try
+  prompt$ wml -p1-7 -v test.wml
+you will see something like
+  &lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+  &lt;img src="t_akt[LANG_DE::][LANG_FR:_f:]_lo.gif" alt=""&gt;
+  &lt;/body&gt;&lt;/html&gt;
+
+Thus when wml_p7_htmlfix is invoked, image file can not be found and
+height and width attributes cannot be inserted. One solution is to call
+htmlfix as an epilog filter. Define a script htmlfix.sh
+#!/bin/sh
+/path/to/wml_p7_htmlfix $1 &gt; $1.$$ &amp;&amp; mv $1.$$ $1
+
+Now run wml this way:
+  prompt$ wml -E /path/to/htmlfix.sh test.wml
+
+Note: the &lt;de: &gt; tag is useless in your example.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01215" HREF="msg01215.shtml">use of slices restricted with &lt;img&gt;-tag</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01217.shtml">Re: Yet another slice with no navigation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01219.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01215.shtml">use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01225.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01218"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01218"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problems with define&#45;tag -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 Jul 2000 17:31:40 +0200 (MET DST) -->
+<!--X-Message-Id: 20000717173242.A10463@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200007171335.PAA03805@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01824">Date Index</a>][<a href="thrd10.shtml#01824">Thread Index</a>]<br>
+[<A HREF="msg01823.shtml">Date Prev</A>][<A HREF="msg01825.shtml">Date Next</A>][<A HREF="msg01819.shtml">Thread Prev</A>][<A HREF="msg01825.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problems with define-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 17:32:42 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 17, 2000 at 03:35:09PM +0200, zaucker@ee.ethz.ch wrote:
+
+&gt; Isn't
+&gt; 
+&gt;       &lt;define-tag endtag=required&gt;
+&gt; 
+&gt; suppossed to behave the same as
+&gt; 
+&gt;       &lt;define-container&gt;
+
+Yes.
+
+&gt; The following (stripped down) definition works with &lt;define-container&gt;
+&gt; and not with &lt;define-tag&gt;:
+&gt; 
+&gt; &lt;define-container MAGICK whitespace=delete&gt;
+&gt; &lt;perl&gt;
+&gt; BEGIN{unshift @INC, "/usr/pack/imagemagick-4.2.9-to/solaris/perl/"};
+&gt; use Image::Magick;
+&gt; &lt;/perl&gt;
+&gt; &lt;/define-container&gt;
+
+And how did you write it with define-tag?
+
+  &lt;define-tag MAGICK endtag=required whitespace=delete&gt;
+  &lt;perl&gt;
+  BEGIN{unshift @INC, "/usr/pack/imagemagick-4.2.9-to/solaris/perl/"};
+  use Image::Magick;
+  &lt;/perl&gt;
+  &lt;/define-tag&gt;
+
+What does not work?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01825" HREF="msg01825.shtml">Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01819" HREF="msg01819.shtml">No Subject</A></strong>, <em>From:</em> zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01823.shtml">Re: Question about nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01825.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01819.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01825.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01824"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01824"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

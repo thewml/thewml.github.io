@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML&#45;1.7.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 28 Jun 1999 19:18:28 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990628183753.2607A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00809">Date Index</a>][<a href="thrd17.shtml#00809">Thread Index</a>]<br>
+[<A HREF="msg00808.shtml">Date Prev</A>][<A HREF="msg00810.shtml">Date Next</A>][<A HREF="msg00805.shtml">Thread Prev</A>][<A HREF="msg00810.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML-1.7.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 28 Jun 1999 19:12:09 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Dear WML users,
+
+WML-1.7.2 is out.
+
+This release does not reflect the current wml-SNAP, it contains only
+bug fixes found at
+   <A  HREF="http://www.engelschall.com/sw/wml/distrib/bugs/wml-1.7.1/">http://www.engelschall.com/sw/wml/distrib/bugs/wml-1.7.1/</A>
+
+I believe this version is really stable and WML-1.7.3 should arrive in
+September if no major bugs are found.
+
+To upgrade, you can
+- download and compile wml-1.7.2.tar.gz (1810Kb)
+- use wmu to upgrade
+- download and apply wml-1.7.1-1.7.2.sh.gz (3.5Kb)
+
+Yours,
+
+Denis
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00808.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00810.shtml">[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00805.shtml">Not skippin passes</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00810.shtml">[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00809"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00809"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

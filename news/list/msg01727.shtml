@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [2.0.1] How to get outputfile name? -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Thu, 22 Jun 2000 11:50:39 +0200 (MET DST) -->
+<!--X-Message-Id: 20000622114605.M18991@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01727">Date Index</a>][<a href="thrd36.shtml#01727">Thread Index</a>]<br>
+[<A HREF="msg01726.shtml">Date Prev</A>][<A HREF="msg01728.shtml">Date Next</A>][<A HREF="msg01734.shtml">Thread Prev</A>][<A HREF="msg01729.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[2.0.1] How to get outputfile name?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Jun 2000 11:46:05 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+At the moment I create various language versions of my pages using
+shebang headers like this:
+
+#!wml -o (ALL-LANG_*)+LANG_DE:%BASE.html \
+      -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+
+Now I want to write the URL of the created file into the created file
+(like "This is URL http://...").  For this I need a mechanism to find
+out the name of the output file.  Until now I only found how to get
+the inputfile name (using the variables WML_SRC_DIRNAME,
+WML_SRC_FILENAME, WML_SRC_BASENAME), but is there an easy way to get
+the output file name?  Okay, I could implement some magic based using
+the SRC variables and using some slices code like
+ $(WML_SRC_BASENAME)&lt;en: -en&gt;.html 
+or something like this, but this heavily depends on the shebang line
+in the input file (which may change in the future), while I intend to
+implement this in the above include file...
+
+Any ideas?
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01729" HREF="msg01729.shtml">Re: [2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01764" HREF="msg01764.shtml">Re: [2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01726.shtml">Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01728.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01734.shtml">RE: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01729.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01727"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01727"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

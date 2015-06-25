@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Nested navbars -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 16 Feb 1998 15:02:50 +0100 (MET) -->
+<!--X-Message-Id: m1iuqfdd7s.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199802151602.RAA25866@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00097">Date Index</a>][<a href="thrd2.shtml#00097">Thread Index</a>]<br>
+[<A HREF="msg00096.shtml">Date Prev</A>][<A HREF="msg00098.shtml">Date Next</A>][<A HREF="msg00096.shtml">Thread Prev</A>][<A HREF="msg00098.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 16 Feb 1998 12:02:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I was wondering, if (or better, how?) nesting of navbar's could be
+accomplished. For example:
+
+
+PAGE 1			PAGE 2
+
+Topic 1			Topic 1
+Topic 2			Topic 2
+  Subtopic 2a		Topic 3
+  Subtopic 2b		  Subtopic 3a
+  Subtopic 2c		  Subtopic 3b
+Topic 3			  Subtopic 3c
+Topic 3			  Subtopic 3d
+Topic 5			Topic 4
+			Topic 5
+
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://www.ee-staff.ethz.ch/~zaucker/">http://www.ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00096" HREF="msg00096.shtml">ANNOUNCE: WML 1.6.1</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00096.shtml">ANNOUNCE: WML 1.6.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00098.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00096.shtml">ANNOUNCE: WML 1.6.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00098.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00097"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00097"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

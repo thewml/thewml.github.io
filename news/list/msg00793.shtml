@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: OK, so it's elegant, now what?  :) -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Wed, 23 Jun 1999 20:45:40 +0200 (MET DST) -->
+<!--X-Message-Id: 19990623204319.A18409@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 001701bebda0$a201da40$066cb997@reichel.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00793">Date Index</a>][<a href="thrd17.shtml#00793">Thread Index</a>]<br>
+[<A HREF="msg00792.shtml">Date Prev</A>][<A HREF="msg00794.shtml">Date Next</A>][<A HREF="msg00792.shtml">Thread Prev</A>][<A HREF="msg00801.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: OK, so it's elegant, now what?  :)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 23 Jun 1999 20:43:19 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 23, 1999, Dennis Reichel wrote:
+
+&gt; There appears to be a steep learning curve and a good deal of labor involved
+&gt; in setting up and maintaining a WML managed/(generated?) site:
+
+Sure, WML is a hacker tool intended to solve problems other tools cannot
+solve. The price is the higher learning curve...
+ 
+&gt; Where do the labor savings enter?
+
+I would start poking around in the templates of existing websites. There is
+list on the website with URLs to those templates.
+
+&gt; At what relative complexity or size site does WML become a useful tool?
+
+I use WML even for single pages. But I'm biased, of course.  Actually WML's
+power can only be seen when generating a web _area_, i.e. at least two or
+three pages which should use the same design and code.
+
+&gt; Is WML used at design time, run time, or both?
+
+Pure design time, i.e. WML is an offline tool.  Ok, some people even use it
+online, but I personally think this is crazy except for some rare situations.
+
+&gt; Does Apache require a special module, handlers or other modification to use
+&gt; WML capabilities?
+
+No, the output of WML is plain markup code. You don't need any fancy server
+feature to use it. This was one of the goals of WML and the reason why I
+dislike websites created with tons of PHP code...
+
+&gt; What skillsets are required to use WML effectively - Perl scripting?  m4
+&gt; macro language? etc..
+
+As a good start one usually just has to work with a few HTML tags given by
+pass 2 of WML (Meta-HTML).  When you want to do more hacking, you usually need
+a little bit Perl knowledge, yes. But you can also do your hacking in m4 when
+you want. That's not always important - WML provides with the tools. Use those
+of the provides tools you can manage.
+
+&gt; How is WML likened to CSS (cascading style sheets)
+
+WML technically has nothing to do with CSS. CSS is just some more text you put
+into WML source files the same way you put in there HTML, JavaScript, etc.  So
+there is no problem in using CSS with WML.  Same for any other forthcoming web
+markup standard: WML is always prepared for it ;) 
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00792" HREF="msg00792.shtml">OK, so it's elegant, now what?  :)</A></strong>, <em>From:</em> Dennis Reichel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00792.shtml">OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00794.shtml">need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00792.shtml">OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00801.shtml">Re: OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00793"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00793"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

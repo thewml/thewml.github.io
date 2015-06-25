@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Thu, 3 Feb 2000 16:55:52 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0002031618250.2569&#45;100000@jobs.hasecke.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200002031418.PAA10096@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01328">Date Index</a>][<a href="thrd27.shtml#01328">Thread Index</a>]<br>
+[<A HREF="msg01327.shtml">Date Prev</A>][<A HREF="msg01329.shtml">Date Next</A>][<A HREF="msg01327.shtml">Thread Prev</A>][<A HREF="msg01335.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Feb 2000 16:56:18 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Stephane!
+
+Thanks for your hints!
+
+I decided to install wml-1.7.4 via dselect and it works out of the
+box! :-)
+
+I am beginning to love dselect and apt, although it is a little bit
+unearthly. I always fear that updating packages will ruin something
+inside of my box.
+
+O.K. The installation of wml removes my tetex-Installation, but I
+reinstalled it. 
+
+Generally I am very satisfied with Debian. I had to fiddle a little
+bit with the config-files, but it works nearly out of the box. Before
+I tried to install the new OpenLinux. It is very easy to install, but
+I found no way to set up ethernet and isdn together.
+
+Ciao!
+juh
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01327" HREF="msg01327.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01327.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01329.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01327.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01335.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01328"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01328"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

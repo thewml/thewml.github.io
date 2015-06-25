@@ -1,0 +1,191 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Quick bugdrop -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 18 Jul 2000 08:02:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20000718080311.B12140@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000718013910.A3368@poisson.dyndns.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01839">Date Index</a>][<a href="thrd38.shtml#01839">Thread Index</a>]<br>
+[<A HREF="msg01838.shtml">Date Prev</A>][<A HREF="msg01840.shtml">Date Next</A>][<A HREF="msg01838.shtml">Thread Prev</A>][<A HREF="msg01852.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Quick bugdrop</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 08:03:11 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 18, 2000 at 01:39:10AM -0700, Chris Marston wrote:
+
+&gt; Er, I sent this to rse@engelschall.com, but I'm not sure it got through,
+&gt; so I joined the list and am resubmitting it. :)
+
+Hi Chris, Ralf forwarded it to me, but i did not answer yet.
+
+&gt; There seems to be a bug in WML2.0.2's &lt;rollover&gt; (at least, so far as
+&gt; interaction with Netscape is concerned). Essentially, since each dhtml layer
+&gt; (``absolutely positioned block'', in CSS-speak) is a javascript 'document'
+&gt; object in its own right, any javascript it contains cannot see the javascript
+&gt; functions of its peers. This means that javascript errors are thrown 
+&gt; when code looks like:
+&gt; 
+&gt; &lt;span id=floatingyogi&gt;
+&gt; &lt;rollover ... &gt;
+&gt; &lt;/span&gt;
+&gt; &lt;span id=magicbunny&gt;
+&gt; &lt;rollover ... &gt;
+&gt; &lt;/span&gt;
+&gt; 
+&gt; 'magicbunny's rollover will complain that the rollover functions cannot
+&gt; be found.
+&gt; 
+&gt; 
+&gt; Enclosed is a workaround in mp4h/eperl.
+&gt; 
+&gt; #workaround for an annoying rollover bug that causes 
+&gt; #javascript errors on dhtml netscape docs.
+&gt; 
+&gt; &lt;define-tag span endtag=required&gt;
+&gt; 	&lt;: push @LAYERS, {}; :&gt;
+&gt; 	&lt;span* %attributes &gt;
+&gt; 	%body
+&gt; 	&lt;/span*&gt;
+&gt; 	&lt;: pop @LAYERS; :&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;define-tag div endtag=required&gt;
+&gt; 	&lt;: push @LAYERS, {}; :&gt;
+&gt; 	&lt;div* %attributes &gt;
+&gt; 	%body
+&gt; 	&lt;/div*&gt;
+&gt; 	&lt;: pop @LAYERS; :&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;define-tag layer endtag=required&gt;
+&gt; 	&lt;: push @LAYERS, {}; :&gt;
+&gt; 	&lt;layer* %attributes &gt;
+&gt; 	%body
+&gt; 	&lt;/layer*&gt;
+&gt; 	&lt;: pop @LAYERS; :&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;define-tag cmarstonRollover whitespace=delete&gt;
+&gt; 	&lt;:print q (
+&gt; &lt;script type="text/javascript" language="JavaScript"&gt;
+&gt; &lt;!-- cmarston@trentu.ca: a quick layering patch
+&gt; 
+&gt; function ro_imgNormal(imgName) {
+&gt;     if (document.images) {
+&gt;         document[imgName].src = eval(imgName + "_n.src");
+&gt;         self.status = '';
+&gt;     }
+&gt; }
+&gt; function ro_imgOver(imgName, descript) {
+&gt;     if (document.images) {
+&gt;         document[imgName].src = eval(imgName + "_o.src");
+&gt;         self.status = descript;
+&gt;     }
+&gt; }
+&gt; --&gt; &lt;/script&gt; 
+&gt; )  unless (  $LAYERS[$#LAYERS]-&gt;{'rolled'} || 
+&gt; 	     $LAYERS-&gt;{'first'}  );
+&gt; $LAYERS[$#LAYERS]-&gt;{'rolled'} = 1;
+&gt; $LAYERS-&gt;{'first'} = 0;
+&gt; :&gt;
+&gt; &lt;rollover %attributes &gt;
+&gt; &lt;/define-tag&gt;
+
+This is interesting, but it will fail with multi-lingual documents
+(current rollover fail too), e.g.
+  &lt;en&gt;&lt;rollover ...&gt;&lt;/en&gt;
+  &lt;fr&gt;&lt;rollover ...&gt;&lt;/fr&gt;
+Because Javascript functions are present in first language only.
+
+I believe that the best solution is to define
+  &lt;define-tag ro:funcs&gt;\
+  #   following tag is defined in wml::std::tags
+  &lt;javascript&gt;
+  function ro_imgNormal(imgName) {
+      if (document.images) {
+          document[imgName].src = eval(imgName + "_n.src");
+          self.status = '';
+      }
+  }
+  function ro_imgOver(imgName, descript) {
+      if (document.images) {
+          document[imgName].src = eval(imgName + "_o.src");
+          self.status = descript;
+      }
+  }
+  &lt;/javascript&gt;
+  &lt;define-tag ro:funcs&gt;&lt;/define-tag&gt;\
+  &lt;/define-tag&gt;
+
+Let &lt;rollover&gt; call this function. When you need to put these functions
+more than once, call &lt;ro:funcs&gt; in HEAD section (between
+&lt;head&gt;...&lt;/head&gt;) either directly or via diversions.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01838" HREF="msg01838.shtml">Quick bugdrop</A></strong>, <em>From:</em> Chris Marston</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01838.shtml">Quick bugdrop</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01840.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01838.shtml">Quick bugdrop</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01852.shtml">[wml] Does anybody need basic regular expressions?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01839"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01839"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

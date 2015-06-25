@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: file permissions -->
+<!--X-From-R13: Drzpb ina qra Pret <eiqoretNrui.fp.cuvyvcf.pbz> -->
+<!--X-Date: Wed, 13 Oct 1999 11:56:21 +0200 (MET DST) -->
+<!--X-Message-Id: 199910130732.JAA01219@psv.ehv.sc.philips.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199910130655.CAA25283@ursa.calvin.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01057">Date Index</a>][<a href="thrd22.shtml#01057">Thread Index</a>]<br>
+[<A HREF="msg01056.shtml">Date Prev</A>][<A HREF="msg01058.shtml">Date Next</A>][<A HREF="msg01073.shtml">Thread Prev</A>][<A HREF="msg01065.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: file permissions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 13 Oct 1999 09:32:50 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Ryan VanderBijl wrote:
+&gt; 
+&gt; Is there any trick to having wmk (or wml, or whoever) to make the 
+&gt; output file with 0644 permissions? I've noticed that wmk is smart
+&gt; enought to make wml take in foobar.wml and output foobar.html, but
+&gt; when that happens the file permissions are just 0600. 
+&gt; 
+&gt; Thanks,
+&gt; 
+&gt; Ryan
+
+Don't know, I always use normal GNU Makefiles:
+
+WML = wml
+WMLFLAGS = 
+
+%.html: %.wml
+	$(WML) $(WMLFLAGS) $&lt; -o $@
+	@chmod 644 $@
+
+-Remco
+
+--
+----------------------------------------------------------------------------
+Philips Semiconductors B.V.  tel:(+31 40 27)22031   fax:22764   Room: BE-345
+<A  HREF="mailto:Remco.vdBerg@ehv.sc.philips.com">mailto:Remco.vdBerg@ehv.sc.philips.com</A>                  seri: rvdberg@nlsce1
+home Email: RvdBerg@dse.nl  (non Philips related)              ICQ: 47514668
+----------------------------------------------------------------------------
+ Microsoft and Lotus Notes free.  Please don't send me any Microsoft files.
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01055" HREF="msg01055.shtml">file permissions</A></strong>, <em>From:</em> Ryan VanderBijl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01056.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01058.shtml">WML site?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01073.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01065.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01057"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01057"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

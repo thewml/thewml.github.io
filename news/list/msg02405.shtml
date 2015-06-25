@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: our wmk/wml broke with perl (5.6.1) upgrade &#45;&#45; help! -->
+<!--X-From-R13: [negva [nrpuyre <znrpuyreNfgng.zngu.rgum.pu> -->
+<!--X-Date: Mon, 22 Oct 2001 09:56:19 +0200 (MET DST) -->
+<!--X-Message-Id: 15315.53472.545565.750564@gargle.gargle.HOWL -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02405">Date Index</a>][<a href="thrd49.shtml#02405">Thread Index</a>]<br>
+[<A HREF="msg02404.shtml">Date Prev</A>][<A HREF="msg02406.shtml">Date Next</A>][<A HREF="msg02397.shtml">Thread Prev</A>][<A HREF="msg02407.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>our wmk/wml broke with perl (5.6.1) upgrade -- help!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Martin Maechler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Oct 2001 09:55:12 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+[[[ I've sent the following almost a week ago, but never got any response;
+    Our Sendmail log showed the mail was delivered, etc...
+    Only today, I've looked again a bit more closely at
+    <A  HREF="http://www.engelschall.com/sw/wml/news/list.html">http://www.engelschall.com/sw/wml/news/list.html</A>
+    and then found at the bottom of that page *after* the subscription
+    instructions 
+     &gt;&gt; Please notice that this list allows only subscribers to post because
+     &gt;&gt; of the existing spamming services. 
+    This should be marked much more dominantly;
+    or better, the mailing list software behind sw-wml@engelschall.com
+    should send me an answer telling me that my mail was rejected because I
+    was not subscribed...  
+
+    Ok, now I *have* subscribed, and hence the following should go through
+]]]
+
+(as subject says). I have tried quite a few things, all unsuccessfully.
+
+  configure --prefix=....
+  make
+  make check
+  make install
+
+all work fine. "make check" reports full success, but still
+a simple "wmk" call in a directory where everything used to work, results in
+
+   /usr/local/app/wml/bin/wml -n -oLANG_VAR:einteilung.var '-o(ALL-LANG_*)+LANG_EN:einteilung.en.html' '-o(ALL-LANG_*)+LANG_DE:einteilung.de.html' einteilung.wml
+   ePerl:Error: Perl parsing error (interpreter rc=255)
+
+   ---- Contents of STDERR channel: ---------
+   DynaLoader object version 1.04 does not match $DynaLoader::VERSION 1 at /usr/local/lib/perl5/5.6.1/i686-linux/DynaLoader.pm line 100.
+   Compilation failed in require at /usr/local/app/wml/lib/perl/lib/i686-linux/IO.pm line 5.
+   Compilation failed in require at /usr/local/app/wml/lib/perl/lib/i686-linux/IO/Handle.pm line 241.
+   BEGIN failed--compilation aborted at /usr/local/app/wml/lib/perl/lib/i686-linux/IO/Handle.pm line 241.
+   Compilation failed in require at /usr/local/app/wml/lib/perl/lib/i686-linux/IO/Seekable.pm line 51.
+   BEGIN failed--compilation aborted at /usr/local/app/wml/lib/perl/lib/i686-linux/IO/Seekable.pm line 51.
+   Compilation failed in require at /usr/local/app/wml/lib/perl/lib/i686-linux/IO/File.pm line 112.
+   BEGIN failed--compilation aborted at /usr/local/app/wml/lib/perl/lib/i686-linux/IO/File.pm line 112.
+   Compilation failed in require at /usr/local/lib/perl5/5.6.1/FileHandle.pm line 9.
+   Compilation failed in require at /usr/local/app/wml/lib/perl/lib/i686-linux/WML/GD.pm line 7.
+   Compilation failed in require at /tmp/wml.24694.tmp1.wml line 185.
+   BEGIN failed--compilation aborted at /tmp/wml.24694.tmp1.wml line 185.
+   ------------------------------------------
+   ** WML:Break: Error in Pass 3 (rc=74).
+   ** WMk:Break: Error in WML (rc=256)
+
+----------------------------------------------------------------------
+20:00: deb{sfs}230&gt; wmk -V
+This is WML Version 2.0.7 (21-Jun-2001)
+Copyright (c) 1996-2000 Ralf S. Engelschall.
+Copyright (c) 1999-2000 Denis Barbier.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+----------------------------------------------------------------------
+20:00: deb{sfs}231&gt; perl -v
+
+This is perl, v5.6.1 built for i686-linux
+
+Copyright 1987-2001, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using `man perl' or `perldoc perl'.  If you have access to the
+Internet, point your browser at <A  HREF="http://www.perl.com/">http://www.perl.com/</A>, the Perl Home Page.
+----------------------------------------------------------------------
+
+20:00: deb{sfs}232&gt; uname -a
+Linux deb 2.2.14-12smp #1 SMP Tue Apr 25 12:22:15 EDT 2000 i686 unknown
+
+which is Redhat 6.2 but with newer perl, newer gcc, ....
+----------------------------------------------------------------------
+20:00: deb{sfs}233&gt; env|grep -i perl
+PATH=/u/sfs/bin/Linux:/u/sfs/bin:/u/sfs/bin/perl:/usr/local/bin/scripts:/usr/local/bin:/usr/local/app/X11/R6/bin:/usr/local/app/JDK/IBM/IBMJava2/bin:/usr/sepp/bin:/usr/local/app/teTeX/texmflocal/bin/scripts:/usr/local/app/teTeX/texmflocal/bin/i386-linux:/usr/local/app/teTeX/8.01/bin/i386-linux:/usr/local/app/teTeX/ETHZ/bin/i386-linux:/bin:/usr/bin:/usr/bin/X11:/usr/games:/usr/local/majordomo:.
+PERL=/usr/local/bin/perl
+PERL5LIB=/usr/local/lib/perl5/5.6.1/i686-linux:/usr/local/lib/perl5/5.6.1:/usr/local/lib/perl5/site_perl/5.6.1/i686-linux:/usr/local/lib/perl5/site_perl/5.6.1:/usr/local/lib/perl5/site_perl/5.005/i386-linux:/usr/local/lib/perl5/site_perl/5.005
+----------------------------------------------------------------------
+
+What other information do you need?
+
+Can you please give me hints on what to do? It's really becoming urgent 
+here.. 
+
+Thanks a lot in advance!
+(and please keep me posted, I'm not a subscriber of the mailing list).
+
+Martin Maechler &lt;maechler@stat.math.ethz.ch&gt;	<A  HREF="http://stat.ethz.ch/~maechler/">http://stat.ethz.ch/~maechler/</A>
+Seminar fuer Statistik, ETH-Zentrum  LEO D10	Leonhardstr. 27
+ETH (Federal Inst. Technology)	8092 Zurich	SWITZERLAND
+phone: x-41-1-632-3408		fax: ...-1228			&lt;&gt;&lt;
+------- end of forwarded message -------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02407" HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02404.shtml">RE: #include oddities.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02406.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02397.shtml">Problems with using &lt;gfont&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02405"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02405"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

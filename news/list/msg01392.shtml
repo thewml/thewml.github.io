@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New Vim Syntax File! -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Wed, 1 Mar 2000 08:27:45 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0002291750380.500&#45;100000@mandrake.box.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200002291032.LAA05723@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01392">Date Index</a>][<a href="thrd29.shtml#01392">Thread Index</a>]<br>
+[<A HREF="msg01391.shtml">Date Prev</A>][<A HREF="msg01393.shtml">Date Next</A>][<A HREF="msg01388.shtml">Thread Prev</A>][<A HREF="msg01395.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New Vim Syntax File!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 29 Feb 2000 17:56:33 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 29 Feb 2000, Stephane Bortzmeyer wrote:
+&gt;It was discussed several times on this list and the problem is that WML is 
+&gt;actually a mix of several languages. I use 'html-mode' when editing HTML code, 
+&gt;'perl-mode' when in an ePerl block, etc.
+&gt;
+&gt;How do you address that in vim?
+
+	Vim has that possibility to color certain parts of the file
+	being edited differently, according to the content. Take
+	php.vim (or is it php3.vim?). If you turn on html and sql
+	syntax coloring, you can have everything between &lt;?php and ?&gt;
+	colored by php3 rules, and the outer text colored by html
+	rules. Strings beginning with "select or "update are colored
+	by sql rules.
+
+	Since ePerl code starts with &lt;: and ends with :&gt; the same
+	trick can be applied here. Same for xtable, m4, even slices
+	can have different colors.
+
+	I didn't check wml.vim syntax file yet, but with some tricks
+	from php3.vim, wml.vim could be pretty complete.
+-- 
+      v
+Davor Cengija
+davor@linuxfan.com
+===================================
+"Please allow 30 days for delivery"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01388" HREF="msg01388.shtml">Re: New Vim Syntax File!</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01391.shtml">Re: Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01393.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01388.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01395.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01392"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01392"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to define an <expire> tag? -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Sat, 24 Jan 1998 16:44:56 +0100 (MET) -->
+<!--X-Message-Id: 199801241544.QAA13663@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801241542.QAA13556@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00054">Date Index</a>][<a href="thrd2.shtml#00054">Thread Index</a>]<br>
+[<A HREF="msg00053.shtml">Date Prev</A>][<A HREF="msg00055.shtml">Date Next</A>][<A HREF="msg00053.shtml">Thread Prev</A>][<A HREF="msg00055.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to define an &lt;expire&gt; tag?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Sat, 24 Jan 1998 16:44:54 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Ralf S. Engelschall, in a previous mail you wrote:
+
+&gt; That's easy when you know how Pass 5 (Divert) works and when you additionally
+&gt; know that there is a discard location named "null". So, the idea is to insert
+&gt; a enter for location "null" when the expire time is reached. Here it is:
+&gt; 
+&gt;     | &lt;define-tag expire&gt;
+&gt;     | &lt;:{
+&gt;     |      use Date::Parse;
+&gt;     |      my $et = Date::Parse::str2time('%0');
+&gt;     |      my $ct = time();
+&gt;     |      print '&lt;&lt;main..' if ($et &lt;= $ct);
+&gt;     | }:&gt;
+&gt;     | &lt;/define-tag&gt;
+
+Ops... I should have said that leaving location "main" means entering "null"
+because "null" is the outmost location for Pass 5 (Divert) while "main" is the
+first automatically entered location. Please read wml_p5_divert(1) for more
+details.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00053" HREF="msg00053.shtml">Re: How to define an &lt;expire&gt; tag?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00053.shtml">Re: How to define an &lt;expire&gt; tag?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00055.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00053.shtml">Re: How to define an &lt;expire&gt; tag?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00055.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00054"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00054"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

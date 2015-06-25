@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: slices: <img> and <set&#45;var> problem (again) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 12 Dec 1999 20:53:38 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991212204328.392A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912121524.QAA32368@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01219">Date Index</a>][<a href="thrd25.shtml#01219">Thread Index</a>]<br>
+[<A HREF="msg01218.shtml">Date Prev</A>][<A HREF="msg01220.shtml">Date Next</A>][<A HREF="msg01216.shtml">Thread Prev</A>][<A HREF="msg01220.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Dec 1999 20:52:59 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 12 Dec 1999, Jan Holler wrote:
+
+&gt; hi
+&gt; until now i run into two major "flaws" with slices
+&gt; and those two are bothering me (and sooner or later you if
+&gt; you want to create multilingual sites). the problem is,
+&gt; that slicing must(!) be done after all other passes,
+&gt; because the file "splits up" in several files.
+[...]
+&gt; i think we should really think about that, since the sites
+&gt; get more and more graphically designed and having at least
+&gt; an english version next to your main language gets more and
+&gt; more common too.
+&gt; 
+&gt; comments please.
+
+<A  HREF="http://www.debian.org/">http://www.debian.org/</A> is an excellent example of multilingual web site.
+
+About the problem of testing content's variable, a basic solution is to
+set your variables in english and translate them when printed.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01220" HREF="msg01220.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01216" HREF="msg01216.shtml">slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01218.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01220.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01216.shtml">slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01220.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01219"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01219"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

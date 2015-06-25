@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multi Language Support Question -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Sat, 21 Jul 2001 02:42:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20010721023455.D26357@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02326">Date Index</a>][<a href="thrd47.shtml#02326">Thread Index</a>]<br>
+[<A HREF="msg02325.shtml">Date Prev</A>][<A HREF="msg02327.shtml">Date Next</A>][<A HREF="msg02334.shtml">Thread Prev</A>][<A HREF="msg02307.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multi Language Support Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 21 Jul 2001 02:34:55 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Karl-Heinz Marbaise wrote:
+&gt; #use wml::std::lang
+&gt; &lt;lang:new id=en short&gt;
+&gt; &lt;lang:new id=de short&gt;
+&gt; &lt;lang:star:slice: &lt;get-var WML_SRC_BASENAME&gt;-*.html&gt;
+&gt; &lt;h1&gt;Dass ist die Foo Seite&lt;/h1&gt;
+&gt; 
+&gt; like the above, but it produces an error message which
+&gt; says there is slice defined.
+
+If there are only &lt;de&gt;'s or only &lt;en&gt;'s in a file, the situation is
+clear. But, if none of them are used (means defined in the end), there
+are two solutions:
+
+a) No output at all (this is sometimes useful IMHO)
+
+b) All files should be generated, all with the same content. (This is
+   probably a useful default.)
+
+Regarding my interface suggestion (see other mail in same thread), I
+must admit that an option like "-u" with the semantic "*u*ndefined
+slices are treated as empty slices." should also exist.
+
+So in this case, the shebang line could read
+
+#!slice -u (ALL-LANG_*)+LANG_DE:test-de.html -u (ALL-LANG_*)+LANG_EN:test-en.html
+
+for the first syntax suggestion. And for the second one, we probably
+would use the uppercase form of "-u":
+
+#!slice -U -o (ALL-LANG_*)+LANG_DE:test-de.html -o (ALL-LANG_*)+LANG_EN:test-en.html
+
+Alternatively, we could write:
+
+#!slice -ou (ALL-LANG_*)+LANG_DE:test-de.html -ou (ALL-LANG_*)+LANG_EN:test-en.html
+
+Actually, after this example, I begin to prefer the second syntax
+variant. It's more consistent.
+ 
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02325.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02327.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02334.shtml">Re: Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02307.shtml">UTF-8 support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02326"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02326"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

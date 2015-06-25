@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Newbie ... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 7 Nov 2000 21:25:18 +0100 (MET) -->
+<!--X-Message-Id: 20001107213121.A15752@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 77D7DDA4C90ED3119BBF0008C70DF14101803EC4@giat015.gia.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02053">Date Index</a>][<a href="thrd42.shtml#02053">Thread Index</a>]<br>
+[<A HREF="msg02052.shtml">Date Prev</A>][<A HREF="msg02054.shtml">Date Next</A>][<A HREF="msg02051.shtml">Thread Prev</A>][<A HREF="msg02052.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Newbie ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Nov 2000 21:31:22 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Nov 07, 2000 at 07:19:24PM +0100, Joss Roger GIARJO" wrote:
+&gt; Hi 
+&gt; 
+&gt; I found a link to WML on Toby Oetikers RRD homepage. Since I know about RRD,
+&gt; I thought using tools Toby is using for his needs would be a good idea.
+&gt; 
+&gt; In order to jump into WML, I downloaded WML and the full Demo Pages-Tree.
+&gt; Installing WML (SuSE Linux 6.4) went perfect, but the examples on  WML
+&gt; Feature Demonstration Pages will not work.
+&gt; 
+&gt; I tried it with a simple wmk (as it is desc. under
+&gt; <A  HREF="http://www.engelschall.com/sw/wml/example/">http://www.engelschall.com/sw/wml/example/</A> ) but it's not going to make the
+&gt; tree.
+&gt; 
+&gt; Sorry for disturbing you, but I you have a litte hint how to deal with the
+&gt; Demonstration Pages. 
+
+Hi,
+
+wmk was broken in 2.0.5, did you try WML-2.0.6 ?
+And make sure you downloaded
+<A  HREF="http://www.engelschall.com/sw/wml/example/source_download.cgi/sample/demo.wml">http://www.engelschall.com/sw/wml/example/source_download.cgi/sample/demo.wml</A>
+and not an HTML file.
+
+A good starting point is to read documentation with wmd, there are some
+general documents.
+
+HTH
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02051" HREF="msg02051.shtml">Newbie ...</A></strong>, <em>From:</em> Joss Roger \(GIARJO\)</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02052.shtml">Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02054.shtml">Re: Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02051.shtml">Newbie ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02052.shtml">Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02053"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02053"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

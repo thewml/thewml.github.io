@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with ifeq under 2.0.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 19 May 2000 00:56:59 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000519004234.4839A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000518132704.A2064@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01574">Date Index</a>][<a href="thrd33.shtml#01574">Thread Index</a>]<br>
+[<A HREF="msg01573.shtml">Date Prev</A>][<A HREF="msg01575.shtml">Date Next</A>][<A HREF="msg01573.shtml">Thread Prev</A>][<A HREF="msg01577.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with ifeq under 2.0.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 19 May 2000 00:56:52 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 18 May 2000, Roland Rosenfeld wrote:
+
+&gt; On Wed, 17 May 2000, Denis Barbier wrote:
+&gt; 
+&gt; &gt; read the file README.mp4h in top-level directory, it describes what to
+&gt; &gt; do with this expression (and why it is broken now):
+&gt; &gt;       &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+&gt; 
+&gt; But there is still a strange effect in combination with
+&gt; wml::std::href:
+&gt; 
+&gt; Take this example:
+&gt; 
+&gt; #include wml::std::href
+&gt; &lt;ifeq 0 0 "&lt;href url=\"foo.html\"&gt;" "&lt;href url=\"bar.html\"&gt;"&gt;
+&gt; 
+&gt; This results in
+&gt;    &lt;a href=""foo.html""&gt;&lt;tt&gt;"foo.html"&lt;/tt&gt;&lt;/a&gt;
+&gt; (note the superfluous quotes).
+
+Indeed this form is no more valid.  The patch below allows it, but it
+won't work when nesting more levels.
+
+&gt; In contrast to this, the following seems to be okay:
+&gt; 
+&gt; #include wml::std::href
+&gt; &lt;ifeq 0 0 "&lt;href url="foo.html"&gt;" "&lt;href url="bar.html"&gt;"&gt;
+
+Yes, this is indeed the right way.
+
+&gt; and also 
+&gt; 
+&gt; #include wml::std::href
+&gt; &lt;ifeq 0 0 "&lt;href url=foo.html&gt;" "&lt;href url=bar.html&gt;"&gt;
+&gt; 
+&gt; Both create the expected output:
+&gt; 
+&gt;    &lt;a href="foo.html"&gt;&lt;tt&gt;foo.html&lt;/tt&gt;&lt;/a&gt;
+&gt; 
+&gt; But why does it work this way?  This isn't what I expected after
+&gt; reading README.mp4h and the manpage of wml::std::href...
+
+In this case README.mp4h must be rewritten. I'll try to find a better
+formulation.
+
+--- wml_backend/p2_mp4h/src/builtin.c	2000/05/02 22:34:46	1.37
++++ wml_backend/p2_mp4h/src/builtin.c	2000/05/18 22:50:14
+@@ -3117,7 +3117,8 @@
+               }
+             
+             /*  Remove special quote characters. */
+-            if (*value == CHAR_LQUOTE &amp;&amp; *(value+strlen(value)-1) == CHAR_RQUOTE)
++            if ((*value == CHAR_LQUOTE &amp;&amp; *(value+strlen(value)-1) == CHAR_RQUOTE)
++             || (*value == CHAR_QUOTE  &amp;&amp; *(value+strlen(value)-1) == CHAR_QUOTE))
+               {
+                 *(value+strlen(value)-1) = '\0';
+                 value++;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01577" HREF="msg01577.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01573" HREF="msg01573.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01573.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01575.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01573.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01577.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01574"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01574"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

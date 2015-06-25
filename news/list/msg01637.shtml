@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: c) or d) -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Sat, 27 May 2000 22:58:43 +0200 (MET DST) -->
+<!--X-Message-Id: 20000527225837.C24912@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000527121742.B10271@matrix.42.org -->
+<!--X-Reference: Pine.LNX.3.96.1000527191936.16331D&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01637">Date Index</a>][<a href="thrd33.shtml#01637">Thread Index</a>]<br>
+[<A HREF="msg01636.shtml">Date Prev</A>][<A HREF="msg01638.shtml">Date Next</A>][<A HREF="msg01635.shtml">Thread Prev</A>][<A HREF="msg01638.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: c) or d)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 27 May 2000 22:58:37 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, May 27, 2000 at 07:47:16PM +0200, Denis Barbier wrote:
+[...]
+&gt; &gt; &gt; &gt; &gt; 6) &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt; or &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+[...]
+&gt; &gt; I don't think so. It would be violating POLA. A tag should close with
+&gt; &gt; the first 'available' &gt;.
+&gt; What is POLA?
+
+"Principle of least astonishment"
+
+&gt; &gt; &lt;BLA &lt;BLB&gt;&gt; Is clearly BLA with attribute &lt;BLB&gt; no matter what follows.
+&gt; 
+&gt; I strongly disagree.  In my mind innermost tags must be closed first.
+&gt; So here is another question, which one is preferred?
+&gt;  c) first open, first close
+&gt;  d) last open, first close
+
+Oh, so now I understand your way of parsing that line.
+
+If anything, this makes a strong point of disallowing 'stray' &gt;
+altogether.
+
+&gt; My preferred one is (d) (and to be honest i never thought of (a) before)
+&gt; because it prevents nesting problems, e.g.
+&gt;   &lt;define-container bla&gt;%body&lt;/define-container&gt;
+&gt;   &lt;bla&gt;&lt;blb&gt;&lt;/bla&gt;&lt;/blb&gt;
+&gt; is valid with (c).
+
+Why should it be more or less valid in case c and/or d? If both are
+containers, this line is simply incorrect. Either you start matching the
+&lt;bla&gt; with the &lt;/bla&gt; and notice that &lt;blb&gt; is not closed. Or you Start
+with &lt;bla&gt;, recurse into &lt;blb&gt;...&lt;/blb&gt; and notice that &lt;bla&gt; is never
+closed.
+
+&gt; And it allows
+&gt;   &lt;define-tag foo&gt;
+&gt;     Before definition: &lt;bar&gt;
+&gt;     &lt;define-tag bar&gt;
+&gt;       baz
+&gt;     &lt;/define-tag&gt;
+&gt;   After definition: &lt;bar&gt;
+&gt;   &lt;/define-tag&gt;
+
+Hm. Thinking my way the first &lt;/define-tag&gt; would end the outmost
+&lt;define-tag&gt;. Yes. I can see your point. I agree that d) ist most
+probably better for this :)
+
+CU,
+    Sec
+-- 
+UNIX for the masses: &lt;!--#exec cmd="/vmunix.cgi" --&gt; -- Seen in the sdm.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01638" HREF="msg01638.shtml">Re: [wml] Re: c) or d)</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01631" HREF="msg01631.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="01635" HREF="msg01635.shtml">c) or d)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01636.shtml">Re: a) or b)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01638.shtml">Re: [wml] Re: c) or d)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01635.shtml">c) or d)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01638.shtml">Re: [wml] Re: c) or d)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01637"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01637"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 1.99.3 -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Mon, 20 Mar 2000 19:50:28 +0100 (MET) -->
+<!--X-Message-Id: 200003201850.DAA02358@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000320001147.18533A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01463">Date Index</a>][<a href="thrd30.shtml#01463">Thread Index</a>]<br>
+[<A HREF="msg01462.shtml">Date Prev</A>][<A HREF="msg01464.shtml">Date Next</A>][<A HREF="msg01460.shtml">Thread Prev</A>][<A HREF="msg01464.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 1.99.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 21 Mar 2000 03:50:18 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi,
+
+&gt; i just released wml-1.99.3
+
+  I tried, then I found...
+
+1) "/*...*/" doesn't seem to be comment,
+   but its entry exist in 'man wml_tags'.
+
+2) &lt;sub&gt; is override by built-in tag.
+   How can I write &lt;sub&gt;subscript&lt;/sub&gt; ?
+
+Regards,
+-- Nobuyuki Tsuchimura
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01464" HREF="msg01464.shtml">Re: WML 1.99.3</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01460" HREF="msg01460.shtml">WML 1.99.3</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01462.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01464.shtml">Re: WML 1.99.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01460.shtml">WML 1.99.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01464.shtml">Re: WML 1.99.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01463"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01463"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

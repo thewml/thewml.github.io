@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: dependeny dump for wml_p1_ipp -->
+<!--X-From-R13: Oaqernf Vbszrvfgre <ubszrvfgNvasbezngvx.hav&#45;servohet.qr> -->
+<!--X-Date: Wed, 17 Mar 1999 17:17:14 +0100 (MET) -->
+<!--X-Message-Id: 36EFC3D1.B102D9F3@informatik.uni&#45;freiburg.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00493">Date Index</a>][<a href="thrd12.shtml#00493">Thread Index</a>]<br>
+[<A HREF="msg00492.shtml">Date Prev</A>][<A HREF="msg00494.shtml">Date Next</A>][<A HREF="msg00492.shtml">Thread Prev</A>][<A HREF="msg00495.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>dependeny dump for wml_p1_ipp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Andreas Hofmeister &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Mar 1999 15:01:37 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i use wml  together with make. The only thing i missed so far is a
+dependency dump from the preprocessor (like gcc -MM ) , so i added this
+feature.   Any intresset in this patch ?
+
+--
+Andreas Hofmeister (see <A  HREF="http://www.informatik.uni-freiburg.de/~hofmeist">http://www.informatik.uni-freiburg.de/~hofmeist</A>)
+
+"I can do it in Quake, why not in real life ?"
+                                (Lan Solaris (Illiad))
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00495" HREF="msg00495.shtml">Re: dependeny dump for wml_p1_ipp</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00492.shtml">List of WML generated sites</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00494.shtml">Re: Always substitutions ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00492.shtml">List of WML generated sites</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00495.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00493"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00493"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

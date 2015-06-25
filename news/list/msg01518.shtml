@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3 -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 3 Apr 2000 10:10:44 +0200 (MET DST) -->
+<!--X-Message-Id: 200004030734.JAA25143@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000329020547.A27141@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01518">Date Index</a>][<a href="thrd31.shtml#01518">Thread Index</a>]<br>
+[<A HREF="msg01517.shtml">Date Prev</A>][<A HREF="msg01519.shtml">Date Next</A>][<A HREF="msg01504.shtml">Thread Prev</A>][<A HREF="msg01506.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 3 Apr 2000 09:34:35 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Wed, 29 Mar 2000 02:05:47 -0700, Anthony Fok wrote:
+&gt; On Wed, Mar 29, 2000 at 10:07:14AM +0200, Jan Holler wrote:
+&gt;&gt; I do not. I checked the site at:
+&gt;&gt;  <A  HREF="http://www.debian.org/Packages/frozen/web/weblint.html">http://www.debian.org/Packages/frozen/web/weblint.html</A>
+&gt;&gt; I could not find any improvements over 1.20
+&gt; 
+&gt; Look closer.  :-)  Check in /usr/doc/weblint if you have it installed.
+
+That's too close, if I'd had to install it before. :-)
+
+&gt; At first glance, there seems to be some pros and cons.  I have attached the
+&gt; relevant files for consideration.  :-)
+
+-&gt; checking of links
+
+Use linklint.
+
+-&gt; and supports HTML 4.0 (and HTML 4.0 only
+
+What's about 4.01? Why not using DTDs as the psgml-mode 
+of emacs is using?
+
+-&gt; Netscape &amp; Microsoft extensions (do they have any these days?)
+
+I'd say yes since the W3C has no reason to include all
+those cumstomized (and sometimes redundant or different) 
+tags of the two.
+
+Cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01504" HREF="msg01504.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01517.shtml">Re: wml_macros(7) ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01519.shtml">WML 1.99.7</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01504.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01506.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01518"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01518"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

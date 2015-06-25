@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: small problem with wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 12 Dec 2000 22:19:54 +0100 (MET) -->
+<!--X-Message-Id: 20001212222532.A6674@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001212155442.A21786@landru.home.link -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02079">Date Index</a>][<a href="thrd42.shtml#02079">Thread Index</a>]<br>
+[<A HREF="msg02078.shtml">Date Prev</A>][<A HREF="msg02080.shtml">Date Next</A>][<A HREF="msg02078.shtml">Thread Prev</A>][<A HREF="msg02087.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: small problem with wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Dec 2000 22:25:32 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Dec 12, 2000 at 03:54:42PM -0500, James A. Treacy wrote:
+&gt; There is clearly something wrong in the following:
+&gt; 
+&gt; Running wml on the following:
+&gt;   &lt;define-tag URL whitespace=delete&gt;
+&gt;      &lt;: if(q{%0} eq "") { print "&amp;lt;none&amp;gt;";}
+&gt;         else { $tmp=q{%0}; print "&lt;a href=\"$tmp\"&gt;$tmp&lt;/a&gt;";}
+&gt;   :&gt; &lt;/define-tag&gt;
+&gt; 
+&gt;   &lt;URL <A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A>&gt;
+&gt;   &lt;URL <A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A> &gt;
+&gt; 
+&gt; gives
+&gt; 
+&gt; &lt;a href="<A  HREF="http://a.b.c/cd">http://a.b.c/cd</A>"&gt;<A  HREF="http://a.b.c/cd">http://a.b.c/cd</A>&lt;/a&gt;
+&gt; &lt;a href="<A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A>"&gt;<A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A>&lt;/a&gt;
+&gt; 
+&gt; Why is the last slash disappearing?
+
+Hi Jay,
+
+this is because i want WML to be able to process both HTML and XHTML
+documents, so i make WML modules XHTML friendly, and by default
+trailing slash are removed within attributes.
+
+I believed that mp4h was customizable, and would have suggested
+something like
+     wml -W2,--expansion=3082
+but it does not work. Will try to fix this soon.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02078" HREF="msg02078.shtml">small problem with wml</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02078.shtml">small problem with wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02080.shtml">Bug report, I think, regarding &lt;attributes-quote %attributes&gt;.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02078.shtml">small problem with wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02087.shtml">Re: small problem with wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02079"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02079"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

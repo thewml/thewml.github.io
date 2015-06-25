@@ -1,0 +1,87 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wmk problem -->
+<!--X-From-R13: Kbvpuv Wznv <lbvpuvNfvyire&#45;sberfg.pbz> -->
+<!--X-Date: Fri, 12 Jan 2001 17:21:39 +0100 (MET) -->
+<!--X-Message-Id: 200101121133296.SM00165@silver&#45;forest.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: bin00026.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02103">Date Index</a>][<a href="thrd43.shtml#02103">Thread Index</a>]<br>
+[<A HREF="msg02102.shtml">Date Prev</A>][<A HREF="msg02104.shtml">Date Next</A>][<A HREF="msg02116.shtml">Thread Prev</A>][<A HREF="msg02104.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wmk problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Yoichi Imai &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Jan 2001 01:20:45 +0900</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi, all.
+
+I found a problem in WMk.
+WMk can't find includefiles written in top of the wml file.
+Maybe it caused by skipable function not to use shebang-line options.
+
+I wrote a patch.
+But perhaps it is not the best solution.
+
+Regards,
+-- 
+Yoichi Imai &lt;yoichi@silver-forest.com&gt;
+GPG fingerprint = A788 C20D E5BB 1BCF 0F60  46A9 7696 811A A9C1 FE7A
+</PRE>
+<P><A HREF="bin00026.bin" >wmk-dep.patch</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02104" HREF="msg02104.shtml">Re: wmk problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02102.shtml">Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02104.shtml">Re: wmk problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02116.shtml">RE: Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02104.shtml">Re: wmk problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02103"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02103"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

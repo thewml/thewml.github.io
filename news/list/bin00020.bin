@@ -1,0 +1,510 @@
+#!/opt/PGperl5-nsfio/bin/perl
+eval 'exec /opt/PGperl5-nsfio/bin/perl -S $0 ${1+"$@"}'
+    if $running_under_some_shell;
+##
+##  IPP -- Include Pre-Processor
+##  Copyright (c) 1997,1998 Ralf S. Engelschall, All Rights Reserved. 
+##
+
+require 5.003;
+
+BEGIN { $^W = 0; } # get rid of nasty warnings
+
+use lib "/opt/REwml/lib/perl/lib";
+use lib "/opt/REwml/lib/perl/lib/sun4-solaris/5.00401";
+use lib "/opt/REwml/lib/perl/lib/site_perl";
+use lib "/opt/REwml/lib/perl/lib/site_perl/sun4-solaris";
+
+use Getopt::Long 2.13;
+use IO::Handle 1.15;
+use IO::File 1.06;
+use File::Find;
+use Cwd;
+
+
+#
+#   help functions
+#
+sub verbose {
+    my ($level, $str) = @_;
+    if ($opt_v) {
+        print STDERR ' ' x ($level*2) . "$str\n";
+    }
+}
+sub error {
+    my ($str) = @_;
+    print STDERR "** IPP:Error: $str\n";
+    exit(1);
+}
+sub warning {
+    my ($str) = @_;
+    print STDERR "** IPP:Warning: $str\n";
+}
+
+
+#
+#   process command line 
+#
+sub usage {
+    print STDERR "Usage: ipp [options] file ...\n";
+    print STDERR "\n";
+    print STDERR "Options:\n";
+    print STDERR "  -D, --define=<name>=<value>  define a variable\n";
+    print STDERR "  -S, --sysincludedir=<dir>    add system include directory\n";
+    print STDERR "  -I, --includedir=<dir>       add user include directory\n";
+    print STDERR "  -s, --sysincludefile=<file>  pre-include system include file\n";
+    print STDERR "  -i, --includefile=<file>     pre-include user include file\n";
+    print STDERR "  -P, --prolog=<path>          specify one or more prolog filters\n";
+    print STDERR "  -m, --mapfile=<file>         use include file mapping table\n";
+    print STDERR "  -o, --outputfile=<file>      set output file instead of stdout\n";
+    print STDERR "  -v, --verbose                verbosity\n";
+    exit(1);
+}
+$opt_v = 0;
+@opt_I = ('.');
+@opt_D = ();
+@opt_S = ();
+@opt_i = ();
+@opt_s = ();
+@opt_P = (); 
+@opt_m = (); 
+$opt_o = '-';
+$Getopt::Long::bundling = 1;
+$Getopt::Long::getopt_compat = 0;
+if (not Getopt::Long::GetOptions(
+    "v|verbose", 
+    "S|sysincludedir=s@", 
+    "D|define=s@", 
+    "I|includedir=s@", 
+    "s|sysincludefile=s@", 
+    "i|includefile=s@", 
+    "P|prolog=s@",
+    "m|mapfile=s@", 
+    "o|outputfile=s"  )) {
+    &usage;
+}
+&usage if ($#ARGV == -1);
+
+
+#
+#   read mapfiles
+#
+sub read_mapfile {
+    my ($MAP, $mapfile) = @_;
+    local (*FP);
+
+    open(FP, "<$mapfile");
+    while (<FP>) {
+        next if (m|^\s*$|);
+        next if (m|^\s*#.*$|);
+        if (($given, $replace, $actiontype, $actiontext) =
+             m|^(\S+)\s+(\S+)\s+\[\s*([SWE])\s*:\s*(.+?)\s*\].*$|) {
+            if ($given =~ m|,|) {
+                @given = split(/,/, $given);
+            }
+            else {
+                @given = ($given);
+            }
+            foreach $given (@given) {
+                $MAP->{$given} = {};
+                $MAP->{$given}->{REPLACE}    = $replace; 
+                $MAP->{$given}->{ACTIONTYPE} = $actiontype;
+                $MAP->{$given}->{ACTIONTEXT} = $actiontext;
+            }
+        }
+    }
+    close(FP);
+}
+$MAP = {};
+foreach $file (@opt_m) {
+    &read_mapfile($MAP, $file);
+}
+
+
+#
+#   iterate over the input files
+#
+
+%INLCUDES = ();
+$outbuf   = '';
+
+sub setargs {
+    my ($arg, $str) = @_;
+    
+    return if ($str eq '');
+    while ($str) {
+        $str =~ s|^\s+||;
+        last if ($str eq '');
+        if ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)="([^"]*)"(.*)$|) {
+            $arg->{$1} = $2;
+            $str = $3;
+        }
+        elsif ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)=(\S+)(.*)$|) {
+            $arg->{$1} = $2;
+            $str = $3;
+        }
+        elsif ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)(.*)$|) {
+            $arg->{$1} = 1;
+            $str = $2;
+        }
+        else {
+            $str = substr($str, 1); # make sure the loop terminates
+        }
+    }
+}
+
+sub mapfile {
+    my ($file) = @_;
+    my ($replace, $type, $text);
+
+    if ($replace = $MAP->{$file}->{REPLACE}) {
+        $type = $MAP->{$file}->{ACTIONTYPE};
+        $text = $MAP->{$file}->{ACTIONTEXT};
+        if ($type eq 'S') {
+            $file = replace;
+        }
+        elsif ($type eq 'W') {
+            &warning("$file: $text");
+            $file = $replace;
+        }
+        else {
+            &error("$file: $text");
+        }
+    }
+    return $file;
+}
+
+sub CanonPath {
+    my ($path) = @_;
+
+    $pathL = '';
+    while ($path ne $pathL) {
+        $pathL = $path;
+        $path =~ s|//|/|g;
+        $path =~ s|/\./|/|g;
+        $path =~ s|/\.$|/|g;
+        $path =~ s|^./||g;
+        $path =~ s|([^/.][^/.]*)/\.\.||;
+    }
+    return $path;
+}
+
+sub ProcessFile {
+    my ($mode, $delimiter, $file, $level, $noid, $open_spec, %arg) = @_;
+    my ($in, $found, $line, $type, %argO, $store, $continued);
+
+	# Dont do this if $file is not a filename
+	unless ( $open_spec )
+	{
+	    #
+	    #   search for file
+	    #
+	    $found = 0;
+	    if ($delimiter eq '<') {
+	        foreach $dir (@opt_S) {
+	            if (-f "$dir/$file") {
+	                $file = "$dir/$file";
+	                $found = 1;
+	            }
+	        }
+	    }
+	    if ($delimiter eq '<' or $delimiter eq '"') {
+	        foreach $dir (@opt_I) {
+	            if (-f "$dir/$file") {
+	                $file = "$dir/$file";
+	                $found = 1;
+	            }
+	        }
+	    }
+	    if ($delimiter eq '<' or $delimiter eq '"' or $delimiter eq "'") {
+	        if (-f $file) {
+	            $found = 1;
+	        }
+	    }
+	    &error("file not found: $file") if not $found;
+
+	    #
+	    #   stop if file was still included some time before
+	    #
+	    if (not $noid) {
+	        $id = &CanonPath($file);
+	        if ($mode eq 'use') {
+	            return '' if ($INCLUDES{$id} == 1);
+	        }
+	        $INCLUDES{$id} = 1;
+	    }
+	}
+
+    #
+    #   process the file
+    #
+    $in = new IO::File;
+    &verbose($level, "|");
+    &verbose($level, "+-- $file");
+    $in->open($open_spec ? "$file" : "<$file");
+    $store  = '';
+    $line   = 0;
+	$continued = 0;
+
+    while ( ! $in->eof )
+    {
+
+		#
+		#	Read in a new line, if needed
+		#
+
+		if ( $continued )
+		{
+			$continued = 0;
+		}
+		else
+		{
+	    	$l = <$in>;
+    	    $line++;
+		}
+
+        #
+        #   Variable Interpolation
+        #
+
+        #   Indicate Error if Unset
+        $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):\?\[(.+?)\]\)/$arg{$2} ne '' ? $1.$arg{$2} : &error($3)/ge;
+        #   Use Default Values
+        $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):-([^\)]+)\)/$arg{$2} ne '' ? $1.$arg{$2} : $1.$3/ge;
+        #   Assign And Use Default Values
+        $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):=([^\)]+)\)/$arg{$2} ne '' ? $1.$arg{$2} : $1.($arg{$2}=$3)/ge;
+        #   Use Alternative Value
+        $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):\+([^\)]+)\)/$arg{$2} ne '' ? $1.$3 : $1/ge;
+        #   Use Negative Alternative Value
+        $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):\*([^\)]+)\)/$arg{$2} eq '' ? $1.$3 : $1/ge;
+        #   Normal Value
+        $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+)\)/$1.$arg{$2}/ge;
+        #   Implicit Variables
+        $l =~ s|__LINE__|$line|g;
+        $l =~ s|__FILE__|$file|g;
+        #   remove one preceding backslash
+        $l =~ s/\\(\$\([a-zA-Z0-9_]+.*?\))/$1/g;
+
+		#
+		#	Hack out block comments
+		#
+
+		if ( $l =~ m/\/\*/ )
+		{
+			my $precomment;
+			my $buf;
+			my $matched;
+			my $level = 1;
+
+			$l =~ m/\/\*(.*)$/s;
+			$buf = $1;
+			$precomment = substr($l, 0, length($l) - length($buf) - 2);
+
+			print $out $precomment;
+			
+			while ( 1 )
+			{
+				if ( $buf eq '\n' )
+				{
+					$buf = <$in>;
+					$line++;
+					last if ( $in->eof );
+				}
+
+				if ( ($matched, $buf) = ( $buf =~ m/(\/\*|\*\/)(.*)$/s ) )
+				{
+					$level += $matched eq '/*' ? 1 : -1;
+					last if $level == 0;
+				}
+				else
+				{
+					$buf = <$in>;
+					$line++;
+					last if ( $in->eof );
+				}
+				
+			}
+
+			last if ( $in->eof );
+
+			#	continue parsing the rest of this line
+			$l = $buf;
+			$continued = 1;
+			next;
+		}
+
+        #
+        #   ``#include'' and ``#use'' directives
+        #
+
+        if ( ( ($cmd, $file, $args) = ($l =~ m/^#(use|include)\s+(\S+)(.*)$/) ) && !$continued ) {
+            #   set arguments
+            %argO = %arg;
+            &setargs(\%arg, $args);
+
+            #   do possible argument mapping
+            $file = &mapfile($file);
+
+            #   determine raw filename and type
+            if ($file =~ m|^(\S+?)::(\S+)$|) {
+                $type = '<';
+                $file = "$2.$1";
+                $file =~ s|::|/|g;
+            }
+            elsif ($file =~ m|^(['"<])([^'">]+)['">]$|) {
+                $type = $1;
+                $file = $2;
+            }
+            else {
+                &error("Unknown file-argument syntax: ``$file''");
+            }
+
+            #   now recurse down
+            &ProcessFile($cmd, $type, $file, $level+1, 0, 0,%arg);
+
+            #   reset arguments
+            %arg = %argO;
+        }
+
+        #
+        #   ``__END__'' feature
+        #
+        elsif ( $l =~ m|^\s*__END__\s*\n?$|) {
+            last;
+        }
+
+        #
+        #   plain text
+        #
+        else {
+			#	remove EOL comments
+			$l = "" if ( !$continued && $l =~ m/^[ \t]*#/ );
+
+            #   line-continuation support
+            if ($store ne '') {
+                $l =~ s|^\s+||;
+            }
+            if ($l =~ m|^(.*)\\\s*\n$|) {
+                $store .= $1;
+                next;
+            }
+            print $out $store;
+            print $out $l;
+            $store = '';
+        }
+    }
+    print $out $store;
+    $in->close();
+}
+
+#
+#   create initial argument vector
+#
+%arg = ();
+foreach $str (@opt_D) {
+    if ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)="([^"]*)"$|) {
+        $arg{$1} = $2;
+    }
+    elsif ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)=(.+)$|) {
+        $arg{$1} = $2;
+    }
+    elsif ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)$|) {
+        $arg{$1} = 1;
+    }
+    else {
+        &error("Bad argument to option `D': $str");
+    }
+}
+
+#
+#  create output file, $out
+#
+if ($opt_o eq '-') {
+    $out = new IO::Handle;
+    $out->fdopen(fileno(STDOUT), "w");
+}
+else {
+    $out = new IO::File;
+    $out->open(">$opt_o");
+}
+
+
+#
+#   process the pre-loaded include files
+#
+$tmpfile = "/tmp/ipp.$$.tmp";
+unlink($tmpfile);
+$tmp = new IO::File;
+$tmp->open(">$tmpfile");
+foreach $file (@opt_s) {
+    if ($file =~ m|^(\S+?)::(\S+)(.*)\n$|) {
+        $file = "$2.$1";
+        $file =~ s|::|/|g;
+    }
+    print $tmp "#include <$file>\n";
+}
+foreach $file (@opt_i) {
+    if ($file =~ m|^(\S+?)::(\S+)(.*)\n$|) {
+        $file = "$2.$1";
+        $file =~ s|::|/|g;
+        print $tmp "#use $file\n";
+    }
+    print $tmp "#include \"$file\"\n";
+}
+$tmp->close();
+&ProcessFile('include', "'", $tmpfile, 0, 1, 0, %arg);
+unlink($tmpfile);
+
+#
+#   process real files
+#
+
+if ( $#ARGV == -1 && $#opt_P == -1 )
+{
+	$open_spec = '-';
+}
+elsif ( $#ARGV == 0 && $#opt_P == -1 )
+{
+	$file_name = $ARGV[0];
+}
+else
+{
+	$open_spec =
+		" cat " .
+		join " ", map { $_ eq '-' ? '-' : ( my $fname, ($fname = $_) =~ s/"/\\"/g, qq["$fname"] )[2] } @ARGV
+		;
+
+    #   apply prolog filters
+    foreach $p (@opt_P) {
+		$open_spec .= "| $p"
+    }
+
+	$open_spec .= "|"
+	
+}
+
+if ( $open_spec ne '' )
+{
+	&ProcessFile('include', "'", $open_spec, 0, 1, 1, %arg);
+}
+else
+{
+	&ProcessFile('include', "'", $file_name, 0, 1, 1, %arg);
+}
+
+
+#
+#  close output file
+#
+$out->close();
+
+#   die gracefully
+exit(0);
+
+##EOF##
+();
+
+#   die gracefully
+exit(0);
+
+##EOF##

@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: moving from m4 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 27 May 1999 18:51:06 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990527183604.12067C&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990527144010.A598@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00702">Date Index</a>][<a href="thrd15.shtml#00702">Thread Index</a>]<br>
+[<A HREF="msg00701.shtml">Date Prev</A>][<A HREF="msg00703.shtml">Date Next</A>][<A HREF="msg00701.shtml">Thread Prev</A>][<A HREF="msg00705.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: moving from m4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 27 May 1999 18:45:08 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 27 May 1999, Xose Manoel Ramos wrote:
+
+[...]
+&gt; This is WML Version 1.6.4 (23-03-1998)
+
+I know WML since wml-1.6.7 so i don't know whether your problems are
+related to this version. Of course, i could check the ChangeLog, but you
+can too ;)
+  <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog</A>
+
+[...]
+&gt; Well, in my current version, something strange happens. When I use
+&gt; the macros you wrote me, it leaves the code full of `m4_dnl'.
+&gt; 
+&gt; The problem comes from:
+&gt; 
+&gt;     m4_quotes()m4_dnl
+&gt;     m4_noquotes()m4_dnl
+&gt; 
+&gt; Something strange happens that make `gm4' to proper understand this
+&gt; macros. It leaves this result:
+&gt; 
+&gt;     m4_dnl
+&gt;     m4_dnl
+&gt; 
+&gt; Probably it is related with such macros (m4_quotes) and
+&gt; (m4_noquotes). They are not builtin macros. Where are they defined?
+
+In wml-1.6.8, they are defined in the wml perl script. You can find a
+new definition at
+<A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_include/sys/bootgm4.src">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_include/sys/bootgm4.src</A>
+
+But please, don't mix versions, or you could have strange results.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00701" HREF="msg00701.shtml">Re: moving from m4</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00701.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00703.shtml">Old Q/A</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00701.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00705.shtml">m4 under WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00702"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00702"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

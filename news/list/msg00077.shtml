@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: I'm trying to use wml in a cgi... -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Fri, 6 Feb 1998 03:11:48 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980205181420.10784A&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00077">Date Index</a>][<a href="thrd2.shtml#00077">Thread Index</a>]<br>
+[<A HREF="msg00076.shtml">Date Prev</A>][<A HREF="msg00078.shtml">Date Next</A>][<A HREF="msg00080.shtml">Thread Prev</A>][<A HREF="msg00081.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>I'm trying to use wml in a cgi...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 5 Feb 1998 18:23:21 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I've got a cgi that receives a file, writes it out to disk. One of the
+post processing measures I want to do is pass it through wml (security
+implications aside, for the moment -- those will be handled later).
+
+One of the passes kept hanging (pass 2) but didn't when I ran the same
+command on the command line. I broke the relevant stuff out to a shell
+script (for readibility, in part) which I can run on the command line just
+fine, but not in the cgi.
+
+Note: the web server runs as me -- meaning it's not a permission thing.
+
+#!/bin/sh
+DIS=/home/scratch/hebert/dwddis/
+export DIS
+WML=${DIS}WML/bin/
+export WML
+DWD=${DIS}httpd/dwd_data/
+export DWD
+PUB=${DIS}httpd/htdocs/dwd_pub/
+export PUB
+
+exec ${WML}wml &lt; ${DWD}$1 &gt; ${PUB}$1.html
+
+I call this script in the perl cgi as
+
+`/path/to/wmlwrap $filename`
+
+where filename is the name of the uploaded file (I have used filed named
+jim, brett, fdsfd, and so forth).
+
+I always see this hang (this is on a solaris machine)
+
+(1)pts/26&gt;ps -ef | grep wml
+  hebert 26246 26230  0 18:20:40 pts/26   0:00 grep wml
+
+  hebert 26155 26154  1 18:20:04 ?        0:01 /usr/local/bin/perl
+/home/scratch/hebert/dwddis/WML/bin/wml
+
+  hebert 26179 26155  0 18:20:12 ?        0:00 sh -c wml_p2_mhc  --set
+"WML_VERSION" "1.5.1 (16-01-1998)" --set "WML_LOC_MANDI
+
+  hebert 26181 26179 40 18:20:12 ?        0:17 wml_p2_mhc --set
+WML_VERSION 1.5.1 (16-01-1998) --set WML_LOC_MANDIR /home/scra
+
+(lines separated for readibility)
+
+
+When I turned off pass 2 (with -p 345678) it didn't hang.
+
+Perl 5.004_04 on solaris 2.5.1 with apache 1.2.5 and CGI.pm 2.36.
+
+Any thoughts?
+
+jim
+
+
+-- 
+[L]inux has an installed base conservatively estimated at around 3 million
+users.... [V]endors say that most of the top companies in the US have bought
+the OS - but that few will readily admit to running their multimillion-dollar
+corporations on code put together by a band of software idealists. -- _Wired_
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00081" HREF="msg00081.shtml">Re: I'm trying to use wml in a cgi...</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00076.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00078.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00080.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00081.shtml">Re: I'm trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00077"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00077"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,158 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Automagical Directory Creation? -->
+<!--X-From-R13: [vpunry [p@nznen <znpNirevfvgl.pbz> -->
+<!--X-Date: Sat, 20 Jan 2001 14:39:36 +0100 (MET) -->
+<!--X-Message-Id: 14933.64679.728747.128746@mac.verisity.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010105093921.A23188@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02116">Date Index</a>][<a href="thrd43.shtml#02116">Thread Index</a>]<br>
+[<A HREF="msg02115.shtml">Date Prev</A>][<A HREF="msg02117.shtml">Date Next</A>][<A HREF="msg02102.shtml">Thread Prev</A>][<A HREF="msg02103.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Automagical Directory Creation?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 Jan 2001 08:56:07 -0800 (PST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Many folks very likely use make(1) to run wml; and hence use make to
+create directories, as in: (abstracted from my makefile; not tested!)
+
+% cat Makefile
+#----------
+targ = /home/www/release/
+src  = /home/www/source/
+dirs = $(targ) $(addprefix $(targ), Company Products Jobs)
+
+release: $(dirs) $(HTML)
+
+GDEP = Makefile
+HTMLS = index.html Products/product.html Company/company.html \
+        Jobs/jobs.html 
+HTMLR = $(addprefix $(targ), $(HTML))
+WMLOPTS= -q -DROOT~.
+WMLSLICE=
+
+$(HTMLR): $(targ)/% : src/% $(GDEP)
+	(cd src; wml ../$&lt; $(WMLOPTS) $(WMLSLICE) --o ../$@ )
+$(dirs) : 
+	-mkdir -m 755 -p $@
+#----------
+
+Then you put all your .wml files in the /home/wml/source/ directory
+tree, and when you type make, wml goes there and creates the .html
+files in the /home/www/release/ tree, making any directories as
+needed.
+
+
+
+Axel Beckert writes:
+ &gt; Hi!
+ &gt; 
+ &gt; One question or feature request:
+ &gt; 
+ &gt; Is there an easy way to let WML create the directory, in which the
+ &gt; target HTML file should got to, if that directory doesn't exist? (This
+ &gt; makes only sense, if you use e.g. &lt;lang:star:slice: /target-path&gt; to
+ &gt; set the directory where the target file should reside in.) I didn't
+ &gt; find anything about such a feature in the documentation or faq.
+ &gt; 
+ &gt; Before we (means my employer) started using WML, we had a self-written
+ &gt; and not very flexible C++ program to combine templates and content.
+ &gt; The target directory was given in the header section of the content
+ &gt; file. If the directory didn't exist, this program created the
+ &gt; necessary hierachy. Just because all people here are used to have all
+ &gt; content files in one directory and let them create HTML files in the
+ &gt; whole web tree, we continued with this policy after we changed to WML.
+ &gt; 
+ &gt; But with WML I get always error messages like "cannot load
+ &gt; /home/www/htdocs/About/Addresses/index.de.html for unprotection at
+ &gt; /usr/local/bin/wml line 720." if some directory does not exist. (In
+ &gt; that case, /home/www/htdocs/About/ had no subdirectories...)
+ &gt; 
+ &gt; Were I just blind? If not, I would appreciate, if such a (IMHO very
+ &gt; useful) feature could be offered in future releases of WML.
+ &gt; 
+ &gt; Because of this automagical directory creation usually is done
+ &gt; silently, there should be a switch, which enables or disables this
+ &gt; feature. And of course, the default should be not to create any
+ &gt; directories.
+ &gt; 
+ &gt; (For a long time, we had two directories called organisations and
+ &gt;  organizations and thought that there were just one. Reason was a typo
+ &gt;  in one of the content files.)
+ &gt; 
+ &gt; 		Regards, Axel
+ &gt; -- 
+ &gt; Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+ &gt; Student of Computer Science, University of Saarland (Germany)
+ &gt; Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+ &gt; WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+ &gt; ______________________________________________________________________
+ &gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+ &gt; Official Support Mailing List                   sw-wml@engelschall.com
+ &gt; Automated List Manager                       majordomo@engelschall.com
+ &gt; 
+ &gt; 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02102" HREF="msg02102.shtml">Automagical Directory Creation?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02115.shtml">Anyone doing XML-style stuff?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02117.shtml">global variables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02102.shtml">Automagical Directory Creation?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02103.shtml">wmk problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02116"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02116"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

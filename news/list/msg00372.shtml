@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: vim syntax file? -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Wed, 27 Jan 1999 10:16:39 +0100 (CET) -->
+<!--X-Message-Id: 19990127084450.A23801@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990125103551.A7643@skater.htu.tuwien.ac.at -->
+<!--X-Reference: 19990125140246.A14583@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00372">Date Index</a>][<a href="thrd8.shtml#00372">Thread Index</a>]<br>
+[<A HREF="msg00371.shtml">Date Prev</A>][<A HREF="msg00373.shtml">Date Next</A>][<A HREF="msg00371.shtml">Thread Prev</A>][<A HREF="msg00373.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: vim syntax file?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Jan 1999 08:44:50 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 25 Jan 1999, Ralf S. Engelschall &lt;rse@engelschall.com&gt; wrote:
+[#!/usr/local/bin/wml]
+&gt; You mean for server-side includes via XBitHack of Apache? You can use:
+
+ No, not for ssi's - I prefer to write "test.wml" instead of "wml
+test.wml -o test.html"  :)
+
+ But all I get is an error from the shell like this:
+./test.wml: line 6: syntax error near unexpected token `..TITLE&gt;&gt;&lt;&lt;.'
+./test.wml: line 6: `..TITLE&gt;&gt;&lt;&lt;..'
+
+ It seems that it doesn't recognice the #!/ at the start of the file and
+doesn't execute wml but makes it just a plain shell-script? Do I have to
+set somewhere that wml is recogniced? Maybe I have to add
+/usr/local/bin/wml to /etc/shells?
+ But then again - /usr/bin/perl isn't in there and perl-script still
+work.... I just can't find what the problem could be. I just noticed
+that it isn't handed to wml as argument but executed as shellscript and
+that produces the error.
+
+&gt; In a hacker tool like WML anything *IS* possible.  The question is just, how
+&gt; much effort is actually needed to make it possible... ;-)
+
+ Could it be possible that the output of "wml --help" isn't sent to
+STDERR but to STDOUT for it doesn't really seem like an error-message to
+me and I'm used to pipe that messages to my pager  ;)
+
+TIA,
+ Alfie
+-- 
+My God, I'm depressed!  Here I am, a computer with a mind a thousand
+times as powerful as yours, doing nothing but cranking out fortunes and
+sending mail about softball games.  And I've got this pain right
+through my ALU.  I've asked for it to be replaced, but nobody ever
+listens.  I think it would be better for us both if you were to just
+log out again.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00373" HREF="msg00373.shtml">Re: vim syntax file?</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00366" HREF="msg00366.shtml">vim syntax file?</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00368" HREF="msg00368.shtml">Re: vim syntax file?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00371.shtml">Re: vim syntax file? Yesss</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00373.shtml">Re: vim syntax file?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00371.shtml">Re: vim syntax file? Yesss</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00373.shtml">Re: vim syntax file?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00372"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00372"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

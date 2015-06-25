@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 18 Oct 1999 19:24:06 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991018174331.800B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3804FC55.EBACAB97@boolean.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01072">Date Index</a>][<a href="thrd8.shtml#01072">Thread Index</a>]<br>
+[<A HREF="msg01069.shtml">Date Prev</A>][<A HREF="msg01070.shtml">Date Next</A>][<A HREF="msg01068.shtml">Thread Prev</A>][<A HREF="msg01303.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Oct 1999 19:23:10 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 13 Oct 1999, Kurt D. Zeilenga wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt; When running wmu (from FreeBSD ports) as root in new directory.
+&gt; 
+&gt;         This is WML UPGRADE (WMu), Version 1.6.8 (12-01-1999)
+&gt;         Copyright (c) 1996,1997,1998,1999 Ralf S. Engelschall.
+&gt; 
+&gt;         1. Determine latest version:
+&gt;         Website META Language, Version 
+&gt;         2. Determine distribution details:
+&gt;         Can't call method "autoflush" on an undefined value at /usr/local/bin/wmu line 162.
+&gt; 
+&gt; Exited without upgrading anything.
+
+Okay, there were 2 bugs:
+- i accidentally removed an important file on the web server, the one
+  telling WMu the latest WML version number
+- WMu did not report an error
+
+Both are fixed, thanks for your help
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01068" HREF="msg01068.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Kurt D. Zeilenga</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01069.shtml">Suggestionen for man page addition</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01070.shtml">Re: Suggestionen for man page addition</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01068.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01303.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01072"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#01072"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

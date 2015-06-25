@@ -1,0 +1,310 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: QVevfgvna @vff <puevfNgbcvgzntvp.qr> -->
+<!--X-Date: Fri, 15 Jan 1999 22:30:03 +0100 (CET) -->
+<!--X-Message-Id: 369F9EB2.F9AE46F0@topitmagic.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00329">Date Index</a>][<a href="thrd7.shtml#00329">Thread Index</a>]<br>
+[<A HREF="msg00328.shtml">Date Prev</A>][<A HREF="msg00330.shtml">Date Next</A>][<A HREF="msg00326.shtml">Thread Prev</A>][<A HREF="msg00332.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: CHristian Niss &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Jan 1999 21:01:54 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi everyone,
+
+This Monday I did upgrade my Linux-Computer from SuSE Linux 5.3
+to SuSE-Linux 6.0. Before this Upgrade WML-1.6.7 worked perfectly.
+But since that black monday it refused working (some *.pm-files
+not found in @INC etc.) ...
+Therefore I tried to reinstall it (with perl-5.00502), but it 
+didn´t work out. (Yes- I had serious problems installing it
+the first time with perl-5.00404 but finally I made it ..)
+
+Lucky me found the brand new WML-1.6.8 at Ralfs website
+and downloaded it immediately ... BUT this version even refused
+to complete the configuration process:
+
+This is the error-log I got when starting the configure-script...
+
+
+blackstone /local/wml-1.6.8# ./configure &gt; log
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 14282 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     14283 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 14480 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     14481 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 14634 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     14635 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+sed: file conftest.s1 line 3: Unterminated `s' command
+configure: error: cannot check setpgrp if cross compiling
+configure: error: ./configure failed for wml_backend/p2_mhc
+
+
+Can someone out there help me ??? 
+
+Thanks in advance
+
+   CHristian
+
+
+P.S. If it is of some help - there is the complete output of the
+configure-script I always get:
+
+blackstone /local/wml-1.6.8# ./configure --prefix=/local/wml
+Configuring for WML Usage: newvers [options] versionfile
+    Options are:
+        -l&lt;lang&gt;          set language to one of "txt", "c" or "perl"
+        -p&lt;progname&gt;      set program name
+        -r&lt;v&gt;.&lt;r&gt;[.pb]&lt;p&gt; set release version string
+        -i{v|r|P|p|b|a|s} increase version, revision or
+{alpha,batch,patch,snap}level
+        -d                display current version only
+        -D                display current version only (incl. date)
+        -V                print NEWVERS version
+        -h                print help page
+loading cache ./config.cache
+checking whether to enable maintainer-specific portions of Makefiles...
+no
+
+__ CHECK: Build Environment __
+checking host system type... i586-pc-linux-gnu
+checking for built user... chris@blackstone.weiherhof.de
+checking for built date... 15-Jan-1999
+
+__ CHECK: Build Utilities __
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... yes
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking whether make sets ${MAKE}... (cached) yes
+checking for a BSD compatible install... (cached) /usr/bin/ginstall -c
+
+__ CHECK: Perl Language __
+checking for Perl language... /usr/bin/perl v5.005_02
+checking for MakeMaker's private install paths... ok
+
+__ RESULT: Substituting Files __
+creating ./config.status
+creating Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 16628 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     16629 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+creating wml_frontend/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 16650 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     16651 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+creating wml_backend/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_backend/p1_ipp/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_backend/p5_divert/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_backend/p6_asubst/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_backend/p7_htmlfix/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_backend/p8_htmlstrip/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_backend/p9_slice/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_common/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 16826 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     16827 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+creating wml_docs/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_aux/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_aux/txt2html/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_aux/map2html/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_aux/htmlinfo/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_aux/linklint/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_aux/weblint/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+./config.status: line 194: 16980 Broken pipe             sed -e
+"$ac_comsub
+s%@configure_input@%$configure_input%g
+s%@srcdir@%$srcdir%g
+s%@top_srcdir@%$top_srcdir%g
+s%@INSTALL@%$INSTALL%g
+" $ac_file_inputs
+     16981 Done(1)                 | ( eval "$ac_sed_cmds" )&gt;$ac_file
+creating wml_aux/wwwtable/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_misc/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_include/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_include/sys/boot.src
+sed: file conftest.s1 line 3: Unterminated `s' command
+creating wml_test/Makefile
+sed: file conftest.s1 line 3: Unterminated `s' command
+
+Configuring for wml_backend/p2_mhc
+running /bin/sh ./configure  --prefix=/local/wml
+--cache-file=../.././config.cache --srcdir=.
+loading cache ../.././config.cache
+checking host system type... i586-pc-linux-gnu
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... yes
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for pwd... /bin/pwd
+checking for ranlib... ranlib
+checking how to run the C preprocessor... (cached) gcc -E
+checking for ANSI C header files... yes
+checking for dirent.h that defines DIR... yes
+checking for opendir in -ldir... no
+checking for unistd.h... yes
+checking for stdarg.h... yes
+checking for string.h... yes
+checking for time.h... yes
+checking for sys/time.h... yes
+checking for file.h... no
+checking for sys/file.h... yes
+checking for sys/resource.h... yes
+checking for fcntl.h... yes
+checking for sys/fcntl.h... yes
+checking for sys/ttold.h... no
+checking for bstring.h... yes
+checking for ioctl.h... no
+checking for sys/ioctl.h... yes
+checking for termio.h... yes
+checking for termios.h... yes
+checking for sys/select.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether setpgrp takes no argument... configure: error: cannot
+check setpgrp if cross compiling
+configure: error: ./configure failed for wml_backend/p2_mhc
+blackstone /local/wml-1.6.8# 
+-- 
+--------------------------------------------------------------------
+CHRISTIAN NISS     computer science student @ FAU Erlangen Nuremberg
+                        eMail: cnniss@cip.informatik.uni-erlangen.de 
+<A  HREF="http://www.topitmagic.de">http://www.topitmagic.de</A>  -  DAS Online-Magazin fuer Zauberkuenstler
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00328.shtml">.deb available (was Re: ANNOUNCE : WML 1.6.8)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00330.shtml">Re: ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00326.shtml">How to do navbar with picture followed by text buttons?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00329"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00329"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

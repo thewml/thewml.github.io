@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Attributes / variables delimiters -->
+<!--X-From-R13: Uuvfynvar Znobherg <Uuvfynvar.ZnobhergNufp.se> -->
+<!--X-Date: Thu, 4 Oct 2001 14:04:08 +0200 (MET DST) -->
+<!--X-Message-Id: 20011004120357.DB6D010E0D@itesec.hsc.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010926142908.CBC6D10E05@itesec.hsc.fr -->
+<!--X-Reference: 20010927002439.A13046@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02394">Date Index</a>][<a href="thrd48.shtml#02394">Thread Index</a>]<br>
+[<A HREF="msg02393.shtml">Date Prev</A>][<A HREF="msg02395.shtml">Date Next</A>][<A HREF="msg02393.shtml">Thread Prev</A>][<A HREF="msg02396.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Attributes / variables delimiters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ghislaine Labouret &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 04 Oct 2001 14:04:45 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 27 Sep 2001 00:24:39 +0200, Denis Barbier wrote:
+
+&gt; If mp4h is confused by long and complex constructs, it may be a bug in
+&gt; your pages or in mp4h, and it would be nice to have your example to add
+&gt; it to the mp4h torture suite ;)
+&gt; Could you put some sources online which demonstrate this problem?
+
+Ok, but since my repeated includes and tag definitions don't make the
+sources easy to analyse, here is, first, a bug which I just managed to
+pin down :
+
+Input:
+
+&lt;set-var dir[1]="1" dir[2]="2"&gt;
+dir[1]=&lt;get-var dir[1]&gt;
+dir[2]=&lt;get-var dir[2]&gt;
+dir[3]=&lt;get-var dir[3]&gt;
+
+Output:
+
+dir[1]=1
+dir[2]=
+dir[3]=2
+
+
+Also, I noticed that error lines given by WML do not correspond to
+"real" lines (vim's line count for exemple) when using \ at the end of
+lines: a lines ending with \ and the following one is counted as a
+single line. This makes debugging more difficult...
+
+
+Sincerely,
+
+--
+Ghislaine Labouret, Network security consultant
+Hervé Schauer Consultants (HSC) - <A  HREF="http://www.hsc.fr/">http://www.hsc.fr/</A>
+Phone (+33)-141-409-700 - Fax (+33)-141-409-709
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02396" HREF="msg02396.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02392" HREF="msg02392.shtml">Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+<li><strong><A NAME="02393" HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02395.shtml">WML by example</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02396.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02394"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02394"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

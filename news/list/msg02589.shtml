@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: your mail -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Sat, 13 Apr 2002 12:36:18 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.43.0204131229270.7334&#45;100000@nova.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 002201c1e270$cdd77ab0$4004a8c0@darryl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02589">Date Index</a>][<a href="thrd10.shtml#02589">Thread Index</a>]<br>
+[<A HREF="msg02588.shtml">Date Prev</A>][<A HREF="msg02590.shtml">Date Next</A>][<A HREF="msg02588.shtml">Thread Prev</A>][<A HREF="msg00392.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: your mail</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Apr 2002 12:35:12 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Darryl
+
+you can redefine any existing HTML-tag with WML. So something like the
+following should work:
+
+&lt;define-tag A endtag=required&gt;
+...
+&lt;A* HREF="/cgi-bin/redirect.cgi?&lt;get-var HREF&gt;"
+%body
+&lt;/A*&gt;
+...
+&lt;/define-tag&gt;
+
+You might have to work on the quotation characters a bit, I am not sure of
+hand if there might be a problem there.
+
+The *-version of a tag refers to the "original" HTML-version of the tag.
+
+Alternatively, you could also use mod_rewrite (if you are using Apache) to
+do the redirects in your webserver. This has the advantage that when a
+visitor rolls his mouse over a link he/she sees the "real" URL instead of
+the whole redirection story.
+
+Cheers,
+Fritz
+
+On Sat, 13 Apr 2002, Darryl Smith wrote:
+
+&gt; G'Day
+&gt;
+&gt; I want to set WML up so that if I have a url like
+&gt; 	&lt;A HREF="<A  HREF="http://www.hostname.dom/page/">http://www.hostname.dom/page/</A>"&gt;a text&lt;/A&gt;
+&gt; That it will change to
+&gt; 	&lt;A HREF="/cgi-bin/redirect.cgi?<A  HREF="http://www.hostname.dom/page/">http://www.hostname.dom/page/</A>"&gt;a
+&gt; text&lt;/A&gt;
+&gt;
+&gt; So that I can monitor how people are using links. I think this should be
+&gt; easy... Has anyone done this before?
+&gt;
+&gt; Any help would be appreciated
+&gt;
+&gt; Darryl
+&gt;
+&gt; ---------
+&gt; Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+&gt; Mobile Number 0412 929 634 [+61 4 12 929 634 International]
+&gt; Darryl@radio-active.net.au | www.radio-active.net.au
+&gt;
+&gt;
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt;
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Information Technology and Electrical Engineering
+Swiss Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, CH-8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://people.ee.ethz.ch/~zaucker/">http://people.ee.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02588" HREF="msg02588.shtml">No Subject</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02588.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02590.shtml">name of current WML file</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02588.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00392.shtml">eperl_perl5.c</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02589"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#02589"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

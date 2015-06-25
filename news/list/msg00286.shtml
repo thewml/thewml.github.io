@@ -1,0 +1,192 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [Patch wml::des::gfont] -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 30 Dec 1998 15:04:26 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981230101751.15306B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00286">Date Index</a>][<a href="thrd7.shtml#00286">Thread Index</a>]<br>
+[<A HREF="msg00285.shtml">Date Prev</A>][<A HREF="msg00287.shtml">Date Next</A>][<A HREF="msg00285.shtml">Thread Prev</A>][<A HREF="msg00287.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[Patch wml::des::gfont]</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 30 Dec 1998 10:21:14 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi again,
+
+this patch implements the 2 new options of gfont (if you want to
+incorporate them, of course). It adds another option (font) whose
+argument is passed unchanged to gfont, e.g.
+  &lt;gfont font="mf:ecrm1200-6.0"&gt;Test&lt;/gfont&gt;
+
+--- wml-1.6.7/wml_include/des/gfont.src	Sun Jul  5 19:43:04 1998
++++ wml-1.6.7/wml_include/des/gfont.src	Wed Dec 30 10:10:05 1998
+@@ -18,6 +18,9 @@
+ &lt;preserve base&gt;
+ &lt;preserve color&gt;
+ &lt;preserve bgcolor&gt;
++&lt;preserve border&gt;
++&lt;preserve bordercolor&gt;
++&lt;preserve font&gt;
+ &lt;preserve face&gt;
+ &lt;preserve size&gt;
+ &lt;preserve align&gt;
+@@ -34,6 +37,9 @@
+     my $base    = "&lt;get-var base&gt;";
+     my $color   = "&lt;get-var color&gt;";
+     my $bgcolor = "&lt;get-var bgcolor&gt;";
++    my $border  = "&lt;get-var border&gt;";
++    my $bordercolor = "&lt;get-var bordercolor&gt;";
++    my $font    = "&lt;get-var font&gt;";
+     my $face    = "&lt;get-var face&gt;";
+     my $size    = "&lt;get-var size&gt;";
+     my $align   = "&lt;get-var align&gt;";
+@@ -64,18 +70,20 @@
+     }
+ 
+     #   determine fontface, fontsize and thus fontname
+-    $face = 'Times' if ($face eq '');
+-    $size = 0 if ($size eq '');
+-    $size = -2 if ($size &lt;= -2);
+-    $size =  9 if ($size &gt;= 9);
+-    $size += 2;
+-    if ($face =~ /^CM/) {
+-        $size = $gfont_size_CM[$size+2];
+-    }
+-    else {
+-        $size = $gfont_size[$size];
++    if ($font eq '') {
++        $face = 'Times' if ($face eq '');
++        $size = 0 if ($size eq '');
++        $size = -2 if ($size &lt;= -2);
++        $size =  9 if ($size &gt;= 9);
++        $size += 2;
++        if ($face =~ /^CM/) {
++            $size = $gfont_size_CM[$size+2];
++        }
++        else {
++            $size = $gfont_size[$size];
++        }
++        $font = "$face-$size";
+     }
+-    $font = "-F $face-$size";
+ 
+     #   determine colors
+     if ($bgcolor =~ m|^#([0-9a-fA-F]+)$|) {
+@@ -92,7 +100,15 @@
+         # default is black
+         $color = '-f 000000'; 
+     }
++    if ($bordercolor =~ m|^#([0-9a-fA-F]+)$|) {
++        $bordercolor = "-C $1";
++    }
++    else {
++        # default is black
++        $bordercolor = '-C 000000';
++    }
+     $align = " align=$align" if ($align ne '');
++    $border = " --border $border" if ($border ne '');
+ 
+     #   cropping and size support
+     if ($crop) {
+@@ -109,7 +125,7 @@
+     }
+ 
+     #   create GIF image via external gFONT tool
+-    my $error = `gfont -o $file $crop $adjust $bgcolor $color $font '$str' 2\&gt;&amp;1`;
++    my $error = `gfont -o $file $crop $adjust $bgcolor $color $border $bordercolor -F $font '$str' 2\&gt;&amp;1`;
+     if ($? &gt;&gt; 8) {
+         print STDERR "** wml::des::gfont:\n$error";
+         exit(1);
+@@ -131,6 +147,9 @@
+ &lt;restore align&gt;
+ &lt;restore size&gt;
+ &lt;restore face&gt;
++&lt;restore font&gt;
++&lt;restore bordercolor&gt;
++&lt;restore border&gt;
+ &lt;restore bgcolor&gt;
+ &lt;restore color&gt;
+ &lt;restore base&gt;
+@@ -223,6 +242,21 @@
+ 
+ Sets the image background color. Default is no color at all, i.e. transparent
+ background.
++
++=item C&lt;border=&gt;I&lt;pixels&gt;
++
++Sets the image border width. Default is 0 (no border).
++
++=item C&lt;bordercolor=#&gt;I&lt;rrggbb&gt;
++
++Sets the image border background color. If C&lt;border&gt; is non-null, default is
++black.
++
++=item C&lt;font=&gt;I&lt;fontname&gt;
++
++Sets the type and size of the used font. It is passed directly to gFONT,
++and this option overrides C&lt;face&gt; and C&lt;size&gt; options. See the -F option
++of gfont(1) for more details.
+ 
+ =item C&lt;face=&gt;I&lt;fontname&gt;
+ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00285.shtml">[Patch gfont] adds border</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00287.shtml">[Patch wml::des::imgbg] Gradients</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00285.shtml">[Patch gfont] adds border</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00287.shtml">[Patch wml::des::imgbg] Gradients</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00286"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00286"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

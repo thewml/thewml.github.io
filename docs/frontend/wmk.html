@@ -1,0 +1,302 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Core / WMk</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:38"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+<br />
+<ul class="navbarnestnest">
+<li>
+<a href="./wml.html">wml</a>
+</li>
+<li>
+<b>wmk</b>
+</li>
+<li>
+<a href="./wmd.html">wmd</a>
+</li>
+<li>
+<a href="./wmb.html">wmb</a>
+</li>
+<li>
+<a href="./wmu.html">wmu</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Core / WMk</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WMk - Website META Language Make</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#user_files">USER FILES</a></li>
+	<li><a href="#caveat">CAVEAT</a></li>
+	<li><a href="#authors">AUTHORS</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>WMk - Website META Language Make</p>
+<p>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>2.0.11 (19-Aug-2006)</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>wmk</strong>
+[<strong>-a</strong>]
+[<strong>-A</strong> <em>WILDMAT</em>]
+[<strong>-F</strong> <em>WILDMAT</em>]
+[<strong>-x</strong> <em>PATH</em>]
+[<strong>-X</strong> <em>PATH</em>]
+[<strong>-a</strong>]
+[<strong>-f</strong>]
+[<strong>-n</strong>]
+[<strong>-r</strong>]
+[<em>WML-options</em>]
+[<em>path</em> ...]</p>
+<p><strong>wmk</strong>
+[<strong>-V</strong>]
+[<strong>-h</strong>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This is the high-level frontend to the <em>Website META Language</em> (WML), a free
+HTML generation toolkit for Unix, internally consisting of 9 independent
+languages. See <code><a href="../frontend/wml.html">wml</a>(1)</code> for more details on WML.</p>
+<p>Use this command to run <em>wml</em> on a bunch of <em>.wml</em> files either directly
+given on the command line as <em>path</em> or found via directory traversal in
+<em>path</em>.</p>
+<p>WMk recognizes WML's <em>shebang</em> lines (``<code>#!wml</code> <em>options</em>'') in the <em>.wml</em>
+files and automatically adds <em>options</em> to the command line of <em>wml</em> when
+invoking it for this particular file.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2da_2c__2d_2dall"><strong>-a</strong>, <strong>--all</strong></a></strong>
+<dd>
+<p>Specifies that WMk should recursively process <strong>all</strong> <em>.wml</em> files it finds in
+<em>path</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2da_2c__2d_2daccept_3dwildmat"><strong>-A</strong>, <strong>--accept=</strong><em>WILDMAT</em></a></strong>
+<dd>
+<p>Accepts (=includes) all files matched by the shell wildcard pattern <em>WILDMAT</em>
+for processing. WMk always has a pre-configured ``<code>-A *.wml</code>'' option which
+forces it to process all WML files per default. This option is only used
+when <em>path</em> is a directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2df_2c__2d_2dforget_3dwildmat"><strong>-F</strong>, <strong>--forget=</strong><em>WILDMAT</em></a></strong>
+<dd>
+<p>Forgets (=exclude) all files and directories matched by the shell wildcard
+pattern <em>WILDMAT</em> which were previously accepted by option <strong>-A</strong>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_2c__2d_2doutputfile_3dpath"><strong>-o</strong>, <strong>--outputfile=</strong><em>PATH</em></a></strong>
+<dd>
+<p>Specifies output files. When this flag is used in <em>.wmlrc</em>, the same
+flag must be put in <em>.wmkrc</em> to let WMk know when to rebuild these
+output files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dx_2c__2d_2dexec_2dprolog_3dpath"><strong>-x</strong>, <strong>--exec-prolog=</strong><em>PATH</em></a></strong>
+<dd>
+<p>Executes <em>PATH</em> in the local context of <em>path</em> <strong>before</strong> the WML commands
+are run. This options is only used when <em>path</em> is a directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dx_2c__2d_2dexec_2depilog_3dpath"><strong>-X</strong>, <strong>--exec-epilog=</strong><em>PATH</em></a></strong>
+<dd>
+<p>Executes <em>PATH</em> in the local context of <em>path</em> <strong>after</strong> the WML commands are
+run. This options is only used when <em>path</em> is a directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2df_2c__2d_2dforce"><strong>-f</strong>, <strong>--force</strong></a></strong>
+<dd>
+<p>Forces the creation of output files. Usually WMk tries to determine if the
+input file was really modified and skips WML invocations if the output files
+are still up-to-date.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dn_2c__2d_2dnop"><strong>-n</strong>, <strong>--nop</strong></a></strong>
+<dd>
+<p>Sets <em>no-operation</em> (nop) where WMk runs as usual but does not actually
+invoce the <em>wml</em> commands. Use this option to see what <em>wmk</em> would do.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dr_2c__2d_2dnorcfile"><strong>-r</strong>, <strong>--norcfile</strong></a></strong>
+<dd>
+<p>This forces WMk to ignore all <em>.wmkrc</em> and WML to ignore all <em>.wmlrc</em> files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv_2c__2d_2dversion"><strong>-V</strong>, <strong>--version</strong></a></strong>
+<dd>
+<p>Gives the version identification string of WMk. Use this to determine the
+version of a installed WML toolkit.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dh_2c__2d_2dhelp"><strong>-h</strong>, <strong>--help</strong></a></strong>
+<dd>
+<p>Prints the usage summary page.</p>
+</dd>
+</li>
+</dl>
+<p>All <em>WML-options</em> directly correspond to their counterparts in <em><a href="">wml</em></a>(1)
+because they are just forwarded by <em>wmk</em> except the <strong>-n</strong> and <strong>-o</strong> options
+which are implicitly created by <em>wmk</em> for each <em>wml</em> invocation.</p>
+<p>
+</p>
+<hr />
+<h1><a name="user_files">USER FILES</a></h1>
+<dl>
+<dt><strong><a name="item_and"><em>$HOME/.wmkrc</em> and <em>(../)*.wmkrc</em></a></strong>
+<dd>
+<p>These files can also contain option strings, one option per line. One
+may use this file to exclude some directories from being searched for
+input files</p>
+</dd>
+<dd>
+<pre>
+  -F images
+  -F templates
+   ...</pre>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="caveat">CAVEAT</a></h1>
+<p>Auto-adjusted variables specfied as <strong>-DNAME~PATH</strong> on the <em>wmk</em>
+command-line will not necessarily have the same effect as a similar
+definition in a <em>./.wmlrc</em> file. This is because, when processing
+sub-directories, <em>wmk</em> changes its working directory to each of those
+directories, which can influence the interpolation of such auto-adjusted
+variables. When specified on the command line, such variables are
+interpolated with respect to <em>wml</em>'s current working directory at the
+time of its invocation. So, if you wish such variables to be
+interpolated relative to <em>wmk</em>'s current working directory at the time
+of its invocation, one can work-around this issue by specifying
+<strong>-DNAME~PATH</strong> in a <em>.wmlrc</em> in that directory rather than specifying
+it on the <em>wmk</em> command-line.</p>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com</pre>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com</pre>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p><a href="../frontend/wml.html">wml</a>(1), <code><a href="../docs/wml_intro.html">wml_intro</a>(1)</code></p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

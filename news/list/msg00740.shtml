@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Forcing dependencies on wmk -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 7 Jun 1999 18:55:41 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990607183833.1828A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990607114704.B17724@debian.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00740">Date Index</a>][<a href="thrd16.shtml#00740">Thread Index</a>]<br>
+[<A HREF="msg00739.shtml">Date Prev</A>][<A HREF="msg00741.shtml">Date Next</A>][<A HREF="msg00739.shtml">Thread Prev</A>][<A HREF="msg00742.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Forcing dependencies on wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 7 Jun 1999 18:49:42 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 7 Jun 1999, James A. Treacy wrote:
+
+Hi Jay,
+
+&gt; This is a bit premature as I haven't tried the new version of wml yet
+&gt; (the new Debian package just came out) so if the following has been
+&gt; addressed, my apologies.
+&gt; 
+&gt; One thing that would be very useful is a way to force a dependency
+&gt; on a file, or a set of files. This would allow you to to have
+&gt; pages that use perl scripts, which grab data from other files, to
+&gt; be made automatically using wmk. Something like
+&gt; 
+&gt; #depends "news/*.wml"
+&gt; would allow me to get rid of a lot of stuff currently in Makefiles.
+
+Yes, seems reasonable,
+I think that a special attribute is the easiest solution, e.g.
+  #include "news/foo.wml" depend
+Unfortunately, i am not sure whether wildcards are easy to deal with.
+
+&gt; Also, does the new wmk check dependencies recursively? It is common
+&gt; to have #includes (or #use) in included files.
+
+Yes :-)
+Only user templates are checked, system files are supposed immutable.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00742" HREF="msg00742.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> Alexander Graefe</li>
+<li><strong><A NAME="00743" HREF="msg00743.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00739" HREF="msg00739.shtml">Forcing dependencies on wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00739.shtml">Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00741.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00739.shtml">Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00742.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00740"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00740"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

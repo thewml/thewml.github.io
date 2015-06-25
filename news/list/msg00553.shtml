@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I like this navbar -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Thu, 8 Apr 1999 10:43:45 +0200 (MET DST) -->
+<!--X-Message-Id: 87zp4j1p1p.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990407185027.25231A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00553">Date Index</a>][<a href="thrd13.shtml#00553">Thread Index</a>]<br>
+[<A HREF="msg00552.shtml">Date Prev</A>][<A HREF="msg00554.shtml">Date Next</A>][<A HREF="msg00551.shtml">Thread Prev</A>][<A HREF="msg00557.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I like this navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 08 Apr 1999 10:42:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; In fact, one can write
+&gt; &lt;define-tag lang:wildcard&gt;
+
+Yes, this looks good (although you have to type 14 additional
+characters for every button :-)), it should probably be included in
+the normal wml::std::lang, so you do not have to care about the
+protection stuff if you just want to use it.
+
+&gt; Concerning the ``nohints'' attribute, it's a good idea. 
+[...]
+&gt; wml_p8_htmlstrip to suppress JavaScript code. I prefer the latter, any
+&gt; opinion?
+
+I might want to be able to suppress javascript hints on navbars, but
+still be able to use the image replacement (see the example below,
+navbar-FH actually produces different javascript code for nb_imgOver
+depending on nohints), to set hints on selected &lt;href ...&gt;s or to
+include hand-coded javascript stuff (<A  HREF="http://www.hars.de/misz/rado.html">http://www.hars.de/misz/rado.html</A>
+uses javascript to supply a functionality that can't be achieved
+otherwise), this might be difficult to do with a global option to
+remove javascript code.
+
+I implemented nohints not because I hate javascript, but because I
+hate pages that mess around with my status line :-).
+
+&gt; And i don't understand what your ``imgstyle'' attribute is for. Do you
+&gt; have an example?
+
+It is relevant for the automatic button creation, see
+<A  HREF="http://www.hars.de/www/wml_nav_img.en.html">http://www.hars.de/www/wml_nav_img.en.html</A> for a description.  It is
+used like (real world applications should probably use PerlMagick or
+something instead of banner and netpbm):
+
+#include "/path/to/navbar-FH.wml"
+
+&lt;:
+{
+  my @cols=("white", "lightseagreen", "yellow");
+  my @spc=("", "* ");
+  $imgstyle{foo} = sub {
+    my ($file, $txt, $type, $level, $lang, $id) = @_;
+      system ("(banner '". $spc[$level] . $txt . "' |\
+        asciitopgm 400 140 | pnmrotate 90 |\
+        pnmscale -height 20 -width 80 |\
+        pgmtoppm black-". $cols[$type]." | ppmtogif &gt;" .
+        $file . ") &gt;/dev/null 2&gt;&amp;1 &gt;/dev/null");
+  }
+}
+:&gt;
+
+&lt;navbar:define name=foobar imgstyle=foo nohints&gt;
+	&lt;navbar:epilog&gt;&lt;br&gt;&lt;/navbar:epilog&gt;
+	&lt;navbar:button id   = foo
+		       img  = "fooicon-*.gif"
+		       txt  = "foo"
+		       url  = foo.html&gt;
+	&lt;navbar:button id   = foo.bar
+		       img  = "foobaricon-*.gif"
+		       txt  = "foobar"
+		       url  = foobar.html&gt;
+        &lt;navbar:button id   = bletch
+		       img  = "bletchicon-*.gif"
+		       txt  = "bletch"
+		       url  = bletch.html&gt;
+&lt;/navbar:define&gt;
+
+&lt;navbar:render name=foobar select=foo&gt;
+
+Yours, Florian.
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00557" HREF="msg00557.shtml">Re: I like this navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00551" HREF="msg00551.shtml">I like this navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00552.shtml">Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00554.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00551.shtml">I like this navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00557.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00553"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00553"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

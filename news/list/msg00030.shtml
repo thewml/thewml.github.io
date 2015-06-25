@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml::des::navbar: automatically selecting the right button -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Thu, 8 Jan 1998 14:09:53 +0100 (MET) -->
+<!--X-Message-Id: 199801081309.OAA07143@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 98010722173000.16488@hensley -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00030">Date Index</a>][<a href="thread.shtml#00030">Thread Index</a>]<br>
+[<A HREF="msg00029.shtml">Date Prev</A>][<A HREF="msg00031.shtml">Date Next</A>][<A HREF="msg00027.shtml">Thread Prev</A>][<A HREF="msg00029.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml::des::navbar: automatically selecting the right button</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Thu, 8 Jan 1998 14:09:51 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Oliver Hensel, in a previous mail you wrote:
+
+&gt; I currently have some question.
+&gt; I am using the great wml::des::navbar feature.
+&gt; I want to use a template, which automatically renders the navbar.
+&gt; That actually works, but I want to have the right button automatically selected
+&gt; by filename. 
+&gt; I have no clue how to do that, does anyone of you??
+
+Which button is rendered "selected" is set via the "select=ID" attribute of
+&lt;navrender&gt;. Ok, here you have to choices:
+
+1. You do it manually like me via a #use attribute.
+   My WML pages just do
+
+   | #use wml::tmpl:swpage area=XXX
+
+   and the tmpl/swpage.wml file contains
+
+   | &lt;navbar select=$(area) [...]&gt;
+
+   I personally have no problem with this.
+
+2. You can do it automatically what you want, based
+   on the filesystem structure. Here the keys are the two variables
+   WML_SRC_DIRNAME and WML_SRC_FILENAME. The last one usually holds something
+   like "index.wml".  What you now have to do is the following: Use these
+   filenames as the button id (&lt;nb_button name=ID&gt;!) and render your navbar
+   via
+      &lt;navrender select=&lt;get-var WML_SRC_FILENAME&gt; [...]&gt;
+   When you cannot do it such simple, i.e. need more difficult mapping between
+   WML_SRC_DIRNAME/WML_SRC_FILENAME to the ID, you have to use a trick:
+
+   | &lt;:{
+   |     my $dir  = '&lt;get-var WML_SRC_DIRNAME&gt;';
+   |     my $file = '&lt;get-var WML_SRC_FILENAME&gt;';
+   |     ...do some calculations here in Perl and 
+   |        store result into global Perl variabe $id...
+   | }:&gt;
+   | &lt;navrender select="$id" [...]&gt;
+
+   This approach can solve any problem of automatic selection because now you
+   have the complete power of Perl to do the calculation of the button to be
+   selected. When you are crazy you can even use Perl's DBI interface here to
+   resolve the button id from a database ;_)
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00027" HREF="msg00027.shtml">wml::des::navbar: automatically selecting the right button</A></strong>, <em>From:</em> Oliver Hensel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00029.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00031.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00027.shtml">wml::des::navbar: automatically selecting the right button</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00029.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00030"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00030"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

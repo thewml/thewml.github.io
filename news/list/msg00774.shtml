@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 1.7.1 Compilation Problems -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 16 Jun 1999 13:15:35 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990616130537.8356B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 4.1.19990615135819.00abbd60@pop.ncsa.uiuc.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00774">Date Index</a>][<a href="thrd17.shtml#00774">Thread Index</a>]<br>
+[<A HREF="msg00773.shtml">Date Prev</A>][<A HREF="msg00775.shtml">Date Next</A>][<A HREF="msg00772.shtml">Thread Prev</A>][<A HREF="msg00775.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 1.7.1 Compilation Problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 16 Jun 1999 13:09:26 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 15 Jun 1999, David Altenburg wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I'm trying to compile WML 1.7.1 on a system running Redhat Linux 5.2.
+&gt; 
+&gt; However, I'm getting problems in wml_backend/p3_eperl (of the source tree) with eperl_http.c on the following line:
+&gt; 
+&gt; 	struct sockaddr_in sar;
+&gt; 
+&gt; The compiler complains that the size of sar is unkown.
+&gt; 
+&gt; The definition of struct sockaddr_in seems to be included, so I'm not sure what the problem is, or where to continue looking.
+&gt; 
+&gt; Any ideas?
+
+No, i successfully compiled wml-1.7.1 yesterday on a RH 5.2.
+Could you try this ?
+
+prompt&gt; make distclean
+prompt&gt; ( ./configure; make ) 2&gt;&amp;1 | tee log
+prompt&gt; mail barbier@imacs.polytechnique.fr &lt; log
+
+I will compare with my output. I couldn't perform it before Monday,
+sorry.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00775" HREF="msg00775.shtml">Re: 1.7.1 Compilation Problems</A></strong>, <em>From:</em> David Altenburg</li>
+<li><strong><A NAME="00778" HREF="msg00778.shtml">Re: 1.7.1 Compilation Problems</A></strong>, <em>From:</em> David Altenburg</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00772" HREF="msg00772.shtml">1.7.1 Compilation Problems</A></strong>, <em>From:</em> David Altenburg</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00773.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00775.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00772.shtml">1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00775.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00774"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00774"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

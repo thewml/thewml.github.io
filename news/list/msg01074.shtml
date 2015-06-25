@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: http://www.nokia.com/corporate/wap/future_wap.html -->
+<!--X-From-R13: oneovreNvznpf.cbylgrpuavdhr.se -->
+<!--X-Date: Tue, 19 Oct 1999 10:34:02 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991019102741.3252A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990918235534.2136C&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01074">Date Index</a>][<a href="thrd20.shtml#01074">Thread Index</a>]<br>
+[<A HREF="msg01073.shtml">Date Prev</A>][<A HREF="msg01075.shtml">Date Next</A>][<A HREF="msg00976.shtml">Thread Prev</A>][<A HREF="msg00971.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: http://www.nokia.com/corporate/wap/future_wap.html</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 19 Oct 1999 10:40:17 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 19 Sep 1999, Denis Barbier wrote:
+
+&gt; On 16 Sep 1999, Fritz Zaucker wrote:
+&gt; 
+&gt; &gt; I had pointed this conflict out some days ago already and think it is
+&gt; &gt; a potential problem. Of course you can tell your WAP users to name
+&gt; &gt; their files something other than .wml and use whatever they (or you)
+&gt; &gt; choose in your mime-type file. Not nice, though.
+&gt; &gt; 
+&gt; &gt; The lesson to learn is: never use three letter appreviations (thanks,
+&gt; &gt; MS-DOS ...)
+&gt; 
+&gt; I agree with your last sentence, but i'm not sure there is a real
+&gt; problem. Smart browsers should allow the user to customize how
+&gt; to render certain mime-types (but i don't know whether they do).
+
+Well, i read RFC2068 (HTTP/1.1) more carefully and found this:
+
+============================================================
+7.2.1 Type
+
+   When an entity-body is included with a message, the data type of that
+   body is determined via the header fields Content-Type and Content-
+   Encoding. These define a two-layer, ordered encoding model:
+
+          entity-body := Content-Encoding( Content-Type( data ) )
+
+   Content-Type specifies the media type of the underlying data.
+   Content-Encoding may be used to indicate any additional content
+   codings applied to the data, usually for the purpose of data
+   compression, that are a property of the requested resource. There is
+   no default encoding.
+   Any HTTP/1.1 message containing an entity-body SHOULD include a
+   Content-Type header field defining the media type of that body. If
+   and only if the media type is not given by a Content-Type field, the
+   recipient MAY attempt to guess the media type via inspection of its
+   content and/or the name extension(s) of the URL used to identify the
+   resource. If the media type remains unknown, the recipient SHOULD
+   treat it as type "application/octet-stream".
+============================================================
+
+This means that a conflict about suffix names must be resolved on the
+server side, and not by the client.
+
+But again this is not a real problem since WML accept any suffix name
+for input files.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00976" HREF="msg00976.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01073.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01075.shtml">[BUG REPORT] WML 1.7.4, Redhat 6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00976.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00971.shtml">May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01074"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#01074"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

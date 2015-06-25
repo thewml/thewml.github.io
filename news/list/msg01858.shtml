@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] New cool stuff in wml&#45;SNAP -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 23 Jul 2000 01:36:07 +0200 (MET DST) -->
+<!--X-Message-Id: 20000723013656.A28713@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01858">Date Index</a>][<a href="thrd38.shtml#01858">Thread Index</a>]<br>
+[<A HREF="msg01857.shtml">Date Prev</A>][<A HREF="msg01859.shtml">Date Next</A>][<A HREF="msg01857.shtml">Thread Prev</A>][<A HREF="msg01859.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] New cool stuff in wml-SNAP</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 23 Jul 2000 01:36:56 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi again,
+
+Firstly web interface to this ML has been deeply improved.
+Here are some very cool stuff new in wml-SNAP.
+
+* On May 1999, Stefan `Sec` Zehl requested in
+     <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg00598.shtml">http://www.engelschall.com/sw/wml/news/list/msg00598.shtml</A>
+  to be able to nest lang tags, e.g.
+     &lt;lang:area&gt;
+     (de) Referenziere: &lt;lang:star:href: index.*.html|index.html&gt;
+     (en) Referencing : &lt;lang:star:href: index.*.html|index.html&gt;
+     &lt;/lang:area&gt;
+  On December 1999, Jan Holler had a similar request
+     <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg01216.shtml">http://www.engelschall.com/sw/wml/news/list/msg01216.shtml</A>
+
+  I was then unable to provide a solution because i focused on
+  wml_p9_slice.
+  There was in fact a very simple solution, which is when entering one
+  language to discard all others.
+  Two new tags may be of interest: &lt;lang:current&gt; displays current language,
+  and &lt;lang:list&gt; the list of defined languages.
+
+* POSIX regular expressions are replaced by the powerful PCRE (Perl
+  Compatible Regular Expressions) in wml_p2_mp4h, which allows Perl
+  regexps. For instance, pass 6 substitutions in &lt;lang:area&gt; have been
+  replaced by Perl regexps in pass 2, which made the item above
+  feasible.
+
+* Getting tired of looking where to fix warnings and errors reported as
+  ERROR:/tmp/wml.11485.tmp2:19: ... ? Be happy, WML now tells you in
+  which file you have to look at. Line number in this file is also
+  displayed, but this information is less reliable.
+  These informations are displayed in warnings of passes 2 and 3.
+
+* Javascript code between &lt;javascript&gt; and &lt;/javascript&gt; is now diverted
+  to the HEAD section.  This solves a bug reported by Chris Marston in
+     <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg01838.shtml">http://www.engelschall.com/sw/wml/news/list/msg01838.shtml</A>
+  about function scope.  
+  This diversion cannot be made automatically.  But if the &lt;head&gt; tag is
+  defined and is a complex tag, it is assumed to be defined as in
+  wml::std::page, and &lt;javascript&gt; body is passed to this macro.
+  So even if you do not use wml::std::page, you only have to define
+     &lt;define-tag head endtag=required&gt;
+     &lt;divert HEAD&gt;%body&lt;/divert&gt;
+     &lt;/define-tag&gt;
+  and make sure you use starred form &lt;head*&gt; ... &lt;/head*&gt; for HTML tags.
+
+  Stephan Petersen spent time testing this with multi-lingual navbars
+  and reported many problems.  They are hopefully fixed now, but
+  required some kind of magic because language slices have to be also
+  put into HEAD section when Javascript code is language-dependent.
+  It is always possible to discard this diversion with the `nohead'
+  &lt;javascript&gt; attribute.
+
+* All WML modules have been updated and WML is now hopefully XHTML 1.0
+  ready.  This means that if in your input file all simple tags contain
+  a trailing slash, you are able to output XHTML 1.0 files.
+  By default, trailing slash in simple tags attributes are still removed
+  to conform with HTML standards.
+
+Hope you will find these enhancements useful.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01857.shtml">[mp4h] Small change in quotes parsing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01859.shtml">BUG REPORT: Website META Language 2.0.2200007241800 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01857.shtml">[mp4h] Small change in quotes parsing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01859.shtml">BUG REPORT: Website META Language 2.0.2200007241800 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01858"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01858"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

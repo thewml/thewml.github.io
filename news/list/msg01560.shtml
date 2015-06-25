@@ -1,0 +1,85 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml::std::page -->
+<!--X-From-R13: Egvna Egberatra Ayfra <fgvnabNgvuyqr.bet> -->
+<!--X-Date: Tue, 9 May 2000 15:56:58 +0200 (MET DST) -->
+<!--X-Message-Id: 4.3.1.0.20000509154549.00a83b40@tihlde.org -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: bin00024.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01560">Date Index</a>][<a href="thrd32.shtml#01560">Thread Index</a>]<br>
+[<A HREF="msg01559.shtml">Date Prev</A>][<A HREF="msg01562.shtml">Date Next</A>][<A HREF="msg01559.shtml">Thread Prev</A>][<A HREF="msg01562.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml::std::page</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stian Storengen Olsen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 09 May 2000 15:55:34 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello.
+
+As I couldn't find any easy way to add the "description" and "keywords" 
+meta tags from the &lt;page&gt; tag, I modified wml::std::page for the following 
+syntax:
+&lt;page
+   title="Some title"
+   ..other stuff..
+   info
+   description="This is a fabolous site"
+   keywords="Sex, drugs, rock, roll"
+ &gt;
+
+Included patch is for wml-1.99.4 if this is of interest.
+
+Stian Storengen Olsen</PRE>
+<P><A HREF="bin00024.bin" >page.src.patch</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01559.shtml">[RFC] New document for writing macros</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01562.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01559.shtml">[RFC] New document for writing macros</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01562.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01560"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01560"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

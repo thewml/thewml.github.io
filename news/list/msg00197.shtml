@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <page> and <info> tags -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 30 Aug 1998 13:17:44 +0200 (CEST) -->
+<!--X-Message-Id: 19980830131740.A5173@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199808290143.SAA15121@medusa.surefirev.com. -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00197">Date Index</a>][<a href="thrd5.shtml#00197">Thread Index</a>]<br>
+[<A HREF="msg00196.shtml">Date Prev</A>][<A HREF="msg00198.shtml">Date Next</A>][<A HREF="msg00196.shtml">Thread Prev</A>][<A HREF="msg00198.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;page&gt; and &lt;info&gt; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 30 Aug 1998 13:17:40 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Aug 28, 1998, Michael McNamara wrote:
+
+&gt; I use the &lt;page&gt; tag.
+&gt; 
+&gt; I want to get &lt;meta name="Keywords" content="keys, locks, doors"&gt;
+&gt; inserted into the &lt;head&gt; &lt;/head&gt; region, as per the HTML spec.
+&gt; 
+&gt; &lt;page&gt; has a info attribute, but it appears to accept no arguments,
+&gt; and if present, all it seems to do is include:
+&gt; 
+&gt; &lt;meta name="Author"    content="Michael McNamara, mac@medusa.surefirev.com"&gt;
+&gt; &lt;meta name="Generator" content="WML 1.6.6 (25-06-1998)"&gt;
+&gt; &lt;meta name="Modified"  content="28-08-1998 18:31:36"&gt;
+&gt; 
+&gt; in the &lt;html&gt; section.  This is the right place, but I want seach
+&gt; keywords!
+
+The wml::std::page also overwrites the &lt;head&gt; container tag, so you simply can
+use:
+
+&lt;head&gt;
+&lt;meta name="Keywords" content="keys, locks, doors"&gt;
+&lt;/head&gt;
+
+For instance:
+
+| #use wml::std::page
+| &lt;page info&gt;
+| &lt;head&gt;
+| &lt;meta name="Keywords" content="keys, locks, doors"&gt;
+| &lt;/head&gt;
+| test
+
+gives me the correct result:
+
+| &lt;html&gt;
+| &lt;head&gt;
+| &lt;meta name="Author"    content="Ralf S. Engelschall, rse@engelschall.com"&gt;
+| &lt;meta name="Generator" content="WML 1.6.7 (02-08-1998)"&gt;
+| &lt;meta name="Modified"  content="30-08-1998 13:16:18"&gt;
+| &lt;meta name="Keywords" content="keys, locks, doors"&gt;
+| &lt;/head&gt;
+| &lt;body bgcolor="#ffffff" text="#000000" link="#333399" alink="#9999ff"
+| vlink="#000066"&gt;
+| test
+| &lt;/body&gt;
+| &lt;/html&gt;
+
+Isn't this exactly what you want?
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00198" HREF="msg00198.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></strong>, <em>From:</em> Michael McNamara</li>
+<li><strong><A NAME="00199" HREF="msg00199.shtml">Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00195" HREF="msg00195.shtml">&lt;page&gt; and &lt;info&gt; tags</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00196.shtml">&lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00198.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00196.shtml">&lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00198.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00197"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00197"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

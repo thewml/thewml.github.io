@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Spaces in filnames -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 24 Jun 1999 18:39:50 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990624182547.26526A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87674dlh0h.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00803">Date Index</a>][<a href="thrd17.shtml#00803">Thread Index</a>]<br>
+[<A HREF="msg00802.shtml">Date Prev</A>][<A HREF="msg00804.shtml">Date Next</A>][<A HREF="msg00802.shtml">Thread Prev</A>][<A HREF="msg00808.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Spaces in filnames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 Jun 1999 18:33:37 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Le 24/06/1999, Florian Hars a écrit:
+
+FH&gt;  I tried to process a file named 'This Fïle haþ æ véry $tráñge naµe.wml',
+FH&gt;  and wml 1.7.1 failed miserably, I had to use
+FH&gt;  $ wml -o th.html 'This Fïle haþ æ véry $tráñge naµe.wml'
+FH&gt;  $ mv th.html 'This Fïle haþ æ véry $tráñge naµe.html'
+FH&gt;  (The result is on <A  HREF="http://www.hars.de/.../">http://www.hars.de/.../</A>)
+FH&gt; 
+FH&gt;  This is a bit annoying, since it breaks wmk -af.
+
+&gt;From the HTML-4.0 specifications:
+  B.2.1 Non-ASCII characters in URI attribute values
+          
+   Although URIs do not contain non-ASCII values (see [URI], section 2.1)
+   authors sometimes specify them in attribute values expecting URIs
+   (i.e., defined with %URI; in the DTD). For instance, the following
+   href value is illegal:
+      &lt;A href="<A  HREF="http://foo.org/Håkon">http://foo.org/Håkon</A>"&gt;...&lt;/A&gt;
+
+And i strongly believe spaces in URI are forbidden too. IIRC Netscape
+will skip everything after the space character.
+So please use standanrd filenames ;-)
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00808" HREF="msg00808.shtml">Re: Spaces in filnames</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00802" HREF="msg00802.shtml">Spaces in filnames</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00802.shtml">Spaces in filnames</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00804.shtml">Re: multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00802.shtml">Spaces in filnames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00808.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00803"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00803"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

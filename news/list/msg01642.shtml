@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 2.0.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 28 May 2000 16:19:39 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000528160705.23577A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.10005261505460.505&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01642">Date Index</a>][<a href="thrd34.shtml#01642">Thread Index</a>]<br>
+[<A HREF="msg01641.shtml">Date Prev</A>][<A HREF="msg01644.shtml">Date Next</A>][<A HREF="msg01634.shtml">Thread Prev</A>][<A HREF="msg01644.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 May 2000 16:19:34 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 26 May 2000, Matthias Bernhardt wrote:
+
+[...]
+&gt; You are right, as it's obvious now, that this is a serious flaw
+&gt; in the current version of mp4h, it should be discussed first,
+&gt; and then implemented. Already too bad, that 2.0.0 is `buggy',
+&gt; one should try to fix that in not too many new versions.
+
+With politically correct words, i would rather say that pass 2 in WML
+2.0.0 had a ``different behaviour''  ;-)
+
+&gt; To me it appears very desirable, if it was not necessary
+&gt; to tamper ePerl code in WML files by protecting brackets.
+&gt; 
+&gt; To get rid of the need to protect brackets, I suggest to
+&gt; implement the &lt;: and :&gt; tags into the mp4h Parser, so ePerl
+&gt; code would not be evaluated except constants, which is 
+&gt; everything in "" quotes or in so-called "here" documents (&lt;&lt;).
+[...]
+
+Some people use WML to generate pages which are processed through PHP,
+ASP, ePerl, ... by the web server.  And you do not know which delimiter
+is used (see options -B and -E of ePerl).
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01644" HREF="msg01644.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01662" HREF="msg01662.shtml">different behaviour ;-)</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01634" HREF="msg01634.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01641.shtml">feature query</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01644.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01634.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01644.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01642"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01642"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

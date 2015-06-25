@@ -1,0 +1,174 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Egrsna Epubyy <fgrfpuNcnefrp.eurva&#45;arpxne.qr> -->
+<!--X-Date: Sun, 2 Jan 2000 12:38:57 +0100 (MET) -->
+<!--X-Message-Id: 19991229211614.A1103@parsec.rhein&#45;neckar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01253">Date Index</a>][<a href="thrd23.shtml#01253">Thread Index</a>]<br>
+[<A HREF="msg01252.shtml">Date Prev</A>][<A HREF="msg01254.shtml">Date Next</A>][<A HREF="msg01142.shtml">Thread Prev</A>][<A HREF="msg01259.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan Scholl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Dec 1999 21:16:14 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Stefan Scholl
+Reply-To: stesch@linux.de
+
+PROBLEM DESCRIPTION:
+
+Wrong ISO date with wml::std::info
+----------------------------------
+
+I was wondering about the strange format of the date in the headers:
+
+&lt;meta name="Modified"  content="29-12-1999 17:52:57"&gt;
+
+
+According to the variable names in the source this should be an
+iso date. I don't know which iso norm is meant.
+
+But it's no ISO 8601.
+
+
+Bug is in wml_frontend/wml.src, function isotime():
+
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+--- wml_frontend/wml.src.orig   Wed Dec 29 21:05:20 1999
++++ wml_frontend/wml.src        Wed Dec 29 21:06:04 1999
+@@ -66,8 +66,8 @@
+
+     my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) =
+         localtime($time);
+-    my ($str) = sprintf("%02d-%02d-%04d %02d:%02d:%02d",
+-         $mday, $mon+1, $year+1900, $hour, $min, $sec);
++    my ($str) = sprintf("%04d-%02d-%02d %02d:%02d:%02d",
++         $year+1900, $mon+1, $mday, $hour, $min, $sec);
+     return $str;
+ }
+-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----8&lt;-----
+
+
+Now my date is correct:
+
+&lt;meta name="Modified"  content="1999-12-29 17:52:57"&gt;
+
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu2
+    Perl: 5.005_02 (/usr/local/bin/perl)
+    User: root@parsec
+    Date: 07-Nov-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+  Platform:
+    osname=linux, osvers=2.2.5, archname=i586-linux
+    uname='linux pascal 2.2.5 #79 tue jan 19 12:41:20 met 1999 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2 -pipe', gccversion=egcs-2.91.66 19990314 (egcs-1.1.2 release)
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Apr  4 1999 20:00:53
+  @INC:
+    /usr/lib/perl5/5.00502/i586-linux
+    /usr/lib/perl5/5.00502
+    /usr/lib/perl5/site_perl/5.005/i586-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01259" HREF="msg01259.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01252.shtml">wml -o 4 removes blanks after closing tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01254.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01142.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01259.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01253"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01253"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

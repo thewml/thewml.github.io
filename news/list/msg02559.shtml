@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Wed, 13 Mar 2002 11:21:15 +0100 (MET) -->
+<!--X-Message-Id: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02559">Date Index</a>][<a href="thrd52.shtml#02559">Thread Index</a>]<br>
+[<A HREF="msg02558.shtml">Date Prev</A>][<A HREF="msg02560.shtml">Date Next</A>][<A HREF="msg02555.shtml">Thread Prev</A>][<A HREF="msg02563.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 13 Mar 2002 11:19:52 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Sebastian.Brosig@Novas.org wrote:
+
+&gt;my humble website www.novas.org has nested navbars galore. And it works.
+&gt;
+Thanks... The examples are not good.
+
+1. There is an "include.inc" refered, and this file is not packed. 
+Deleting the
+include line fixes the bug, but could you please fix. :-)
+
+2. Your example does not contain selection on the second level menu. When
+I click on "who are novas", the submenu opens, and the main menu item is
+deactivated by the &lt;navbar element. Then I cannot click on e.g. Group 
+Structure
+(like you can one some menu items on the online version) so I cannot open a
+third level menu to see, if "group structure" is unactivated or not. (As 
+it is
+very nicely unactivated on the online version, but HOW?? :-) Could you 
+please
+add one more level to the example files?
+
+Thanks in advance!
+Ferenc
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02558.shtml">Re: preselected nested navbar items-idea,patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02560.shtml">Re: sources vor www.novas.org</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02555.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02563.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02559"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02559"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

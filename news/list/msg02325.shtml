@@ -1,0 +1,159 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multi Language Support Question -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Sat, 21 Jul 2001 02:12:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20010721015833.B26357@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010720160913.A20143@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010720172935.A13270@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02325">Date Index</a>][<a href="thrd47.shtml#02325">Thread Index</a>]<br>
+[<A HREF="msg02324.shtml">Date Prev</A>][<A HREF="msg02326.shtml">Date Next</A>][<A HREF="msg02323.shtml">Thread Prev</A>][<A HREF="msg02327.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multi Language Support Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 21 Jul 2001 01:58:33 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Denis Barbier wrote:
+&gt; &gt; But, you're right, it would be nice, to have some slice options to
+&gt; &gt;   a) produce no file, if the appropriate slice (or slice term) is
+&gt; &gt;      empty (or perhaps just contains white spaces) and
+&gt; &gt;   b) produce no file, if the appropriate slice doesn't exist.
+&gt; &gt; 
+&gt; &gt; Those options should IMHO be appliable a) to each -o solely and b) to
+&gt; &gt; all -o's
+&gt; &gt; 
+&gt; &gt; That would make things a lot easier...
+&gt; 
+&gt; I just checked wml_p9_slice and it sounds easy to implement, the only
+&gt; problem is about interface specification (how will user tell which file
+&gt; must be skipped), any ideas are welcome.
+
+Since slice hasn't that much options yet, this shouldn't be that hard. ;-)
+
+Here 's my suggestion, of which I thought first about, when I stumbled
+across that problem with non-existent slices:
+
+-o: as before
+-a: like -o, but write output file only, if *a*ll slices in the slice
+    term exist
+-p: like -o, but write output file only, if all *p*ositive (+) slices
+    in the slice term exist (to substract something, that doesn't
+    exist, doesn't hurt :-)
+-n: like -o, but write output file only, if slice term is *n*ot empty
+    (means "contains not only whitespaces")
+
+-A: Proceed as if all following -o's are -a's  (also applies to -n)
+-P: dito. for -p (also applies to -n)
+-N: dito. for -n (also applies to -a and -p)
+
+Those uppercase parameters probably would be nice for use inside the
+.wmlrc's and .wmkrc's... :-)
+
+BTW: Are the options of slice like BSD options and do not need any
+space between a flag and it's parameter (like "-oENuUNDEF:foo.en.html")?
+
+If not, we could also allow something like "-np ENuUNDEF:foo.en.html",
+whose semantic should be "like -o, but write output file only, if all
+*p*ositive (+) slices in the slice term exist and the slice isn't
+empty". With BSD style options, perhaps "-n -p ENuUNDEF:foo.en.html"
+should be used instead.
+
+Another syntax variant:
+
+If we have not BSD style option, another solution would be to append
+the characters "a", "p" and "n" just as flags to the -o parameter like
+"-opn" or "-oa". This is perhaps more intuitive and doesn't pollute
+parameter name space that much. ;-) Although the uppercase parameters
+mentioned above, could be used here, too.
+
+BTW: If I hadn't made any error in reasoning, there's no need to make
+a difference between "-n and -a/-p" and "-n [x]or -a/-p". But it's
+already late... :-)
+
+P.S.: Those suggestions are more a brain dump than a fully evaluated
+user interface. See it as discussion base. :-)
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02327" HREF="msg02327.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02330" HREF="msg02330.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02323" HREF="msg02323.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02324.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02326.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02323.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02327.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02325"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02325"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

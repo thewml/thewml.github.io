@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6 -->
+<!--X-From-R13: [nk Rhraxv <qhraxvNvfv.rr.rgum.pu> -->
+<!--X-Date: Wed, 28 Jun 2000 22:13:35 +0200 (MET DST) -->
+<!--X-Message-Id: 200006281337.PAA12084@isi.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01768">Date Index</a>][<a href="thrd36.shtml#01768">Thread Index</a>]<br>
+[<A HREF="msg01767.shtml">Date Prev</A>][<A HREF="msg01769.shtml">Date Next</A>][<A HREF="msg01762.shtml">Thread Prev</A>][<A HREF="msg01774.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Max Duenki &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 28 Jun 2000 15:37:56 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+&gt; there are indeed some problems with 8-bit characters on SunOS.
+&gt; I fix them in mp4h-1.0.3, could you try if it works?
+&gt; It is available at
+&gt;    <A  HREF="http://www.engelschall.com/sw/mp4h/distrib/mp4h-1.0.3.tar.gz">http://www.engelschall.com/sw/mp4h/distrib/mp4h-1.0.3.tar.gz</A>
+&gt; After compiling, copy it into .../lib/wml/exec/wml_p2_mp4h
+&gt; Thanks for your report.
+
+This fix is ok for me. Thank you
+Max
+
+-- 
+  _______________________________________________________________________
+ /\  Dr. Max H. Duenki - Tel: +41 1 632 3624  Fax: +41 1 632 1208        \
+ \_| Organisation: Swiss Federal Institute of Technology Zurich, ETHZ     |
+   | Department:   Signal and Information Processing Laboratory ISI       |
+   | Room:         ETF E104,                                              |
+   | Address:      Sternwartstrasse 7, CH-8092 Zurich, Switzerland.       |
+   | Email: duenki@isi.ee.ethz.ch, WWW: <A  HREF="http://www.isi.ee.ethz.ch/~duenki">http://www.isi.ee.ethz.ch/~duenki</A> |
+   |  ____________________________________________________________________|___
+   \_/_______________________________________________________________________/
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01774" HREF="msg01774.shtml">http://www.ee.ethz.ch ...</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="01780" HREF="msg01780.shtml">Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01767.shtml">Re: #use / verbose level</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01769.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01762.shtml">Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01774.shtml">http://www.ee.ethz.ch ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01768"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01768"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

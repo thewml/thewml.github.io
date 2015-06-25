@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 6 Mar 2002 00:22:20 +0100 (MET) -->
+<!--X-Message-Id: 20020306003418.A26058@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200203052048.VAA09100@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02538">Date Index</a>][<a href="thrd51.shtml#02538">Thread Index</a>]<br>
+[<A HREF="msg02537.shtml">Date Prev</A>][<A HREF="msg02539.shtml">Date Next</A>][<A HREF="msg02537.shtml">Thread Prev</A>][<A HREF="msg02541.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Mar 2002 00:34:18 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Mar 05, 2002 at 09:48:19PM +0100, freddyz77@tin.it wrote:
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 2.0.8
+&gt; Operating System: Linux RH 7.2
+&gt; 
+&gt; Problem Description:
+[...]
+&gt; | Using a level optimization less than 3 give a correct result but from -O3 the output is
+&gt; | 
+&gt; | --------------------
+&gt; | &lt;p&gt;short desc.&lt;/p&gt;%!slice       -oUNDEFuTEST-LANG_EN:test2.html
+&gt; | --------------------
+&gt; | 
+&gt; | I replaced (in wml_p8_htmlstrip)
+&gt; | 
+&gt; | --------------------
+&gt; |     if ($opt_O &gt;= 3) {
+&gt; |         #   strip leading whitespaces
+&gt; |         $buf =~ s|^\s+||mg;
+&gt; |     }
+&gt; | --------------------
+&gt; | with
+&gt; | --------------------
+&gt; |     if ($opt_O &gt;= 3) {
+&gt; |         #   strip leading whitespaces
+&gt; |         $buf =~ s,$,!,m; # do not collapse first empty line
+&gt; |         $buf =~ s|^\s+||mg;
+&gt; |         $buf =~ s,!$,,m;
+&gt; |     }
+&gt; | --------------------
+&gt; | and work correctly
+
+Hi,
+
+my understanding of Level 3 description is that it should be written
+     if ($opt_O &gt;= 3) {
+         #   strip leading whitespaces
+         $buf =~ s|\n\s+|\n|sg;
+     }
+
+Does it work for you?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02537" HREF="msg02537.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></strong>, <em>From:</em> freddyz77</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02537.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02539.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02537.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02541.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02538"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02538"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2, RedHat Linux 5.2 -->
+<!--X-From-R13: hyevpuNavrqreznaa.oo.onjhr.qr -->
+<!--X-Date: Fri, 17 Sep 1999 21:52:36 +0200 (MET DST) -->
+<!--X-Message-Id: 199909171543.RAA03106@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00972">Date Index</a>][<a href="thrd20.shtml#00972">Thread Index</a>]<br>
+[<A HREF="msg00971.shtml">Date Prev</A>][<A HREF="msg00973.shtml">Date Next</A>][<A HREF="msg01003.shtml">Thread Prev</A>][<A HREF="msg00977.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2, RedHat Linux 5.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 17 Sep 1999 17:43:00 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2
+Operating System: RedHat Linux 5.2
+
+Problem Description:
+| wml_p2_mhc dumps core, details below. The problem 
+| occurs using any combination of  FOO and foo. 
+| How can I help debug this problem? wml -v9 did 
+| not help me, I'm afraid.
+| 
+| [uli@chef ~]$ cat ttt.wml
+| &lt;define-tag foo&gt;
+|   &lt;&lt;FOO&gt;&gt;
+| &lt;/define-tag&gt;
+| 
+| &lt;FOO&gt;
+| [uli@chef ~]$ ls -al .wmlrc core
+| ls: .wmlrc: File not found
+| ls: core: File not found
+| [uli@chef ~]$ set | grep WML
+| [uli@chef ~]$ wml ttt.wml
+| ** WML:Break: Error in Pass 2 (rc=139).
+| [uli@chef ~]$ ls -al core
+| -rw-------   1 uli      uli      21536768 Sep 17 17:38 core
+| [uli@chef ~]$ file core
+| core: ELF 32-bit LSB core file of 'wml_p2_mhc' (signal 11), Intel 80386, version 1
+| [uli@chef ~]$ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00977" HREF="msg00977.shtml">Re: [BUG REPORT] WML 1.7.2, RedHat Linux 5.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00971.shtml">May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00973.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01003.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00977.shtml">Re: [BUG REPORT] WML 1.7.2, RedHat Linux 5.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00972"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00972"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: problems with the wml site -->
+<!--X-From-R13: Osnz Otobqvxr <nsnzNpbec.tblbtv.pbz> -->
+<!--X-Date: Sat, 10 Jun 2000 06:28:49 +0200 (MET DST) -->
+<!--X-Message-Id: 3941BED4.BE342800@corp.goyogi.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01711">Date Index</a>][<a href="thrd35.shtml#01711">Thread Index</a>]<br>
+[<A HREF="msg01710.shtml">Date Prev</A>][<A HREF="msg01712.shtml">Date Next</A>][<A HREF="msg01709.shtml">Thread Prev</A>][<A HREF="msg01716.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>problems with the wml site</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Afam Agbodike &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 09 Jun 2000 21:06:44 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+there seem to be a few formatting errors in the documentation section of
+the wml site, possibly other sections as well.
+
+for an example, see this page:
+
+<A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p1_ipp.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p1_ipp.html</A>
+
+many of the header sections are surrounded by &lt;strong&gt; tags, I don't
+think this is the way it is supposed to be. also, in places where the lt
+and gt should come out as &lt; and &gt;, they are being written to the page as
+&amp;lt; and &amp;gt; seems that the wml encoding is getting confused in those
+sections.
+
+Afam
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01716" HREF="msg01716.shtml">Re: problems with the wml site</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01710.shtml">Include misunderstanding</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01712.shtml">Re: Include misunderstanding</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01709.shtml">wml example section</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01716.shtml">Re: problems with the wml site</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01711"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01711"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

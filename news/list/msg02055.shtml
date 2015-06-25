@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Compiling with Mandrake 7.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 7 Nov 2000 22:26:39 +0100 (MET) -->
+<!--X-Message-Id: 20001107223250.A16032@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001106234830.A6152@physique.usherb.ca -->
+<!--X-Reference: 20001107213935.B15752@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02055">Date Index</a>][<a href="thrd42.shtml#02055">Thread Index</a>]<br>
+[<A HREF="msg02054.shtml">Date Prev</A>][<A HREF="msg02056.shtml">Date Next</A>][<A HREF="msg02054.shtml">Thread Prev</A>][<A HREF="msg02056.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Compiling with Mandrake 7.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Nov 2000 22:32:50 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Nov 07, 2000 at 09:39:35PM +0100, Denis Barbier wrote:
+&gt; On Mon, Nov 06, 2000 at 11:48:30PM -0500, Benoit des Ligneris wrote:
+&gt; &gt; Hello,
+&gt; &gt; 
+&gt; &gt; Well, I tried to compile wml2.0.6 on Mandrake 7.2 and I've got the following error :
+&gt; &gt; 
+&gt; &gt; ================
+&gt; &gt; make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p3_eperl'
+&gt; &gt; cc -O3 -fomit-frame-pointer -pipe -s -march=pentium -ffast-math -fexpensive-optimizations -fno-strict-aliasing -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/lib/perl5/5.6.0/i386-linux/CORE -I. -c eperl_main.c
+&gt; &gt; In file included from eperl_main.c:40:
+&gt; &gt; eperl_perl5.h:42: EXTERN.h: Aucun fichier ou répertoire de ce type
+&gt; &gt; eperl_perl5.h:43: perl.h: Aucun fichier ou répertoire de ce type
+&gt; &gt; eperl_main.c: In function `main':
+&gt; &gt; eperl_main.c:333: syntax error before `*'
+&gt; &gt; eperl_main.c:1055: `my_perl' undeclared (first use in this function)
+&gt; &gt; eperl_main.c:1055: (Each undeclared identifier is reported only once
+&gt; &gt; eperl_main.c:1055: for each function it appears in.)
+&gt; 
+&gt; Hi Benoit,
+&gt; 
+&gt; looks like an ill-installed Perl package (or maybe Mdk provides a
+&gt; perl-dev pkg?).
+
+And indeed perl-devel-5.600-19mdk.i586.rpm is what you are looking for.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02052" HREF="msg02052.shtml">Compiling with Mandrake 7.2</A></strong>, <em>From:</em> Benoit des Ligneris</li>
+<li><strong><A NAME="02054" HREF="msg02054.shtml">Re: Compiling with Mandrake 7.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02054.shtml">Re: Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02056.shtml">Nested ePerl tags implementation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02054.shtml">Re: Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02056.shtml">Nested ePerl tags implementation</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02055"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02055"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 28 Aug 2000 13:06:19 +0200 (MET DST) -->
+<!--X-Message-Id: 20000828130921.A10931@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200008272207.AAA25239@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01911">Date Index</a>][<a href="thrd39.shtml#01911">Thread Index</a>]<br>
+[<A HREF="msg01910.shtml">Date Prev</A>][<A HREF="msg01912.shtml">Date Next</A>][<A HREF="msg01908.shtml">Thread Prev</A>][<A HREF="msg01914.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 28 Aug 2000 13:09:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Aug 28, 2000 at 12:07:18AM +0200, fleeb@fleeb.com wrote:
+
+&gt; Problem Description:
+&gt; | 
+&gt; | I had the following in one file:
+&gt; | 
+&gt; | &lt;define-tag 500&gt;
+&gt; | [some text]
+&gt; | &lt;/define-tag&gt;
+&gt; | 
+&gt; | And I #included the file within the other.  When I attempted to use &lt;500&gt;, however, the output was simply &lt;500&gt;, not [some text].
+
+This is normal behaviour, tag names cannot begin with a digit, as with many
+other languages.  And it won't change, otherwise Perl statements like
+  if ($x&lt;4) {
+would cause severe damage.
+
+&gt; | So I then tried to use &lt;define-tag site-500&gt;, but I had the same problem.  I got around the problem by changing the tag to &lt;define-tag five-hundred&gt;.
+
+Hmmm, site-500 is perfectly valid, and i cannot reproduce your problem.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01908" HREF="msg01908.shtml">[BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1)</A></strong>, <em>From:</em> fleeb</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01910.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01912.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01908.shtml">[BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01914.shtml">&lt;text&gt; broken in WML 2?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01911"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01911"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

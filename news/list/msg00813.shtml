@@ -1,0 +1,243 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 1 Jul 1999 00:47:25 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990701002301.13380A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199906291711.TAA00313@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00813">Date Index</a>][<a href="thrd17.shtml#00813">Thread Index</a>]<br>
+[<A HREF="msg00812.shtml">Date Prev</A>][<A HREF="msg00814.shtml">Date Next</A>][<A HREF="msg00815.shtml">Thread Prev</A>][<A HREF="msg00816.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Jul 1999 00:46:18 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 29 Jun 1999 simes@bpfh.net wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.2 and current CVS snapshot
+&gt; Operating System: SunOS 5.5.1
+&gt; 
+&gt; Problem Description:
+&gt; | The processing of the -D option always strips off a
+&gt; | trailing " on the option, even if that quote has been
+&gt; | escaped by a \. Thus the option
+&gt; | 
+&gt; |  -DFOO="moo \"bar\""
+&gt; | 
+&gt; | Results in things like
+&gt; | 
+&gt; |   --set "FOO" "moo \"bar\"
+&gt; | 
+&gt; | Being sent into meta-html. The problem was with the
+&gt; | regex which splits the values from @opt_D up for the
+&gt; | backends which use it. The regex was:
+&gt; | 
+&gt; |   ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+&gt; | 
+&gt; | I have corrected this to the following, which handles
+&gt; | trailing " correctly and leaves escaped " along so that
+&gt; | the correct thing happens. The new regex is:
+&gt; | 
+&gt; | ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+
+Hi again,
+
+i think i find something :-)
+Could you please tell me if this works for you, I check it with this
+file (test.wml)
+  #!wml -DBAZ="foo \"bar\""
+  pass 1: $(OOF)
+  pass 2: &lt;get-var OOF&gt;
+  pass 3: m4_OOF
+  pass 1: $(FOO)
+  pass 2: &lt;get-var FOO&gt;
+  pass 3: m4_FOO
+  pass 1: $(BAR)
+  pass 2: &lt;get-var BAR&gt;
+  pass 3: m4_BAR
+  pass 1: $(BAZ)
+  pass 2: &lt;get-var BAZ&gt;
+  pass 3: m4_BAZ
+## EOF ##
+In .wmlrc:
+    -DBAR="foo \"bar\""
+
+prompt$ export WMLOPTS="-DOOF=\"foo \\\"bar\\\"\""
+prompt$ wml -DFOO="foo \\\"bar\\\"" test.wml
+prompt$ wml -s -DFOO="foo \\\"bar\\\"" test.wml
+
+Yes, there are 3 backslashes. It's a first try, so there could be a
+solution with just one.
+I believe i try all combinations, but there are always people on this
+list having strange desires ;-)
+
+Here comes the patch
+
+Denis
+
+--- wml_frontend/wml.src	1999/06/09 20:15:23	1.24
++++ wml_frontend/wml.src	1999/06/30 22:19:38
+@@ -192,8 +192,8 @@
+     my ($r) = '';
+ 
+     while (1) {
+-        next if $str =~ s|^"([^"]*)"(.*)$|$r .= $1, $2|e; 
+-        next if $str =~ s|^'([^']*)'(.*)$|$r .= $1, $2|e; 
++        next if $str =~ s|^"(.*?(?!\\).)"(.*)$|$r .= $1, $2|e; 
++        next if $str =~ s|^'(.*?)'(.*)$|$r .= $1, $2|e; 
+         next if $str =~ s|^([^\s"']+)(.*)$|$r .= $1, $2|e;
+         if ($str =~ m|^[\s\n]+| || $str eq '') {
+             if ($r ne '') {
+@@ -450,15 +450,8 @@
+     }
+     close(TMP);
+     if ($shebang =~ m|^#!wml\s+(.+\S)\s*$|is) {
+-        $opts = $1;
+-
+         #   split opts into arguments and process them
+-        if ($opts =~ m|\s+|) {
+-            @ARGV = split(/\s+/, $opts);
+-        }
+-        else {
+-            @ARGV = ( $opts );
+-        }
++        @ARGV = &amp;split_argv($1);
+         &amp;ProcessOptions();
+     }
+ }
+@@ -567,12 +560,17 @@
+ 
+     &amp;verbose(9, "splitting from args: $args\n");
+     @argv = ();
++    sub evaluate {
++        my ($string) = @_;
++        $string =~ s/\\//g;
++        return $string;
++    }
+     while ($args) {
+-        redo if $args =~ s|^\s*(-[a-zA-Z0-9]\S+)|push(@argv, $1), ''|iges;
+-        redo if $args =~ s|^\s*(-[a-zA-Z0-9])|push(@argv, $1), ''|iges;
+-        redo if $args =~ s|^\s*"([^"]*)"|push(@argv, $1), ''|iges;
+-        redo if $args =~ s|^\s*'([^']*)'|push(@argv, $1), ''|iges;
+-        redo if $args =~ s|^\s*(\S+)|push(@argv, $1), ''|iges;
++        redo if $args =~ s|^\s*(-[a-zA-Z0-9]\S+)|push(@argv, &amp;evaluate($1)), ''|iges;
++        redo if $args =~ s|^\s*(-[a-zA-Z0-9])|push(@argv, &amp;evaluate($1)), ''|iges;
++        redo if $args =~ s|^\s*"(.*?(?!\\).)"|push(@argv, &amp;evaluate($1)), ''|iges;
++        redo if $args =~ s|^\s*'([^']*)'|push(@argv, &amp;evaluate($1)), ''|iges;
++        redo if $args =~ s|^\s*(\S+)|push(@argv, &amp;evaluate($1)), ''|iges;
+         redo if $args =~ s|^\s+$|''|iges;
+     }
+     &amp;verbose(9, "splitting to argv: ".join("|", @argv)."\n");
+@@ -951,14 +949,15 @@
+ }
+ 
+ $defipp = '';
++my $dummy;
+ foreach $d (@opt_D) {
+-    ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
++    ($var, $dummy, $val) = ($d =~ m|^(.+?)=("?)(.*)\2\n*$|);
+     $defipp .= " \"-D$var=$val\"";
+ }
+ $defipp .= " -M$opt_M" if $opt_M ne '-';
+ $defmhtml = '';
+ foreach $d (@opt_D) {
+-    ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
++    ($var, $dummy, $val) = ($d =~ m|^(.+?)=("?)(.*)\2\n*$|);
+     $defmhtml .= " --set \"$var\" \"$val\"";
+ }
+ $cnt=0;
+@@ -968,12 +967,12 @@
+ }
+ $defeperl = '';
+ foreach $d (@opt_D) {
+-    ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
++    ($var, $dummy, $val) = ($d =~ m|^(.+?)=("?)(.*)\2\n*$|);
+     $defeperl .= " \"-d$var=$val\"";
+ }
+ $defgm4 = '';
+ foreach $d (@opt_D) {
+-    ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
++    ($var, $dummy, $val) = ($d =~ m|^(.+?)=("?)(.*)\2\n*$|);
+     $defgm4 .= " \"-Dm4_$var=$val\"";
+ }
+ 
+--- wml_backend/p1_ipp/ipp.src	1999/06/28 10:18:03	1.14
++++ wml_backend/p1_ipp/ipp.src	1999/06/30 21:40:08
+@@ -448,7 +448,7 @@
+ #
+ %arg = ();
+ foreach $str (@opt_D) {
+-    if ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)="([^"]*)"$|) {
++    if ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)="(.*)"$|) {
+         $arg{$1} = $2;
+     }
+     elsif ($str =~ m|^([a-zA-Z][a-zA-Z0-9_]*)=(['"]['"])?$|) {
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00810" HREF="msg00810.shtml">[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> simes</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00812.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00814.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00815.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00816.shtml">something done</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00813"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00813"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

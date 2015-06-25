@@ -1,0 +1,149 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: "Yheg R. Lrvyratn" <xhegNobbyrna.arg> -->
+<!--X-Date: Sat, 16 Oct 1999 13:39:17 +0200 (MET DST) -->
+<!--X-Message-Id: 3804FC55.EBACAB97@boolean.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01068">Date Index</a>][<a href="thrd8.shtml#01068">Thread Index</a>]<br>
+[<A HREF="msg01067.shtml">Date Prev</A>][<A HREF="msg01069.shtml">Date Next</A>][<A HREF="msg00766.shtml">Thread Prev</A>][<A HREF="msg01072.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Kurt D. Zeilenga&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 13 Oct 1999 14:40:37 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Kurt Zeilenga
+Reply-To: kurt@openldap.org
+
+PROBLEM DESCRIPTION:
+
+When running wmu (from FreeBSD ports) as root in new directory.
+
+        This is WML UPGRADE (WMu), Version 1.6.8 (12-01-1999)
+        Copyright (c) 1996,1997,1998,1999 Ralf S. Engelschall.
+
+        1. Determine latest version:
+        Website META Language, Version 
+        2. Determine distribution details:
+        Can't call method "autoflush" on an undefined value at /usr/local/bin/wmu line 162.
+
+Exited without upgrading anything.
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i386-pc-freebsd4.0
+    Perl: 5.005_03 (/usr/bin/perl5.00503)
+    User: kurt@boolean.net
+    Date: 29-Sep-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=freebsd, osvers=4.0-current, archname=i386-freebsd
+    uname='freebsd freefall.freebsd.org 4.0-current freebsd 4.0-current #0: $Date$'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='undef', gccversion=egcs-2.91.66 19990314 (egcs-1.1.2 release)
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=undef, usevfork=true
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags ='-Wl,-E'
+    libpth=/usr/lib
+    libs=-lm -lc -lcrypt
+    libc=/usr/lib/libc.so, so=so, useshrplib=true, libperl=libperl.so.3
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-DPIC -fpic', lddlflags='-shared'
+
+
+Characteristics of this binary (from libperl): 
+  Built under freebsd
+  Compiled at Oct 12 1999 08:56:09
+  @INC:
+    /usr/libdata/perl/5.00503/mach
+    /usr/libdata/perl/5.00503
+    /usr/local/lib/perl5/site_perl/5.005/i386-freebsd
+    /usr/local/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01072" HREF="msg01072.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01067.shtml">[BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01069.shtml">Suggestionen for man page addition</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00766.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01072.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01068"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#01068"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

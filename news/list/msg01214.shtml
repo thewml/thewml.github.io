@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Yet another slice with no navigation -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Sun, 12 Dec 1999 15:24:51 +0100 (MET) -->
+<!--X-Message-Id: 19991212152456.D27859@sudelbuch.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01214">Date Index</a>][<a href="thrd25.shtml#01214">Thread Index</a>]<br>
+[<A HREF="msg01213.shtml">Date Prev</A>][<A HREF="msg01215.shtml">Date Next</A>][<A HREF="msg01207.shtml">Thread Prev</A>][<A HREF="msg01217.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Yet another slice with no navigation</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Dec 1999 15:24:56 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+I am beginnig to get lost in my coding :-(
+
+I my site (sudelbuch see below) I use several slices to create nearly
+the same page in different directories
+
+~/1999/19991206.html
+~/best1999/19991206.html
+~/heute/index.html
+
+This three pages are nearly the same, they only have a different
+navbar.
+
+Now I want to make a print-version. This is yet another page where I
+only want to put the &lt;&lt;BODY&gt;&gt; Text.
+
+I tried a little with nesting slices but without success. Then without
+nesting slices
+
+&lt;slice1&gt;
+&lt;slice2&gt;
+&lt;slice3&gt;
+Many lines of code
+&lt;/slice1&gt;
+&lt;/slice2&gt;
+&lt;/slice3&gt;
+
+&lt;slice1&gt;
+Navbar1
+&lt;slice1&gt;
+
+&lt;slice2&gt;
+Navbar2
+&lt;slice2&gt;
+
+&lt;slice3&gt;
+Navbar3
+&lt;slice3&gt;
+
+&lt;slice1&gt;
+&lt;slice2&gt;
+&lt;slice3&gt;
+Many lines of code
+&lt;/slice1&gt;
+&lt;/slice2&gt;
+&lt;/slice3&gt;
+
+&lt;slice1&gt;
+&lt;slice2&gt;
+&lt;slice3&gt;
+&lt;printslice&gt;
+Only what shall be printed
+&lt;/printslice&gt;
+&lt;/slice1&gt;
+&lt;/slice2&gt;
+&lt;/slice3&gt;
+
+Can I say in my template-file something like this:
+
+&lt;all-slices-without-printslice&gt;
+
+Foor Bar
+
+&lt;printslice&gt;
+Quux
+&lt;/printslice&gt;
+
+&lt;/all-slices-without-printslice&gt;
+
+This would be the most elegant way.
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch --- Literatur und Satire per E-Mail
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+Unterstützen Sie das Sudelbuch durch eine Spende.
+<A  HREF="http://www.sudelbuch.de/spende.html">http://www.sudelbuch.de/spende.html</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01217" HREF="msg01217.shtml">Re: Yet another slice with no navigation</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01213.shtml">Re: OT: WML friendly newsgroup</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01215.shtml">use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01207.shtml">SGML to WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01217.shtml">Re: Yet another slice with no navigation</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01214"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01214"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

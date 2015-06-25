@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: problems with a perl section -->
+<!--X-From-R13: Zbhvf ZrPynap <yroynap+jzyNxrlfynccre.bet> -->
+<!--X-Date: Mon, 10 Dec 2001 05:53:16 +0100 (MET) -->
+<!--X-Message-Id: 20011210045214.GD88788@keyslapper.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02454">Date Index</a>][<a href="thrd50.shtml#02454">Thread Index</a>]<br>
+[<A HREF="msg02453.shtml">Date Prev</A>][<A HREF="msg02455.shtml">Date Next</A>][<A HREF="msg02464.shtml">Thread Prev</A>][<A HREF="msg02456.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>problems with a perl section</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Louis LeBlanc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Dec 2001 23:52:14 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Obviously I'm doing something wrong, but I don't know what.
+
+As I understand it, programming construct expansion is done in pass 3,
+and is done before such tags as &lt;grid&gt; and &lt;cell&gt; are translated.
+
+So, I'm  trying to interactively  generate a table with  layout=XxY by
+defining X and Y at the command line (using -D X=5 -D Y=4)
+
+This is the perl section I am using:
+
+&lt;perl&gt;
+  $cells=&lt;:=$X:&gt;*&lt;:=$Y:&gt;;
+  print("&lt;grid layout=\"&lt;:=$X:&gt;x&lt;:=$Y:&gt;\" padding=\"3\" spacing=\"3\" align=\"c\"&gt;\n");
+
+  for ($i=1; $i &lt;= $cells; $i++) {
+    $img = sprintf("%02d.jpg", $i);
+    print ("&lt;cell&gt;&lt;href=\".images\/$img\" src=\".thumbs/t-$img\"&gt;&lt;/a&gt;&lt;/cell&gt;\n");
+  }
+
+  print "&lt;\/grid&gt;\n";
+&lt;/perl&gt;
+
+I know it's ugly as sin, but I'm hoping for something flexible.
+
+I keep getting this:
+
+$ wml -o index.html -D X=5 -D Y=3 gallery.wml
+ePerl:Error: Perl parsing error (interpreter rc=255)
+
+---- Contents of STDERR channel: ---------
+Unterminated &lt;&gt; operator at gallery.wml line 20.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+
+It looks like it's mixing the variable '&lt;&gt;' brackets up, but I've
+tried the following replacement:
+
+&lt;perl&gt;
+  $cols=&lt;:=$X:&gt;;
+  $rows=&lt;:=$Y:&gt;;
+  $cells=($cols * $rows);
+
+  print("&lt;grid layout=\"" . $cols . "x" . $rows . "\" padding=\"3\"
+spacing=\"3\" align=\"c\"&gt;\n");
+
+. . .
+
+Which gives the same error (even the line #).
+
+Any ideas what I'm missing?  I've looked at the docs, and I know pass
+3 expands the &lt;:=$var:&gt; constructs, so it seems to me that the above
+code should work.
+
+TIA
+Lou
+-- 
+Louis LeBlanc               leblanc@keyslapper.org
+Fully Funded Hobbyist, KeySlapper Extrordinaire :)
+<A  HREF="http://www.keyslapper.org">http://www.keyslapper.org</A>                     ԿԬ
+
+Nondeterminism means never having to say you are wrong.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02453.shtml">Cleaning up the HTML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02455.shtml">Re: Cleaning up the HTML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02464.shtml">Re: Cleaning up the HTML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02456.shtml">New to WML - Site structure and perl question [quite long]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02454"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02454"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

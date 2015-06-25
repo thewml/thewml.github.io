@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.3 -->
+<!--X-From-R13: @vryf Znefra <avryfNivgeb.zcu.zfh.rqh> -->
+<!--X-Date: Sun, 15 Mar 1998 19:11:05 +0100 (MET) -->
+<!--X-Message-Id: 199803151737.MAA03595@vitro.mph.msu.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199803051202.NAA16193@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00113">Date Index</a>][<a href="thrd3.shtml#00113">Thread Index</a>]<br>
+[<A HREF="msg00112.shtml">Date Prev</A>][<A HREF="msg00114.shtml">Date Next</A>][<A HREF="msg00112.shtml">Thread Prev</A>][<A HREF="msg00114.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Niels Larsen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 15 Mar 1998 12:37:31 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Ralf and all,
+
+Many thanks for the fine WML package. And the WML site itself I
+find so simple, clear and well designed - I have not seen it 
+better on the web. I want to make these two sites
+
+<A  HREF="http://www.cme.msu.edu/RDP">http://www.cme.msu.edu/RDP</A>
+<A  HREF="http://www.cme.msu.edu/WIT">http://www.cme.msu.edu/WIT</A>
+
+use WML, but have questions:
+
+Practically all my pages are now generated with Perl that uses
+many many if-then-else's and prints pages that look different 
+depending on CGI form variables, and on what comes back from 
+applets (the Tree Views pages for example). Some scripts know 
+about states, some use 'require' statements. There is a global 
+config file that contains variable settings. In other words, I 
+have been using HTML within Perl, where WML sort of uses Perl 
+within HTML..
+
+1. I am trying to figure how much work it would be to use WML
+   when HTML is already very intertwined with Perl, and to weigh
+   this against the advantages.
+
+2. Will WML work reasonably fast for pages that are all put 
+   together at run time? (at first I thought WML was just for
+   static pages, but it can be used to expand pages on the fly,
+   right?)
+
+3. Then I wonder about the outlook for WML: do I risk that 
+   switching to future WML versions will take significant work 
+   for me? And for how long might WML be actively developed and 
+   maintained by you, Ralf?
+
+Although it is not made clear on the above sites, they will end
+up as free software, likely under GPL. I will also be doing a
+ccommercial site related to /WIT, all of which will likely also 
+be on GPL.
+
+Greetings, 
+
+Niels Larsen, niels@vitro.cme.msu.edu
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00114" HREF="msg00114.shtml">Re: ANNOUNCE: WML 1.6.3</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00111" HREF="msg00111.shtml">ANNOUNCE: WML 1.6.3</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00112.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00114.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00112.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00114.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00113"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00113"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

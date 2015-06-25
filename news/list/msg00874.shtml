@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: html2wml -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 27 Jul 1999 08:50:38 +0200 (MET DST) -->
+<!--X-Message-Id: m1emhubn83.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990726112811.4051I&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00874">Date Index</a>][<a href="thrd18.shtml#00874">Thread Index</a>]<br>
+[<A HREF="msg00873.shtml">Date Prev</A>][<A HREF="msg00875.shtml">Date Next</A>][<A HREF="msg00871.shtml">Thread Prev</A>][<A HREF="msg00872.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: html2wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 27 Jul 1999 08:50:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan Ulrich Hasecke &lt;juh@pironet.de&gt; writes:
+
+Hi Jan,
+
+the following Perl-Script removes the &lt;head&gt;-area. As I don't know the
+syntax of the description and keywords tags I didn't implement that
+part of your request. But this should give you another motivation for
+learning Perl  ...  ;-)
+
+Cheers,
+Fritz
+
+
+---- cut below this line ----
+#! /usr/bin/env perl
+
+undef $/;		 # undef line separator (one read gets the whole file)
+
+$_ = &lt;&gt;;		 # read file specified on command line or from stdin
+s|&lt;head&gt;.*&lt;/head&gt;||sig;  # remove all &lt;head&gt;-areas (case insensitive)
+print;			 # print out what's left	
+exit 0;			 # done
+---- cut above this line ----
+
+The #!-line should work on most Unix systems. Alternatively, you can
+specify the path to your perl interpreter. I don't know how to do this
+on non-Unix systems.
+
+
+
+&gt; Hello,
+&gt; 
+&gt; a very tedious work is the reorganization of old sites into
+&gt; a wml-generated.
+&gt; 
+&gt; Is there a skript which converts html-files into wml-files? It
+&gt; should cut away all inside the &lt;head&gt;-area leaving the body
+&gt; untouched and should convert the &lt;keywords&gt; and &lt;description&gt; tags
+&gt; either into a &lt;keywords "foo, bar"&gt; - construction, 
+&gt; or directly into an info-tag. 
+&gt; 
+&gt; Ciao!
+&gt; juh
+&gt; 
+&gt; -- 
+&gt; juh's Sudelbuch
+&gt; Literatur und Satire per E-Mail
+&gt; <A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+&gt; 
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00871" HREF="msg00871.shtml">html2wml</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00873.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00875.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00871.shtml">html2wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00872.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00874"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00874"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

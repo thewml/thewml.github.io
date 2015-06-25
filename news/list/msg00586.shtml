@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: slices &#45; if defined, do not display -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Thu, 22 Apr 1999 13:18:08 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9904220800480.4484&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00586">Date Index</a>][<a href="thrd13.shtml#00586">Thread Index</a>]<br>
+[<A HREF="msg00584.shtml">Date Prev</A>][<A HREF="msg00587.shtml">Date Next</A>][<A HREF="msg00584.shtml">Thread Prev</A>][<A HREF="msg00589.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>slices - if defined, do not display</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Apr 1999 08:10:59 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+       hi there
+
+       i'm working on a web page which consists of very large number
+       of similar html documents (automobil catalog) and i'm doing it
+       using slices, like this
+
+       &lt;img src="[SLICE1:car1:][SLICE2:car2:].gif"&gt;
+
+       what i'm trying to do now is 'if SLICE is defined, DO NOT
+       display what's between [SLICE: :], in any other case, display
+       it'
+
+       it's very near to the &lt;navbar&gt; functionality but i'm too deep
+       in this toolbar so switching to &lt;navbar&gt; would just take me
+       time.
+
+       URL with the explanation (and an example if possible) would be
+       good, too.
+
+       thanks, Davor
+
+       p.s. To Ralf: Tidy seems to be a very useful tool. it would be
+       great using it with wml.
+
+-- 
+      v
+Davor Cengija
+Davor.Cengija@fsb.hr
+-----------------------------------
+"Please allow 30 days for delivery"
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00589" HREF="msg00589.shtml">Re: slices - if defined, do not display</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00584.shtml">Use of &quot;DST&quot; in ctime...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00587.shtml">Re: patch for denis new navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00584.shtml">Use of &quot;DST&quot; in ctime...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00589.shtml">Re: slices - if defined, do not display</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00586"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00586"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE : WML 1.6.8 -->
+<!--X-From-R13: Egrir Evmrzber <fgrirNpzcunez.hpfs.rqh> -->
+<!--X-Date: Fri, 15 Jan 1999 03:11:38 +0100 (CET) -->
+<!--X-Message-Id: 19990114160913.A185582@cmpharm.ucsf.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990114160308.31108A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00322">Date Index</a>][<a href="thrd7.shtml#00322">Thread Index</a>]<br>
+[<A HREF="msg00321.shtml">Date Prev</A>][<A HREF="msg00323.shtml">Date Next</A>][<A HREF="msg00311.shtml">Thread Prev</A>][<A HREF="msg00327.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE : WML 1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Steve Sizemore &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 16:09:13 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jan 14, 1999 at 04:06:11PM +0100, Denis Barbier wrote:
+&gt; Hi all WML users,
+&gt; 
+&gt; i am pleased to announce the release of WML 1.6.8 (14-Jan-1999).
+&gt; As Ralf writes today, i will maintain this wonderful tool in the future.
+&gt; Even if my knowledge and skill in hacking are not those of Ralf, i will
+&gt; do my very best. What else should i say?
+&gt; Well, i am a PhD student (numerical analysis), will be graduate in a
+&gt; couple of weeks, and my company develop scientific applications. Not
+&gt; really related to WML? Hmm... yes you are right.
+&gt; 
+
+Welcome, Denis -
+
+I just retrieved wml-1.6.8, and tried to build it. No luck. This is on
+SGI O2, running Irix 6.5.2.
+
+The problem is in the configure script -
+
+    checking host system type... mips-sgi-irix6.5
+    checking for gcc... (cached) cc
+    checking whether the C compiler (cc  ) works... no
+    configure: error: installation or configuration problem: C compiler
+    cannot create executables.
+
+Previous versions (through 1.6.7) note that gcc is not available, but
+continue and build successfully.
+
+Thanks in advance for any help...
+
+Steve
+-- 
+----------------------------------------------#-----#--#####---------------
+                                              #     # #     #
+ Steve Sizemore                               #     # #
+ Dept. of Cellular and Molecular Pharmacology #     # #      
+ Box 0450, Room HSE-1285                      #     # #     
+ University of California Medical Center      #     # #     # 
+ 513 Parnassus Avenue                          #####   ##### #####  #######
+ San Francisco CA 94143-0450                                #     # #
+                                                            #       #
+ steve@cmpharm.ucsf.edu                                      #####  #####
+ (415) 476-6987  FAX: (415) 476-6515                              # #
+                                                            #     # #
+-------------------------------------------------------------#####--#------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00311" HREF="msg00311.shtml">ANNOUNCE : WML 1.6.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00321.shtml">Re: Combining slices and divert</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00323.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00311.shtml">ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00327.shtml">RPM Intel binary for Red Hat Linux 5.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00322"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00322"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

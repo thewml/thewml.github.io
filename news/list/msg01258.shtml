@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug in wml::std::href -->
+<!--X-From-R13: Ibystnat Rnhgreznaa <qnhgvNbru.gh&#45;tenm.np.ng> -->
+<!--X-Date: Sun, 2 Jan 2000 21:45:17 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10001022131550.9913&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01258">Date Index</a>][<a href="thrd26.shtml#01258">Thread Index</a>]<br>
+[<A HREF="msg01257.shtml">Date Prev</A>][<A HREF="msg01260.shtml">Date Next</A>][<A HREF="msg01262.shtml">Thread Prev</A>][<A HREF="msg01261.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug in wml::std::href</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wolfgang Dautermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 2 Jan 2000 21:45:02 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+in wml::std::href there is a small bug. I tried to create a link to my
+Deja(news)-Posting profile using:
+
+&lt;href 
+  url="<A  HREF="http://www.deja.com/profile.xp?author=dauti@sbox.tu-graz.ac.at&amp;ST=PS">http://www.deja.com/profile.xp?author=dauti@sbox.tu-graz.ac.at&amp;ST=PS</A>"
+  name="Deja(news)-Profil"&gt;
+
+wml::std::href thought (because of the "@"), it is an Email-Adress and
+prepended "mailto:" to the URL, which is - of course - wrong.
+
+With the following patch I tried to fix that problem.
+
+Bye, Wolfgang
+
+
+--- href.src.old        Sat Jan  1 15:45:57 2000
++++ href.src.new        Sun Jan  2 21:18:57 2000
+@@ -27,8 +27,10 @@
+ &lt;if &lt;get-var target&gt;
+     &lt;set-var target=" target=\"&lt;get-var target&gt;\""&gt;
+ &gt;
+-&lt;if &lt;match "&lt;get-var url&gt;" ".+@.*[^.]+\\.[^.]+"&gt;
+-    &lt;set-var url="mailto:&lt;get-var url&gt;"&gt;
++&lt;if &lt;not &lt;match "&lt;get-var url&gt;" "([hH][tT][tT][pP]|[fF][tT][pP])://.+"&gt; &gt;
++    &lt;if &lt;match "&lt;get-var url&gt;" ".+@.*[^.]+\\.[^.]+"&gt;
++        &lt;set-var url="mailto:&lt;get-var url&gt;"&gt;
++    &gt;
+ &gt;
+ &lt;if &lt;match "&lt;get-var url&gt;" "^www\\.[^.]+\\..+"&gt;
+     &lt;set-var url="http://&lt;get-var url&gt;"&gt;
+
+
+
+--
+Diese Mail kommt von: Wolfgang Dautermann
+WWW-Homepage: <A  HREF="http://oeh.tu-graz.ac.at/~dauti/">http://oeh.tu-graz.ac.at/~dauti/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01261" HREF="msg01261.shtml">Re: Bug in wml::std::href</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01257.shtml">wmk-TEST of SNAP failed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01260.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01262.shtml">Re: wmk-TEST of SNAP failed</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01261.shtml">Re: Bug in wml::std::href</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01258"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01258"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

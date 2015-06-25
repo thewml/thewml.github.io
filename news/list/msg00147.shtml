@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: XML -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 28 Jun 1998 17:04:28 +0200 (CEST) -->
+<!--X-Message-Id: 19980628170426.A29307@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199806261646.LAA26086@eeyore.moneng.mei.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00147">Date Index</a>][<a href="thrd4.shtml#00147">Thread Index</a>]<br>
+[<A HREF="msg00146.shtml">Date Prev</A>][<A HREF="msg00148.shtml">Date Next</A>][<A HREF="msg00142.shtml">Thread Prev</A>][<A HREF="msg00143.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: XML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 Jun 1998 17:04:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 26, 1998, Ben Hochstedler wrote:
+
+&gt; What are your plans for WML in regards to XML?  Do you plan
+&gt; on supporting XML?  If so, do you plan on taking out the
+&gt; features WML duplicates, or do you plan on keeping any
+&gt; duplicate features and simply providing XML as another 
+&gt; way to do them?
+
+Hmmmm.. I've followed the XML-stuff of the W3C only sparingly.  Ok, XML now is
+standardized, but as I know, there are no real applications available (like
+HTML for SGML). Only a few Java-based parsers and other experimental stuff is
+available. Only Mozilla 5 should contain some XML-parsing stuff. But because
+the complete XML-topic is still in experimental stage, I've never though in
+the past that it is already interesting for WML. But perhaps time has changed
+now.  So, what concrete support for XML do think WML should have in the
+future?
+
+OTOH my plans for WML are the following: WML 1.x will be maintained by me at
+least for the next year but only enhanced slightly (because the implementation
+cannot be made a lot better this way and plans for WML 2.x are already in
+progress). Until then I hope that WML 2.x is available which is based on the
+tool I currently create as a prototype in my diploma thesis. And for this tool
+maximum speed and generality in usage is my primary goal (because what WML 1.x
+really lacks is performance). In other words: XML is one goal for WML 2.x,
+too. Yes. But perhaps it is easy to add XML support to WML 1.x and we can do
+it easily.  As long as it is possible for me to add it with my available time,
+I'll do it. And when someone contributes a patch we can have it in 1.x, of
+course.
+
+But first we have to know what exact support for generating XML-based markup
+is needed in WML (please help us here with examples and hints). Then we can
+decide how much work it is.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00142" HREF="msg00142.shtml">XML</A></strong>, <em>From:</em> Ben Hochstedler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00146.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00148.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00142.shtml">XML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00143.shtml">XML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00147"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00147"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

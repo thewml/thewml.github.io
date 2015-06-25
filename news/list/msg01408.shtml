@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to use tidy? -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Tue, 7 Mar 2000 15:30:12 +0100 (MET) -->
+<!--X-Message-Id: 200003071412.PAA29934@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000307134944.T990@spinnaker.rhein.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01408">Date Index</a>][<a href="thrd29.shtml#01408">Thread Index</a>]<br>
+[<A HREF="msg01407.shtml">Date Prev</A>][<A HREF="msg01409.shtml">Date Next</A>][<A HREF="msg01407.shtml">Thread Prev</A>][<A HREF="msg01411.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to use tidy?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Mar 2000 15:12:15 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Tue, 7 Mar 2000 13:49:44 +0100, Roland Rosenfeld wrote:
+
+&gt; Installing tidy isn't the problem.  My problem is, that I don't know
+&gt; how to tell wml to use tidy (maybe after pass 9) to correct/detect all
+&gt; mistakes, I introduced in the HTML code before...
+
+why don't you use the -E option of wml or write a
+shell-script around wml and tidy and process your 
+files this way.
+
+cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01411" HREF="msg01411.shtml">Re: How to use tidy?</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01407" HREF="msg01407.shtml">Re: How to use tidy?</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01407.shtml">Re: How to use tidy?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01409.shtml">Re: How to use tidy?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01407.shtml">Re: How to use tidy?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01411.shtml">Re: How to use tidy?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01408"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01408"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

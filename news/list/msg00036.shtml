@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: New real HTTP and FTP mirror available -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Sun, 11 Jan 1998 15:05:20 +0100 (MET) -->
+<!--X-Message-Id: 199801111405.PAA11366@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00036">Date Index</a>][<a href="thread.shtml#00036">Thread Index</a>]<br>
+[<A HREF="msg00035.shtml">Date Prev</A>][<A HREF="msg00037.shtml">Date Next</A>][<A HREF="msg00033.shtml">Thread Prev</A>][<A HREF="msg00037.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>New real HTTP and FTP mirror available</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Sun, 11 Jan 1998 15:05:18 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Ever hated the fact that the service of www.engelschall.com and
+ftp.engelschall.com is really slow?  
+
+Now a complete(!) mirror site was established by me on courtesy of 
+
+   IT Support Group
+   Department of Electrical Engineering
+   Swiss Federal Institute of Technology
+   Zurich, Switzerland
+
+Actually this is possible because of personal support by 
+
+   Fritz Zaucker &lt;zaucker@ee.ethz.ch&gt; (member of this list) and 
+   Tobias Oetiker &lt;oetiker@ee.ethz.ch&gt;
+
+Give them the credit because it's their.
+
+Currently a lot of fine-tuning still has to be done by me, but the new
+Internet site already runs 90% of my stuff correctly and physically can be
+already adressed via:
+   
+   www.ch.engelschall.com 
+   ftp.ch.engelschall.com
+
+Why is this interesting for you? 
+
+Because the site here in germany (www.engelschall.com aka
+www.de.engelschall.com) resides on a 128 Kb/s Internet link, only. In
+contrast, www.ch.engelschall.com resides on an very fast Internet link which
+itself has an 8 MB/s transatlantic link to the USA.  In other words: This
+machine has a more amount of bandwidth then the german machine and thus
+presents you much faster access.
+
+I'm currently syncing this new machine in parallel with www.de.engelschall.com
+from my development machine, so it always holds the same information.  The
+www.engelschall.com still links to www.de.engelschall.com.  But I'm currently
+writing an Apache module which will automatically determine the faster link
+for you and automatically forces the redirects. In the meantime try it out
+yourself (i.e. either www.de.engelschall.com or www.ch.engelschall.com) and
+decide your own which one is faster for you.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00035.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00037.shtml">ANNOUNCE: WML 1.5.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00033.shtml">ML Archive fixed</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00037.shtml">ANNOUNCE: WML 1.5.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00036"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00036"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

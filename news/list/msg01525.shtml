@@ -1,0 +1,174 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Idea of future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Tue, 11 Apr 2000 18:25:56 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0004111100410.9321&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01525">Date Index</a>][<a href="thrd31.shtml#01525">Thread Index</a>]<br>
+[<A HREF="msg01524.shtml">Date Prev</A>][<A HREF="msg01526.shtml">Date Next</A>][<A HREF="msg01524.shtml">Thread Prev</A>][<A HREF="msg01746.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Idea of future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 11 Apr 2000 11:13:13 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello people!
+
+In addition to the discussion about nested tags I want to send the
+following proposal to the list.
+
+By accident I had a similar idea like Xose Manoel Ramos, perhaps because
+I'm in Spain at the moment ;-) (¡Saludas de Valencia a Galicia!) and I
+sent it to Denis Barbier hours before reading his mail on the list.
+
+I try to explain in short words:
+
++---------- explanation start
+
+Environments: offer the same functionality like Containers with the
+enhancement, that inside HTML tags are expanded different that outside, if
+they are defined in that kind.
+
+A short example:
+
+&lt;pic "maybe.png"&gt;          &lt;!--- inserts a picture ---&gt;
+
+&lt;envtable&gt;                 &lt;!--- start of environment ---&gt;
+&lt;pic "other.png"&gt;          &lt;!--- insert pictore according to the
+                                 surrounding environment ---&gt;         
+&lt;/envtable&gt;                &lt;!--- end of environment ---&gt;
+
+The picture "maybe.png" is inserted in a general way but the picture
+"other.png" is inserted in a way that it fits the requirements of the
+environment "envtable".
+
+Why I don't want to define another tag like tablepic:
+
+*)  The form with the environments seems maybe more logic especially
+    with many defined environments.
+
+*)  In the case of file inclusion the included file maybe included in
+    different environments and is therefore handled in different
+    ways.
+
+A possible implementation:
+
+Because tag are only expanded in pass 2, only there must be made changes.
+
+*)  &lt;define-environment name&gt;  &lt;/define-environment&gt;
+
+are the definition tags and can be handled in the exact same way like
+&lt;define-container&gt;&lt;/define-container&gt;
+
+*)  &lt;name&gt;  &lt;/name&gt;
+
+start and stops the environment name and should do the same like
+containers, and in addition pushs and pops name at the environment stack
+(IMO this should be realized as stack, not as variable).
+
+*)  ordinary tags inside of environments
+
+[here are the changes] If the environment stack is empty, all is done in
+the usual way. If not, the last pushed item is read and is appended in
+front of the tagname, e. g. (:: is arbitary used as separator)
+
+environment stack:       envtable
+
+&lt;TD&gt;                =&gt;   use &lt;envtable::TD&gt; if exists, 
+                         otherwise &lt;TD&gt;
+
+What happens with environments inside environments (nested case)?
+
+The strategy is the same, e. g.
+
+environment stack:       mypage, envtable (is the last pushed item)
+
+&lt;TD&gt;                =&gt;   use &lt;mypage::envtable::TD&gt; if exists,
+                         or use &lt;envtable::TD&gt; if exists, 
+                         or use &lt;mypage::TD&gt; if exists,
+                         otherwise &lt;TD&gt;
+
+The used tags and containers are defined in the usual way, only with the
+environment_name:: prefix (and can be used in that way, too).
+
+One special case: what happens, wenn I want to use the `original' &lt;TD&gt;
+tag? AFAIK is there an escaping sequence defined yet (but I don't
+remember), I'd suggest to use, e. g. &lt;::TD&gt;, in that case.
+
++---------- explanation end
+
+As you see I outlined a possible implementation but due to much work with
+my final year project, I'm not able to implement it by myself (but in a
+few months I'd do it, if there is a positive response)...
+
+Nice greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01524.shtml">Re: Nested tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01526.shtml">&lt;lang:new id=tr short&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01524.shtml">Re: Nested tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01746.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01525"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01525"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

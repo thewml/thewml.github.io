@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: Welcome Denis Barbier, the new WML maintainer! -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 14 Jan 1999 10:30:05 +0100 (CET) -->
+<!--X-Message-Id: 19990114103003.A12905@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00307">Date Index</a>][<a href="thrd7.shtml#00307">Thread Index</a>]<br>
+[<A HREF="msg00306.shtml">Date Prev</A>][<A HREF="msg00308.shtml">Date Next</A>][<A HREF="msg00306.shtml">Thread Prev</A>][<A HREF="msg00309.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: Welcome Denis Barbier, the new WML maintainer!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 10:30:03 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Over the last 6 months the WML development and maintainance slowed down
+dramatically because other Apache-related projects (e.g. mod_ssl and my Apache
+book) where I'm involved (as one of the Apache developers) demanded too much
+of my time.  Because it was clear to me that my situation will not change even
+in the next 6 months, I'm already asked for a hacker who wants to maintain
+WML. 
+
+And I've received a few offers, of course. But every time the person wanted to
+do only a single release or wanted to act as the maintainer for a few days or
+one or two weeks only. That's too less to be useful for the WML community
+and especially to preserve the future of WML, of course. So I had to wait.
+Nevertheless thanks to all people who made an offer.
+
+But finally a bright and energized hacker showed it's interest and so I'm
+today highly pleased to announce him as the new official WML maintainer:
+
+   Denis Barbier 
+   barbier@imacs.polytechnique.fr
+
+Denis already contributed a lot to WML and especially to the forthcoming WML
+1.6.8 version. And Denis additionally shares the intentions about cleaness and
+nifty things with me, so I know that he is the right man for the WML
+maintainer task and so he receives all my personal support and trust. Please
+work with Denis as nice as you played with me in the past, please. He will try
+hard to preserve the future of WML, but for this he needs _YOUR_ support. So
+please be friendly and supportive to him.
+
+What impact has this maintainer change? No bad impact, of course.  All names,
+addresses and locations will remain. For instance the WML webarea will be
+still <A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>, the support mailing list will be
+still sw-wml@engelschall.com, the distribution will be still named
+wml-1.X.Y.tar.gz, etc. Because Denis has full access to all these resources on
+my machines and will maintain it directly at those locations for you.
+
+Now to the new things:
+
+1. We've moved the WML source tree into a CVS repository.
+   When you want you can now always be up-to-date with the
+   lastest changes by using the Anoynmous RSYNC service:
+   $ rsync <A  HREF="http://sw.engelschall.com/wml-cvs/">http://sw.engelschall.com/wml-cvs/</A> /local/path/to/wml/cvs/
+
+2. We've unbundled the <A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A> area
+   from the mother area <A  HREF="http://www.engelschall.com/sw/">http://www.engelschall.com/sw/</A>. Optically nothing
+   changed, but this way Denis now can control the whole website on his own.
+   Additionally a few goodies are now available: For instance the
+   <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/</A> area now contains
+   always the latest snapshot. The delay is just 6 hours, i.e. when Denis
+   fixes a bug for you, you can immediately find the fixed files there.  And
+   under <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A> a tarball
+   wml-SNAP-YYMMDDHHMM.tar.gz is rolled every six hours which can be used to
+   easily fetch the whole snapshot.
+
+3. The next release will be WML 1.6.8 and already contains
+   a lot of fixes from Denis. This is the last WML version I've managed.  The
+   forthcoming versions start at version number 1.7.0 and will be entirely
+   managed by Denis on his own. In case of conceptional problems and major
+   design decisions and similar things I'll be still available to the
+   community.  Especially to Denis, of course. And I'll from time to time also
+   contribute fixes and enhancements to WML, of course. But the main authoring
+   and maintaining task is now overtaken by Denis. 
+
+So, now please give Denis a friendly welcome, friends! Thanks.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00306.shtml">[BUG REPORT] WML 1.6.8, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00308.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00306.shtml">[BUG REPORT] WML 1.6.8, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00309.shtml">BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00307"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00307"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

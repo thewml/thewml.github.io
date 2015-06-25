@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <rollover> question -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 5 Jan 2000 16:16:42 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000105162758.1986A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.10001051348380.6521&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01267">Date Index</a>][<a href="thrd26.shtml#01267">Thread Index</a>]<br>
+[<A HREF="msg01266.shtml">Date Prev</A>][<A HREF="msg01268.shtml">Date Next</A>][<A HREF="msg01266.shtml">Thread Prev</A>][<A HREF="msg01268.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;rollover&gt; question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 5 Jan 2000 16:33:11 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 5 Jan 2000, Stephan Petersen wrote:
+
+&gt; Hi everybody,
+&gt; 
+&gt; I tried using the rollover tag the other day, referencing it like this:
+&gt; 
+&gt; &lt;rollover name="ecfp2" src="img/ecfp2.gif" overscr="img/ecfp2_a.gif"&gt;
+&gt; 
+&gt; WML (V1.7.4, Linux 2.2.5 i686) creates the following code:
+[...]
+&gt; The problem: since there's no rollover image referenced in the line
+&gt; 
+&gt; ro_img_ecfp2_o.src = "";
+&gt; 
+&gt; the rollover effect doesn't work.
+&gt; 
+&gt; Am I using the rollover tag incorrectly, or what could be the reason for
+&gt; this?
+
+There is a typo in your code ;)
+Try instead
+  &lt;rollover name="ecfp2" src="img/ecfp2.gif" oversrc="img/ecfp2_a.gif"&gt;
+
+&gt; Also, is there away to avoid having a link associated with the rollover? I
+&gt; just want to have the effect, but no link. As a workaround it's possible
+&gt; to link to the same page, but is there a more elegant way?
+
+Good suggestion. I suppose that adding href="#" does the job, but it
+should be the case when no url is set.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01268" HREF="msg01268.shtml">Re: &lt;rollover&gt; question</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01266" HREF="msg01266.shtml">&lt;rollover&gt; question</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01266.shtml">&lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01268.shtml">Re: &lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01266.shtml">&lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01268.shtml">Re: &lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01267"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01267"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

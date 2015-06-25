@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Is there a better way to do this? -->
+<!--X-From-R13: Ureneq Znabvf <treneqNzfv.pbz> -->
+<!--X-Date: Tue, 8 Jun 1999 20:59:49 +0200 (MET DST) -->
+<!--X-Message-Id: 375D6803.78F6CB7D@msi.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 37582DDD.24DC4E10@msi.com -->
+<!--X-Derived: bin00022.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00757">Date Index</a>][<a href="thrd15.shtml#00757">Thread Index</a>]<br>
+[<A HREF="msg00756.shtml">Date Prev</A>][<A HREF="msg00758.shtml">Date Next</A>][<A HREF="msg00728.shtml">Thread Prev</A>][<A HREF="msg00726.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Is there a better way to do this?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerard Lanois &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 08 Jun 1999 11:59:15 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thanks to John Terilla and Denis Barbier for their suggestions.
+
+It turned out to be very simple; just use a wml::des::navbar.
+
+Example is attached for the curious.
+
+Thanks again!
+
+-Gerard
+
+
+
+Gerard Lanois wrote:
+&gt; 
+&gt; I am brand new to WML.  I discovered it by accident yesterday on
+&gt; freshmeat.net.  I have always dreamed about such a tool!  Amazing.
+&gt; 
+&gt; I have been playing with WML for a few hours and I love it.
+&gt; 
+&gt; I would like to have an index column on each page for navigation
+&gt; purposes.  But I want the entry for the _current_ page to be
+&gt; in plain text (NOT a link).  And I only want to have to maintain
+&gt; the definition of this column in one location.
+&gt; 
+&gt; I have attached a sample which demonstrates how to do this in WML.
+&gt; This works perfectly, but seems somewhat sloppy.  I was wondering
+&gt; if those of you more experienced with WML could suggest a better
+&gt; or cleaner way to approach this.
+&gt; 
+&gt; Thanks in advance,
+&gt; 
+&gt; -Gerard
+&gt; gerard@msi.com
+&gt; 
+&gt; PS: Before anyone gets their shorts all in a knot about the attachment,
+&gt;     notice that it is only 1399 *bytes* long.
+&gt; 
+&gt;   ------------------------------------------------------------------------------
+&gt;                Name: demo.tgz
+&gt;    demo.tgz    Type: WinZip File (application/x-compressed)
+&gt;            Encoding: base64</PRE>
+<P><A HREF="bin00022.bin" >demo.tgz</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00723" HREF="msg00723.shtml">Is there a better way to do this?</A></strong>, <em>From:</em> Gerard Lanois</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00756.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00758.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00728.shtml">Re: Is there a better way to do this?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00726.shtml">wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00757"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00757"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

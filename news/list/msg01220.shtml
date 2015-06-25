@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: slices: <img> and <set&#45;var> problem (again) -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 13 Dec 1999 14:31:17 +0100 (MET) -->
+<!--X-Message-Id: 199912130940.KAA01204@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991212204328.392A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01220">Date Index</a>][<a href="thrd25.shtml#01220">Thread Index</a>]<br>
+[<A HREF="msg01219.shtml">Date Prev</A>][<A HREF="msg01221.shtml">Date Next</A>][<A HREF="msg01219.shtml">Thread Prev</A>][<A HREF="msg01221.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 13 Dec 1999 10:40:55 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Sun, 12 Dec 1999 20:52:59 +0100 (CET), Denis wrote:
+&gt; On Sun, 12 Dec 1999, Jan Holler wrote:
+&gt;&gt; i think we should really think about that, since the sites
+&gt;&gt; get more and more graphically designed and having at least
+&gt;&gt; an english version next to your main language gets more and
+&gt;&gt; more common too.
+&gt;&gt; 
+&gt;&gt; comments please.
+&gt; 
+&gt; <A  HREF="http://www.debian.org/">http://www.debian.org/</A> is an excellent example of multilingual web site.
+
+yes. they basically do what i like to do. it just depends
+on how much work they stuck into it. i don't find the
+wml-source, but i see that they worked around the same
+problems as i had (have). (<A  HREF="http://www.internutrition.ch/">http://www.internutrition.ch/</A>)
+
+but let's go ahead with the problems: this simple example
+does not work and shows well where i have a hard time to
+understand the consistency of wml here.
+
+#!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html \
+    -o (ALL-LANG_*)uLANG_FR:%BASE_f.html
+
+#use wml::std::lang
+&lt;lang:new id=de short&gt;
+&lt;lang:new id=fr short&gt;
+
+&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+
+&lt;set-var bar = "&lt;de: german&gt;&lt;fr: french&gt;" &gt;
+&lt;de&gt; 2. German bar is: &lt;get-var bar&gt; &lt;/de&gt;
+&lt;fr&gt; 3. French bar is: &lt;get-var bar&gt; &lt;/fr&gt;
+
+&lt;/body&gt;&lt;/html&gt;
+
+output is for test.html:
+ 2. German bar is: germanfrench 
+german
+
+and for test_f.html:
+french
+ 3. French bar is: germanfrench 
+
+yes. this is really the output. that should not happen!
+cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01221" HREF="msg01221.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01219" HREF="msg01219.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01219.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01221.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01219.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01221.shtml">Re: slices: &lt;img&gt; and &lt;set-var&gt; problem (again)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01220"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01220"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

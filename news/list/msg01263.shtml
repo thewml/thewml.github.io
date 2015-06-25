@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 3 Jan 2000 13:13:33 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000103131634.10526A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.20.0001021811140.6719&#45;100000@jobs.hasecke.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01263">Date Index</a>][<a href="thrd26.shtml#01263">Thread Index</a>]<br>
+[<A HREF="msg01261.shtml">Date Prev</A>][<A HREF="msg01264.shtml">Date Next</A>][<A HREF="msg01256.shtml">Thread Prev</A>][<A HREF="msg01265.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 3 Jan 2000 13:22:10 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 2 Jan 2000, Jan Ulrich Hasecke wrote:
+
+&gt; Compiling wml stops with this errormessage.
+&gt; 
+&gt; ===&gt; wml_misc
+&gt; make[1]: Entering directory `/home/juh/compile/wml-1.7.4/wml_misc'
+&gt; make[1]: *** No targets.  Stop.
+&gt; make[1]: Leaving directory `/home/juh/compile/wml-1.7.4/wml_misc'
+&gt; make: [all] Error 1 (ignored)  
+
+Very strange.
+What happens when you manually enter wml_misc and type ``make all''?
+Which version of GNU make are you running (type ``make --version'')?
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01265" HREF="msg01265.shtml">Re: BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01256" HREF="msg01256.shtml">BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01261.shtml">Re: Bug in wml::std::href</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01264.shtml">Re: wml -o 4 removes blanks after closing tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01256.shtml">BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01265.shtml">Re: BUGREPORT Cannot compile wml 1.7.4 on OpenLinux 2.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01263"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01263"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

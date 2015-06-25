@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Timing: first results : 30% -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 4 Jan 1999 09:46:58 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990104091044.1294A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00293">Date Index</a>][<a href="thrd7.shtml#00293">Thread Index</a>]<br>
+[<A HREF="msg00292.shtml">Date Prev</A>][<A HREF="msg00294.shtml">Date Next</A>][<A HREF="msg00291.shtml">Thread Prev</A>][<A HREF="msg00296.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Timing: first results : 30%</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 4 Jan 1999 09:35:44 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Happy new year, all.
+
+This week-end i found interesting improvements in execution time.
+Here is a typical timing when building my site pages:
+
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 0.89 | 7.97  7.53  5.23 0.16 0.14 0.10 0.36 0.31 0.63 | 23.32
+                       ^^^^
+                     look here
+
+The first pass is the most significant, even if actions during this pass
+are quite simple and straightforward. It's why i proposed to include
+files verbatim. In fact, most of the time is spent in comment block parser.
+When disabling this parser, timing becomes
+
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 0.82 | 0.66  7.49  5.01 0.17 0.14 0.08 0.34 0.31 0.63 | 15.65
+
+In my source files, i have a line
+#include "packages.wml"
+This file ``packages.wml'' contains ``#use'' directives ; in this case,
+it includes 10 packages. I type
+prompt&gt; wml -p1 packages.wml &gt; packages.pass1
+and replace the previous line by
+#include "packages.pass1"
+
+Results are:
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 0.82 | 0.53  7.43  5.09 0.16 0.15 0.09 0.33 0.33 0.69 | 15.62
+
+&gt;From 8 seconds to half a second, this is really nice. Now one has to
+work on steps 2 and 3.
+
+Here is the patch i wrote. It is really simple, and needed minimal
+testings. It invokes parseblock only if a sequence '/*' is found in
+input files. Perl gurus may want to optimize BlockParser.pm, i can't.
+
+################## File wml-ipp.patch ##############################
+--- wml-1.6.7/wml_backend/p1_ipp/ipp.src	Thu Jul 30 10:22:16 1998
++++ wml-1.6.7/wml_backend/p1_ipp/ipp.src	Fri Jan  1 22:32:15 1999
+@@ -128,6 +128,7 @@
+ 
+ %INLCUDES = ();
+ $outbuf   = '';
++$blockfound = 0;
+ 
+ sub setargs {
+     my ($arg, $str) = @_;
+@@ -245,6 +246,9 @@
+     while ($l = &lt;$in&gt;) {
+         $line++;
+ 
++        # Check if a comment block may be here
++        $blockfound = 1 if $l =~ m|/\*|;
++
+         #
+         #   Variable Interpolation
+         #
+@@ -428,8 +432,8 @@
+ $outbuf = parseblock($outbuf, 
+                      sub { return '' }, 0,             # just discard the stuff 
+                      quotemeta('/*'), quotemeta('*/'), # the delimiters
+-                     0, 1, '"', "\\", '"');            # the escapes, etc.
+-
++                     0, 1, '"', "\\", '"')             # the escapes, etc.
++if $blockfound;
+ 
+ #
+ #  create output file
+################## EOF  wml-ipp.patch ##############################
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00296" HREF="msg00296.shtml">Re: Timing: first results : 30%</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00292.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00294.shtml">[patch] wrong display of timers when using --pass</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00291.shtml">Re: [patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00296.shtml">Re: Timing: first results : 30%</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00293"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00293"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

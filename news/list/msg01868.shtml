@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Plans for WML 2.0.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 1 Aug 2000 10:16:53 +0200 (MET DST) -->
+<!--X-Message-Id: 20000801101726.A30370@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01868">Date Index</a>][<a href="thrd38.shtml#01868">Thread Index</a>]<br>
+[<A HREF="msg01867.shtml">Date Prev</A>][<A HREF="msg01869.shtml">Date Next</A>][<A HREF="msg01867.shtml">Thread Prev</A>][<A HREF="msg01869.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Plans for WML 2.0.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 1 Aug 2000 10:17:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i will be away next week for 3 weeks, without net connectivity.
+During my vacation, i plan reading books on Perl regular expressions
+(especially how to reduce regexp processing time) and writing efficient
+C programs. Tell me if you know good books (or eventually URL pointers)
+on these topics (even classical ones). Please do not reply to this
+mailing-list when sending your advice.
+
+WML 2.0.3 will be released at my coming back, after some final checks.
+If some of you could test current snapshot and report whether it works
+or not, it would help me a lot.  It contains no known bugs, works well
+with my input files, but almost all modules have been updated, so some
+bugs may have been introduced.
+
+Since my last report about wml-SNAP status, following changes have been
+made:
+* Added attribute on &lt;subst-in-string&gt;, &lt;subst-in-var&gt; and &lt;match&gt;
+  to use `imsx' perl modifiers.
+* All modules have been updated to allow XHTML compliant output.
+* Passes 7, 8 and 9 are soooo slow on large files. they now run up
+  to 10 times faster.
+* &lt;protect&gt; tags are now nestable.
+
+See <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog</A>
+for a more detailed list.
+
+It would be nice to have time comparisons with WML-2.0.2, some fixed
+bugs may increase processing time.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01869" HREF="msg01869.shtml">Re: [wml] Plans for WML 2.0.3</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="01876" HREF="msg01876.shtml">Re: [wml] Plans for WML 2.0.3</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01867.shtml">Re: rfc: extended shebang expansion</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01869.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01867.shtml">Re: rfc: extended shebang expansion</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01869.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01868"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01868"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

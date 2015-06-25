@@ -1,0 +1,324 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Core / HTMLstrip (Pass 8)</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:36"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+<br />
+<ul class="navbarnestnest">
+<li>
+<a href="./wml_p1_ipp.html">p1_ipp</a>
+</li>
+<li>
+<a href="./wml_p2_mp4h.html">p2_mp4h</a>
+</li>
+<li>
+<a href="./wml_p3_eperl.html">p3_eperl</a>
+</li>
+<li>
+<a href="./wml_p4_gm4.html">p4_gm4</a>
+</li>
+<li>
+<a href="./wml_p5_divert.html">p5_divert</a>
+</li>
+<li>
+<a href="./wml_p6_asubst.html">p6_asubst</a>
+</li>
+<li>
+<a href="./wml_p7_htmlfix.html">p7_htmlfix</a>
+</li>
+<li>
+<b>p8_htmlstrip</b>
+</li>
+<li>
+<a href="./wml_p9_slice.html">p9_slice</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Core / HTMLstrip (Pass 8)</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>htmlstrip - Strip HTML markup code</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+		<li><a href="#recognized_content_types">Recognized Content Types</a></li>
+		<li><a href="#supported_stripping_levels">Supported Stripping Levels</a></li>
+	</ul>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#authors">AUTHORS</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>htmlstrip - Strip HTML markup code</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>htmlstrip</strong>
+[<strong>-o</strong> <em>outputfile</em>]
+[<strong>-O</strong> <em>level</em>]
+[<strong>-b</strong> <em>blocksize</em>]
+[<strong>-v</strong>]
+[<em>inputfile</em>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>HTMLstrip reads <em>inputfile</em> or from <code>stdin</code> and strips the contained HTML
+markup. Use this program to shrink and compactify your HTML files in a safe
+way.</p>
+<p>
+</p>
+<h2><a name="recognized_content_types">Recognized Content Types</a></h2>
+<p>There are three disjunct types of content which are recognized by
+HTMLstrip while parsing:</p>
+<dl>
+<dt><strong><a name="item_tag">HTML Tag (tag)</a></strong>
+<dd>
+<p>This is just a single HTML tag, i.e. a string beginning with a opening angle
+bracket directly followed by an identifier, optionally followed by attributes
+and ending with a closing angle bracket.</p>
+</dd>
+</li>
+<dt><strong><a name="item_preformatted">Preformatted (pre)</a></strong>
+<dd>
+<p>This is any contents enclosed in one of the following container tags:
+</p>
+</dd>
+<dd>
+<pre>
+
+  1. &lt;nostrip&gt;
+  2. &lt;pre&gt;
+  3. &lt;xmp&gt;</pre>
+</dd>
+<dd>
+<p>The non-HTML-3.2-conforming <code>&lt;nostrip&gt;</code> tag is special here: It acts
+like <code>&lt;pre&gt;</code> as a protection container for HTMLstrip but is also
+stripped from the output. Use this as a pseudo-block which just preserves its
+body for the HTMLstrip processing but itself is removed from the output.</p>
+</dd>
+</li>
+<dt><strong><a name="item_text">Plain Text (txt)</a></strong>
+<dd>
+<p>This is anything not falling into one of the two other categories, i.e any
+content both outside of preformatted areas and outside of HTML tags.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="supported_stripping_levels">Supported Stripping Levels</a></h2>
+<p>The amount of stripping can be controlled by a optimization level, specified
+via option <strong>-O</strong> (see below). Higher levels also include all of the lower
+levels. The following stripping is done on each level:</p>
+<dl>
+<dt><strong><a name="item_level_0_3a"><strong>Level 0:</strong></a></strong>
+<dd>
+<p>No real stripping, just removing the sharp/comment-lines (<code>#...</code>) [txt,tag].
+Such lines are a standard feature of WML, so this is always done.</p>
+</dd>
+</li>
+<dt><strong><a name="item_level_1_3a"><strong>Level 1:</strong></a></strong>
+<dd>
+<p>Minimal stripping: Same as level 0 plus stripping of blank and empty lines
+[txt].</p>
+</dd>
+</li>
+<dt><strong><a name="item_level_2_3a"><strong>Level 2:</strong></a></strong>
+<dd>
+<p>Good stripping: Same as level 1 plus compression of multiple whitespaces (more
+then one in sequence) to single whitespaces [txt,tag] and stripping of
+trailing whitespaces at the of of a line [txt,tag,pre].</p>
+</dd>
+<dd>
+<p><strong>This level is the default</strong> because while providing good optimization the
+HTML markup is not destroyed and remains human readable.</p>
+</dd>
+</li>
+<dt><strong><a name="item_level_3_3a"><strong>Level 3:</strong></a></strong>
+<dd>
+<p>Best stripping: Same as level 2 plus stripping of leading whitespaces on a
+line [txt]. This can also be recommended when you still want to make sure that
+the HTML markup is not destroyed in any case. But the resulting code is a
+little bit ugly because of the removed whitespaces.</p>
+</dd>
+</li>
+<dt><strong><a name="item_level_4_3a"><strong>Level 4:</strong></a></strong>
+<dd>
+<p>Expert stripping: Same as level 3 plus stripping of HTML comment lines
+(``<code>&lt;!-- ... --&gt;</code>'') and crunching of HTML tag endsi [tag]. <strong>BE
+CAREFUL HERE:</strong> Comment lines are widely used for hiding some Java or
+JavaScript code for browsers which are not capable of ignoring those stuff.
+When using this optimization level make sure all your JavaScript code is hided
+correctly by adding HTMLstrip's <code>&lt;nostrip&gt;</code> tags around the comment
+delimiters.</p>
+</dd>
+</li>
+<dt><strong><a name="item_level_5_3a"><strong>Level 5:</strong></a></strong>
+<dd>
+<p>Crazy stripping: Same as level 4 plus wrapping lines around to fit in an 80
+column view window. This saves some newlines but both leads to really
+unreadable markup code and opens the window for a lot of problems when this
+code is used to layout the page in a browser. <strong>Use with care. This is only
+experimental!</strong></p>
+</dd>
+</li>
+</dl>
+<p>Additionally the following global strippings are done:</p>
+<dl>
+<dt><strong><a name="item__5e_5cn_3a"><code>^\n</code>:</a></strong>
+<dd>
+<p>A leading newline is always stripped.</p>
+</dd>
+</li>
+<dt><strong><a name="item__3csuck_3e_3a"><code>&lt;suck&gt;</code>:</a></strong>
+<dd>
+<p>The <code>&lt;suck&gt;</code> tag just absorbs itself and all whitespaces around it.
+This is like the backslash for line-continuation, but is done in Pass 8, i.e.
+really at the end. Use this inside HTML tag definitions to absorb whitespaces,
+for instance around <code>%body</code> when used inside <code>&lt;table&gt;</code> structures
+which at some point are newline-sensitive in Netscape Navigator.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2do_outputfile"><strong>-o</strong> <em>outputfile</em></a></strong>
+<dd>
+<p>This redirects the output to <em>outputfile</em>. Usually the output will be send to
+<code>stdout</code> if no such option is specified or <em>outputfile</em> is ``<code>-</code>''.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_level"><strong>-O</strong> <em>level</em></a></strong>
+<dd>
+<p>This sets the optimization/stripping level, i.e. how much HTMLstrip should
+compress the contents.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2db_blocksize"><strong>-b</strong> <em>blocksize</em></a></strong>
+<dd>
+<p>For efficiency reasons, input is divided into blocks of 16384 chars. If
+you have some performance problems, you may try to change this value.
+Any value between <code>1024</code> and <code>32766</code> is allowed. With a value of
+<code>0</code>, input is not divided into blocks.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-v</strong></a></strong>
+<dd>
+<p>This sets verbose mode where some
+processing information will be given on the console.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com</pre>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com</pre>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

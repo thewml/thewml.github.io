@@ -1,0 +1,50 @@
++-------+
+|input: |
++-------+
+
+;;; 16
+<cell>&nbsp;</cell>
+<cell width="20%" valign="m" >Vous souhaitez <b>être contacté par&nbsp;:</b>&nbsp;</cell>
+<cell>&nbsp;</cell>
+<cell width="40%" valign="m" >
+  &nbsp;<input type="checkbox" name="Réponse par mail" checked>&nbsp;<i>Courrier électronique (Email)</i><br>
+  &nbsp;<input type="checkbox" name="Réponse par courrier">&nbsp;<i>Courrier</i><br>
+  &nbsp;<input type="checkbox" name="Réponse par téléphone">&nbsp;<i>Téléphone</i><br>
+  &nbsp;<input type="checkbox" name="Réponse par fax">&nbsp;<i>Télécopie</i><br>
+</cell>
+<cell>&nbsp;</cell>
+
+============
+
+;;; 22
+<cell valign="b" height="15" ><img src="vc-lb.png" /></cell>
+<cell>&nbsp;</cell>
+<cell>&nbsp;</cell>
+<cell>&nbsp;</cell>
+<cell valign="b" height="15" ><img src="vc-rb.png" /></cell>
+
+</grid>
+
+
++--------------+
+|-p123 output: |
++--------------+
+
+      <tr>
+        <td align="left" valign="top"><font color="#000000">{#GRID1_CELL75#}</font></td>
+        <td align="right" valign="m" width="20%"><font color="#000000">{#GRID1_CELL76#}</font></td>
+        <td align="center" valign="top"><font color="#000000">{#GRID1_CELL77#}</font></td>
+        <td align="left" valign="m" width="40%"><font color="#000000">{#GRID1_CELL78#}</font></td>
+        <td align="right" valign="top"><font color="#000000">{#GRID1_CELL79#}</font></td>
+      </tr>
+
+============
+
+       <tr>
+        <td align="left" valign="b" height="15"><font color="#000000">{#GRID1_CELL103#}</font></td>
+        <td align="right" valign="top"><font color="#000000">{#GRID1_CELL104#}</font></td>
+        <td align="center" valign="top"><font color="#000000">{#GRID1_CELL105#}</font></td>
+        <td align="left" valign="top"><font color="#000000">{#GRID1_CELL106#}</font></td>
+        <td align="right" valign="b" height="15"><font color="#000000">{#GRID1_CELL107#}</font></td>
+      </tr>
+    </table>

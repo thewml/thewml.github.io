@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Use of "DST" in ctime... -->
+<!--X-From-R13: Xbua Pnmvx <wfoNpf.oebja.rqh> -->
+<!--X-Date: Thu, 22 Apr 1999 13:18:08 +0200 (MET DST) -->
+<!--X-Message-Id: 199904211634.MAA19375@no.cs.brown.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00584">Date Index</a>][<a href="thrd13.shtml#00584">Thread Index</a>]<br>
+[<A HREF="msg00585.shtml">Date Prev</A>][<A HREF="msg00586.shtml">Date Next</A>][<A HREF="msg00585.shtml">Thread Prev</A>][<A HREF="msg00586.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Use of &quot;DST&quot; in ctime...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: John Bazik &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 21 Apr 1999 12:34:04 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I noticed that "DST" is appended to time values in the wml frontend
+in the following subroutine:
+
+sub ctime {
+    my ($time) = @_;
+
+    my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) =
+        localtime($time);
+    my ($str) = sprintf("%s %s %2d %02d:%02d:%02d 19%s%s",
+         $dow[$wday], $moy[$mon], $mday, $hour, $min, $sec, $year,
+         $isdst ?  " DST" : "");
+    return $str;
+}
+
+A local user pointed out to me that the proper timezone here in the
+Eastern US is "EDT" (Eastern Daylight Time, I guess).  "DST" isn't
+meant to be a timezone at all, but it looks like one.  In fact, the
+source for the perl ctime library says:
+
+    # There's no portable way to find the system default timezone.
+
+I suggest dropping it.
+
+The routine above could be replaced by:
+
+sub ctime {
+    my ($time) = @_;
+
+    return scalar(localtime($time));
+}
+
++-------------------------------------------+
+| John Bazik        Comp Sci Dept, Box 1910 |
+| 401-863-7624      Brown University        |
+| jsb@cs.brown.edu  Providence, RI 02912    |
+| <A  HREF="http://www.cs.brown.edu/people/jsb/">http://www.cs.brown.edu/people/jsb/</A>       |
++-------------------------------------------+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00585.shtml">[BUG REPORT] WML 1.6.8, Linux 2.2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00586.shtml">slices - if defined, do not display</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00585.shtml">[BUG REPORT] WML 1.6.8, Linux 2.2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00586.shtml">slices - if defined, do not display</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00584"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00584"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

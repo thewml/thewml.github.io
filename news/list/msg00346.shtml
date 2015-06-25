@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: QVevfgvna @vff <puevfNgbcvgzntvp.qr> -->
+<!--X-Date: Mon, 18 Jan 1999 10:25:05 +0100 (CET) -->
+<!--X-Message-Id: 36A2FC1B.CD73BA96@topitmagic.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A06357.3A7CFBDA@topitmagic.de -->
+<!--X-Reference: 36A1DFBA.AD006C5E@topitmagic.de -->
+<!--X-Reference: 19990117152514.A160@engelschall.com -->
+<!--X-Reference: 36A200B2.891AAC0A@topitmagic.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00346">Date Index</a>][<a href="thrd8.shtml#00346">Thread Index</a>]<br>
+[<A HREF="msg00345.shtml">Date Prev</A>][<A HREF="msg00347.shtml">Date Next</A>][<A HREF="msg00340.shtml">Thread Prev</A>][<A HREF="msg00347.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: CHristian Niss &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Jan 1999 10:17:15 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi everyone,
+
+ &gt; Thanks, that fixed my problem ... WML now compiles fine, but make
+test
+&gt; does not work ...
+&gt; 
+&gt; This is the log of make test ...
+&gt; 
+&gt; ..................
+&gt; Running WML Test Suite (still incomplete):
+&gt; t/01-wml............** WML:Break: Error in Pass 2 (rc=139).
+&gt; cmp: EOF on tmp.01
+&gt; FAILED tests 1-2
+&gt;         Failed 2/2 tests, 0.00% okay
+&gt; t/02-p1_ipp.........** WML:Break: Error in Pass 2 (rc=139).
+&gt; cmp: EOF on tmp.01
+&gt; FAILED tests 1-2
+&gt;         Failed 2/2 tests, 0.00% okay
+&gt; Failed Test  Status Wstat Total Fail  Failed  List of failed
+&gt; -------------------------------------------------------------------------------
+&gt; t/01-wml.t                    2    2 100.00%  1-2
+&gt; t/02-p1_ipp.t                 2    2 100.00%  1-2
+&gt; Failed 2/2 test scripts, 0.00% okay. 4/4 subtests failed, 0.00% okay.
+&gt; make[1]: *** [test] Error 29
+&gt; make[1]: Leaving directory `/usr/local/wml-1.6.8/wml_test'
+&gt; make: *** [test] Error 2
+&gt; 
+
+So, now I even know where the error cause is located, after installing
+and
+running WML in verbose mode this errorlog appeared ...
+
+topitmagic/wml&gt; /local/wml/bin/wml -v9 -p=1-9 zeitschriften.wml &gt;
+zeitschriften.html
+** WML:Verbose: Reading RC file: /home/chris/.wmlrc
+** WML:Verbose: Reading RC file: /usr/local/home/chris/.wmlrc
+** WML:Verbose: PASS =:
+cannot load /tmp/wml.6017.tmp2 for unprotection at /local/wml/bin/wml
+line 604.
+
+And there is no such File in the /tmp - dir, except /tmp/wml.6017.tmp1
+?!?
+
+Please help me out of this mystery/misery ...
+
+CHristian
+
+-- 
+--------------------------------------------------------------------
+CHRISTIAN NISS     computer science student @ FAU Erlangen Nuremberg
+                        eMail: cnniss@cip.informatik.uni-erlangen.de 
+<A  HREF="http://www.topitmagic.de">http://www.topitmagic.de</A>  -  DAS Online-Magazin fuer Zauberkuenstler
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00347" HREF="msg00347.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00332" HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00338" HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00339" HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00340" HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00345.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00347.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00340.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00347.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00346"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00346"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

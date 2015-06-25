@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNunfrpxr.unfrpxr> -->
+<!--X-Date: Thu, 2 Sep 1999 12:08:00 +0200 (MET DST) -->
+<!--X-Message-Id: 199909011512.RAA12299@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00921">Date Index</a>][<a href="thrd16.shtml#00921">Thread Index</a>]<br>
+[<A HREF="msg00920.shtml">Date Prev</A>][<A HREF="msg00922.shtml">Date Next</A>][<A HREF="msg00758.shtml">Thread Prev</A>][<A HREF="msg00739.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Sep 1999 17:12:26 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.1 (05-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Jan Ulrich Hasecke
+Reply-To: juh@hasecke.hasecke
+
+PROBLEM DESCRIPTION:
+
+I cannot size the EC-Fonts inside &lt;gfont&gt; with the size-option of the
+new gfont. Scaling is only possible with CMR-Fonts and PS-Fonts via
+size=n. To scale EC-Fonts I have to specify it by name, eg. ECRoman-V
+for very huge font.
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.004_03 (/usr/bin/perl)
+    User: juh@hasecke.hasecke
+    Date: 05-Jun-1999
+Built Location:
+    Prefix: /opt/wml
+    BinDir: /opt/wml/bin
+    LibDir: /opt/wml/lib
+    ManDir: /opt/wml/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.0.33, archname=i386-linux
+    uname='linux buildmeister.caldera.com 2.0.33 #1 thu mar 12 20:36:04 mst 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O6 -m486 -fomit-frame-pointer -pipe', gccversion=2.7.2.3
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, randbits=31
+  Linker and Libraries:
+    ld='cc', ldflags =''
+    libpth=/lib /usr/lib
+    libs=-lgdbm -ldb -ldl -lm -lc
+    libc=/lib/libc.so.5.4.38, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared'
+
+
+Characteristics of this binary (from libperl): 
+  Locally applied patches:
+  	COL_SECURITY1 - 'perl -e'-tmp-race fix (by Theo de Raadt/Todd Miller)
+  Built under linux
+  Compiled at Mar 20 1998 09:33:50
+  @INC:
+    /usr/lib/perl5/i386-linux/5.00403
+    /usr/lib/perl5
+    /usr/lib/perl5/site-perl/i386-linux
+    /usr/lib/perl5/site-perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00920.shtml">Re: [BUG REPORT] WML 1.7.1, Linux 2.0.33</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00922.shtml">Re: GIFs and PNGs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00758.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00739.shtml">Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00921"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00921"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

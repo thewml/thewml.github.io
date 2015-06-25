@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Mar 2002 01:57:13 +0100 (MET) -->
+<!--X-Message-Id: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02563">Date Index</a>][<a href="thrd52.shtml#02563">Thread Index</a>]<br>
+[<A HREF="msg02562.shtml">Date Prev</A>][<A HREF="msg02564.shtml">Date Next</A>][<A HREF="msg02559.shtml">Thread Prev</A>][<A HREF="msg02564.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Mar 2002 02:09:05 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Mar 13, 2002 at 11:19:52AM +0100, Veres Ferenc wrote:
+&gt; Hi!
+&gt; 
+&gt; Sebastian.Brosig@Novas.org wrote:
+&gt; 
+&gt; &gt;my humble website www.novas.org has nested navbars galore. And it works.
+&gt; &gt;
+&gt; Thanks... The examples are not good.
+&gt; 
+&gt; 1. There is an "include.inc" refered, and this file is not packed. 
+&gt; Deleting the
+&gt; include line fixes the bug, but could you please fix. :-)
+&gt; 
+&gt; 2. Your example does not contain selection on the second level menu. When
+&gt; I click on "who are novas", the submenu opens, and the main menu item is
+&gt; deactivated by the &lt;navbar element. Then I cannot click on e.g. Group 
+&gt; Structure
+&gt; (like you can one some menu items on the online version) so I cannot open a
+&gt; third level menu to see, if "group structure" is unactivated or not. (As 
+&gt; it is
+&gt; very nicely unactivated on the online version, but HOW?? :-) Could you 
+&gt; please
+&gt; add one more level to the example files?
+
+I've put an old example at
+   <A  HREF="http://www.engelschall.com/sw/wml/tmp/www.gimp.org/">http://www.engelschall.com/sw/wml/tmp/www.gimp.org/</A>
+[this is a temporary location]
+
+AFAICT I played with this example when trying to figure how to deal with
+nested navbars, but I can't remember exactly if this was a good example.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02564" HREF="msg02564.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02562.shtml">Re: nested navbar (sources of www.novas.org)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02564.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02559.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02564.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02563"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02563"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

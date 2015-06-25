@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Proposed changes for pass 1 wml_p1_ipp -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 4 Feb 2000 12:00:18 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000204112603.24289A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000203144853.5551A&#45;101000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01339">Date Index</a>][<a href="thrd28.shtml#01339">Thread Index</a>]<br>
+[<A HREF="msg01338.shtml">Date Prev</A>][<A HREF="msg01340.shtml">Date Next</A>][<A HREF="msg01334.shtml">Thread Prev</A>][<A HREF="msg01341.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Proposed changes for pass 1 wml_p1_ipp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Feb 2000 11:55:01 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 3 Feb 2000, Franz Knipp wrote:
+
+&gt; Hello,
+&gt; 
+&gt; while experimenting with pass 1 I found a strange behaviour in handling
+&gt; the comments - #include and variable substitution was done also their...
+
+Hi Franz,
+
+ipp is much more complex that it looks like, so i have to be very
+careful. I discuss below some of your points.
+
+[...]
+&gt; *  If you include files with the #include 'pattern' tag, there are three
+&gt; variables which are set to the complete file name (with path and
+&gt; extension) of itself, the previous and the next file: INCLUDE_SRC,
+&gt; INCLUDE_PREV, INCLUDE_NEXT. These variables are available with e. g.
+&gt; $(INCLUDE_SRC). If you want to use them in the further passes, you have to
+&gt; assign variables like &lt;set-var INCLUDE_SRC=$(INCLUDE_SRC).
+
+Hmmm, i am not convinced this is the best approach for your problem, i
+will think about it.
+
+&gt; *  Comment blocks are now really comment blocks, that means that no
+&gt; #include, #use, #depend, variable substition and so on is performed on
+&gt; that block. This is true for # line comments and /* */ C-style comments.
+&gt; 
+&gt; *  The handling of comments is now done in another part and should be
+&gt; faster than previos (therefore I deleted the warning in the man page).
+
+Here is where we have to be careful, do these changes break anything?
+
+&gt; *  Silent Assign Methods: to assign variables without writing themselves
+&gt; to the output (file) I've invented the following "variable substitutions":
+&gt; 
+&gt;    $(name:!value)  Silent Assign: name = value, also if name is yet
+&gt;                      definied
+&gt; 
+&gt;    $(name:~value)  Silent Assign when Unset
+
+This is a very nice idea.
+
+[...]
+&gt; To Denis (I think this is your first name): I've updated the documentation
+&gt; part ;-) That's necessary for me to keep in mind my changes ;-))
+
+You're right, that's my first name. As i said before, some of your code
+will be put into wml-SNAP soon, but not everything.
+Another point: please avoid constructs like
+  +    ($l =~ m/^#(use|include|depends)\s+(\S+)(.*)$/ and $use = 1)
+  +       or next if $l =~ m/^[ \t]*#.*$/ ;
+these are very hard to maintain.
+
+Thanks
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01341" HREF="msg01341.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01334" HREF="msg01334.shtml">Proposed changes for pass 1 wml_p1_ipp</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01338.shtml">Re: BUG REPORT for wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01340.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01334.shtml">Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01341.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01339"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01339"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

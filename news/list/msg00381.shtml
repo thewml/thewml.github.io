@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: perl error: wml::des::space (Solaris) -->
+<!--X-From-R13: urffrNyhmv.S&#45;Frpuavx.Gav&#45;Rbegzhaq.RS ("Pwbrea_Vrffr") -->
+<!--X-Date: Mon, 1 Feb 1999 18:57:51 +0100 (CET) -->
+<!--X-Message-Id: 3iiudm6rwy.fsf@luzi.e&#45;technik.uni&#45;dortmund.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00381">Date Index</a>][<a href="thrd8.shtml#00381">Thread Index</a>]<br>
+[<A HREF="msg00380.shtml">Date Prev</A>][<A HREF="msg00382.shtml">Date Next</A>][<A HREF="msg00374.shtml">Thread Prev</A>][<A HREF="msg00655.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>perl error: wml::des::space (Solaris)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (&quot;Bjoern_Hesse&quot;)</LI>
+<LI><em>Date</em>: 01 Feb 1999 16:54:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i tried to use the example swpage.wml Implentation from the wml website to
+understand some basics of wml.  The compilation failed on our system.  The
+error only occours on our SUNs, not on the intel Linux machines.  It also
+occours with versions from the snapshot tree. 
+
+Maybe someone can give me a hint what went wrong, an error log follows.
+
+Thanks
+
+Bjoern Hesse
+
+
+&lt;-- Begin Error Log --&gt;
+magi:/home/hesse/lang/wml 71&gt; wml --version
+This is WML Version 1.6.8 (12-01-1999)
+[SNIP]
+
+magi:/home/hesse/lang/wml 70&gt; uname -a
+SunOS magi 5.5 Generic_103093-24 sun4u sparc SUNW,Ultra-1
+
+magi:/home/hesse/lang/wml 62&gt; more test.wml
+#!wml 
+#use wml::des::space
+
+magi:/home/hesse/lang/wml 63&gt; wmk test.wml
+wml -n -otest.html test.wml
+ePerl:Error: Perl parsing error (interpreter rc=2)
+ 
+---- Contents of STDERR channel: ---------
+Can't load '/opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so' for module IO: ld.so.1: /opt/gnu/lib/wml/exec/wml_p3_eperl: fatal: relocation error: file /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so: symbol main: referenced symbol not found at /opt/gnu/lib/perl5/5.00502/sun4-solaris/DynaLoader.pm line 168.
+ 
+ at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Handle.pm line 241
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /tmp/wml.23856.tmp1 line 85.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+** WMk:Break: Error in WML (rc=256)
+magi:/home/hesse/lang/wml 64&gt; ls -l /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so
+-r-xr-xr-x   1 gnuop    hobby       39708 Jan 29 12:49 /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so*
+&lt;-- End Error Log --&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00655" HREF="msg00655.shtml">Perl error: wml::des::space (Solaris)</A></strong>, <em>From:</em> Bjoern_Hesse</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00380.shtml">Re: wml-1.6.8: bug in etc/newvers</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00382.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00374.shtml">[BUG REPORT] WML 1.6.8, Digital (DEC) OSF/1 4.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00655.shtml">Perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00381"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00381"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

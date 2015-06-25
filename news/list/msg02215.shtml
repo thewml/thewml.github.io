@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: parent dir breaks Diversion -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 27 Apr 2001 11:29:00 +0200 (MET DST) -->
+<!--X-Message-Id: 20010427105206.B26519@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200104261821.DAA20959@nn.iij4u.or.jp -->
+<!--X-Reference: 200104270600.PAA20967@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02215">Date Index</a>][<a href="thrd45.shtml#02215">Thread Index</a>]<br>
+[<A HREF="msg02214.shtml">Date Prev</A>][<A HREF="msg02216.shtml">Date Next</A>][<A HREF="msg02212.shtml">Thread Prev</A>][<A HREF="msg02219.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: parent dir breaks Diversion</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 27 Apr 2001 10:52:06 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Apr 27, 2001 at 03:00:26PM +0900, Nobuyuki Tsuchimura wrote:
+&gt;   Hi,
+&gt; 
+&gt; &gt;   I found a bug in wml-2.1a1 (also in SNAP).
+&gt; &gt; 
+&gt; &gt; ---- input
+&gt; &gt; &lt;&lt;head&gt;&gt;
+&gt; &gt; ..head&gt;&gt;This is OK.&lt;&lt;..
+&gt; &gt; &lt;a href="../"&gt;Parent dir&lt;/a&gt;
+&gt; &gt; ..head&gt;&gt;This is NG.&lt;&lt;..
+&gt; 
+&gt; &gt;   I made a patch, but I'm not good at perl,
+&gt; &gt; so please take care.
+&gt; &gt; 
+&gt; &gt; --- /usr/lib/wml/exec/wml_p5_divert.orig	Fri Apr 27 02:44:37 2001
+&gt; &gt; +++ /usr/lib/wml/exec/wml_p5_divert	Fri Apr 27 02:52:35 2001
+&gt; &gt; @@ -203,9 +203,12 @@
+&gt; &gt;          #   calculate the minimum amount of plain characters we can skip
+&gt; &gt;          my $l = length($remain);
+&gt; &gt;          my $i1 = index($remain, '&lt;&lt;');  $i1 = ($i1 == -1 ? $l : $i1);
+&gt; &gt; -        my $i2 = index($remain, '..');
+&gt; &gt; +        my $i2 = -1;
+&gt; &gt;          #   Skip ../ which is often used in URLs
+&gt; &gt; -        $i2 = $l if ($i2 == -1 or substr($remain, $i2+2, 1) eq '/');
+&gt; &gt; +        do {
+&gt; &gt; +            $i2 = index($remain, '..', $i2+1);
+&gt; &gt; +        } while (substr($remain, $i2+2, 1) eq '/');
+&gt; &gt; +        $i2 = $l if $i2 == -1;
+&gt; 
+&gt;   Sorry, this patch causes an endless loop against a line starting with '/'.
+&gt; I noticed in my bed. :-)  I should have wrote as below.
+&gt; 
+&gt; +          } while ($i2 &gt; -1 and substr($remain, $i2+2, 1) eq '/');
+&gt;                     ^^^^^^^^^^^^^
+
+Konbanwa Tsuchimura San,
+
+as you wrote in your previous mail,
+         $i1 = $l if $i1 == -1;
+is much more readable than
+         $i1 = ($i1 == -1 ? $l : $i1);
+and the former will be used.
+Your patch will also be applied (next week, i cannot do it before),
+thanks for your help.
+
+Arigato gozaimashita (i am afraid these are the only words i remember
+from a 2 months trip in your nice country and a 1 year course long time
+ago, and i am even unable to write them with hiragana, so sad).
+
+That said, some people requested support for multi-byte characters; it
+would indeed be very nice, and some parts should take advantage of the
+Unicode support in Perl 5.6, but i have no skill in this issue and
+will not try to implement this support into other parts myself.
+Just in case some of you are wondering how they could help with WML ;)
+[when replying to this paragraph, please change mail subject]
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02219" HREF="msg02219.shtml">Unicode support (Re: parent dir breaks Diversion)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02209" HREF="msg02209.shtml">parent dir breaks Diversion</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+<li><strong><A NAME="02212" HREF="msg02212.shtml">Re: parent dir breaks Diversion</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02214.shtml">Re: [wml] Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02216.shtml">including files only once</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02212.shtml">Re: parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02219.shtml">Unicode support (Re: parent dir breaks Diversion)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02215"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02215"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: 1st Try: Page Explorer -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 12 Jan 1998 17:36:22 +0100 (MET) -->
+<!--X-Message-Id: 199801121636.RAA07458@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00038">Date Index</a>][<a href="thread.shtml#00038">Thread Index</a>]<br>
+[<A HREF="msg00037.shtml">Date Prev</A>][<A HREF="msg00039.shtml">Date Next</A>][<A HREF="msg00037.shtml">Thread Prev</A>][<A HREF="msg00040.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>1st Try: Page Explorer</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 12 Jan 1998 17:36:19 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hello HTML Hackers,
+
+because WML's wml::des::imgdot already has the ability to render the usually
+transparent 1pt dot-images as red ones when -DDEBUG=1 is used, I thought it
+would be useful to be able to browse any page in this mode.
+
+Now I've created my first try for a Page Explorer as a CGI proxy script:
+
+    <A  HREF="http://en1.engelschall.com/sw/wml/pe/">http://en1.engelschall.com/sw/wml/pe/</A>
+
+Enter the URL of your favorite webpage you want to explore, select the amount
+of exploration level and then have a look into the depths of the page.
+Currently the page explorer is slow because every file (including images) have
+to be proxied over it. But hey, it's a prototype and never says you should
+surf around the world with it. Although you can, i.e. the Page Explorer
+automatically rewrites any contained hyperlinks over it, you can actually
+surf, i.e. subsequent pages are still under control of the Page Explorer!
+
+Now the big question: Why has he written this beast?  &lt;grins&gt; I'm currently
+creating some slides for a Webdesign presentation and need some ways to
+explain how webpages work 1998. So, I need to present a snapshot of
+www.whatever.com in original and one containing the display various Page
+Explorer levels show. This way the viewers can see (step by step) how the page
+internally works.
+
+Currently the following levels are defined:
+
+Level 0: Rewrite all URLs to go through Page Explorer
+Level 1: Replace all transparent 1pt dot-images with a red image
+Level 2: Replace all border=0 attributes with border=1
+Level 3: Remove any background images and
+         Replace all non-transparent images with a blank one
+         showing only the dimensions and image type
+Level 4: Completely remove all color attributes
+
+Please give me some feedback on how this beast should be enhanced so it is
+even more useful to explore your pages or the pages of other webdesigners.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00040" HREF="msg00040.shtml">Re: 1st Try: Page Explorer</A></strong>, <em>From:</em> Viorel ANGHEL</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00037.shtml">ANNOUNCE: WML 1.5.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00039.shtml">Re: 1st Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00037.shtml">ANNOUNCE: WML 1.5.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00040.shtml">Re: 1st Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00038"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00038"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Ouput directory other than source directory -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Thu, 30 Sep 1999 13:08:36 +0200 (MET DST) -->
+<!--X-Message-Id: 19990930021853.A4030@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990928220327.A315@perolo -->
+<!--X-Reference: Pine.LNX.3.96.990929143152.14262A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01009">Date Index</a>][<a href="thrd20.shtml#01009">Thread Index</a>]<br>
+[<A HREF="msg01008.shtml">Date Prev</A>][<A HREF="msg01010.shtml">Date Next</A>][<A HREF="msg01006.shtml">Thread Prev</A>][<A HREF="msg01010.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Sep 1999 02:18:54 -0600</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Sep 29, 1999 at 02:39:12PM +0200, barbier@imacs.polytechnique.fr wrote:
+&gt; On Tue, 28 Sep 1999, Xose Manoel Ramos wrote:
+&gt; &gt; El Sat, Sep 18, 1999 at 03:35:45PM +0200, David Odin contaba:
+&gt; &gt; 
+&gt; &gt; &gt;I personnaly have my wml files in ~/Giram.wml and they're output in
+&gt; &gt; &gt;~/Giram.html using the -o switch.
+&gt; &gt; &gt;  All the gifs and jpegs are in ~/Giram.html/images and I've made a symbolic
+&gt; &gt; &gt;links ~/Giram.wml/images that points to ~/Giram.html/images. That way wml
+&gt; &gt; &gt;find the pictures when it looks for them and the paths are always correct.
+&gt; &gt; 
+&gt; &gt; Not a bad idea, this kind of hacks can work fine. I had think before
+&gt; &gt; on this idea, using links. But I still dislike it.... 
+&gt; [...]
+&gt; 
+&gt; Could you explain why you want to put output files in another directory?
+&gt; Are you sure this make sense?
+
+The Debian web site currently uses "make install" to copy all the *.html
+files etc. to a different directory.  Two reasons that I can think of are:
+
+  1. The public can't view the .wml files and Makefile etc. directly.
+     (safer for Debian.)  :-)
+
+  2. Less stuff for worldwide Debian mirrors site to mirror.
+
+There may be other reasons that I have missed.  I wasn't the one who set
+up all the supporting Makefile and templates for the Debian web site.  :-)
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+anthony_fok@catholic.org             Keep smiling!  *^_^*
+Come visit Our Lady of Victory Camp -- <A  HREF="http://come.to/olvc">http://come.to/olvc</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01010" HREF="msg01010.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01014" HREF="msg01014.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> Darko Krizic</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01004" HREF="msg01004.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="01005" HREF="msg01005.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01008.shtml">[ANNOUNCE] WML-1.7.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01010.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01006.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01010.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01009"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#01009"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

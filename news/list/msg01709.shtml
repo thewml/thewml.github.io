@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml example section -->
+<!--X-From-R13: Osnz Otobqvxr <nsnzNpbec.tblbtv.pbz> -->
+<!--X-Date: Fri, 9 Jun 2000 12:34:11 +0200 (MET DST) -->
+<!--X-Message-Id: 3940C94D.4F7E3159@corp.goyogi.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000609022657.A8859@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01709">Date Index</a>][<a href="thrd35.shtml#01709">Thread Index</a>]<br>
+[<A HREF="msg01708.shtml">Date Prev</A>][<A HREF="msg01710.shtml">Date Next</A>][<A HREF="msg01708.shtml">Thread Prev</A>][<A HREF="msg01711.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml example section</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Afam Agbodike &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 09 Jun 2000 03:39:09 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I was going through the example section of the wml site, and noticed
+that the .wmlrc file appears twice in the root directory, is this
+supposed to be?
+
+also, some directories also have a .wmkrc file... what is the purpose of
+this?
+
+when creating the site... how do you get it to go to subdirectories? can
+wmk handle this or do you need to create a Makefile?
+
+Thanks,
+Afam
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01708" HREF="msg01708.shtml">[wml] usable snapshot</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01708.shtml">[wml] usable snapshot</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01710.shtml">Include misunderstanding</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01708.shtml">[wml] usable snapshot</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01711.shtml">problems with the wml site</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01709"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01709"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

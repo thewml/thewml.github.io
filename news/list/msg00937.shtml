@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Mon, 6 Sep 1999 19:00:35 +0200 (MET DST) -->
+<!--X-Message-Id: 199909061700.CAA18476@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199909060032.JAA24073@nn.iij4u.or.jp -->
+<!--X-Reference: Pine.LNX.3.96.990906105947.16057B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00937">Date Index</a>][<a href="thrd20.shtml#00937">Thread Index</a>]<br>
+[<A HREF="msg00936.shtml">Date Prev</A>][<A HREF="msg00938.shtml">Date Next</A>][<A HREF="msg00933.shtml">Thread Prev</A>][<A HREF="msg00961.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Sep 1999 02:00:16 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi, thank you for the quick bug fix.
+
+From: Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt;
+Subject: Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)
+
+&gt; &gt; It works well ONLY at the first line of the file.
+&gt; Not really. It works before any file inclusion, due to a problem with
+&gt; variable scope. The patch below fixes this problem
+
+  I tried. It's OK.
+
+
+&gt; WML defines the WML_SRC_FILENAME variable. So you have to type
+&gt;   &lt;get-var WML_SRC_FILENAME&gt;
+
+  Oh, really! I got it.
+You mean that to get the top level filename
+&lt;get-var WML_SRC_FILENAME&gt; is suitable.
+I solved one problem.
+
+
+  ...but,...
+
+&gt; &gt;   I think &lt;__FILE__&gt; is better.
+
+  I worried about the difficulty in writing the "__FILE__" string.
+OK, this is not a serious problem. Of course,
+to change macro names also causes a compatibility problem.
+
+  Once again, thank you very much.
+Best regards,
+--  Nobuyuki Tsuchimura
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00931" HREF="msg00931.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+<li><strong><A NAME="00933" HREF="msg00933.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00936.shtml">Binaries</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00938.shtml">How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00933.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00961.shtml">BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00937"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00937"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

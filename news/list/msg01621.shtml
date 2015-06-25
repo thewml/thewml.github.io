@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Fri, 26 May 2000 14:29:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20000526142924.A937@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200005260755.JAA25504@ns.inetcom.loc -->
+<!--X-Reference: Pine.GSO.4.21.0005261009030.7374&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01621">Date Index</a>][<a href="thrd33.shtml#01621">Thread Index</a>]<br>
+[<A HREF="msg01620.shtml">Date Prev</A>][<A HREF="msg01622.shtml">Date Next</A>][<A HREF="msg01627.shtml">Thread Prev</A>][<A HREF="msg01626.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 26 May 2000 14:29:24 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, May 26, 2000 at 10:20:21AM +0200, Tobias Oetiker wrote:
+&gt; lets have an example .... &lt;BLA&gt;&lt;/BLA&gt; and &lt;BLB&gt;&lt;/BLB&gt; are complex
+&gt; tags both defined in mp4h:
+
+I'll try.
+
+&gt; 1) &lt;H1&gt;hello&lt;BLA&gt;hello&lt;/H1&gt;&lt;/BLA&gt;
+
+Expand BLA and interpret H1 as text.
+
+&gt; 2) &lt;BLB&gt;hello&lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+
+Expand BLB, and don't expand BLB. Alternatively, print an error because
+BLA is not terminated within BLB.
+
+&gt; 3) &lt;BLA&gt;hello&lt;/BLB&gt;&lt;/BLA&gt;
+
+Error. BLB has no opening. Alternatively, interpret BLB as text.
+
+&gt; 4) &lt;BLA&gt;&lt;perl&gt;print "&lt;BLB&gt;"&lt;/perl&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+
+Because perl is run after mhc, I'd either make &lt;perl&gt;&lt;/perl&gt; protect its
+interior from mhc, thus resulting in example 3. If you make
+perl-non-protecting, you expand both of them. &lt;BLB&gt; then has "&lt;/perl&gt; as
+%body.
+
+&gt; 5) &lt;BLA&gt;&lt;BLA&gt;&lt;perl&gt;print "&lt;/BLA&gt;"&lt;/perl&gt;&lt;/BLA&gt;
+
+same as above. Either you have one unclosed &lt;BLA&gt; or you get strange
+results %)
+
+&gt; 6) &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt; or &lt;BLA &lt;BLB&gt;&gt;&lt;/BLB&gt;&lt;/BLA&gt;
+
+expand BLA with argument &lt;BLB&gt; and %body &lt;/BLB&gt;&gt;
+and
+expand BLA with argument &lt;BLB&gt; and %body &lt;/BLB&gt;
+
+both behave essentially the sames as (3)
+
+&gt; 7) &lt;BLA &lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;&gt;&lt;/BLA&gt;
+
+Just pass "&lt;BLB&gt;&lt;/BLA&gt;&lt;/BLB&gt;" as parameter.
+
+&gt; what should now happen when each of the lines above gets processed ...
+
+That's how i see it.
+
+I think you examples are overly complicated and most of them should
+simply fail because that's not legal input.
+
+CU,
+    Sec
+-- 
+| Kevin Dalley on Melissa being Open Source:
+While the Melissa license is a bit unclear, Melissa aggressively
+encourages free distribution of its source code.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01626" HREF="msg01626.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01616" HREF="msg01616.shtml">Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01617" HREF="msg01617.shtml">Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01620.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01622.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01627.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01626.shtml">Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01621"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01621"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

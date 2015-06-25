@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 1 Feb 1999 16:23:12 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990201160916.7571A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990120110312.A263369@cmpharm.ucsf.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00379">Date Index</a>][<a href="thrd8.shtml#00379">Thread Index</a>]<br>
+[<A HREF="msg00375.shtml">Date Prev</A>][<A HREF="msg00380.shtml">Date Next</A>][<A HREF="msg00361.shtml">Thread Prev</A>][<A HREF="msg00382.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Feb 1999 16:14:32 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 20 Jan 1999, Steve Sizemore wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; configure fails under Irix 6.5.2
+&gt; /bin/sh is ksh, which doesn't work.
+&gt; Workaround is to use /sbin/bsh, the bourne shell.
+[...]
+&gt; checking whether the C compiler (cc  ) works... no
+&gt; configure: error: installation or configuration problem: C compiler cannot create executables.
+[...]
+
+Hi Steve,
+
+this bug appears on HP-UX B.10.20 too. The problem is that configure
+defines the TMPDIR variable to a temporary directory. The workaround i
+used is to replace all occurences of TMPDIR by MYTMPDIR in the top
+`configure'.
+Could you please tell me if this works for your Irix 6.5.2 too, i do not
+have access to this machine.
+Thanks.
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00382" HREF="msg00382.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Steve Sizemore</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00361" HREF="msg00361.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Steve Sizemore</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00375.shtml">emacs mode</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00380.shtml">Re: wml-1.6.8: bug in etc/newvers</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00361.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00382.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00379"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00379"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

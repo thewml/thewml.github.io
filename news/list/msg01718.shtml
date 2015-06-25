@@ -1,0 +1,183 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [LONG] Last call for comments before WML 2.0.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 15 Jun 2000 18:51:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20000615185321.A11716@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01718">Date Index</a>][<a href="thrd35.shtml#01718">Thread Index</a>]<br>
+[<A HREF="msg01717.shtml">Date Prev</A>][<A HREF="msg01719.shtml">Date Next</A>][<A HREF="msg01717.shtml">Thread Prev</A>][<A HREF="msg01719.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[LONG] Last call for comments before WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 15 Jun 2000 18:53:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hear hear,
+
+WML 2.0.2 will be hopefully released next week.  It would be great
+if it was intensively tested before this date.  There has been some
+tests, of course, e.g. the whole WML website has been rebuilt with
+wml-SNAP, but there are surely some nasty bugs hidden in files i do
+not use.
+During this amount of time, documentation will be updated.
+
+Now some words about mp4h. Because most reported bugs show that new
+parsing scheme is not well understood, i decided a quite conservative
+way: mp4h is configured to mimic Meta-HTML as closely as possible,
+and xhtml addicts can change its behaviour with some flags.
+In newer versions, when it appears that documentation is clear enough,
+default flags will be changed.
+
+Here is a summary of all options. For each option, 2 alternatives are
+explained, star shows current default behaviour.  A zero means the value
+which will be default value later.  The other solution is accessible
+through the -X flag of mp4h (and thus -W2,"-X nnn" flag of wml).
+
+ a)  Unknown tags
+    1) are not parsed. There is no need to worry about mixing HTML
+       tags with Perl or other programming languages, but quoting
+       is mandatory in attributes:
+          &lt;group &lt;b&gt;Hello&lt;/b&gt;&gt;
+       must be written
+          &lt;group "&lt;b&gt;Hello&lt;/b&gt;"&gt;
+  * 0) are parsed. Now
+          &lt;group &lt;b&gt;Hello&lt;/b&gt;&gt;
+       is valid but
+          print '&lt;img src="'. $file . '"';
+          print " alt=\"".$alt.'"' if $alt;
+          print '&gt;';
+       must be rewritten
+          print '&lt;*img src="'. $file . '"';
+          print " alt=\"".$alt.'"' if $alt;
+          print '&gt;';
+       The leading star prevents the 'img' tag from being parsed.
+
+ b)  Unknown tags (useless with a.1)
+  * 1) are simple tags.  Until now there was no way to tell WML whether
+       HTML tags are simple or complex, so choosing this default will
+       certainly break fewer pages.  But complex HTML tags must be quoted,
+           &lt;if 1 &lt;b&gt;Hello World!&lt;/b&gt;&gt;
+       pri nts
+           &lt;b&gt;Hello
+    0) are complex tags
+       This is the most logical choice, because tags are complex by
+       default in XML. Simple HTML tags must have a trailing slash,
+       as with XML. So we can write
+           &lt;if 1 &lt;b&gt;Hello World!&lt;/b&gt;&gt;
+           &lt;group
+               &lt;set-var foo=bar&gt;
+               &lt;br/&gt;
+           &gt;
+       But we sometimes want to write a begin tag without its matching
+       end tag. To do so, append a star to the tag name, it means that
+       this is an HTML complex tag, but which is parsed as a simple tag:
+           &lt;navbar:header&gt;&lt;table*&gt;&lt;tr*&gt;&lt;/navbar:header&gt;
+           &lt;navbar:footer&gt;&lt;/tr*&gt;&lt;/table*&gt;&lt;/navbar:footer&gt;
+       Note that leading and trailing stars are _not_ equivalent.
+
+ c)  Trailing star in tag name
+  * 0) acts as explained just above.
+    1) has no special meaning.  This feature is surely useless.
+
+ d)  Trailing slash in HTML tag attributes
+  * 1) are removed
+    0) are preserved.  Conformance to XHTML standard needs this option.
+
+ e)  Backslashes in strings
+  * 0) escape only 'n', 'r', 't', '"' and '\' characters.  With
+       Meta-HTML we had to print backslahes twice, e.g.
+           &lt;subst-in-string "qwerty" "([a-z])" "\\1 "&gt;
+       When this flag is set, it is possible to write
+           &lt;subst-in-string "qwerty" "([a-z])" "\1 "&gt;
+       and in fact both forms do work.
+    1) are removed as with printf, so "\1" is equivalent to "1"
+
+ f)  Defined end tag which does not match begin tag
+  * 1) close all previously begin tags. So
+           &lt;navbar:header&gt;&lt;table&gt;&lt;tr&gt;&lt;/navbar:header&gt;
+           &lt;navbar:footer&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/navbar:footer&gt;
+       is well parsed, because &lt;/navbar:header&gt; closes &lt;table&gt;
+       and &lt;tr&gt; HTML tags, even if (b.0) is set.
+    0) are invalid.  This is the most strict syntax, and it eases
+       debugging.
+
+ g)  Warnings about bad nested tags
+  * 1) are discarded
+    0) are printed
+
+ h)  Warnings about missing trailing slash in attributes
+  * 1) are discarded
+    0) are printed
+
+It is possible to write templates which work well with any combination
+of these flags.  But my priority is to provide a working WML package,
+so i will focus on providing module files fitting current default mp4h
+behaviour and (0) alternative of [a-f] cases.  Last 2 cases will be
+processed later.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01719" HREF="msg01719.shtml">Re: [LONG] Last call for comments before WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01717.shtml">Re: [BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01719.shtml">Re: [LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01717.shtml">Re: [BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01719.shtml">Re: [LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01718"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01718"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

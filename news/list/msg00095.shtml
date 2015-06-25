@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: web site troubles\? -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Sat, 14 Feb 1998 12:38:28 +0100 (MET) -->
+<!--X-Message-Id: 199802141138.MAA24853@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00095">Date Index</a>][<a href="thrd2.shtml#00095">Thread Index</a>]<br>
+[<A HREF="msg00094.shtml">Date Prev</A>][<A HREF="msg00096.shtml">Date Next</A>][<A HREF="msg00094.shtml">Thread Prev</A>][<A HREF="msg00096.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: web site troubles\?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Sat, 14 Feb 1998 12:38:25 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00093.shtml">Pine.LNX.3.95.980213152528.32376C-100000@ray.compu-aid.com</A>&gt; you wrote:
+
+&gt; Am I the only one havng trouble accessing rse's web site? I'm getting 500
+&gt; -- internal error...
+
+Yes, the machine has memory problems, so was stripped down to 32 MB in the
+last days. Now the (altough swap space is still available) Apache says under
+the Solaris 2.6 system that he cannot spawn some CGI scripts. The distrib/
+subarea is created on-the-fly from the filesystem through ePerl which is such
+CGI program. Hmmmm... really bad. But the team at ETHZ are still working on
+this problem. I hope we can get again more and non-failing RAM. Sorry for the
+broken service.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00094.shtml">bettr error report</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00096.shtml">ANNOUNCE: WML 1.6.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00094.shtml">bettr error report</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00096.shtml">ANNOUNCE: WML 1.6.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00095"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00095"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: cannot load /tmp/wml.7925.tmp2 for unprotection -->
+<!--X-From-R13: [leqqva Szelf <zleqqva22Nlnubb.pbz> -->
+<!--X-Date: Mon, 5 Apr 1999 16:26:08 +0200 (MET DST) -->
+<!--X-Message-Id: 19990405142601.12197.rocketmail@web105.yahoomail.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00547">Date Index</a>][<a href="thrd13.shtml#00547">Thread Index</a>]<br>
+[<A HREF="msg00546.shtml">Date Prev</A>][<A HREF="msg00548.shtml">Date Next</A>][<A HREF="msg00546.shtml">Thread Prev</A>][<A HREF="msg00548.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>cannot load /tmp/wml.7925.tmp2 for unprotection</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Myrddin Emrys &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 5 Apr 1999 07:26:01 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am getting the following error when trying to run
+wml:
+
+cannot load /tmp/wml.7925.tmp2 for unprotection 
+
+I checked the Mailing List archives for this and there
+was some discussion but no resolution that I could
+find.
+
+Here is the run with -v3. It seems to die in pass 1.
+
+wml -v3 contact.wml 
+** WML:Verbose: Reading RC file:
+/home/ken/pwhtest/.wmlrc
+** WML:Verbose: PASS 1:
+** WML:Verbose: source:
+/usr/local/lib/wml/exec/wml_p1_ipp 
+"-DWML_VERSION=1.6.8 (12-01-1999)"
+"-DWML_LOC_MANDIR=/usr/local/man"
+"-DWML_LOC_LIBDIR=/usr/local/lib/wml"
+"-DWML_LOC_BINDIR=/usr/local/bin"
+"-DWML_LOC_PREFIX=/usr/local"
+"-DWML_GEN_HOSTNAME=pwhinc.pwhinc.com"
+"-DWML_GEN_REALNAME=Ken MacCuish(System
+Administrator)" "-DWML_GEN_USERNAME=ken"
+"-DWML_GEN_ISOTIME=05-04-1999 11:09:59"
+"-DWML_GEN_CTIME=Mon Apr  5 11:09:59 1999 DST"
+"-DWML_SRC_REALNAME=Ken MacCuish(System
+Administrator)" "-DWML_SRC_USERNAME=ken"
+"-DWML_SRC_ISOTIME=05-02-1999 12:03:22"
+"-DWML_SRC_CTIME=Fri Feb  5 12:03:22 1999"
+"-DWML_SRC_BASENAME=contact"
+"-DWML_SRC_FILENAME=contact.wml"
+"-DWML_SRC_DIRNAME=/home/ken/pwhtest" "-DROOT=" -v -S
+/usr/local/lib/wml/include/    -o /tmp/wml.8014.tmp2
+/tmp/wml.8014.tmp1
+cannot load /tmp/wml.8014.tmp2 for unprotection at
+/usr/local/bin/wml line 604.
+
+-ken
+_________________________________________________________
+Do You Yahoo!?
+Get your free @yahoo.com address at <A  HREF="http://mail.yahoo.com">http://mail.yahoo.com</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00546.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00548.shtml">Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00546.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00548.shtml">Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00547"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00547"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

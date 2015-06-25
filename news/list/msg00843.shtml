@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2, sparc&#45;sun&#45;solaris2.6 -->
+<!--X-From-R13: cybaxnNqbvg.jvfp.rqh -->
+<!--X-Date: Fri, 9 Jul 1999 00:27:23 +0200 (MET DST) -->
+<!--X-Message-Id: 199907082227.AAA02197@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00843">Date Index</a>][<a href="thrd18.shtml#00843">Thread Index</a>]<br>
+[<A HREF="msg00842.shtml">Date Prev</A>][<A HREF="msg00844.shtml">Date Next</A>][<A HREF="msg00838.shtml">Thread Prev</A>][<A HREF="msg00846.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 9 Jul 1999 00:27:19 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2
+Operating System: sparc-sun-solaris2.6
+
+Problem Description:
+| When attempting to install WML on Solaris with gcc as
+| the only working C compiler installed, the make fails
+| with:
+| 
+| ===&gt; wml_backend/p9_slice
+| V=`./etc/newvers -l perl -D slice_vers.pl`; \
+| sed -e "s|\@SLICE_VERSION\@|$V|" &lt;slice.pod &gt;/tmp/slice; \
+| (cd /tmp; pod2man --section=1 \
+|         --center="Ralf S. Engelschall" \
+|                 --release="EN Tools" \
+|                 slice ) &gt;slice.1; rm -f /tmp/slice
+| ./etc/newvers: /tmp/getopt: not found
+| *** Error code 2
+| make: Fatal error: Command failed for target `slice.1'
+| 
+| There turns out to be 2 issues with the various
+| "newvers" scripts:
+| 
+| 1) "newvers" method of testing for the existence of
+| getopt(1) is not portable:
+| 
+|    eval "$getopt" &gt;/dev/null 2&gt;&amp;1
+| 
+| Under Solaris (and probably other System V Unixes,
+| and AIX) getopt(1) fails if it is not given any
+| arguments.
+| I checked the BSD and Solaris man pages and don't see
+| a defined behavior for getopt with no arguments.
+| BSD getopt(1) prints just "--" and exits with success,
+| while Solaris getopt(1) prints:
+| 
+|    usage: getopt legal-args $*
+| 
+| and exits with an error status.
+| I worked around this issue by changing the "newvers"
+| scripts to do this instead:
+| 
+|    eval "$getopt ''" &gt;/dev/null 2&gt;&amp;1
+| 
+| My thought is that this is more likely to elicit
+| defined behavior since getopt(1) actually has an
+| argument which it can pass to getopt(3).
+| 
+| Another option would be to test for the
+| getopt command with autoconf, and AC_OUTPUT the
+| "newvers" script(s).
+| 
+| 2) The "newvers" script in "wml_backend/p9_slice/etc"
+|    (probably an older revision?) doesn't detect the
+|    system-provided getopt(1) because of the issue
+|    above but then proceeds to attempt to compile its
+|    own using "cc" (which is hard-coded) rather than the
+|    compiler discovered by configure.  This, of course,
+|    fails on machines with gcc, but no working cc
+|    installed.  (This must be a known issue because
+|    some of the other "newvers" scripts suppled with
+|    WML do check for gcc.)
+| 
+| Thanks,
+| Dave
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00846" HREF="msg00846.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00842.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00844.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00838.shtml">Bug report: mistake in documentation of wml:.std.info</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00846.shtml">Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00843"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00843"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested ePerl tags implementation -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 10 Nov 2000 22:24:05 +0100 (MET) -->
+<!--X-Message-Id: 20001110223007.A340@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200011081859.TAA24394@opensource.ee.ethz.ch -->
+<!--X-Reference: Pine.LNX.4.10.10011082253200.29799&#45;100000@ns.xanadu.ru -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02058">Date Index</a>][<a href="thrd42.shtml#02058">Thread Index</a>]<br>
+[<A HREF="msg02057.shtml">Date Prev</A>][<A HREF="msg02059.shtml">Date Next</A>][<A HREF="msg02056.shtml">Thread Prev</A>][<A HREF="msg02059.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested ePerl tags implementation</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 10 Nov 2000 22:30:07 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Nov 08, 2000 at 11:15:16PM +0300, Petr Andreyev wrote:
+&gt; Hello!
+&gt; 
+&gt; I found the following problem when using &lt;perl... tags defined in std/tags.wml
+&gt; (I am sorry if this is a known issue): (the funny) nesting ePerl tags
+&gt; construction sometimes does not work. An example
+&gt; 
+&gt; #use wml::std::tags
+&gt; &lt;define-tag nesting endtag=required whitespace=delete&gt;
+&gt; &lt;perl&gt;
+&gt;     &lt;perl:assign:sq $body&gt;%body&lt;/perl:assign:sq&gt;
+&gt;     &lt;perl:print: $body&gt;
+&gt; &lt;/perl&gt;
+&gt; &lt;/define-tag&gt;
+&gt; &lt;nesting&gt;&lt;nesting&gt;ABC&lt;/nesting&gt;&lt;/nesting&gt;
+&gt; &lt;nesting&gt;D&lt;nesting&gt;E&lt;/nesting&gt;F&lt;/nesting&gt;
+&gt; 
+&gt; 
+&gt; This script produces:
+&gt; ABC
+&gt; 
+&gt; I found the reason for such a behaviour. Here is the diff:
+&gt; 
+&gt; 181,182c181
+&gt; &lt;    $perl_var&lt;substract &lt;get-var __perl:level /&gt; 1 /&gt; .= &lt;&lt;"EPERL_EOT";
+&gt; &lt; &lt;perl:var /&gt;\
+&gt; ---
+&gt; &gt;    $perl_var&lt;substract &lt;get-var __perl:level /&gt; 1 /&gt; .= &lt;perl:var /&gt; . &lt;&lt;"EPERL_EOT";
+&gt; 
+&gt; It works. In particular, with the new version of tags.wml the example above
+&gt; produces:
+&gt; ABC
+&gt; DEF
+
+Hi Petr,
+
+congratulations, this is a very nice report.  Your patch has been
+committed.  In order to make Perl code more robust, i also put braces
+around Perl variable name, e.g.
+   ${perl_var&lt;substract &lt;get-var __perl:level /&gt; 1 /&gt;}
+Thanks for your help.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02056" HREF="msg02056.shtml">Nested ePerl tags implementation</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02057.shtml">Open System Manager Positions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02059.shtml">[RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02056.shtml">Nested ePerl tags implementation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02059.shtml">[RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02058"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02058"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: bug in 1.7.0? -->
+<!--X-From-R13: Xbua Pnmvx <wfoNpf.oebja.rqh> -->
+<!--X-Date: Fri, 4 Jun 1999 16:55:02 +0200 (MET DST) -->
+<!--X-Message-Id: 199906041454.KAA24488@no.cs.brown.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00717">Date Index</a>][<a href="thrd15.shtml#00717">Thread Index</a>]<br>
+[<A HREF="msg00716.shtml">Date Prev</A>][<A HREF="msg00718.shtml">Date Next</A>][<A HREF="msg00716.shtml">Thread Prev</A>][<A HREF="msg00718.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: bug in 1.7.0?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: John Bazik &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Jun 1999 10:54:26 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; One trivial workaround is to replace the definition of the &lt;space&gt; tag
+&gt; in wml::des::space by
+&gt; &lt;define-tag space&gt;
+&gt; &lt;imgdot %attributes&gt;
+&gt; &lt;/define-tag&gt;
+
+That helps.  Thanks.
+
+&gt; Again, this is the normal behavior, and calls like
+&gt;    &lt;imgdot width=&lt;get-var width&gt;&gt;
+&gt; are hazardous.
+
+Hazardous, perhaps, but very convenient.  I calculate the dimensions
+of various parts of the page using the mhtml arithmetic operators,
+so &lt;get-var width&gt; isn't just a constant I can replace.
+
+I suppose I could assign the result of my calculations to an m4
+macro...
+
+	&lt;symbol WIDTH &lt;get-var width&gt;&gt;
+
+...and then use WIDTH, but that seems awkward, no?
+
+Hmmm.
+
+Thanks for the explanation.
+
+John
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00718" HREF="msg00718.shtml">Re: bug in 1.7.0?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00719" HREF="msg00719.shtml">1.6.8 compiled ok but 1.7.0 not, any idea?</A></strong>, <em>From:</em> MANEL Rodero (LCFIB Systems Programmer)</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00716.shtml">Re: bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00718.shtml">Re: bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00716.shtml">Re: bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00718.shtml">Re: bug in 1.7.0?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00717"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00717"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

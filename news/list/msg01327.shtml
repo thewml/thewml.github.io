@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Thu, 3 Feb 2000 15:19:06 +0100 (MET) -->
+<!--X-Message-Id: 200002031418.PAA10096@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: juh@pironet.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01327">Date Index</a>][<a href="thrd27.shtml#01327">Thread Index</a>]<br>
+[<A HREF="msg01326.shtml">Date Prev</A>][<A HREF="msg01328.shtml">Date Next</A>][<A HREF="msg01340.shtml">Thread Prev</A>][<A HREF="msg01328.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 03 Feb 2000 15:18:58 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thursday 3 February 2000, at 12 h 7, the keyboard of Jan Ulrich Hasecke 
+&lt;juh@pironet.de&gt; wrote:
+
+&gt; &gt; There is a Debian package of wml, which is well-maintained (and is used for
+&gt; &gt; www.debian.org). There is no need to do it yourself.
+&gt; 
+&gt; wml-1.7.4? apt-get does not find an wml-1.7.4 
+
+The current version is 1.7.4. 'apt-get install' takes a package name (here 
+'wml') as an argument. Perl is an exception (see later) because you may need 
+several Perl installed simultaneously if you use binary Perl modules.
+
+&gt; &gt; It seems many Perl parts are missing. Are you sure you installed 'perl' and
+&gt; &gt; not only the default 'perl-base'?
+&gt; 
+&gt; Sure? Never! I am using dselect and apt-get only since the new
+&gt; century, so how could I be sure? 
+
+apt-get install perl-5.005
+
+&gt; I wonder that ./configure does not complain, when there are missing
+&gt; perl-packages.
+
+Probably because only Debian uses this trimmed-down perl-base (these Perl modules are in the standard Perl distribution).
+ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01328" HREF="msg01328.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01326.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01328.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01340.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01328.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01327"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01327"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

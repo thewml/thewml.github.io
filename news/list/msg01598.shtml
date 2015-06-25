@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 22 May 2000 21:22:44 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000522211256.25343A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0005221506050.15267&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01598">Date Index</a>][<a href="thrd33.shtml#01598">Thread Index</a>]<br>
+[<A HREF="msg01597.shtml">Date Prev</A>][<A HREF="msg01599.shtml">Date Next</A>][<A HREF="msg01596.shtml">Thread Prev</A>][<A HREF="msg01599.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 May 2000 21:22:31 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 22 May 2000, Franz Knipp wrote:
+
+&gt; Hello!
+&gt; 
+&gt; On Mon, 22 May 2000, Roland Rosenfeld wrote:
+&gt; &gt; &lt;ifeq this="0" that="0"&gt;
+&gt; &gt;   &lt;then&gt;
+&gt; &gt;      foo
+&gt; &gt;   &lt;/then&gt;
+&gt; &gt;   &lt;else
+&gt; &gt;      bar
+&gt; &gt;   &lt;/else&gt;
+&gt; &gt; &lt;/ifeq&gt;
+&gt; 
+&gt; The &lt;when&gt; tag exists already. What do you think of:
+&gt; 
+&gt; &lt;when &lt;string-eq "&lt;get-var this&gt;" "&lt;get-var that&gt;"&gt;&gt; # exists
+&gt; foo
+&gt; &lt;else&gt;                                               # doesn't exist yet
+&gt; bar
+&gt; &lt;/when&gt;
+&gt; 
+&gt; This is shorter and needs only the implementation of an &lt;else&gt; tag (and
+&gt; I'd like to suggest an &lt;elsewhen&gt;, too)...
+
+Sounds great! I do not know whether it is doable (next time you could
+provide a patch too ;-))
+
+I am quite conservative and this suggestion does not break previous
+files, it is IMO a very nice idea.
+If there is no objection, i'll try to implement it.
+
+There could be some discussion whether the &lt;else&gt; clause is a single or
+complex tag.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01599" HREF="msg01599.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01596" HREF="msg01596.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01597.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01599.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01596.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01599.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01598"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01598"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

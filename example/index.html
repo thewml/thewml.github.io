@@ -1,0 +1,103 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Examples</title>
+<link rel="stylesheet" href="../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 21:44:42"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="../">Title</a>
+</li>
+<li>
+<a href="../about/">About</a>
+</li>
+<li>
+<a href="../news/">News</a>
+</li>
+<li>
+<a href="../docs/">Docs</a>
+</li>
+<li>
+<b>Example</b>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="demo.html">Demo Pages</a>
+</li>
+<li>
+<a href="refs.html">References</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Examples</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="demo.html">Demo Pages</a>
+</td>
+<td>
+<a href="refs.html">Referencess</a>
+</td>
+</tr>
+</table>
+<h2>JumpStart: All-In-One Example</h2>
+<p>
+This example shows most of the typical features of WML in just
+<i>a single input file</i>:
+</p>
+<ol>
+<li><b class="smallcaps">Source:</b><br />
+The WML source file...
+<br />
+<a href="demo.wml.txt">demo.wml</a>
+</li>
+<li>
+<b class="smallcaps">Generation Process:</b><br />
+is translated via a simple `wmk' call...<br />
+<div class="box">
+<tt>$ wmk -f demo.wml<br />
+wml -n '-o(ALL-LANG_*)+LANG_EN:demo.en.html' '-o(ALL-LANG_*)+LANG_DE:demo.de.html' demo.wml<br />
+$ _<br />
+</tt>
+</div>
+</li>
+<li><b class="smallcaps">Output:</b><br />
+..into the following two output files.
+<br />
+a) <a href="sample/demo.en.html">demo.en.html</a><br />
+b) <a href="sample/demo.de.html">demo.de.html</a><br />
+</li>
+</ol>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

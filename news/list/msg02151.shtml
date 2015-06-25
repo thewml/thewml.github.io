@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: feature patch -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 27 Feb 2001 13:43:57 +0100 (MET) -->
+<!--X-Message-Id: Pine.GSO.4.31.0102271334420.5866&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02151">Date Index</a>][<a href="thrd44.shtml#02151">Thread Index</a>]<br>
+[<A HREF="msg02150.shtml">Date Prev</A>][<A HREF="msg02152.shtml">Date Next</A>][<A HREF="msg02150.shtml">Thread Prev</A>][<A HREF="msg02216.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>feature patch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 27 Feb 2001 13:43:42 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+In our wml setup I use custom preprocessor and postprocessor
+scripts, defined via -P and -E in .wmlrc
+
+Because I like to keep my preprocessor scripts within the web tree,
+I thought it would be usefull if $(ROOT) and other '-D(efined)'
+variables would work there too ...
+
+I have added this functionality ...
+
+my .wmlrc file now reads like this:
+
+-----.wmlrc-------
+-DROOT~.
+-E $(ROOT)/.wml/htmlfix.sh
+-P $(ROOT)/.wml/headfix.pl
+------------------
+
+and here is the patch (for 2.0.4) ...
+
+--- wml.orig    Tue Feb 27 13:20:30 2001
++++ wml Tue Feb 27 13:33:37 2001
+@@ -84,6 +84,17 @@
+     return $str;
+ }
+
++# replace $(xxx) with -Dxxx
++sub var_repl {
++    my $string = shift;
++    my $vars = shift;
++    foreach my $v (@$vars){
++        my ($key,$value) = split /=/, $v, 2;
++        $string =~ s/\$\($key\)/$value/g;
++    }
++    return $string;
++}
++
+ sub usage {
+     my ($progname) = @_;
+
+@@ -1047,6 +1058,7 @@
+ }
+
+ #   determine prologs
++map {$_=var_repl($_, \@opt_D)} @opt_P; # replace $(xxx) with -Dxxx
+ $prolog = '';
+ foreach $p (@opt_P) {
+     $prolog .= " -P '$p'";
+@@ -1318,9 +1330,9 @@
+          }
+     }
+     #   run epilog filters
++    map {$_=var_repl($_, \@opt_D)} @opt_E; # replace $(xxx) with -Dxxx
+     foreach $o (@outfiles) {
+         foreach $e (@opt_E) {
+-
+             if ($e =~ m|^htmlinfo(.*)|) {
+                 $e = "/usr/pack/wml-2.0.4-za/lib/exec/wml_aux_htmlinfo$1";
+             }
+
+
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02216" HREF="msg02216.shtml">including files only once</A></strong>, <em>From:</em> Anuradha Ratnaweera</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02150.shtml">&lt;no subject&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02152.shtml">Using information in other documents</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02150.shtml">&lt;no subject&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02216.shtml">including files only once</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02151"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02151"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

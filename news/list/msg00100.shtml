@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml::std::lang -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Wed, 18 Feb 1998 07:23:49 +0100 (MET) -->
+<!--X-Message-Id: 19980217234832.58307@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00100">Date Index</a>][<a href="thrd3.shtml#00100">Thread Index</a>]<br>
+[<A HREF="msg00099.shtml">Date Prev</A>][<A HREF="msg00101.shtml">Date Next</A>][<A HREF="msg02534.shtml">Thread Prev</A>][<A HREF="msg00101.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml::std::lang</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 17 Feb 1998 23:48:32 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hoi,
+
+I just looked at the manpage for "wml::std::lang" because i want to
+translate some pages of mine. There is the:
+
+&lt;href name="The Hyperlink" url="&lt;lang:star: index.*.html&gt;"&gt;
+
+method for hyperlinks. This is lacking one (for me important) feature. I
+don't want to translate my _whole_ tree at once, so i'd like it to make
+links to "index.de.html" and "index.en.html" only if they exist. If one
+of them doesn't, it should just link to "index.html" (as a form of
+fallback) - Does anybody here have an idea how to accomplish that ?
+
+CU,
+    Sec
+-- 
+stop reading here
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00101" HREF="msg00101.shtml">Re: wml::std::lang</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00099.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00101.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02534.shtml">nested navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00101.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00100"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00100"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

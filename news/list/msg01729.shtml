@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [2.0.1] How to get outputfile name? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 22 Jun 2000 22:59:34 +0200 (MET DST) -->
+<!--X-Message-Id: 20000622230127.B31543@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000622114605.M18991@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01729">Date Index</a>][<a href="thrd36.shtml#01729">Thread Index</a>]<br>
+[<A HREF="msg01728.shtml">Date Prev</A>][<A HREF="msg01730.shtml">Date Next</A>][<A HREF="msg01727.shtml">Thread Prev</A>][<A HREF="msg01764.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [2.0.1] How to get outputfile name?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Jun 2000 23:01:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 22, 2000 at 11:46:05AM +0200, Roland Rosenfeld wrote:
+
+&gt; Hi!
+&gt; 
+&gt; At the moment I create various language versions of my pages using
+&gt; shebang headers like this:
+&gt; 
+&gt; #!wml -o (ALL-LANG_*)+LANG_DE:%BASE.html \
+&gt;       -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+&gt; 
+&gt; Now I want to write the URL of the created file into the created file
+&gt; (like "This is URL http://...").  For this I need a mechanism to find
+&gt; out the name of the output file.  Until now I only found how to get
+&gt; the inputfile name (using the variables WML_SRC_DIRNAME,
+&gt; WML_SRC_FILENAME, WML_SRC_BASENAME), but is there an easy way to get
+&gt; the output file name?  Okay, I could implement some magic based using
+&gt; the SRC variables and using some slices code like
+&gt;  $(WML_SRC_BASENAME)&lt;en: -en&gt;.html 
+&gt; or something like this, but this heavily depends on the shebang line
+&gt; in the input file (which may change in the future), while I intend to
+&gt; implement this in the above include file...
+&gt; 
+&gt; Any ideas?
+
+Hi Roland,
+
+it is impossible to guess output filenames in general cases, because
+they are determined in the last pass (wml_p9_slice).
+Have a look at wml::std::lang, especially the &lt;lang:star:slice:&gt; tag.
+A shebang line is dynamically created from all defined languages, and is
+put at the beginning of the document with diversions.
+
+But take care that playing with wml_p9_slice instead of wml shebang line
+prevents WMk from doing its job.
+
+You could also write
+  #!wml -o (ALL-LANG_*)+LANG_DE:%BASE-de.html \
+        -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+and
+  <A  HREF="http://domain.com/path/to/">http://domain.com/path/to/</A>&lt;lang:star: $(WML_SRC_BASENAME)-*.html&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01727" HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01728.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01730.shtml">[ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01764.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01729"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01729"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

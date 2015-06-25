@@ -1,0 +1,81 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Recommended handling of sites with subdirs? -->
+<!--X-From-R13: "gev§u" <cergglgevfuNlnubb.pbz> -->
+<!--X-Date: Fri, 22 Jun 2001 01:58:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20010621235722.72368.qmail@web12506.mail.yahoo.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 3B309F20.FA0DAAAA@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02269">Date Index</a>][<a href="thrd46.shtml#02269">Thread Index</a>]<br>
+[<A HREF="msg02268.shtml">Date Prev</A>][<A HREF="msg02270.shtml">Date Next</A>][<A HREF="msg02266.shtml">Thread Prev</A>][<A HREF="msg02267.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Recommended handling of sites with subdirs?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;tri§h&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 21 Jun 2001 16:57:22 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<P>hi stephan!
+<P>i'm sorry but i think you sent your email to the wrong person.
+<P>i'm not denis.
+<P>sincerely yours,
+<P>trish
+<P>&nbsp; <B><I>Stephan Petersen &lt;sp@gtt.lth.rwth-aachen.de&gt;</I></B> wrote: 
+<BLOCKQUOTE style="BORDER-LEFT: #1010ff 2px solid; MARGIN-LEFT: 5px; PADDING-LEFT: 5px"><BR><BR>Hi Denis,<BR><BR>thanks a lot for your hints.<BR><BR>&gt; Here are some basics. Put<BR>&gt; -I templates<BR>&gt; in your top-level .wmlrc after moving your macro files under templates/.<BR>&gt; Then you may include them via #include "file".<BR>&gt; <BR>&gt; And the line<BR>&gt; -D ROOT~.<BR>&gt; in that .wmlrc lets you define relative links, because $(ROOT) get<BR>&gt; this way always expanded to `\.|\.\.(/\.\.)*' (with a Perl-regexp<BR>&gt; syntax) to match the top-level directory (see last section in<BR>&gt; wml_intro(7)).<BR><BR><BR>Actually, I'm using both features already, but I wasn't aware of<BR>what exactly -D ROOT~. does :-) I'll have to check it out in more<BR>detail.<BR><BR>Stephan<BR><BR><BR>--<BR>Stephan Petersen sp@gtt.lth.rwth-aachen.de<BR><BR>&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;<BR>&gt;-=-=-=- http://gttserv.lth.rwth-aachen.de/gtt/ =-=-=-=-&lt;<BR>______________________________________________________________________<BR>Website META Language (WML) www.engelschall.com/sw/wml/<BR>Official Support Mailing List sw-wml@engelschall.com<BR>Automated List Manager majordomo@engelschall.com</BLOCKQUOTE><BR><BR><P>Friend§ for keep§!!!<BR>Friend§ till hell freeze§ over!!!<BR>Learn from the mistake§ of other§, life i§ too §hort to commit them all by your§elf!!!</P>
+<P>Life is like a roll of tissue paper, You will never know how much you have wasted, until you get to the end, and its sad to know that much of it is wasted on shit.</P>
+<P>&nbsp;</P><p><br><hr size=1><b>Do You Yahoo!?</b><br>
+Get personalized email addresses from Yahoo! Mail - only $35 
+a year!<BR><a href="http://personal.mail.yahoo.com/?.refer=tagline">http://personal.mail.yahoo.com/</a>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02266" HREF="msg02266.shtml">Re: Recommended handling of sites with subdirs?</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02268.shtml">Warning: new WML 2.0.7 tarball</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02270.shtml">Time to edit your template files (or: how to avoid being smart-tagged)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02266.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02267.shtml">WML 2.0.7</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02269"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02269"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

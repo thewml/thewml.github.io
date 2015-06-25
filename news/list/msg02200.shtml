@@ -1,0 +1,159 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.6, cygwin 1.1.8 -->
+<!--X-From-R13: nzryvagrNnyvf.pbz -->
+<!--X-Date: Sat, 14 Apr 2001 15:59:06 +0200 (MET DST) -->
+<!--X-Message-Id: 200104101545.RAA00557@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02200">Date Index</a>][<a href="thrd45.shtml#02200">Thread Index</a>]<br>
+[<A HREF="msg02199.shtml">Date Prev</A>][<A HREF="msg02201.shtml">Date Next</A>][<A HREF="msg02201.shtml">Thread Prev</A>][<A HREF="msg02202.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.6, cygwin 1.1.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 10 Apr 2001 17:45:56 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.6
+Operating System: cygwin 1.1.8
+
+Problem Description:
+| hello,
+| 
+| I am on cygwin. I was able to compile the eperl 2.1.0 after making a symbolic link libperl.a -&gt; libperl5_6_1.a and manually fiving the perl version number in the configure script. It fails the tests, I am looking into. 
+| 
+| Unfortunately I cannot compile the wml, be it 1.7.4, 2.0.6 or 2.1a1 because some linking symbols - see below.
+| 
+| Please let me know if you need more info
+| 
+| Regards,
+| A.
+| 
+| 
+| 
+| 
+| $ uname -a
+| CYGWIN_NT-4.0 AMELINTE 1.1.7(0.31/3/2) 2000-12-25 12:39 i686 unknown
+| 
+| --------------------------------------------------------------------
+| $ perl -v
+| 
+| This is perl, v5.6.1 built for cygwin
+| (with 1 registered patch, see perl -V for more detail)
+| 
+| Copyright 1987-2000, Larry Wall
+| 
+| Perl may be copied only under the terms of either the Artistic License or the
+| GNU General Public License, which may be found in the Perl 5 source kit.
+| 
+| Complete documentation for Perl, including FAQ lists, should be found on
+| this system using `man perl' or `perldoc perl'.  If you have access to the
+| Internet, point your browser at <A  HREF="http://www.perl.com/">http://www.perl.com/</A>, the Perl Home Page.
+| 
+| 
+| $ perl -V
+| Summary of my perl5 (revision 5.0 version 6 subversion 1) configuration:
+|   Platform:
+|     osname=cygwin, osvers=1.1.6(0.3032), archname=cygwin
+|     uname='cygwin_nt-5.0 fifer 1.1.6(0.3032) 2000-11-21 21:00 i686 unknown '
+|     config_args='-de'
+|     hint=recommended, useposix=true, d_sigaction=define
+|     usethreads=undef use5005threads=undef useithreads=undef usemultiplicity=unde
+| f
+|     useperlio=undef d_sfio=undef uselargefiles=define usesocks=undef
+|     use64bitint=undef use64bitall=undef uselongdouble=undef
+| 
+| ---------------------------------------------------------------------
+| gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -DHAS_SBRK_PROTO -fno-strict-aliasing -I/u
+| sr/lib/perl5/5.6.1/cygwin/CORE -I. -c eperl_powered.c
+| gcc -s -s -L/usr/local/lib -L/usr/lib/perl5/5.6.1/cygwin/CORE  -o eperl eperl_ma
+| in.o eperl_perl5.o eperl_parse.o eperl_pp.o eperl_sys.o eperl_http.o eperl_getop
+| t.o eperl_debug.o eperl_config.o eperl_version.o eperl_readme.o eperl_license.o
+| eperl_logo.o eperl_powered.o /usr/lib/perl5/5.6.1/cygwin/auto/DynaLoader/DynaLoa
+| der.a -lperl -lgdbm -lcrypt
+| eperl_perl5.o(.text+0x52): undefined reference to `PL_defoutgv'
+| eperl_perl5.o(.text+0xd3): undefined reference to `PL_curstash'
+| eperl_perl5.o(.text+0xeb): undefined reference to `PL_curstash'
+| collect2: ld returned 1 exit status
+| make[2]: *** [eperl] Error 1
+| make[2]: Leaving directory `//Z/newCD/work/cygwin/wml/wml-2.1a1/wml_backend/p3_e
+| perl'
+| make[1]: *** [all] Error 1
+| make[1]: Leaving directory `//Z/newCD/work/cygwin/wml/wml-2.1a1/wml_backend'
+| make: *** [all] Error 1
+| 
+| 
+| amelinte@AMELINTE ~/wml/wml-2.1a1
+| $ ls -l /usr/lib/perl5/5.6.1/cygwin/CORE/libperl.a
+| lrw-r--r--   1 amelinte planetde       25 Apr 10 10:05 /usr/lib/perl5/5.6.1/cygw
+| in/CORE/libperl.a -&gt; libperl5_6_1.a
+| 
+| amelinte@AMELINTE ~/wml/wml-2.1a1
+| $ nm /usr/lib/perl5/5.6.1/cygwin/CORE/libperl5_6_1.a | grep curstash
+| 00000000 I __imp__PL_curstash
+| 
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02202" HREF="msg02202.shtml">Re: [BUG REPORT] WML 2.0.6, cygwin 1.1.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02199.shtml">[BUG REPORT] WML 2.0.2, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02201.shtml">Re: [BUG REPORT] WML 2.0.2, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02201.shtml">Re: [BUG REPORT] WML 2.0.2, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02202.shtml">Re: [BUG REPORT] WML 2.0.6, cygwin 1.1.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02200"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02200"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

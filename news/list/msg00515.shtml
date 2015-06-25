@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <info> question -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 29 Mar 1999 12:01:47 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990329115146.29680B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9903281903001.7926&#45;100000@kanta.smece.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00515">Date Index</a>][<a href="thrd12.shtml#00515">Thread Index</a>]<br>
+[<A HREF="msg00514.shtml">Date Prev</A>][<A HREF="msg00516.shtml">Date Next</A>][<A HREF="msg00514.shtml">Thread Prev</A>][<A HREF="msg00516.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;info&gt; question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 29 Mar 1999 11:56:15 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 28 Mar 1999, Davor Cengija wrote:
+
+&gt;        i'm working locally on my kanta.smece.hr linux machine, login
+&gt;        'davor'. since kanta.smece.hr is not legal name, the address
+&gt;        davor@kanta.smece.hr doesn't exist in the real world.
+&gt; 
+&gt;        my real e-mail address is dcengija@public.srce.hr so i putted
+&gt;        this in my ~/.wmlrc in order to get that address appearing in
+&gt;        &lt;info&gt;, like this:
+&gt; 
+&gt; -D WML_GEN_REALNAME="Davor Cengija"
+&gt; -D WML_GEN_USERNAME=dcengija
+&gt; -D WML_GEN_HOSTNAME=public.srce.hr
+[...]
+
+Hi Davor,
+
+try this:
+-D WML_SRC_REALNAME="Davor Cengija"
+-D WML_SRC_USERNAME=dcengija
+
+and write &lt;info domainname="public.srce.hr"&gt;.
+
+This is because all WML_GEN_* variables are ``generated'' while the
+WML_SRC_* ones are given by the source files. If the latter are not
+defined, the former ones are used. The WML_SRC_HOSTNAME doesn't exist,
+so you have to specify your domain name with the domainname attribute.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00514" HREF="msg00514.shtml">&lt;info&gt; question</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00514.shtml">&lt;info&gt; question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00516.shtml">WML for Windows 98</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00514.shtml">&lt;info&gt; question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00516.shtml">WML for Windows 98</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00515"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00515"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

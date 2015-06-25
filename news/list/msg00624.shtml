@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: It's time... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 7 May 1999 11:14:57 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990507110851.9710A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E10fgbj&#45;0002WY&#45;00@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00624">Date Index</a>][<a href="thrd14.shtml#00624">Thread Index</a>]<br>
+[<A HREF="msg00623.shtml">Date Prev</A>][<A HREF="msg00625.shtml">Date Next</A>][<A HREF="msg00614.shtml">Thread Prev</A>][<A HREF="msg00625.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>It's time...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 May 1999 11:09:34 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+for a new release ;-)
+
+I am planning it on early June. There are still some work in progress,
+any help would be really appreciated. Here is my TODO list :
+
+* Upgrade the current Perl modules 
+* Test tidy &lt;URL:<A  HREF="http://www.w3.org/People/Raggett/tidy/">http://www.w3.org/People/Raggett/tidy/</A>&gt;
+* Test the HTML::Clean Perl module
+* Write tons of documentation ;-)
+
+I decided to let intact the order of processing. Slices will remain the
+last pass, it's too hazardous to change this. To fix the well-known
+problem of images+slices+Pass7, the pass 3 could write
+  [LANG_XX:&lt;img src="foo.xx.gif" alt="xxxx"&gt;:]
+  [LANG_YY:&lt;img src="foo.yy.gif" alt="yyyy"&gt;:]
+instead of
+  &lt;img src="foo.[LANG_XX:xx:][LANG_YY:yy:].gif"
+       alt="[LANG_XX:xx:][LANG_YY:yy:]"&gt;
+
+Does somebody still implements this?
+
+Please let me know now if you want other features included in the
+next release.
+
+Cheers.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00625" HREF="msg00625.shtml">Re: It's time...</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="00627" HREF="msg00627.shtml">Re: It's time...</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00623.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00625.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00614.shtml">Re: Bug in gfont?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00625.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00624"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00624"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WAP support/conversion? -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Mon, 23 Oct 2000 13:02:41 +0200 (MET DST) -->
+<!--X-Message-Id: 20001023095833.B1201@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39F3454C.FBFA994@snafu.de -->
+<!--X-Reference: 20001023104221.A14136@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02035">Date Index</a>][<a href="thrd41.shtml#02035">Thread Index</a>]<br>
+[<A HREF="msg02034.shtml">Date Prev</A>][<A HREF="msg02036.shtml">Date Next</A>][<A HREF="msg02034.shtml">Thread Prev</A>][<A HREF="msg02033.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WAP support/conversion?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 23 Oct 2000 09:58:33 -0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; do not know for WAP/WML, but writing XHTML documents is quite easy with
+&gt; WML (the only real difference in template files is that simple tags must
+&gt; be terminated by a slash, and compile with ``-W2,--expansion=0'').
+Hi Denis,
+
+sorry I should have mentioned that I know about the XML 
+conformity of WAP. Currently I'm fiddling with breaking
+the WAP files into so-called cards. The whole file is
+usually downloaded by a WAP device, but you have to browse
+to smaller pieces (cards) than. 
+
+&lt;card id="1" title="xx"&gt;
+Content
+&lt;/card&gt;
+
+&lt;card id="2" title="yy"&gt;
+Content
+&lt;/card&gt;
+
+I have the idea to use
+the &lt;toc&gt; tag to provide identies (anchors) to the 
+&lt;h*&gt; tags and than converting them by 
+means of PERL to &lt;card&gt; tags.
+
+Werner
+-- 
+-=* MobiliX  - Home of the Laptop-Guide <A  HREF="http://mobilix.org">http://mobilix.org</A>  *=-
+-=* Xtops.DE - Laptops and PDAs with Linux <A  HREF="http://Xtops.DE">http://Xtops.DE</A>  *=-
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02032" HREF="msg02032.shtml">WAP support/conversion?</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02034" HREF="msg02034.shtml">Re: WAP support/conversion?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02034.shtml">Re: WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02036.shtml">Re: possible patch to WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02034.shtml">Re: WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02033.shtml">minor problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02035"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02035"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

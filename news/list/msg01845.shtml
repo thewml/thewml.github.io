@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ePerl and language&#45;dependent output -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Tue, 18 Jul 2000 12:35:17 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007181237440.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717181520.B10794@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01845">Date Index</a>][<a href="thrd37.shtml#01845">Thread Index</a>]<br>
+[<A HREF="msg01844.shtml">Date Prev</A>][<A HREF="msg01846.shtml">Date Next</A>][<A HREF="msg01829.shtml">Thread Prev</A>][<A HREF="msg01846.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ePerl and language-dependent output</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 12:43:03 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Denis,
+
+&gt; If you want, try the code below.  The lang:current variable should
+&gt; always contain current language.
+
+thanks for the code, that's a *very* useful snippet!
+
+Now I can write something like this:
+
+[...]
+
+&lt;define-tag perl_get_current_lang&gt;
+&lt;perl&gt;
+    my $current_language = qq/&lt;get-var lang:current&gt;/;
+    print "The current language is $current_language\n";
+&lt;/perl&gt;
+&lt;/define-tag&gt;
+
+[...]
+
+&lt;define-tag get_current_lang&gt;
+  &lt;d&gt;
+    &lt;perl_get_current_lang&gt;
+  &lt;/d&gt;
+  &lt;e&gt;
+    &lt;perl_get_current_lang&gt;
+  &lt;/e&gt;
+&lt;/define-tag&gt;
+
+[...]
+
+&lt;get_current_lang&gt;
+
+[...]
+
+
+Is there a way to make the per-language calls inside 
+&lt;define-tag get_current_lang&gt; more elegant and "automatic" (so that when
+new languages are addes, they're automatically processed too)?
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01846" HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01828" HREF="msg01828.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01844.shtml">Re: [wml] [wml] Problems with quotes, mp4h and ePerl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01829.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01845"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01845"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

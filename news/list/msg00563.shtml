@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: bugfix compile 1.6.8 and perl 5.00502 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 12 Apr 1999 09:24:29 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990412091454.1044A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9904091144170.11085&#45;200000@tui.berlin.adviser.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00563">Date Index</a>][<a href="thrd13.shtml#00563">Thread Index</a>]<br>
+[<A HREF="msg00562.shtml">Date Prev</A>][<A HREF="msg00564.shtml">Date Next</A>][<A HREF="msg00561.shtml">Thread Prev</A>][<A HREF="msg00560.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: bugfix compile 1.6.8 and perl 5.00502</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Apr 1999 09:18:55 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 9 Apr 1999, Frank Conrad wrote:
+
+&gt; Hallo,
+&gt; 
+&gt; um wml richtig ueberstzten zu koennen ist beiliegender Patch notwendig.
+&gt; Sonst brich er beim eperl ab ;-(
+
+Thanks Frank,
+
+the second change must be
++#if AC_perl_vnum &gt;= 500476
++    dTHR;
++#endif
+
+otherwise it won't compile with perl5_004.
+This is a known bug in wml 1.6.8 and has already been fixed.
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00561" HREF="msg00561.shtml">bugfix compile 1.6.8 and perl 5.00502</A></strong>, <em>From:</em> Frank Conrad</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00562.shtml">Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00564.shtml">BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00561.shtml">bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00560.shtml">[BUG REPORT] WML 1.6.8, Debian Linux 2.0 (kernel=2.2.5)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00563"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00563"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

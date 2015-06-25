@@ -1,0 +1,165 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: mnhpxreNrr.rgum.pu -->
+<!--X-Date: Mon, 17 Jul 2000 16:58:07 +0200 (MET DST) -->
+<!--X-Message-Id: 200007171335.PAA03805@nova.ee.ethz.ch -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01819">Date Index</a>][<a href="thrd10.shtml#01819">Thread Index</a>]<br>
+[<A HREF="msg01818.shtml">Date Prev</A>][<A HREF="msg01820.shtml">Date Next</A>][<A HREF="msg01706.shtml">Thread Prev</A>][<A HREF="msg01824.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 15:35:09 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.2 (22-Jun-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Fritz Zaucker
+Reply-To: zaucker@nova.ethz.ch
+
+PROBLEM DESCRIPTION:
+
+Isn't
+
+      &lt;define-tag endtag=required&gt;
+
+suppossed to behave the same as
+
+      &lt;define-container&gt;
+
+The following (stripped down) definition works with &lt;define-container&gt;
+and not with &lt;define-tag&gt;:
+
+&lt;define-container MAGICK whitespace=delete&gt;
+&lt;perl&gt;
+BEGIN{unshift @INC, "/usr/pack/imagemagick-4.2.9-to/solaris/perl/"};
+use Image::Magick;
+&lt;/perl&gt;
+&lt;/define-container&gt;
+
+Cheers,
+Fritz
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sun4u-sun-solaris2.6
+    Perl: 5.005 (/usr/sepp/bin/perl)
+    User: local@drwho.ethz.ch
+    Date: 23-Jun-2000
+Built Location:
+    Prefix: /usr/pack/wml-2.0.2-za
+    BinDir: /usr/pack/wml-2.0.2-za/bin
+    LibDir: /usr/pack/wml-2.0.2-za/lib
+    ManDir: /usr/pack/wml-2.0.2-za/man
+
+Used Perl System:
+Summary of my perl5 (revision 5.0 version 6 subversion 0) configuration:
+  Platform:
+    osname=solaris, osvers=2.5.1, archname=sun4-solaris
+    uname='sunos kuru.ee.ethz.ch 5.5.1 generic_103640-27 sun4u sparc sunw,ultra-1 '
+    config_args='-ds -e -Dcc=cc -Dprefix=/usr/pack/perl-solaris251-5.6.0-ak -Uinstallusrbinperl -Uuseshrplib -Dperladmin=karrer@iis.ee.ethz.ch -Dloclibpth=/usr/local/lib -Dlocincpth=/usr/local/include -Dperlpath=/usr/pack/perl-solaris251-5.6.0-ak/bin/perl -Dstartperl=#!/usr/pack/perl-solaris251-5.6.0-ak/bin/perl'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef use5005threads=undef useithreads=undef usemultiplicity=undef
+    useperlio=undef d_sfio=undef uselargefiles=define 
+    use64bitint=undef use64bitall=undef uselongdouble=undef usesocks=undef
+  Compiler:
+    cc='cc', optimize='-O', gccversion=
+    cppflags='-I/usr/local/include'
+    ccflags ='-I/usr/local/include '
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=4
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib '
+    libpth=/usr/local/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -lgdbm -ldb -ldl -lm -lc -lcrypt -lsec
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-KPIC', lddlflags='-G -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options: USE_LARGE_FILES
+  Built under solaris
+  Compiled at Apr  5 2000 13:08:03
+  @INC:
+    /usr/pack/perl-solaris251-5.6.0-ak/lib/5.6.0/sun4-solaris
+    /usr/pack/perl-solaris251-5.6.0-ak/lib/5.6.0
+    /usr/pack/perl-solaris251-5.6.0-ak/lib/site_perl/5.6.0/sun4-solaris
+    /usr/pack/perl-solaris251-5.6.0-ak/lib/site_perl/5.6.0
+    /usr/pack/perl-solaris251-5.6.0-ak/lib/site_perl
+    .
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01824" HREF="msg01824.shtml">Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01818.shtml">Re: Question about nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01820.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01706.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01824.shtml">Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01819"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01819"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

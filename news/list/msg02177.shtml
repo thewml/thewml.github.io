@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG&#45;REPORT WML 2.1a1: .wmlrc ignored? -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Fri, 16 Mar 2001 14:28:07 +0100 (MET) -->
+<!--X-Message-Id: 20010316142758.C31355@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010311013751.A18320@imacs.polytechnique.fr -->
+<!--X-Reference: 20010312005421.B19639@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010316011806.B1318@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02177">Date Index</a>][<a href="thrd44.shtml#02177">Thread Index</a>]<br>
+[<A HREF="msg02176.shtml">Date Prev</A>][<A HREF="msg02178.shtml">Date Next</A>][<A HREF="msg02176.shtml">Thread Prev</A>][<A HREF="msg02161.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 16 Mar 2001 14:27:58 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Denis Barbier wrote:
+&gt; On Mon, Mar 12, 2001 at 12:54:21AM +0100, Axel Beckert wrote:
+&gt; &gt; WML 2.1a1 seems to ignore all .wmlrc files. Neither my -I directives
+&gt; &gt; nor --verbose are noticed when appearing inside a .wmlrc file in the
+&gt; &gt; same directory as the wml file is located as well as inside .wmlrc
+&gt; &gt; files somewhere else between / and that directory.
+
+BTW: WML 2.0.6 works fine with same command line commands and files...
+
+&gt; very strange, it works for me.
+&gt; You may run wml with -v9 command-line flag to check if files are loaded
+&gt; or not:
+&gt; 
+&gt;    $ cd /tmp
+&gt;    $ : &gt; .wmlrc
+&gt;    $ wml -v9 &lt; /dev/null
+
+OK, this command line command includes the .wmlrc. I'll have a closer
+look at the problem. You'll here from me, probably after my holidays. :-)
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02165" HREF="msg02165.shtml">[wml] New release (unstable)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02174" HREF="msg02174.shtml">BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02176" HREF="msg02176.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02176.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02178.shtml">patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02176.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02161.shtml">Perl parsing error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02177"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02177"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

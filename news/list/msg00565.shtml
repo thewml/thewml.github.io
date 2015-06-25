@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUGREPORT: Umlaute in gfont -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 12 Apr 1999 10:56:55 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990412103121.1446A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990412090633.730A&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00565">Date Index</a>][<a href="thrd13.shtml#00565">Thread Index</a>]<br>
+[<A HREF="msg00564.shtml">Date Prev</A>][<A HREF="msg00566.shtml">Date Next</A>][<A HREF="msg00564.shtml">Thread Prev</A>][<A HREF="msg00568.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUGREPORT: Umlaute in gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Apr 1999 10:50:50 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 12 Apr 1999, Jan Ulrich Hasecke wrote:
+
+&gt; in template.wml:
+&gt; &lt;define-tag kapitelname&gt; 
+&gt; &lt;gfont face=CMRoman size=2 color=#000000&gt;%0&lt;/gfont&gt; 
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; in the text-file inside a lang-environment &lt;de&gt;:
+&gt; &lt;kapitelname "HEADLINE"&gt;
+&gt; 
+&gt; When I use no Umlaut, everything works fine.
+&gt; When I use a o-Umlaut it works,
+&gt; but with a- and u-Umlaut the PASS 3 fails as mentioned.
+[...]
+
+&gt;From the gfont manpage, i read
+
+  RESTRICTIONS
+
+  Currently gFONT directly used the ASCII charset to access the
+  characterpositions in the font. The correct way would be to use the
+  corresponding character encoding from TeX. The result is that umlauts
+  and other characters cannot be used.
+
+I have put on
+  <A  HREF="ftp://ftp.imacs.polytechnique.fr/pub/tmp/gfont-char.patch.gz">ftp://ftp.imacs.polytechnique.fr/pub/tmp/gfont-char.patch.gz</A>
+a patch i wrote for writing 8-bit characters with gFont.
+
+You will need the T1 encoded fonts (known as EC fonts).
+Either replace in the Fontmap file the CM fonts by the EC ones
+CMRoman-T       mf:cmr8-0.0           ---&gt; mf:ecrm0800-0.0
+CMRoman-F       mf:cmr10-0.0          ---&gt; mf:ecrm1000-0.0
+usw, or specify the EC fonts on the command-line
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00568" HREF="msg00568.shtml">Re: BUGREPORT: Umlaute in gfont</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00564" HREF="msg00564.shtml">BUGREPORT: Umlaute in gfont</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00564.shtml">BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00566.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00564.shtml">BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00568.shtml">Re: BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00565"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00565"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

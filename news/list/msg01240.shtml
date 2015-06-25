@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Recursive #include problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 28 Dec 1999 23:15:59 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991228224344.525A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3868F706.1D6FED03@mail.dotcom.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01240">Date Index</a>][<a href="thrd26.shtml#01240">Thread Index</a>]<br>
+[<A HREF="msg01239.shtml">Date Prev</A>][<A HREF="msg01241.shtml">Date Next</A>][<A HREF="msg01239.shtml">Thread Prev</A>][<A HREF="msg01243.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Recursive #include problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Dec 1999 23:12:10 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 28 Dec 1999, Gilles Lamiral wrote:
+
+&gt; Denis Barbier wrote:
+&gt; 
+&gt; 
+&gt; &gt; Phase 1 is more than the cpp job, because prolog filters may be applied.
+&gt; &gt; A patch is attached. It will go under CVS after some checks.
+&gt; 
+&gt; Sorry to have told you Phase 1 is more than the cpp job. 
+
+Don't worry ;-)
+I was trying to explain why it is not so easy. Because of possible
+prolog filters, input files are copied into /tmp before processing
+and so input files do not reside at their attended location.
+
+&gt; Thanks for the patch.
+&gt; 
+&gt; In fact I won't use this feature for my current need. 
+&gt; But you consider it a bug, don't you ?
+
+Hmmm, i consider that WML is actually designed to process files in
+current directory only. There are situations where this is a severe
+limitation, for instance it would be nice to use the VPATH feature of
+GNU make.
+
+&gt; Be careful because some people may have used it like a feature.
+
+It's why this patch has not been committed yet.
+
+&gt; My need is to extend the navigation bar and build a navigation square.
+&gt; I didn't succeed in building it with wml.
+&gt; So, I wrote entirely a new tool in perl. It can be use with wml or sdf. 
+&gt; I will make a distribution when time will come or if someone else
+&gt; is interested right now. I give you the README file.
+
+I am interested. My intentions are not pure, i just want to steal your
+ideas and incorporate them into WML ;-)
+
+[...]
+&gt; NavSquare uses wwwtable which is not under the GPL license. See the file
+&gt; wwwtable.txt in the wwwtable distribution.
+
+Tomasz Wêgrzanowski &lt;maniek@beer.com&gt; wrote a GPL replacement called
+freetable. It will soon replace wwwtable in the WML distribution. You
+can download it from
+  <A  HREF="http://www.debian.org/Packages/unstable/web/freetable.html">http://www.debian.org/Packages/unstable/web/freetable.html</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01243" HREF="msg01243.shtml">Re: Recursive #include problem</A></strong>, <em>From:</em> Gilles Lamiral</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01239" HREF="msg01239.shtml">Re: Recursive #include problem</A></strong>, <em>From:</em> Gilles Lamiral</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01239.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01241.shtml">An &quot;@&quot; in the sliceterm makes wml fail?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01239.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01243.shtml">Re: Recursive #include problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01240"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01240"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

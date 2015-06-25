@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: It's time... -->
+<!--X-From-R13: Egrsna `Erp` Lruy <frpN42.bet> -->
+<!--X-Date: Sat, 8 May 1999 17:27:09 +0200 (MET DST) -->
+<!--X-Message-Id: 19990508172703.A2249@matrix.42.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 80CEA131F613D211812500A0C98D93150D9C@morse.muc.ilf.com -->
+<!--X-Reference: 19990508123020.A58882@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00635">Date Index</a>][<a href="thrd14.shtml#00635">Thread Index</a>]<br>
+[<A HREF="msg00634.shtml">Date Prev</A>][<A HREF="msg00636.shtml">Date Next</A>][<A HREF="msg00634.shtml">Thread Prev</A>][<A HREF="msg00637.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: It's time...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stefan `Sec` Zehl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 8 May 1999 17:27:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, May 08, 1999 at 12:30:21PM +0200, Ralf S. Engelschall wrote:
+&gt; And this _IS_ supported, of course. And Pass 9 allows one to mix slices in
+&gt; arbitrary ways through set operations, so I'm still confused what particular
+&gt; set/slices problem can't be solved by it? Can you give me a pure slice-based
+&gt; example (no interaction with other tags) and a result you want to see and
+&gt; which you think cannot be done with a set operation on the -o command line?
+
+The example I gave was using '&lt;lang:star:href:&gt;' inside an language
+slice already. (includes snipped)
+
+(de) Referenziere: &lt;lang:star:href: index.*.html|index.html&gt;
+(en) Referencing : &lt;lang:star:href: index.*.html|index.html&gt;
+(/)
+
+piping this through wml -p 1-8 gives the following 
+
+[LANG_DE: Referenziere:[LANG_DE:index.html:][LANG_EN:index.html:]:]
+[LANG_EN: Referencing :[LANG_DE:index.html:][LANG_EN:index.html:]:]
+
+which piped through "wml -p 9 -o '(ALL-LANG_*)uLANG_DE:-'"
+results in the mentioned error: 
+** Slice:Error: Some slices were not closed:
+** WML:Break: Error in Pass 9 (rc=1).
+
+Now, There might be a way to work around this, but I have no idea how to
+do this in an easy way.
+
+CU,
+    Sec
+-- 
+See above, I´d vote now to remove TCP completely after seeing that results.
+                    -- &lt;andreas@klemm.gtn.com&gt; on freebsd-ports, 2.Aug.1997
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00631" HREF="msg00631.shtml">RE: It's time...</A></strong>, <em>From:</em> Schmid, Johannes</li>
+<li><strong><A NAME="00634" HREF="msg00634.shtml">Re: It's time...</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00634.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00636.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00634.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00637.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00635"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00635"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

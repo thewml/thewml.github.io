@@ -1,0 +1,808 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Auxiliaries / LinkLint</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:34"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Auxiliaries / LinkLint</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Linklint - fast link checker and website maintenance tool</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<ul>
+		<li><a href="#input_file_selection">Input File Selection</a></li>
+		<li><a href="#other_file_selection_options">Other File Selection Options</a></li>
+		<li><a href="#local_site_checking">Local Site Checking</a></li>
+		<li><a href="#other_local_site_options">Other Local Site Options</a></li>
+		<li><a href="#http_site_checking">HTTP Site Checking</a></li>
+		<li><a href="#http_site_check_options">HTTP Site Check Options</a></li>
+		<li><a href="#remote_url_checking">Remote URL Checking</a></li>
+		<li><a href="#other_remote_url_options">Other Remote URL Options</a></li>
+		<li><a href="#status_cache_options">Status Cache Options</a></li>
+		<li><a href="#output_options">Output Options</a></li>
+		<li><a href="#multi_file_output">Multi File Output</a></li>
+		<li><a href="#single_file_output">Single File Output</a></li>
+		<li><a href="#debug_and_other_flags">Debug and other Flags</a></li>
+	</ul>
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>Linklint - fast link checker and website maintenance tool</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>linklint</strong>
+[<strong>-cache <em>directory</em></strong>]
+[<strong>-case</strong>]
+[<strong>-checksum</strong>]
+[<strong>-concise_url</strong>]
+[<strong>-db1..9</strong>]
+[<strong>-delay <em>d</em></strong>]
+[<strong>-doc</strong>]
+[<strong>-docbase <em>base</em></strong>]
+[<strong>-dont_output <em>xxxx</em></strong>]
+[<strong>-error</strong>]
+[<strong>-flush</strong>]
+[<strong>-forward</strong>]
+[<strong>-help</strong>]
+[<strong>-help_all</strong>]
+[<strong>-host <em>hostname:port</em></strong>]
+[<strong>-host <em>hostname</em></strong>]
+[<strong>-htmlonly</strong>]
+[<strong>-http</strong>]
+[<strong>-http_header <em>name:value</em></strong>]
+[<strong>-ignore <em>ignoreset</em></strong>]
+[<strong>-index <em>file</em></strong>]
+[<strong>-language <em>zz</em></strong>]
+[<strong>-limit <em>n</em></strong>]
+[<strong>-list</strong>]
+[<strong>-local <em>linkset</em></strong>]
+[<strong>-map <em>/a=[/b]</em></strong>]
+[<strong>-net</strong>]
+[<strong>-netmod</strong>]
+[<strong>-netset</strong>]
+[<strong>-no_anchors</strong>]
+[<strong>-no_query_string</strong>]
+[<strong>-no_warn_index</strong>]
+[<strong>-orphan</strong>]
+[<strong>-out <em>file</em></strong>]
+[<strong>-output_frames</strong>]
+[<strong>-output_index <em>filename</em></strong>]
+[<strong>-password <em>realm user:password</em></strong>]
+[<strong>-proxy <em>hostname[:port]</em></strong>]
+[<strong>-quiet</strong>]
+[<strong>-redirect</strong>]
+[<strong>-retry</strong>]
+[<strong>-silent</strong>]
+[<strong>-skip <em>skipset</em></strong>]
+[<strong>-textonly</strong>]
+[<strong>-timeout <em>t</em></strong>]
+[<strong>-url_doc_prefix <em>url/</em></strong>]
+[<strong>-version</strong>]
+[<strong>-warn</strong>]
+[<strong>-xref</strong>]
+<em>linkset</em></p>
+<p>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>2.3.5 August 13, 2001</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This manual page documents briefly the Linklint program, which is an
+Open Source Perl program that checks local and remote HTML links.</p>
+<p>This manual page was written for the Debian distribution because the
+original program does not have a manual page. Instead, it has
+documentation in the HTML format; see below.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<p>
+</p>
+<h2><a name="input_file_selection">Input File Selection</a></h2>
+<p>Whether you are doing a local site check or an HTTP site check, you
+specify which directories (presumably containing HTML files) to check
+with one or more linksets. A linkset uses two wildcard characters
+@ and #.
+Each linkset specifies one or more directories much like the standard
+* and ? wildcard characters are used to specify the characters in the
+* names of files in one directory.</p>
+<p>The @ character matches any string of characters (this kind of acts like
+``*''), and the # character (which is kind of like ``?'') matches any string
+of characters except ``/'' . The best way to understand how @ and # work
+is to look at a few examples:</p>
+<pre>
+                          the entire site /@
+              the homepage only (default) /
+         files in the root directory only /#
+             . . . and one directory down /#/#
+          files in the sub directory only /sub/#
+     files in the sub directory and below /sub/@
+                           specific files /file1 /file2 ...
+                  specific subdirectories /sub1/@ /sub2/@ ...</pre>
+<p>If you specify more than one linkset, files matching any of the linksets
+will be checked. HTML files that don't match any of the linksets will be
+skipped. Linklint will see if they exist but won't check any of their
+links.</p>
+<p>
+</p>
+<h2><a name="other_file_selection_options">Other File Selection Options</a></h2>
+<dl>
+<dt><strong><a name="item__2dskip_skipset"><strong>-skip</strong> <em>skipset</em></a></strong>
+<dd>
+<p>Skips HTML files that match <em>skipset</em>. <code>Linklint</code> will make sure
+these files exist but won't add any of their links to the list of files
+to check. Multiple <em>skipsets</em> are allowed, but each must be preceded
+with <strong>-skip</strong> on the command line. Skipsets use the same wildcard
+characters as linksets.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dignore_ignoreset"><strong>-ignore</strong> <em>ignoreset</em></a></strong>
+<dd>
+<p>Ignores files matching <em>ignoreset</em>. <code>Linklint</code> doesn't even check to
+see if these files exist. Multiple <em>ignoresets</em> are allowed, but each
+must be preceded with <strong>-ignore</strong> on the command line. Ignoresets use
+the same wildcard characters as linksets.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dlimit_n"><strong>-limit</strong> <em>n</em></a></strong>
+<dd>
+<p>Limits checking to <em>n</em> HTML files (default 500). All HTML files after
+the first <em>n</em> are skipped.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="local_site_checking">Local Site Checking</a></h2>
+<p>If you are developing HTML pages on a computer that does not have an
+http server, or if you are developing a simple site that does not use
+Server Redirection or extensive CGI, you should use local site checking.</p>
+<pre>
+     linklint /@</pre>
+<p>Checks all HTML files in the current directory and below. Assumes that
+the current directory is the server root directory so links starting
+with ``/'' default to this directory. You must specify <strong>/@</strong> to check the
+entire site. See Which Files to Check for details.</p>
+<pre>
+     linklint -root dir /@</pre>
+<p>Checks all HTML files in dir and below. This is useful if you want to
+check several sites on the same machine or if you don't want to run
+Linklint in your public HTML directory.</p>
+<p>
+</p>
+<h2><a name="other_local_site_options">Other Local Site Options</a></h2>
+<dl>
+<dt><strong><a name="item__2dhost_hostname"><strong>-host</strong> <em>hostname</em></a></strong>
+<dd>
+<p>By default <code>Linklint</code> assumes all links on your site that start with
+<code>http://</code> are remote links to other sites. If you have absolute links
+to your own site, give <code>Linklint</code> your hostname and links starting with
+<code>http://hostname</code> will be treated as local files. If you specify
+<strong>-host hostname:port,</strong> only http links to this hostname and port will
+be treated as local files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dcase"><strong>-case</strong></a></strong>
+<dd>
+<p>Makes sure that the filename (upper/lower) case used links inside of
+html tags matches the case used by the file system. This is for
+Windows only and is very handy if you are porting a site to a Unix
+host.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dorphan"><strong>-orphan</strong></a></strong>
+<dd>
+<p>Checks all directories that contain files used on the site for unused
+(orphan) files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dindex_file"><strong>-index</strong> <em>file</em></a></strong>
+<dd>
+<p>Uses <em>file</em> as the default index file instead of the default list used
+by <code>Linklint</code>. You can specify more than one file but each one must be
+preceded by <strong>-index</strong> on the command line. If a default index file is
+not found, <code>Linklint</code> uses a listing of the entire directory. See the
+Default File section for details.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dmap__2fa_3d_5b_2fb_5d"><strong>-map</strong> <em>/a=[/b]</em></a></strong>
+<dd>
+<p>Substitutes leading <em>/a</em> with <em>/b</em>. For server-side image maps or to
+simulate Server Redirection.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dno_warn_index"><strong>-no_warn_index</strong></a></strong>
+<dd>
+<p>Turns of the ``index file not found'' warning. Applies to local site
+checking only.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dno_anchors"><strong>-no_anchors</strong></a></strong>
+<dd>
+<p>Tells <code>Linklint</code> to ignore named anchors. This could ease memory
+problems for people with large sites who are primarily interested in
+missing pages and not missing named anchors. This option works for
+both HTTP and local site checks.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="http_site_checking">HTTP Site Checking</a></h2>
+<p>If you have a complicated site that uses lots of CGI or Server
+Redirection, you should use HTTP site checking. Even though an HTTP
+site check reads pages via your HTTP server, you will get the best
+performance if you do your checking on a machine that has a high speed
+connection to your server.</p>
+<pre>
+     linklint -http -host www.site.com /@</pre>
+<p>The <strong>-http</strong> flag tells <code>Linklint</code> to check HTML files on the site
+www.site.com via a remote http connection. You must specify a -host
+whenever you do an HTTP site check (otherwise Linklint won't where to
+get your pages). You can specify <strong>/@</strong> to check the entire site. See Which
+Files to Check for details.</p>
+<p>
+</p>
+<h2><a name="http_site_check_options">HTTP Site Check Options</a></h2>
+<dl>
+<dt><strong><a name="item__2dhttp"><strong>-http</strong></a></strong>
+<dd>
+<p>This flag tells Linklint to perform an HTTP site check instead of a
+local site check. All files (except server side image maps) will be
+read via the HTTP protocol from your web server.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dhost_hostname_3aport"><strong>-host</strong> <em>hostname:port</em></a></strong>
+<dd>
+<p>If you include <em>:port</em> at the end of your
+hostname, Linklint uses this port for the HTTP site check.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dpassword_realm_user_3apassword"><strong>-password</strong> <em>realm user:password</em></a></strong>
+<dd>
+<p>Uses <em>user</em> and <em>password</em> as authorization to enter password
+protected <em>realm.</em> Realms are named areas of a site that share a common
+set of usernames and passwords. If passwords are needed to check your
+site, Linklint will tell you which realms need passwords in warning
+messages. Enclose the realm in double quotes if it contains spaces. If
+no password is given for a specific realm, Linklint will try using the
+password for the ``<code>DEFAULT</code>'' realm if it was provided.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dtimeout_t"><strong>-timeout</strong> <em>t</em></a></strong>
+<dd>
+<p>Times out after <em>t</em> seconds (default 15) when
+getting files via http. Once data is received, an additional
+<em>t</em> seconds is allowed. The timeout is
+disabled on Windows machines since the Windows port of Perl does not
+support the <code>alarm()</code> function.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddelay_d"><strong>-delay</strong> <em>d</em></a></strong>
+<dd>
+<p>Delays <em>d</em> seconds between requests to the same
+host (default 0). This is a friendly thing to do especially if you are
+checking many links on the same host.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dlocal_linkset"><strong>-local</strong> <em>linkset</em></a></strong>
+<dd>
+<p>Gets files that match <em>linkset</em> locally. The default <strong>-local</strong>
+<em>linkset</em> is <strong>@.map</strong> (which matches any link ending in <em>.map</em>). This
+allows Linklint to follow links through server-side image maps. The
+default is ignored if you specify your own <strong>-local</strong> expressions. You
+need to specify the <strong>-root</strong> directory for this option to work propery.</p>
+</dd>
+</li>
+<dt><strong><strong>-map</strong> <em>/a=[/b]</em></strong>
+<dd>
+<p>Substitutes leading <em>/a</em> with <em>/b</em>. For server-side image maps or to
+simulate Server Redirection.</p>
+</dd>
+</li>
+<dt><strong><strong>-no_anchors</strong></strong>
+<dd>
+<p>Tells <code>Linklint</code> to ignore named anchors.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dno_query_string"><strong>-no_query_string</strong></a></strong>
+<dd>
+<p>Up until version 2.3.4, Linklint did not use query strings while doing
+HTTP site checks. Query strings were removed before making HTTP
+requests. As of 2.3.4 query strings in links are used in the
+requests. Use the <strong>-no_query_string</strong> flag to get back the ``old''
+behavior.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dhttp_header_name_3avalue"><strong>-http_header</strong> <em>Name:value</em></a></strong>
+<dd>
+<p>Adds the HTTP header <em>Name: value</em> to all HTTP requests
+generated by Linklint. You will need to use quotation marks to hide
+spaces in the header line from the command line interpreter. Linklint
+will automatically add a space after the first colon if there is not
+one there already. Multiple (unique) header lines are allowed.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dlanguage_zz"><strong>-language</strong> <em>zz</em></a></strong>
+<dd>
+<p>This option is only useful if you are checking a site that uses
+content negotiation to present the same URL in different languages.</p>
+</dd>
+<dd>
+<p>Creates an HTTP Request header of the form
+<strong>Accept-Language: zz</strong> that is included as part of all HTTP
+requests generated by Linklint. Multiple <strong>-language</strong>
+specifications are allowed. This will result in a single
+<strong>Accept-Language:</strong> header that lists all of the languages you
+have specified in alphabetical order. Some web sites can use this
+information to return pages to you in a specific language.</p>
+</dd>
+<dd>
+<p>If you need to get more complicated than this, use the more general
+purpose <strong>-http_header</strong> to create your own header. There is a partial
+list of language abbreviations (taken from Debian) included as part of
+the Linklint documentation.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="remote_url_checking">Remote URL Checking</a></h2>
+<p>A remote URL check is used to see if a remote URL exists (or has been
+recently modified). Links in the remote pages are not checked nor does
+Linklint look for named anchors in remote URLs.
+</p>
+<pre>
+
+Remote URL checking can be used to check all of the &quot;remote&quot; links on
+your site (those that link to pages on other sites) or it can check a
+list of URLs. There are several ways to specify which remote URLs to
+check:</pre>
+<pre>
+
+     linklint <a href="http://somehost/file.html">http://somehost/file.html</a></pre>
+<p>Checks to see if <em>/file.html</em> exists on somehost. Multiple URLs can be
+entered on the command line, in an <em>@commandfile</em>, or in an
+<em>@@httpfile</em>. Every URL to be checked must begin with <code>http://</code>. This
+will disable site checking.
+</p>
+<pre>
+
+     linklint @@httpfile</pre>
+<p>Checks all the remote http URLs found in httpfile. Anything in the file
+starting with <code>http://</code> is considered to be a URL. If the file looks
+like a <em>remoteX.txt</em> file generated by Linklint then all failed URLs will
+be cross referenced.
+</p>
+<pre>
+
+     linklint @@ -doc linkdoc</pre>
+<p>Assuming you have already done a site check and used <strong>-doc linkdoc</strong> to
+put all of your output files in the linkdoc directory, Linklint will
+check all the remote links that were found on your site and cross
+reference all failed URLs without doing a site check. You can use the
+<strong>-netmod</strong> or <strong>-netset</strong> flags to enable the status-cache.
+</p>
+<pre>
+
+     linklint -net [site check options]</pre>
+<p>The <strong>-net</strong> flag tells Linklint to check all remote links after doing
+either a local or HTTP site check site. If you are having memory
+problems, don't use the <strong>-net</strong> option, instead use one of the <strong>@@</strong>
+options above.</p>
+<p>
+</p>
+<h2><a name="other_remote_url_options">Other Remote URL Options</a></h2>
+<dl>
+<dt><strong><strong>-timeout</strong> <em>t</em></strong>
+<dd>
+<p>Times out after <em>t</em> seconds (default 15) when getting files via http.
+Once data is received, an additional <em>t</em> seconds is allowed. The
+timeout is disabled on Windows machines since the Windows port of Perl
+does not support the <code>alarm()</code> function.</p>
+</dd>
+</li>
+<dt><strong><strong>-delay</strong> <em>d</em></strong>
+<dd>
+<p>Delays <em>d</em> seconds between requests to the same host (default 0). This
+is a friendly thing to do especially if you are checking many links on
+the same host.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dredirect"><strong>-redirect</strong></a></strong>
+<dd>
+<p>Checks for &lt;meta&gt; redirects in the headers of remote URLs that
+are html files. If a redirect is found it is followed. This feature is
+disabled if the status cache is used.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dproxy_hostname_5b_3aport_5d"><strong>-proxy</strong> <em>hostname[:port]</em></a></strong>
+<dd>
+<p>Sends all remote HTTP requests through the proxy server <em>hostname</em> and
+the optional <em>port</em>. This allows you to check remote URLs or (new with
+version 2.3.1) your entire site from within a firewall that has an http
+proxy server. Some error messages (relating to host errors) may not be
+available through a proxy server.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dconcise_url"><strong>-concise_url</strong></a></strong>
+<dd>
+<p>Turns off printing successful URLs to STDOUT during remote link
+checking.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="status_cache_options">Status Cache Options</a></h2>
+<p>The Status Cache is a very powerful feature. It allows you to keep track
+of recent changes in all of the remote (off-site) pages you link to. You
+can then use the Linklint output files to quickly check changed pages to
+see if they still meet your needs.
+</p>
+<pre>
+
+The flags below make use of the status cache file linklint.url (kept in
+your HOME or LINKLINT directory). This file keeps track of the
+modification dates of all the remote URLs that you check.</pre>
+<dl>
+<dt><strong><a name="item__2dnetmod"><strong>-netmod</strong></a></strong>
+<dd>
+<p>Operates just like <strong>-net</strong> but makes use of the status cache. Newly
+checked URLs will be entered in the cache. Linklint will tell you which
+(previously cached) URLs have been modified since the last <strong>-netset</strong>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dnetset"><strong>-netset</strong></a></strong>
+<dd>
+<p>Like <strong>-netmod</strong> but also resets the last modified status in the cache
+for all URLs that checked ok. If you always use <strong>-netset</strong>, modified
+URLs will be reported just once.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dretry"><strong>-retry</strong></a></strong>
+<dd>
+<p>Only checks URLs that have a host fail status in the cache. Sometimes a
+URL fails because its host is temporarily down. This flag enables you
+to recheck just those links. An easy way to recheck all the cached URLs
+with host failures is <code>linklint @@ -retry</code>. Use
+<code>linklint @@linkdoc/remoteX.txt -retry</code> if you want failed URLs to be
+cross referenced.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dflush"><strong>-flush</strong></a></strong>
+<dd>
+<p>Removes all URLs from the cache that are not currently being checked.
+The <strong>-retry</strong> flag has no effect on which URLs are flushed.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dchecksum"><strong>-checksum</strong></a></strong>
+<dd>
+<p>Ensures that every URL that has been modified is reported as such. This
+flag can make the remote checking take longer. Many of the pages that
+require a checksum are dynamically generated and will always be reported
+as modified.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dcache_directory"><strong>-cache</strong> <em>directory</em></a></strong>
+<dd>
+<p>Reads and writes the <em>linklint.url</em> cache file in this directory. The
+default directory is set by your LINKLINT or HOME environment variables.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="output_options">Output Options</a></h2>
+<p>No output files are generated by default, only progress and a brief
+summary of the results are printed to the screen. You can produce
+complete documentation (split up into separate files) in a <strong>-doc</strong>
+directory or put selected output in a single <strong>-out</strong> file or by
+redirecting the standard output to a file. See the Output File
+Specification section for a detailed description of all output files.</p>
+<p>
+</p>
+<h2><a name="multi_file_output">Multi File Output</a></h2>
+<dl>
+<dt><strong><a name="item__2ddoc_linkdoc"><strong>-doc</strong> <em>linkdoc</em></a></strong>
+<dd>
+<p>Sends all output to the <em>linkdoc</em> directory. The output is divided
+into separate <em>.txt</em> and <em>.html</em> files. Complete documentation is
+always produced regardless of the single file flags.</p>
+</dd>
+<dd>
+<p>The file <em>index.txt</em> contains an index to all the other files;
+<em>index.html</em> is an HTML version of the index. The index files for
+remote URL checking are <em>ur_lindex.txt</em> and <em>url_index.html</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dtextonly"><strong>-textonly</strong></a></strong>
+<dd>
+<p>Prevents any HTML files from being created in the <strong>-doc</strong> directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dhtmlonly"><strong>-htmlonly</strong></a></strong>
+<dd>
+<p>Erases redundant text files in the <strong>-doc</strong> directory after they have
+been used to create the HTML output files. The files <em>remote.txt</em> and
+<em>remoteX.txt</em> are not erased since they can be used by Linklint to
+recheck remote URLs.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddocbase_base"><strong>-docbase</strong> <em>base</em></a></strong>
+<dd>
+<p>Overrides the default <em>base</em> expression used for directing a browser to
+the resources listed in the output HTML files. The base is prepended to
+local links in the output HTML files. This only affects the links in
+HTML output files, it has no effect on what is displayed in these files.
+Ordinarily this flag would only be used during a local site check to set
+the base to <code>http://host</code>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2doutput_frames"><strong>-output_frames</strong></a></strong>
+<dd>
+<p>All HTML output data files are linked to from <em>index.html</em>. If you use
+this flag then the the data files will be opened up in a new frame
+(window) which can be handy in some cases since it always leaves the
+<em>index.html</em> file open in its own window.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2doutput_index_filename"><strong>-output_index</strong> <em>filename</em></a></strong>
+<dd>
+<p>The output index files were previously named <em>linklint.txt</em> and
+<em>linklint.html</em>. These have now been changed to <em>index.txt</em> and
+<em>index.html</em>. You can use the <strong>-output_index</strong> option to change this
+name back to <code>linklint</code> or to something else.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2durl_doc_prefix_url_2f"><strong>-url_doc_prefix</strong> <em>url/</em></a></strong>
+<dd>
+<p>By default, the output files associate with remote URL checking all
+start with ``url''. You can change this with the <strong>-url_doc_prefix</strong>
+option. If the url_doc_prefix contains a ``/'' character then the
+appropriate directory will be created (as a subdirectory of the -doc
+directory).</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddont_output_xxxx"><strong>-dont_output</strong> <em>xxxx</em></a></strong>
+<dd>
+<p>Don't create output files that contain ``xxxx''. Can be repeated.
+Example:</p>
+</dd>
+<dd>
+<pre>
+        -dont_output &quot;X$&quot;</pre>
+</dd>
+<dd>
+<p>will supress the output of all cross reference files.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="single_file_output">Single File Output</a></h2>
+<dl>
+<dt><strong><a name="item__2derror"><strong>-error</strong></a></strong>
+<dd>
+<p>Lists missing files and other errors.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dout_file"><strong>-out</strong> <em>file</em></a></strong>
+<dd>
+<p>Sends list output and summary information to <em>file</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dlist"><strong>-list</strong></a></strong>
+<dd>
+<p>Lists all found files, links, directories etc.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dwarn"><strong>-warn</strong></a></strong>
+<dd>
+<p>Lists all warnings.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dxref"><strong>-xref</strong></a></strong>
+<dd>
+<p>Adds cross references to the lists.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dforward"><strong>-forward</strong></a></strong>
+<dd>
+<p>Sorts lists by referring file.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="debug_and_other_flags">Debug and other Flags</a></h2>
+<dl>
+<dt><strong><a name="item__2ddb1"><strong>-db1</strong></a></strong>
+<dd>
+<p>Debugs command line input and linkset expressions.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb2"><strong>-db2</strong></a></strong>
+<dd>
+<p>Prints the name of every file that gets checked (not just HTML files).</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb3"><strong>-db3</strong></a></strong>
+<dd>
+<p>Debugs HTML parser, prints out tags and resulting links.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb4"><strong>-db4</strong></a></strong>
+<dd>
+<p>Debugs socket connection (kind of).</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb5"><strong>-db5</strong></a></strong>
+<dd>
+<p>Not used.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb6"><strong>-db6</strong></a></strong>
+<dd>
+<p>Details last-modified status for remote URLs (requires <strong>-netset</strong> or
+<strong>-netmod</strong>).</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb7"><strong>-db7</strong></a></strong>
+<dd>
+<p>Prints brief debug information while checking remote URLs.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb8"><strong>-db8</strong></a></strong>
+<dd>
+<p>Prints all http headers while checking remote URLs.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ddb9"><strong>-db9</strong></a></strong>
+<dd>
+<p>Generates random http errors.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dversion"><strong>-version</strong></a></strong>
+<dd>
+<p>Gives version information.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dhelp"><strong>-help</strong></a></strong>
+<dd>
+<p>Lists a few simple examples of how to use Linklint.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dhelp_all"><strong>-help_all</strong></a></strong>
+<dd>
+<p>Lists all help (contained in program) including every input option.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dquiet"><strong>-quiet</strong></a></strong>
+<dd>
+<p>Disables printing progress to the screen.
+</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dsilent"><strong>-silent</strong></a></strong>
+<dd>
+<p>Disables printing summarys to the screen.
+</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Linklint is written by James B. Bowlin &lt;<a href="mailto:jbowlin@linklint.org">jbowlin@linklint.org</a>&gt;.
+This manual page was written by Denis Barbier
+&lt;<a href="mailto:barbier@debian.org">barbier@debian.org</a>&gt; for the Debian system (but may be used by
+others) by cut'n'paste from original documentation written in HTML.
+</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

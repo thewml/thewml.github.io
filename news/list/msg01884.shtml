@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Praise and a question -->
+<!--X-From-R13: Xbrl Ezvgu <wbrlNwbrlfzvgu.pbz> -->
+<!--X-Date: Sun, 6 Aug 2000 05:57:57 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0008052155580.6902&#45;100000@joeysmith.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000805110917.A4951@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01884">Date Index</a>][<a href="thrd38.shtml#01884">Thread Index</a>]<br>
+[<A HREF="msg01883.shtml">Date Prev</A>][<A HREF="msg01885.shtml">Date Next</A>][<A HREF="msg01883.shtml">Thread Prev</A>][<A HREF="msg01881.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Praise and a question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Joey Smith &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 5 Aug 2000 21:57:47 -0600 (MDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+&gt; &gt; I want to do something like:
+&gt; &gt; $(some_var:-"$php_var")
+&gt; 
+&gt; Are you sure you need these quotes?
+
+	Actually, yes. :) If the var is not prev. set, I want a string,
+otherwise an int.
+
+&gt; &gt; Is there any way to do this? It does not seem to be honoring the
+&gt; &gt; backslash escape...
+&gt; 
+&gt; Here is the patch i applied to wml_p1_ipp:
+&gt; 
+	Wow. This is /GREAT/. Thanks.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01883" HREF="msg01883.shtml">Re: Praise and a question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01883.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01885.shtml">[BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01883.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01881.shtml">WML and XHTML 1.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01884"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01884"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

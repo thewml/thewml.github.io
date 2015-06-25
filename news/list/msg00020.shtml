@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question wml 1.4.6 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 6 Jan 1998 17:10:05 +0100 (MET) -->
+<!--X-Message-Id: 199801061610.RAA22089@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.980106115041.1992A&#45;100000@ely.leader.ro -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00020">Date Index</a>][<a href="thread.shtml#00020">Thread Index</a>]<br>
+[<A HREF="msg00019.shtml">Date Prev</A>][<A HREF="msg00021.shtml">Date Next</A>][<A HREF="msg00018.shtml">Thread Prev</A>][<A HREF="msg00025.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question wml 1.4.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 17:10:02 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Viorel Anghel, in a previous mail you wrote:
+
+&gt; Sorry for bothering you with that (it would be better if you set-up a
+&gt; mailing list wml-(l)users ;-)...
+
+There is a mailing list: sw-wml@engelschall.com. You can subcribe
+via majordomo@engelschall.com.
+
+&gt; I can't find an easy way to include in all files something like apache
+&gt; &lt;!--#echo var=DOCUMENT_URI&gt;.
+&gt; I want to have an footer in base directory and then all files to include
+&gt; that (i do that), but how can i tell in that footer to print the current
+&gt; URL of the file?
+&gt; 
+&gt; As a comment, for now i use wml mostly in the purpose of avoiding
+&gt; server-side-includes and defining same headers and footers in all pages.
+
+A very good question. I've thought about it and the general
+solution is the following:
+
+1. Define the URL base in a .wmlrc in the base dir of your WML page area via
+   ``-DBASE_URL=<A  HREF="http://www.domain.dom/~myself">http://www.domain.dom/~myself</A>'' and additionally define
+   ``-DBASE_DIR~.'' This way all pages below this area get the URL to the base
+   dir and the relative dir to the base dir.
+
+2. Use the wml::std::info from the coming WML 1.4.12 (where I've added
+   this function now) or define it somewhere in your own include files:
+
+   | #use wml::sup::path
+   | &lt;define-tag document_url&gt;
+   | &lt;:{
+   |    my ($baseurl, $basedir, $dir, $file, $url);
+   |    $baseurl = '&lt;get-var BASE_URL&gt;';
+   |    $basedir = '&lt;get-var BASE_DIR&gt;';
+   |    $cwd = `pwd`;
+   |    $cwd =~ s|\n$||;
+   |    $dir = &amp;relpath(&amp;canonpath("$cwd/$basedir"), $cwd);
+   |    $file = '&lt;get-var WML_SRC_FILENAME&gt;';
+   |    $file =~ s|\.wml$|.html|;
+   |    $file =~ s|^index\.html$||;
+   |    $url = "$baseurl/$dir/$file";
+   |    $url = &amp;canonpath($url);
+   |    print $url;
+   | }:&gt;
+   | &lt;/define-tag&gt;
+
+3. Now you are ready: Just use 
+
+   | #use wml::std::info     &lt;-- or your own include file
+   | &lt;document_url&gt;
+
+   and you get the correct absolute URL to your page.
+   
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00019.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00021.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00018.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00025.shtml">Enhanced Webarea 'Related'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00020"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00020"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

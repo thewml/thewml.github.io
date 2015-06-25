@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: eperl: redefinition of `union semun' -->
+<!--X-From-R13: [vpunry [üyyre <zhryyre_zvpunryNavxbpvgl.qr> -->
+<!--X-Date: Wed, 29 Mar 2000 08:02:18 +0200 (MET DST) -->
+<!--X-Message-Id: 00032907594700.00354@tower -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01492">Date Index</a>][<a href="thrd31.shtml#01492">Thread Index</a>]<br>
+[<A HREF="msg01491.shtml">Date Prev</A>][<A HREF="msg01493.shtml">Date Next</A>][<A HREF="msg01489.shtml">Thread Prev</A>][<A HREF="msg01496.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>eperl: redefinition of `union semun'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Müller &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Mar 2000 07:45:45 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+after the announce of Denis I have download WML 1.99.4 because I have
+problems with compiling WML 1.99.3. But I get the same error:
+
+make[2]: Entering directory
+`/home/mm/_neu/+Eingang/WML/wml-1.99.4/wml_backend/p3_eperl'
+cc -O2 -pipe -Dbool=char -DHAS_BOOL -I/usr/local/include
+-I/usr/lib/perl5/5.00503/i586-linux/CORE -I. -c eperl_main.c
+In file included from eperl_perl5.h:42,
+                  from eperl_main.c:40:
+/usr/lib/perl5/5.00503/i586-linux/CORE/perl.h:2546: redefinition of
+`union semun'
+make[2]: *** [eperl_main.o] Error 1
+
+But the results of configure seems to look okay.
+The output from configure of the eperl section:
+
+Configuring for wml_backend/p3_eperl
+running /bin/sh ./configure  --prefix=/opt/wml/ --cache-file=../.././config.cache --srcdir=.
+Configuring for ePerl 2.2.14 (02-Aug-1998) 
+loading cache ../.././config.cache
+
+Here are the version output from my eperl and perl:
+
+mm@tower:~/_neu/+Eingang/WML/wml-1.99.4 &gt; eperl -v
+This is ePerl Version 2.2.14 (02-08-1998)
+Copyright (c) 1996,1997,1998 Ralf S. Engelschall &lt;rse@engelschall.com&gt;
+
+mm@tower:~/_neu/+Eingang/WML/wml-1.99.4 &gt; perl -v
+This is perl, version 5.005_03 built for i586-linux
+Copyright 1987-1999, Larry Wall
+
+I'm using a SuSE 6.3.
+
+What is my problem?
+
+Michael M"uller
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01496" HREF="msg01496.shtml">Re: eperl: redefinition of `union semun'</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01491.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01493.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01489.shtml">[1.99.4] Bug Report: continuation shebang printed to body</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01496.shtml">Re: eperl: redefinition of `union semun'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01492"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01492"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

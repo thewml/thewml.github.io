@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: perl version output of configure? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 11 Jul 2001 21:29:30 +0200 (MET DST) -->
+<!--X-Message-Id: 20010711213732.A12647@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010711154211.E12681@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02285">Date Index</a>][<a href="thrd46.shtml#02285">Thread Index</a>]<br>
+[<A HREF="msg02284.shtml">Date Prev</A>][<A HREF="msg02286.shtml">Date Next</A>][<A HREF="msg02283.shtml">Thread Prev</A>][<A HREF="msg02286.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: perl version output of configure?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 11 Jul 2001 21:37:32 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jul 11, 2001 at 03:42:11PM +0200, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; After having (solved, I hope) some libperl.so problems, I tried to
+&gt; configure WML 2.0.7 (on Solaris 2.7, Sun Ultra 10) and was wondering
+&gt; about the following output of the WML configure script:
+&gt; 
+&gt; | CHECK: Perl Language
+&gt; | checking for Perl language... /usr/local/bin/perl v5.006
+&gt; 
+&gt; But "/usr/local/bin/perl -v" returns "This is perl, v5.6.1 built for
+&gt; sun4-solaris". And also my libperl.so now is from 5.6.1, regarding
+&gt; it's creation date, because today I installed only one PERL version.
+&gt; :-)
+&gt; 
+&gt; Is this a bug or a feature of the configure script? Or has something
+&gt; terribly gone wrong with my system?
+
+Hi Axel,
+
+nothing wrong, this version number comes from
+    perl -e 'printf "%.3f", $]'
+Maybe we should use
+    perl -e 'print $]'
+instead, but is it really important?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02286" HREF="msg02286.shtml">Re: perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02283" HREF="msg02283.shtml">perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02284.shtml">Variables between sites</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02286.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02283.shtml">perl version output of configure?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02286.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02285"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02285"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

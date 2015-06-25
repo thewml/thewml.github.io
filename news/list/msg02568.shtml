@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Mar 2002 16:49:10 +0100 (MET) -->
+<!--X-Message-Id: 20020314170025.A15478@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Reference: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Reference: 3C9090B6.5000507@netngine.hu -->
+<!--X-Reference: 20020314134406.A14457@imacs.polytechnique.fr -->
+<!--X-Reference: 3C90C0E8.1020301@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02568">Date Index</a>][<a href="thrd52.shtml#02568">Thread Index</a>]<br>
+[<A HREF="msg02567.shtml">Date Prev</A>][<A HREF="msg02569.shtml">Date Next</A>][<A HREF="msg02567.shtml">Thread Prev</A>][<A HREF="msg02569.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Mar 2002 17:00:26 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Mar 14, 2002 at 04:25:28PM +0100, Veres Ferenc wrote:
+[...]
+&gt; The old problem came up again: the rendered javascript breaks my html. 
+&gt; You can see
+&gt; a bit more place under the selected menu, just becasuse the javascript 
+&gt; goes into the
+&gt; same TD cell as the image is in.
+&gt; &lt;TD&gt;&lt;IMG....&gt;
+&gt; &lt;SCRIPT...
+&gt; ...
+&gt; &lt;/TD&gt; &lt;-this is in the subnavbar
+&gt; 
+&gt; So this creates a space under the menu which has open submenu. Can we
+&gt; create any way to divert the javascript? Or do you have other ideas?
+&gt; Maybe could we somehow define something like &lt;navbar:jsfunc&gt; but for
+&gt; all javascript stuff? Maybe
+&gt; &lt;navbar:jsprolog&gt;{#ALLJS#: &lt;/navbar:jsprolog&gt;
+&gt; &lt;navbar:jsepilog&gt;:#ALLJS#}&lt;/navbar:jsepilog&gt;  Just an idea. There must 
+&gt; be a nicer way.
+
+You may have a look at wml::std::tags(1), especially explanations about
+the &lt;javascript&gt; tag.  It does what you need, and put source code
+between &lt;head&gt;...&lt;/head&gt;.  So if you define &lt;head&gt; to divert its content
+(e.g. as defined in wml::std::page), this problem should disappear.
+
+You may also use &lt;navbar:filter&gt; as I did in previous example (which
+could certainly be enhanced to be more educational, I'll work on it).
+
+I do not have time just now to answer other questions, will do tonight
+(your explanations did help a lot to understand your problem).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02564" HREF="msg02564.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02566" HREF="msg02566.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02567" HREF="msg02567.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02567.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02569.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02567.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02569.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02568"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02568"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

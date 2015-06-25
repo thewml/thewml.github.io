@@ -1,0 +1,92 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML website, linux -->
+<!--X-From-R13: puNjrfgraq.pbz -->
+<!--X-Date: Wed, 31 Mar 1999 08:07:46 +0200 (MET DST) -->
+<!--X-Message-Id: 199903301531.RAA09449@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00531">Date Index</a>][<a href="thrd12.shtml#00531">Thread Index</a>]<br>
+[<A HREF="msg00530.shtml">Date Prev</A>][<A HREF="msg00532.shtml">Date Next</A>][<A HREF="msg00533.shtml">Thread Prev</A>][<A HREF="msg00532.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML website, linux</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 30 Mar 1999 17:31:51 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML website
+Operating System: linux
+
+Problem Description:
+| after looking at the example source code demo.wml 
+| for wml and clicking at the icon at the top/right
+| of the page, I got an internal server error.
+| 
+| 
+| nything you might have done that may have caused the error.
+| 
+| Premature end of script headers: /e/www/html/sw/wml/example/source_download.cgi
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00532" HREF="msg00532.shtml">Re: [BUG REPORT] WML website, linux</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00530.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00532.shtml">Re: [BUG REPORT] WML website, linux</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00533.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00532.shtml">Re: [BUG REPORT] WML website, linux</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00531"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00531"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

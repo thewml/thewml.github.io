@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Strange behaviour of <big> -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 19 Mar 1999 10:35:04 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990319102438.9885A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990319094915.A14873@lettere.unipd.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00502">Date Index</a>][<a href="thrd12.shtml#00502">Thread Index</a>]<br>
+[<A HREF="msg00501.shtml">Date Prev</A>][<A HREF="msg00503.shtml">Date Next</A>][<A HREF="msg00501.shtml">Thread Prev</A>][<A HREF="msg00503.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Strange behaviour of &lt;big&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 19 Mar 1999 10:29:41 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 19 Mar 1999, Alvise Belotti wrote:
+
+&gt; Quoting Denis Barbier (barbier@imacs.polytechnique.fr), on Fri, Mar 19, 1999 at 08:47:08AM +0100:
+&gt; &gt; On Thu, 18 Mar 1999, Alvise Belotti wrote:
+&gt; &gt; [...]
+&gt; &gt; &gt; I've tried -D GFONT_BASE~images/%BASE, but this is not expanded.
+&gt; &gt; [...]
+&gt; &gt; -DGFONT_BASE~'../images/&lt;get-var WML_SRC_FILENAME&gt;'
+&gt; &gt; I'm not sure whether it's a good idea, many of your files may have the
+&gt; &gt; same name (index.wml).
+&gt; Hmmm...works, but, as you said, only for different file names.
+&gt; This could be a problem.
+&gt; On the other side, I've tried something like
+&gt; -DGFONT_BASE~'images/.&lt;get-var WML_SRC_DIRNAME&gt;.&lt;get-var
+&gt; WML_SRC_BASENAME&gt;'
+&gt; This leads to an gfont error in pass 3, but maybe this is a possible way.
+&gt; What about modify WML_SRC_FILENAME to have the directory prepended
+&gt; to the file name?
+
+Be sure i won't do that ;o)
+
+To understand what happens, write an empty file containing only
+&lt;get-var GFONT_BASE&gt;
+So you can see what value is used by wml. In this case, you will see
+this value is images/./path/to/your/file and this directory does not
+exist. You have to replace the slashes by anything else (not space,
+please):
+-DGFONT_BASE~'../images/&lt;subst-in-string &lt;get-var WML_SRC_DIRNAME&gt; "/" ":"&gt;.&lt;get-var WML_SRC_FILENAME&gt;'
+
+  Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00501" HREF="msg00501.shtml">Re: Strange behaviour of &lt;big&gt;</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00501.shtml">Re: Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00503.shtml">Running WML from WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00501.shtml">Re: Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00503.shtml">Running WML from WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00502"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00502"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: user references -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Tue, 26 Feb 2002 15:21:45 +0100 (MET) -->
+<!--X-Message-Id: 3C7B9976.8060103@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C7A5E1D.8040409@netngine.hu -->
+<!--X-Reference: 20020225224630.B6033@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02531">Date Index</a>][<a href="thrd51.shtml#02531">Thread Index</a>]<br>
+[<A HREF="msg02530.shtml">Date Prev</A>][<A HREF="msg02532.shtml">Date Next</A>][<A HREF="msg02530.shtml">Thread Prev</A>][<A HREF="msg02539.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: user references</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Feb 2002 15:19:34 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+First the simplier mail. I downloaded the [templates] links from
+the top of engelshcall.com/sw/wml User References page.
+
+<A  HREF="http://www.engelschall.com/sw/wml/example/refs.html">http://www.engelschall.com/sw/wml/example/refs.html</A>
+First two links, but probably almost each links apply this problem.
+
+OpenSSL contains &lt;define-container&gt; which could be updated.
+(confusing when trying to learn wml from the examples)
+
+Anyway: NICE TRICK with the include file! :-)
+
+www.engelschall.com templates, "stdpage.wml" also contains
+&lt;define-container&gt;. If I am right there was a different tag for
+the current endtag=required stuff, so in new templates you use
+&lt;define-tag&gt; instead container.
+
+Just would be fine to follow the Tutorial and stuff in the main
+examples of the system. This is not a technical problem. I hope
+I was understandable. This is just too complicated to learn from
+different tutorial and example files.
+
+
+Ferenc Veres
+
+Denis Barbier wrote:
+
+&gt;On Mon, Feb 25, 2002 at 04:54:05PM +0100, Veres Ferenc wrote:
+&gt;
+&gt;&gt;Hi again!
+&gt;&gt;
+&gt;&gt;Also would be fine to have the user references updated to use
+&gt;&gt;the _latest_ syntax, not the compatibility libraries. I was all
+&gt;&gt;the time skipping &lt;define-container&gt; because I thought it would
+&gt;&gt;be hard to read _all_ item's documentation when learning, and
+&gt;&gt;hmm.. after some days when I finally decided to learn this
+&gt;&gt;container stuff, I recognized that it is equal to &lt;define-tag&gt; :-)
+&gt;&gt;
+&gt;&gt;Would be less confuse and easier to learn from the real-life
+&gt;&gt;examples.
+&gt;&gt;
+&gt;
+&gt;Could you please give an URL?  I do not see which file you are talking
+&gt;about.
+&gt;
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02539" HREF="msg02539.shtml">Re: user references</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02526" HREF="msg02526.shtml">user references</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02530" HREF="msg02530.shtml">Re: user references</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02530.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02532.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02530.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02539.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02531"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02531"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

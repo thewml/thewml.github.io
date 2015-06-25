@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Problems with define&#45;tag -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 18 Jul 2000 00:39:05 +0200 (MET DST) -->
+<!--X-Message-Id: 20000718004007.A11720@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717235104.A11625@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0007180005530.14250&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01837">Date Index</a>][<a href="thrd10.shtml#01837">Thread Index</a>]<br>
+[<A HREF="msg01836.shtml">Date Prev</A>][<A HREF="msg01838.shtml">Date Next</A>][<A HREF="msg01836.shtml">Thread Prev</A>][<A HREF="msg01840.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Problems with define-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 00:40:07 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 18, 2000 at 12:07:49AM +0200, Fritz Zaucker wrote:
+
+&gt; Denis,
+&gt; 
+&gt; many thanks, I seem to start understanding the problem.
+&gt; 
+&gt; On Mon, 17 Jul 2000, Denis Barbier wrote:
+&gt; 
+&gt; &gt; &gt; Hmm, this didn't really help. And I think that the group-tags are
+&gt; &gt; &gt; needed, there are several lines belonging to the &lt;ifeq clauses.
+&gt;  
+&gt; &gt; But there is only one token in each clause: &lt;navbar:define&gt;...&lt;/navbar:define&gt;
+&gt; 
+&gt; Ah, that's one token? So much for my understanding ...
+&gt; 
+&gt;  
+&gt; &gt; Fortunately, your MAGICK macro is divided into 2 parts: initialization
+&gt; &gt; of Perl variables, and processing.  The latter may be protected with
+&gt; &gt; &lt;protect pass=2&gt;...&lt;/protect&gt;.  In the former, replace quotes by qq
+&gt; &gt; Perl operator:
+&gt; 
+&gt; OK, this seems to have done the trick, at least the stuff
+&gt; compiles. Will have to look at it at work tomorrow, don't want to mess
+&gt; up the real site, but in lynx it looks ok ;-)
+
+In conclusion, it is important to understand these points:
+ * Quotes are used to group words in tag attributes.
+ * It is impossible to determine whether double quotes are used to group
+   words or must be printed on output.  For this reason, they are always
+   removed from output when in attributes (this is a convention).  So
+       &lt;define-tag foo endtag=required&gt;%body&lt;/define-tag&gt;
+       &lt;foo&gt; href="toto.html"&lt;/foo&gt;
+       &lt;group &lt;foo&gt; href="toto.html"&lt;/foo&gt;&gt;
+   expands with wml-2.0.2 to
+        href="toto.html"
+        href=toto.html
+   because last line is replaced by
+       &lt;group href="toto.html"&gt;
+   which in turn becomes
+        href=toto.html
+
+   On the other hand, with the previous patch against builtin.c,
+   attributes of &lt;group&gt; are expanded after being replaced
+   (documentation claims that its attributes are read verbatim), so
+       &lt;group &lt;foo&gt; href="toto.html"&lt;/foo&gt;&gt;
+   becomes
+       &lt;foo&gt; href="toto.html"&lt;/foo&gt;
+   and then
+        href="toto.html"
+   There is a workaround with &lt;group&gt;, but it won't work with other
+   tags.
+
+ * When quotes are needed on output (e.g. in Perl statements) they
+   must be preserved in case they appear as attributes of a tag.
+   There are several ways to do so:
+    a) replace quotes by the qq Perl operator
+    b) escaped quotes in strings are always written on output, e.g.
+         &lt;group "&lt;: print \"Hello, world!\n\"; :&gt;"&gt;
+    c) protect quotes with &lt;protect pass=2&gt;...&lt;/protect&gt;
+    d) the &lt;dq&gt; tag should also do this job, but it is buggy in
+        wml-2.0.2
+
+Hope it is less confusing now.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01840" HREF="msg01840.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="01843" HREF="msg01843.shtml">[wml] Problems with quotes, mp4h and ePerl</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01861" HREF="msg01861.shtml">Translator from wml 1.7 to 2.0</A></strong>, <em>From:</em> Michele Marcionelli</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01835" HREF="msg01835.shtml">Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01836" HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01838.shtml">Quick bugdrop</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01840.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01837"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01837"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

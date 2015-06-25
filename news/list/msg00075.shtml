@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Questions about wml -->
+<!--X-From-R13: Oyivfr Prybggv <nyivfrNyrggrer.havcq.vg> -->
+<!--X-Date: Wed, 4 Feb 1998 14:16:49 +0100 (MET) -->
+<!--X-Message-Id: 19980204121634.51807@fedro -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00075">Date Index</a>][<a href="thrd2.shtml#00075">Thread Index</a>]<br>
+[<A HREF="msg00074.shtml">Date Prev</A>][<A HREF="msg00076.shtml">Date Next</A>][<A HREF="msg00070.shtml">Thread Prev</A>][<A HREF="msg00076.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Questions about wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alvise Belotti &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 4 Feb 1998 12:16:34 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi all,
+I'm a absolute beginner with this toolkit and I'm definitively not a
+programmer at all.;-)
+But I'm actively learning ;-)
+Ok, my questions
+1) wml::std:page appear not to include the &lt;!DOCTYPE....&gt; statement;
+is my impression correct? - If yes, is this a bug or a feature?
+2) I like have the tags all in uppercase (i.e. &lt;FOO&gt;&lt;/FOO&gt;), but  I
+use elvis (a vi clone) and switching to uppercase is very annoying; is a
+bad idea to fix it in pass 7 ? (perhaps this is possible yet, but I'
+don't know how)
+3) If I know well, in wml::des::navbar I can use &lt;navbar
+imgstar=std:sel:ovr ...&gt; then &lt;nb_button img=foo-*.gif...&gt; and
+the resulting tags are:&lt;nb_button img=foo-std.gif..&gt;, &lt;nb_button
+img=foo-sel.gif..&gt;, u.s.w., whith the asterisk substituded by the string
+in imgstar option.
+ ok, now i'm building a web site in three languages and I'm using a
+ lot of statements of wml::std::lang and wml::std::href; I'm writing
+ something like this:
+
+ &lt;href="\
+ url="&lt;it: index1.it.html&gt;"\
+ "&lt;en: index1.en.html&gt;"\
+ "&lt;es: index1.es.html&gt;
+ "&gt;
+ u.s.w.
+ I'd love a tag like &lt;langstar=it:en:es&gt; and then
+
+ &lt;href="\
+ url="&lt;it: index1.*.html&gt;"\
+ "&lt;en: index1.*.html&gt;"\
+ "&lt;es: index1.*.html&gt;
+ "&gt;
+Is this possible yet? Or maybe in the future?
+
+Last question: I could write to the ML, and read it on the web, but no
+mail reach my e-mail box;
+is this the right working mode of the ML?
+It's all (for now;-)
+thank you in advance
+Alvise
+--
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-%
+	% Alvise Belotti - via Pulle', 24/A - 35136 Padova PD - Italy %
+	% Tel. Home: +39(0)49 8900439 Office: +39(0)49 8274696        %
+	% E-Mail: alvise@lettere.unipd.it                             %
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-%
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00076" HREF="msg00076.shtml">Re: Questions about wml</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00074.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00076.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00070.shtml">Re: Filtering with wml, security considerations?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00076.shtml">Re: Questions about wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00075"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00075"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

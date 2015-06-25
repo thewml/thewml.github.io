@@ -1,0 +1,167 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Nested tags -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 11 Apr 2000 07:27:30 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0004110720080.3434&#45;100000@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000410155705.A351@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01523">Date Index</a>][<a href="thrd31.shtml#01523">Thread Index</a>]<br>
+[<A HREF="msg01522.shtml">Date Prev</A>][<A HREF="msg01524.shtml">Date Next</A>][<A HREF="msg01522.shtml">Thread Prev</A>][<A HREF="msg01524.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Nested tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 11 Apr 2000 07:23:58 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Your second approach works if you don't preserve/restore the variable
+inside the macro, but use a "global" variable:
+
+&lt;define-container UL whitespace=delete&gt;
+&lt;set-var IN_UL=1&gt;
+&lt;table cellpadding=3 cellspacing=0 border=0&gt;
+%body
+&lt;/table&gt;
+&lt;set-var IN_UL=0&gt;
+&lt;/define-container UL&gt;
+
+
+&lt;define-container LI whitespace=delete&gt;
+&lt;ifeq &lt;get-var IN_UL&gt; 1
+  &lt;group
+    &lt;tr&gt;
+      &lt;td valign=top&gt;
+       &lt;IMG ALIGN=top ALT="" src="$(ROOT)/.pics/3d-ball.gif"&gt;
+      &lt;/td&gt;
+      &lt;td&gt;%body&lt;/td&gt;
+    &lt;/tr&gt;
+  &gt;
+  &lt;group 
+    &lt;LI*&gt;%body&lt;/LI*&gt;&gt;
+  &gt;
+&lt;/define-container LI&gt;
+
+
+This way you can use &lt;LI&gt; within &lt;UL&gt;&lt;/UL&gt; with this special meaning
+and within &lt;OL&gt;&lt;/OL&gt; with its "normal" meaning.
+
+Of course, for &lt;UL&gt; this should deal with nesting which it doesn't
+right now. But it could be easily extended by incrementing IN_UL for
+each &lt;UL&gt; and decrementing for each &lt;/UL&gt;.
+
+Although &lt;OL&gt;&lt;/OL&gt; inside &lt;UL&gt;&lt;/UL&gt; still would break (you'd need a
+IN_OL variable to deal with this I guess).
+
+Cheers,
+Fritz
+
+On Mon, 10 Apr 2000, Xose Manoel Ramos wrote:
+
+&gt; I wonder if there is a simple way to define nested tags (i.e. tags
+&gt; that have a special meaning inside another tags). 
+&gt; 
+&gt; Something like:
+&gt; 
+&gt; &lt;macro&gt;
+&gt;   &lt;title&gt;Just the master&lt;/title&gt;
+&gt;   &lt;content&gt;
+&gt;    This is the content
+&gt;   &lt;/content&gt;
+&gt; &lt;/macro&gt;  
+&gt; 
+&gt; I mean, this tags should have only this meaning when used inside the
+&gt; &lt;macro&gt; tag, and otherwise have their normal meaning.
+&gt; 
+&gt; I worked out a system using 'perl' &amp; 'redirectors'. Later I have
+&gt; looked at 'grid.wml' and I discovered Ralph has used the same
+&gt; approach as me.
+&gt; 
+&gt; I just wonder if somebody has thought of a better, and simpler method
+&gt; to do this. I thought of something like:
+&gt; 
+&gt; &lt;define-container macro&gt;
+&gt;  &lt;preserve __inside&gt;
+&gt;  &lt;set-var __inside="macro"&gt;
+&gt;  %body
+&gt;  &lt;restore __inside&gt;
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; &lt;define-container title&gt;
+&gt;   &lt;when &lt;eq &lt;get-var __inside&gt; macro&gt;&gt;
+&gt;   (...something...)
+&gt;   &lt;/when&gt;
+&gt; &lt;/define&gt;
+&gt; 
+&gt; But this does not work as I should have expected.
+&gt; 
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01522" HREF="msg01522.shtml">Nested tags</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01522.shtml">Nested tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01524.shtml">Re: Nested tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01522.shtml">Nested tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01524.shtml">Re: Nested tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01523"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01523"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

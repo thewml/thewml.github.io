@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wmk and shebang line -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Tue, 30 Mar 1999 12:37:47 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990330103538.760G&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00525">Date Index</a>][<a href="thrd12.shtml#00525">Thread Index</a>]<br>
+[<A HREF="msg00524.shtml">Date Prev</A>][<A HREF="msg00526.shtml">Date Next</A>][<A HREF="msg00523.shtml">Thread Prev</A>][<A HREF="msg00526.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wmk and shebang line</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 Mar 1999 12:37:00 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+When I use no shebang line wmk only compiles edited files. 
+
+With this shebang-line
+
+#!wml -o (ALL-LANG_*)uLANG_EN:kap2-en.html \
+      -o (ALL-LANG_*)uLANG_DE:kap2-de.html
+
+the file is always compiled. In wmd I found no hint, to stop this.
+
+I'll have many files with such a shebang-line in one directory and don't
+want to complie all files, when I edited only one.
+
+I'm sure, there is a solution. 
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00526" HREF="msg00526.shtml">Re: wmk and shebang line</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00524.shtml">Re: problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00526.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00523.shtml">Some news</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00526.shtml">Re: wmk and shebang line</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00525"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00525"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

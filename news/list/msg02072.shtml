@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 26 Nov 2000 18:34:39 +0100 (MET) -->
+<!--X-Message-Id: 20001126184012.C24820@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200011251558.QAA23169@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02072">Date Index</a>][<a href="thrd42.shtml#02072">Thread Index</a>]<br>
+[<A HREF="msg02071.shtml">Date Prev</A>][<A HREF="msg02073.shtml">Date Next</A>][<A HREF="msg02071.shtml">Thread Prev</A>][<A HREF="msg02080.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 26 Nov 2000 18:40:12 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Nov 25, 2000 at 04:58:46PM +0100, freddy77@angelfire.com wrote:
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 2.0.6
+&gt; Operating System: Linux RedHat 6.2
+&gt; 
+&gt; Problem Description:
+&gt; | I detected 2 problem in wml::fmt::text
+&gt; | 
+&gt; | with this source
+&gt; | ---test1.wml---
+&gt; | #use wml::fmt::text
+&gt; | 
+&gt; | &lt;text&gt;PROVA&lt;/text&gt;
+&gt; | --
+&gt; | 
+&gt; | Output:
+&gt; | --test1.html---
+&gt; | &lt;strong&gt;PROV&lt;/strong&gt;
+&gt; | --
+
+Hello,
+
+there is indeed a bug here (in wml_aux_txt2html), i will try to fix it.
+
+&gt; | If you use filenames containig space in wml_fmt_text the function fail.
+
+i believe that filenames containing spaces should never be used on the
+WWW, so i do not want to waste my time fixing this.  There are many other
+places were wml is broken this way.
+Please do not misunderstand my point, i do not want to prevent you from
+using such filenames, but i have really no time to investigate this now.
+If someone send patches, they will be committed.
+
+&gt; | if i use wml_fmt_text and the file has line that begin with # I don't see this line. Is a BUG or not ?
+
+Lines beginning with a sharp sign are deleted during pass 8. so you have
+to protect your text by using
+  &lt;protect pass=8&gt;&lt;text&gt;....&lt;/text&gt;&lt;/protect&gt;
+or maybe you could use wml::fmt::verbatim instead of wml::fmt::text.
+
+&gt; | If I use table and not provide summary the program output &lt;table ... summary=""&gt; instead of removing summary attribute.
+
+This attribute is added to make `tidy' quiet, and its use is also highly
+recommended by the W3C (see wml_std_wai10(7)).
+If you prefer not to add this attribute, either run an epilog filter
+against output files, or call wml with
+   -W7,'-S summary'
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02071" HREF="msg02071.shtml">[BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></strong>, <em>From:</em> freddy77</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02071.shtml">[BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02073.shtml">[BUG REPORT] WML 2.0.6, Debian Linux 2.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02071.shtml">[BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02080.shtml">Bug report, I think, regarding &lt;attributes-quote %attributes&gt;.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02072"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02072"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

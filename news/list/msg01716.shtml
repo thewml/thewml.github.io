@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: problems with the wml site -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 15 Jun 2000 13:29:40 +0200 (MET DST) -->
+<!--X-Message-Id: 20000615133117.A5775@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3941BED4.BE342800@corp.goyogi.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01716">Date Index</a>][<a href="thrd35.shtml#01716">Thread Index</a>]<br>
+[<A HREF="msg01715.shtml">Date Prev</A>][<A HREF="msg01717.shtml">Date Next</A>][<A HREF="msg01711.shtml">Thread Prev</A>][<A HREF="msg01713.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: problems with the wml site</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 15 Jun 2000 13:31:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 09, 2000 at 09:06:44PM -0700, Afam Agbodike wrote:
+
+&gt; there seem to be a few formatting errors in the documentation section of
+&gt; the wml site, possibly other sections as well.
+&gt; 
+&gt; for an example, see this page:
+&gt; 
+&gt; <A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p1_ipp.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p1_ipp.html</A>
+&gt; 
+&gt; many of the header sections are surrounded by &lt;strong&gt; tags, I don't
+&gt; think this is the way it is supposed to be. also, in places where the lt
+&gt; and gt should come out as &lt; and &gt;, they are being written to the page as
+&gt; &amp;lt; and &amp;gt; seems that the wml encoding is getting confused in those
+&gt; sections.
+
+Hi Afam,
+
+this is due to a bug in pod2html shipped with perl 5.00503.
+Does someone has a workaround to protect angle brackets?
+
+#----   test.pod   ------
+=head1 NAME
+
+=head2 B&lt;test&gt;
+#----     EOF      ------
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01711" HREF="msg01711.shtml">problems with the wml site</A></strong>, <em>From:</em> Afam Agbodike</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01715.shtml">[BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01717.shtml">Re: [BUG REPORT] WML 2.0.1, Linux i686 redhat 6.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01711.shtml">problems with the wml site</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01713.shtml">Variables in #!-lines</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01716"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01716"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

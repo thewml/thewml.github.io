@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.4.9 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Sat, 27 Dec 1997 09:25:24 +0100 (MET) -->
+<!--X-Message-Id: 199712270825.JAA25304@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00012">Date Index</a>][<a href="thread.shtml#00012">Thread Index</a>]<br>
+[<A HREF="msg00011.shtml">Date Prev</A>][<A HREF="msg00013.shtml">Date Next</A>][<A HREF="msg00011.shtml">Thread Prev</A>][<A HREF="msg00015.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.4.9</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Sat, 27 Dec 1997 09:25:22 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+  Now available:
+  Website META Language, Version 1.4.9
+
+  Changes between 1.4.8 and 1.4.9:
+      971224 - Added the contents of the RESTRICTIONS file to
+               wml_faq.pod and removed the file.
+             - Corrected the FAQ because of new &lt;protect&gt;
+             - Added more info to the FAQ
+      971226 - Upgraded to GetoptLong-2.13
+             - Upgraded to Image-Size-2.5
+             - completely cleaned up the Divert (Pass 5) filter
+               and enhanced it: Now you can do a named leave,
+               i.e. leave a divertion by name which has the
+               effect of leaving it and all other divertions
+               which were entered from within it.
+             - added &lt;page_end&gt; to wml::std::page which can be
+               used to end a &lt;page&gt;. This usually is not needed
+               in standard situations, but when creating more
+               than one page via &lt;page&gt; and slicing then this is
+               needed to avoid nesting.
+             - Upgraded to IO-1.1803
+      971227 - changed the IPP semantics of #include and #use to
+               a better one: Now #include really does what it
+               says, it unconditionally includes a file, perhaps
+               even more then once. On the other hand #use has
+               the general "use" semantic where multiple
+               inclusion is automatically avoided. Up to this
+               time it was not possible to include a file
+               (perhaps a navigation bar) more then once, because
+               #include also had the multiple inclusion
+               detection. Now this is no longer the case.
+             - added "slices" attribute to &lt;page&gt; of
+               wml::std::page which now has to be used to force
+               &lt;page&gt; to create the WML_PAGE_XXX slices.  Because
+               these usually make problems when using &lt;page&gt;
+               multiple times.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00011.shtml">Feature Demonstration Pages</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00013.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00011.shtml">Feature Demonstration Pages</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00015.shtml">ANNOUNCE: WML 1.4.10</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00012"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00012"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

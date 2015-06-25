@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: grid, table summary attribute -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 15 Jan 2000 19:48:34 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000115171235.452B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3880539A.72183E4@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01275">Date Index</a>][<a href="thrd26.shtml#01275">Thread Index</a>]<br>
+[<A HREF="msg01276.shtml">Date Prev</A>][<A HREF="msg01277.shtml">Date Next</A>][<A HREF="msg01273.shtml">Thread Prev</A>][<A HREF="msg01274.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: grid, table summary attribute</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 15 Jan 2000 17:17:26 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 15 Jan 2000, Werner Heuser wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I dare to suggest an additional attribute 'summary' for 
+&gt; #use wml::std::grid
+&gt; 
+&gt; &lt;grid summary="Example"&gt;
+&gt; 
+&gt; because:
+&gt; 
+&gt; 'tidy' says:
+&gt; 
+&gt; line 20 column 2 - Warning: &lt;table&gt; lacks "summary" attribute
+&gt; 
+&gt; Without this attribute pages are not fully conformant to WAI standards.
+
+There are many attributes that should be added to conform to WAI standards.
+It is on my TODO list, but please tell me when you find such problems so
+that i can inplement them.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01273" HREF="msg01273.shtml">grid, table summary attribute</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01276.shtml">Re: verbatim and substitution of #</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01277.shtml">Re: verbatim and substitution of #</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01273.shtml">grid, table summary attribute</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01274.shtml">Navbar in two languages again</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01275"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01275"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

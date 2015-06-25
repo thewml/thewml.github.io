@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] Problems with JS functions and navbars -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 30 Oct 2000 08:37:07 +0100 (MET) -->
+<!--X-Message-Id: 20001030002002.B7978@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02049">Date Index</a>][<a href="thrd41.shtml#02049">Thread Index</a>]<br>
+[<A HREF="msg02048.shtml">Date Prev</A>][<A HREF="msg02050.shtml">Date Next</A>][<A HREF="msg02044.shtml">Thread Prev</A>][<A HREF="msg02050.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] Problems with JS functions and navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 30 Oct 2000 00:20:02 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+Stephan Petersen told me last week that rollover effect was broken on
+the WML website. It was due to changes i made on July and commented out
+in <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg01858.shtml">http://www.engelschall.com/sw/wml/news/list/msg01858.shtml</A>
+
+I guess many of you could be affected by this error too, so i would like
+to discuss this issue here.
+
+In wml::std::tags the &lt;javascript&gt; tag divert its content into the HEAD
+section, to fix a bug reported by Chris Marston about function scope.
+IMO this behaviour is what we need.
+
+When a document generate multiple files (as multilingual documents do),
+javascript functions must be put into each output file. For this reason,
+i defined &lt;navbar:jsfuncs&gt;, which print definiton of javascript
+functions, and discard itself so that these functions are printed only
+once.  As explained in wml::des::navbar(3), use this tag outside of
+any slice terms to make sure every output file contain right JS
+functions.  This problem was raised by Stephan Petersen, and he took
+time to help me providing a robust solution.
+
+But there is one case where this fails: in pages with more than one
+navbar, if the first one is text only, no JS code is inserted.
+This problem is hairy, because &lt;navbar:jsfuncs&gt; is evaluated in pass 2,
+and navbars are built in pass 3.  So i think the only solution is to
+write those Javascript functions even with text-only navbars.
+I applied the following patch to the unstable branch, and will apply it
+to the stable branch if there is no objection.
+
+Index: navbar.src
+===================================================================
+RCS file: /home/barbier/Projets/Wml/cvs/wml/wml_include/des/navbar.src,v
+retrieving revision 1.34
+diff -u -u -r1.34 navbar.src
+--- navbar.src	2000/10/02 08:27:14	1.34
++++ navbar.src	2000/10/30 00:01:50
+@@ -553,12 +553,14 @@
+     $mcode =~ s|^\s+||;
+     $mcode =~ s|\s+$||;
+     $O .= $mcode."\n";
++    $P = &lt;&lt;'EOT';
++&lt;navbar:jsfuncs /&gt;
++EOT
+ 
+     #   prefix the output with some JavaScript
+     #   aux functions and the preloading of used images
+     if ($#preload &gt;= 0) {
+-        $P = &lt;&lt;'EOT';
+-&lt;navbar:jsfuncs /&gt;
++        $P .= &lt;&lt;'EOT';
+ &lt;javascript&gt;
+ if (document.images) {
+ EOT
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02048.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02050.shtml">Yet another WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02044.shtml">WML 2.0.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02050.shtml">Yet another WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02049"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02049"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

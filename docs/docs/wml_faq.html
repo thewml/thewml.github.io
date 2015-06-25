@@ -1,0 +1,540 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: FAQ</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:37"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: FAQ</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FAQ - Frequently Asked Questions on WML</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+		<li><a href="#general_questions_">General questions:</a></li>
+		<li><a href="#questions_about_passes_">Questions about passes:</a></li>
+		<li><a href="#questions_about_include_files_">Questions about include files:</a></li>
+		<li><a href="#error_messages_">Error messages:</a></li>
+		<li><a href="#general_questions">GENERAL QUESTIONS</a></li>
+		<li><a href="#questions_about_passes">QUESTIONS ABOUT PASSES</a></li>
+		<li><a href="#questions_about_include_files">QUESTIONS ABOUT INCLUDE FILES</a></li>
+		<li><a href="#error_messages">ERROR MESSAGES</a></li>
+	</ul>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>WML FAQ - Frequently Asked Questions on WML</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This is the Frequently Asked Question (FAQ) list with answers on WML. It is
+divided into question/answer parts, each answering one particular topic.</p>
+<p>
+</p>
+<h2><a name="general_questions_">General questions:</a></h2>
+<dl>
+<dt><strong><a name="item_g01_3a_what_is_wml_3f"><strong>G01:</strong> What is WML?</a></strong>
+<dt><strong><a name="item_g02_3a_wml_is_distributed_as_free_software_2c_does"><strong>G02:</strong> WML is distributed as free software, does this mean
+              I also can use it free of charge?</a></strong>
+<dt><strong><a name="item_g03_3a_why_is_wml_a_toolkit_of_disjunct_programs_i"><strong>G03:</strong> Why is WML a toolkit of disjunct programs instead of
+              one big integrated program?</a></strong>
+<dt><strong><a name="item_g04_3a_which_tools_are_included_in_the_wml_distrib"><strong>G04:</strong> Which tools are included in the WML distribution?</a></strong>
+<dt><strong><a name="item_g05_3a_wml_is_as_powerful_as_it_can_2c_but_are_the"><strong>G05:</strong> WML is as powerful as it can, but are there
+              even any restrictions?</a></strong>
+<dt><strong><a name="item_g06_3a_where_do_i_find_documentation_3f"><strong>G06:</strong> Where do I find documentation?</a></strong>
+<dt><strong><a name="item_g07_3a_is_there_any_official_support_for_wml_3f"><strong>G07:</strong> Is there any official support for WML?</a></strong>
+<dt><strong><a name="item_g08_3a_how_i_can_i_send_a_bug_report_to_the_author"><strong>G08:</strong> How I can I send a bug report to the author?</a></strong>
+<dt><strong><a name="item_g09_3a_i_really_want_to_use_wml_for_textprocessing"><strong>G09:</strong> I really want to use WML for textprocessing because it's such
+              powerful, isn't it?</a></strong>
+</dl>
+<p>
+</p>
+<h2><a name="questions_about_passes_">Questions about passes:</a></h2>
+<dl>
+<dt><strong><a name="item_p01_3a_how_can_i_avoid_conflicts_with_a_particular"><strong>P01:</strong> How can I avoid conflicts with a particular WML pass?</a></strong>
+<dt><strong><a name="item_p02_3a_how_can_i_avoid_conflicts_with_a_particular"><strong>P02:</strong> How can I avoid conflicts with a particular WML pass
+              for only some areas of the input file?</a></strong>
+<dt><strong><a name="item_p03_3a_is_there_a_way_to_change_pass_order_3f"><strong>P03:</strong> Is there a way to change pass order?</a></strong>
+<dt><strong><a name="item_p04_3a_why_shall_i_not_change_original_pass_order_"><strong>P04:</strong> Why shall I not change original pass order?</a></strong>
+</dl>
+<p>
+</p>
+<h2><a name="questions_about_include_files_">Questions about include files:</a></h2>
+<dl>
+<dt><strong><a name="item_i01_3a_how_can_i_install_or_activate_my_own_includ"><strong>I01:</strong> How can I install or activate my own include files?</a></strong>
+<dt><strong><a name="item_i02_3a_how_can_i_overwrite_the_knowledge_of_the_in"><strong>I02:</strong> How can I overwrite the knowledge of the info-tag from wml::std:info?</a></strong>
+<dt><strong><a name="item_i03_3a_how_can_i_combine_the_gfont_2d_with_the_hre"><strong>I03:</strong> How can I combine the gfont- with the href-tag?</a></strong>
+<dt><strong><a name="item_i04_3a_how_can_i_combine_the_gfont_2d_with_the_rol"><strong>I04:</strong> How can I combine the gfont- with the rollover-tag?</a></strong>
+</dl>
+<p>
+</p>
+<h2><a name="error_messages_">Error messages:</a></h2>
+<dl>
+<dt><strong><a name="item_e01_3a_cannot_load__2ftmp_2fwml_2e_2e_2e_for_unpro"><strong>E01:</strong> Cannot load <code>/tmp/wml...</code> for unprotection</a></strong>
+<dt><strong><a name="item_e02_3a_eperl_3aerror_3a_perl_runtime_error"><strong>E02:</strong> ePerl:Error: Perl runtime error</a></strong>
+</dl>
+<p>
+</p>
+<h2><a name="general_questions">GENERAL QUESTIONS</a></h2>
+<dl>
+<dt><strong><strong>G01: What is WML?</strong></strong>
+<dd>
+<p>WML is a free and extensible Webdesigner's off-line HTML generation
+toolkit for Unix, distributed under the GNU General Public License
+(GPL v2).</p>
+</dd>
+<dd>
+<p>WML consists of a control frontend driving up to nine backends in a
+sequential pass-oriented filtering scheme. Each backend provides one
+particular core language. For maximum power WML additionally ships
+with a well-suited set of include files which provide higher-level
+features build on top of the backends core languages. While not
+trivial and idiot proof WML provides most of the core features real
+hackers always wanted for HTML generation.</p>
+</dd>
+</li>
+<dt><strong><strong>G02: WML is distributed as free software, does this mean
+             I also can use it free of charge?</strong></strong>
+<dd>
+<p>Yes, WML can be distributed free of charge and used free of charge without any
+exceptions. You can even use WML to generate a commercial website, no problem.
+But please give credit to the author where credit is due. Either by using
+<a href="../incl/wml::std::info.html">wml::std::info</a>(3) which includes a WML identifier or by explicitly saying
+somewhere on the generated website that you used WML. This just would be fair.</p>
+</dd>
+</li>
+<dt><strong><strong>G03: Why is WML a toolkit of disjunct programs instead of
+             one big integrated program?</strong></strong>
+<dd>
+<p>The first reason is because WML was born out of the need to generate a huge
+webarea in spring 1997 (http://www.engelschall.com/sw/) and an appropriate
+tool had to be found in finite time. So the author decided to use maximum
+software leverage and just compiled a toolkit of existing programs and only
+programmed the missing stuff itself.</p>
+</dd>
+<dd>
+<p>After this approach showed that WML is flexible and powerful enough as the
+solution to generate huge webareas, the author started to compactify it and
+stripped the toolkit to its essential parts. But it is still a toolkit, even
+when you have only one frontend to control the parts.</p>
+</dd>
+</li>
+<dt><strong><strong>G04: Which tools are included in the WML distribution?</strong></strong>
+<dd>
+<p>Well, you certainly know <code>wml</code>, the front-end for WML. But there are
+other cool front-ends for the most useful tasks:</p>
+</dd>
+<dl>
+<dt><strong><a name="item_wmk__2d_website_meta_language_make"><code>wmk</code> - Website META Language Make</a></strong>
+<dd>
+<p>Build your web pages without writing Makefiles.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wmd__2d_website_meta_language_documentation_browse"><code>wmd</code> - Website META Language Documentation Browser</a></strong>
+<dd>
+<p>This is your visa for all the documentation you want.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wmb__2d_website_meta_language_bug_reporting_tool"><code>wmb</code> - Website META Language Bug Reporting Tool</a></strong>
+<dd>
+<p>The preferred way to report a bug, this tool will send a mail to the
+maintainer with your problem and the characteristics of your
+installation.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wmu__2d_website_meta_language_upgrade_utility"><code>wmu</code> - Website META Language Upgrade Utility</a></strong>
+<dd>
+<p>Upgrade and build new versions of WML like a charm, with the same
+options as those of your current installation.</p>
+</dd>
+</li>
+</dl>
+<dt><strong><strong>G05: WML is as powerful as it can, but are there
+             even any restrictions?</strong></strong>
+<dd>
+<p>Sure, WML has some restrictions which cannot be eliminated easily.</p>
+</dd>
+<dl>
+<dt><strong><a name="item_o">o</a></strong>
+<dd>
+<p>there is no real debugging mode which makes tracing back of problems very
+hard, especially for the ePerl pass. Currently the best way to debug is to
+use the <strong>-p</strong> option with args `<code>1</code>', then `<code>12</code>' then `<code>123</code>' etc. and
+comparing the result in each step.</p>
+</dd>
+</li>
+<dt><strong>o</strong>
+<dd>
+<p>the WML language is very complex because of the 9 independent languages which
+are used intermixed. Because of this WML is not easy to understand and use for
+the average webdesigner.</p>
+</dd>
+</li>
+</dl>
+<dt><strong><strong>G06: Where do I find documentation?</strong></strong>
+<dl>
+<dt><strong>o</strong>
+<dd>
+<p>Invoke the Documentation Browser by typing <em>wmd</em> and navigate through
+the installed documentation.</p>
+</dd>
+</li>
+<dt><strong>o</strong>
+<dd>
+<p>The WML Online documentation is located at</p>
+</dd>
+<dd>
+<pre>
+  <a href="http://www.engelschall.com/sw/wml/docs">http://www.engelschall.com/sw/wml/docs</a></pre>
+</dd>
+<dd>
+<p>The webpages are the same as the ones viewed with <em>wmd</em>.</p>
+</dd>
+</li>
+</dl>
+<dt><strong><strong>G07: Is there any official support for WML?</strong></strong>
+<dd>
+<p>Yes, there is. First there is an official support mailing list for WML users:</p>
+</dd>
+<dd>
+<pre>
+  sw-wml@engelschall.com</pre>
+</dd>
+<dd>
+<p>Here you can reach the WML author Ralf S. Engelschall, the current
+maintainer Denis Barbier, and the other people who use WML and which can
+help you in case of problems. Use this forum to spread your WML-related
+ideas and suggestion, too. Feel free to ask anything WML-related you
+want.</p>
+</dd>
+<dd>
+<p>To subscribe to this Majordomo-controlled mailing list, just send an E-mail to
+<a href="mailto:majordomo@engelschall.com">majordomo@engelschall.com</a> with only</p>
+</dd>
+<dd>
+<pre>
+  subscribe sw-wml you@domain.dom</pre>
+</dd>
+<dd>
+<p>in the <em>body</em> (leave the subject empty). After sending this, Majordomo will
+respond with an authentication challenge which has to send back again for
+security reasons (to avoid that others subscribe you without your ok). Now you
+are successfully subscribed to this list.</p>
+</dd>
+<dd>
+<p>Second you can directly contact Ralf S. Engelschall &lt;<a href="mailto:rse@engelschall.com">rse@engelschall.com</a>&gt;
+or Denis Barbier &lt;<a href="mailto:barbier@engelschall.com">barbier@engelschall.com</a>&gt; via E-mail in case of very
+important problems.</p>
+</dd>
+</li>
+<dt><strong><a name="item_g08_3a_how_can_i_send_a_bug_report_to_the_author_3"><strong>G08: How can I send a bug report to the author?</strong></a></strong>
+<dd>
+<p>You have four options:</p>
+</dd>
+<dl>
+<dt><strong><a name="item_bug_reporting_tool_wmb">Bug Reporting Tool WMb</a></strong>
+<dd>
+<p>This is the recommended way because it automatically includes all parameters
+of your WML installation in the bug report which (most of the time) is
+essentially for the author to be able to successfully solve your problem.
+Just run the <em>wmb</em> program and enter your problem description. But make sure
+you have at least a workable E-mail link to the Internet, because WMb wants to
+send the bug report via E-mail to <a href="mailto:rse@engelschall.com.">rse@engelschall.com.</a></p>
+</dd>
+</li>
+<dt><strong><a name="item_bug_reporting_webpage">Bug Reporting Webpage</a></strong>
+<dd>
+<p>This is the general bug report webpage on</p>
+</dd>
+<dd>
+<pre>
+  <a href="http://www.engelschall.com/sw/bugreport/">http://www.engelschall.com/sw/bugreport/</a></pre>
+</dd>
+<dd>
+<p>for all programs from Ralf S. Engelschall. Please include your `wml -V3'
+output, too.</p>
+</dd>
+</li>
+<dt><strong><a name="item_mailing_list">Mailing List</a></strong>
+<dd>
+<p>This is the official support mailing list for WML which can be
+contacted via</p>
+</dd>
+<dd>
+<pre>
+  sw-wml@engelschall.com</pre>
+</dd>
+</li>
+<dt><strong><a name="item_direct_contact">Direct Contact</a></strong>
+<dd>
+<p>This is the last chance, if all others failed. Just send your problem directly
+to the maintainer via <a href="mailto:barbier@engelschall.com">barbier@engelschall.com</a></p>
+</dd>
+</li>
+</dl>
+<dt><strong><strong>G09: I really want to use WML for textprocessing because it's such
+             powerful, isn't it?</strong></strong>
+<dd>
+<p>Yes, WML is, but only for HTML generation.</p>
+</dd>
+<dd>
+<p>Although WML provides a lot of hot features (like Slicing or Diversion) one
+often also wants for textprocessing, WML is not a general textprocessing
+language. WML is HTML-dependend at a lot of edges and it lacks features which
+a text-processor really needs (like paragraph formatting, footnote support,
+etc). And even if you really decide to use WML for writing other stuff than
+HTML, you should be as crazy as you have time. Because WML is slow compared
+with any general textprocessing tool like TeX or even SGML-Tools. For its
+target format HTML this was and is never a problem, because the largest
+Webpage is never greater then approximately 10-100 KB. But for real
+textprocessing this size is peanuts.</p>
+</dd>
+<dd>
+<p>So, please don't think about using WML for text-processing, even if one of
+your primary target formats is HTML. Instead use a language like LaTeX2HTML,
+SDF or SGML-Tools to create the HTML format and <em>only post-process</em> this via
+WML. In other words: Use WML only for the dirty work of including the
+generated HTML stuff into your webpages. But don't think any longer about
+using WML as a text-processor.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="questions_about_passes">QUESTIONS ABOUT PASSES</a></h2>
+<dl>
+<dt><strong><strong>P01: How can I avoid conflicts with a particular WML pass?</strong></strong>
+<dd>
+<p>When you are sure you don't need this particular pass, you can use WML option
+<strong>-p</strong> and just leave out the number of the pass.</p>
+</dd>
+</li>
+<dt><strong><strong>P02: How can I avoid conflicts with a particular WML pass
+             for only some areas of the input file?</strong></strong>
+<dd>
+<p>Use the internal <code>&lt;protect&gt;</code> container tag which entirely protects
+its body from evaluation by any pass. To protect the body from evaluation by a
+particular pass only, you can use <code>&lt;protect pass=N&gt;</code>.</p>
+</dd>
+</li>
+<dt><strong><strong>P03: Is there a way to change pass order?</strong></strong>
+<dd>
+<p>Yes, since WML 1.7.3, you may change it with the <strong>-p</strong> flag. But you are
+warned this should be used by WML gurus only and for very particular
+reasons. For some internal reasons, processing will always stop after pass
+9, even if you specify additional passes. This is a feature and is not
+subject to change on future releases.</p>
+</dd>
+</li>
+<dt><strong><strong>P04: Why shall I not change original pass order?</strong></strong>
+<dd>
+<p>WML has been designed to use passes in numerical order. This feature has
+a strong influence on how WML include files are written and there is no
+warranty these include files will still work when changing pass order.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="questions_about_include_files">QUESTIONS ABOUT INCLUDE FILES</a></h2>
+<dl>
+<dt><strong><strong>I01: How can I install or activate my own include files?</strong></strong>
+<dd>
+<p>There are many ways, but the most elegant and useful way is
+the following: First create a directory named <em>$HOME/.wml/</em> and
+then a directory named <em>$HOME/.wml/home/</em> via</p>
+</dd>
+<dd>
+<pre>
+  $ cd $HOME
+  $ mkdir .wml
+  $ mkdir .wml/home</pre>
+</dd>
+<dd>
+<p>Then create a <em>$HOME/.wmlrc</em> file with at least the following contents:</p>
+</dd>
+<dd>
+<pre>
+  -I .wml
+  -D HOME~.</pre>
+</dd>
+<dd>
+<p>Now just install your private include file <em>foo.tmpl</em> as
+<em>$HOME/.wml/home/foo.tmpl</em> and you are automatically be able to use it via</p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<p>from within any WML source.</p>
+</dd>
+</li>
+<dt><strong><strong>I02: How can I overwrite the knowledge of the info-tag from wml::std:info?</strong></strong>
+
+<dd>
+<p>Because the <code>&lt;info&gt;</code> tag constructs its information out of
+<code>WML_GEN_XXXX</code> variables which theirself can be overwritten by the <strong>-D</strong>
+option, you can just do this in your <em>$HOME/.wmlrc</em> file. For instance the
+authors <em>$HOME/.wmlrc</em> file contains the following three lines:</p>
+</dd>
+<dd>
+<pre>
+  -D WML_GEN_REALNAME=&quot;Ralf S. Engelschall&quot;
+  -D WML_GEN_USERNAME=rse
+  -D WML_GEN_HOSTNAME=engelschall.com</pre>
+</dd>
+<dd>
+<p>The most important one here is <code>WML_SRC_HOSTNAME</code> for the construction of the
+email address. Because WML cannot know the email domainname we really have to
+help it here.</p>
+</dd>
+</li>
+<dt><strong><strong>I03: How can I combine the gfont- with the href-tag?</strong></strong>
+<dd>
+<p>Just put the <code>&lt;gfont&gt;</code> tag directly into the <code>name</code> attribute
+of <code>&lt;href&gt;</code>:</p>
+</dd>
+<dd>
+<pre>
+  &lt;href name=&quot;&lt;gfont&gt;The Hyperlink Text&lt;/gfont&gt;&quot;
+        url=&quot;<a href="http://...">http://...</a>&quot;&gt;</pre>
+</dd>
+</li>
+<dt><strong><strong>I04: How can I combine the gfont- with the rollover-tag?</strong></strong>
+<dd>
+<p>Use <code>&lt;gfont&gt;</code>'s <code>notag</code> in combination with its <code>file</code> attribute as
+follows:</p>
+</dd>
+<dd>
+<pre>
+  &lt;gfont file=button-n.gif bgcolor=&quot;#ffffff&quot; notag&gt;Text&lt;/gfont&gt;
+  &lt;gfont file=button-o.gif bgcolor=&quot;#ccccff&quot; notag&gt;Text&lt;/gfont&gt;
+  &lt;rollover src=button-n.gif oversrc=button-o.gif url=&quot;<a href="http://...">http://...</a>&quot;&gt;</pre>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="error_messages">ERROR MESSAGES</a></h2>
+<dl>
+<dt><strong><strong>E01: Cannot load <code>/tmp/wml...</code> for unprotection</strong></strong>
+<dd>
+<p>One pass did not produce any output. This message certainly indicates
+a WML's bug, and so should be reported.</p>
+</dd>
+</li>
+<dt><strong><strong>E02: ePerl:Error: Perl runtime error</strong></strong>
+<dd>
+<p>An error occurred during pass 3 (<code>wml_p3_eperl</code>). The contents of the
+standard error channel is printed and may contain useful information for
+debugging.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p><a href="../docs/wml_intro.html">wml_intro</a>(7),
+<a href="../docs/wml_tutorial.html">wml_tutorial</a>(7),
+<a href="../docs/wml_tags.html">wml_tags</a>(7),
+<a href="../frontend/wml.html">wml</a>(1),
+<a href="../incl/wml::all.html">wml::all</a>(3).</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

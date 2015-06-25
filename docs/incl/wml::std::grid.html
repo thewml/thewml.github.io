@@ -1,0 +1,377 @@
+
+<html>
+<head>
+<title>Website META Language (WML), Documentation: Include File wml::std::grid</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal">
+<meta name="Copyright" content="1996-2001 Engelschall, Germany.">
+<meta name="Author"    content="WML, wml@master.thewml.org">
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)">
+<meta name="Modified"  content="2005-05-05 12:04:59">
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function nb_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function nb_imgSelect(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_s.src');
+        self.status = '';
+    }
+}
+function nb_imgOver(imgName, nohints, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        if (! nohints) self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function ro_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function ro_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+if (document.images) {
+    ro_img_unknown1_n = new Image();
+    ro_img_unknown1_n.src = '../../com/navbar/button-n-sw.gif';
+    ro_img_unknown1_o = new Image();
+    ro_img_unknown1_o.src = '../../com/navbar/button-o-sw.gif';
+}
+// done hiding -->
+</script>
+</head>
+<body background="../../com/bg/bg.gif" bgcolor="#ffffff" text="#000000" link="#6060c0" alink="#6060f0" vlink="#6060a0">
+<table border="0" cellspacing="0" cellpadding="0" summary="">
+<tr>
+  <td align="left" valign="top">
+    <a href="http://swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+></a><br>
+<a href="../../../" onmouseover="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onmouseout="ro_imgNormal('ro_img_unknown1'); return true" onfocus="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onblur="ro_imgNormal('ro_img_unknown1'); return true"><img name="ro_img_unknown1" src="../../com/navbar/button-n-sw.gif" alt="Free Software Area" border="0"></a><br>
+    <img src="../../com/navbar/button-i-wml.gif" alt=""><br>
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="140" height="1" align="bottom" border="0">
+    <p>
+  </td>
+  <td align="center" valign="top">
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="5" height="1" align="bottom" border="0">
+  </td>
+  <td valign="top">
+    <table cellspacing="0" cellpadding="0" width="550" summary="">
+    <tr>
+      <td valign="top">
+        <img src="../../com/navbar/headline-docs.gif" alt="Documentation: Include File wml::std::grid"><br>
+        <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table cellspacing="0" cellpadding="0" border="0" summary="">
+<tr>
+<td>
+&nbsp;
+&nbsp;
+</td>
+<td>
+<table bgcolor="#666699" cellspacing="0" cellpadding="0" border="0" summary="">
+<tr><td></td><td></td><td></td><td></td><td bgcolor="#000000"><img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="1" height="1" align="bottom" border="0"></td><td></td><td></td></tr>
+<tr>
+<td>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../index.html" onmouseover="self.status = '../index.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../index.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Introduction</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../frontend.html" onmouseover="self.status = '../frontend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../frontend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Frontends</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../backend.html" onmouseover="self.status = '../backend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../backend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Backends</font></a></font>&nbsp;&nbsp;</td>
+<td bgcolor="#ccccff">&nbsp;&nbsp;<font face="Arial,Helvetica"><b><a href="../incl.html" onmouseover="self.status = '../incl.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../incl.html'; return true" onblur="self.status = ''; return true"><font color="#000000">Includes</font></a></b></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../aux.html" onmouseover="self.status = '../aux.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../aux.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Auxilliaries</font></a></font>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src="../../com/imgdot/shared.imgdot-1x1-000000.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>wml::std::grid - Layout Grid</title>
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#attributes">ATTRIBUTES</a></li>
+	<li><a href="#example">EXAMPLE</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#requires">REQUIRES</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>wml::std::grid - Layout Grid</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+<pre>
+ &lt;grid [attributes]&gt;
+   &lt;cell [attributes]&gt;...&lt;/cell&gt;
+     :
+   &lt;cell [attributes]&gt;...&lt;/cell&gt;
+ &lt;/grid&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>The <code>&lt;grid&gt;</code> container tag provides a mixture between a HTML table
+and a TeX-like way of specifying its dimensions and the alignment of its
+cells.</p>
+<p>
+</p>
+<hr />
+<h1><a name="attributes">ATTRIBUTES</a></h1>
+<p>First the possible attributes for <code>&lt;grid&gt;</code>:</p>
+<dl>
+<dt><strong><a name="item_summary"><code>summary</code></a></strong><br />
+</dt>
+<dd>
+This attribute will be inserted into the <code>table</code> tag, see documentation
+of HTML 4.0 for details on why this attribute is recommended.
+</dd>
+<p></p>
+<dt><strong><a name="item_layout"><code>layout</code></a></strong><br />
+</dt>
+<dd>
+This specifies the layout of the grid in X and Y dimension, i.e. <code>3x2</code> means
+3 columns (x-dimension) and 2 rows (y-dimension). Default is <code>1x</code><em>NCELL</em>
+where <em>NCELL</em> is the number of <strong>cell</strong> tags or in other words: Default is a
+top-down list.
+</dd>
+<p></p>
+<dt><strong><a name="item_align"><code>align</code></a></strong><br />
+</dt>
+<dd>
+This specifies the horizontal alignment of the cells in a row. The argument
+has to contain as many characters as there are cells in a row. The supported
+alignment characters are `<code>l</code>' (left), `<code>r</code>' (right) and `<code>c</code>' (center).
+Default is `<code>l...l</code>' (as much <code>l</code>'s as there are cells in a row).
+</dd>
+<p></p>
+<dt><strong><a name="item_valign"><code>valign</code></a></strong><br />
+</dt>
+<dd>
+This specifies the vertical alignment of the cells in a column. The argument
+has to contain as many characters as there are cells in a column. The
+supported alignment characters are `<code>t</code>' (top), `<code>b</code>' (bottom) and `<code>m</code>'
+(middle). Default is `<code>t...t</code>' (as much <code>t</code>'s as there are cells in a
+column).
+</dd>
+<p></p>
+<dt><strong><a name="item_width"><code>width</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;table&gt;</code> tag. Use it
+to set the width of the grid. Default is no specified width.
+</dd>
+<p></p>
+<dt><strong><a name="item_spacing"><code>spacing</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute to <code>cellspacing</code> of the HTML
+<code>&lt;table&gt;</code> tag. Use it to set the spacing of cells in the grid, i.e.
+the space around the content of each cell. Default is 0 (no space).
+</dd>
+<p></p>
+<dt><strong><a name="item_padding"><code>padding</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute to <code>&lt;cellpadding&gt;</code> of the HTML
+<code>&lt;table&gt;</code> tag. Use it to set the padding between cells in the grid,
+i.e. the inter-cell space. Default is 0 (no space).
+</dd>
+<p></p>
+<dt><strong><a name="item_border"><code>border</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;table&gt;</code> tag. Use it
+to set the border width of the grid. Default is 0 (no border).
+</dd>
+<p></p>
+<dt><strong><a name="item_bgcolor"><code>bgcolor</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;table&gt;</code> tag. Use it
+to set the background color of the grid. Default is no specified color.
+</dd>
+<p></p>
+<dt><strong><a name="item_color"><code>color</code></a></strong><br />
+</dt>
+<dd>
+This sets the foreground (text) color of the grid's contents. Actually this
+sets the default for the same attribute of <code>&lt;cell&gt;</code>. Default is no
+specified color.
+</dd>
+<p></p></dl>
+<p>Second the possible attributes for <code>&lt;cell&gt;</code>:</p>
+<dl>
+<dt><strong><code>align</code></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+set the horizontal alignment of the cell's contents. Default is taken from the
+same attribute of <code>&lt;grid&gt;</code>.
+</dd>
+<p></p>
+<dt><strong><code>valign</code></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+set the vertical alignment of the cell's contents. Default is taken from the
+same attribute of <code>&lt;grid&gt;</code>.
+</dd>
+<p></p>
+<dt><strong><code>bgcolor</code></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+set the background color of a particular cell. Default is no specified color.
+</dd>
+<p></p>
+<dt><strong><code>color</code></strong><br />
+</dt>
+<dd>
+This sets the foreground (text) color of the cell's contents. This is done
+via the HTML <code>&lt;font&gt;</code> tag. Default is no specified color or the
+color from the same attribute of <code>&lt;grid&gt;</code>.
+</dd>
+<p></p>
+<dt><strong><a name="item_rowspan"><code>rowspan</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+span a cell over more then one row of the grid. Default is 1 row.
+</dd>
+<p></p>
+<dt><strong><a name="item_colspan"><code>colspan</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+span a cell over more then one column of the grid. Default is 1 column.
+</dd>
+<p></p>
+<dt><strong><code>width</code></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+set the width of the cell. Default is no specified width.
+</dd>
+<p></p>
+<dt><strong><a name="item_height"><code>height</code></a></strong><br />
+</dt>
+<dd>
+This is the corresponding attribute of the HTML <code>&lt;td&gt;</code> tag. Use it to
+set the height of the cell. Default is no specified height.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<hr />
+<h1><a name="example">EXAMPLE</a></h1>
+<pre>
+  &lt;grid bgcolor=&quot;#000000&quot; color=&quot;#ffffff&quot;
+        layout=&quot;3x2&quot; align=&quot;llr&quot; valign=&quot;tm&quot;&gt;
+    &lt;cell&gt;A&lt;/cell&gt; &lt;cell&gt;B&lt;/cell&gt; &lt;cell&gt;C&lt;/cell&gt;
+    &lt;cell&gt;D&lt;/cell&gt; &lt;cell&gt;E&lt;/cell&gt; &lt;cell&gt;F&lt;/cell&gt;
+  &lt;/grid&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com</pre>
+<p>
+</p>
+<hr />
+<h1><a name="requires">REQUIRES</a></h1>
+<pre>
+ Internal: P1, P2, P3, P5
+ External: --</pre>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p>HTML &lt;<code>table</code>&gt;-tag.</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

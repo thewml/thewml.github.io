@@ -1,0 +1,151 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: preselected nested navbar items&#45;idea,patch -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Tue, 12 Mar 2002 17:27:51 +0100 (MET) -->
+<!--X-Message-Id: 3C8E2C15.6000201@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02556">Date Index</a>][<a href="thrd52.shtml#02556">Thread Index</a>]<br>
+[<A HREF="msg02555.shtml">Date Prev</A>][<A HREF="msg02557.shtml">Date Next</A>][<A HREF="msg02573.shtml">Thread Prev</A>][<A HREF="msg02557.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>preselected nested navbar items-idea,patch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Mar 2002 17:25:57 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+What, if you could select the menu items, not only from &lt;navbar:render&gt;, but
+predefined in &lt;navbar:define&gt;.  I don't know, if this is a good way, or
+not,
+because I am still new to WML, and I cannot see if this fits well in the
+structure or fails.
+
+I changed navbar.wml on some places, added two new items to navbar:define,
+these are: "select" and "subselected". The only aim of these two
+parameters is
+to overwrite the same named settings from &lt;navbar:render&gt;. This way, if
+you have the following structure:
+&lt;navbar:define name=mainmenu...
+....
+&lt;button id=somesub ..... menu=somesub&gt;
+....
+
+And later, another navbar:
+&lt;navbar:define name=somesub select=subitem1&gt;
+&lt;button id=subitem1....
+
+Then you can easily select an item in the submenu. Ofcourse this seems
+to be precoded,
+but ofcourse in templates you can use:
+&lt;navbar:define name=somesub select=$(submenuitem)&gt;
+You can even add: .... subselected&gt; to have the button still active,
+providing 3-4-5 or
+more level submenusystem!
+
+Comments are welcomed. The changes are listed above.
+Original file: This is WML Version 2.0.8 (30-Oct-2001)
+
+I changed the default "subselected" value of the nested navbars to 0 ("not
+subselected") from the original behavior, which is "same as parent". 
+This is because I don't know if there is a way to say:
+&lt;navbar:define name=somesub undefine subselected&gt;
+
+Ferenc
+ps: I was happy to see Perl code inside, coz I am pretty good in it :)
+Still the wml code parts are a bit confusing ;-)
+
+File: WMLLIBINCLUDEDIR/des/navbar.wml
+
+20c20,21
+&lt; &lt;preserve name imgstar imgbase urlbase target txtcol_normal
+txtcol_select /&gt;
+---
+  &gt; &lt;preserve name imgstar imgbase urlbase target txtcol_normal
+txtcol_select select subselected /&gt;
+  &gt; &lt;set-var subselected=* /&gt;
+44a46,47
+  &gt;     $CFG-&gt;{SELECT} = '&lt;get-var select /&gt;';
+  &gt;     $CFG-&gt;{SUBSELECTED} = (qq|&lt;get-var subselected /&gt;| eq '' ? 1 : 0);
+119c122
+&lt; &lt;restore  name imgstar imgbase urlbase target txtcol_normal
+txtcol_select /&gt;
+---
+  &gt; &lt;restore  name imgstar imgbase urlbase target txtcol_normal
+txtcol_select select subselected /&gt;
+371a375,376
+  &gt;     if ($CFG-&gt;{SELECT}) { $select = $CFG-&gt;{SELECT}; }
+  &gt;     if ($CFG-&gt;{SUBSELECTED}) { $subselected = $CFG-&gt;{SUBSELECTED}; }
+564c569
+&lt;                 $select, $subselected, $txtcol_n, $txtcol_s,
+---
+  &gt;                 $select, 0, $txtcol_n, $txtcol_s,
+587c592
+&lt;                 $select, $subselected, $txtcol_n, $txtcol_s,
+---
+  &gt;                 $select, 0, $txtcol_n, $txtcol_s,
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02557" HREF="msg02557.shtml">Re: preselected nested navbar items-idea,patch</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02555.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02557.shtml">Re: preselected nested navbar items-idea,patch</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02573.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02557.shtml">Re: preselected nested navbar items-idea,patch</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02556"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02556"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

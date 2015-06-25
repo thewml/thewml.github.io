@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML under Windows... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 12 Jun 2002 18:15:18 +0200 (MET DST) -->
+<!--X-Message-Id: 20020612162439.GA3276@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020608204023.GA4108@imacs.polytechnique.fr -->
+<!--X-Reference: 003001c20fa2$f4ec4a40$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02611">Date Index</a>][<a href="thrd53.shtml#02611">Thread Index</a>]<br>
+[<A HREF="msg02610.shtml">Date Prev</A>][<A HREF="msg02612.shtml">Date Next</A>][<A HREF="msg02609.shtml">Thread Prev</A>][<A HREF="msg02616.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 12 Jun 2002 18:24:39 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jun 09, 2002 at 08:46:43PM +1000, Darryl Smith wrote:
+&gt; Sorry... The editor copied more than I thought... Anyway I am getting
+&gt; the following errors...
+&gt; 
+&gt; I have got gFont, and with a slight modification I have got all the
+&gt; other passes to run. P3 is the one that will not run. 
+&gt; 
+&gt; $ make
+&gt; gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -fno-strict-aliasing
+&gt; -I/usr/local/include
+&gt; -I/usr/lib/perl5/5.6.1/cygwin-multi/CORE -I. -c eperl_perl5.c
+&gt; eperl_perl5.c: In function `Perl5_XSInit':
+&gt; eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+&gt; eperl_perl5.c:58: (Each undeclared identifier is reported only once
+&gt; eperl_perl5.c:58: for each function it appears in.)
+&gt; eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+&gt; incompatible point
+&gt; er type
+&gt; eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+&gt; eperl_perl5.c:73: `my_perl' undeclared (first use in this function)
+&gt; eperl_perl5.c: In function `Perl5_SetScalar':
+&gt; eperl_perl5.c:104: `my_perl' undeclared (first use in this function)
+&gt; make: *** [eperl_perl5.o] Error 1
+
+Hmmm, I already encountered similar errors, but I must dig into my
+mailboxes.  Could you put online (or send by private mail) a tarball
+containing config_ac.h, config_sc.h and
+/usr/lib/perl5/5.6.1/cygwin-multi/CORE/*
+?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02608" HREF="msg02608.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02609" HREF="msg02609.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02610.shtml">make errors - curses.h not found &amp; problem resolved..</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02612.shtml">[BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02609.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02616.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02611"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02611"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

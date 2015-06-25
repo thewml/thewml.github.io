@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 29 Mar 2000 01:09:25 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000329000901.9A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000328194046.H2002@spinnaker.rhein.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01491">Date Index</a>][<a href="thrd31.shtml#01491">Thread Index</a>]<br>
+[<A HREF="msg01490.shtml">Date Prev</A>][<A HREF="msg01492.shtml">Date Next</A>][<A HREF="msg01487.shtml">Thread Prev</A>][<A HREF="msg01494.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Mar 2000 01:09:20 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 28 Mar 2000, Roland Rosenfeld wrote:
+
+&gt; WML 1.99.4 comes with a quite old version of weblint (1.020, copyright
+&gt; 1997).  Debian delivers a much newer version (1.9.3, copyright 1999),
+&gt; which should be available from <A  HREF="ftp://ftp.weblint.org/pub/weblint/devel/">ftp://ftp.weblint.org/pub/weblint/devel/</A>
+&gt; 
+&gt; I'd like to see this upgraded.
+
+Hi Roland,
+
+i have fixed all other bugs in wml-SNAP (wml_frontend/wml.src and
+wml_include/std/tags.src have been patched) and theses changes will be
+available at 04AM GMT.
+
+About this suggestion, i am not so sure it is a good idea, since it
+looks like a rewriting only of weblint 1.020.
+Do you really believe that weblint 1.9.3 is more useful than 1.020?
+
+Thanks for your help.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01494" HREF="msg01494.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01487" HREF="msg01487.shtml">[1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01490.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01492.shtml">eperl: redefinition of `union semun'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01487.shtml">[1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01494.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01491"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01491"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

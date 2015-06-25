@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RPM for WML 1.6.7 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 10 Aug 1998 13:32:37 +0200 (CEST) -->
+<!--X-Message-Id: 19980810133234.A2685@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.BSI.3.96r.980809111026.17367C&#45;100000@shell1.interlog.com  -->
+<!--X-Reference: Pine.LNX.4.00.9808100817230.468&#45;100000@fred.csn.tu&#45;chemnitz.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00192">Date Index</a>][<a href="thrd5.shtml#00192">Thread Index</a>]<br>
+[<A HREF="msg00191.shtml">Date Prev</A>][<A HREF="msg00193.shtml">Date Next</A>][<A HREF="msg00191.shtml">Thread Prev</A>][<A HREF="msg00183.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RPM for WML 1.6.7</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 10 Aug 1998 13:32:34 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Aug 10, 1998, Torsten Naumann wrote:
+
+&gt; &gt; What I'll probably do is take a look at your SPECS files and make sure I'm
+&gt; &gt; not missing anything, though I'm fairly certain I'm not...
+&gt; &gt;...
+&gt; Be patient with rpm, it is great but not so easy to build :)
+&gt; 
+&gt; A hint: With the 
+&gt; 
+&gt; ./configure --prefix=/usr
+&gt; 
+&gt; or something else like that without the string "wml" in the prefix the 
+&gt; 
+&gt; make test
+&gt; 
+&gt; doesn't complete his run.
+&gt; If you do this like
+&gt; 
+&gt; ./configure --prefix=/some/where/wml
+&gt;                                  ^^^
+&gt;                               IMPORTANT
+&gt; 
+&gt; the "make test" runs successfully.
+
+Oh, yes, the wml_test/Makefile was not aware of the libsubdir stuff.
+Fixed for WML 1.6.8. Thanks for the hint, Torsten.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00191" HREF="msg00191.shtml">Re: RPM for WML 1.6.7</A></strong>, <em>From:</em> Torsten Naumann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00191.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00193.shtml">Convert wysiwyg documents with WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00191.shtml">Re: RPM for WML 1.6.7</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00183.shtml">A question [FWD]</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00192"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00192"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

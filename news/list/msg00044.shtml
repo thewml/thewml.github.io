@@ -1,0 +1,295 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml + frames = ouch -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 14 Jan 1998 12:02:56 +0100 (MET) -->
+<!--X-Message-Id: 199801141102.MAA07893@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801140718.CAA31804@plymouth.truespectra.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00044">Date Index</a>][<a href="thread.shtml#00044">Thread Index</a>]<br>
+[<A HREF="msg00043.shtml">Date Prev</A>][<A HREF="msg00045.shtml">Date Next</A>][<A HREF="msg00043.shtml">Thread Prev</A>][<A HREF="msg00045.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml + frames = ouch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 14 Jan 1998 12:02:54 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Stephen van Egmond, in a previous mail you wrote:
+
+&gt;[...] 
+&gt; What I basically came up with is a post-processing.  WML generates all its
+&gt; stuff into a file structured like so.  Instead of a properly-formatted
+&gt; html file with tables, I have a file that might look like:
+&gt; 
+&gt; ---8&lt;---
+&gt; This is the title for the web browser, one line
+&gt; [navigator stuff goes here, multiple-lines]
+&gt; BEGIN-CONTENT!
+&gt; [content stuff goes here, multiple lines]
+&gt; ---8&lt;---
+&gt; 
+&gt; My postprocessing splits this into material for frames, noframes, with
+&gt; server-including to link it all.  Let's say that our structured file
+&gt; filename.html came from filename.wml. After post-processing by perl, we'll
+&gt; have the following four files newly created:
+&gt;   filename-nav
+&gt;   filename-content
+&gt;   filename-nav.html
+&gt;   filename-content.html
+&gt; 
+&gt; The first two contain, respectively, the left and right table cell
+&gt; contents; the next two are corresponding files that server-include the
+&gt; corresponding "cell", but formmated wihtin HTML so that it can be referred
+&gt; to from a &lt;frameset&gt;.
+&gt; 
+&gt; Finally, my post-processor overwrites filename.html with a &lt;frameset&gt; page
+&gt; which refers to the filename-*.html files above, and in the &lt;noframes&gt;
+&gt; context creates a table which server-side includes the filename-nav and
+&gt; filename-content sections.
+
+Oh now, don't do it this way with a postprocessor. WML ships with nine
+powerful languages and never have found a situation where not at least one of
+them can solve it. It your case pass 9 (Slice) is the key! Its purpose exactly
+_is_ to create one or more output files according to some defined slices in
+the structured document.
+
+&gt; So, after processing I have:
+&gt; 
+&gt; filename.html:
+&gt; HTML
+&gt;  HEAD
+&gt;   STYLESHEET
+&gt;  FRAMESET
+&gt;   frame #1: source=filename-nav.html
+&gt;   -&gt; "filename-nav.html" server-includes "filename-nav"
+&gt; 
+&gt;   frame #2: source=filename-content.html
+&gt;       -&gt; "filename-content.html" server-includes "filename-content"
+&gt;  /FRAMESET
+&gt;  /HEAD
+&gt;  NOFRAMES, BODY, TABLE, TR, TD
+&gt;   server-include "filename-nav"
+&gt;  /TD, TD
+&gt;   server-include "filename-content"
+&gt; /TD, /TR, /TABLE, /BODY, /HTML
+
+&gt;[...]
+&gt; Can anybody think of a *better* way of doing this.  My make process
+&gt; amounts to:
+&gt;   rm *.html
+&gt;   wmk -fs
+&gt;   frameify *.html
+&gt; 
+&gt; Which is only a trade-off in maintenance time.  I lose a bit of wml's
+&gt; features on the encpsulating HTML, but none of it is especially complex. 
+&gt; 
+&gt; Note that the files on the web right now may not be quite right; lynx
+&gt; likes them, and that's all I know.
+
+Sure, it can be done with WML. I've sit down and tried a first cut for your
+situation. While I wouldn't create different nav-frame contents for each
+content frame (I would use JavaScript rollovers which change on-the-fly), I
+tries to do it exactly you want: My approach uses a template file
+which arranges all stuff and then you only need one(!) single
+WML input file to create all three output files.
+
+Let's start: We have the template and the filename.wml test file:
+
+| :&gt; ls -l
+| total 2
+| -rw-r--r--  1 rse  users  242 Jan 14 11:54 filename.wml
+| -rw-r--r--  1 rse  users  997 Jan 14 11:48 template.wml
+
+| :&gt; cat template.wml
+| #use wml::std::page
+|
+| #   create the frameset document
+| [FRAMESET:
+| &lt;suck&gt;
+| &lt;html&gt;
+| &lt;head*&gt;
+| &lt;frameset cols="30%,*"&gt;
+|   &lt;frame src="$(frameset)-nav.html"&gt;
+|   &lt;frame src="$(frameset)-content.html"&gt;
+| &lt;/frameset&gt;
+| &lt;noframes&gt;
+| &lt;table&gt;
+| &lt;tr&gt;
+| &lt;td width"30%"&gt;&lt;!--#include "$(frameset)-nav.html" --&gt;&lt;/td&gt;
+| &lt;td&gt;&lt;!--#include "$(frameset)-contents.html" --&gt;&lt;/td&gt;
+| &lt;/tr&gt;
+| &lt;/table&gt;
+| &lt;/noframes&gt;
+| &lt;/head*&gt;
+| &lt;/html&gt;
+| &lt;&lt;main..
+| ..main&gt;&gt;
+| :FRAMESET]
+| 
+| #   create the navigation frame
+| [NAVFRAME:
+| &lt;suck&gt;
+| &lt;page bgcolor="#ccccff" title="&lt;&lt;TITLE&gt;&gt;"&gt;
+| We are in frameset named "$(frameset)"
+| &lt;&lt;NAVFRAME&gt;&gt;
+| &lt;&lt;main..
+| ..main&gt;&gt;
+| :NAVFRAME]
+| 
+| #   define container to fill the navigation frame
+| &lt;define-container navframe&gt;
+| ..NAVFRAME&gt;&gt;%body&lt;&lt;..
+| &lt;/define-container&gt;
+| 
+| #   define container to fill the navigation frame
+| &lt;define-container title&gt;
+| ..TITLE&gt;&gt;%body&lt;&lt;..
+| &lt;/define-container&gt;
+| 
+| #   create the contents frame
+| [CONFRAME:\
+| &lt;suck&gt;
+| &lt;page title="&lt;&lt;TITLE&gt;&gt;"&gt;
+| &lt;&lt;CONFRAME&gt;&gt;
+| &lt;&lt;main..
+| ..main&gt;&gt;
+| :CONFRAME]
+| 
+| #   per default enter the contents frame
+| ..CONFRAME&gt;&gt;
+
+| :&gt; cat filename.wml
+| #!wml -oNAVFRAME:a-nav.html -oCONFRAME:a-content.html -oFRAMESET:a.html@u+x
+| #include 'template.wml' frameset=filename
+| 
+| &lt;title&gt;The Title for FILENAME&lt;/title&gt;
+| 
+| &lt;navframe&gt;
+| The navigation stuff for FILENAME
+| &lt;/navframe&gt;
+| 
+| The contents of FILENAME
+
+Now I run filename.wml through WML and receive the :
+
+| :&gt; wmk -f filename.wml 
+| wml -n -oNAVFRAME:filename-nav.html -oCONFRAME:filename-content.html
+| -oFRAMESET:filename.html@u+x filename.wml
+| :&gt; ls -l
+| total 5
+| -rw-r--r--  1 rse  users  188 Jan 14 11:57 filename-content.html
+| -rw-r--r--  1 rse  users  233 Jan 14 11:57 filename-nav.html
+| -rwxr--r--  1 rse  users  297 Jan 14 11:57 filename.html
+| -rw-r--r--  1 rse  users  263 Jan 14 11:57 filename.wml
+| -rw-r--r--  1 rse  users  997 Jan 14 11:48 template.wml
+
+Now the generated stuff itself:
+
+| :&gt; cat filename.html 
+| &lt;html&gt;
+| &lt;head&gt;
+| &lt;frameset cols="30%,*"&gt;
+|   &lt;frame src="filename-nav.html"&gt;
+|   &lt;frame src="filename-content.html"&gt;
+| &lt;/frameset&gt;
+| &lt;noframes&gt;
+| &lt;table&gt;
+| &lt;tr&gt;
+| &lt;td width"30%"&gt;&lt;!--#include "filename-nav.html" --&gt;&lt;/td&gt;
+| &lt;td&gt;&lt;!--#include "filename-contents.html" --&gt;&lt;/td&gt;
+| &lt;/tr&gt;
+| &lt;/table&gt;
+| &lt;/noframes&gt;
+| &lt;/head&gt;
+| &lt;/html&gt;
+
+| :&gt; cat filename-nav.html 
+| &lt;html&gt;
+| &lt;head&gt;
+| &lt;title&gt;The Title for FILENAME&lt;/title&gt;
+| &lt;/head&gt;
+| &lt;body bgcolor="#ccccff" text="#000000" link="#333399" alink="#9999ff" vlink="#000066"&gt;
+| We are in frameset named "filename"
+| The navigation stuff for FILENAME
+| &lt;/body&gt;
+| &lt;/html&gt;
+
+| :&gt; cat filename-content.html 
+| &lt;html&gt;
+| &lt;head&gt;
+| &lt;title&gt;The Title for FILENAME&lt;/title&gt;
+| &lt;/head&gt;
+| &lt;body bgcolor="#ffffff" text="#000000" link="#333399" alink="#9999ff" vlink="#000066"&gt;
+| The contents of FILENAME
+| &lt;/body&gt;
+| &lt;/html&gt;
+
+As you can see, WML is powerful enough to avoid any postprocessors ;_)
+For the slicing stuff please read wml_p9_slice(1).
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00043" HREF="msg00043.shtml">wml + frames = ouch</A></strong>, <em>From:</em> Stephen van Egmond</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00043.shtml">wml + frames = ouch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00045.shtml">2nd Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00043.shtml">wml + frames = ouch</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00045.shtml">2nd Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00044"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00044"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,125 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: including files depending on language -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 17 Feb 1999 15:06:38 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990217090924.11927D&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9902161933250.4278&#45;100000@kanta.smece.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00396">Date Index</a>][<a href="thrd3.shtml#00396">Thread Index</a>]<br>
+[<A HREF="msg00395.shtml">Date Prev</A>][<A HREF="msg00397.shtml">Date Next</A>][<A HREF="msg00395.shtml">Thread Prev</A>][<A HREF="msg00103.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: including files depending on language</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Feb 1999 09:51:32 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 16 Feb 1999, Davor Cengija wrote:
+
+&gt;        I'm quite new to this, so.... (if there is a mailing list
+&gt;        archive, it would help me a lot... anyone?)
+
+Welcome Davor,
+
+you can browse the mailing-list archive from
+    <A  HREF="http://www.engelschall.com/sw/wml/news/list.html">http://www.engelschall.com/sw/wml/news/list.html</A>
+Archiving has been disabled in November, i will try to activate it
+again.
+
+Wml is a succession of 9 passes, each one for a specific usage.
+Languages are concerned by passes 1,2,6 and 9 (see wml::std::lang(3))
+Inclusion of files is handled during pass 1.
+
+I explain this point to let you understand that conditional inclusion of
+files must be processed during the first pass. Otherwise side-effects
+could give strange results (pleonasm?).
+
+After reading the wml_p1_ipp(1) manpage, you will write something like:
+####################
+#use wml::std::lang
+$(incl_en:*# )&lt;lang:new id=en short&gt;
+$(incl_de:*# )&lt;lang:new id=de short&gt;
+$(incl_fr:*# )&lt;lang:new id=fr short&gt;
+
+$(incl_en:*# )#include 'incl.en.wml'
+$(incl_de:*# )#include 'incl.de.wml'
+$(incl_fr:*# )#include 'incl.fr.wml'
+####################
+
+Kind of magic, no? To build only english and german files, type
+  wml -Dincl_en=1 -Dincl_de=1 foo.wml
+and you guess now how to build french files too.
+A better solution is to place those variable definitions in the top
+.wmlrc file.
+
+But why you don't use the canonical way, as explained in
+wml::std::lang(3)?
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00395" HREF="msg00395.shtml">including files depending on language</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00395.shtml">including files depending on language</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00397.shtml">Perl in xtable</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00395.shtml">including files depending on language</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00103.shtml">ANNOUNCE: WML 1.6.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00396"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00396"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

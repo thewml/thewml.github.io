@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.99.1 (16&#45;Mar&#45;2000) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 2 Apr 2000 23:30:55 +0200 (MET DST) -->
+<!--X-Message-Id: 20000402233029.B25738@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000317232048.A25593@lovelife.olvc.ab.ca -->
+<!--X-Reference: Pine.LNX.3.96.1000319164832.7394B&#45;100000@localhost -->
+<!--X-Reference: 20000324010029.A14133@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01514">Date Index</a>][<a href="thrd30.shtml#01514">Thread Index</a>]<br>
+[<A HREF="msg01515.shtml">Date Prev</A>][<A HREF="msg01516.shtml">Date Next</A>][<A HREF="msg01509.shtml">Thread Prev</A>][<A HREF="msg01513.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 2 Apr 2000 23:30:29 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Mar 24, 2000 at 01:00:29AM -0700, Anthony Fok wrote:
+[...]
+&gt; Yes, indeed, and I am glad that \$(name) works the way it does.  What I was
+&gt; wondering was, what if someone wants to things like:
+&gt; 
+&gt; 	&lt;KBD&gt;EDIT C:\WINDOWS\SYSTEM.INI&lt;/KBD&gt;
+&gt; 
+&gt; where filename="SYSTEM.INI" in this example.  Obviously,
+&gt; 
+&gt; 	&lt;KBD&gt;EDIT C:\WINDOWS\$(filename)&lt;/KBD&gt;
+&gt; 
+&gt; wouldn't work, and that's a good thing.
+[...]
+
+&gt; What I was wondering though, would you like to implement a special case for
+&gt; things like \\$(name), similar to what is already implemented for
+&gt; \\&lt;newline&gt;, so &lt;KBD&gt;EDIT C:\WINDOWS\\$(filename)&lt;/KBD&gt; would work?
+
+No :-)
+
+[...]
+&gt; So, my last question is: If you think that implementing \\$(name) is
+&gt; bad idea, what would be your way (or the "official" way) to do this?  :-)
+&gt;
+&gt; (You must be wondering, "What is this guy up to anyway?" eh?  :-)
+&gt; I don't know!  Haha, I am just amused that {:\:} would work.  :-)
+
+This will cause problems inside other area substitutions. As with eperl,
+you will have trouble inside other eperl constructs.
+
+Your solution with pass 2 is fine, \&lt;suck&gt;$(name) is another one.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01438" HREF="msg01438.shtml">BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></strong>, <em>From:</em> Anthony Fok</li>
+<li><strong><A NAME="01452" HREF="msg01452.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01509" HREF="msg01509.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01515.shtml">Re: BUG REPORT: Website META Language 1.99.3 (19-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01516.shtml">Re: [BUG REPORT] WML 1.7.4, SunOS 5.6 Generic_105181-17 sun4u sparc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01509.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01513.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01514"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01514"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

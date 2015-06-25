@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: "tidy", doctype, and "summary" attribute in tables -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Thu, 3 Aug 2000 14:42:53 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0008031441300.1538&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01872">Date Index</a>][<a href="thrd38.shtml#01872">Thread Index</a>]<br>
+[<A HREF="msg01871.shtml">Date Prev</A>][<A HREF="msg01873.shtml">Date Next</A>][<A HREF="msg01878.shtml">Thread Prev</A>][<A HREF="msg01875.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Aug 2000 14:51:02 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi everybody,
+
+"tidy" likes to complain about missing "summary" attributes in
+&lt;table&gt; tags.
+
+While I can of course easily add them for my own tables, 
+wml tags like &lt;tul&gt; and &lt;grid&gt; are a bit trickier.
+
+Would it make sense for wml to provide summary="" as default for tables
+created by these tags?
+
+Btw, the reason why I stumbled over this is that tidy doesn't think
+a doctype like
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;
+
+is valid for files created by wml (I'm not quite sure why, since it
+doesn't complain about *all* files. It might have something to do with
+Javascript functions). It considers the wml output to be more of a
+doctype like
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+
+The only thing it complains about in this case is the "summary"
+attribute for tables...
+
+
+All the best,
+
+Stephan
+
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01875" HREF="msg01875.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01871.shtml">Re: [wml] Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01873.shtml">RE: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01878.shtml">Re: [wml] Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01875.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01872"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01872"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

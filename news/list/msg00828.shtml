@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Very complicated m4 stuff -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Wed, 7 Jul 1999 19:18:03 +0200 (MET DST) -->
+<!--X-Message-Id: 19990702183505.A2308@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990626220831.A346@perolo -->
+<!--X-Reference: Pine.LNX.3.96.990628003853.3030A&#45;100000@localhost -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00828">Date Index</a>][<a href="thrd17.shtml#00828">Thread Index</a>]<br>
+[<A HREF="msg00827.shtml">Date Prev</A>][<A HREF="msg00829.shtml">Date Next</A>][<A HREF="msg00807.shtml">Thread Prev</A>][<A HREF="msg00835.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Very complicated m4 stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 2 Jul 1999 18:35:05 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Mon, Jun 28, 1999 at 12:53:42AM +0200, Denis Barbier contaba:
+
+&gt;PS: I did not understand your other post, could you send a simple
+&gt;    example to explain what you want?
+
+I have such a group of m4 macros:
+
+This defines a loop executes `_comando' for each element in a list. 
+ 
+m4_define(&lt;`_gira'&gt;,&lt;`m4_ifelse($#,1,&lt;`_comando(&lt;`$1'&gt;)'&gt;,&lt;`_comando(&lt;`$1'&gt;)'&gt;&lt;`
+_gira(m4_shift($@))'&gt;)'&gt;)
+
+And this is very messy (as I supose m4 is most of the time). I have
+to redefine some commands, so the included file has some of this
+commands they will not be used (this could make some strange things). 
+
+m4_define(&lt;`_comando'&gt;,&lt;`
+m4_divert(-1)
+m4_pushdef(&lt;`m4_divert'&gt;)
+m4_pushdef(&lt;`m4_sinclude'&gt;)
+m4_include(&lt;`macros.m4'&gt;)
+m4_include(&lt;`$1'&gt;)
+m4_popdef(&lt;`m4_sinclude'&gt;)
+m4_popdef(&lt;`m4_divert'&gt;)
+m4_divert(0)m4_dnl
+_test_macro()
+m4_divert(0)m4_dnl
+'&gt;)
+
+Well, this probably is not easy understandable. Just an example:
+
+
+I have several files this way:
+
+---- file3
+m4_define(_test_macro,xxxx)
+----
+
+---- file2
+m4_define(_test_macro,yuyy)
+----
+
+---- file1
+m4_define(_test_macro,zzzz)
+----
+
+And a file that calls the defined macros this way:
+
+------------ 
+_gira(file1,file2,file3)
+------------
+
+It will output:
+
+ zzzz
+ yyyy
+ xxxx
+
+
+
+Did somebody understand all this?
+
+
+Another way of explaining it. This code tries to include several
+files from a list inside the page. The program can extract certain
+information from them, and even do clever things: knowing what his
+name is, do not include itself. 
+
+It this could be possible something like:
+
+#include for(file*) do
+            if file == $(FILENAME) skip
+            else include it
+
+I don't know if I explain myself.
+
+Well, I do this trick inside m4, but the problem is this is pass 4,
+so I cannot use Meta-HTML or eperl.
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+07/02	Felix Pappalardi and Leslie West form Mountain, 1969
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00835" HREF="msg00835.shtml">Re: Very complicated m4 stuff</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00806" HREF="msg00806.shtml">multiple files in command line</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="00807" HREF="msg00807.shtml">Re: multiple files in command line</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00827.shtml">Re: Perl installation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00829.shtml">Re: Perl installation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00807.shtml">Re: multiple files in command line</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00835.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00828"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00828"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

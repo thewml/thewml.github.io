@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Handling unknown attributes -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 11 Jul 2000 00:28:31 +0200 (MET DST) -->
+<!--X-Message-Id: 20000711002946.A8165@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0007050932140.6672&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Reference: 200007051136.NAA02922@ns.inetcom.loc -->
+<!--X-Reference: 20000709004048.A24332@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01802">Date Index</a>][<a href="thrd32.shtml#01802">Thread Index</a>]<br>
+[<A HREF="msg01801.shtml">Date Prev</A>][<A HREF="msg01803.shtml">Date Next</A>][<A HREF="msg01797.shtml">Thread Prev</A>][<A HREF="msg01526.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Handling unknown attributes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 11 Jul 2000 00:29:46 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jul 09, 2000 at 12:40:48AM +0200, Denis Barbier wrote:
+
+[...]
+&gt; Mp4h version 1.0.4 introduces 3 new tags to play with attributes:
+&gt;    &lt;attributes-remove name1,name2,... %attributes&gt;
+&gt;       Like %attributes, but remove variables whose name is one of
+&gt;       name1, name2, and so on.
+&gt;    &lt;attributes-extract name1,name2,... %attributes&gt;
+&gt;       Prints only the name=value pair matching names name1, name2,...
+&gt;    &lt;attributes-quotes %attributes&gt;
+&gt;       The two macros above gobble quotes like any other mp4h macros.
+&gt;       This one prints its attributes with value between quotes. It must
+&gt;       only be used when printing its content on output without any
+&gt;       further processing.
+[...]
+&gt; Next step is to add an `image' attribute:
+&gt;   &lt;define-tag hyperlink whitespace=delete&gt;
+&gt;   &lt;preserve url text image&gt;
+&gt;   &lt;set-var &lt;attributes-extract url,text,image %attributes&gt;&gt;
+&gt;   &lt;defvar text "&lt;get-var url&gt;"&gt;
+&gt;   &lt;a &lt;attributes-quote &lt;attributes-remove url,text,image %attributes&gt;&gt; \
+&gt;      href="&lt;get-var url&gt;"&gt;
+&gt;   &lt;if &lt;get-var image&gt;
+&gt;       &lt;img src="&lt;get-var image&gt;" alt="&lt;get-var text&gt;"&gt;
+&gt;       &lt;get-var text&gt;&gt;
+&gt;   &lt;/a&gt;
+&gt;   &lt;restore  url text image&gt;
+&gt;   &lt;/define-tag&gt;
+&gt;   &lt;hyperlink url="http://..." class=www image=foo.gif&gt;
+&gt; 
+&gt; But there is a trivial flaw in this implementation, we have to choose if
+&gt; unknown attributes go into &lt;a&gt; or &lt;img&gt;.
+
+What do you think of this writing?
+
+  &lt;define-tag hyperlink whitespace=delete&gt;
+  &lt;preserve url text image&gt;
+  &lt;set-var &lt;attributes-extract url,text,image %attributes&gt;&gt;
+  &lt;a &lt;attributes-quote &lt;attributes-extract :a:(.*) %attributes&gt;&gt; \
+     href="&lt;get-var url&gt;"&gt;
+  &lt;if &lt;get-var image&gt;
+     &lt;img &lt;attributes-quote &lt;attributes-extract :img:(.*) %attributes&gt;&gt; \
+        src="&lt;get-var image&gt;" alt="&lt;get-var text&gt;"&gt;
+     &lt;get-var text&gt;
+  &gt;
+  &lt;/a&gt;
+  &lt;restore  url text image&gt;
+  &lt;/define-tag&gt;
+  &lt;hyperlink :a:class=web :img:id=logo :img:border=1 \
+      url="<A  HREF="http://www.foo.com">http://www.foo.com</A>" text="Welcome" image="foo.png"&gt;
+
+prints
+
+  &lt;a class="web" href="<A  HREF="http://www.foo.com">http://www.foo.com</A>"&gt;&lt;img id="logo" border="1"
+  src="foo.png" alt="Welcome"&gt;&lt;/a&gt;
+
+
+Wildcards are allowed in first argument of &lt;attributes-*&gt;, and when
+there is a subexpression, it is printed instead of the whole expression.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01786" HREF="msg01786.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Franz Knipp</li>
+<li><strong><A NAME="01787" HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01797" HREF="msg01797.shtml">[wml] Handling unknown attributes</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01801.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01803.shtml">Re: [wml] Handling unknown attributes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01797.shtml">[wml] Handling unknown attributes</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01526.shtml">&lt;lang:new id=tr short&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01802"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01802"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

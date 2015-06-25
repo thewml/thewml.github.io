@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: order of #include 'xxx' -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Sat, 29 Jan 2000 16:24:15 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000128131104.13056A&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14480.37081.414685.629445@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01305">Date Index</a>][<a href="thrd27.shtml#01305">Thread Index</a>]<br>
+[<A HREF="msg01304.shtml">Date Prev</A>][<A HREF="msg01306.shtml">Date Next</A>][<A HREF="msg01304.shtml">Thread Prev</A>][<A HREF="msg01306.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: order of #include 'xxx'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 28 Jan 2000 13:22:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello, 
+
+On Thu, 27 Jan 2000, Carsten Wartmann wrote:
+&gt; I just solved my last problem, the sorting of news entries in a table.
+
+Thinking 'bout your solution there is a wonderland of new ideas, which
+could be done with WML very easy... 
+
+I'm thinking about the following enhancements of `#include':
+
+* a parameter to give the sort order (especially interesting if you want
+to sort news by date - the newest first)
+
+* a `max' parameter which gives the maximum number of included files. 
+Think of a portal where you can find the latest five news with the
+possibility to see all news on demand. Only you'd have to change this
+parameter in the according wml-source. 
+
+If there's the demand for this functionality, I'll code it this weekend. 
+What to you think about it? 
+
+Greetings from Spain,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01306" HREF="msg01306.shtml">Re: order of #include 'xxx'</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01304" HREF="msg01304.shtml">order of #include 'xxx'</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01304.shtml">order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01306.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01304.shtml">order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01306.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01305"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01305"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

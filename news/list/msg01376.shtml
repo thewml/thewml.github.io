@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: wml&#45;1.7.4 and debian/potato -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Thu, 24 Feb 2000 08:13:24 +0100 (MET) -->
+<!--X-Message-Id: 20000223142439.A15726@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0002221623140.7034&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01376">Date Index</a>][<a href="thrd28.shtml#01376">Thread Index</a>]<br>
+[<A HREF="msg01375.shtml">Date Prev</A>][<A HREF="msg01377.shtml">Date Next</A>][<A HREF="msg01371.shtml">Thread Prev</A>][<A HREF="msg01393.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: wml-1.7.4 and debian/potato</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 23 Feb 2000 14:24:39 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 22, 2000 at 04:46:25PM +0000, Franz Knipp wrote:
+&gt; /usr/bin/ld: cannot find -lgdbm
+&gt; 
+&gt; but libgdbm exists:
+&gt; 
+&gt; $ ldconfig -v | grep libgdbm
+&gt; 	libgdbm.so.2 (libc6) =&gt; /usr/lib/libgdbm.so.2
+&gt; 	libgdbm.so.1 (libc6) =&gt; /usr/lib/libgdbm.so.1
+
+My guess is that you installed the "libgdbmg1" deb package but not
+"libgdbmg1-dev".  Try installing the -dev development package and
+see if it still works or not.
+
+Cheers,
+
+Anthony
+ 
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+Come visit Our Lady of Victory Camp -- <A  HREF="http://www.olvc.ab.ca/">http://www.olvc.ab.ca/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01393" HREF="msg01393.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01371" HREF="msg01371.shtml">BUG REPORT: wml-1.7.4 and debian/potato</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01375.shtml">wml on powerpc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01377.shtml">Re: Just Married: Ralf &amp; Daniela Engelschall :-)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01371.shtml">BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01393.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01376"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01376"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

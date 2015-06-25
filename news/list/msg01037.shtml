@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13&#45;14 -->
+<!--X-From-R13: ntyf00120Npnoyrvarg.pb.hx -->
+<!--X-Date: Thu, 7 Oct 1999 12:56:08 +0200 (MET DST) -->
+<!--X-Message-Id: 199910070900.LAA14566@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01037">Date Index</a>][<a href="thrd21.shtml#01037">Thread Index</a>]<br>
+[<A HREF="msg01038.shtml">Date Prev</A>][<A HREF="msg01039.shtml">Date Next</A>][<A HREF="msg01039.shtml">Thread Prev</A>][<A HREF="msg01043.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 7 Oct 1999 11:00:48 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.4
+Operating System: Mandrake 6.0 kernel 2.2.13-14
+
+Problem Description:
+| I'm having problems compiling. 
+| 
+| ./configure =ok
+| make = ok
+| make test = 100% fails
+| make install = fails
+| 
+| I'm a newbie of a couple of yrs exp'
+| and don't know howto get this work.
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01043" HREF="msg01043.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01044" HREF="msg01044.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></strong>, <em>From:</em> Hans Ulrich Niedermann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01038.shtml">wml documentation typo</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01039.shtml">Re: wml documentation typo</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01039.shtml">Re: wml documentation typo</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01043.shtml">Re: [BUG REPORT] WML 1.7.4, Mandrake 6.0 kernel 2.2.13-14</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01037"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01037"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

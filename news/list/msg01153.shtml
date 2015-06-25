@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I can compile a site -->
+<!--X-From-R13: Zhvfn Drohyy <erohyyNobeba.hpuvpntb.rqh> -->
+<!--X-Date: Mon, 22 Nov 1999 15:26:38 +0100 (MET) -->
+<!--X-Message-Id: 199911221426.IAA24503@boron.uchicago.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01153">Date Index</a>][<a href="thrd24.shtml#01153">Thread Index</a>]<br>
+[<A HREF="msg01152.shtml">Date Prev</A>][<A HREF="msg01154.shtml">Date Next</A>][<A HREF="msg01146.shtml">Thread Prev</A>][<A HREF="msg01160.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I can compile a site</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Luisa Rebull &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Nov 1999 08:26:32 -0600 (CST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+hi there -
+
+i did, in fact, submit a bug report last wed, but have yet to see
+it appear on the mailing list.  should i do it again?
+
+thanks,
+Luisa
+
+&gt; From owner-sw-wml@engelschall.com  Wed Nov 17 16:52:41 1999
+&gt; Return-Path: &lt;owner-sw-wml@engelschall.com&gt;
+&gt; Date: Wed, 17 Nov 1999 23:14:45 +0100 (CET)
+&gt; From: Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt;
+&gt; X-Sender: barbier@localhost
+&gt; To: sw-wml@engelschall.com
+&gt; Subject: Re: I can compile a site
+&gt; Sender: owner-sw-wml@engelschall.com
+&gt; Reply-To: sw-wml@engelschall.com
+&gt; X-Sender: Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt;
+&gt; X-List-Manager: Majordomo [version 1.94.4]
+&gt; X-List-Name: sw-wml
+&gt; 
+&gt; On Wed, 17 Nov 1999, Luisa Rebull wrote:
+&gt; 
+&gt; &gt; Hello -
+&gt; &gt; 
+&gt; &gt; I'm also having problems with wmk.. my system just got upgraded to
+&gt; &gt; sun os 5.7 and we upgraded wml to the most current stable version 
+&gt; &gt; at the same time.  Now I am having a very difficult time using 
+&gt; &gt; wmk.  Now :
+&gt; &gt; wmk -a is an unrecognized option, although it appears in the man
+&gt; &gt; 	page and in what you get when you do wmk --help. 
+&gt; 
+&gt; I'm very surprised, it works fine on my computer.
+&gt; 
+&gt; &gt; wmk *.wml or passing it a specific specific filename results in 
+&gt; &gt; 	output to STDOUT.
+&gt; &gt; wmk research/jobs/index.wml -o research/jobs/index.html doesn't
+&gt; &gt; 	define $(ROOT) properly in the resultant html file, 
+&gt; &gt; 	although it finds and reads my .wmlrc ok.
+&gt; 
+&gt; Could you please send a bug report? Either run wmb or fill the form at
+&gt; &lt;URL:<A  HREF="http://www.engelschall.com/sw/bugreport/?package=WML&amp;version=1.7.4">http://www.engelschall.com/sw/bugreport/?package=WML&amp;version=1.7.4</A>&gt;
+&gt; 
+&gt; This report is automatically sent to this list.
+&gt; 
+&gt; -- 
+&gt; Denis Barbier
+&gt; WML Maintainer
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01160" HREF="msg01160.shtml">Re: I can compile a site</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01152.shtml">Re: wml installation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01154.shtml">slice-problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01146.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01160.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01153"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01153"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

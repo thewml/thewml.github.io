@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Is there a syntax&#45;file for vim? -->
+<!--X-From-R13: Rnivq Aqva <Rnivq.AqvaNovtsbbg.pbz> -->
+<!--X-Date: Sun, 11 Mar 2001 14:24:00 +0100 (MET) -->
+<!--X-Message-Id: 20010311141709.A11733@bigfoot.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3A8BF06B.A05B5BB1@di.unito.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02167">Date Index</a>][<a href="thrd44.shtml#02167">Thread Index</a>]<br>
+[<A HREF="msg02166.shtml">Date Prev</A>][<A HREF="msg02168.shtml">Date Next</A>][<A HREF="msg02157.shtml">Thread Prev</A>][<A HREF="msg02159.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Is there a syntax-file for vim?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: David Odin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 11 Mar 2001 14:17:09 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Feb 15, 2001 at 04:06:19PM +0100, Andrea Valente wrote:
+&gt; Hello,
+&gt;    I use WML since 2 days and I find it wonderful!!
+&gt; But but, usually I write programs with vim (or gvim) both under
+&gt; unix/linux and win, so I d'like to know if there is a syntax-file (for
+&gt; syntax-coloring) for the ".wml" file format.
+&gt; 
+  Yes, there's a wml.vim color syntax file in vim. At least in the
+latest development (6.0) versions of vim.
+
+  You can ind it here:
+    <A  HREF="http://alfie.ist.org/vim/syntax/wml.vim">http://alfie.ist.org/vim/syntax/wml.vim</A>
+  and it is maintained by:
+    Gerfried Fuchs &lt;alfie@innocent.com&gt; and
+    Craig Small &lt;csmall@eye-net.com.au&gt;
+
+             Regards,
+
+                     DindinX
+
+-- 
+David.Odin@bigfoot.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02157" HREF="msg02157.shtml">Is there a syntax-file for vim?</A></strong>, <em>From:</em> Andrea Valente</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02166.shtml">Re: wml &amp; jsp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02168.shtml">Re: prob with language-tags when opening a file with EPerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02157.shtml">Is there a syntax-file for vim?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02159.shtml">wml &amp; jsp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02167"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02167"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

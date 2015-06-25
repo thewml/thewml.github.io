@@ -1,0 +1,696 @@
+<!DOCTYPE
+    html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+<head>
+<title>Website META Language (WML), Documentation: Core / WML</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal" />
+<meta name="Copyright" content="1996-2001 Engelschall, Germany." />
+<meta name="Author"    content="WML, wml@master.thewml.org"    />
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)"    />
+<meta name="Modified"  content="2009-02-20 16:16:38"    />
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="/exit/track/http/swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+     /></a><br />
+    <img src="../../com/navbar/button-n-sw.gif" alt="Free Software" /><br />
+    <img src="../../com/navbar/button-i-wml.gif" alt="WML" /><br />
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+<br />
+<ul class="navbarnestnest">
+<li>
+<b>wml</b>
+</li>
+<li>
+<a href="./wmk.html">wmk</a>
+</li>
+<li>
+<a href="./wmd.html">wmd</a>
+</li>
+<li>
+<a href="./wmb.html">wmb</a>
+</li>
+<li>
+<a href="./wmu.html">wmu</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+</div>
+<div class="main" id="main">
+        <h1>Documentation: Core / WML</h1>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table class="snb" summary="">
+<tr>
+<td>
+<a href="index.html">Introduction</a>
+</td>
+<td>
+<a href="frontend.html">Frontends</a>
+</td>
+<td>
+<a href="backend.html">Backends</a>
+</td>
+<td>
+<a href="incl.html">Includes</a>
+</td>
+<td>
+<a href="aux.html">Auxilliaries</a>
+</td>
+</tr>
+</table>
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WML - Website META Language</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#environment">ENVIRONMENT</a></li>
+	<ul>
+		<li><a href="#defined_variables">DEFINED VARIABLES</a></li>
+		<li><a href="#used_variables">USED VARIABLES</a></li>
+	</ul>
+	<li><a href="#user_files">USER FILES</a></li>
+	<li><a href="#standard_include_files">STANDARD INCLUDE FILES</a></li>
+	<li><a href="#special_features">SPECIAL FEATURES</a></li>
+	<li><a href="#authors">AUTHORS</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>WML - Website META Language</p>
+<p>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>2.0.11 (19-Aug-2006)</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>wml</strong>
+[<strong>-I</strong> <em>PATH</em>]
+[<strong>-i</strong> <em>PATH</em>]
+[<strong>-D</strong> <em>NAME</em><strong>=</strong><em>STR</em>]
+[<strong>-D</strong> <em>NAME</em><strong>~</strong><em>PATH</em>]
+[<strong>-n</strong>]
+[<strong>-r</strong>]
+[<strong>-O</strong> <em>level</em>]
+[<strong>-o</strong> [<em>SLICETERM</em><code>:</code>]<em>PATH</em>[<strong>@</strong><em>CHMODOPT</em>]]
+[<strong>-P</strong> <em>PATH</em>]
+[<strong>-E</strong> <em>PATH</em>]
+[<strong>-t</strong>]
+[<strong>-p</strong> <em>STR</em>]
+[<strong>-W</strong> <em>STR</em>]
+[<strong>-s</strong>]
+[<strong>-v</strong> [<em>NUM</em>]]
+[<strong>-q</strong>]
+[<em>inputfile</em>]</p>
+<p><strong>wml</strong>
+[<strong>-V</strong> [<em>NUM</em>]]
+[<strong>-h</strong>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This is the control program of the <em>Website META Language</em> (WML), a free HTML
+generation toolkit for Unix, internally consisting of 9 independent languages.</p>
+<p>The main idea of WML is a sequential filtering scheme where each language
+provides one of 9 processing passes. So <em>wml</em> reads <em>inputfile</em> (or from
+<em>stdin</em> if <em>inputfile</em> is a dash or completely missing), applies passes 1-9
+(or only the passes specified by <strong>-p</strong>) and finally produces one or more
+<em>outputfile</em>s.</p>
+<p>For more details on this processing scheme read the <em>WML Introduction</em> under
+<code><a href="../docs/wml_intro.html">wml_intro</a>(7)</code> and the <em>WML Tutorial</em> under <a href="../docs/wml_tutorial.html">wml_tutorial</a>(7).</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2di_2c__2d_2dinclude_3dpath"><strong>-I</strong>, <strong>--include=</strong><em>PATH</em></a></strong>
+<dd>
+<p>Adds a <em>directory</em> to the list of user include paths. Use this option to set the
+runtime environment for pass 1. See <code><a href="../backend/wml_p1_ipp.html">wml_p1_ipp</a>(1)</code> for more details.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2di_2c__2d_2dincludefile_3dpath"><strong>-i</strong>, <strong>--includefile=</strong><em>PATH</em></a></strong>
+<dd>
+<p>Pre-loads a particular include <em>file</em>, i.e. virtually adds a</p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<p>at the top of <em>inputfile</em>. Use this to automatically include default user
+include files. If you want to include a systems include file you have to
+surround the <em>PATH</em> with angle brackets, for instance use ``<code>-i</code>
+<code>&quot;&lt;foo/bar.wml&gt;&quot;</code>'' to include the file <em>foo/bar.wml</em> from the
+system include area.  Alternatively you can use the special syntax
+``<code>wml::foo::bar</code>'' as with the <code>#use</code> directive.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dd_2c__2d_2ddefine_3dname_3dstr"><strong>-D</strong>, <strong>--define=</strong><em>NAME</em><strong>=</strong><em>STR</em></a></strong>
+
+<dd>
+<p>Defines a variable which can be interpolated in pass 1 (IPP) via <code>$(NAME)</code>, in
+pass 2 (mp4h) via &lt;<code>get-var NAME</code>&gt;, in pass 3 (ePerl) via
+<code>&lt;:=$NAME:&gt;</code> and in pass 4 (GNU m4) via <code>m4_NAME</code>.
+A special variant <strong>--define=</strong><em>NAME</em><strong>=UNDEF</strong> does the opposite, it
+deletes previous definitions (which may be different than undefining
+these variables, e.g. with system defined variables).</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dd_2c__2d_2ddefine_3dname_7epath"><strong>-D</strong>, <strong>--define=</strong><em>NAME</em><strong>~</strong><em>PATH</em></a></strong>
+
+<dd>
+<p>Similar to the above but defines a variable holding a pathname which is
+autoadjusted (see below).  It can be interpolated in the same ways as the
+<code>NAME=STR</code> variant from above.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dn_2c__2d_2dnoshebang"><strong>-n</strong>, <strong>--noshebang</strong></a></strong>
+
+<dd>
+<p>This forces WML to ignore a possibly contained shebang line in <em>inputfile</em>.
+This is usually used by WMk, because WMk already parsed this line and supplied
+the options to WML.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dr_2c__2d_2dnorcfile"><strong>-r</strong>, <strong>--norcfile</strong></a></strong>
+
+<dd>
+<p>This forces WML to ignore all <em>.wmlrc</em> files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dc_2c__2d_2dnocd"><strong>-c</strong>, <strong>--nocd</strong></a></strong>
+
+<dd>
+<p>When WML processes an input file from another directory, it jumps into
+that directory before parsing <em>.wmlrc</em> files, and jump back to current
+directory after.  If this option is set, no directory change is made and
+<em>.wmlrc</em> files are read reative to current working directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_2c__2d_2doptimize_3dnum"><strong>-O</strong>, <strong>--optimize=</strong><em>NUM</em></a></strong>
+
+<dd>
+<p>This is the optimization option which is passed directly to pass 8
+(<em>htmlfix</em>). It controls the amount of optimization/stripping which is
+applied to the generated HTML markup code.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_2c__2d_2doutputfile_3dsliceterm_3aoutputfile_"><strong>-o</strong>, <strong>--outputfile=</strong><em>SLICETERM</em><strong>:</strong><em>outputfile</em>[<strong>@</strong><em>CHMODOPT</em>]</a></strong>
+
+<dd>
+<p>This redirects the output to a file. Usually the whole file will be send to
+<em>stdout</em> (same as <code>ALL:-</code>). You can use this option more than once to output
+to more than one file while using the <em>SLICETERM</em> as a set theory term of
+slices to determine which contents will be included into each particular
+output file.  The optional <em>CHMODOPT</em> is intended for specifying options for
+a finally applied <em>chmod</em> command. For instance use ``<code>u+x</code>'' to create a
+file with the execution bit set (Apache's XBitHack feature).
+See <code><a href="../backend/wml_p9_slice.html">wml_p9_slice</a>(1)</code> for more details.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dp_2c__2d_2dprolog_3dpath"><strong>-P</strong>, <strong>--prolog=</strong><em>PATH</em></a></strong>
+
+<dd>
+<p>Runs an prolog filter over the input file.  This program receives the data to
+act on as STDIN and has to produce the filtered data on STDOUT.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2de_2c__2d_2depilog_3dpath"><strong>-E</strong>, <strong>--epilog=</strong><em>PATH</em></a></strong>
+
+<dd>
+<p>Runs an epilogue program over the finally resulting output files.  Currently
+the following WML-specific programs are known: <em>htmlinfo</em>, <em>linklint</em>,
+<em>tidy</em> and <em>weblint</em>.  But you can specify any program which is available in
+your <code>PATH</code>. This program receives the file to act on as its first command
+line argument. Notice that output is not redirected to this file, so you have
+to use a wrapper or program specific flags if you want to modify output files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dt_2c__2d_2dsettime"><strong>-t</strong>, <strong>--settime</strong></a></strong>
+
+<dd>
+<p>This sets the modification time of all output files to the modification time
+of <em>intputfile</em> plus 1 second. This is useful because Webservers will
+generate <code>Last-Modified</code> headers and there the editing time is more important
+than the generation time. The 1 second offset is for the dependencies
+of Makefiles.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dm_2c__2d_2ddepend_5b_3doptions_5d"><strong>-M</strong>, <strong>--depend</strong>[<strong>=</strong><em>OPTIONS</em>]</a></strong>
+
+<dd>
+<p>Output a rule suitable for `make' describing the dependencies of each output
+file, as `gcc' does. It has only sense when the <strong>-o</strong> option is used.
+No processing is done except for the first pass.</p>
+</dd>
+<dd>
+<p>The <strong>D</strong> flag option writes the rule to a dependency file. The name of
+this file is obtained by replacing the suffix of the output file by ``.d''.</p>
+</dd>
+<dd>
+<p>The <strong>M</strong> flag option deletes the system files from the list of dependencies.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dp_2c__2d_2dpass_3dstr"><strong>-p</strong>, <strong>--pass=</strong><em>STR</em></a></strong>
+
+<dd>
+<p>Specifies which of the passes described above are actually applied under
+runtime. The argument <em>STR</em> is a comma-separated list of pass numbers with
+one special case: You can write <code>X-Y</code> for all passes <code>X...Y</code>.  When pass 9
+is not part of <em>STR</em> the resulting output is written to <em>STDOUT</em>. Default is
+the string ``<code>1-9</code>''.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dw_2c__2d_2dpassoption_3dnum_2cstr"><strong>-W</strong>, <strong>--passoption=</strong><em>NUM</em>,<em>STR</em></a></strong>
+
+<dd>
+<p>Set option <em>STR</em> for the pass <em>NUM</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2ds_2c__2d_2dsafe"><strong>-s</strong>, <strong>--safe</strong></a></strong>
+
+<dd>
+<p>This disables some Perl hacks inside WML which speedup processing by reducing
+the forking overhead when running the various passes.</p>
+</dd>
+<dd>
+<p>Without this option WML pre-compiles the passes 1,5,6,7,8 (which are written
+in Perl!) into a different namespace of the currently running Perl interpreter
+instead of running them externally via <code>system()</code>. The effect is that these
+programs are run from within the same Perl interpreter thus saving five CPU-
+and time-intensive <code>fork()</code>'s. The actual gain is between 2 and 4 seconds of
+processing time. Although experience showed that it works great, the
+theoretical problem still is, that this approach is somewhat risky due to
+internal Perl variable conflicts.</p>
+</dd>
+<dd>
+<p>Use this option to disable these speedups by forcing WML to use the safe
+<code>fork()</code> approach.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv_2c__2d_2dverbose_5b_3dnum_5d"><strong>-v</strong>, <strong>--verbose</strong>[<strong>=</strong><em>NUM</em>]</a></strong>
+
+<dd>
+<p>This sets verbose mode (from 1 to 9) where some processing information will be
+given on the console. Useful for debugging. This option also gets passed to
+some of the filtering programs. Default is no verbosity and just <strong>-v</strong> means
+<strong>-v1</strong>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dq_2c__2d_2dquiet"><strong>-q</strong>, <strong>--quiet</strong></a></strong>
+
+<dd>
+<p>This sets quiet mode where the processing prop is no longer displayed.  Use
+this option when running <em>wml</em> as a batch job.  This option is automatically
+forced when <em>inputfile</em> is missing.  Then WML automatically reads from
+<em>stdin</em> in quiet mode.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv_2c__2d_2dversion_5b_3dnum_5d"><strong>-V</strong>, <strong>--version</strong>[<strong>=</strong><em>NUM</em>]</a></strong>
+
+<dd>
+<p>Gives the version identification string and disclaimer (no <em>NUM</em> or <em>NUM</em>
+&gt;= 1), the WML build information (<em>NUM</em> &gt;= 2) and the Perl build
+information (<em>NUM</em> &gt;= 3). Use this option to get a brief description of
+your installed WML system, especially when reporting bugs to the author.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dh_2c__2d_2dhelp"><strong>-h</strong>, <strong>--help</strong></a></strong>
+
+<dd>
+<p>Prints the usage summary page.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="environment">ENVIRONMENT</a></h1>
+<p>
+</p>
+<h2><a name="defined_variables">DEFINED VARIABLES</a></h2>
+<p>The following variables are always defined by <em>wml</em> under runtime and are
+usually interpolated via &lt;<code>get-var NAME</code>&gt; inside Pass 2 and via
+<code>$NAME</code> in Pass 3.</p>
+<dl>
+<dt><strong><a name="item_wml_src_dirname">WML_SRC_DIRNAME</a></strong>
+
+<dd>
+<p>The current working directory from where <em>wml</em> was started.
+An absolute Unix filesystem path.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_filename">WML_SRC_FILENAME</a></strong>
+
+<dd>
+<p>The name of the <em>inputfile</em> from the command line. Useful when running <em>wml</em>
+on a bulk of files and includefiles have to determine in which they are
+included.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_basename">WML_SRC_BASENAME</a></strong>
+
+<dd>
+<p>The basename of the <em>inputfile</em>, i.e. the <a href="#item_wml_src_filename"><code>WML_SRC_FILENAME</code></a>, but with the
+extension already stripped.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_time">WML_SRC_TIME</a></strong>
+
+<dd>
+<p>The last modification time of <em>inputfile</em> in <code>time()</code> format.
+Useful inside footers when customized date format is needed.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_ctime">WML_SRC_CTIME</a></strong>
+
+<dd>
+<p>The last modification time of <em>inputfile</em> in <code>ctime()</code> format.
+Useful inside footers include files.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_isotime">WML_SRC_ISOTIME</a></strong>
+
+<dd>
+<p>The last modification time of <em>inputfile</em> in ISO <code>yyyy-mm-dd hh:mm:ss</code> format.
+Useful inside footers include files.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_username">WML_SRC_USERNAME</a></strong>
+
+<dd>
+<p>The Unix username of the user who own <em>inputfile</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_src_realname">WML_SRC_REALNAME</a></strong>
+
+<dd>
+<p>The realname of the user who own <em>inputfile</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_gen_time">WML_GEN_TIME</a></strong>
+
+<dd>
+<p>The current time of generation in <code>time()</code> format.
+Useful inside footers when customized date format is needed.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_gen_ctime">WML_GEN_CTIME</a></strong>
+
+<dd>
+<p>The current time of generation in <code>ctime()</code> format.
+Useful inside footers include files.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_gen_isotime">WML_GEN_ISOTIME</a></strong>
+
+<dd>
+<p>The current time of generation in ISO <code>yyyy-mm-dd hh:mm:ss</code> format.
+Useful inside footers include files.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_gen_username">WML_GEN_USERNAME</a></strong>
+
+<dd>
+<p>The Unix username of the user who runs the <em>wml</em> process.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_gen_realname">WML_GEN_REALNAME</a></strong>
+
+<dd>
+<p>The realname of the user who runs the <em>wml</em> process.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_gen_hostname">WML_GEN_HOSTNAME</a></strong>
+
+<dd>
+<p>The name of the host on which the <em>wml</em> command runs.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_loc_prefix">WML_LOC_PREFIX</a></strong>
+
+<dd>
+<p>The location prefix where WML was installed to at built time.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_loc_bindir">WML_LOC_BINDIR</a></strong>
+
+<dd>
+<p>The directory where WML's binaries were installed to at built time.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_loc_libdir">WML_LOC_LIBDIR</a></strong>
+
+<dd>
+<p>The directory where WML's library files were installed to at built time.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_loc_mandir">WML_LOC_MANDIR</a></strong>
+
+<dd>
+<p>The directory where WML's manual pages were installed to at built time.</p>
+</dd>
+</li>
+<dt><strong><a name="item_wml_version">WML_VERSION</a></strong>
+
+<dd>
+<p>The version identification string of WML.  Use this for instance in HTML
+comments inside header includes to identify the generation tools version.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<h2><a name="used_variables">USED VARIABLES</a></h2>
+<dl>
+<dt><strong><a name="item_wmlopts"><code>WMLOPTS</code></a></strong>
+
+<dd>
+<p>This variable can contain a string of options.  Usually this is used by
+Bourne-Shell users like</p>
+</dd>
+<dd>
+<pre>
+  $ WMLOPTS=&quot;-DNAME1=VALUE2 -DNAME2=VALUE2&quot;
+  $ export WMLOPTS</pre>
+</dd>
+<dd>
+<p>and by C-Shell users like</p>
+</dd>
+<dd>
+<pre>
+  $ setenv WMLOPTS &quot;-DNAME1=VALUE2 -DNAME2=VALUE2&quot;</pre>
+</dd>
+<dd>
+<p>to make sure some variables are defined for all runs of <em>wml</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_pager"><code>PAGER</code></a></strong>
+<dd>
+<p>This variable contains the pager WML is to use. WML uses a pager when
+called with the <strong>--verbose=</strong><em>NUM</em> or <strong>-v</strong><em>NUM</em> option respectively and
+<em>NUM</em> is 3 or higher and therefore showing the processed data after
+each pass. Default is 'more'.</p>
+</dd>
+</li>
+<dt><strong><a name="item_tmpdir"><code>TMPDIR</code></a></strong>
+<dd>
+<p>This variable contains the directory WML stores its temporary files in.
+Default is '/tmp'.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="user_files">USER FILES</a></h1>
+<dl>
+<dt><strong><a name="item_and"><em>$HOME/.wmlrc</em> and <em>(../)*.wmlrc</em></a></strong>
+<dd>
+<p>These files can also contain option strings, one option per line. Usually the
+contents is one or more <strong>-D</strong> options, especially auto-adjusted ones:</p>
+</dd>
+<dd>
+<pre>
+  -DROOTREL~.
+  -DROOTABS=<a href="http://thishost/thisarea/">http://thishost/thisarea/</a>
+     :
+  -DNAME1=VALUE1
+  -DNAME2=VALUE2
+     :</pre>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="standard_include_files">STANDARD INCLUDE FILES</a></h1>
+<p>WML is shipped with a standard set of include files.
+You can directly include them via</p>
+<pre>
+<p>and read their own documentation via</p>
+<pre>
+  $ man wml::category::name</pre>
+<p>See <a href="../incl/wml::all.html">wml::all</a>(3) for a description of all available include files.</p>
+<p>
+</p>
+<hr />
+<h1><a name="special_features">SPECIAL FEATURES</a></h1>
+<p>The WML control frontend provides a few special features on its own:</p>
+<dl>
+<dt><strong><a name="item_shebang_line_support">Shebang Line Support</a></strong>
+<dd>
+<p>WML recognizes a <em>shebang</em> line (``<code>#!wml</code> <em>options</em>'') in the <em>.wml</em>
+files and automatically adds <em>options</em> to its command line. This line is also
+used by WMk. Two special features in contrast to shebang lines for the Unix
+loader are available: WML's shebang line can be continued via a backslash
+character and the constructs <code>%DIR</code> and %&lt;BASE&gt; are interpolated (where
+<code>%DIR</code> is the path to the directory the source while resides and <code>%BASE</code> is
+the filename of the source file without any extension).</p>
+</dd>
+<dd>
+<p>Example:</p>
+</dd>
+<dd>
+<pre>
+        -o (ALL-LANG_*)+LANG_DE:%BASE.de.html</pre>
+</dd>
+</li>
+<dt><strong><a name="item_data_protection_container_tag">Data Protection Container Tag</a></strong>
+<dd>
+<p>WML provides an own internal container tag named <code>&lt;protect
+[pass=SPEC]E&lt;gt&gt;</code>...<code>&lt;/protect&gt;</code> which can be used to protect any type
+of data from being processed by any WML pass. When no <code>pass</code> attribute is
+given <em>SPEC</em> defaults to <code>1-9</code>. When you use <code>pass</code> then <em>SPEC</em> can be
+either <code>#-</code>, <code>-#</code>, <code>#-#</code> or a comma separated list of passes, while
+<code>#</code> can be between <code>1</code> and <code>9</code>.</p>
+</dd>
+<dd>
+<p>Example:</p>
+</dd>
+<dd>
+<pre>
+   &lt;script language=&quot;JavaScript&quot;&gt;
+   &lt;protect pass=2&gt;
+   ...
+   output = &quot;&lt;PRE&gt;&lt;DIV ALIGN=\&quot;CENTER\&quot;&gt;&lt;B&gt;&quot; + help_string + &quot;&lt;/B&gt;&lt;/DIV&gt;&lt;/PRE&gt;&quot;
+   ...
+   &lt;/protect&gt;
+   &lt;/script&gt;</pre>
+</dd>
+<dd>
+<p>Warning:</p>
+</dd>
+<dd>
+<p>Since WML 2.0.3, pass 1 includes extra stuff to help keeping information
+about line numbers relevant (a la cpp). So when writing</p>
+</dd>
+<dd>
+<pre>
+   &lt;protect pass=2&gt;
+   &lt;/protect&gt;</pre>
+</dd>
+<dd>
+<p>these extra commands will not be interpreted during pass 2 and will
+remain on output. To suppress them, either compile with <code>-W1,-N</code> flag,
+or write</p>
+</dd>
+<dd>
+<pre>
+   &lt;protect pass=2&gt;
+   &lt;/protect&gt;</pre>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="authors">AUTHORS</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com
+
+</pre>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com
+
+</pre>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p><a href="../frontend/wmd.html">wmd</a>(1),
+<a href="../docs/wml_faq.html">wml_faq</a>(7),
+<a href="../docs/wml_intro.html">wml_intro</a>(7),
+<a href="../docs/wml_tutorial.html">wml_tutorial</a>(7),
+<a href="../docs/wml_tags.html">wml_tags</a>(7),
+<a href="../incl/wml::all.html">wml::all</a>(3).
+</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+</div>
+</body>
+</html>
+

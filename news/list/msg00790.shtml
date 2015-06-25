@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <preserve notypo> causing problems??? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 22 Jun 1999 19:23:52 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990622190322.19831A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990622163054.C31632@erm1.u&#45;strasbg.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00790">Date Index</a>][<a href="thrd17.shtml#00790">Thread Index</a>]<br>
+[<A HREF="msg00789.shtml">Date Prev</A>][<A HREF="msg00791.shtml">Date Next</A>][<A HREF="msg00788.shtml">Thread Prev</A>][<A HREF="msg00789.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;preserve notypo&gt; causing problems???</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Jun 1999 19:17:45 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 22 Jun 1999, Bruno Boettcher wrote:
+
+&gt; found a thing that perturbed my browser:
+&gt; just after the body tag there's a &lt;preserve notypo&gt; and just beofre the end
+&gt; tag:
+&gt; &lt;restore notypo&gt; and that's causing the occultation of the first header (but
+&gt; there's still a problem, it is not in strong....)
+&gt; 
+&gt; so what are these tags? and should they be there?
+
+Those tags are used to preserve/restore variables during pass 2.
+When you define your own macros using those tags, you must include
+wml::std::tags.
+
+There is one include file in which this invocation is missing, and of
+course it's the wml::fmt::text. Bad luck.
+To fix your version of WML, edit the file
+..../lib/wml/include/fmt/text.wml and add
+  #use wml:;std::tags
+at the beginning
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00788" HREF="msg00788.shtml">&lt;preserve notypo&gt; causing problems???</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00789.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00791.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00788.shtml">&lt;preserve notypo&gt; causing problems???</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00789.shtml">Re: help, completely lost....</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00790"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00790"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

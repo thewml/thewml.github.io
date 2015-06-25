@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: img&#45;dimensions in navbars -->
+<!--X-From-R13: Qyrzraf Aregry <bregryNhav&#45;ghrovatra.qr> -->
+<!--X-Date: Mon, 5 Nov 2001 18:05:21 +0100 (MET) -->
+<!--X-Message-Id: 20011105175620.T606&#45;100000@amber.wg.oertel.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02424">Date Index</a>][<a href="thrd49.shtml#02424">Thread Index</a>]<br>
+[<A HREF="msg02423.shtml">Date Prev</A>][<A HREF="msg02425.shtml">Date Next</A>][<A HREF="msg02421.shtml">Thread Prev</A>][<A HREF="msg02425.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>img-dimensions in navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Clemens Oertel &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 5 Nov 2001 18:05:01 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hi,
+
+to please poor ms ie users, i'd like to hardcode the sizes of my navbar's
+button images to speed up the site rendering. now i'm wondering: how do i do
+that with wml 2.0.8?
+
+i tried adding
+  :img:width="123"     and
+  :img:height="321"
+for each of the navbar's images. however, none of the size specs appear in the
+generated html code (i've seen the :img:-option used only with navbar:render -
+doesn't it work with navbar:button?).
+
+i know it's possible - ralf's site about wml seems to have it (but i couldn't
+find the source files for the navigation bars).
+
+by the way, the image's width varies for each button.
+
+any help greatly appreciated.
+
+regards,
+clemens
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02425" HREF="msg02425.shtml">Re: img-dimensions in navbars</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02423.shtml">Re: New release WML 2.0.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02425.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02421.shtml">Multiple prog. language support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02425.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02424"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02424"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

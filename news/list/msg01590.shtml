@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Sat, 20 May 2000 08:22:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0005200814020.20021&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000519233817.10316E&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01590">Date Index</a>][<a href="thrd33.shtml#01590">Thread Index</a>]<br>
+[<A HREF="msg01589.shtml">Date Prev</A>][<A HREF="msg01591.shtml">Date Next</A>][<A HREF="msg01589.shtml">Thread Prev</A>][<A HREF="msg01593.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 20 May 2000 08:22:50 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding [wml] [LONG][RFC] WML 2.0.0, quotes and tags:
+
+*&gt; 4. What must be changed?
+*&gt; =-=-=-=-=-=-=-=-=-=-=-=-
+*&gt; 
+*&gt; I agree with your bug reports, it is a very bad idea to have different
+*&gt; behaviours depending whether tags are defined or not.
+*&gt; 
+*&gt; Of course it is easy to consider that unknown tags are simple tags, this
+*&gt; will fix
+*&gt;     &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+*&gt; 
+*&gt; But it breaks
+*&gt;     &lt;: print "&lt;img src=\"" . $file . "\" alt=\"" . $alt ."\"&gt;"; :&gt;
+*&gt; 
+*&gt; And even worse, consider
+*&gt;     &lt;: print &lt;&lt;EOT;
+*&gt;     Hey, how to finish this pseudo EOT tag?
+*&gt;     EOT
+*&gt;     :&gt;
+*&gt; 
+*&gt; In fact i focused my view on these last topics, to ease mixing ePerl and
+*&gt; mp4h, but i did not realize that this syntax was confusing.
+*&gt; Now that the problem is clearly (?) expressed, it should be solved
+*&gt; quickly ;-)
+
+the problem in my eyes is that you try to anticipate what will be
+done in a later pass with the input ... and this will always be a
+problem ... (I give that it is possible to anticipate some problems
+and behave in a way to make them simpler ...) 
+
+As for above problems I guess the behaviour of mp4h should be to
+only parse VALID structures and leave everything which is invalid
+alone ... For bad cases like the one above it is up to the author
+to make sure things work (this can be confusing ...)
+
+In essence we need a way to protect &lt; and &gt; from being looked at by
+mp4h as well as probably a way to force mp4h to look at them in a
+protected context ...
+
+A simple way would be to make
+
+&lt;: and &lt;perl&gt; start this protection and :&gt; and &lt;/perl&gt; to stop it
+
+... there shold also be a way to protect a single &lt; or &gt; eg by
+doing \&gt; or \&lt;. This should only have an effect in UNPROTECTED
+areas ...
+
+In protected areas there might be something like &lt;mp4h&gt;&lt;/mp4h&gt; to
+renable mp4h parsing ...
+
+
+just babeling
+tobi
+
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01593" HREF="msg01593.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01589" HREF="msg01589.shtml">[LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01589.shtml">[LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01591.shtml">Re: there's still a bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01589.shtml">[LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01593.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01590"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01590"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

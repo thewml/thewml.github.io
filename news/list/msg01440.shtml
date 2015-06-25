@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [ANNOUNCE] WML 1.99.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 18 Mar 2000 19:28:52 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000317212946.745C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14543.30952.363562.76994@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01440">Date Index</a>][<a href="thrd29.shtml#01440">Thread Index</a>]<br>
+[<A HREF="msg01441.shtml">Date Prev</A>][<A HREF="msg01442.shtml">Date Next</A>][<A HREF="msg01433.shtml">Thread Prev</A>][<A HREF="msg01431.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [ANNOUNCE] WML 1.99.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 21:39:47 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 15 Mar 2000, Carsten Wartmann wrote:
+
+&gt; Denis Barbier writes:
+&gt;  &gt; Hi folks,
+&gt;  &gt; 
+&gt;  &gt; i just released WML-1.99.0. My intention is to provide quick releases
+&gt;  &gt; until WML 2.0 ; this 1.99.x branch is between stable and unstable.
+&gt;  &gt; 
+&gt;  &gt; A feature freeze is planned in a couple of weeks, some points are still
+&gt;  &gt; under discussion, so proposals are welcome.
+&gt; 
+&gt; I make a speach about WML at the BeLUG (Berlin Linux User Group) about 
+&gt; WML, so now I have to look at 1.99.0 ;-)
+
+Cool :-)
+I will be glad to help you if you need.
+
+If you want to show examples of WML code, you certainly face some
+problems with wml_p2_mhc.
+Have a look at the definition of &lt;example&gt; in
+   wml_backend/p2_mp4h/doc/html.out
+i believe it is more readable than equivalent macros written for mhc.
+
+&gt;  &gt;       - Meta-HTML is replaced by Mp4h for Pass 2: the new parser has a
+&gt;  &gt;         syntax very similar to the one of Meta-HTML, and tags have been
+&gt;  &gt;         defined to ensure maximum compatibility.  Please read
+&gt;  &gt;         README.mp4h and the wml_p2_mp4h documentation for details on how
+&gt;  &gt;         to migrate from Meta-HTML to mp4h.
+&gt; 
+&gt; Hmm, this fears me a bit... Is it possible to go with 2 versions at
+&gt; the same time? I don´t want to mess my site at this point...
+
+Looks like you posted this message before my post explaining how to
+smoothly upgrade template files. If you have any question, let me know.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01433" HREF="msg01433.shtml">Re: [ANNOUNCE] WML 1.99.0</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01441.shtml">[BUG REPORT] WML 1.99.0, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01442.shtml">ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01433.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01431.shtml">How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01440"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01440"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

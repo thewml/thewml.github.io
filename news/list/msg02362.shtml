@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Creating both frames and non&#45;frames versions of a website? -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Wed, 15 Aug 2001 16:05:08 +0200 (MET DST) -->
+<!--X-Message-Id: 3B7A828A.59088E27@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02362">Date Index</a>][<a href="thrd48.shtml#02362">Thread Index</a>]<br>
+[<A HREF="msg02361.shtml">Date Prev</A>][<A HREF="msg02363.shtml">Date Next</A>][<A HREF="msg02377.shtml">Thread Prev</A>][<A HREF="msg02363.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Creating both frames and non-frames versions of a website?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 15 Aug 2001 16:09:14 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi everybody,
+
+I've resisted the use of frames as long as I could :-), but now I
+can't seem to avoid it, some people think it increases the
+usability. Oh well...
+
+What I want to do is to create both a frames and a non-frames version
+of all our web pages, and I'm sure there's a smart way of using wml
+for this purpose.
+
+I started out with Ralf's example in 
+<A  HREF="http://www.engelschall.com/sw/wml/news/list/msg00044.shtml">http://www.engelschall.com/sw/wml/news/list/msg00044.shtml</A>
+but with wml 2.0.7 I get:
+
+/usr/local/lib/wml/exec/wml_p2_mp4h: ERROR:template.wml:43: 
+EOF when reading body of the `title' tag
+
+Since I'm not that experienced with diverts and slices yet, it's a bit
+hard for me to decide what the reason is (could be related to changes
+in wml_p2_mp4h, I guess)...
+
+Can anybody give me a hint on what to do to create a working version?
+
+I'm also interested in knowing whether anybody else uses wml for this
+purpose, creating both a frames and a non-frames version of his/her
+web pages.
+
+All the best,
+
+Stephan
+
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02363" HREF="msg02363.shtml">RE: Creating both frames and non-frames versions of a website?</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02361.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02363.shtml">RE: Creating both frames and non-frames versions of a website?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02377.shtml">Re: WML Roadmap or TODO-List</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02363.shtml">RE: Creating both frames and non-frames versions of a website?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02362"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02362"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

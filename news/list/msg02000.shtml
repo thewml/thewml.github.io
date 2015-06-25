@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: diversion tags don't seem to be rendered -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 29 Sep 2000 21:20:56 +0200 (MET DST) -->
+<!--X-Message-Id: 20000929212248.A4034@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39D32078.24D814A7@snafu.de -->
+<!--X-Reference: 20000928121600.A30630@imacs.polytechnique.fr -->
+<!--X-Reference: 39D4ED9A.765EAF82@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02000">Date Index</a>][<a href="thrd40.shtml#02000">Thread Index</a>]<br>
+[<A HREF="msg01999.shtml">Date Prev</A>][<A HREF="msg02001.shtml">Date Next</A>][<A HREF="msg01999.shtml">Thread Prev</A>][<A HREF="msg02001.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: diversion tags don't seem to be rendered</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 29 Sep 2000 21:22:49 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Sep 29, 2000 at 08:29:30PM +0100, Werner Heuser wrote:
+&gt; 
+&gt; Denis Barbier wrote:
+&gt; &gt; 
+&gt; &gt; On Thu, Sep 28, 2000 at 11:42:00AM +0100, Werner Heuser wrote:
+&gt; &gt; 
+&gt; &gt; &gt; Hi,
+&gt; &gt; &gt;
+&gt; &gt; &gt; when testing the diversion feature in WML 2.0.4
+&gt; &gt; &gt; (Debian) like in the example  below,
+&gt; &gt; &gt; I encounter, that they still remain in the html output file.
+&gt; &gt; 
+&gt; &gt; Hi Werner, you must add
+&gt; &gt;    #use wml::std::tags
+&gt; &gt; 
+&gt; 
+&gt; Hi Denis,
+&gt; 
+&gt; thank you for your fast and friendly response. I added
+&gt; your recommendation. Now it works.
+&gt; 
+&gt; The code snippet is part of my other wml files, which have
+&gt; been worked without adding #use wml::std::tags in wml 1.7.4
+&gt; and where I used the diversion tag in this form {#NAME:data:#}.
+
+Hi Werner, i misunderstand your point.
+You need #use wml::std::tags inclusion because of the &lt;divert&gt;, &lt;enter&gt;
+and &lt;dump&gt; tags.
+This is in no way related to the replacement of &lt;&lt;NAME&gt;&gt; by {#NAME#}
+
+&gt; Is there an easy way to convert these tags to the new standard?
+
+Write a shell script replace.sh
+  #! /bin/sh
+  sed -e 's/:#}/:##}/g' $1 &gt; $1.tmp &amp;&amp; mv $1.tmp $1
+
+make it executable and invoke
+  prompt$ find . -type f -name \*.wml -exec `pwd`/replace.sh {} \;
+
+&gt; I just use this feature many times in many files.
+&gt; 
+&gt; BTW:
+&gt; As far as I remember this important change wasn't announced in the
+&gt; changes for WML 2.0.x 
+
+Hmmm, indeed.  I will think of a way to fix this.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02001" HREF="msg02001.shtml">Re: diversion tags don't seem to be rendered</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01994" HREF="msg01994.shtml">diversion tags don't seem to be rendered</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="01995" HREF="msg01995.shtml">Re: diversion tags don't seem to be rendered</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01999" HREF="msg01999.shtml">Re: diversion tags don't seem to be rendered</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01999.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02001.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01999.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02001.shtml">Re: diversion tags don't seem to be rendered</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02000"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#02000"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

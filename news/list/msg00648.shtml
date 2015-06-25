@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: using WML for the firt time &#45; slices... -->
+<!--X-From-R13: Oyrffvb Enatnyyv <znabjroNvanzr.pbz> -->
+<!--X-Date: Wed, 12 May 1999 15:47:26 +0200 (MET DST) -->
+<!--X-Message-Id: 4.1.19990512153616.00925c20@autopc.eden.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00648">Date Index</a>][<a href="thrd15.shtml#00648">Thread Index</a>]<br>
+[<A HREF="msg00647.shtml">Date Prev</A>][<A HREF="msg00649.shtml">Date Next</A>][<A HREF="msg00647.shtml">Thread Prev</A>][<A HREF="msg00653.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>using WML for the firt time - slices...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alessio Sangalli &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 12 May 1999 15:43:53 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I wrote a couple of weeks ago about my first impact with WML. I had several
+advices (thanks!!!) and I read the whole documentation.
+
+Now, I ask you if it's possibile to do this:
+
+I havo to write a numeber of pages, each one for an argument and in 5
+differents languages. I thought to write every argument in every language
+in a text-file, and to create a WML file like this:
+
+&lt;bla bla bla (document structure - the same for every page)&gt;
+
+[ENG:[ARG1:#include'arg1.eng.txt':][ARG2:#include'arg2.eng.txt':][ARG3:#incl
+ude'arg3.eng.txt':]:]
+[ITA:[ARG1:#include'arg1.ita.txt':][ARG2:#include'arg2.ita.txt':][ARG3:#incl
+ude'arg3.ita.txt':]:]
+
+&lt;/bla bla bla&gt;
+
+is this possible??? how can I pass command-line parameters to WML for
+achieving my purpose???
+
+In any way, WML rulez!
+
+
+ciao
+Alessio Sangalli
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00653" HREF="msg00653.shtml">Re: using WML for the firt time - slices...</A></strong>, <em>From:</em> Alessio Sangalli</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00647.shtml">[BUG REPORT] WML 1.6.8, linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00649.shtml">Tidy and HTML::Clean become part of WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00647.shtml">[BUG REPORT] WML 1.6.8, linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00653.shtml">Re: using WML for the firt time - slices...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00648"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00648"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

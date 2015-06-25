@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Still no .wmlrc on my system... -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Wed, 26 Jan 2000 20:55:46 +0100 (MET) -->
+<!--X-Message-Id: 14479.9118.824794.290125@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14478.19884.726310.191016@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01301">Date Index</a>][<a href="thrd27.shtml#01301">Thread Index</a>]<br>
+[<A HREF="msg01300.shtml">Date Prev</A>][<A HREF="msg01302.shtml">Date Next</A>][<A HREF="msg01300.shtml">Thread Prev</A>][<A HREF="msg01304.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Still no .wmlrc on my system...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 26 Jan 2000 17:42:34 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Carsten Wartmann writes:
+ &gt; Hello,
+ &gt; 
+ &gt; I still cant use a single .wmlrc (beside a .wmlrc in my
+ &gt; home-dir!). Today I cloned my debian 2.1 to a new HD, and made an
+ &gt; upgrade to debian 2.2, but there it still doesn´t work....
+
+It was a real stupid error, a cyclic link to "pwd".... Thanks to Denis 
+for his help.
+
+ &gt; Furthermore I´m searching for a Makefile template for doing a
+ &gt; recursive wmk on a directory structure. 
+
+With a correct pwd, also wmk -a does a great job.
+
+Thanks,
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01300" HREF="msg01300.shtml">Still no .wmlrc on my system...</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01300.shtml">Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01302.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01300.shtml">Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01304.shtml">order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01301"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01301"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

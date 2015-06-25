@@ -1,0 +1,49 @@
+--- page.src.old	Mon May  8 16:29:51 2000
++++ page.src	Mon May  8 16:42:35 2000
+@@ -17,6 +17,8 @@
+ <preserve title>
+ <preserve indent>
+ <preserve info>
++<preserve description>
++<preserve keywords>
+ <preserve background>
+ <preserve bgcolor>
+ <preserve text>
+@@ -31,7 +33,12 @@
+ <increment __std_page_cnt>
+ <ifeq "<get-var slices>" "" "[WML_STDPAGE_HEAD:"><html>
+ <head*>
+-<ifeq "<get-var info>" "" <info style=meta>>\
++<ifeq "<get-var info>" "" \
++  <info style=meta \
++    <if "<get-var keywords>" "keywords=<get-var keywords> "> \
++    <if "<get-var description>" "description=<get-var description> "> \
++  >\
++>\
+ <if "<get-var title>" "<title*><get-var title></title*>
+ ">\
+ {#WML_PAGE_HEAD_<get-var __std_page_cnt>#}\
+@@ -67,6 +74,8 @@
+ <restore text> 
+ <restore bgcolor> 
+ <restore background> 
++<restore description>
++<restore keywords>
+ <restore info>
+ <restore indent>
+ <restore title>
+@@ -181,6 +190,14 @@
+ 
+ This automatically puts a C<E<lt>info style=metaE<gt>> tag into the
+ C<E<lt>headE<gt>> section of the page. See wml::std::info(3) for more details.
++
++=item C<keywords>
++
++This just adds the C<E<lt>meta name="Keywords" ...E<gt>> tag when used with C<info>.  See wml::std::info(3) for more details.
++
++=item C<description>
++
++This just adds the C<E<lt>meta name="Description" ...E<gt>> tag when used with C<info>.  See wml::std::info(3) for more details.
+ 
+ =item C<slices>
+ 

@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: mnhpxreNrr.rgum.pu (Tevgm Lnhpxre) -->
+<!--X-Date: Sat, 6 Nov 1999 11:21:40 +0100 (MET) -->
+<!--X-Message-Id: 19991106102136.28EDA11E51@drwho.ee.ethz.ch -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01123">Date Index</a>][<a href="thrd9.shtml#01123">Thread Index</a>]<br>
+[<A HREF="msg01122.shtml">Date Prev</A>][<A HREF="msg01124.shtml">Date Next</A>][<A HREF="msg01089.shtml">Thread Prev</A>][<A HREF="msg01194.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Fritz Zaucker)</LI>
+<LI><em>Date</em>: Sat,  6 Nov 1999 11:21:36 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Fritz Zaucker
+Reply-To: zaucker@drwho.ethz.ch
+
+PROBLEM DESCRIPTION:
+
+HTML and cosmetic errors in <A  HREF="http://www.engelschall.com/sw/wml/example/source.cgi?sample/demo.wml">http://www.engelschall.com/sw/wml/example/source.cgi?sample/demo.wml</A>
+
+Well, this is not really a WML-bug, but one in the documentation.
+
+I think this page (and probably others) should correctly use the
+&lt;P&gt;-tag. As far as I know this is actually a container-tag and should
+thus be used as such (although the browsers render it "correctly" if
+used otherwise).
+
+
+BTW, does html_fix  fix this in the output? Probably this is not trivial.
+
+Also, the &lt;rotertext&gt;-tag should probably be changed to &lt;redtext&gt; ...
+
+Chers,
+Fritz
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sun4u-sun-solaris2.5.1
+    Perl: 5.005_03 (/usr/sepp/bin/perl)
+    User: local@engelberg.ethz.ch
+    Date: 05-Nov-1999
+Built Location:
+    Prefix: /usr/pack/wml-1.7.4-to
+    BinDir: /usr/pack/wml-1.7.4-to/bin
+    LibDir: /usr/pack/wml-1.7.4-to/lib
+    ManDir: /usr/pack/wml-1.7.4-to/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=solaris, osvers=2.5.1, archname=sun4-solaris
+    uname='sunos zinal.ee.ethz.ch 5.5.1 generic_103640-19 sun4u sparc sunw,ultra-enterprise '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O', gccversion=2.7.2
+    cppflags='-I/usr/local/include -I/usr/gnu/include'
+    ccflags ='-I/usr/local/include -I/usr/gnu/include'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib -L/usr/gnu/lib'
+    libpth=/usr/local/lib /usr/gnu/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -lgdbm -ldb -ldl -lm -lc -lcrypt
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G -L/usr/local/lib -L/usr/gnu/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at May 20 1999 11:39:17
+  @INC:
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503
+    /usr/pack/perl-solaris251-5.00503-ak/lib/site_perl/5.005/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/site_perl/5.005
+    .
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01122.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01124.shtml">doc error in wmk man page?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01089.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01194.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01123"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#01123"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

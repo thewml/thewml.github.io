@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: "wmk &#45;a" and auto&#45;adjusted variables? -->
+<!--X-From-R13: cybaxnNqbvg.jvfp.rqh -->
+<!--X-Date: Thu, 8 Jul 1999 22:01:42 +0200 (MET DST) -->
+<!--X-Message-Id: 19990708150133.23267@doit.wisc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00837">Date Index</a>][<a href="thrd18.shtml#00837">Thread Index</a>]<br>
+[<A HREF="msg00836.shtml">Date Prev</A>][<A HREF="msg00838.shtml">Date Next</A>][<A HREF="msg00836.shtml">Thread Prev</A>][<A HREF="msg00840.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&quot;wmk -a&quot; and auto-adjusted variables?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 15:01:33 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I'm having some trouble with "wmk -a" when I use auto-adjusted variables
+such as "-DIMG~images".  It seems that wmk prevents these auto-adjusted
+relative paths from working as desired.
+
+For instance, when run "wmk -a" as in the following example:
+
+   $ cd public_html
+   $ wmk -a -DIMG~images
+   wml -DIMG~images -oindex.html index.wml
+   [subdir]
+   wml -DIMG~images -oindex.html index.wml
+   ...
+
+wmk seems to chdir (unnecessarily?) around into the sub-directories
+and invoke wml from within those dirs instead, so that the auto-adjusted
+variables are relative only to that dir, rather than the parent dir.
+
+This results in all my images being referred to as if they were in
+seperate "images" sub-directories under each sub-dir, but I want to refer
+to just one "images" dir  up at the "top" level from where wmk was
+invoked.  That is, I would like $(IMG) to be interpolated with the value
+relative to directory in which *wmk* was launched.
+
+I fear I'm misunderstanding something about auto-adjusted variables
+since I don't see how they can be made to work with sub-direcories
+using "wmk -a".
+
+So, is there a way to get "wmk -a" to do what I want?
+
+If not, should I write a patch for wmk to add a switch which would cause
+it to stay in the same dir and invoke wml from there, e.g.:
+
+   $ cd public_html
+   $ wmk -a -DIMG~images
+   wml -DIMG~images -oindex.html index.wml
+   wml -DIMG~images -osubdir/index.html subdir/index.wml
+		      ^^^^^^            ^^^^^^
+
+I suppose this shouldn't be wmk's default behavior since it will
+potentially differ from the past wmk behavior, especially where
+".wmlrc" files exist in the subdirs.
+
+Thanks for any help!
+Dave
+
+-- 
+plonka@doit.wisc.edu  <A  HREF="http://net.doit.wisc.edu/~plonka">http://net.doit.wisc.edu/~plonka</A>  ARS:N9HZF  Madison, WI
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00840" HREF="msg00840.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="00842" HREF="msg00842.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00836.shtml">I'll be busy</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00838.shtml">Bug report: mistake in documentation of wml:.std.info</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00836.shtml">I'll be busy</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00840.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00837"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00837"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

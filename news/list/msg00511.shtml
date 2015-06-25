@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Automatic button generation (Was: Substitution of asteriks) -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Tue, 23 Mar 1999 09:32:40 +0100 (MET) -->
+<!--X-Message-Id: 87hfrca9ob.fsf_&#45;_@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.10.9903170952240.7703&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Reference: 87pv61ncvb.fsf@vlxhars.desy.de -->
+<!--X-Reference: m1hfrdkf3c.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00511">Date Index</a>][<a href="thrd11.shtml#00511">Thread Index</a>]<br>
+[<A HREF="msg00510.shtml">Date Prev</A>][<A HREF="msg00512.shtml">Date Next</A>][<A HREF="msg00506.shtml">Thread Prev</A>][<A HREF="msg00520.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Automatic button generation (Was: Substitution of asteriks)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 23 Mar 1999 09:32:04 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Fritz Zaucker &lt;zaucker@ee.ethz.ch&gt; writes:
+&gt; While Gimp gives you more features it also implies that you actually
+&gt; run Gimp (and the Gimp-Perl-Server) while processing your Website with
+&gt; WML. This forces you to do that while running X11.
+&gt; 
+&gt; Stick to imagemagick if you can.
+
+I won't stick to anything, I'm trying to keep as much liberty as
+possible (this is perl, after all).
+
+My last experiment involved something like:
+
+    &lt;navbar:define name="foobar" imgstyle="foo" nohints&gt;
+
+where the user would have to provide a coderef in a hash defined like:
+
+    $imgstyles{foo} = sub {
+	my ($file, $txt, $type, $level, $lang) = @_;
+        # Do something
+    }
+
+"# Do something" could be anything, although it might be a good idea
+if it resulted in the production of an image named $file that contains
+a nice representation of $txt in the appropriate style. This could use
+any conceivable way to generate the image like PerlMagick or
+use Gimp;
+use Renderman;
+if you wanted some really bloated animated 3D buttons, or do some
+weird things with xmessage and xv -grab, or just use some standard
+tools in a pipe as in my test code:
+
+&lt;:
+{
+    my @cols=("white", "lightseagreen", "yellow");
+    my @spc=("", "* ");
+
+    $imgstyles{foo} = sub {
+	my ($file, $txt, $type, $level, $lang) = @_;
+	system ("(banner '". $spc[$level] . $txt . "' |\
+                 asciitopgm 400 140 | pnmrotate 90 |\
+                 pnmscale -height 20 -width 80 |\
+                 pgmtoppm black-". $cols[$type]." | ppmtogif &gt;" .
+                 $file . ") &gt;/dev/null 2&gt;&amp;1 &gt;/dev/null");
+    }
+}
+:&gt;
+
+If I find some more time to test (and document :-)) it, I will release
+the code later this week.
+
+Any suggestions for improvements?
+
+Yours, Florian.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00520" HREF="msg00520.shtml">Re: Automatic button generation (Was: Substitution of asteriks)</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00489" HREF="msg00489.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="00504" HREF="msg00504.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Florian Hars</li>
+<li><strong><A NAME="00506" HREF="msg00506.shtml">Re: Substitution of asteriks</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00510.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00512.shtml">Auto deps</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00506.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00520.shtml">Re: Automatic button generation (Was: Substitution of asteriks)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00511"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00511"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

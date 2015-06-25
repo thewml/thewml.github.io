@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: #include oddities. -->
+<!--X-From-R13: Yra [pUybguyra <zptyxNnegybtvk.pbz> -->
+<!--X-Date: Sat, 20 Oct 2001 12:30:08 +0200 (MET DST) -->
+<!--X-Message-Id: 871yjzs4ec.fsf_&#45;_@ralf.artlogix.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011010112358.A1391@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02403">Date Index</a>][<a href="thrd48.shtml#02403">Thread Index</a>]<br>
+[<A HREF="msg02402.shtml">Date Prev</A>][<A HREF="msg02404.shtml">Date Next</A>][<A HREF="msg02401.shtml">Thread Prev</A>][<A HREF="msg02402.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>#include oddities.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ken McGlothlen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 19 Oct 2001 14:31:39 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I have a situation where my WML file includes a file in a subdirectory, which
+includes another file in that same subdirectory.  Here are the files:
+
+test.wml:
+
+        &lt;html&gt; 
+        &lt;head&gt; 
+        &lt;title&gt;Booga&lt;/title&gt; 
+        &lt;/head&gt; 
+        &lt;body bgcolor = "#ffffff"&gt; 
+        &lt;ul&gt; 
+        #include '.toc/tt.wmi' 
+        &lt;/ul&gt; 
+        &lt;/body&gt; 
+        &lt;/html&gt; 
+
+.toc/tt.wmi:
+
+        #include 'tt.chp'
+
+.toc/tt.chp:
+
+        &lt;li/&gt;Item 1
+
+(Of course, the indents aren't really in the files.)
+
+Unfortunately, I get an error.  Here's the results when I use "wml --verbose=3
+test.wml":
+
+        $ wml --verbose=3 test.wml
+        ** WML:Verbose: PASS 1:
+        ** WML:Verbose: source: /usr/local/lib/wml/exec/wml_p1_ipp  "-DWML_TMPDIR=/tmp" "-DWML_VERSION=2.0.7 (21-Jun-2001)" "-DWML_LOC_MANDIR=/usr/local/man" "-DWML_LOC_LIBDIR=/usr/local/lib/wml" "-DWML_LOC_BINDIR=/usr/local/bin" "-DWML_LOC_PREFIX=/usr/local" "-DWML_GEN_HOSTNAME=[host]" "-DWML_GEN_REALNAME=Ken McGlothlen" "-DWML_GEN_USERNAME=mcglk" "-DWML_GEN_GMT_ISOTIME=2001-10-19 21:28:30" "-DWML_GEN_GMT_CTIME=Fri Oct 19 21:28:30 2001" "-DWML_GEN_ISOTIME=2001-10-19 14:28:30" "-DWML_GEN_CTIME=Fri Oct 19 14:28:30 2001" "-DWML_GEN_TIME=1003526910" "-DWML_SRC_REALNAME=Ken McGlothlen" "-DWML_SRC_USERNAME=mcglk" "-DWML_SRC_GMT_ISOTIME=2001-10-19 21:27:31" "-DWML_SRC_GMT_CTIME=Fri Oct 19 21:27:31 2001" "-DWML_SRC_ISOTIME=2001-10-19 14:27:31" "-DWML_SRC_CTIME=Fri Oct 19 14:27:31 2001" "-DWML_SRC_TIME=1003526851" "-DWML_SRC_BASENAME=test" "-DWML_SRC_FILENAME=test.wml" "-DWML_SRC_DIRNAME=/home/mcglk/www/" -DIPP_SRC_REALNAME=test.wml -v -S /usr/local/lib/wml/include -n test.wml   -s 'sys/bootp3.wml' -s 'sys/bootp4.wml'  -o /tmp/wml.76832.tmp2.wml /tmp/wml.76832.tmp1.wml
+        |
+        +-- /tmp/ipp.76832.tmp
+          |
+          +-- /usr/local/lib/wml/include/sys/bootp3.wml
+          |
+          +-- /usr/local/lib/wml/include/sys/bootp4.wml
+        |
+        +-- /tmp/ipp.76832.tmp
+          |
+          +-- .toc/tt.wmi
+        ** IPP:Error: file not found: index.chp
+        ** WML:Break: Error in Pass 1 (rc=1).
+        $ _
+
+What am I doing wrong?
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02402" HREF="msg02402.shtml">Re: #include oddities.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+<li><strong><A NAME="02404" HREF="msg02404.shtml">RE: #include oddities.</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02401" HREF="msg02401.shtml">Re: Line numbers</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02402.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02404.shtml">RE: #include oddities.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02401.shtml">Re: Line numbers</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02402.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02403"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02403"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

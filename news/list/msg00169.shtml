@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml&#45;error -->
+<!--X-From-R13: Fnor Ybbvfgen <gnorNbmtheyhx.kf4nyy.ay> -->
+<!--X-Date: Sun, 26 Jul 1998 18:16:45 +0200 (CEST) -->
+<!--X-Message-Id: m3pvesip1t.fsf@ozgurluk.xs4all.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00169">Date Index</a>][<a href="thrd4.shtml#00169">Thread Index</a>]<br>
+[<A HREF="msg00168.shtml">Date Prev</A>][<A HREF="msg00170.shtml">Date Next</A>][<A HREF="msg00168.shtml">Thread Prev</A>][<A HREF="msg00170.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml-error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tabe Kooistra &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 26 Jul 1998 17:56:30 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello You all,
+
+I am new to WML, but I would like to give it a try. However, after
+compiling WML I tried to use is without any luck.
+
+The standard behaviour I get is:
+
+[tabe@ozgurluk ozgurluk]$ wml -p1 index.html
+
+cannot load /tmp/wml.5646.tmp2 for unprotection at /usr/local/bin/wml /
+line 604.
+
+[tabe@ozgurluk ozgurluk]$ ls /tmp/wml.*
+/tmp/wml.5646.tmp1     
+
+Am I doing something wrong? 
+
+Thanks in advance for any help.
+
+---
+T.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00170" HREF="msg00170.shtml">Re: wml-error</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00168.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00170.shtml">Re: wml-error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00168.shtml">Re: wml-mode for (X)Emacs ?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00170.shtml">Re: wml-error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00169"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00169"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

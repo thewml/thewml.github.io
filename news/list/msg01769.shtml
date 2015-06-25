@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [2.0.1] How to get outputfile name? -->
+<!--X-From-R13: "Oyoreg DSW@SD" <nervareNgcu.ghjvra.np.ng> -->
+<!--X-Date: Thu, 29 Jun 2000 18:03:46 +0200 (MET DST) -->
+<!--X-Message-Id: 20000628182419.A738@frithjof -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000622114605.M18991@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Reference: 200006271731.TAA12544@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01769">Date Index</a>][<a href="thrd36.shtml#01769">Thread Index</a>]<br>
+[<A HREF="msg01768.shtml">Date Prev</A>][<A HREF="msg01770.shtml">Date Next</A>][<A HREF="msg01764.shtml">Thread Prev</A>][<A HREF="msg01730.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [2.0.1] How to get outputfile name?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Albert REINER&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 28 Jun 2000 18:24:19 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 28, 2000 at 02:03:37PM +0000, Jan Holler wrote:
+&gt; Thu, 22 Jun 2000 11:46:05 +0200, Roland wrote:
+&gt; 
+&gt; &gt; #!wml -o (ALL-LANG_*)+LANG_DE:%BASE.html \
+&gt; &gt;       -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+&gt; &gt; 
+...
+&gt; &gt; WML_SRC_FILENAME, WML_SRC_BASENAME), but is there an easy way to get
+&gt; &gt; the output file name?
+&gt; 
+&gt; This is still interesting. Would it be hard to implement
+&gt; that directly in the source and have something like
+&gt; WML_OUT_FILENAME (, WML_OUT_DIRNAME) ?
+
+As far as I can tell, it would be difficult as the WML_OUT_FILENAME
+cannot be expanded until after the slice-pass, and you really usually
+need it much earlier (like WML_SRC_FILENAME etc.). This is also why I
+asked for support of "Variables in #!-lines" in an earlier post (where
+I also proposed a simple implementation of this); then you could call
+wml twice, once with -DLANGUAGE=DE and
+once with -DLANGUAGE=EN -DSUFFIX=-en and have a single shebang line
+
+    #!wml -o (ALL-LANG_*)+LANG_%LANGUAGE%:%BASE%SUFFIX.html
+
+(of course this is much slower). This feature would also come in
+handy in other situations, e.g. if a text in a single language is
+presented in various transliterations (Unicode support still being
+poor for many browsers).
+
+G^is / &Gcirc;is / Ghis / Gxis / ^Gis,
+
+Albert.
+
+-- 
+
+--------------------------------------------------------------------------
+Albert Reiner                                   &lt;areiner@tph.tuwien.ac.at&gt;
+Deutsch       *       English       *       Esperanto       *       Latine
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01727" HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+<li><strong><A NAME="01764" HREF="msg01764.shtml">Re: [2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01768.shtml">Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01770.shtml">Any way to make XHTML work with WML2.0.2/MP4H1.0.2 ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01764.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01730.shtml">[ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01769"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01769"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

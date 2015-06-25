@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE : WML 1.6.8 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sat, 16 Jan 1999 10:16:01 +0100 (CET) -->
+<!--X-Message-Id: 19990116101559.A12963@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990114160308.31108A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: 87n23kjize.fsf@graaff.xs4all.nl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00331">Date Index</a>][<a href="thrd7.shtml#00331">Thread Index</a>]<br>
+[<A HREF="msg00330.shtml">Date Prev</A>][<A HREF="msg00332.shtml">Date Next</A>][<A HREF="msg00330.shtml">Thread Prev</A>][<A HREF="msg00314.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE : WML 1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 16 Jan 1999 10:15:59 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jan 15, 1999, Hans de Graaff wrote:
+
+&gt; Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; 
+&gt; &gt; In this release, many bugs have been fixed, it runs faster and i
+&gt; &gt; need your help to improve it more and more.
+&gt; 
+&gt; One bug appears not to be fixed yet. I'll include the patch
+&gt; below. This fixes a compile problem with perl 5.005 with threads
+&gt; included.
+&gt; 
+&gt; I guess these dTHR; lines should really be protected by some version
+&gt; number check to make sure they don't break building with a perl 5.004
+&gt; release, but I'm not sure how to do this, and I don't have perl 5.004
+&gt; around anymore to test.
+
+Oh shit, yes. I knew we forgot some important issue. That was it.  Thanks for
+the hint. But we should release ePerl 2.2.15 with those fixes and then
+incorporate back this as the WML pass 3, of course. Hmmm... I hope I find some
+time to incorporate the patches in my ePerl-queue the next time. 
+
+BTW, is someone interested in maintaining ePerl? I ask because the ePerl
+situation is mostly the same as it was for WML until Denis has overtaken the
+project. I've actually no time for ePerl these months and the next months but
+a lot of patches are already in the queue and the project really needs a
+maintainer.  When someone is interested, please jump up. 
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00311" HREF="msg00311.shtml">ANNOUNCE : WML 1.6.8</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00330" HREF="msg00330.shtml">Re: ANNOUNCE : WML 1.6.8</A></strong>, <em>From:</em> Hans de Graaff</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00330.shtml">Re: ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00330.shtml">Re: ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00314.shtml">Combining slices and divert</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00331"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00331"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,155 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 6 Jan 1998 09:09:42 +0100 (MET) -->
+<!--X-Message-Id: 199801060809.JAA22387@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00017">Date Index</a>][<a href="thread.shtml#00017">Thread Index</a>]<br>
+[<A HREF="msg00016.shtml">Date Prev</A>][<A HREF="msg00018.shtml">Date Next</A>][<A HREF="msg00016.shtml">Thread Prev</A>][<A HREF="msg00019.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 09:09:40 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hello WML-users,
+
+I'm currently thinking about better high-level support for multi-lingual pages
+with WML. The low-level WML way of doing this is to use slices (Pass 9) like
+the following:
+
+   #!wml -oUNDEFuEN:index.html.en -oUNDEFuDE:index.html.de
+   ... 
+   [EN:Welcome][DE:Willkommen] !
+   ...
+
+Then a WML run automatically generated the two variants and in combination
+with Content Negotiation in the webserver (e.g. Apache) the pages are
+automatically selected.
+
+What I now want is a higher-level interface to such multi-lingual variants
+because the pure Slice-usage is a boring for human readers, I think.  So, my
+request for discussion: 
+
+   WHAT DO YOU WANT AS THE HIGH-LEVEL INTERFACE?
+
+I will write a wml::std::lang include file which should provide this
+high-level interface, but first we have to discuss what it is.  My current
+ideas of interface parts are one or more of the following (the "xx"
+abbreviations are the ISO abbreviations for the languages):
+
+1. | #use wml::std::lang
+   | foo
+   | &lt;lang variants="en,de"&gt;
+   | (en) Welcome (de) Willkommen !
+   | &lt;/lang&gt;
+   | bar
+
+   Here &lt;lang&gt; is a container tag which creates Area Substitutions
+   like the following:
+      s/\(([a-z][a-z]\)(.+?)(\([a-z][a-z]\)|$)/'[LANG_'.uc($1).':'.$2/sge
+   In other words, it converts the above to
+
+   | foo
+   | [LANG_EN:Welcome ][LANG_DE: Willkommen !]
+   | bar
+
+   via Pass 6 (ASubst). Of course we can use any syntax instead
+   of ``(xx)'' but we have to make sure it does not conflict with
+   most plain text.
+
+2. | #use wml::std::lang
+   | foo
+   | &lt;lang:en "Welcome"&gt;&lt;lang:de "Willkommen"&gt;!
+   | bar
+   
+   Here wml::std::lang just defines simple tags named &lt;lang:xx&gt; which expand
+   to [LANG_XX:%attributes]. The example then again gets
+
+   | foo
+   | [LANG_EN:Welcome][LANG_DE:Willkommen]!
+   | bar
+
+3. | #use wml::std::lang autoslice
+   | [...]
+
+   Here wml::std::Lang automatically select the used slices
+   for additional output via
+       %!slice -oALL-(LANG_*)+LANG_XX:index.html.xx [...]
+   I've to add the asterisk feature to Pass 9, but this
+   is useful for a long time now. So this should us not
+   prevent from wanting this feature.
+
+And more ideas, suggestions or comments on this topic?
+Feel free to express any opinion you have.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00019" HREF="msg00019.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00023" HREF="msg00023.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Anthony Fok</li>
+<li><strong><A NAME="00026" HREF="msg00026.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="00032" HREF="msg00032.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00016.shtml">ANNOUNCE: WML 1.4.11 :-(</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00018.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00016.shtml">ANNOUNCE: WML 1.4.11 :-(</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00019.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00017"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00017"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

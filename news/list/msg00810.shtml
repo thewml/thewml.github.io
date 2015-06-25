@@ -1,0 +1,168 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1 -->
+<!--X-From-R13: fvzrfNocsu.arg -->
+<!--X-Date: Wed, 30 Jun 1999 08:09:03 +0200 (MET DST) -->
+<!--X-Message-Id: 199906291711.TAA00313@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00810">Date Index</a>][<a href="thrd17.shtml#00810">Thread Index</a>]<br>
+[<A HREF="msg00809.shtml">Date Prev</A>][<A HREF="msg00811.shtml">Date Next</A>][<A HREF="msg00809.shtml">Thread Prev</A>][<A HREF="msg00811.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 29 Jun 1999 19:11:47 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2 and current CVS snapshot
+Operating System: SunOS 5.5.1
+
+Problem Description:
+| The processing of the -D option always strips off a
+| trailing " on the option, even if that quote has been
+| escaped by a \. Thus the option
+| 
+|  -DFOO="moo \"bar\""
+| 
+| Results in things like
+| 
+|   --set "FOO" "moo \"bar\"
+| 
+| Being sent into meta-html. The problem was with the
+| regex which splits the values from @opt_D up for the
+| backends which use it. The regex was:
+| 
+|   ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+| 
+| I have corrected this to the following, which handles
+| trailing " correctly and leaves escaped " along so that
+| the correct thing happens. The new regex is:
+| 
+| ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+| 
+| The following is a patch against wml.src from the current
+| CVS snap shot which fixes the problem.
+| 
+| *** wml.src-ORIG        Tue Jun 29 18:02:11 1999
+| --- wml.src     Tue Jun 29 18:02:49 1999
+| ***************
+| *** 952,964 ****
+|   
+|   $defipp = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+|       $defipp .= " \"-D$var=$val\"";
+|   }
+|   $defipp .= " -M$opt_M" if $opt_M ne '-';
+|   $defmhtml = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+|       $defmhtml .= " --set \"$var\" \"$val\"";
+|   }
+|   $cnt=0;
+| --- 952,964 ----
+|   
+|   $defipp = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+|       $defipp .= " \"-D$var=$val\"";
+|   }
+|   $defipp .= " -M$opt_M" if $opt_M ne '-';
+|   $defmhtml = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+|       $defmhtml .= " --set \"$var\" \"$val\"";
+|   }
+|   $cnt=0;
+| ***************
+| *** 968,979 ****
+|   }
+|   $defeperl = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+|       $defeperl .= " \"-d$var=$val\"";
+|   }
+|   $defgm4 = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?)"?$|);
+|       $defgm4 .= " \"-Dm4_$var=$val\"";
+|   }
+|   
+| --- 968,979 ----
+|   }
+|   $defeperl = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+|       $defeperl .= " \"-d$var=$val\"";
+|   }
+|   $defgm4 = '';
+|   foreach $d (@opt_D) {
+| !     ($var, $val) = ($d =~ m|^(.+?)="?(.*?(?:\\")?)"?$|);
+|       $defgm4 .= " \"-Dm4_$var=$val\"";
+|   }
+|   
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00811" HREF="msg00811.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00813" HREF="msg00813.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00809.shtml">[ANNOUNCE] WML-1.7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00811.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00809.shtml">[ANNOUNCE] WML-1.7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00811.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00810"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00810"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

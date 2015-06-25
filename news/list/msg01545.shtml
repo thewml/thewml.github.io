@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: xtable/freetable remove linebreak -->
+<!--X-From-R13: Fvzb @rhznaa <wnzrfNhfreynaq.qr> -->
+<!--X-Date: Fri, 28 Apr 2000 22:37:24 +0200 (MET DST) -->
+<!--X-Message-Id: 20000426231204.A29374@userland.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01545">Date Index</a>][<a href="thrd32.shtml#01545">Thread Index</a>]<br>
+[<A HREF="msg01546.shtml">Date Prev</A>][<A HREF="msg01548.shtml">Date Next</A>][<A HREF="msg01550.shtml">Thread Prev</A>][<A HREF="msg01551.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>xtable/freetable remove linebreak</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Timo Neumann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 26 Apr 2000 23:12:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all,
+
+I think there is a problem with wml::fmt::xtable in WML 1.99.8. 
+It removes all linebreaks inside the &lt;td&gt;-Tag. This is a problem 
+if you've got javascript in there, e.g. a &lt;rollover...&gt;. I found 
+out that this happens in Pass 3 (ePerl). IMHO &lt;xtable&gt; should 
+really preserve linebreaks.
+
+-------test.wml----------
+
+#use wml::des::rollover
+#use wml::fmt::xtable
+#use wml::std::page
+
+&lt;page&gt;
+&lt;xtable&gt;
+(1,1)
+&lt;rollover name="heading1" src="pics/heading1.gif" 
+	oversrc="pics/heading1_hl.gif" href="heading1" alt="heading1"&gt;
+&lt;/xtable&gt;
+&lt;page_end&gt;
+
+-------test.wml----------
+
+wmk test.wml results in (everything between &lt;td&gt; and &lt;/td&gt; is in the
+same line):
+
+-------test.html---------
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#ffffff" text="#000000" link="#333399" alink="#9999ff" vlink="#000066"&gt;
+&lt;!-- WARNING: The following table was produced by freetable. --&gt;
+&lt;!-- Unless know what you are doing, you should not edit it here, --&gt;
+&lt;!-- but edit sources and then run freetable to rebuild this table --&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+      &lt;td&gt;&lt;script type="text/javascript" language="JavaScript"&gt; &lt;!-- Hiding the code function ro_imgNormal(imgName) { if (document.images) { document[imgName].src = eval(imgName + "_n.src"); self.status = ''; } } function ro_imgOver(imgName, descript) { if (document.images) { document[imgName].src = eval(imgName + "_o.src"); self.status = descript; } } // done hiding --&gt; &lt;/script&gt; &lt;script type="text/javascript" language="JavaScript"&gt; &lt;!-- Hiding the code if (document.images) { ro_img_heading1_n = new Image(); ro_img_heading1_n.src = "pics/heading1.gif"; ro_img_heading1_o = new Image(); ro_img_heading1_o.src = "pics/heading1_hl.gif"; } // done hiding --&gt; &lt;/script&gt; &lt;a href="heading1" onMouseOver="ro_imgOver('ro_img_heading1', 'heading1'); return true" onMouseOut="ro_imgNormal('ro_img_heading1'); return true"&gt;&lt;img name="ro_img_heading1" src="pics/heading1.gif" alt="heading1" border="0"&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+-------test.html---------
+
+cu,
+
+Timo
+
+-- 
+Timo Neumann      -- GUS#2 --        '95-'96  Suzuki GS500E 11.2 Mm
+<A  HREF="http://www.userland.de/">http://www.userland.de/</A>              '96-'99  Honda  CB750  32.3 Mm
+PGP: 1024/0792BF9D 18 07 12 F7 E4 2C 3A 66  BD 74 2D 60 81 45 02 DA
+--------------  Do you know where your towel is?  -----------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01551" HREF="msg01551.shtml">Re: xtable/freetable remove linebreak</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01546.shtml">Are my mails sent back to me?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01548.shtml">Re: Are my mails sent back to me?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01550.shtml">Re: Are my mails sent back to me?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01551.shtml">Re: xtable/freetable remove linebreak</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01545"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01545"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

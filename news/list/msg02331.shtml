@@ -1,0 +1,159 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Behaviour configuration of slice (was: Re: Multi Language Support Question) -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Sun, 22 Jul 2001 01:12:08 +0200 (MET DST) -->
+<!--X-Message-Id: 20010722005221.A4319@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010720160913.A20143@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010720172935.A13270@imacs.polytechnique.fr -->
+<!--X-Reference: 20010721015833.B26357@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010721224457.A18119@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02331">Date Index</a>][<a href="thrd47.shtml#02331">Thread Index</a>]<br>
+[<A HREF="msg02330.shtml">Date Prev</A>][<A HREF="msg02332.shtml">Date Next</A>][<A HREF="msg02330.shtml">Thread Prev</A>][<A HREF="msg02334.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Behaviour configuration of slice (was: Re: Multi Language Support Question)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 22 Jul 2001 00:52:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+&gt; &gt; -p: like -o, but write output file only, if all *p*ositive (+) slices
+&gt; &gt;     in the slice term exist (to substract something, that doesn't
+&gt; &gt;     exist, doesn't hurt :-)
+&gt; [...]
+&gt; But how to deal with
+&gt;      A-(B+C)
+&gt; and
+&gt;      A-B-C
+&gt; if C is undefined?
+&gt; I do not find a good definition for `positive' slice.
+
+Hmmm, I thought of every slice, which will add text to the overall
+result, so in the above cases both will write the file, because C is
+substracted in both cases. 
+
+But I see that this definition is not very precise and may leed to
+problems.
+
+I got this idea when working with slices for meta files. I wanted
+something, that is robust against SLICE-META_* if META_* doesn't
+match, because I don't need meta files in all cases.
+
+Due to my and Karl-Heinz Marbaise's examples were of the kind
+ALL-FOO_*, I forgot, that SLICE+FOO_* could also happen. So my idea of
+"positive" is just one of two cases.
+
+Well, although there may be cases where expicit mentioned slices do
+not exist, the main problem in our example seem wildcard slices, that
+do not match. So we perhaps should focus on them for solving that
+problem, instead of my initial approach with 'positive slices'...
+
+Hmmm, now I managed to confuse myself.
+
+OK, we better start at the beginning: What do we need?
+
+Defining the behaviour of slice if
+  a) a mentioned slice doesn't exist,
+  b) a mentioned slice wildcard doesn't match and
+  c) the whole output file just contains (or would contain) only
+     white spaces or the empty string
+
+(BTW: Should case (a) include case (b)?)
+
+I each case, we have at least two possible behaviours:
+  1) write the file nevertheless, setting all undefined slices to the
+     empty string.
+  2) Don't write the file at all.
+
+In the first two cases (and perhaps also in third case), we have a
+third possibility:
+  3) Exit with error message.
+
+To get the most powerful solution, we have to assign the behaviours
+1-3 to the cases a-c, so single on/off flags won't work. :-(
+
+P.S.: Hope, the rest of the list doesn't mind my brain storming on
+this case... :-)
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02334" HREF="msg02334.shtml">Re: Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02323" HREF="msg02323.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02325" HREF="msg02325.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02330" HREF="msg02330.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02330.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02332.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02330.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02334.shtml">Re: Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02331"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02331"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

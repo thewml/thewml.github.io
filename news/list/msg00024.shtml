@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 7 Jan 1998 11:05:24 +0100 (MET) -->
+<!--X-Message-Id: 199801071005.LAA11227@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1k9cdiera.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00024">Date Index</a>][<a href="thread.shtml#00024">Thread Index</a>]<br>
+[<A HREF="msg00023.shtml">Date Prev</A>][<A HREF="msg00025.shtml">Date Next</A>][<A HREF="msg00022.shtml">Thread Prev</A>][<A HREF="msg00028.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 7 Jan 1998 11:05:22 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt;[...]
+&gt; &gt; Thats the point why I really tried to avoid programming it with
+&gt; &gt; ePerl (Pass 3) because a lot of tags are programmed this way and
+&gt; &gt; nesting then is not possible.
+&gt; 
+&gt; Is this a principal problem? I think it is a big handicap, as one has
+&gt; to KNOW which tag is programmed in what ...
+
+Yes, it is. Read point three of Q03 in wml_faq(7) ;_)
+
+Thats the drawback of a pragmatical pass-oriented approach instead of an
+integrated all-in-one processing scheme. The principle problem is that the
+current ePerl implementation does not support nested Perl blocks. So, when one
+writes an own tag and programmes it with Perl, this tag should be a final one
+which usually is not nested inside another one which is also programmed in
+Perl. Ok, there is a working trick which wml::std::grid uses for its &lt;cell&gt;
+tag to allow any other tag inside it. The trick uses Pass 5 (Divert). But this
+trick makes it even more complicated. I don't expect everyone to understand
+the source of wml_include/std/grid.src...
+
+&gt; &gt; These spaces are not "introduced" in Pass 9, but I know what effect
+&gt; &gt; you mean: Because Pass 9 (Slice) only does what it is asked for, you
+&gt; &gt; usually lost linefeeds when these are outside the slices. One really
+&gt; &gt; has to make sure where to place the newlines. Can you give me your
+&gt; &gt; example, so we can fix it together?
+&gt; 
+&gt;   &lt;A HREF="/~elekws/"&gt;\
+&gt;   &lt;en&gt;EE Machine Shop&lt;/en&gt;\
+&gt;   &lt;de&gt;Elektrotechnik Werkstatt&lt;/de&gt;\
+&gt;   &lt;es&gt;Tienda de maquinaria&lt;/es&gt;\
+&gt;   &lt;ca&gt;Tenda de maquinària&lt;/ca&gt;\
+&gt;   &lt;fr&gt;Atelier d'électrotechnique&lt;/fr&gt;\
+&gt;   &lt;ch&gt;D'Elektrotechnik Werchschtatt&lt;/ch&gt;\
+&gt;   &lt;it&gt;Atelier di elettrotecnica&lt;/it&gt;\
+&gt;   &lt;/A&gt;
+&gt; 
+&gt; Without the backslashes I get additional blanks around the link.
+
+Correct, the problem is that without the backslashes the above gets translated
+to the following (assuming your ``[XX:%body:XX]'' definition of tag &lt;xx&gt;)
+(I've written down the newlines for illustration):
+
+   &lt;A HREF="/~elekws/"&gt;\n
+   [EN:EE Machine Shop:EN]\n
+   [DE:Elektrotechnik Werkstatt:DE]\n
+   [ES:Tienda de maquinaria:ES]\n
+   [CA:Tenda de maquinària:CA]\n
+   [FR:Atelier d'électrotechnique:FR]\n
+   [CH:D'Elektrotechnik Werchschtatt:CH]\n
+   [IT:Atelier di elettrotecnica:IT]\n
+   &lt;/A&gt;\n
+
+Now for instance when the sliceterm UNDEFuCH is used, Pass 9 (Slice) does what
+you requested: It writes out anything outside Slice delimiters which is not
+defined by explicit slice terms (UNDEF) plus all content inside the slices
+named CH. The result is:
+
+   &lt;A HREF="/~elekws/"&gt;\n
+   \n 
+   \n 
+   \n 
+   \n 
+   \n 
+   D'Elektrotechnik Werchschtatt\n
+   \n 
+   &lt;/A&gt;\n
+
+In others words: A lot of whitespaces as you discovered, because they are part
+of the UNDEF slice. But this is not a bug, its a feature: Slice really does
+only what you request it to do.  Your backslash solution is already the best
+one here, although &lt;suck&gt; will work too. But it is longer then just a
+backslash. 
+
+Notice: Theoretically you could define your tags as
+``&lt;suck&gt;[XX:%body:XX]&lt;suck&gt;''. This way the above example would expand to
+
+   &lt;A HREF="/~elekws/"&gt;D'Elektrotechnik Werchschtatt&lt;/A&gt;\n
+
+but the chance is to high that on other examples this sucks out to much
+whitespaces which should remain. 
+
+But now I think we really need some support in wml::std::lang also for such
+cases of a language alternative list. Because such a thing occurs often.  I
+will thing about this feature, too.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00028" HREF="msg00028.shtml">Compilation problem</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00022" HREF="msg00022.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00023.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00025.shtml">Enhanced Webarea 'Related'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00022.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00028.shtml">Compilation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00024"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00024"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

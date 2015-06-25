@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: [vpunry Yerff <xerffNuny.fnne.qr> -->
+<!--X-Date: Sun, 23 May 1999 22:26:39 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9905232212090.5707&#45;100000@hal.saar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990517085122.3015A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00683">Date Index</a>][<a href="thrd14.shtml#00683">Thread Index</a>]<br>
+[<A HREF="msg00682.shtml">Date Prev</A>][<A HREF="msg00684.shtml">Date Next</A>][<A HREF="msg00664.shtml">Thread Prev</A>][<A HREF="msg00686.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Kress &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 23 May 1999 22:20:26 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 17 May 1999, Denis Barbier wrote:
+
+&gt; &gt; same to me - I upgraded a RedHat-5.2 box to RedHat-6.0; I didn't recompile
+&gt; &gt; the package and I got exactly the same error as described by you.
+&gt; &gt; 
+&gt; &gt; mk@superhal ~/p/kn/v2 [2]$ rpm -q perl
+&gt; &gt; perl-5.00503-2
+&gt; &gt; mk@superhal ~/p/kn/v2 [0]$ rpm -q wml
+&gt; &gt; wml-1.6.8-8
+[...]
+&gt; Hi Michael,
+&gt; 
+&gt; where did you find this wml-1.6.8-8 ?  The only one i find is wml-1.6.8-1.
+&gt; 
+&gt; &gt;From the source rpm, i have build another source rpm which includes the
+&gt; patch for perl 5.005. You can get it at
+&gt;    <A  HREF="ftp://imacs.polytechnique.fr/pub/tmp/redhat/wml-1.6.8-2.src.rpm">ftp://imacs.polytechnique.fr/pub/tmp/redhat/wml-1.6.8-2.src.rpm</A>
+&gt; 
+&gt; Rebuild it with
+&gt;    prompt$ rpm --rebuild wml-1.6.8-2.src.rpm
+&gt; This will create both binary and source rpms for your RH6.0.
+
+Uhm, Sorry, I didn't find that version under /pub/tmp/redhat.
+Where can I find a version that compiles under RedHat 6.0 with perl
+5.005 ?
+
+... where I got 1.6.8-8 ? To be honest: I don't know. ;-)
+I'm 100% sure that I took the spec-file from the wml_contrib-directory
+from the 1.6.8-tar-ball-distribution and that I didn't modify anything.
+The one from the tarball is from 1.6.7 release 7. I must have changed it
+to 1.6.8-8, but it had to be 1.6.8-1.
+
+cu - Michael
+
+Michael Kress / kress@hal.saar.de / coroner@irc
+<A  HREF="http://pandemonium.abyss.saar.de/~kress">http://pandemonium.abyss.saar.de/~kress</A>
+To increase system performance press CTRL+D now.
+P E N G U I N S   A R E   C O O L.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00686" HREF="msg00686.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00664" HREF="msg00664.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00682.shtml">Re: Perl error: wml::des::space (Solaris)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00684.shtml">Question: nested tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00664.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00686.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00683"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00683"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

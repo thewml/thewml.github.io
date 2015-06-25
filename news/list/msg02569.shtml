@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Mar 2002 18:30:28 +0100 (MET) -->
+<!--X-Message-Id: 20020314184154.A16452@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Reference: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Reference: 3C9090B6.5000507@netngine.hu -->
+<!--X-Reference: 20020314134406.A14457@imacs.polytechnique.fr -->
+<!--X-Reference: 3C90C0E8.1020301@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02569">Date Index</a>][<a href="thrd52.shtml#02569">Thread Index</a>]<br>
+[<A HREF="msg02568.shtml">Date Prev</A>][<A HREF="msg02570.shtml">Date Next</A>][<A HREF="msg02568.shtml">Thread Prev</A>][<A HREF="msg02573.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Mar 2002 18:41:54 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Mar 14, 2002 at 04:25:28PM +0100, Veres Ferenc wrote:
+&gt; Hi!
+&gt; 
+&gt; Interesting, most of the pages I dealt with use coloring to show the active
+&gt; item, while none of the sent examples do :)
+&gt; 
+&gt; &gt;A 'selected' button is not active, since it is assumed to be the current
+&gt; &gt;page.  The 'subselected' state is only a clickable 'selected' button, it
+&gt; &gt;has nothing to do with colors.  To be more precise, layout for
+&gt; &gt;
+&gt; It has, becase type will be SS, and imgstar third element will be used. 
+&gt; To keep it simple I refer to this with colors in the future (and
+&gt; past), ok? Like if you had imgstar="-gray:-red:-red".
+
+No, the imgstar attribute does not deal with SS type, 3rd argument is
+for rollover effect (onmouseover event).
+
+&gt; So, if you use unchanged wml codes,
+&gt; 1. you cannot alter state of the main menu items, while now -&gt;
+&gt;    - when you are in the first submenu of any mainmenu the main button 
+&gt; is unactive
+&gt;    - when you are on the second, third, the parent menu becomes active.
+
+Because the latter are compiled with -Dss, which adds 'subselected'
+attribute to &lt;navbar:render&gt;.
+
+&gt; 2. the main menu "Az on bore" remains blue, while I can set selected
+&gt; state on any submenu item. I think, originally it would be yellow
+&gt; (shame on me if not :-)
+
+I do not understand which rendering you want.  There are 2 alternatives:
+  a) upper buttons are considered as selected, to display in which area
+     we are currently
+  b) upper buttons are normal (or rendered with a third icon), to show
+     that they are active
+
+When images are displayed by &lt;navbar:button img=...&gt; then only (a) is
+available, because there is no image for subselected button (as said
+above).
+Thus (b) can only be achieved with specific prologs and epilogs, this is
+illustrated in the example I put online yesterday.
+
+Tell me your choice, and I'll try to help you write your navbars.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02573" HREF="msg02573.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02564" HREF="msg02564.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02566" HREF="msg02566.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02567" HREF="msg02567.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02568.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02570.shtml">Compiling WML with Perl5.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02568.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02573.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02569"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02569"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 18 Oct 1999 19:24:29 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991018183340.800C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199910132054.WAA25507@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01071">Date Index</a>][<a href="thrd22.shtml#01071">Thread Index</a>]<br>
+[<A HREF="msg01070.shtml">Date Prev</A>][<A HREF="msg01073.shtml">Date Next</A>][<A HREF="msg01067.shtml">Thread Prev</A>][<A HREF="msg01077.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Oct 1999 19:23:41 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 13 Oct 1999 Kurt@openldap.org wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.4
+&gt; Operating System: AverageOS 0.8.15
+&gt; 
+&gt; Problem Description:
+&gt; | (feature request)
+&gt; | 
+&gt; | WML_SRC_ISOTIME and other time variables defined
+&gt; | by wml(1) provide the time string adjusted to the
+&gt; | current user's timezone settings.  In our environment,
+&gt; | fixing the timezone to GMT would be much more
+&gt; | appropriate.  Though we could require each user
+&gt; | to adjust their TZ settings before running wml(1),
+&gt; | this is ackward.
+&gt; | 
+&gt; | I suggest that some mechanism to specify the
+&gt; | timezone to use for these variables be provided
+&gt; | OR that GMT versions of the defines be provided.
+
+Well, i did not find any good solution to your problem, the simplest is to
+define new variables. Do WML_SRC_GMT_CTIME, WML_SRC_GMT_ISOTIME... sound
+good to you?
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01077" HREF="msg01077.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></strong>, <em>From:</em> Kurt D. Zeilenga</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01067" HREF="msg01067.shtml">[BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></strong>, <em>From:</em> Kurt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01070.shtml">Re: Suggestionen for man page addition</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01073.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01067.shtml">[BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01077.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01071"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01071"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

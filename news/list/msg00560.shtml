@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.6.8, Debian Linux 2.0 (kernel=2.2.5) -->
+<!--X-From-R13: eiovwy39Npnyiva.rqh -->
+<!--X-Date: Sat, 10 Apr 1999 15:30:18 +0200 (MET DST) -->
+<!--X-Message-Id: 199904100103.DAA21410@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00560">Date Index</a>][<a href="thrd13.shtml#00560">Thread Index</a>]<br>
+[<A HREF="msg00561.shtml">Date Prev</A>][<A HREF="msg00562.shtml">Date Next</A>][<A HREF="msg00563.shtml">Thread Prev</A>][<A HREF="msg00562.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.6.8, Debian Linux 2.0 (kernel=2.2.5)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sat, 10 Apr 1999 03:03:37 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.6.8
+Operating System: Debian Linux 2.0 (kernel=2.2.5)
+
+Problem Description:
+| When i first tried to install wml1.6.8, it configured,
+| compiled fine. However, the test failed on both of them
+| 50%. However, i wasn't smart enough to keep a copy
+| of the result from the tests. :( 
+| 
+| However, my point is that I then tried upgrading my
+| version of perl from the default debian 2.0 version 
+| (which i'm 99% sure is 5.4, but i'm not sure which
+| patch level). I installed Perl v5.005_02, and then
+| when i compiled and tested wml 1.6.8 it 
+| worked/compiled/tested fine. It even works with some
+| of my basic wml code. 
+| 
+| I dont know if you want to post this somewhere, add
+| it to the docs, or what... but. here is the info.
+| 
+| Enjoy!
+| 
+| Thanks!
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00561.shtml">bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00562.shtml">Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00563.shtml">Re: bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00562.shtml">Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00560"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00560"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

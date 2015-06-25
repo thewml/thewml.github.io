@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml::std::page -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 11 May 2000 21:24:25 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000511211347.3774A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200005110940.LAA01240@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01563">Date Index</a>][<a href="thrd32.shtml#01563">Thread Index</a>]<br>
+[<A HREF="msg01562.shtml">Date Prev</A>][<A HREF="msg01564.shtml">Date Next</A>][<A HREF="msg01562.shtml">Thread Prev</A>][<A HREF="msg01568.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml::std::page</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 11 May 2000 21:24:11 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 11 May 2000, Jan Holler wrote:
+
+&gt; Tue, 9 May 2000 23:20:08 +0200 (CET), Denis Barbier wrote:
+&gt; &gt; Anyway, i now agree that this patch is useless (and will be removed),
+&gt; &gt; an efficient solution (certainly what Jan had in mind) is to write
+&gt; &gt; 
+&gt; &gt;   #use wml::std::page
+&gt; &gt;   #use wml::std::info
+&gt; &gt; 
+&gt; &gt;   &lt;page
+&gt; &gt;      title="Some title"
+&gt; &gt;   &gt;
+&gt; &gt;   &lt;head&gt;
+&gt; &gt;   &lt;info style=meta
+&gt; &gt;      description="This is a fabolous site"
+&gt; &gt;      keywords="Sex, drugs, rock, roll"
+&gt; &gt;   &gt;
+&gt; &gt;   &lt;/head&gt;
+&gt; 
+&gt; Yes, of course, forgot the &lt;head&gt;-tag. I suggest to enhance the 
+&gt; &lt;info&gt;-tag to include custom headers. I have modified it a little to
+&gt; have it include cascading style sheets. But it would be fine to
+&gt; have a more flexible way, e.g. like the following:
+&gt; 
+&gt; &lt;info style=custom
+&gt; &lt;meta http-equiv="content-style-type" content="text/css"&gt;
+&gt; &lt;link rel="stylesheet" type="text/css" href="$(STYLESHEETS)/screen.css"&gt;
+&gt; &gt;
+&gt; 
+&gt; Those two lines would be taken by &lt;info&gt; and (without
+&gt; modifacation) placed in the header-section.
+
+With wml::std::page, this is exactly what &lt;head&gt; is for, it puts its
+body into the HTML header section, so you may write
+
+  #use wml::std::page
+  #use wml::std::info
+  &lt;page&gt;
+  &lt;head&gt;
+  &lt;meta http-equiv="content-style-type" content="text/css"&gt;
+  &lt;link rel="stylesheet" type="text/css" href="$(STYLESHEETS)/screen.css"&gt;
+  &lt;info style=meta&gt;
+  &lt;/head&gt;
+
+I added a note in WML 2.0 about the &lt;title&gt; and &lt;head&gt; tags defined in
+wml::std::page.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01568" HREF="msg01568.shtml">Re: wml::std::page</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01562" HREF="msg01562.shtml">Re: wml::std::page</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01562.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01564.shtml">Suggestion about documentation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01562.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01568.shtml">Re: wml::std::page</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01563"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01563"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

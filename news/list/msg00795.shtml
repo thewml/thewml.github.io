@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: need help again.... for multilingual support -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 24 Jun 1999 12:38:18 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990624122943.24530A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990624120341.G23238@erm1.u&#45;strasbg.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00795">Date Index</a>][<a href="thrd17.shtml#00795">Thread Index</a>]<br>
+[<A HREF="msg00794.shtml">Date Prev</A>][<A HREF="msg00796.shtml">Date Next</A>][<A HREF="msg00794.shtml">Thread Prev</A>][<A HREF="msg00796.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: need help again.... for multilingual support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 Jun 1999 12:32:09 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 24 Jun 1999, Bruno Boettcher wrote:
+
+&gt; sorry to be too stupid.... but i am stuck again....
+
+;-)
+
+[...]
+&gt; now....
+&gt; 
+&gt; the wml source is at <A  HREF="http://erm1.u-strasbg.fr/~bboett/test/index.wml">http://erm1.u-strasbg.fr/~bboett/test/index.wml</A>,
+
+Replace the first line by
+#!wml -o (ALL-LANG_*)+LANG_EN:index.html.en \
+
+This is a ``pseudo'' shebang line. Wml first parses this first line and
+searches for ``#!wml'', not ``#!/path/to/wml''.
+
+--
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00794" HREF="msg00794.shtml">need help again.... for multilingual support</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00794.shtml">need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00796.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00794.shtml">need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00796.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00795"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00795"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

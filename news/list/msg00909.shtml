@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10 -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Mon, 30 Aug 1999 11:26:54 +0200 (MET DST) -->
+<!--X-Message-Id: 87g1111uxw.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199908170603.IAA08232@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00909">Date Index</a>][<a href="thrd19.shtml#00909">Thread Index</a>]<br>
+[<A HREF="msg00908.shtml">Date Prev</A>][<A HREF="msg00910.shtml">Date Next</A>][<A HREF="msg00912.shtml">Thread Prev</A>][<A HREF="msg00910.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 30 Aug 1999 11:25:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+csmall@debian.org writes:
+&gt; | WML doesn't create HTML 4.0 standard code.
+
+&gt; | The main problem was it doesn't like the name field in 
+&gt; | a &lt;IMG&gt; tag.
+
+This bug has been fixed by the W3C a week after it was reported. As of
+HTML 4.01 (<A  HREF="http://www.w3.org/TR/html40/">http://www.w3.org/TR/html40/</A>) img has a name attribute.
+
+Change your DOCTYPE daclarations to one of:
+    &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+            "<A  HREF="http://www.w3.org/TR/html40/loose.dtd">http://www.w3.org/TR/html40/loose.dtd</A>"&gt;
+    &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "<A  HREF="http://www.w3.org/TR/html40/strict.dtd">http://www.w3.org/TR/html40/strict.dtd</A>"&gt;
+    &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+            "<A  HREF="http://www.w3.org/TR/html40/frameset.dtd">http://www.w3.org/TR/html40/frameset.dtd</A>"&gt;
+
+Yours, Florian.
+-- 
++ when hideous hordes of web designers will leave ripped bloodless bodies of
+hosts they parasited upon and convulsively start tearing limbs of each other
+in agony illuminated by artificial light [...], then we know that time has
+come for dêë|||zêïñe++++ &gt;&gt;&gt;&gt; Å.Ñ.Ñ.Ï.H.Î.L.Ä.T.Î.Ö.Ñ      -- www.absurd.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00910" HREF="msg00910.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00914" HREF="msg00914.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></strong>, <em>From:</em> Craig Small</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00895" HREF="msg00895.shtml">[BUG REPORT] WML 1.7.2, Linux 2.2.10</A></strong>, <em>From:</em> csmall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00908.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00910.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00912.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00910.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00909"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00909"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

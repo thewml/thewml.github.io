@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Question: nested tags -->
+<!--X-From-R13: Xba Rhtna <wqhtnaNapfn.hvhp.rqh> -->
+<!--X-Date: Mon, 24 May 1999 07:52:12 +0200 (MET DST) -->
+<!--X-Message-Id: 19990524005207.A35413@ncsa.uiuc.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00684">Date Index</a>][<a href="thrd15.shtml#00684">Thread Index</a>]<br>
+[<A HREF="msg00683.shtml">Date Prev</A>][<A HREF="msg00685.shtml">Date Next</A>][<A HREF="msg00677.shtml">Thread Prev</A>][<A HREF="msg00685.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Question: nested tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jon Dugan &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 24 May 1999 00:52:07 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  this snippet causes WML to barf:
+
+    #
+    # SECT - a section
+    #
+    &lt;define-container SECT&gt;
+    &lt;spaced interline=7&gt;  # just as defined in wml::des::typography
+    %body
+    &lt;/spaced&gt;
+    &lt;SSKIP&gt;
+    &lt;/define-container&gt;
+
+  it seems that the FAQ Q03 almost addresses this, but in this case my
+  container is does not use ePerl (although spaced does).  Is there a work
+  around for this?
+
+  I tried this:
+
+    &lt;define-container SECT&gt;
+    ..SECTBODY&gt;&gt;%body&lt;&lt;..
+    &lt;spaced interline=20&gt;
+    &lt;&lt;SECTBODY&gt;&gt;
+    &lt;/spaced&gt;
+    &lt;SSKIP&gt;
+    &lt;/define-container&gt;
+ 
+  But that caused the output to appear twice (not quite the desired effect).
+
+  I'd be very appreciative if someone could explain how to make this work.
+  Thanks,
+
+Jon
+-- 
+Jon Dugan             |  Network Engineer, NCSA Network Development
+jdugan@ncsa.uiuc.edu  |  57C CAB, 605 E Springfield, Champaign, IL 61820
+217/244-7715          |  <A  HREF="http://www.ncsa.uiuc.edu/people/jdugan">http://www.ncsa.uiuc.edu/people/jdugan</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00685" HREF="msg00685.shtml">Re: Question: nested tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00683.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00685.shtml">Re: Question: nested tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00677.shtml">Bugs report</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00685.shtml">Re: Question: nested tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00684"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00684"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: presentation example with WML -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Tue, 15 May 2001 13:46:51 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.010515133852.jh@inetcom.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010515121641.B18565@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02238">Date Index</a>][<a href="thrd45.shtml#02238">Thread Index</a>]<br>
+[<A HREF="msg02237.shtml">Date Prev</A>][<A HREF="msg02239.shtml">Date Next</A>][<A HREF="msg02236.shtml">Thread Prev</A>][<A HREF="msg02237.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: presentation example with WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 15 May 2001 13:38:52 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+On 15-May-01 Axel Beckert wrote:
+&gt; Jan Holler wrote:
+&gt;&gt; &gt; &lt;TABLE BORDER="0" WIDTH="100%" HEIGHT="100"&gt;
+&gt; 
+&gt; s/"100"/"100%"/
+&gt; 
+&gt;&gt; 
+&gt;&gt; This gives different results with NN4 and IE5. NN4 does
+&gt;&gt; respect the width-option but not the height-option while
+&gt;&gt; IE respects both.
+&gt; 
+&gt; At least all the NN I use (3.x to 4.77, Solaris, Linux, BSD, Windows
+&gt; 95/NT4) do respect them, but maybe it was just my typo which screwed
+&gt; up some examplary tests.
+
+No, the typo didn't screw it up. I just missed my own point. 
+I don't use the height-option anymore since it is useless with NN4.
+Have you ever tried to have a table within a table and both of
+them are height="100%"? The enclosed table is never 100% with NN4.
+The following code will produce different results with NN4 and
+IE5:
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;TABLE BORDER="1" WIDTH="100%" HEIGHT="100%"&gt;
+&lt;tr&gt;
+&lt;td valign="top"&gt;
+ &lt;TABLE BORDER="1" WIDTH="100%" HEIGHT="100%"&gt; 
+ &lt;tr&gt;
+ &lt;td valign="bottom"&gt;Text at the bottom.&lt;/td&gt;
+ &lt;td valign="top"&gt;Text at the top.&lt;p&gt;&lt;br&gt;&lt;p&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/TABLE&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/TABLE&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+(And please nobody should think that this kind of table
+construction is not common.)
+
+&gt;&gt; Btw: CSS are a really pain in the ass. There are too many
+&gt;&gt; differences between the different browsers.
+&gt; 
+&gt; At the moment, yes, but there is a little bit of hope in me. :-) And
+&gt; for making old style HTML optionally look fine, it does a quite good
+&gt; job. :-)
+
+Yes, but sometimes I really feel how a few of my hairs
+turn grey while fiddling out where the problems hide. :)
+Don't forget: a lot more than 60% use IE todays.
+
+Cheers
+ -jan
+
+-- 
+  Holler iNetCom
+  <A  HREF="http://www.inetcom.ch/">http://www.inetcom.ch/</A>  tel: +41 31 3725450  fax: 51
+  zinggstr. 16, 3007 bern, schweiz
+  postanschrift: postfach, 3000 bern 23
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02236" HREF="msg02236.shtml">Re: presentation example with WML</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02237.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02239.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02236.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02237.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02238"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02238"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

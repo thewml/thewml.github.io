@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml don't compile on NetBSD -->
+<!--X-From-R13: [vpun Pbeeznaa <obeeznaaNgenfu.arg> -->
+<!--X-Date: Wed, 9 Aug 2000 04:00:16 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.000808225522.borrmann@trash.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01886">Date Index</a>][<a href="thrd38.shtml#01886">Thread Index</a>]<br>
+[<A HREF="msg01885.shtml">Date Prev</A>][<A HREF="msg01887.shtml">Date Next</A>][<A HREF="msg01902.shtml">Thread Prev</A>][<A HREF="msg01887.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml don't compile on NetBSD</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Micha Borrmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 08 Aug 2000 22:55:22 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I was downloading the version 2.0.2 and I was trying to compile it on
+NetBSD-1.4.2 (i386). But the compile job don't run completely :(
+
+Can anybody help me? Here are the last lines of the make process, the lines
+before are looking ok, but if anybody need more details, no problem.
+
+Thanks in advance!
+
+Micha
+
+&lt;=== wml_frontend
+===&gt; wml_aux (all)
+===&gt; wml_aux/iselect (all)
+gcc -O2 -I. -o iselect_main.o -c iselect_main.c
+gcc -O2 -I. -o iselect_browse.o -c iselect_browse.c
+iselect_browse.c: In function `iSelect_InputField':
+iselect_browse.c:175: `KEY_MIN' undeclared (first use in this function)
+iselect_browse.c:175: (Each undeclared identifier is reported only once
+iselect_browse.c:175: for each function it appears in.)
+iselect_browse.c:175: `KEY_MAX' undeclared (first use in this function)
+iselect_browse.c: In function `iSelect_Draw':
+iselect_browse.c:283: `A_NORMAL' undeclared (first use in this function)
+iselect_browse.c:285: `A_BOLD' undeclared (first use in this function)
+iselect_browse.c:290: `A_REVERSE' undeclared (first use in this function)
+iselect_browse.c: In function `iSelect_Browser':
+iselect_browse.c:489: `KEY_LEFT' undeclared (first use in this function)
+iselect_browse.c:491: `KEY_RIGHT' undeclared (first use in this function)
+iselect_browse.c:493: `KEY_MIN' undeclared (first use in this function)
+iselect_browse.c:493: `KEY_MAX' undeclared (first use in this function)
+iselect_browse.c:497: `KEY_DOWN' undeclared (first use in this function)
+iselect_browse.c:516: `KEY_UP' undeclared (first use in this function)
+iselect_browse.c:535: `KEY_NPAGE' undeclared (first use in this function)
+iselect_browse.c:553: `KEY_PPAGE' undeclared (first use in this function)
+iselect_browse.c:734: `A_NORMAL' undeclared (first use in this function)
+iselect_browse.c:734: `A_BOLD' undeclared (first use in this function)
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+bash-2.03$ 
+
+-- 
+quemadmodum gladius neminem occidit, occidentis telum est
+PGP fingerprint = 41 25 B8 E2 7B B8 4D 65  96 3C C3 A3 7F 4E 23 1C
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01887" HREF="msg01887.shtml">Re: wml don't compile on NetBSD</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01885.shtml">[BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01887.shtml">Re: wml don't compile on NetBSD</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01902.shtml">Re: [BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01887.shtml">Re: wml don't compile on NetBSD</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01886"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01886"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

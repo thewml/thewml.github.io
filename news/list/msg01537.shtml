@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [ANNOUNCE] WML 1.99.8 -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Sun, 23 Apr 2000 16:55:22 +0200 (MET DST) -->
+<!--X-Message-Id: 200004231454.XAA14392@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200004190631.PAA27292@nn.iij4u.or.jp -->
+<!--X-Reference: Pine.LNX.3.96.1000419100209.1015B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01537">Date Index</a>][<a href="thrd31.shtml#01537">Thread Index</a>]<br>
+[<A HREF="msg01536.shtml">Date Prev</A>][<A HREF="msg01538.shtml">Date Next</A>][<A HREF="msg01535.shtml">Thread Prev</A>][<A HREF="msg01538.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [ANNOUNCE] WML 1.99.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 23 Apr 2000 23:54:30 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi,
+
+From: Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt;
+Subject: Re: [ANNOUNCE] WML 1.99.8
+Date: Wed, 19 Apr 2000 10:06:20 +0200 (CET)
+Message-ID: &lt;<A HREF="msg01535.shtml">Pine.LNX.3.96.1000419100209.1015B-100000@imacs.polytechnique.fr</A>&gt;
+
+&gt; &gt; I prefer to write
+&gt; &gt;    &lt;command "ls dir/"&gt;
+&gt; Yes, but i did not know how to implement it.
+&gt; You may try the proposed solution by downloading
+&gt; <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_backend/p2_mp4h/src/macro.c">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_backend/p2_mp4h/src/macro.c</A>
+
+  Sorry too late.
+I see you have great difficulty.
+And I think &lt;command ls dir/ &gt; is enough natural.
+
+  Anyway, I could make out the patch,
+which is so unsightly that I don't like.
+Moreover it may have some bugs.
+I'm all right even if you don't use it.
+
+Regards,
+-- Nobuyuki Tsuchimura
+
+
+--- macro.c.orig	Wed Apr 19 13:00:39 2000
++++ macro.c	Sun Apr 23 22:16:30 2000
+@@ -138,3 +138,3 @@
+   char *text;
+-  token_type t;
++  token_type t, last_t = TOKEN_SPACE;
+   token_data td;
+@@ -172,3 +172,3 @@
+                 }
+-              return (boolean) (IS_SPACE(*TOKEN_DATA_TEXT (&amp;td)));
++              return (boolean) (IS_SPACE(*TOKEN_DATA_TEXT (&amp;td)) | (last_t==TOKEN_QUOTE)&lt;&lt;1);
+             }
+@@ -231,2 +231,3 @@
+ 
++      last_t = t;
+       t = next_token (&amp;td, expansion);
+@@ -279,3 +280,3 @@
+         }
+-      while (more_args);
++      while (more_args &amp; 1);
+       
+@@ -289,2 +290,3 @@
+         }
++      if (more_args &amp; 2) spaced = TRUE;
+     }
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01538" HREF="msg01538.shtml">Re: [ANNOUNCE] WML 1.99.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01534" HREF="msg01534.shtml">Re: [ANNOUNCE] WML 1.99.8</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+<li><strong><A NAME="01535" HREF="msg01535.shtml">Re: [ANNOUNCE] WML 1.99.8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01536.shtml">Re: WMK dependencies</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01538.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01535.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01538.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01537"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01537"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problems with href -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 27 Aug 2000 01:34:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20000827013719.B20858@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000820161429.A27345@pironet.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01903">Date Index</a>][<a href="thrd38.shtml#01903">Thread Index</a>]<br>
+[<A HREF="msg01902.shtml">Date Prev</A>][<A HREF="msg01904.shtml">Date Next</A>][<A HREF="msg01895.shtml">Thread Prev</A>][<A HREF="msg01896.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problems with href</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 27 Aug 2000 01:37:19 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Aug 20, 2000 at 04:14:30PM +0200, Jan Ulrich Hasecke wrote:
+
+&gt; Hi!
+&gt; 
+&gt; I use a perlskript to randomly insert a link from a file containing
+&gt; all possible links. I do this in this way:
+&gt; 
+&gt; In my template-file:
+&gt; 
+&gt; /------ gp.wml-----------
+&gt; 
+&gt; some commands
+&gt; 
+&gt; &lt;define-tag tipp&gt;
+&gt; &lt;: perl-commands stolen from a randomsig.pl :&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; other commands
+&gt; 
+&gt; &lt;tipp&gt;
+&gt; 
+&gt; rest of file
+&gt; 
+&gt; \----------------------
+&gt; 
+&gt; This inserts a random link in place. Now I want to use href, so all
+&gt; links are wirtten in this way.
+&gt; 
+&gt; &lt;href url="$(ROOT)/link1.html" name="Link 1"&gt;
+&gt; 
+&gt; The problem is that &lt;href&gt; is not converted into real links, because
+&gt; they are converted in pass 1 or 2 as written in the manual, and my
+&gt; perl-insertion is made in pass 3.
+&gt; 
+&gt; How can I solve this? I need &lt;href&gt; because I have to use
+&gt; $(ROOT). Some files are in subdirectories and must link from there.
+
+I do not see why you need &lt;href&gt;,  you may write something like
+
+  &lt;define-tag tipp&gt;
+  &lt;: perl-commands ...
+     print '&lt;a href="$(ROOT)/' . $randomlink . '"&gt;' . $randomtext . '&lt;/a&gt;';
+  :&gt;
+  &lt;/define-tag&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01895" HREF="msg01895.shtml">Problems with href</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01902.shtml">Re: [BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01904.shtml">Re: mp4h strips \ from \&quot;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01895.shtml">Problems with href</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01896.shtml">[BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01903"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01903"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

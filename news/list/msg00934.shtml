@@ -1,0 +1,188 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Mon, 6 Sep 1999 14:25:23 +0200 (MET DST) -->
+<!--X-Message-Id: 19990906142529.A15640@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990905233158.A10170@skater.htu.tuwien.ac.at -->
+<!--X-Reference: Pine.LNX.3.96.990906102321.16057A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00934">Date Index</a>][<a href="thrd19.shtml#00934">Thread Index</a>]<br>
+[<A HREF="msg00933.shtml">Date Prev</A>][<A HREF="msg00935.shtml">Date Next</A>][<A HREF="msg00932.shtml">Thread Prev</A>][<A HREF="msg00935.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 6 Sep 1999 14:25:29 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 06 Sep 1999, Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; ``ls -la'' gives useful information, as ``head abb.wml'' does.
+
+ Here you are :)
+
+drwxr-xr-x   3 alfie    users        1024 Sep  6 14:11 ./
+drwxr-xr-x  10 alfie    users        1024 Sep  3 14:04 ../
+-rw-r--r--   1 alfie    users          11 Sep  1 16:41 .wmlrc
+drwxr-xr-x   2 alfie    users        1024 Sep  3 14:06 INCLUDES/
+-rw-r--r--   1 alfie    users        2413 Sep  1 16:38 abb.wml
+-rw-r--r--   1 alfie    users       11235 Sep  1 16:38 alfie.wml
+...
+
+#!wml -o../abb.html
+#include "frame.wmi"
+&lt;subject "Usual Abbreviations"&gt;
+...
+
+
+&gt; Do you mean that everything is right when the -I option is on the
+&gt; command line? So is your .wmlrc readable?
+
+ As you can see above - yes :(
+
+&gt; To debug this problem, turn on verbose mode. With
+&gt; 
+&gt; prompt&gt; wml -v9 abb.wml
+&gt; 
+&gt; Take a close look at the line beginning with
+&gt; ** WML:Verbose: splitting to argv
+&gt; If your .wmlrc is read, you should see ``|-I|INCLUDES|'' near the EOL.
+
+ Let's look at that output:
+
+** WML:Verbose: Reading RC file: /home/alfie/WWW/WML/.wmlrc
+** WML:Verbose: PASS 1:
+
+-** WML:Verbose: source: /usr/local/lib/wml/exec/wml_p1_ipp
+"-DWML_VERSION=1.7.2 (28-06-1999)" "-DWML_LOC_MANDIR=/usr/local/man"
+"-DWML_LOC_LIBDIR=/usr/local/lib/wml" "-DWML_LOC_BINDIR=/usr/local/bin"
+"-DWML_LOC_PREFIX=/usr/local" "-DWML_GEN_HOSTNAME=skater"
+"-DWML_GEN_REALNAME=Gerfried Fuchs" "-DWML_GEN_USERNAME=alfie"
+"-DWML_GEN_ISOTIME=06-09-1999 14:12:08" "-DWML_GEN_CTIME=Mon Sep  6
+14:12:08 1999" "-DWML_SRC_REALNAME=Gerfried Fuchs"
+"-DWML_SRC_USERNAME=alfie" "-DWML_SRC_ISOTIME=01-09-1999 16:38:48"
+"-DWML_SRC_CTIME=Wed Sep  1 16:38:48 1999" "-DWML_SRC_BASENAME=abb"
+"-DWML_SRC_FILENAME=abb.wml" "-DWML_SRC_DIRNAME=/home/alfie/WWW/WML" -v
+-S /usr/local/lib/wml/include/  -I /INCLUDES  -s 'sys/bootmhc.wml' -s
+'sys/boot.wml' -s 'sys/bootgm4.wml'  -o /tmp/wml.15631.tmp2
+/tmp/wml.15631.tmp1
+
+** WML:Verbose: loading: /usr/local/lib/wml/exec/wml_p1_ipp
+** WML:Verbose: loading: succeeded with /usr/local/lib/wml/exec/wml_p1_ipp (12649 bytes)
+** WML:Verbose: precompiling script: pkgname=wml_p1_ipp
+** WML:Verbose: precompiling script: succeeded
+
+** WML:Verbose: splitting from args:  "-DWML_VERSION=1.7.2 (28-06-1999)"
+"-DWML_LOC_MANDIR=/usr/local/man" "-DWML_LOC_LIBDIR=/usr/local/lib/wml"
+"-DWML_LOC_BINDIR=/usr/local/bin" "-DWML_LOC_PREFIX=/usr/local"
+"-DWML_GEN_HOSTNAME=skater" "-DWML_GEN_REALNAME=Gerfried Fuchs"
+"-DWML_GEN_USERNAME=alfie" "-DWML_GEN_ISOTIME=06-09-1999 14:12:08"
+"-DWML_GEN_CTIME=Mon Sep  6 14:12:08 1999" "-DWML_SRC_REALNAME=Gerfried
+Fuchs" "-DWML_SRC_USERNAME=alfie" "-DWML_SRC_ISOTIME=01-09-1999
+16:38:48" "-DWML_SRC_CTIME=Wed Sep  1 16:38:48 1999"
+"-DWML_SRC_BASENAME=abb" "-DWML_SRC_FILENAME=abb.wml"
+"-DWML_SRC_DIRNAME=/home/alfie/WWW/WML" -v -S
+/usr/local/lib/wml/include/  -I /INCLUDES  -s 'sys/bootmhc.wml' -s
+'sys/boot.wml' -s 'sys/bootgm4.wml'  -o /tmp/wml.15631.tmp2
+/tmp/wml.15631.tmp1
+
+** WML:Verbose: splitting to argv: -DWML_VERSION=1.7.2
+(28-06-1999)|-DWML_LOC_MANDIR=/usr/local/man|-DWML_LOC_LIBDIR=/usr/local/lib/wml|-DWML_LOC_BINDIR=/usr/local/bin|-DWML_LOC_PREFIX=/usr/local|-DWML_GEN_HOSTNAME=skater|-DWML_GEN_REALNAME=Gerfried
+Fuchs|-DWML_GEN_USERNAME=alfie|-DWML_GEN_ISOTIME=06-09-1999
+14:12:08|-DWML_GEN_CTIME=Mon Sep  6 14:12:08
+1999|-DWML_SRC_REALNAME=Gerfried
+Fuchs|-DWML_SRC_USERNAME=alfie|-DWML_SRC_ISOTIME=01-09-1999
+16:38:48|-DWML_SRC_CTIME=Wed Sep  1 16:38:48
+1999|-DWML_SRC_BASENAME=abb|-DWML_SRC_FILENAME=abb.wml|-DWML_SRC_DIRNAME=/home/alfie/WWW/WML|-v|-S|/usr/local/lib/wml/include/|-I|/INCLUDES|-s|sys/bootmhc.wml|-s|sys/boot.wml|-s|sys/bootgm4.wml|-o|/tmp/wml.15631.tmp2|/tmp/wml.15631.tmp1
+
+** WML:Verbose: running script
+|
++-- /tmp/ipp.15631.tmp
+  |
+  +-- /usr/local/lib/wml/include//sys/bootmhc.wml
+  |
+  +-- /usr/local/lib/wml/include//sys/boot.wml
+  |
+  +-- /usr/local/lib/wml/include//sys/bootgm4.wml
+|
++-- /tmp/ipp.15631.tmp
+** IPP:Error: file not found: frame.wmi
+** WML:Verbose: running script: rc=
+** WML:Break: Error in Pass 1 (rc=1).
+
+
+ So I see it right that reads the .wmlrc-file, right? Strange enough...
+Thanks for the hint on the verbous output - but now I am even more
+puzzled :-(( I hope that the lines aren't too long... Well, skip that,
+I'm breaking them for you :)
+
+ So long!
+Alfie
+-- 
+Health is merely the slowest possible rate at which one can die.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00935" HREF="msg00935.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00929" HREF="msg00929.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+<li><strong><A NAME="00932" HREF="msg00932.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00933.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00935.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00932.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00935.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00934"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00934"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

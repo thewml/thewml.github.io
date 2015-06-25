@@ -1,0 +1,200 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML 1.99.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 15 Mar 2000 08:41:32 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000314183523.2811A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01427">Date Index</a>][<a href="thrd29.shtml#01427">Thread Index</a>]<br>
+[<A HREF="msg01426.shtml">Date Prev</A>][<A HREF="msg01428.shtml">Date Next</A>][<A HREF="msg01426.shtml">Thread Prev</A>][<A HREF="msg01428.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML 1.99.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Mar 2000 19:08:17 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi folks,
+
+i just released WML-1.99.0. My intention is to provide quick releases
+until WML 2.0 ; this 1.99.x branch is between stable and unstable.
+
+A feature freeze is planned in a couple of weeks, some points are still
+under discussion, so proposals are welcome.
+
+  Major changes between 1.7 and 1.99:
+
+      - Several improvements in wml_p1_ipp:
+          The -S and -I flags are now processed in right-to-left order
+          so that these flags in .wmlrc files have precedence over
+          .wmlrc files above.
+
+          Variable substitutions can now be nested and new constructs
+          have been added. The only restriction is that parenthesis
+          inside strings must be balanced.
+
+          New automatic variables are provided to ease generation of
+          diaporamas (automatic references to previous and next files).
+
+          Block comments are no more supported by wml_p1_ipp.
+
+      - Meta-HTML is replaced by Mp4h for Pass 2: the new parser has a
+        syntax very similar to the one of Meta-HTML, and tags have been
+        defined to ensure maximum compatibility.  Please read
+        README.mp4h and the wml_p2_mp4h documentation for details on how
+        to migrate from Meta-HTML to mp4h.
+
+      - Promote alternate syntax in wml_p5_divert: until wml-1.7.0,
+        pass 5 used expressions containing angle characters.  In many
+        situations this could confuse pass 2, and so an alternate form
+        without angle characters is preferred.  Old syntax is still
+        valid but should be avoided.
+
+      - Allow nesting of wml_p3_eperl commands: this is one of the
+        biggest challenge of WML 2.0 whereas it is entirely transparent
+        for end users.  Read the wml_macros(7) manpage for details on
+        how to write nestable macros.
+
+      - New include files:
+          wml::std::label implements labels and references
+          wml::mod::version ensures that a recent enough WML is run
+          wml::mod::MakeMaker is to help writing portable WML modules
+
+      - Wwwtable is replaced by freetable, a GPL replacement.  Syntax
+        is very similar and input files should work without changes.
+
+      - Support for both GIF and PNG formats.
+        Logos are shipped in both formats, and generated images may be
+        written in GIF (without the patented LZW algorithm) or PNG (if
+        PNG library and headers are found) formats.
+        Modified versions of libgd and GD are used to support both
+        formats.
+
+      - A global base name may be used for generated images: instead of
+        defining IMGB_BASE, IMGDOT_BASE,... it is now possible to define
+        IMAGE_BASE and all generated images will refer to this variable.
+
+      - Better processing on files in other directories: the main goal
+        is to allow use of the VPATH feature of GNU make to build
+        webpages into a test area before compiling webpages.  This
+        does only apply to the wml binary, since there is no reason
+        to mix WMk and Makefiles.
+
+
+
+  Brief summary of changes between 1.7.4 and 1.99.0:
+    See <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog</A>
+    for details
+    *) Improved WMk (12-Mar-2000)
+    *) Changed processing of -S and -I flags of wml_p1_ipp (12-Mar-2000)
+    *) Processing of input files residing in other directories (12-Mar-2000)
+    *) Fix invocation of tidy as an epilogue program (12-Mar-2000)
+    *) Added recent W3C Recommandations (12-Mar-2000)
+    *) Added syntax highlighting configuration file for Vim (12-Mar-2000)
+    *) Removed Text::BlockParser and Text::DelimMatch (12-Mar-2000)
+    *) Fixed protection (11-Mar-2000)
+    *) Improved wml_p1_ipp (10-Mar-2000)
+    *) Updated most include files to work with mp4h (13-Feb-2000)
+    *) Replaced Meta-HTML by Mp4h for pass 2 (13-Feb-2000)
+    *) Added wml::std::label (13-Feb-2000)
+    *) Changed names of bootstrap files (13-Feb-2000)
+    *) Fixed &lt;protect&gt; problem with pass 9 (12-Feb-2000)
+    *) Fixed wml::des::preload (10-Feb-2000)
+    *) Fixed rc file search path within WMk (04-Feb-2000)
+    *) Syntax change in wml_p5_divert (21-Jan-2000)
+    *) Replace wwwtable by freetable (11-Jan-2000)
+    *) Upgrade of File::PathConvert (08-Jan-2000)
+    *) Upgrade of Bit::Vector (08-Jan-2000)
+    *) Upgrade of Getopt::Long (08-Jan-2000)
+    *) Improve wml::des::rollover (08-Jan-2000)
+    *) Improve wml::des::imgbg (06-Jan-2000)
+    *) Change some name of generated images (06-Jan-2000)
+    *) Define a global base name for generated images (06-Jan-2000)
+    *) Improve support of PNG format (06-Jan-2000)
+    *) Replace GD Perl library to allow PNG and GIF images (06-Jan-2000)
+    *) Added logos (04-Jan-2000)
+    *) Upgrade of tidy (03-Jan-2000)
+    *) Fix wml::std::href to allow @ sign within URLs (03-Jan-2000)
+    *) Many changes for compatibility with mhc and mp4h (29-Nov-1999)
+    *) Allow @ operator in slice specifications  (22-Nov-1999)
+    *) Fix missing wml_p3_eperl documentation (13-Nov-1999)
+    *) Wmk did not recognize the -M option (08-Nov-1999)
+    *) Add a notag attribute to &lt;logo&gt; (29-Oct-1999)
+    *) Allow nesting of wml_p3_eperl commands (29-Oct-1999)
+    *) Added PNG versions of logos (25-Oct-1999)
+    *) Fix configure bugs with some Perl versions (24-Oct-1999)
+    *) Fixed the &lt;verbatim&gt; tag (24-Oct-1999)
+    *) Fixed wml_aux_wwwtable and wml::fmt::xtable (23-Oct-1999)
+    *) Change how color of links are used in wml::des::navbar (18-Oct-1999)
+    *) Improve documentation (18-Oct-1999)
+    *) Added new variables for GMT timezones (18-Oct-1999)
+    *) Fixed WMu (18-Oct-1999)
+    *) Fix infinite loops when parsing options (11-Oct-1999)
+    *) Fixed weblint (07-Oct-1999)
+    *) Fixed documentation of include files (06-Oct-1999)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01428" HREF="msg01428.shtml">Re: [ANNOUNCE] WML 1.99.0</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="01433" HREF="msg01433.shtml">Re: [ANNOUNCE] WML 1.99.0</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01426.shtml">Re: NEWBIE WARNING: Is it possible to read include variables from perl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01428.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01426.shtml">Re: NEWBIE WARNING: Is it possible to read include variables from perl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01428.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01427"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01427"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

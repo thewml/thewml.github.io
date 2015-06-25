@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug report: Problems with variables -->
+<!--X-From-R13: Gjr [vaqehc <hjrNzvaqehc.qr> -->
+<!--X-Date: Wed, 7 Jul 1999 22:08:04 +0200 (MET DST) -->
+<!--X-Message-Id: 99070721560701.05594@abakus -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00831">Date Index</a>][<a href="thrd18.shtml#00831">Thread Index</a>]<br>
+[<A HREF="msg00830.shtml">Date Prev</A>][<A HREF="msg00832.shtml">Date Next</A>][<A HREF="msg00852.shtml">Thread Prev</A>][<A HREF="msg00834.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug report: Problems with variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Uwe Mindrup &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 7 Jul 1999 21:28:39 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I have a problem with variables.
+
+An example:
+I have a template.wml with this content (very simplified):
+
+-------------------------------
+&lt;TITLE&gt;foo$(SubTitle:+: )$(SubTitle)&lt;/TITLE&gt;
+-------------------------------
+
+This template.wml is called via
+
+-------------------------------
+#use &lt;template.wml&gt;
+-------------------------------
+
+or like this:
+
+-------------------------------
+#use &lt;template.wml&gt; SubTitle="Homepage"
+-------------------------------
+
+This second form (with SubTitle set) generates the correct
+form "foo: Homepage".  The first form generates "foo$(SubTitle)",
+but it should generate simply "foo". 
+
+When i try this:
+
+-------------------------------
+&lt;TITLE&gt;foo$(SubTitle:+: $(SubTitle))&lt;/TITLE&gt;
+-------------------------------
+then the first call generates the wrong output "foo)", and the second
+call is still correct.
+It seems, that the first SubTitle greps the wrong closing bracket.
+
+My solution (or bypass) of the problem is very simple. I use:
+
+-------------------------------
+&lt;TITLE&gt;foo$(SubTitle:+: )\
+$(SubTitle)&lt;/TITLE&gt;
+-------------------------------
+
+and with this slightly changed template.wml both calls are correct.
+Funny, isn't it?
+
+BTW: I have tried this with wml 1.7.1.
+
+-- 
+Uwe Mindrup  Ingersheim, Germany
+<A  HREF="http://www.mindrup.de/">http://www.mindrup.de/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00834" HREF="msg00834.shtml">Re: Bug report: Problems with variables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00830.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00832.shtml">Re: Perl installation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00852.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00834.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00831"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00831"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

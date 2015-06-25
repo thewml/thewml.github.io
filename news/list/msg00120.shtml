@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: question about #include and wmlrc -->
+<!--X-From-R13: Hvbery O@UVSZ <inatNinat.qla.zy.bet> -->
+<!--X-Date: Tue, 14 Apr 1998 10:30:03 +0200 (MET DST) -->
+<!--X-Message-Id: 19980414103006.07467@zeus.advatech.ro -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00120">Date Index</a>][<a href="thrd3.shtml#00120">Thread Index</a>]<br>
+[<A HREF="msg00119.shtml">Date Prev</A>][<A HREF="msg00121.shtml">Date Next</A>][<A HREF="msg00119.shtml">Thread Prev</A>][<A HREF="msg00121.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>question about #include and wmlrc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Viorel ANGHEL &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Apr 1998 10:30:06 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+First, sorry for my english, i hope you will understand my question...
+
+I have a site with some directories structure. All wml files contain
+something like 
+	#include "header.wml"
+	...
+	#include "footer.wml"
+
+I want that header/footer files to be searched in current dir, then in upper
+dir and so on, i mean  like in regexp (../)*. I have tryied to put in wmlrc
+something like
+	-I./:../:../../
+but it didn't work.
+
+Any help?
+
+
+-- 
+ __ ____ _ _ _  __ _  
+ \ V / _` | ' \/ _` |  Viorel ANGHEL
+  \_/\__,_|_||_\__, |  vang@leader.ro
+               |___/ 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00121" HREF="msg00121.shtml">Re: question about #include and wmlrc</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00119.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00121.shtml">Re: question about #include and wmlrc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00119.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00121.shtml">Re: question about #include and wmlrc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00120"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00120"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

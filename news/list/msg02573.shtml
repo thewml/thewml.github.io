@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: nested navbars2 -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Tue, 19 Mar 2002 14:55:17 +0100 (MET) -->
+<!--X-Message-Id: 3C974278.9020108@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: OFCD15844D.F1E67BC7&#45;ON80256B7A.0033CB51&#45;80256B7A.003431FA@LocalDomain -->
+<!--X-Reference: 3C8F27C8.4050604@netngine.hu -->
+<!--X-Reference: 20020314020905.A11869@imacs.polytechnique.fr -->
+<!--X-Reference: 3C9090B6.5000507@netngine.hu -->
+<!--X-Reference: 20020314134406.A14457@imacs.polytechnique.fr -->
+<!--X-Reference: 3C90C0E8.1020301@netngine.hu -->
+<!--X-Reference: 20020314184154.A16452@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02573">Date Index</a>][<a href="thrd52.shtml#02573">Thread Index</a>]<br>
+[<A HREF="msg02572.shtml">Date Prev</A>][<A HREF="msg02574.shtml">Date Next</A>][<A HREF="msg02569.shtml">Thread Prev</A>][<A HREF="msg02556.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: nested navbars2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 19 Mar 2002 14:51:52 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Thanks for the answers. I understood diverting javascript without
+even checking the manpage you refer. It is obvious, since you told
+me which manpage to check :-) Thanks.
+
+About selections on nested bars. There are some different options, as
+you told, but one is that I go mad on this problem. I have implemented
+more and more pages, without even finishing the template, you know,
+you have to present something to client to keep the work going on.
+
+Eh, I am confused, I stared answering my own comment. :-))) I'd better
+delete almost everything, and cleanstart.
+
+Dennis Barbier wrote:
+
+&gt; I do not understand which rendering you want.  There are 2 alternatives:
+&gt;   a) upper buttons are considered as selected, to display in which area
+&gt;      we are currently
+&gt;   b) upper buttons are normal (or rendered with a third icon), to show
+&gt;      that they are active
+
+None of them, better say, both! If you walk around a submenu, upper
+buttons should remain selected but clickable. This shows you, where
+you are, also allows you to go back original root of that mainmenu.
+
+Anyway, I am lost. My colleagues are loosing the even small interest
+in wml, because I could not redefine our own page's menu in 3 weeks.
+I don't even know what I wanted and where I failed. Current state with
+unmodified navbar.wml is shown:
+<A  HREF="http://test.multigraph.com/wmltry/en/hosting.html">http://test.multigraph.com/wmltry/en/hosting.html</A>
+
+Where "Services" menu in the main menu should be RED and ACTIVE.
+Because if you press it you go to the root of "Services" menu.
+"Implementation" is rendered with modified VML, where I can explicitly
+set what is active, what is unactive, etc.
+
+If I use your "select the sub directly" method, I cannot even define
+which main menu is selected, that is why you don't see the right images
+in "hosting" menu. I should have added something like:
+select=ser_hosting icon=services
+While with modified, I can add:
+mainselect=services subselect=hosting
+
+And I can FREELY define if "services" or "hosting" is active or not,
+while both stay RED.
+&gt; Tell me your choice, and I'll try to help you write your navbars.
+
+Described above, also made 2 example sites (both are production sites).
+If I still could not explain what I wanted to do, then its time to give
+up. You can check www.netngine.hu for the EXACT result I need.
+
+The WML files are in <A  HREF="http://test.multigraph.com/wmltry/wml/">http://test.multigraph.com/wmltry/wml/</A> directory,
+but they are confusing, probably everything but hosting.wml uses my
+modified navbar code.
+
+It is not necessary that you answer, if you got bored on this problem.
+I think most list members are already nervous when seeing this subject.
+:-)
+
+Tired
+Lion
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02553" HREF="msg02553.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Sebastian.Brosig</li>
+<li><strong><A NAME="02559" HREF="msg02559.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02563" HREF="msg02563.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02564" HREF="msg02564.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02566" HREF="msg02566.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02567" HREF="msg02567.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02569" HREF="msg02569.shtml">Re: nested navbars2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02572.shtml">WML Presentation Slides - Updated</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02574.shtml">Re: [BUG REPORT] WML 2.0.2-1, redhat linux 7.2 (2.4.7-10)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02569.shtml">Re: nested navbars2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02556.shtml">preselected nested navbar items-idea,patch</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02573"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02573"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

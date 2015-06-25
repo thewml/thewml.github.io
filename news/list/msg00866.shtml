@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem with PS fonts on big&#45;endian platforms (patch included) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 22 Jul 1999 00:55:41 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990721234621.20642A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990721110634.A14952@doit.wisc.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00866">Date Index</a>][<a href="thrd18.shtml#00866">Thread Index</a>]<br>
+[<A HREF="msg00865.shtml">Date Prev</A>][<A HREF="msg00867.shtml">Date Next</A>][<A HREF="msg00865.shtml">Thread Prev</A>][<A HREF="msg00869.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem with PS fonts on big-endian platforms (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Jul 1999 00:52:28 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 21 Jul 1999, Dave Plonka wrote:
+
+&gt; As an aside, my autoconf familiarity is apparently lacking - anyone know,
+&gt; off the top of their head, how to surpress autoconf's innocuous warning:
+&gt; 
+&gt;    warning: AC_TRY_RUN called without default to allow cross compiling
+&gt; 
+&gt; because of my introduction of AC_C_BIGENDIAN?
+&gt; 
+&gt; Thanks,
+&gt; Dave
+
+sorry Dave but you can't, the only solution is to give autoconf what it
+requests : an action to perform when cross-compiling.
+
+I believe that every autoconf macro should provide such an action, and
+so this problem is a bug in the definition of AC_C_BIGENDIAN.
+
+I volunteer to maintain gFONT some weeks ago, so it's time for me to
+work on it.  I've committed your patch and the Frederic's fix. Plus a
+beginning of support for EC fonts (8-bit). I already sent a patch to
+this list for that topic, which has been fixed by comments i receive
+by private mail. This patched version is at
+    <A  HREF="http://imacs.polytechnique.fr/~barbier/gfont-1.0a301.tar.gz">http://imacs.polytechnique.fr/~barbier/gfont-1.0a301.tar.gz</A>
+
+In the 1.0.2 release, accented letters are rendered via the
+juxtaposition of accents and letters. With the EC fonts, accented
+letters are treated like 7-bit characters, except for some symbols which
+are not in the same place in the iso-8859-1 and EC tables.
+For instance try (with the patched version)
+   prompt$ gfont -F mf:ecrm1200 'ÿß÷×'
+     ÿ -&gt; fs  (a dirty sz which is a fs ligature)
+     ß -&gt; SS  uppercase ß
+     ÷ -&gt; oe
+     × -&gt; OE
+
+It's quite incredible, but the nice sz is not in the EC fonts !
+It's controlled by the classic_sharp_s boolean, which is false by
+default (defined in exbase.mf). If a German people could explain how
+they use EC fonts with LaTeX, i could try to fix this. Meanwhile a
+workaround is to copy exbase.mf into /tmp, edit it and
+set classic_sharp_s to true, and then generate all fonts.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00869" HREF="msg00869.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00865" HREF="msg00865.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Dave Plonka</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00865.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00867.shtml">filenames/directories</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00865.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00869.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00866"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00866"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

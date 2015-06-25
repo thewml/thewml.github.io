@@ -1,0 +1,169 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <page> and <info> tags -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Sat, 29 Aug 1998 07:09:34 +0200 (CEST) -->
+<!--X-Message-Id: 199808290236.TAA22659@medusa.surefirev.com. -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199808290143.SAA15121@medusa.surefirev.com. -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00196">Date Index</a>][<a href="thrd5.shtml#00196">Thread Index</a>]<br>
+[<A HREF="msg00195.shtml">Date Prev</A>][<A HREF="msg00197.shtml">Date Next</A>][<A HREF="msg00195.shtml">Thread Prev</A>][<A HREF="msg00197.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;page&gt; and &lt;info&gt; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 28 Aug 1998 19:36:08 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Michael McNamara writes:
+ &gt; 
+ &gt; I'm using wml 1.6.6
+ &gt; 
+ &gt; I use the &lt;page&gt; tag.
+ &gt; 
+ &gt; I want to get &lt;meta name="Keywords" content="keys, locks, doors"&gt;
+ &gt; inserted into the &lt;head&gt; &lt;/head&gt; region, as per the HTML spec.
+ &gt; 
+ &gt; &lt;page&gt; has a info attribute, but it appears to accept no arguments,
+ &gt; and if present, all it seems to do is include:
+ &gt; 
+ &gt; &lt;meta name="Author"    content="Michael McNamara, mac@medusa.surefirev.com"&gt;
+ &gt; &lt;meta name="Generator" content="WML 1.6.6 (25-06-1998)"&gt;
+ &gt; &lt;meta name="Modified"  content="28-08-1998 18:31:36"&gt;
+ &gt; 
+ &gt; in the &lt;html&gt; section.  This is the right place, but I want seach
+ &gt; keywords!
+ &gt; 
+ &gt; The &lt;info&gt; tag accepts 'keywords' and 'description', but how do I get
+ &gt; the stuff put in the &lt;html&gt;&lt;/html&gt; region?
+ &gt; 
+ &gt; &lt;info&gt; accepts a style directive, and the man page has:
+ &gt; 
+ &gt; &lt;info style={comment,table,meta,oneline} domainname="..."
+ &gt;             copyright="..." created="..." keyword="..." description="..."&gt;
+ &gt; 
+ &gt; which is all the documentation I see.
+ &gt; 
+ &gt; Through testing, I observe:
+ &gt; style="comment" inserts a nice comment;
+ &gt; style="meta" gives me what I want, but in the wrong place, I.E., right 
+ &gt; where I have the &lt;info&gt; tag.
+ &gt; style="table" gives me just the Author, Generator and Modified
+ &gt; (ignores the keywords and the like) as a nice inline table
+ &gt; style="oneline" give me the Author, Generator and Modified as a single 
+ &gt; line, again ignoring the kywords.
+ &gt; 
+ &gt; 
+ &gt; 
+ &gt; Please help me!  I am reduced to hand editing the output of WML...
+ &gt; 
+ &gt; -- 
+ &gt;     /\     Michael McNamara            &lt;mac@surefirev.com&gt;
+ &gt;    /\//    SureFire Verification Inc.
+ &gt;   /\///\   &lt;<A  HREF="http://www.surefirev.com">http://www.surefirev.com</A>&gt;
+ &gt;  _\///\/        Formerly Silicon Sorcery
+ &gt;   \//\/    Get my verilog emacs mode from
+ &gt;     \/     &lt;<A  HREF="http://www.surefirev.com/verilog-mode.html">http://www.surefirev.com/verilog-mode.html</A>&gt;
+ &gt;                                      
+
+Ok, I made the following changes to the page.wml:
+
+There has to be a better way, because the WML home page has nice META
+tags, and I know Richard must make those totally WML...
+
+Clearly there is an easy way, and I just can't understand it from the
+documentation...
+
+
+
+*** page.h	Fri Aug 28 19:31:06 1998
+--- /c/build/wml-1.6.6/wml_include/std/page.wml	Fri Aug 28 19:21:48 1998
+***************
+*** 35,42 ****
+  &lt;ifeq "&lt;get-var slices&gt;" "" "[WML_STDPAGE_HEAD:"&gt;&lt;html&gt;
+  &lt;head*&gt;
+  &lt;ifeq "&lt;get-var info&gt;" "" &lt;info style=meta&gt;&gt;\
+! &lt;if "&lt;get-var info-description&gt; &lt;get-var info-keywords&gt;" 
+! 	&lt;info style=meta description=&lt;get-var info-description&gt; keywords=&lt;get-var info-keywords&gt;&gt;\
+  &lt;if "&lt;get-var title&gt;" "&lt;title*&gt;&lt;get-var title&gt;&lt;/title*&gt;
+  "&gt;\
+  &lt;&lt;WML_PAGE_HEAD_&lt;get-var __std_page_cnt&gt;&gt;&gt;\
+--- 35,41 ----
+  &lt;ifeq "&lt;get-var slices&gt;" "" "[WML_STDPAGE_HEAD:"&gt;&lt;html&gt;
+  &lt;head*&gt;
+  &lt;ifeq "&lt;get-var info&gt;" "" &lt;info style=meta&gt;&gt;\
+! &lt;if "&lt;get-var info&gt;" &lt;info style=meta &lt;get-var info&gt;&gt;\
+  &lt;if "&lt;get-var title&gt;" "&lt;title*&gt;&lt;get-var title&gt;&lt;/title*&gt;
+  "&gt;\
+  &lt;&lt;WML_PAGE_HEAD_&lt;get-var __std_page_cnt&gt;&gt;&gt;\
+
+
+Then the following works:
+
+&lt;page title="SureFire Verification Inc." bgcolor="#FFFFFF" 
+  info-description="SureFire Verification - The Design Purification Company" 
+  info-keywords="Verilog, Verilog-HDL, Coverage, SureFire Verification, test generation, IC design, ASIC design, chip design, verilog-mode.el, verilog coverage, automatic functional verfication, vericov, surecov, covermeter, coverscan"
+  &gt;
+&lt;p&gt; La di da... &lt;/p&gt;
+&lt;/page&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00195" HREF="msg00195.shtml">&lt;page&gt; and &lt;info&gt; tags</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00195.shtml">&lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00197.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00195.shtml">&lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00197.shtml">Re: &lt;page&gt; and &lt;info&gt; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00196"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00196"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

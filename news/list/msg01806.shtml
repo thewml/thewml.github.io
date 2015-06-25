@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: p7_htmlfix sugguestion -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Wed, 12 Jul 2000 16:02:47 +0200 (MET DST) -->
+<!--X-Message-Id: 20000712164146.A19485@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01806">Date Index</a>][<a href="thrd37.shtml#01806">Thread Index</a>]<br>
+[<A HREF="msg01805.shtml">Date Prev</A>][<A HREF="msg01807.shtml">Date Next</A>][<A HREF="msg01804.shtml">Thread Prev</A>][<A HREF="msg01807.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>p7_htmlfix sugguestion</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 12 Jul 2000 16:41:46 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+        Hi!
+
+ Am I too late to send my grats over Ralf's child? I don't hope so :-)
+
+ If you are referencing a picture, you have to use a relative path if
+you want wml_p7_htmlfix to add it's width and height-argument
+automatically. That can be a PITA if you are using the same pictures in
+different pages around your site.
+
+ I tried to fix it, and produced the following diff to clearify what I
+meant: What I was trying to achieve is that I define e.g. -D
+DOC_ROOT=/home/alfie/WWW at the start, and that each image that has a
+leading / in it's reference will be searched starting from that
+directory. The only problem I am faced is that I didn't find out how to
+pass that argument along to wml_p7_htmlfix. I hope that this a
+interesting sugguestion and helps also someone else than me :-)
+
+----------------------------------------------------------------------
+--- wml_p7_htmlfix.orig Sat Jun 24 07:45:18 2000
++++ wml_p7_htmlfix      Wed Jul 12 11:10:00 2000
+@@ -122,8 +122,12 @@
+         }
+         if ($width  eq '*' or $width  == -1 or
+             $height eq '*' or $height == -1   ) {
+-            if (-f $image) {
+-                ($Pwidth, $Pheight) = Image::Size::imgsize($image);
++#  Changed on 2000-07-11 by Gerfried Fuchs &lt;alfie@debian.org&gt;
++            $foo = (substr($image, 0, 1) eq "/")
++                   ? $DOC_ROOT.$image :
++                   $image;
++            if (-f $foo) {
++                ($Pwidth, $Pheight) = Image::Size::imgsize($foo);
+
+                 #    width given, height needs completed
+                 if ((not ($width  eq '*' or $width  == -1)) and
+----------------------------------------------------------------------
+
+ I hope that I did make myself clear a little bit?  It would be great if
+something like this could find it's way into the next release.
+
+ This fix would also have a nice side-effect: If that variable is also
+available in the eperl-part you can quite easily produce the URL of the
+current file by simply substituting $DOC_ROOT with <A  HREF="http://what.ever">http://what.ever</A> :)
+
+ Have fun!
+Alfie
+-- 
+"There are some micro-organisms that exhibit characteristics of both
+plants and animals.  When exposed to light they undergo photosynthesis;
+and when the lights go out, they turn into animals.  But then again,
+don't we all?"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01807" HREF="msg01807.shtml">Re: p7_htmlfix sugguestion</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01805.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01807.shtml">Re: p7_htmlfix sugguestion</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01804.shtml">congrats!...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01807.shtml">Re: p7_htmlfix sugguestion</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01806"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01806"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New WML features for gif generation (patch) -->
+<!--X-From-R13: oneovreNvznpf.cbylgrpuavdhr.se -->
+<!--X-Date: Thu, 21 Oct 1999 09:53:55 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991021095145.10652C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991020165713.B18563@Aramis.kennesaw.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01084">Date Index</a>][<a href="thrd22.shtml#01084">Thread Index</a>]<br>
+[<A HREF="msg01083.shtml">Date Prev</A>][<A HREF="msg01085.shtml">Date Next</A>][<A HREF="msg01082.shtml">Thread Prev</A>][<A HREF="msg01086.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New WML features for gif generation (patch)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 21 Oct 1999 10:00:42 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 20 Oct 1999, Thomas Akin wrote:
+
+[...]
+&gt; 	If I put the following line in home.wml
+&gt; 
+&gt; 	&lt;imgdot base="images"&gt; 
+&gt; 
+&gt; 	a gif was created called "images/.imgdot-1x1-trans.gif". We
+&gt; 	have lost our per file uniqueness. I then started using
+&gt; 
+&gt; 	&lt;imgdot base="images/home"&gt;
+&gt; 
+&gt; 	which created the gif with the right name, but now I have to
+&gt; 	specify a base name for every gif that is created. I have lost
+&gt; 	the automatic naming feature. Dealing with this gets
+&gt; 	especially annoying when using templates...
+
+Hi again,
+
+did you try to define
+   &lt;set-var IMGDOT_BASE="images/&lt;get-var WML_SRC_BASENAME&gt;"&gt;
+   &lt;set-var BGIMG_BASE="images/&lt;get-var WML_SRC_BASENAME&gt;"&gt;
+   ...
+in your templates?
+
+I believe it is what you want.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01086" HREF="msg01086.shtml">Re: New WML features for gif generation (patch)</A></strong>, <em>From:</em> Thomas Akin</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01082" HREF="msg01082.shtml">New WML features for gif generation (patch)</A></strong>, <em>From:</em> Thomas Akin</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01083.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01085.shtml">Re: New WML feature for pass 6 - Area Substitution (patch)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01082.shtml">New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01086.shtml">Re: New WML features for gif generation (patch)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01084"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01084"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

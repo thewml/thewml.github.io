@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] publish output files via FTP 'economically' -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 20 Nov 2001 10:25:36 +0100 (MET) -->
+<!--X-Message-Id: Pine.GSO.4.33.0111201021000.11665&#45;100000@nova.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E1666AO&#45;0007Gu&#45;00@sand7.global.net.uk -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02443">Date Index</a>][<a href="thrd49.shtml#02443">Thread Index</a>]<br>
+[<A HREF="msg02442.shtml">Date Prev</A>][<A HREF="msg02444.shtml">Date Next</A>][<A HREF="msg02442.shtml">Thread Prev</A>][<A HREF="msg02444.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] publish output files via FTP 'economically'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Nov 2001 10:24:12 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 20 Nov 2001, Sebastian Brosig wrote:
+
+&gt; wml leaves its output files intermingled with input files, but in one's
+&gt; DocumentRoot one wants just the data that is needed to render the pages, not
+&gt; .wml and include files.
+
+Actually, we purposely put the .wml files on our webserver as well, to give
+other WML developers the chance to benefit from our ideas (and hopefully
+give us credit for it).
+
+&gt; Has anyone out there a convenient solution to keep a
+&gt; remote Webserver in sync with the locally developed html code, the only
+&gt; administrative access to the server being  ftp?
+
+This is a lousy situation. We use rsync to copy the locally developed code
+to the webserver. This also helps to remove files from the webserver that
+are not used anymore.
+
+So I guess the answer is "get a provider that offers you rsync". You can use
+rsync with ssh for security. In fact, if you have some shell access, you can
+install rsync on the remote server yourself, you don't need root
+permissions.
+
+Cheers,
+Fritz
+
+P.S.: Don't tell me the remote server is not a Unix box ...
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Information Technology and Electrical Engineering
+Swiss Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, CH-8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://people.ee.ethz.ch/~zaucker/">http://people.ee.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+We have open positions: <A  HREF="http://isg.ee.ethz.ch/jobs">http://isg.ee.ethz.ch/jobs</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02441" HREF="msg02441.shtml">publish output files via FTP 'economically'</A></strong>, <em>From:</em> Sebastian Brosig</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02442.shtml">Re: publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02444.shtml">RE: publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02442.shtml">Re: publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02444.shtml">RE: publish output files via FTP 'economically'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02443"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02443"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

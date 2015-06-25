@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: including files only once -->
+<!--X-From-R13: Oahenqun Dnganjrren <nahenqunNtah.bet> -->
+<!--X-Date: Wed, 2 May 2001 11:20:05 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0105021148340.342&#45;100000@presario -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.31.0102271334420.5866&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02216">Date Index</a>][<a href="thrd44.shtml#02216">Thread Index</a>]<br>
+[<A HREF="msg02215.shtml">Date Prev</A>][<A HREF="msg02217.shtml">Date Next</A>][<A HREF="msg02151.shtml">Thread Prev</A>][<A HREF="msg02218.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>including files only once</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anuradha Ratnaweera &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 2 May 2001 11:50:22 +0600 (LKT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Is there a way to include a file only once with a method similar to C
+header files so that I can
+
+if not defined _include_file_flag_
+define _include_file_flag_
+
+contents of the file
+
+endif
+
+Anuradha
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02218" HREF="msg02218.shtml">Re: including files only once</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02151" HREF="msg02151.shtml">feature patch</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02215.shtml">Re: parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02217.shtml">Re: [PHP] Please review our coding standards</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02151.shtml">feature patch</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02218.shtml">Re: including files only once</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02216"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02216"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

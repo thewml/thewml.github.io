@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Extra attributes in <cell> -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 23 Jan 2002 12:38:17 +0100 (MET) -->
+<!--X-Message-Id: 20020123124809.A22510@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020123112522.A18051@fedro.lettere.unipd.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02482">Date Index</a>][<a href="thrd50.shtml#02482">Thread Index</a>]<br>
+[<A HREF="msg02481.shtml">Date Prev</A>][<A HREF="msg02483.shtml">Date Next</A>][<A HREF="msg02480.shtml">Thread Prev</A>][<A HREF="msg02483.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Extra attributes in &lt;cell&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 23 Jan 2002 12:48:09 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jan 23, 2002 at 11:25:22AM +0100, Alvise Belotti wrote:
+&gt; When trying to use CSS (cascading style sheet) to format tables,  it
+&gt; appears to me that the :a: attribute isn't implemented in &lt;grid&gt;.
+
+Right.
+
+&gt; Unfortunately, since wml strips attributes it doesn't recognize
+&gt; inside tags,
+
+???
+
+&gt; I can't use css to format my tables at all.
+&gt; Am i missing something?
+
+Could you give an example?  This one seems to work:
+
+  #use wml::std::grid
+  &lt;grid&gt;
+    &lt;cell&gt;&lt;a class="foo" href="bar"&gt;baz&lt;/a&gt;&lt;/cell&gt;
+  &lt;/grid&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02483" HREF="msg02483.shtml">Re: Extra attributes in &lt;cell&gt;</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02480" HREF="msg02480.shtml">Extra attributes in &lt;cell&gt;</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02481.shtml">Help needed with hierarchical subnavigation bars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02483.shtml">Re: Extra attributes in &lt;cell&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02480.shtml">Extra attributes in &lt;cell&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02483.shtml">Re: Extra attributes in &lt;cell&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02482"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02482"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

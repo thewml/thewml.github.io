@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 31 May 1999 13:06:04 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990531123858.7229A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14161.14557.955623.57970@plaything.smart.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00710">Date Index</a>][<a href="thrd14.shtml#00710">Thread Index</a>]<br>
+[<A HREF="msg00709.shtml">Date Prev</A>][<A HREF="msg00711.shtml">Date Next</A>][<A HREF="msg00708.shtml">Thread Prev</A>][<A HREF="msg00713.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 31 May 1999 13:00:10 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 30 May 1999 jeff.covey@pobox.com wrote:
+
+&gt; &gt;&gt;&gt;&gt;&gt; "Denis" == Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; 
+&gt;     Michael&gt; Where can I find a version that compiles under RedHat 6.0
+&gt;     Michael&gt; with perl 5.005 ?
+&gt; 
+&gt;     Denis&gt; Oops, my disk crashed. You can find it at
+&gt;     Denis&gt; <A  HREF="http://www.cmap.polytechnique.fr/~barbier/wml-1.6.8-2.src.rpm">http://www.cmap.polytechnique.fr/~barbier/wml-1.6.8-2.src.rpm</A>
+&gt; 
+&gt; i have a clean redhat 6.0 install, and i ran rpm --rebuild on the
+&gt; above source rpm.  it died with this:
+&gt; 
+&gt; /usr/bin/install -c -s -m 755 wml_backend/p3_eperl/eperl /var/tmp/wml-root/usr/lib/wml/exec/wml_p3_eperl
+&gt; /usr/bin/install: wml_backend/p3_eperl/eperl: No such file or directory
+&gt; make: *** [install] Error 1
+&gt; Bad exit status from /var/tmp/rpm-tmp.89430 (%install)
+&gt; 
+&gt; *why* is it so hard to get this software installed???
+&gt; 
+&gt; jeff "been trying for weeks now" covey
+
+Hi Jeff,
+
+These problems are caused by perl, because perl5.004 and perl5.005 are
+_not_ compatible.
+
+Unfortunately i have no access to a RH6.0 linux box, so this RPM was
+build on a RH5.2
+
+It looks like Michael succeded in building such an RPM, maybe he could
+put it on a public URL so that you can grab it. Is it possible, Michael?
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00713" HREF="msg00713.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00708" HREF="msg00708.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> jeff.covey</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00709.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00711.shtml">1.6.8 or 1.7.0 What's the latest version?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00708.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00713.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00710"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00710"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

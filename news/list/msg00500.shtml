@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Strange behaviour of <big> -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 19 Mar 1999 08:52:33 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990319084501.30413A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990318163347.A8031@lettere.unipd.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00500">Date Index</a>][<a href="thrd12.shtml#00500">Thread Index</a>]<br>
+[<A HREF="msg00499.shtml">Date Prev</A>][<A HREF="msg00501.shtml">Date Next</A>][<A HREF="msg00498.shtml">Thread Prev</A>][<A HREF="msg00501.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Strange behaviour of &lt;big&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 19 Mar 1999 08:47:08 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 18 Mar 1999, Alvise Belotti wrote:
+
+[...]
+&gt; I've tried -D GFONT_BASE~images/%BASE, but this is not expanded.
+[...]
+
+-DGFONT_BASE~'../images/&lt;get-var WML_SRC_FILENAME&gt;'
+
+I'm not sure whether it's a good idea, many of your files may have the
+same name (index.wml).
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00501" HREF="msg00501.shtml">Re: Strange behaviour of &lt;big&gt;</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00498" HREF="msg00498.shtml">Strange behaviour of &lt;big&gt;</A></strong>, <em>From:</em> Alvise Belotti</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00499.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00501.shtml">Re: Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00498.shtml">Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00501.shtml">Re: Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00500"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00500"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

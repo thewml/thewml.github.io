@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug report -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 28 Jun 2001 11:29:21 +0200 (MET DST) -->
+<!--X-Message-Id: 20010627152305.A6952@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010627122221.A31211@fedro.lettere.unipd.it -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02275">Date Index</a>][<a href="thrd46.shtml#02275">Thread Index</a>]<br>
+[<A HREF="msg02274.shtml">Date Prev</A>][<A HREF="msg02276.shtml">Date Next</A>][<A HREF="msg02271.shtml">Thread Prev</A>][<A HREF="msg02468.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug report</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Jun 2001 15:23:06 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 27, 2001 at 12:22:21PM +0200, alvise@lettere.unipd.it wrote:
+&gt; From:     Alvise Belotti
+&gt; Reply-To: alvise@lettere.unipd.it
+&gt; 
+&gt; PROBLEM DESCRIPTION:
+&gt; I'm experienced a problem with the include statement in xtable.
+&gt; This snippet of code produce an error
+&gt; 
+&gt; &lt;xtable  border="3" width="100%"&gt;
+&gt; (1,1)
+&gt; &lt;!-- Navigation bar --&gt;
+&gt; &lt;br&gt;
+&gt; &lt;navbar:render name=laventa select=$(area)&gt;
+&gt; &lt;br&gt;
+&gt; &lt;!-- Fine della Navigation bar --&gt;
+&gt; (2,1)
+&gt; &lt;div align="center"&gt;
+&gt; &lt;!--Tabella delle immagini laterali --&gt;
+&gt; #include "$(WML_SRC_BASENAME).inc"
+&gt; &lt;!-- Fine tabella immagini laterali --&gt;
+&gt; &lt;/div&gt;
+&gt; &lt;/xtable&gt;
+&gt; 
+&gt; This appear only when i tried to use the #include inside &lt;xtable&gt;; if i
+&gt; commented out the include part, all went ok. 
+
+Hi,
+
+wml 2.0.7 has a fix with nested ePerl tags, so it may solve your
+problem.
+It is not related to the #include statement, but to what is included in
+this file. You should then replace this line, and try to build a minimal
+but consistent example showing this bug, containing all materials
+(definition of navbars, etc).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02271" HREF="msg02271.shtml">Bug report</A></strong>, <em>From:</em> alvise</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02274.shtml">Re: Time to edit your template files (or: how to avoid being sma</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02276.shtml">multi site problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02271.shtml">Bug report</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02468.shtml">Bug report</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02275"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02275"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

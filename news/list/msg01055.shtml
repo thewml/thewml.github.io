@@ -1,0 +1,86 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: file permissions -->
+<!--X-From-R13: Dlna HnaqrePvwy <eiovwy39Npnyiva.rqh> -->
+<!--X-Date: Wed, 13 Oct 1999 08:55:44 +0200 (MET DST) -->
+<!--X-Message-Id: 199910130655.CAA25283@ursa.calvin.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01055">Date Index</a>][<a href="thrd22.shtml#01055">Thread Index</a>]<br>
+[<A HREF="msg01054.shtml">Date Prev</A>][<A HREF="msg01056.shtml">Date Next</A>][<A HREF="msg01054.shtml">Thread Prev</A>][<A HREF="msg01056.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>file permissions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ryan VanderBijl &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 13 Oct 1999 02:55:37 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Is there any trick to having wmk (or wml, or whoever) to make the 
+output file with 0644 permissions? I've noticed that wmk is smart
+enought to make wml take in foobar.wml and output foobar.html, but
+when that happens the file permissions are just 0600. 
+
+Thanks,
+
+Ryan
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01056" HREF="msg01056.shtml">Re: file permissions</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="01057" HREF="msg01057.shtml">Re: file permissions</A></strong>, <em>From:</em> Remco van den Berg</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01054.shtml">Re: Problems with wml_aux_tidy</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01056.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01054.shtml">Re: Problems with wml_aux_tidy</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01056.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01055"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01055"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: perl(EUC JP) trouble -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Sun, 24 Oct 1999 18:08:28 +0200 (MET DST) -->
+<!--X-Message-Id: 199910241608.BAA19275@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01093">Date Index</a>][<a href="thrd22.shtml#01093">Thread Index</a>]<br>
+[<A HREF="msg01092.shtml">Date Prev</A>][<A HREF="msg01094.shtml">Date Next</A>][<A HREF="msg01092.shtml">Thread Prev</A>][<A HREF="msg01094.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>perl(EUC JP) trouble</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Oct 1999 01:08:18 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+&gt;Changes between 1.7.2 and 1.7.3:
+&gt;*) Fix configure bugs with some Perl versions (19-Sep-1999):
+&gt;           Some Perl versions, like the EUC JP one caused an error when
+&gt;           running the configure script.
+&gt;           [Andrew S. Howell &lt;andy@tibcofinance.com&gt;]
+
+I found it is not perfect.
+To install with perl(EUC JP), I added "| sed -e 1q" 4 times.
+Thank you.
+-- Nobuyuki Tsuchimura
+
+------ &lt;&lt; begin "perl-jp.patch" &gt;&gt; -----
+--- wml-1.7.4/wml_backend/p3_eperl/configure.orig	Wed Sep  1 20:14:27 1999
++++ wml-1.7.4/wml_backend/p3_eperl/configure	Sat Oct 23 02:35:23 1999
+@@ -559,3 +559,3 @@
+   perlprog=$with_perl
+-perlvers=`$perlprog -v | grep version | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
++perlvers=`$perlprog -v | grep version | sed -e 1q | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
+ 
+@@ -571,3 +571,3 @@
+                  perl="$dir/$perl"
+-                 version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
++                 version=`$perl -v | grep version | sed -e 1q | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
+                  versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+--- wml-1.7.4/wml_backend/p9_slice/configure.orig	Thu Sep 30 22:47:04 1999
++++ wml-1.7.4/wml_backend/p9_slice/configure	Sat Oct 23 02:35:24 1999
+@@ -581,3 +581,3 @@
+   ac_perlprog=$with_perl
+-ac_perlvers=`$perlprog -v | grep version | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
++ac_perlvers=`$perlprog -v | grep version | sed -e 1q | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
+ 
+@@ -593,3 +593,3 @@
+                  perl="$dir/$perl"
+-                 version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
++                 version=`$perl -v | grep version | sed -e 1q | sed -e 's/.* version //' -e 's/ built.*//' -e 's/ with.*//'`
+                  versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+------ &lt;&lt; end "perl-jp.patch" &gt;&gt; -----
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01094" HREF="msg01094.shtml">Re: perl(EUC JP) trouble</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01092.shtml">Re: Domain Name</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01094.shtml">Re: perl(EUC JP) trouble</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01092.shtml">Re: Domain Name</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01094.shtml">Re: perl(EUC JP) trouble</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01093"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01093"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

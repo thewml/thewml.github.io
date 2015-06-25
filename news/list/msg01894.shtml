@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml 2.0.2, perl 5.6, and static modules -->
+<!--X-From-R13: Xbrl Ezvgu <wbrlNwbrlfzvgu.pbz> -->
+<!--X-Date: Tue, 15 Aug 2000 21:24:07 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0008151224000.29404&#45;100000@joeysmith.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01894">Date Index</a>][<a href="thrd38.shtml#01894">Thread Index</a>]<br>
+[<A HREF="msg01893.shtml">Date Prev</A>][<A HREF="msg01895.shtml">Date Next</A>][<A HREF="msg01904.shtml">Thread Prev</A>][<A HREF="msg01895.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml 2.0.2, perl 5.6, and static modules</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Joey Smith &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 15 Aug 2000 12:29:31 -0600 (MDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I built perl 5.6 with a few static modules (those I use fairly often).
+
+Since then, any attempt to build wml 2.0.2 fails during the ePerl stage
+on something related to those static modules:
+
+eperl_perl5.c: In function `Perl5_XSInit':
+eperl_perl5.c:58: `boot_Fcntl' undeclared (first use in this function)
+eperl_perl5.c:58: (Each undeclared identifier is reported only once
+eperl_perl5.c:58: for each function it appears in.)
+eperl_perl5.c:58: `boot_IO' undeclared (first use in this function)
+eperl_perl5.c:58: `boot_IPC__SysV' undeclared (first use in this function)
+eperl_perl5.c:58: `boot_POSIX' undeclared (first use in this function)
+eperl_perl5.c:58: `boot_Socket' undeclared (first use in this function)
+make[2]: *** [eperl_perl5.o] Error 1
+
+I dug for a bit, but I really don't understand what this code is trying
+to do...anyone know what's going on here? Just point me in the right
+direction and I can probably dig up the problem...I'm just not sure
+where to start.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01893.shtml">mp4h strips \ from \&quot;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01895.shtml">Problems with href</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01904.shtml">Re: mp4h strips \ from \&quot;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01895.shtml">Problems with href</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01894"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01894"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

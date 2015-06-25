@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: slices and optimize -->
+<!--X-From-R13: "T. Vrvaevpuzrlre" <sevgm.urvaevpuzrlreNsreahav&#45;untra.qr> -->
+<!--X-Date: Wed, 7 Jun 2000 08:35:11 +0200 (MET DST) -->
+<!--X-Message-Id: 393DE606.14D880D8@fernuni&#45;hagen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200006061004.MAA23345@opensource.ee.ethz.ch -->
+<!--X-Reference: 20000607012359.A2986@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01702">Date Index</a>][<a href="thrd35.shtml#01702">Thread Index</a>]<br>
+[<A HREF="msg01701.shtml">Date Prev</A>][<A HREF="msg01703.shtml">Date Next</A>][<A HREF="msg01701.shtml">Thread Prev</A>][<A HREF="msg01703.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>slices and optimize</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;F. Heinrichmeyer&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 07 Jun 2000 08:04:54 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+on my new website there are a lot of language dependent image files.
+They are included in the following way (example):
+
+&lt;img src="images/xxxxx&lt;de: -de&gt;.jpg" &gt;
+
+So for english pages i get images/xxxxx.jpg, for german i get
+images/xxxxx-de.jpg.
+Unfortunately in the htmlfix pass we have no valid image name so the
+slices have to be optimized separately. I am afraid the slice pass has
+to be the last one. Is this correct?
+
+
+-- 
+Fritz Heinrichmeyer <A  HREF="mailto:fritz.heinrichmeyer@fernuni-hagen.de">mailto:fritz.heinrichmeyer@fernuni-hagen.de</A>
+FernUniversitaet Hagen, LG ES, 58084 Hagen (Germany)
+tel:+49 2331/987-1166 fax:987-355 <A  HREF="http://www-es.fernuni-hagen.de/~jfh">http://www-es.fernuni-hagen.de/~jfh</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01703" HREF="msg01703.shtml">Re: slices and optimize</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01700" HREF="msg01700.shtml">[BUG REPORT] WML 2.0.1, Linux</A></strong>, <em>From:</em> haver</li>
+<li><strong><A NAME="01701" HREF="msg01701.shtml">Re: [BUG REPORT] WML 2.0.1, Linux</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01701.shtml">Re: [BUG REPORT] WML 2.0.1, Linux</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01703.shtml">Re: slices and optimize</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01701.shtml">Re: [BUG REPORT] WML 2.0.1, Linux</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01703.shtml">Re: slices and optimize</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01702"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01702"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

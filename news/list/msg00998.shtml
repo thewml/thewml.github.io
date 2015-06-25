@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: emh: checking for existing functions -->
+<!--X-From-R13: oneovreNvznpf.cbylgrpuavdhr.se -->
+<!--X-Date: Tue, 28 Sep 1999 11:47:34 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990928111726.11855A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990927223027.E721@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00998">Date Index</a>][<a href="thrd21.shtml#00998">Thread Index</a>]<br>
+[<A HREF="msg00997.shtml">Date Prev</A>][<A HREF="msg00999.shtml">Date Next</A>][<A HREF="msg00996.shtml">Thread Prev</A>][<A HREF="msg00984.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: emh: checking for existing functions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 28 Sep 1999 11:48:36 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 27 Sep 1999, Xose Manoel Ramos wrote:
+
+&gt;  Is there a general way to discover if a certain tag/container is being
+&gt;  already defined?
+
+I do not have time to give a definitive answer, but here are some hints :
+- the &lt;function-def&gt; tag expands to the definition of user defined
+  functions, e.g. 
+     &lt;define-tag foo&gt;
+     &lt;set-var bar="%attributes"&gt;
+     &lt;/define-tag&gt;
+     &lt;function-def foo&gt;
+  gives
+     &lt;defsubst foo&gt;
+     &lt;set-var bar="%attributes"&gt;
+     &lt;/defsubst&gt;
+- look at p2_mhc/libmhtml/packfuncs.c you will find how MetaHTML
+  internally stores function and variables. But i believe that MetaHTML
+  is slow because of that, so it could be changed in future releases.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00996" HREF="msg00996.shtml">Re: emh: checking for existing functions</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00997.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00999.shtml">Solution to &quot;Problems with Install.pm&quot;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00996.shtml">Re: emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00984.shtml">Are there online articles about WML ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00998"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#00998"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

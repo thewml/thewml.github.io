@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: prob with language&#45;tags when opening a file with EPerl -->
+<!--X-From-R13: "Fubznf D. Ybyy" <gbzx32Ngbzx32.qr> -->
+<!--X-Date: Mon, 12 Mar 2001 17:22:47 +0100 (MET) -->
+<!--X-Message-Id: 20010312171518.A3891@tomk32.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010218232527.E31715@tomk32.de -->
+<!--X-Reference: 20010312110435.A15844@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02170">Date Index</a>][<a href="thrd44.shtml#02170">Thread Index</a>]<br>
+[<A HREF="msg02169.shtml">Date Prev</A>][<A HREF="msg02171.shtml">Date Next</A>][<A HREF="msg02168.shtml">Thread Prev</A>][<A HREF="msg02178.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: prob with language-tags when opening a file with EPerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Thomas R. Koll&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Mar 2001 17:15:18 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Mar 12, 2001 at 11:04:35AM +0100, Denis Barbier wrote:
+&gt; Hi Thomas,
+&gt; 
+&gt; these tags are expanded during pass 2, and ePerl is run in pass 3 so it
+&gt; won't work. Furthermore lang slices are processed during the last pass.
+&gt; So if you want to include these files with ePerl, you have to make these
+&gt; tags understandable by wml_p9_slice, try something like:
+
+Never thought I would get an answer... but I allready workarounded it with 
+putting the description-text into an hash, works fine too :-)
+
+but thnx a lot for your answer
+-- 
+www.TomK32.de
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02164" HREF="msg02164.shtml">prob with language-tags when opening a file with EPerl</A></strong>, <em>From:</em> Thomas R. Koll</li>
+<li><strong><A NAME="02168" HREF="msg02168.shtml">Re: prob with language-tags when opening a file with EPerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02169.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02171.shtml">Re: Perl parsing error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02168.shtml">Re: prob with language-tags when opening a file with EPerl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02178.shtml">patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02170"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02170"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

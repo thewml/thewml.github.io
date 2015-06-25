@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 1.6.8 compiled ok but 1.7.0 not, any idea? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Fri, 4 Jun 1999 21:59:11 +0200 (MET DST) -->
+<!--X-Message-Id: 19990604215826.B17781@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199906041750.TAA10347@lasole.fib.upc.es -->
+<!--X-Reference: Pine.LNX.3.96.990604202201.28308A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00724">Date Index</a>][<a href="thrd15.shtml#00724">Thread Index</a>]<br>
+[<A HREF="msg00723.shtml">Date Prev</A>][<A HREF="msg00725.shtml">Date Next</A>][<A HREF="msg00722.shtml">Thread Prev</A>][<A HREF="msg00723.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Jun 1999 21:58:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jun 04, 1999, Denis Barbier wrote:
+
+&gt; On Fri, 4 Jun 1999, MANEL Rodero (LCFIB Systems Programmer) wrote:
+&gt; 
+&gt; &gt; and I've got the file at the URL:
+&gt; &gt;     <A  HREF="http://alibaba.fib.upc.es/~manel/wml.txt">http://alibaba.fib.upc.es/~manel/wml.txt</A>
+&gt; &gt; Any idea?
+&gt; 
+&gt; The iSelect program does not build because you don't have the header
+&gt; file ncurses.h 
+&gt; 
+&gt; It's strange that wml-1.6.8 succeeded, i commit no change to iSelect.
+
+The users ncurses installation seems to be broken, because
+
+| checking for ncurses.h... no
+| checking for initscr in -lncurses... yes
+
+the library exists, but ncurses.h doesn't (or at least is inside a
+non-standard location). That WML 1.6.8 succeeded on exactly the same machine I
+cannot believe because we've not changed iSelect in the meantime. Instead I
+guess the users platform or at least some packages were upgraded in the
+meantime. The user should fix the curses installation, IMO.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00721" HREF="msg00721.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></strong>, <em>From:</em> MANEL Rodero (LCFIB Systems Programmer)</li>
+<li><strong><A NAME="00722" HREF="msg00722.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00723.shtml">Is there a better way to do this?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00725.shtml">[ANNOUNCE] WML 1.7.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00722.shtml">Re: 1.6.8 compiled ok but 1.7.0 not, any idea?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00723.shtml">Is there a better way to do this?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00724"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00724"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

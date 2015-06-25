@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Forcing dependencies on wmk -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 9 Jun 1999 15:16:11 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990609144845.16283A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990607145456.B18233@debian.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00759">Date Index</a>][<a href="thrd16.shtml#00759">Thread Index</a>]<br>
+[<A HREF="msg00758.shtml">Date Prev</A>][<A HREF="msg00760.shtml">Date Next</A>][<A HREF="msg00743.shtml">Thread Prev</A>][<A HREF="msg00760.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Forcing dependencies on wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 9 Jun 1999 15:10:05 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 7 Jun 1999, James A. Treacy wrote:
+
+&gt; I thought this would be a problem. It is simple to get a list if each
+&gt; dependency line is restricted to files in a single dir and everything
+&gt; after the last slash is a valid reg exp. This would cover the most common
+&gt; case. Generalizing it would be a pain (what algorithm does 'ls' use?).
+
+Hi Jay,
+
+a first attempt has been made, available in wml-SNAP (not documented).
+Syntax:
+o Add the ``depend'' attribute after the #use or #include directive.
+  This file won't be included, but wmk will be told about this
+  dependancy.
+o You can use filename patterns, i.e. ? is any single chararacter
+  and * matches any string. Brackets are not yet implemented.
+
+For instance, if you have datas under datas/01, datas/02,... add
+  #include 'datas/0?/*.dat' depend
+
+I believe i will replace this syntax by the one you suggest:
+  #depends 'datas/0?/*.dat'
+Indeed, my first opinion was i had to take care of files inserted via
+#use or #include. But i can't see why a ``#use file depend'' is needed.
+
+A final word on how files are searched by wml_p1_ipp, i am not sure
+whether documentation is clear enough.
+1- The 2 following lines are equivalent
+           #use a::b::c
+           #include &lt;b/c.a&gt;
+2- #include &lt;file&gt;
+   The file is searched in the system tree, then in the user templates
+   then in the working directory.
+3- #include "file"
+   The file is searched in the user templates then in the working
+   directory.
+4- #include 'file'
+   The file is searched the working directory only.
+
+Only the first file is read. But if you write
+   #include &lt;*/*.wml&gt; depend
+then all files */*.wml will be marked in the system tree, user
+templates and working directory.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00760" HREF="msg00760.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="00761" HREF="msg00761.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00743" HREF="msg00743.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00758.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00760.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00743.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00760.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00759"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00759"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

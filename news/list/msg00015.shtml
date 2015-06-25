@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.4.10 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 30 Dec 1997 11:12:52 +0100 (MET) -->
+<!--X-Message-Id: 199712301012.LAA23909@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00015">Date Index</a>][<a href="thread.shtml#00015">Thread Index</a>]<br>
+[<A HREF="msg00014.shtml">Date Prev</A>][<A HREF="msg00016.shtml">Date Next</A>][<A HREF="msg00012.shtml">Thread Prev</A>][<A HREF="msg00016.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.4.10</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 30 Dec 1997 11:12:48 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now available:
+Website META Language, Version 1.4.10
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+
+  Changes between 1.4.9 and 1.4.10:
+      971228 - Upgraded to Slice 1.2.9
+      971230 - Fixed wml_sample/demo.wml: The "slices" attribute
+               for &lt;page&gt; has to added now.  [Thanks to  Anthony
+               Fok &lt;foka@gpu.srv.ualberta.ca&gt; for patch]
+             - Fixed wml_frontend/wml.src because now Slice no
+               longer is a special case for -v option. [Thanks to
+               Anthony Fok &lt;foka@gpu.srv.ualberta.ca&gt; for patch]
+             - Upgraded to ePerl 2.2.11: This makes WML the first
+               time compliant to the Perl Locale environment,
+               e.g.  the &lt;sc&gt; from wml::des::typography now works
+               for international characters, too.
+             - Upgraded to Bit-Vector 5.0b2
+             - Updated COPYRIGHT.OTHERS file
+             - Changed Meta-HTML version string from 5.02 to
+               5.02/wml to make it clear that this is not a
+               complete or standard Meta-HTML.
+             - Added another Q&amp;A to wml_faq.pod and fixed
+               question numbering
+
+Happy new year!
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00014.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00016.shtml">ANNOUNCE: WML 1.4.11 :-(</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00012.shtml">ANNOUNCE: WML 1.4.9</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00016.shtml">ANNOUNCE: WML 1.4.11 :-(</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00015"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00015"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

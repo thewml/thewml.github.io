@@ -1,0 +1,279 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 22 May 2000 00:58:47 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000522003646.20797A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0005200814020.20021&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01593">Date Index</a>][<a href="thrd33.shtml#01593">Thread Index</a>]<br>
+[<A HREF="msg01592.shtml">Date Prev</A>][<A HREF="msg01594.shtml">Date Next</A>][<A HREF="msg01590.shtml">Thread Prev</A>][<A HREF="msg01594.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 May 2000 00:58:30 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 20 May 2000, Tobias Oetiker wrote:
+
+&gt; Today you sent me mail regarding [wml] [LONG][RFC] WML 2.0.0, quotes and tags:
+&gt; 
+&gt; *&gt; 4. What must be changed?
+&gt; *&gt; =-=-=-=-=-=-=-=-=-=-=-=-
+&gt; *&gt; 
+&gt; *&gt; I agree with your bug reports, it is a very bad idea to have different
+&gt; *&gt; behaviours depending whether tags are defined or not.
+&gt; *&gt; 
+&gt; *&gt; Of course it is easy to consider that unknown tags are simple tags, this
+&gt; *&gt; will fix
+&gt; *&gt;     &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+&gt; *&gt; 
+&gt; *&gt; But it breaks
+&gt; *&gt;     &lt;: print "&lt;img src=\"" . $file . "\" alt=\"" . $alt ."\"&gt;"; :&gt;
+&gt; *&gt; 
+&gt; *&gt; And even worse, consider
+&gt; *&gt;     &lt;: print &lt;&lt;EOT;
+&gt; *&gt;     Hey, how to finish this pseudo EOT tag?
+&gt; *&gt;     EOT
+&gt; *&gt;     :&gt;
+&gt; *&gt; 
+&gt; *&gt; In fact i focused my view on these last topics, to ease mixing ePerl and
+&gt; *&gt; mp4h, but i did not realize that this syntax was confusing.
+&gt; *&gt; Now that the problem is clearly (?) expressed, it should be solved
+&gt; *&gt; quickly ;-)
+&gt; 
+&gt; the problem in my eyes is that you try to anticipate what will be
+&gt; done in a later pass with the input ... and this will always be a
+&gt; problem ... (I give that it is possible to anticipate some problems
+&gt; and behave in a way to make them simpler ...) 
+&gt;
+&gt; As for above problems I guess the behaviour of mp4h should be to
+&gt; only parse VALID structures and leave everything which is invalid
+&gt; alone ... For bad cases like the one above it is up to the author
+&gt; to make sure things work (this can be confusing ...)
+
+But what do you call valid structure?
+I stated in WML 2.0.0 that unknown tags must not be parsed, this is way
+   &lt;ifeq 0 0 &lt;img src=foo.html&gt;&gt;
+is broken.
+
+The patch below changes this behaviour, an unknown tag is trweated as a
+single tag.
+
+As you suggested, ePerl code must now be fixed to protect '&lt;', any ideas
+are welcome.
+
+--- wml_backend/p2_mp4h/src/macro.c	2000/05/06 22:13:09	1.27
++++ wml_backend/p2_mp4h/src/macro.c	2000/05/21 22:34:17
+@@ -34,8 +34,8 @@
+ #include "mp4h.h"
+ 
+ static void expand_macro __P ((symbol *, read_type));
++static void unexpand_macro __P ((char *, read_type));
+ static void expand_token __P ((struct obstack *, read_type, token_type, token_data *));
+-static void collect_body __P ((symbol *, struct obstack *, struct obstack *));
+ 
+ /* Current recursion level in expand_macro ().  */
+ int expansion_level = 0;
+@@ -102,14 +102,14 @@
+          If another character is found, this string is not a
+          macro, it could be ePerl delimiters.  */
+ 
+-      if (! IS_ALPHA (*text))
++      if (! IS_ALPHA (*text) &amp;&amp; *text != '/')
+         {
+           shipout_text (obs, TOKEN_DATA_TEXT (td), strlen (TOKEN_DATA_TEXT (td)));
+           break;
+         }
+       sym = lookup_symbol (text, SYMBOL_LOOKUP);
+       if (sym == NULL || SYMBOL_TYPE (sym) == TOKEN_VOID)
+-        shipout_text (obs, TOKEN_DATA_TEXT (td), strlen (TOKEN_DATA_TEXT (td)));
++        unexpand_macro (text, expansion);
+       else
+         expand_macro (sym, expansion);
+       break;
+@@ -245,8 +245,8 @@
+ `-------------------------------------------------------------------------*/
+ 
+ static boolean
+-collect_arguments (symbol *sym, read_type expansion, struct obstack *argptr,
+-                   struct obstack *arguments)
++collect_arguments (char *symbol_name, read_type expansion,
++                   struct obstack *argptr, struct obstack *arguments)
+ {
+   int ch;
+   token_data td;
+@@ -256,7 +256,7 @@
+   char last_char = ' ';
+ 
+   TOKEN_DATA_TYPE (&amp;td) = TOKEN_TEXT;
+-  TOKEN_DATA_TEXT (&amp;td) = SYMBOL_NAME (sym);
++  TOKEN_DATA_TEXT (&amp;td) = symbol_name;
+   tdp = (token_data *) obstack_copy (arguments, (voidstar) &amp;td, sizeof (td));
+   obstack_grow (argptr, (voidstar) &amp;tdp, sizeof (tdp));
+ 
+@@ -275,7 +275,7 @@
+             {
+               MP4HERROR ((EXIT_FAILURE, 0,
+                 _("ERROR:%s:%d: EOF when reading argument of the `%s' tag"),
+-                     CURRENT_FILE_LINE, SYMBOL_NAME(sym)));
++                     CURRENT_FILE_LINE, symbol_name));
+             }
+           tdp = (token_data *)
+             obstack_copy (arguments, (voidstar) &amp;td, sizeof (td));
+@@ -293,7 +293,7 @@
+     {
+       MP4HERROR ((warning_status, 0,
+         _("INTERNAL ERROR: Bad tag expression in `%s'"),
+-             CURRENT_FILE_LINE, SYMBOL_NAME (sym)));
++             CURRENT_FILE_LINE, symbol_name));
+     }
+   return (last_char == '/');
+ }
+@@ -387,7 +387,7 @@
+             {
+               newsym = lookup_symbol (text, SYMBOL_LOOKUP);
+               if (newsym == NULL || SYMBOL_TYPE (newsym) == TOKEN_VOID)
+-                shipout_text (bodyptr, TOKEN_DATA_TEXT (&amp;td), strlen (TOKEN_DATA_TEXT (&amp;td)));
++                unexpand_macro (text, READ_ATTR_ASIS);
+               else
+                 expand_macro (newsym, READ_ATTR_ASIS);
+             }
+@@ -488,7 +488,8 @@
+   else
+     attr_expansion = READ_ATTRIBUTE;
+ 
+-  slash = collect_arguments (sym, attr_expansion, &amp;argptr, &amp;arguments);
++  slash = collect_arguments (SYMBOL_NAME (sym), attr_expansion, &amp;argptr,
++                             &amp;arguments);
+   argc = obstack_object_size (&amp;argptr) / sizeof (token_data *);
+ 
+   if (SYMBOL_CONTAINER (sym))
+@@ -570,4 +571,56 @@
+ 
+   if (expansion_level == 0)
+     clear_tag_attr ();
++}
++
++/*-------------------------------------------------------------------------.
++| This macro reads attributes without expanding macro.  It is useful to    |
++| print unknown tags.                                                      |
++`-------------------------------------------------------------------------*/
++
++static void
++unexpand_macro (char *name, read_type expansion)
++{
++  struct obstack arguments, argptr;
++  token_data **argv;
++  int argc, i;
++  struct obstack *obs_expansion;
++  const char *expanded;
++  read_type attr_expansion;
++  char *symbol_name;
++
++  symbol_name = xstrdup (name);
++
++  obstack_init (&amp;arguments);
++  obstack_init (&amp;argptr);
++
++  if (expansion == READ_ATTR_ASIS || expansion == READ_BODY
++          || expansion == READ_ATTR_VERB)
++    attr_expansion = READ_ATTR_ASIS;
++  else
++    attr_expansion = READ_ATTRIBUTE;
++
++  (void) collect_arguments (symbol_name, attr_expansion, &amp;argptr,
++                             &amp;arguments);
++  argc = obstack_object_size (&amp;argptr) / sizeof (token_data *);
++  argv = (token_data **) obstack_finish (&amp;argptr);
++
++  obs_expansion = push_string_init ();
++  obstack_1grow (obs_expansion, '&lt;');
++  shipout_string (obs_expansion, symbol_name, 0);
++
++  for (i = 1; i &lt; argc; i++)
++    {
++      obstack_1grow (obs_expansion, ' ');
++      shipout_string (obs_expansion, TOKEN_DATA_TEXT (argv[i]), 0);
++    }
++  obstack_1grow (obs_expansion, '&gt;');
++
++  /*  Input must not be rescanned, so expansion is set to READ_BODY.  */
++  expanded = push_string_finish (READ_BODY);
++
++  obstack_free (&amp;arguments, NULL);
++  obstack_free (&amp;argptr, NULL);
++
++  xfree (symbol_name);
+ }
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01594" HREF="msg01594.shtml">Re: [wml] Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tagsy</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01590" HREF="msg01590.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01592.shtml">Re: [BUG REPORT] WML 2.0.0, redhat 6.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01594.shtml">Re: [wml] Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tagsy</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01590.shtml">Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01594.shtml">Re: [wml] Re: [wml] [LONG][RFC] WML 2.0.0, quotes and tagsy</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01593"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01593"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

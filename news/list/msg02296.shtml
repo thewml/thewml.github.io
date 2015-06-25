@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Web page margins -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Fri, 13 Jul 2001 14:18:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20010713135205.B29739@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010709172336.B1525@imacs.polytechnique.fr -->
+<!--X-Reference: XFMail.010709180313.jh@inetcom.ch -->
+<!--X-Reference: 20010712215031.A18398@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02296">Date Index</a>][<a href="thrd46.shtml#02296">Thread Index</a>]<br>
+[<A HREF="msg02295.shtml">Date Prev</A>][<A HREF="msg02297.shtml">Date Next</A>][<A HREF="msg02295.shtml">Thread Prev</A>][<A HREF="msg02282.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Web page margins</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 13 Jul 2001 13:52:05 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Denis Barbier wrote:
+&gt; But may I suggest we talk again about `runtime' attributes?
+
+Yes, it was quite quiet about that feature the last months... ;-)
+
+&gt;   &lt;page :body:marginwidth="8" :body:marginheight="8"
+&gt;         :body:leftmargin="8"  :body:topmargin="8"&gt;
+&gt; 
+&gt; I would like to hear comments to improve this feature, which adds extra
+&gt; flexibility by letting user add any attribute in HTML tags.
+
+I think, in general it's a really good idea, but for some cases,
+default tags for runtime attributes would also be useful:
+
+Example: &lt;url&gt; from wml::fmt::url
+
+&lt;define-tag url endtag=required&gt;
+{:\
+    [[s|\b(<A  HREF="http://\S+">http://\S+</A>)|&lt;a href="$1"&gt;$1&lt;/a&gt;|g]]\
+    [[s|\b(<A  HREF="ftp://\S+">ftp://\S+</A>)|&lt;a href="$1"&gt;$1&lt;/a&gt;|g]]\
+    [[s|\b(<A  HREF="gopher://\S+">gopher://\S+</A>)|&lt;a href="$1"&gt;$1&lt;/a&gt;|g]]\
+    [[s|\b(telnet:\S+)|&lt;a href="$1"&gt;$1&lt;/a&gt;|g]]\
+    [[s|\b(<A  HREF="news:\S+">news:\S+</A>)|&lt;a href="$1"&gt;$1&lt;/a&gt;|g]]\
+    [[s|\b(<A  HREF="mailto:\S+">mailto:\S+</A>)|&lt;a href="$1"&gt;$1&lt;/a&gt;|g]]\
+    %body\
+:}\
+&lt;/define-tag&gt;
+
+Here it is obvious, where the runtime arguments have to go: To the &lt;a&gt;
+tag. So here &lt;url target=foo&gt; should be equivalent to &lt;url :a:target=foo&gt;.
+
+And there is something else, which IMHO we should think about:
+
+Although in the above case (and probably other cases, too) with
+runtime arguments, it isn't possible to distinguish to which of the
+&lt;a&gt; tags the arguments go, e.g. a target argument doesn't make big
+sense on a news or mailto link.
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02280" HREF="msg02280.shtml">Re: Web page margins</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02281" HREF="msg02281.shtml">Re: Web page margins</A></strong>, <em>From:</em> Jan Holler</li>
+<li><strong><A NAME="02291" HREF="msg02291.shtml">Re: Web page margins</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02295.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02297.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02295.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02282.shtml">article in German Linux Magazin about WMl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02296"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02296"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

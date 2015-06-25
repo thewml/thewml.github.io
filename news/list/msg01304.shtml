@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: order of #include 'xxx' -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Thu, 27 Jan 2000 20:46:03 +0100 (MET) -->
+<!--X-Message-Id: 14480.37081.414685.629445@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01304">Date Index</a>][<a href="thrd27.shtml#01304">Thread Index</a>]<br>
+[<A HREF="msg01303.shtml">Date Prev</A>][<A HREF="msg01305.shtml">Date Next</A>][<A HREF="msg01301.shtml">Thread Prev</A>][<A HREF="msg01305.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>order of #include 'xxx'</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 27 Jan 2000 19:50:39 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I just solved my last problem, the sorting of news entries in a table.
+
+I have used:
+
+#include 'news/*.dat'
+
+But I could not figure out on what it depends which order the files
+were included. It was even so that I had two identical #include
+statements on different WML-pages and the result was different.
+
+So I looked at the source of wml_backend/p1_ipp/ipp.src which was not
+fun because I doesn´t have used perl anytime before....
+
+I added a line after line 241:
+
+241:            @ls = grep { /^$pattern$/  &amp;&amp; eval $test } readdir(DIR);
+242:            @ls = sort @ls;
+243:            closedir DIR;
+
+This results in an lexically sort-order. So one can depend on a
+specific order of includes.
+
+I don´t know if that has any side effects, or if it is usefull for
+everyone.
+
+Carsten.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01305" HREF="msg01305.shtml">Re: order of #include 'xxx'</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01303.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01305.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01301.shtml">Re: Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01305.shtml">Re: order of #include 'xxx'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01304"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01304"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

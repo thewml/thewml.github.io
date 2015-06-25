@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Patch: logo.wml -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 28 Jun 1998 16:34:46 +0200 (CEST) -->
+<!--X-Message-Id: 19980628163444.B26641@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980627234822.45058@babelon.in&#45;brb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00146">Date Index</a>][<a href="thrd4.shtml#00146">Thread Index</a>]<br>
+[<A HREF="msg00145.shtml">Date Prev</A>][<A HREF="msg00147.shtml">Date Next</A>][<A HREF="msg00145.shtml">Thread Prev</A>][<A HREF="msg00148.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Patch: logo.wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 Jun 1998 16:34:44 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Jun 27, 1998, Florian Kuehnert wrote:
+
+&gt; I had to patch WML just a little bit so that I can put the WML logo using the
+&gt; WML &lt;logo&gt; tag (1.6.6.) so that there is a "target" tag similar to the HTML
+&gt; tag. I hope, what I did was right, but it actually works ;-)
+&gt;[...]                                                                                                   
+  
+Yes, looked fine. I just have to adjust the POD at the end of wml.src.
+Your patch occurs in WML 1.6.7. Thanks for it.
+  
+&gt; PS: Ralf -- Did you notice the WML article in the German Linux Magazin?                                
+  
+Yes, I've read it two weeks ago. Was very interesting to see an article about
+WML (I should write one for WEBTechniques since four months, but had not found
+time because of the recent Apache hackings and now my diploma thesis). But who
+knows, perhaps some more articles arrive in the future... ;-) Is someone
+currently working on another WML article for a magazine? Would be interesting
+to know....
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00148" HREF="msg00148.shtml">Re: Patch: logo.wml</A></strong>, <em>From:</em> Florian Kuehnert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00144" HREF="msg00144.shtml">Patch: logo.wml</A></strong>, <em>From:</em> Florian Kuehnert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00145.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00147.shtml">Re: XML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00145.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00148.shtml">Re: Patch: logo.wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00146"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00146"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

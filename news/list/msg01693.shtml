@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] [LONG][WML] Mp4h parsing: summary -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 4 Jun 2000 00:20:50 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000603235245.4014A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0006030135250.26920&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01693">Date Index</a>][<a href="thrd35.shtml#01693">Thread Index</a>]<br>
+[<A HREF="msg01692.shtml">Date Prev</A>][<A HREF="msg01694.shtml">Date Next</A>][<A HREF="msg01692.shtml">Thread Prev</A>][<A HREF="msg01694.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] [LONG][WML] Mp4h parsing: summary</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 4 Jun 2000 00:18:36 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 3 Jun 2000, Tobias Oetiker wrote:
+
+&gt; note that there are still some browsers which will not like &lt;br/&gt;
+&gt; so one might want to writ &lt;br*&gt; as the * will get removed in later
+&gt; wml processing where as the &lt;br/&gt; will remain unchanged
+
+I was speaking of pass 2 only, i.e. tag parsing.  Rendering may be
+altered by other passes, e.g. wml_p7_htmlfix, wml itself, or a
+post-processor like tidy.
+
+&gt; *&gt;      When this tag cannot be parsed, it must be protected with a
+&gt; *&gt;      leading star, which will make it fall into category 6.
+&gt; *&gt;        document.write('&lt;*img src="foo.png" alt="');
+&gt; *&gt;        document.write(text+'"&gt;');
+&gt; 
+&gt; here you protect the opeing &lt; into not being interpreted as part of
+&gt; a tag, but if the whole combination happens inside another tag how
+&gt; do you protect the inner &gt;
+&gt; 
+&gt; eg
+&gt; 
+&gt; &lt;de: document.write('&lt;*img src="foo.png" alt="');
+&gt;      document.write(text+'"&gt;');
+&gt; &gt;                          ^          
+
+Basically, an unwanted closing bracket is protected by quoting it.
+This is very intereting, because we enter here the wonderful world of
+quotes.
+  Rule 1: in attributes, quotes are used to group tokens.
+  Rule 2: in other places, quotes have no special meaning
+
+Rule 1 implies that we must define how to allow quotes within quotes.
+In Meta-HTML and mp4h, escaping quotes is a solution. So your example
+could be rewritten as
+ &lt;de: "document.write('&lt;*img src=\"foo.png\" alt=\"');
+       document.write(text+'\"&gt;');"
+ &gt;
+
+But these escapes have many drawbracks (i will send a summary about
+quoting later), and an alternative is to define &lt;lb/&gt; (left bracket),
+&lt;rb/&gt; (right bracket) and &lt;dq/&gt; (double quotes), something like
+   &lt;define-tag lb&gt;&lt;noexpand "&lt;"&gt;&lt;/define-tag&gt; and so on.
+
+Your example becomes
+ &lt;de: document.write('&lt;lb/&gt;img src=&lt;dq/&gt;foo.png&lt;dq/&gt; alt=&lt;dq/&gt;');
+      document.write(text+'&lt;dq/&gt;&lt;rb/&gt;');
+ &gt;
+
+This is a first thought, it needs work.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01692" HREF="msg01692.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01692.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01694.shtml">question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01692.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01694.shtml">question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01693"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01693"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

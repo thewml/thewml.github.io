@@ -1,0 +1,182 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Discussion about stable/unstable, etc. -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Fri, 15 Sep 2000 22:17:01 +0200 (MET DST) -->
+<!--X-Message-Id: 20000915221441.A6663@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0009151257590.543&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01964">Date Index</a>][<a href="thrd40.shtml#01964">Thread Index</a>]<br>
+[<A HREF="msg01963.shtml">Date Prev</A>][<A HREF="msg01965.shtml">Date Next</A>][<A HREF="msg01959.shtml">Thread Prev</A>][<A HREF="msg01965.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Discussion about stable/unstable, etc.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Sep 2000 22:14:41 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Sep 15, 2000, Franz Knipp wrote:
+
+&gt; [...]
+&gt; I see the following problems in the current WML development:
+&gt; [...]
+&gt; * the development is done mostly by one person - I'd like to split up the
+&gt; work and I'd like also to contribute, but also with the possibility that
+&gt; not only one person says, how the syntax will change, which feature will
+&gt; be implemented, etc. 
+&gt; [...]
+&gt; 
+&gt; * maybe a developer mailing list would help to do work together - so a
+&gt; clear distinction between user and developer would be possible, and also
+&gt; more discussion about syntax changes, implementation details, etc. which
+&gt; could be boring to the "only users"-group. 
+&gt; [...]
+&gt; I'd really like to participate in the future development of WML...
+
+I've followed the discussions over the last days and today I feel that
+Ishould give my opinion, too. So, for what it's worth:
+
+1. It is reasonable to suggest stable and unstable branches of
+   development, of course. How these are implemented in practice is a
+   different kind of question.
+   
+   The Linux kernel versioning approach ("odd numbers are development
+   versions, even numbers are stable release versions") I personally
+   dislike for smaller projects like WML. They just confuse people here,
+   IMHO. But what would be reasonable is to perform a branch in CVS
+   named WML_2_0 and from which the subsequent WML 2.0.x versions are
+   released from (starting with 2.0.4). To this branch only bugfixes
+   are applied by merging them from the trunk. On the trunk the real
+   development takes place. Development versions named WML 2.1aX and
+   2.1bX are released from the trunk until WML 2.1.0 occurs (where the
+   game begins from the start by branching off WML_2_1). 
+   
+   In short, this is the FreeBSD development model where development
+   and bugfixing takes place on the trunk only and bugfixes are merged
+   onto the stable branch ("MFC" [merge from current] in FreeBSD
+   terminology). But I do not want to force Denis or any others into
+   this model, although I personally would appreciate it, because I have
+   the best experiences with it and one does not loose anything.
+
+2. Creating a dedicated developer mailing for WML I would not
+   appreciate, although I never would veto its creation, of course. The
+   point is just that experience in other projects showed the following:
+   a) mailing lists should be mainly split because of too much traffic,
+   not just because another topic sounds nice for a dedicated list; b)
+   sw-wml is a lower traffic mailing list and so the traffic is not
+   expected to explode in the near future; c) if developer discussions
+   are taking place side-by-side on a common mailing list where also
+   plain users are subscribed, those users have the chance to better
+   monitor the development and recognize heavy decisions. 
+
+   So, IMHO the order should be: 1. start discussions, 2. if really too
+   much traffic over a longer time (&gt; 3 months) occurs because of those
+   discussions, the list is split in order to reduce the traffic for
+   plain users. Or for those who want to draw comparisons: Do you know
+   why thousands of USENIX newsgroups exists where only 2 posting per
+   month occur? (1x automated posting from the newsgroup creator that
+   the group is alive and with the wish that people should post; 1x user
+   posting saying "me too").
+
+3. I'm involved in really many Open Source projects, ranging from
+   very large ones (FreeBSD), over medium ones (Apache), up to small ones
+   (WML, Pth, etc.). But really in all projects, on a regular basis
+   people pop up with statements like "I would contribute if..."
+   followed by a list of wishes which would help them contributing.
+   That's all fine and most wishes are reasonable, except for the fact
+   that those people treat their wishes actually as hard requirements
+   and at the end do not contribute at all with the final excuse that
+   their mentioned "wishes" where not fulfilled in the past.
+
+   So I'm always very sceptical if someone says he really would like to
+   contribute if just something in the project is changed. Sure, some
+   changes would make his life easier, but they are not a requirement
+   for contributing. In the Open Source world, everyone who really wants
+   to contribute can contribute - at any time. Sure, without some things
+   like Anonymous-CVS access, daily snapshots, etc. it is not such
+   convinient to contribute. But their lack is not an excuse for not
+   immediately starting contributing.
+
+   So my answer to the above "I'd really like to participate in the future
+   development of WML" just can be "Then show us your code and start
+   contributing by sending your patches to sw-wml or directly to Denis". If
+   you're doing this over a longer time, the existing developer(s) will
+   automatically accept you as a strong contributor and start adjusting the
+   project environment to also to fulfill your wishes. For instance if
+   Denis had to apply two large but great contributed patches per week
+   to WML over a time range of two or more months he certainly will
+   automatically contact me and say "Ralf, can you please give this
+   guy direct access to the WML CVS repository - I trust him, he's a
+   great contributor and so he should be able to directly commit his
+   changes to WML in the future".
+
+Yours,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01965" HREF="msg01965.shtml">Re: Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Joey Smith</li>
+<li><strong><A NAME="01970" HREF="msg01970.shtml">Re: Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01959" HREF="msg01959.shtml">Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01963.shtml">Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01965.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01959.shtml">Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01965.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01964"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01964"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

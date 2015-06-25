@@ -1,0 +1,124 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Misterious Behavior of WML calling WML -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Thu, 3 Sep 1998 17:33:59 +0200 (CEST) -->
+<!--X-Message-Id: 199809031526.IAA10387@medusa.surefirev.com. -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980903115318.A649@matrix.42.org -->
+<!--X-Reference: Pine.LNX.3.95.980903120522.24442B&#45;100000@lemming.stud.fh&#45;heilbronn.de -->
+<!--X-Reference: 19980903125100.A27206@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00205">Date Index</a>][<a href="thrd5.shtml#00205">Thread Index</a>]<br>
+[<A HREF="msg00204.shtml">Date Prev</A>][<A HREF="msg00206.shtml">Date Next</A>][<A HREF="msg00204.shtml">Thread Prev</A>][<A HREF="msg00206.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Misterious Behavior of WML calling WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Sep 1998 08:26:37 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Ralf S. Engelschall writes:
+ &gt; On Thu, Sep 03, 1998, Oliver Paukstadt wrote:
+ &gt; 
+ &gt; &gt; &gt; foreach $key (keys %ENV) {
+ &gt; &gt; &gt;     delete $ENV{$key} if $key ne "PATH";
+ &gt; &gt; &gt; }
+ &gt; &gt; Yeah, that deletes the ENVIRONMENT of perl, but you  have to start the WML
+ &gt; &gt; from that instance of perl.
+ &gt; &gt; that would make a call like:(maybe not fully correct quoted)
+ &gt; &gt; system("perl -e 'foreach (keys \%ENV){delete \$ENV{\$_} if /^PATH\$/;}
+ &gt; &gt; 	system(\"env &gt; test.env\");'");
+ &gt; &gt; 
+ &gt; &gt; system calls perl calls system, but this doesn't work.
+ &gt; &gt; The Problem is, that the 1st wml or eperl needs the Environment and
+ &gt; &gt; only the subcalls need a clean environment.
+ &gt; &gt; For this level,
+ &gt; &gt; system("perl -e '$ENV=(PATH =&gt; $ENV{PATH});system(\"env &gt; test.env\");'
+ &gt; &gt; should work, too.
+ &gt; &gt; 
+ &gt; &gt; BUT BOTH SOLUTIONS ARE NOT WORKING!
+ &gt; &gt; system forks a new shell with new initalised environemnt-variables, so the
+ &gt; &gt; former deletion doesn't have any effect. backticks are not working, too.
+ &gt; 
+ &gt; Hmmmm... works fine for me (not the % instead of the $):
+ &gt; No, it the environment is inherited, so it's ok when you delete
+ &gt; %ENV and then call the child. Hmmm... interesting that it doesn't
+ &gt; work for you.
+ &gt; 
+
+Just a thought - perl's 'system' invokes /bin/sh to do the work, if
+there are meta characters in the string passed to system.  Perhaps the
+user is setting environment variables in his .profile, but RSE is
+not. 
+
+Hence even though the user is cleaning up the environment, the system
+call invokes /bin/sh which fills up the environment again. Same thing
+happens to RSE, but his .profile is empty (likely if he is a csh user) 
+or minimal.
+
+-mac
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00202" HREF="msg00202.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+<li><strong><A NAME="00203" HREF="msg00203.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Oliver Paukstadt</li>
+<li><strong><A NAME="00204" HREF="msg00204.shtml">Re: Misterious Behavior of WML calling WML</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00204.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00206.shtml">relative path variable similiar to -D VAR~.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00204.shtml">Re: Misterious Behavior of WML calling WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00206.shtml">relative path variable similiar to -D VAR~.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00205"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00205"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

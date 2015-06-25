@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I can compile a site -->
+<!--X-From-R13: Zhvfn Drohyy <erohyyNobeba.hpuvpntb.rqh> -->
+<!--X-Date: Wed, 17 Nov 1999 21:22:59 +0100 (MET) -->
+<!--X-Message-Id: 199911172022.OAA10358@boron.uchicago.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01145">Date Index</a>][<a href="thrd24.shtml#01145">Thread Index</a>]<br>
+[<A HREF="msg01144.shtml">Date Prev</A>][<A HREF="msg01146.shtml">Date Next</A>][<A HREF="msg01147.shtml">Thread Prev</A>][<A HREF="msg01146.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I can compile a site</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Luisa Rebull &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Nov 1999 14:22:47 -0600 (CST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hello -
+
+I'm also having problems with wmk.. my system just got upgraded to
+sun os 5.7 and we upgraded wml to the most current stable version 
+at the same time.  Now I am having a very difficult time using 
+wmk.  Now :
+wmk -a is an unrecognized option, although it appears in the man
+	page and in what you get when you do wmk --help. 
+wmk *.wml or passing it a specific specific filename results in 
+	output to STDOUT.
+wmk research/jobs/index.wml -o research/jobs/index.html doesn't
+	define $(ROOT) properly in the resultant html file, 
+	although it finds and reads my .wmlrc ok.
+
+I searched the mailing list archives, and there was discussion a
+few weeks ago about not having wmk -M anymore, but i find it amazing
+that no one has complained about wmk -a... which is why I am worried it
+is me, and not wmk.
+
+any suggestions?
+
+thanks,
+Luisa Rebull
+Department of Astronomy and Astrophysics
+University of Chicago
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01146" HREF="msg01146.shtml">Re: I can compile a site</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01144.shtml">I can compile a site</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01146.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01147.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01146.shtml">Re: I can compile a site</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01145"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01145"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

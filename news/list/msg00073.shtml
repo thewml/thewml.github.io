@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: conflict between passes -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 30 Jan 1998 15:05:48 +0100 (MET) -->
+<!--X-Message-Id: m1n2geqdwg.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801301205.NAA08592@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00073">Date Index</a>][<a href="thrd2.shtml#00073">Thread Index</a>]<br>
+[<A HREF="msg00072.shtml">Date Prev</A>][<A HREF="msg00074.shtml">Date Next</A>][<A HREF="msg00072.shtml">Thread Prev</A>][<A HREF="msg00074.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: conflict between passes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 30 Jan 1998 14:39:43 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+rse@engelschall.com (Ralf S. Engelschall) writes:
+
+&gt; Correct, because ePerl currently doesn't support nested Perl blocks.
+&gt; As you might expect this restriction is not because I just wanted
+&gt; ePerl to support it. It is because it is very difficult to do it in
+&gt; a really useful and backward-compatible manner. I'll start a
+&gt; discussion in a different posting because it bites us a lot of times
+&gt; and I really want to implement the nesting-support now. But we need
+&gt; to make sure we decided the correct approach which is 100%
+&gt; backward-compat, so existing scripts don't get broken.
+
+How many people are using WML right now? How important the backward
+compatibility? Could it be solved by "activating" the new mode only on
+demand, so that people can still process old stuff, while can also
+create new stuff.
+
+Of course, I am biased, as I don't have much existing code, yet ...
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://www.ee-staff.ethz.ch/~zaucker/">http://www.ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00074" HREF="msg00074.shtml">Re: conflict between passes</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00071" HREF="msg00071.shtml">Re: conflict between passes</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00072.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00074.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00072.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00074.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00073"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00073"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

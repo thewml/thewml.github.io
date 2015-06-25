@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML for dummies (path evaluation order) -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 2 Mar 1998 13:12:26 +0100 (MET) -->
+<!--X-Message-Id: 199803021212.NAA20517@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m167ly2x4j.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00106">Date Index</a>][<a href="thrd3.shtml#00106">Thread Index</a>]<br>
+[<A HREF="msg00105.shtml">Date Prev</A>][<A HREF="msg00107.shtml">Date Next</A>][<A HREF="msg00105.shtml">Thread Prev</A>][<A HREF="msg00536.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML for dummies (path evaluation order)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 2 Mar 1998 13:12:24 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; I am trying to put together a small set of WML-tags for Web-Page
+&gt; creation by some of our somewhat "computerly-challenged"
+&gt; colleagues. The idea is to have VERY simple input pages that are then
+&gt; translated according to some template page. 
+&gt; 
+&gt; The one thing that I don't like to ask these people to do is to have
+&gt; to include as a (first line) something like
+&gt; 
+&gt; #use WhatEverTemplate var1=value1 var2=value2
+&gt; 
+&gt; (nor the #include equivalent).
+&gt; 
+&gt; What I would prefer, instead, is a tag like
+&gt; 
+&gt; &lt;page-info author="XYZ" subject="XXX"  etc&gt;
+&gt; 
+&gt; and &lt;page-info&gt; would then decide what #include files to use.  The
+&gt; advantage would be that the users would only have to use one type of
+&gt; "mark-up", that is some tags.
+&gt; 
+&gt; My understanding is that this would not work at the moment, as the
+&gt; #include commands are actually evaluated in path 1 whereas &lt;page-info&gt;
+&gt; would be evaluated later.
+
+Correct.
+
+&gt; Is there a solution/work-around?
+
+Sure, for WML and Perl there is always a solution... ;-)
+
+There are two ways here, I think: 
+
+1. You can use "wml -i meta-template.wml ..." and then
+   in meta-template.wml just define &lt;page-info&gt; in a way that it includes
+   _all_ possible #include directives, every one surrounded with an &lt;if...&gt;.
+   When you have not very much particular templates this can be an option,
+   although I personally don't like it due to the include overkill.
+
+2. You can use "wml -P prolog.pl ..." and then use a prolog.pl
+   like the following:
+
+    | #!/sw/bin/perl
+    | 
+    | #   read original page
+    | $page = ''; $page .= $_ while (&lt;STDIN&gt;);
+    | 
+    | #   replace the header tags by the 
+    | #   corresponding template usages
+    | sub page_info {
+    |     my ($argline) = @_;
+    | 
+    |     #   decide which templates to use
+    |     #   and with what args based on the
+    |     #   information we extracted out of
+    |     #   the $argline...
+    |     my $template = ...$argline...
+    |     my $args     = ...$argline...
+                         ^^^^^REPLACE^^^^^
+    | 
+    |     return "#include \"$template\" $args\n";
+    | }
+    | $page =~ s|&lt;page-info(.+)&gt;|&amp;page_info($1)|sge;
+    | 
+    | #   send filtered page
+    | print $page;
+
+    And then do whatever complicated calculation you want in the page_info()
+    function based on $argline.  This is the typical WML way, I think. Because
+    this is efficient and flexible.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00105" HREF="msg00105.shtml">WML for dummies (path evaluation order)</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00105.shtml">WML for dummies (path evaluation order)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00107.shtml">minor buglet</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00105.shtml">WML for dummies (path evaluation order)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00536.shtml">Nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00106"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00106"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

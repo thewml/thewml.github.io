@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: image sizes, extended navbar:button -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 6 Mar 2002 01:50:08 +0100 (MET) -->
+<!--X-Message-Id: 20020306020132.A26392@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C7BA314.9090703@netngine.hu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02540">Date Index</a>][<a href="thrd51.shtml#02540">Thread Index</a>]<br>
+[<A HREF="msg02539.shtml">Date Prev</A>][<A HREF="msg02541.shtml">Date Next</A>][<A HREF="msg02533.shtml">Thread Prev</A>][<A HREF="msg02543.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: image sizes, extended navbar:button</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Mar 2002 02:01:32 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 26, 2002 at 04:00:36PM +0100, Veres Ferenc wrote:
+&gt; Hello!
+&gt; 
+&gt; 3 serious questions:
+&gt; FIRST: Images for size check are searched relative to the
+&gt; _source_ file and not the _destination_.
+[...]
+
+You gave the reason: slice is the last pass, so there is no way to know
+that output files are put elsewhere when checking for image size.
+
+If you want to keep your directory tree, you may give links relative to
+source files, and remove en/ and hu/ from links with an epilog filter
+(wml -E flag).
+
+&gt; SECOND problem: I need to extend the OnMouseOver stuff in the
+&gt; buttons, because I have a page where both the menu text and an
+&gt; icon changes image on onmouseover. Is this done with
+&gt; &lt;navbar:filter&gt;
+&gt;    $mcode = s/Onmouseover="/Onmouseover="myextacode; /g
+&gt; &lt;/navbar:filter&gt;
+&gt;  
+&gt; Or how? Will be even more tricky, coz the incons will form
+&gt; another navbar, which will change the image states in the menu
+&gt; navbar.
+
+Hmmm, sounds quite hard, maybe you should write your own navbar macros.
+
+&gt; To understand see: <A  HREF="http://www.netngine.hu/references_e.html">http://www.netngine.hu/references_e.html</A>
+&gt; (which site is going to be WML if everything goes ok. And
+&gt; we will take wml into our co. strategy if other colleagues agree as
+&gt; well, replacing our own small programs and .shtml)
+&gt; 
+&gt; THIRD: I wanted to make automatic selection of the language menu.
+&gt; This simply needs
+&gt;         &lt;navbar:render name=language select=&lt;lang:star: *&gt; nohints&gt;
+&gt; 
+&gt; Whis is, if I understand well, replaced with en, hu in each pass of
+&gt; slicing. (pass 9). Or not? Documentation says, &lt;lang:star: *&gt;
+&gt; returns nothing if it is not in any language block. But if I
+&gt; use language blocks, then I don't even need this, I can write en,hu
+&gt; explicitly.
+&gt; &lt;en&gt;
+&gt;         &lt;navbar:render name=language select=en nohints&gt;
+&gt; &lt;/en&gt;
+&gt; And so on. Which sounds lame.
+
+But it is really what you want, because your first try is similar to
+  &lt;navbar:render name=language select="&lt;en&gt;en&lt;/en&gt;&lt;hu&gt;hu&lt;/hu&gt;" nohints&gt;
+and there is no such id in your navbar.
+
+But you may define something like
+    &lt;define-tag navbar:render:lang&gt;
+    &lt;preserve name array-langs l /&gt;
+    &lt;set-var %attributes /&gt;
+    &lt;set-var array-langs=&lt;lang:list /&gt; /&gt;
+    &lt;foreach l array-langs&gt;
+      &lt;subst-in-string "&lt;dUmMy:lang:&lt;get-var l /&gt;&gt;
+          &lt;navbar:render name=&lt;get-var name /&gt; select=&lt;get-var l /&gt; nohints /&gt;
+          &lt;/dUmMy:lang:&lt;get-var l /&gt;&gt;" "dUmMy:" "" /&gt;
+    &lt;/foreach&gt;
+    &lt;restore name array-langs l /&gt;
+    &lt;/define-tag&gt;
+and call it with
+    &lt;navbar:render:lang name=language nohints&gt;
+
+It's tricky, I may explain it in detail if you are interested.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02543" HREF="msg02543.shtml">Re: image sizes, extended navbar:button</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02533" HREF="msg02533.shtml">image sizes, extended navbar:button</A></strong>, <em>From:</em> Veres Ferenc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02539.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02541.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02533.shtml">image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02543.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02540"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02540"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

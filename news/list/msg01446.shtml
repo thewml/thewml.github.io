@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.99.0, Linux 2.0.36 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 19 Mar 2000 01:59:03 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000319013240.8985B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200003170816.JAA11080@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01446">Date Index</a>][<a href="thrd30.shtml#01446">Thread Index</a>]<br>
+[<A HREF="msg01443.shtml">Date Prev</A>][<A HREF="msg01447.shtml">Date Next</A>][<A HREF="msg01441.shtml">Thread Prev</A>][<A HREF="msg01442.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.99.0, Linux 2.0.36</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 19 Mar 2000 01:58:58 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 17 Mar 2000 duenki@isi.ee.ethz.ch wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.99.0
+&gt; Operating System: Linux 2.0.36
+&gt; 
+&gt; Problem Description:
+&gt; | Hi,
+&gt; | 
+&gt; | After several problems while migrating my files from WML 1.7.4 to 1.99.0
+&gt; | I made the following test (copied from the man page to wml::std::lang
+&gt; | plus few own lines):
+&gt; | 
+&gt; | ------------ begin of tst.wml ------------------------------------------
+&gt; | #use wml::std::lang
+&gt; | #use wml::std::href
+&gt; | 
+&gt; | &lt;lang:new id=en short&gt;
+&gt; | &lt;lang:new id=de short&gt;
+&gt; | &lt;lang:star:slice: index.html.*&gt;
+&gt; | 
+&gt; | &lt;h1&gt;&lt;en: Welcome&gt;&lt;de: Willkommen&gt;&lt;/h1&gt;
+&gt; | 
+&gt; | &lt;href name="The Hyperlink" url="&lt;lang:star: index.*.html&gt;"&gt;
+&gt; | &lt;href name="The Hyperlink" url="&lt;lang:star:href: index2.*.html|index2.html&gt;"&gt;
+[...]
+
+&gt; | All tests are done on a linux system. Any comment?
+
+Bugs.
+I just uploaded wml-1.99.2 which fixes all bugs reported to this list.
+Many thanks for all reports, it helps me a lot.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01441" HREF="msg01441.shtml">[BUG REPORT] WML 1.99.0, Linux 2.0.36</A></strong>, <em>From:</em> duenki</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01443.shtml">Re: align (1.99.1)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01447.shtml">Pass parameter -k to eperl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01441.shtml">[BUG REPORT] WML 1.99.0, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01442.shtml">ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01446"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01446"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

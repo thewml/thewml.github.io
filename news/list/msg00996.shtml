@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: emh: checking for existing functions -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Mon, 27 Sep 1999 22:38:25 +0200 (MET DST) -->
+<!--X-Message-Id: 19990927223027.E721@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990920170204.A525@perolo -->
+<!--X-Reference: Pine.LNX.3.96.990920202908.483A&#45;100000@localhost -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00996">Date Index</a>][<a href="thrd21.shtml#00996">Thread Index</a>]<br>
+[<A HREF="msg00994.shtml">Date Prev</A>][<A HREF="msg00997.shtml">Date Next</A>][<A HREF="msg00983.shtml">Thread Prev</A>][<A HREF="msg00998.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: emh: checking for existing functions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Sep 1999 22:30:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Mon, Sep 20, 1999 at 08:34:23PM +0200, Denis Barbier contaba:
+
+&gt;&lt;array-member language __languages&gt;
+&gt;returns the index of the language in the __languages variable and a null
+&gt;string if this language is not found.
+
+I get the Idea. I have worked with a little bit less elegant idea.
+
+But I return to a wider topic:
+
+ Is there a general way to discover if a certain tag/container is being
+ already defined?
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00998" HREF="msg00998.shtml">Re: emh: checking for existing functions</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00981" HREF="msg00981.shtml">emh: checking for existing functions</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="00983" HREF="msg00983.shtml">Re: emh: checking for existing functions</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00994.shtml">Re: How to include lines starting with a # sign</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00997.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00983.shtml">Re: emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00998.shtml">Re: emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00996"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#00996"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

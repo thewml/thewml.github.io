@@ -1,0 +1,173 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.99.1 (16&#45;Mar&#45;2000) -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Sun, 2 Apr 2000 14:12:05 +0200 (MET DST) -->
+<!--X-Message-Id: 20000330022258.A31658@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01513">Date Index</a>][<a href="thrd30.shtml#01513">Thread Index</a>]<br>
+[<A HREF="msg01502.shtml">Date Prev</A>][<A HREF="msg01515.shtml">Date Next</A>][<A HREF="msg01514.shtml">Thread Prev</A>][<A HREF="msg01441.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Mar 2000 02:22:58 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I just noticed that the message didn't seem to make it to the list, so I am
+re-sending it.  :-)  Thanks.
+
+----- Forwarded message -----
+
+Date: Fri, 24 Mar 2000 01:00:29 -0700
+From: Anthony Fok &lt;foka@lovelife.olvc.ab.ca&gt;
+To: sw-wml@engelschall.com
+Subject: Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)
+Content-Type: text/plain; charset=us-ascii
+
+On Sun, Mar 19, 2000 at 04:53:49PM +0100, Denis Barbier wrote:
+&gt; On Fri, 17 Mar 2000, Anthony Fok wrote:
+&gt; 
+&gt; &gt;     wml_p1_ipp would fail if the input file (or its included files) contains
+&gt; &gt; 
+&gt; &gt; 	?$(name)
+&gt; 
+&gt; Oooops i forgot to fix it in 1.99.2.
+&gt; You may find a new ipp.src in wml-SNAP which fixes this bug and
+&gt; introduces important changes in new features.
+
+Thanks for the fix!  My pages now builds without problems with the new
+1.99.3.  :-)
+
+&gt; &gt;     Also, the "$" is escaped if preceded by a "\" regardless of the number
+&gt; &gt;     of "\"s.
+&gt; 
+&gt; In fact, it is handled this way at least since WML 1.6.7, so i assumed
+&gt; it was a well-known feature.
+
+Yes, indeed, and I am glad that \$(name) works the way it does.  What I was
+wondering was, what if someone wants to things like:
+
+	&lt;KBD&gt;EDIT C:\WINDOWS\SYSTEM.INI&lt;/KBD&gt;
+
+where filename="SYSTEM.INI" in this example.  Obviously,
+
+	&lt;KBD&gt;EDIT C:\WINDOWS\$(filename)&lt;/KBD&gt;
+
+wouldn't work, and that's a good thing.  What I was suggesting in the last
+e-mail was that perhaps the user could code it like this instead:
+
+	&lt;KBD&gt;EDIT C:\WINDOWS\\$(filename)&lt;/KBD&gt;
+
+so that for the two backslashes before the "$", the first backslash would
+escape the second backslash, so that the second backslash wouldn't escape
+the "$".  :-)
+
+But then, after reading your reply, I realized my error.  I was advocating
+that "\" would *always* act as an escape character all the time, so "\\" in
+the input would always become "\" in the output.  And of course, that would
+be very bad indeed.  :-) Someone who wanted "\\//\\//\\//\\//" would end up
+with "\//\//\//\//", and Chinese Big5-encoded characters might be messed up
+too because some character uses "\".  I know, Big5 = bad encoding.  :-)
+
+What I was wondering though, would you like to implement a special case for
+things like \\$(name), similar to what is already implemented for
+\\&lt;newline&gt;, so &lt;KBD&gt;EDIT C:\WINDOWS\\$(filename)&lt;/KBD&gt; would work?
+
+(But then, I haven't seen anyone bringing this up on this mailing list, so I
+guess no one ran into this problem?  :-) For the record, I never ran into
+the problem or the need to deal with DOS path names.  The above is just an
+example that I made up for this discussion.  :-)
+
+Anyway, I did some more experimenting, and came up with some workarounds for
+the time being.  :-)
+
+with mhc or mp4h:
+
+	&lt;define-tag backslash&gt;\&lt;/define-tag&gt;
+	&lt;KBD&gt;EDIT C:\WINDOWS&lt;backslash&gt;$(filename)&lt;/KBD&gt;
+
+with eperl:
+
+	&lt;KBD&gt;EDIT C:\WINDOWS&lt;:="\\":&gt;$(filename)&lt;/KBD&gt;
+
+with asubst:
+
+	&lt;KBD&gt;EDIT C:\WINDOWS{:[[s%/%\\%]]/:}$(filename)&lt;/KBD&gt;
+
+or more simply:
+
+	&lt;KBD&gt;EDIT C:\WINDOWS{:\:}$(filename)&lt;/KBD&gt;
+
+So, my last question is: If you think that implementing \\$(name) is
+bad idea, what would be your way (or the "official" way) to do this?  :-)
+
+(You must be wondering, "What is this guy up to anyway?" eh?  :-)
+I don't know!  Haha, I am just amused that {:\:} would work.  :-)
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+Come visit Our Lady of Victory Camp -- <A  HREF="http://www.olvc.ab.ca/">http://www.olvc.ab.ca/</A>
+
+
+----- End forwarded message -----
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01502.shtml">Re: f*ck them: wappies-owner@egroups.com</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01515.shtml">Re: BUG REPORT: Website META Language 1.99.3 (19-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01514.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01441.shtml">[BUG REPORT] WML 1.99.0, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01513"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01513"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

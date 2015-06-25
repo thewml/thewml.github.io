@@ -1,0 +1,187 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: not expanding $(SOMETHING) in <import> or <fsview>[B -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 9 Jul 1999 11:45:02 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990709111151.9791A&#45;200000@liszt.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: Pine.LNX.4.10.9907081112360.8283&#45;100000@kanta.smece.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00848">Date Index</a>][<a href="thrd18.shtml#00848">Thread Index</a>]<br>
+[<A HREF="msg00847.shtml">Date Prev</A>][<A HREF="msg00849.shtml">Date Next</A>][<A HREF="msg00847.shtml">Thread Prev</A>][<A HREF="msg00852.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Jul 1999 11:38:45 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 8 Jul 1999, Davor Cengija wrote:
+
+&gt; 	It's OK now. But, including protected pass numbers in quotes
+&gt; 	will cause &lt;protect&gt; to ignore them. so, &lt;protect pass=4-9&gt;
+&gt; 	works, and &lt;protect pass="4-9"&gt; does not. I think wml should
+&gt; 	be fixed to accept the quotes in &lt;protect&gt; since many people
+&gt; 	surrounds every attribute with quotes. Just a thought.
+
+I think so ;-)
+
+&gt; 	&lt;fsview&gt; could be useful for showing the source code of some
+&gt; 	files, and it generates the link to that file. It would be nice
+&gt; 	if &lt;fsview&gt; had more options (colors, width etc.)
+
+Ok, try the patch (not tested).
+
+Denis
+</PRE>
+<PRE>
+--- wml_include/imp/fsview.src	1999/01/04 15:57:04	1.1.1.1
++++ wml_include/imp/fsview.src	1999/07/09 09:29:52
+@@ -7,11 +7,17 @@
+ 
+ &lt;define-tag fsview&gt;
+ &lt;preserve src&gt;
++&lt;preserve headercolor&gt;
++&lt;preserve bodycolor&gt;
++&lt;preserve width&gt;
+ &lt;preserve hl&gt;
++&lt;preserve hlcolor&gt;
+ &lt;set-var %attributes&gt;
+ &lt;:
+-    $path = "&lt;get-var src&gt;";
+-    $hl   = "&lt;get-var hl&gt;";
++    $path    = "&lt;get-var src&gt;";
++    $width   = "&lt;or &lt;get-var width&gt; 90%&gt;";
++    $hl      = "&lt;get-var hl&gt;";
++    $hlcolor = "&lt;or &lt;get-var hlcolor&gt; #a02020&gt;";
+ 
+     if ($hl =~ m|,|) {
+         @HL = split(',', $hl);
+@@ -22,21 +28,21 @@
+ 
+     #   some special colors
+     if ($path =~ m|\.html$|) {
+-        $col1 = "d0dfd0";
+-        $col2 = "e0f0e0";
++        $col1 = "&lt;or &lt;get-var headercolor&gt; #d0dfd0&gt;";
++        $col2 = "&lt;or &lt;get-var bodycolor&gt; #e0f0e0&gt;";
+     }
+     elsif ($path =~ m|\.wml$|) {
+-        $col1 = "dfc0c0";
+-        $col2 = "ffe0e0";
++        $col1 = "&lt;or &lt;get-var headercolor&gt; #dfc0c0&gt;";
++        $col2 = "&lt;or &lt;get-var bodycolor&gt; #ffe0e0&gt;";
+     }
+     else {
+-        $col1 = "d0d0d0";
+-        $col2 = "f0f0f0";
++        $col1 = "&lt;or &lt;get-var headercolor&gt; #d0d0d0&gt;";
++        $col2 = "&lt;or &lt;get-var bodycolor&gt; #f0f0f0&gt;";
+     }
+ 
+-    print "&lt;table border=0 width=\"90%\\" cellpadding=10 cellspacing=0&gt;\n";
++    print "&lt;table border=0 width=\"$width\" cellpadding=10 cellspacing=0&gt;\n";
+     print "&lt;tr&gt;\n";
+-    print "&lt;td align=left bgcolor=\"#$col1\"&gt;\n";
++    print "&lt;td align=left bgcolor=\"$col1\"&gt;\n";
+ 
+     if (-f $path) {
+         #
+@@ -64,7 +70,7 @@
+         print "&lt;/td&gt;\n";
+         print "&lt;/tr&gt;\n";
+         print "&lt;tr&gt;\n";
+-        print "&lt;td bgcolor=\"#$col2\" align=left&gt;\n";
++        print "&lt;td bgcolor=\"$col2\" align=left&gt;\n";
+ 
+         print "&lt;pre&gt;\n";
+         open(FP, "&lt;$path");
+@@ -75,7 +81,7 @@
+             if ($hl ne "") {
+                 foreach $mark (@HL) {
+                     if (m|$mark|) {
+-                        s|^|&lt;b&gt;&lt;font color=\"#a02020\"&gt;|;
++                        s|^|&lt;b&gt;&lt;font color=\"$hlcolor\"&gt;|;
+                         s|$|&lt;/font&gt;&lt;/b&gt;|;
+                     }
+                 }
+@@ -123,7 +129,7 @@
+             if ($hl ne "") {
+                 foreach $mark (@HL) {
+                     if (m|$mark|) {
+-                        s|^|&lt;b&gt;&lt;font color=\"#a02020\"&gt;|;
++                        s|^|&lt;b&gt;&lt;font color=\"$hlcolor\"&gt;|;
+                         s|$|&lt;/font&gt;&lt;/b&gt;|;
+                     }
+                 }
+@@ -141,7 +147,11 @@
+     print "&lt;/tr&gt;\n";
+     print "&lt;/table&gt;\n";
+ :&gt;
++&lt;restore hlcolor&gt;
+ &lt;restore hl&gt;
++&lt;restore width&gt;
++&lt;restore bodycolor&gt;
++&lt;restore headercolor&gt;
+ &lt;restore src&gt;
+ &lt;/define-tag&gt;
+ 
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00852" HREF="msg00852.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00847" HREF="msg00847.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00847.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00849.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00847.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00852.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;[B</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00848"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00848"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

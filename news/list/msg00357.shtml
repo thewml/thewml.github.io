@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Some help -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 20 Jan 1999 17:23:08 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990120170316.31341A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A5F45E.3851E9A7@tid.es -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00357">Date Index</a>][<a href="thrd8.shtml#00357">Thread Index</a>]<br>
+[<A HREF="msg00356.shtml">Date Prev</A>][<A HREF="msg00358.shtml">Date Next</A>][<A HREF="msg00356.shtml">Thread Prev</A>][<A HREF="msg00359.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Some help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jan 1999 17:16:44 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 20 Jan 1999, Ismael Olea wrote:
+
+&gt; Hi!
+&gt; 
+&gt; 	I've to update a web tree created with wml. I've got a problem: we
+&gt; mantain a ftp site with a number of docs, each doc is presented in 6
+&gt; different formats; we need a web page automaticaly generated with urls
+&gt; to all these files. Can I do this with wml? I know shell scripting but I
+&gt; prefer an integrated solution.
+&gt; 
+&gt; 	Thanks in advance.
+
+Hi,
+
+here is a solution using only pass 2. Keep in mind your html page
+will be compiled off-line, so you should recompile it everytime
+a file is added/deleted, or process it through a cron job.
+
+## List of suffixes
+&lt;set-var suffixes[]= "doc
+    txt
+    sgml
+    html
+    ps
+    dvi"&gt;
+
+## Define the magic command
+&lt;define-tag list-doc-files&gt;
+&lt;set-var i=0&gt;
+&lt;while &lt;get-var suffixes[i]&gt;&gt;
+      &lt;set-var file="%0.&lt;get-var suffixes[i]&gt;"&gt;
+      &lt;if &lt;get-file-properties &lt;get-var file&gt;&gt;
+         &lt;prog &lt;a href="&lt;get-var file&gt;"&gt;&lt;get-var file&gt;&lt;/a&gt;&gt;&gt;
+      &lt;increment i&gt;
+    &lt;/while&gt;
+&lt;/define-tag&gt;
+
+## Example :
+&lt;list-doc-files "path/to/foo"&gt;
+
+If path/to/foo.txt and path/to/foo.html exist, output is:
+    &lt;a href="path/to/foo.txt"&gt;path/to/foo.txt&lt;/a&gt;
+    &lt;a href="path/to/foo.html"&gt;path/to/foo.html&lt;/a&gt;
+
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00359" HREF="msg00359.shtml">Re: Some help</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00356" HREF="msg00356.shtml">Some help</A></strong>, <em>From:</em> Ismael Olea</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00356.shtml">Some help</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00358.shtml">Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00356.shtml">Some help</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00359.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00357"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00357"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: Oagubal Tbx <sbxnNtch.fei.hnyoregn.pn> -->
+<!--X-Date: Wed, 7 Jan 1998 00:23:53 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.980106152747.3431C&#45;100000@lovelife.olvc.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801060809.JAA22387@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00023">Date Index</a>][<a href="thread.shtml#00023">Thread Index</a>]<br>
+[<A HREF="msg00022.shtml">Date Prev</A>][<A HREF="msg00024.shtml">Date Next</A>][<A HREF="msg00028.shtml">Thread Prev</A>][<A HREF="msg00026.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 15:40:43 -0700 (MST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 6 Jan 1998, Ralf S. Engelschall wrote:
+
+&gt; I'm currently thinking about better high-level support for multi-lingual pages
+&gt; with WML.
+[...]
+
+Awesome!  &lt;grin&gt;
+
+&gt; And more ideas, suggestions or comments on this topic?
+&gt; Feel free to express any opinion you have.
+
+I wonder if WML's new high-level multi-lingual support could interact
+with / be integrated with / relate to the new HTML 4.0 specification?
+HTML 4.0 comes with many new features such as:
+
+  2.3.1 Internationalization
+
+   This version of HTML has been designed with the help of experts in the
+   field of internationalization, so that documents may be written in
+   every language and be transported easily around the world. This has
+   been accomplished by incorporating [RFC2070], which deals with the
+   internationalization of HTML. 
+
+   One important step has been the adoption of the ISO/IEC:10646 standard
+   (see [ISO10646]) as the document character set for HTML. This is the
+   world's most inclusive standard dealing with issues of the
+   representation of international characters, text direction,
+   punctuation, and other world language issues. 
+
+   HTML now offers greater support for diverse human languages within a
+   document. This allows for more effective indexing of documents for
+   search engines, higher-quality typography, better text-to-speech
+   conversion, better hyphenation, etc. 
+
+(e.g. attributes such as lang, hreflang, charset, dir, etc.)
+
+Just in case anyone who haven't heard about the new HTML 4.0 Specification
+recommendation, here's the URI:  &lt;<A  HREF="http://www.w3.org/TR/REC-html40/">http://www.w3.org/TR/REC-html40/</A>&gt; :)
+
+Cheers,
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling            foka@gpu.srv.ualberta.ca
+Civil Engineering                <A  HREF="http://www.ualberta.ca/~foka/">http://www.ualberta.ca/~foka/</A>
+University of Alberta, Canada    Keep smiling!  *^_^*
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00017" HREF="msg00017.shtml">RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00022.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00024.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00028.shtml">Compilation problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00026.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00023"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00023"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

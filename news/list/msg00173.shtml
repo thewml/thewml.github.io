@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with wml::std::grid -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Fri, 31 Jul 1998 17:26:13 +0200 (CEST) -->
+<!--X-Message-Id: 19980731172611.A4298@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00173">Date Index</a>][<a href="thrd4.shtml#00173">Thread Index</a>]<br>
+[<A HREF="msg00172.shtml">Date Prev</A>][<A HREF="msg00174.shtml">Date Next</A>][<A HREF="msg00172.shtml">Thread Prev</A>][<A HREF="msg00174.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with wml::std::grid</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 31 Jul 1998 17:26:11 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Be carefuly guys: Majordomo bounced all mails which are not from one of the
+subscribed messages. Carsten is subscribed as carsten@3point.net, so
+carsten@nada.kth.se is not a valid poster address. I've added
+carsten@nada.kth.se to the allowed posters for you now, Carsten. But be
+careful when posting: Although now all spams are successfully bounced to the
+list owner, you have to make sure you either post from the address you
+subscribed with or at least send me your other allowed mail address aliases.
+
+Oh, yes: I'll look into wml::std::grid the next days when I find time.
+
+----- Forwarded message from owner-sw-wml@engelschall.com -----
+From: "Carsten G. Braeutigam"@nada.kth.se
+Sender: =?iso-8859-1?Q?Carsten_Br=E4utigam?= &lt;carsten@nada.kth.se&gt;
+Subject: Re: Problem with wml::std::grid
+To: sw-wml@engelschall.com
+cc: rse@engelschall.com
+In-Reply-To: &lt;<A HREF="msg00172.shtml">19980730151853.B3884@engelschall.com</A>&gt;
+MIME-Version: 1.0
+Content-Type: TEXT/plain; CHARSET=US-ASCII
+
+On 30 Jul, Ralf S. Engelschall wrote:
+&gt; 
+&gt; I've to forward this to the list because Torsten posted to it before you was
+&gt; suceessfully subscribed. And you know, because of the anti-spamming issue
+&gt; non-subscribers are no longer allowed to post.
+
+There are other problems with grid too. I looked at the definition and
+saw that e.g. the height definition of a cell changes the height of the
+corresponding &lt;table&gt; entry instead of the &lt;td&gt; entry, because there is
+no height expected for the cell. I have a quick patch for that at home,
+but didn't get to sending it to the list.
+
+I should do it at the weekend.
+
+C.
+-- 
+Carsten Braeutigam (carsten@nada.kth.se)
+
+----- End forwarded message -----
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00172.shtml">Problem with wml::std::grid</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00174.shtml">It works!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00172.shtml">Problem with wml::std::grid</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00174.shtml">It works!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00173"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00173"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

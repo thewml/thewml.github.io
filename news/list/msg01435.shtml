@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to safely test wml&#45;1.99.x -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 17 Mar 2000 21:42:45 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000317214145.1181A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14546.28185.269789.441624@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01435">Date Index</a>][<a href="thrd29.shtml#01435">Thread Index</a>]<br>
+[<A HREF="msg01434.shtml">Date Prev</A>][<A HREF="msg01436.shtml">Date Next</A>][<A HREF="msg01434.shtml">Thread Prev</A>][<A HREF="msg01436.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to safely test wml-1.99.x</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 21:42:36 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 17 Mar 2000, Carsten Wartmann wrote:
+
+&gt; Denis Barbier writes:
+&gt;  &gt; I just think of a nice way to test wml-1.99.x without breaking actual
+&gt;  &gt; templates. This new version read -I and -S option flags from right to
+&gt;  &gt; left, whereas older version treat them from left to right.
+&gt;  &gt; 
+&gt;  &gt; So if your templates are in a subdir called `templates', top-level
+&gt;  &gt; .wmlrc file should contain
+&gt;  &gt;    -I templates
+&gt;  &gt; Copy this directory into templates-2.0 and replace previous line by
+&gt;  &gt;    -I templates
+&gt;  &gt;    -I templates-2.0
+&gt;  &gt; 
+&gt;  &gt; You may now safely modify your templates as described in README.mp4h,
+&gt;  &gt; and rebuild your pages at any time with wml-1.7.4
+&gt; 
+&gt; But how do I safely install two versions?
+
+Run
+  ./configure --prefix=/another/path
+  make
+  make install
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01436" HREF="msg01436.shtml">Re: How to safely test wml-1.99.x</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01434" HREF="msg01434.shtml">Re: How to safely test wml-1.99.x</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01434.shtml">Re: How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01436.shtml">Re: How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01434.shtml">Re: How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01436.shtml">Re: How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01435"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01435"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

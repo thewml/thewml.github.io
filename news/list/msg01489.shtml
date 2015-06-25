@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [1.99.4] Bug Report: continuation shebang printed to body -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.eurva.qr> -->
+<!--X-Date: Tue, 28 Mar 2000 20:13:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20000328201125.I2002@spinnaker.rhein.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01489">Date Index</a>][<a href="thrd31.shtml#01489">Thread Index</a>]<br>
+[<A HREF="msg01487.shtml">Date Prev</A>][<A HREF="msg01490.shtml">Date Next</A>][<A HREF="msg01506.shtml">Thread Prev</A>][<A HREF="msg01492.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[1.99.4] Bug Report: continuation shebang printed to body</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Mar 2000 20:11:25 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I noted a very strange effect on continuated shebang lines.  Have a
+look at the following minimal wml file:
+
+-------------------- test.wml ---------------------
+#!wml -o (ALL-LANG_*)+LANG_DE:%BASE.html \
+      -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+
+#use wml::std::lang
+#use wml::std::page
+
+&lt;lang:new id=de short&gt;
+&lt;lang:new id=en short&gt;
+
+&lt;page&gt;
+
+&lt;en: English&gt;&lt;de: Deutsch&gt;
+-------------------- test.wml ---------------------
+
+If I run wml on this file, it correctly generates test.html and
+test-en.html, but it writes the continuated line into the html files
+like this:
+
+-------------------- test.html --------------------
+      -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#ffffff" text="#000000" link="#333399" alink="#9999ff" vlink="#000066"&gt;
+Deutsch
+&lt;/body&gt;
+&lt;/html&gt;
+-------------------- test.html --------------------
+
+If I write the complete shebang line in one line (without the
+"\"-contination), everything works correct.
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01487.shtml">[1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01490.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01506.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01492.shtml">eperl: redefinition of `union semun'</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01489"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01489"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: verbatim and substitution of # -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Sat, 15 Jan 2000 14:23:59 +0100 (MET) -->
+<!--X-Message-Id: 3880521F.44EB183B@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01272">Date Index</a>][<a href="thrd26.shtml#01272">Thread Index</a>]<br>
+[<A HREF="msg01271.shtml">Date Prev</A>][<A HREF="msg01273.shtml">Date Next</A>][<A HREF="msg01271.shtml">Thread Prev</A>][<A HREF="msg01278.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>verbatim and substitution of #</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 15 Jan 2000 11:55:27 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+when I use
+
+#use wml::fmt::verbatim
+
+&lt;verbatim&gt;
+&amp;num;
+or
+#
+&lt;/verbatim&gt;
+
+I get undesired results in both cases. Since the
+verbatim tag is very convienient, I would like to use it with
+commented shellscript source in HTML pages, too.
+
+I dare to make some solutions:
+- mentioning this behaviour in the man page explicitly
+- new tag &lt;verbatim_extended&gt; which also changes # to &amp;num; entity
+- other, maybe I have overlooked something
+
+Cheers
+-werner-
+
+BTW: Again the use of WML was of great improvement for my pages.
+-- 
+Werner Heuser                       | Stop nuclear power now!       /~~
+LiLAC - Linux with Laptop Computers |                              /~~~
+Berlin, Germany                     |                             /~~~~
+T. +49 30 349 53 86             <A  HREF="http://www.snafu.de/~wehe/index_li.html">http://www.snafu.de/~wehe/index_li.html</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01271.shtml">Re: [wml::des::navbar] Selected underlined but still selectable?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01273.shtml">grid, table summary attribute</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01271.shtml">Re: [wml::des::navbar] Selected underlined but still selectable?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01278.shtml">Re: verbatim and substitution of #</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01272"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01272"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: e&#45;perl error -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 11 Mar 1999 17:53:32 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990311164200.1348A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3i90d4qjqg.fsf@luzi.e&#45;technik.uni&#45;dortmund.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00454">Date Index</a>][<a href="thrd11.shtml#00454">Thread Index</a>]<br>
+[<A HREF="msg00453.shtml">Date Prev</A>][<A HREF="msg00455.shtml">Date Next</A>][<A HREF="msg00452.shtml">Thread Prev</A>][<A HREF="msg00459.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: e-perl error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 11 Mar 1999 16:48:04 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 11 Mar 1999, "Bjoern_Hesse wrote:
+
+&gt; With both wml 1.6.8 and the latest snapshot, i can reproduce this error.  
+&gt; 
+&gt; &lt;-- error.wml --&gt;
+&gt; #use wml::des::space
+&gt; &lt;-- error.wml --&gt;
+&gt; 
+&gt; &lt;-- log --&gt;
+&gt; magi:/home/hesse/lang/wml 55&gt; wmk error.wml
+&gt; wml -n -oerror.html error.wml
+&gt; ePerl:Error: Perl parsing error (interpreter rc=2)
+&gt;  
+&gt; ---- Contents of STDERR channel: ---------
+&gt; Can't load '/opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so' for module IO: ld.so.1: /opt/gnu/lib/wml/exec/wml_p3_eperl: fatal: relocation error: file /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so: symbol main
+[...]
+
+Hi Bjoern,
+
+i do not yet have an answer... but a question. On your Solaris box, did
+you modify wml_backend/p2_mhc/config.h.in in order to compile properly?
+I cannot figure why wml_backend/p2_mhc/arch/solaris/prototypes.h is
+needed.
+
+TIA
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00459" HREF="msg00459.shtml">Re: e-perl error</A></strong>, <em>From:</em> Bjoern_Hesse</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00452" HREF="msg00452.shtml">e-perl error</A></strong>, <em>From:</em> Bjoern_Hesse</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00453.shtml">WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00455.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00452.shtml">e-perl error</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00459.shtml">Re: e-perl error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00454"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00454"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

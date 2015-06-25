@@ -1,0 +1,151 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: understanding swpage.wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 22 Feb 2000 10:11:17 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000222094835.16128A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 4.2.0.58.20000221190723.00a382b0@pplus.shell7.ba.best.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01367">Date Index</a>][<a href="thrd28.shtml#01367">Thread Index</a>]<br>
+[<A HREF="msg01366.shtml">Date Prev</A>][<A HREF="msg01368.shtml">Date Next</A>][<A HREF="msg01366.shtml">Thread Prev</A>][<A HREF="msg01368.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: understanding swpage.wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Feb 2000 10:21:21 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 21 Feb 2000, Jeff McCarrell wrote:
+
+&gt; Hi.  I am trying to understand how best to use wml, and I have been
+&gt; examining swpage.wml.  I have a couple of questions:
+
+Hi Jeff,
+
+&gt; What is the top level command that builds all of the pages?  I assume that
+&gt; it is some wmk command, perhaps from a Makefile of some sort?
+
+Just ``wmk -a''
+
+&gt; In this fragment:
+&gt; 
+&gt;      74	      &lt;ifeq "$(areaparent)" ""
+&gt;      75	          &lt;if &lt;match "&lt;get-var WML_SRC_FILENAME&gt;" "index\\..*"&gt;
+&gt;      76	              &lt;set-var areaparent="../"&gt;
+&gt;      77	              &lt;set-var areaparent=""&gt;
+&gt;      78	          &gt;
+&gt;      79	          &lt;set-var areaparent="$(areaparent)"&gt;
+&gt;      80	      &gt;
+&gt; 
+&gt; what is the motive for doing this?  I mean, I understand what the code is
+&gt; doing, but why do you want the parent directory when the source filename
+&gt; starts with index. ?
+
+Hmmm, areaparent is never defined in input files, so these lines should
+be removed.
+
+&gt; This code:
+&gt; 
+&gt;     130	..!PAGE_TITLE!&gt;&gt;
+&gt;     131	Unknown Page
+&gt;     132	&lt;&lt;..
+&gt; 
+&gt; sets up a default for the PAGE_TITLE named diversion.  Why is this a good
+&gt; thing to do?  It seems to me that there are a number of other (simpler) 
+&gt; ways of defining default values for things.  Why is the method of
+&gt; using a default diversion used here?
+
+The page title is used at the beginning of the page (e.g. in META tags).
+If you do not use diversions, your wml file looks like
+   &lt;set-var title="Title of this page"&gt;
+   #include 'templates'
+or
+   #include 'templates' title="Title of this page"
+
+With diversions, you can define the title everywhere, for instance
+   #include 'templates'
+   &lt;page-title "Title of this page"&gt;
+
+&gt; As an observation, the thing about wml that is giving me the most difficulty
+&gt; is trying to understand how to put the whole thing together in a sensible way.
+&gt; Publishing swpage.wml has been very helpful for me, to see the whole thing
+&gt; working together.
+&gt; 
+&gt; A tarball of the site that I could modify and run the passes of
+&gt; individually to examine the intermediate output would help too.  Is
+&gt; that available somewhere?
+
+No, but this is a good idea. I'll try to find time to provide this
+tarball.
+
+&gt; The other meta level question I have is how actively is wml being
+&gt; used?  I know that is a subjective question, but if you have an
+&gt; opinion, I'd like to hear it.
+
+Have a look at <A  HREF="http://www.engelschall.com/sw/wml/example/refs.phtml">http://www.engelschall.com/sw/wml/example/refs.phtml</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01365" HREF="msg01365.shtml">understanding swpage.wml</A></strong>, <em>From:</em> Jeff McCarrell</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01366.shtml">Re: understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01368.shtml">Re: [wml] understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01366.shtml">Re: understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01368.shtml">Re: [wml] understanding swpage.wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01367"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01367"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

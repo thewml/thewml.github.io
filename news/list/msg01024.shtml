@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Ouput directory other than source directory -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Sun, 3 Oct 1999 17:07:38 +0200 (MET DST) -->
+<!--X-Message-Id: 19991002185856.A7412@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: NDBBJOMIEJPJILMHKHDJMEELCAAA.dkrizic@bsb&#45;software.com -->
+<!--X-Reference: Pine.LNX.3.96.991001141141.23974A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01024">Date Index</a>][<a href="thrd21.shtml#01024">Thread Index</a>]<br>
+[<A HREF="msg01023.shtml">Date Prev</A>][<A HREF="msg01025.shtml">Date Next</A>][<A HREF="msg01018.shtml">Thread Prev</A>][<A HREF="msg01007.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 2 Oct 1999 18:58:56 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Fri, Oct 01, 1999 at 02:28:57PM +0200, barbier@imacs.polytechnique.fr contaba:
+
+&gt;Ok, building and mirroring is something i understand. But could someone
+&gt;explain the benefits of putting output files in a different directory than
+&gt;the source file (that's what the subject means).
+&gt;I want to know if it is worth i try to ease such manipulations.
+
+Like somebody said here, in my case is related with my way of
+working. I use a shell to manage all files and work, and so, it is
+not very easy to work with plenty of files. The more files you have
+the more crazy it becomes. It is specially painfull to work with
+files with the same name and different extension.
+
+Maybe using a `make install' that copies the files and cleans all
+them. But I dislike it because I like to see the results every time I
+change a page. So I will have to make `make; make install'
+every minute. (This is because I am just new to WML and I am more
+testing new layouts than really typing contents).
+
+And I really don't want to make somebody change the way WML works.
+But it seems quite easy to achieve, and I think programs can be as
+flexible as they can, if this does not make a very big problem.
+
+
+&gt;PS to juh: there are lots of mirror.pl worldwide. One comes from
+&gt;              <A  HREF="http://sunsite.org.uk/packages/mirror/">http://sunsite.org.uk/packages/mirror/</A>
+&gt;           Try wget (from any GNU archive) too.
+
+I use `sitecopy'. It has a feature for excluding certain files, so I
+could manage to exclude the source code. So the problem is not
+necesary this.
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+10/02	First robotics-based CAM, 1939
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01014" HREF="msg01014.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> Darko Krizic</li>
+<li><strong><A NAME="01015" HREF="msg01015.shtml">RE: Ouput directory other than source directory</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01023.shtml">Upload Tool (was: Ouput directory other than source directory)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01025.shtml">Re: BUG REPORT: Website META Language 1.7.3 (30-Sep-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01018.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01007.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01024"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01024"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

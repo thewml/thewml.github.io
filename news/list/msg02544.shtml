@@ -1,0 +1,158 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: NAVBAR and CSS -->
+<!--X-From-R13: "Dnys Hvffref" <enivfNjro.qr> -->
+<!--X-Date: Wed, 6 Mar 2002 12:56:22 +0100 (MET) -->
+<!--X-Message-Id: 000001c1c505$db556680$702f07d5@ravis -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.44.0202112053560.23292&#45;100000@ns.xanadu.ru -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02544">Date Index</a>][<a href="thrd51.shtml#02544">Thread Index</a>]<br>
+[<A HREF="msg02543.shtml">Date Prev</A>][<A HREF="msg02545.shtml">Date Next</A>][<A HREF="msg02511.shtml">Thread Prev</A>][<A HREF="msg02545.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>NAVBAR and CSS</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf Vissers&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Mar 2002 12:55:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+thanks for maintaining WML and Mailing List.
+You (and all other participants) are doing a great job there! ;-))
+
+Last week I switched to NAVBAR txtonly mode
+and i was looking for an extra link behaviour
+like pseudo class a:link { ... } in CSS.
+Finally I have changed
+	$O .= '&lt;*a href=...
+to
+	$O .= '&lt;*a class="menu" href=...
+in section
+	#   for a button without images
+of my local copy of navbar.wml.
+See <A  HREF="http://home.arcor.de/vissers/">http://home.arcor.de/vissers/</A> for an example.
+
+What do you think about builtin WML macro support for CSS?
+IMHO it would be nice for other users and for other includes.
+What about the mail below from Petr Andreyev?
+You have answered "Your idea looks interesting, patches are welcome ;)".
+Have there been any patches?
+
+Ralf
+<A  HREF="mailto:ravis@web.de">mailto:ravis@web.de</A>
+
+
+-----Ursprüngliche Nachricht-----
+Von: owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>]
+Im Auftrag von Petr Andreyev
+Gesendet: Montag, 11. Februar 2002 18:54
+An: sw-wml@engelschall.com
+Betreff: toc etc
+
+
+Hi Collegues,
+
+i would think that for professional projects wml::std::toc is not
+satisfactory 
+just because it allows only for the 5 built-in styles. Of course, those
+styles 
+have many options, but they do not cover all situations (for instance,
+what if 
+I wish to render toc using CSS only?).
+
+I would think that something like this should be much better: instead of
+&lt;toc&gt; 
+to have
+
+&lt;toc-style name="ol"&gt; ;;; predefined tag for the 'ol' style
+;;; here we optionally redefine some styles
+&lt;toc_h4_style&gt; &lt;li&gt;&lt;a href="#%toc_href%"
+class="myh4class"&gt;%toc_title%&lt;/a&gt; 
+&lt;/toc_h4_style&gt;
+.
+.
+.
+&lt;toc&gt;
+
+That is, we can define our own style and use a standard one as a base.
+
+The same should be applicable to other standard includes as well: 
+many of them are not flexible enough (and this should stop many
+potential wml-users (not wml-programmers) from using it).
+
+What do you think?
+
+--
+Petr
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02545" HREF="msg02545.shtml">Re: NAVBAR and CSS</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02506" HREF="msg02506.shtml">toc etc</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02543.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02545.shtml">Re: NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02511.shtml">Re: toc etc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02545.shtml">Re: NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02544"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02544"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,166 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Why does <set&#45;var %body> not work? -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Mon, 19 Feb 2001 23:11:55 +0100 (MET) -->
+<!--X-Message-Id: 20010219231141.A24595@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02134">Date Index</a>][<a href="thrd43.shtml#02134">Thread Index</a>]<br>
+[<A HREF="msg02133.shtml">Date Prev</A>][<A HREF="msg02135.shtml">Date Next</A>][<A HREF="msg02130.shtml">Thread Prev</A>][<A HREF="msg02135.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Why does &lt;set-var %body&gt; not work?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 19 Feb 2001 23:11:41 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+I just encountered a little problem, and I'm not really understanding,
+why it appeared. I used 
+
+&lt;set-var DESTINATION="/fnord/"
+	 TITLE="example"
+	 BASE="foobar"
+	 SUFFIX="html"
+	 DESC="Example"&gt;
+
+as meta data section in my WML files. Now I tried to make it look a
+little bit easier to novices:
+
+&lt;CONFIGURATION&gt;
+	DESTINATION="/fnord/"
+	TITLE="example"
+	BASE="foobar"
+	SUFFIX="html"
+	DESC="Example"
+&lt;/CONFIGURATION&gt;
+
+and wrote the follwoing macro:
+
+&lt;define-tag CONFIGURATION endtag=required&gt;\
+&lt;set-var %body&gt;\
+&lt;/define-tag&gt;
+
+But it didn't work, so I tried
+
+&lt;define-tag CONFIGURATION endtag=required&gt;\
+&lt;set-var &lt;attributes-quote %body&gt;&gt;\
+&lt;/define-tag&gt;
+
+which didn't work either. Both didn't set the variables as one might
+think. The debug output always says, that there are only 2 attributes
+to set-var and shows Ctrl-Es instead of the double quotes like this:
+
+trace: -1- &lt;set-var
+        DESTINATION=^E/fnord/^E
+	TITLE=^Eexample^E
+	BASE=^Efoobar^E
+	SUFFIX=^Ehtml^E
+	DESC=^EExample^E 
+&gt; -&gt; 2 args
+
+It seems as if 
+
+&lt;define-tag CONFIGURATION endtag=required&gt;\
+&lt;set-var %body&gt;\
+&lt;/define-tag&gt;
+
+is always equivalent to
+
+&lt;define-tag CONFIGURATION endtag=required&gt;\
+&lt;set-var "%body"&gt;\
+&lt;/define-tag&gt;
+
+BTW: Even splitting %body manually via &lt;foreach&gt; didn't work:
+
+&lt;define-tag CONFIGURATION endtag=required&gt;\
+&lt;set-var array="%body"&gt;;;; Works
+&lt;foreach x array&gt;;;; Works
+	Setting &lt;get-var &lt;attributes-quote x&gt;&gt;...;;; Works
+	&lt;set-var key=&lt;match &lt;get-var &lt;attributes-quote x&gt;&gt; "=.*$" action=delete&gt;&gt;
+	&lt;set-var val=&lt;match &lt;get-var &lt;attributes-quote x&gt;&gt; "^[^=]+=" action=delete&gt;&gt;
+		The key is &lt;get-var key&gt;;;; Works
+		The value is &lt;get-var val&gt;;;; Works
+	&lt;set-var &lt;get-var key&gt;=&lt;get-var val&gt;&gt;;;; Works not
+	&lt;set-var &lt;group &lt;get-var key&gt;=&lt;get-var val&gt;&gt;&gt;;;; Works not
+	&lt;set-var &lt;attributes-quote &lt;get-var key&gt;=&lt;get-var val&gt;&gt;&gt;;;; Works not
+&lt;/foreach&gt;
+&lt;/define-tag&gt;
+
+What I'm doing wrong? Why can't I use %body like use %attributes? Is
+there something about &lt;set-var&gt;'s arguments parsing that isn't written
+in the documentation. (Oh, and BTW I'm still running WML 2.0.4, but
+there was nothing regarding my problem in the ChangeLog nor the FAQ...
+:-)
+
+And now the final question: Is there a workaround? :-)
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02135" HREF="msg02135.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Petr Andreyev</li>
+<li><strong><A NAME="02136" HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02133.shtml">Re: Disappearance of a quoted body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02135.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02130.shtml">Re: wml &amp; cookies</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02135.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02134"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02134"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WML 1.7.2: Undocumented feature in wml::des::navbar -->
+<!--X-From-R13: Vnaf Gyevpu @vrqreznaa <hyevpuNavrqreznaa.oo.onjhr.qr> -->
+<!--X-Date: Mon, 20 Sep 1999 15:42:06 +0200 (MET DST) -->
+<!--X-Message-Id: m21zbtk9lu.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00979">Date Index</a>][<a href="thrd21.shtml#00979">Thread Index</a>]<br>
+[<A HREF="msg00978.shtml">Date Prev</A>][<A HREF="msg00980.shtml">Date Next</A>][<A HREF="msg01007.shtml">Thread Prev</A>][<A HREF="msg00980.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WML 1.7.2: Undocumented feature in wml::des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Hans Ulrich Niedermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 20 Sep 1999 15:15:09 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all,
+
+in wml::des::navbar(3) a description of the "nohints" param to the
+&lt;navbar:render&gt; tag is missing. My suggestion is to add 
+
+       nohints
+           Do not create Javascript hints for navigation buttons
+
+or something similar. The current text is:
+
+       Options of &lt;navbar:render&gt;:
+
+       name=STR
+           The name of the navigation bar definition to use when
+           rendering.
+
+       select=ID
+           Select a particular button as selected.
+
+       subselected
+           Marks the selected button as a subselected one, i.e.
+           the current page for which the button is selected is
+           deeper than the original page for which this button
+           stands.
+
+       txtonly
+           Forces the rendering to ignore all defined images.
+
+Greetings,
+
+Uli
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00980" HREF="msg00980.shtml">Re: WML 1.7.2: Undocumented feature in wml::des::navbar</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00978.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00980.shtml">Re: WML 1.7.2: Undocumented feature in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01007.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00980.shtml">Re: WML 1.7.2: Undocumented feature in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00979"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#00979"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

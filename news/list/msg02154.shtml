@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Using information in other documents -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Fri, 2 Mar 2001 14:15:34 +0100 (MET) -->
+<!--X-Message-Id: 20010302141519.A4199@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.NEB.4.21.0103012024150.2069&#45;100000@box.lan.dinsen.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02154">Date Index</a>][<a href="thrd44.shtml#02154">Thread Index</a>]<br>
+[<A HREF="msg02153.shtml">Date Prev</A>][<A HREF="msg02155.shtml">Date Next</A>][<A HREF="msg02155.shtml">Thread Prev</A>][<A HREF="msg02156.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Using information in other documents</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 2 Mar 2001 14:15:20 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Anders Dinsen wrote:
+&gt; I cannot find a way to reference and use parts (meta information,
+&gt; like the title) of a document in another document.
+&gt; 
+&gt; I want be able to write something like:
+&gt; 
+&gt; &lt;href url="document"&gt;
+&gt; 
+&gt; and have WML fetch the title of the document and make HTML like:
+&gt; 
+&gt; &lt;a href="document"&gt;Title&lt;/a&gt;
+
+I had a similar problem when implemeting navigation bars, which should
+represent the path structure as links to every level.
+
+All link descriptions are given as variable values in the source file.
+My WML template writes this data together with path and file name in
+some file named file-descriptions.psv (pipe separated values :-). When
+bulding the navigation bar, the template finds out the appropriate
+path and links to every level using the data from this file.
+
+The disadvantage is known from the table of contents in LaTeX written
+documents: You have at least to compile all documents twice at the
+beginning, but after that usually one compilation is enough.
+
+Using the dynamic version suggested in some other reply is more
+complicated in our environment, because all source files are in the
+same directory while the result are spread over the whole htdocs
+hierachy.
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02152" HREF="msg02152.shtml">Using information in other documents</A></strong>, <em>From:</em> Anders Dinsen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02153.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02155.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02155.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02156.shtml">std/href.wml space after links</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02154"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02154"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,162 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: Vbjneq Oyrknaqre ZnVheernh <nyrkqjNybpy.arg> -->
+<!--X-Date: Wed, 24 May 2000 01:58:36 +0200 (MET DST) -->
+<!--X-Message-Id: 20000523185722.B13991@locl.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000523155859.A8797@locl.net -->
+<!--X-Reference: Pine.LNX.3.96.1000524002925.31178E&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01603">Date Index</a>][<a href="thrd34.shtml#01603">Thread Index</a>]<br>
+[<A HREF="msg01602.shtml">Date Prev</A>][<A HREF="msg01604.shtml">Date Next</A>][<A HREF="msg01602.shtml">Thread Prev</A>][<A HREF="msg01604.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Howard Alexander LaHurreau &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 May 2000 18:57:22 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, May 24, 2000 at 12:46:10AM +0200, Denis Barbier wrote:
+&gt; On Tue, 23 May 2000, Howard Alexander LaHurreau wrote:
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; I'm having problems with the migration from 2.0.0 to 2.0.1.
+&gt; &gt; It appears that when mp4h reaches an unknown tag, it treats
+&gt; &gt; it as if it had been defined with whitespace=delete.
+&gt; No, it parses attributes and writes them in a space separated list.
+
+Ahh.  That explains why it does that.  :-)
+ 
+&gt; &gt; The problem I'm having with this is that this code:
+&gt; &gt; ---------------8&lt; cut here 8&lt;---------------
+&gt; &gt;         print &lt;&lt;"END IMGLINK";
+&gt; &gt; &lt;a href="$rss-&gt;{'image'}-&gt;{'link'}"&gt;&lt;img src="$rss-&gt;{'image'}-&gt;{'url'}"
+&gt; &gt;  alt="$rss-&gt;{'image'}-&gt;{'title'}" border="0" align="right"
+&gt; &gt; END IMGLINK
+&gt; &gt;         print " width=\"$rss-&gt;{'image'}-&gt;{'width'}\""
+&gt; &gt;                 if $rss-&gt;{'image'}-&gt;{'width'};
+&gt; &gt;         print " height=\"$rss-&gt;{'image'}-&gt;{'height'}\""
+&gt; &gt;                 if $rss-&gt;{'image'}-&gt;{'height'};
+&gt; &gt;         print " /&gt;&lt;/a&gt;\n";
+&gt; &gt; ---------------8&lt; cut here 8&lt;---------------
+&gt; Let me try to explain what happens:
+&gt;   Input     Interpretation
+&gt;   print           string
+&gt;    &lt;&lt;             these &lt; delimiters can not begin a tag, because they
+&gt;                   are followed by invalid characters (resp. &lt; and ")
+&gt;   "END IMGLINK";  string
+&gt;   &lt;a              beginning of an undefined tag.  We are looking for
+&gt;                   attributes and a right angle bracket.
+&gt;     href="$rss-&gt;{'image'}-&gt;{'link'}"  first attribute
+&gt;   &gt;               end of unknown tag
+&gt;   &lt;img            beginning of an undefined tag.  Below is the list of
+&gt;                   attributes:
+&gt; 1    src="$rss-&gt;{'image'}-&gt;{'url'}"
+&gt; 2    alt="$rss-&gt;{'image'}-&gt;{'title'}"
+&gt; 3    border="0"
+&gt; 4    align="right"
+&gt; 5    END IMGLINK
+&gt; 6    print
+&gt; 7    " width=\"$rss-&gt;{'image'}-&gt;{'width'}\""
+&gt; 8    if
+&gt; 9    $rss-
+&gt;   &gt;               end of unknown tag (img)
+&gt;   
+&gt;   {'image'}-&gt;{'width'};   string, etc.
+
+The question that I have is should MP4H be playing with the whitespace
+inside the unknown tag?  (Or is there any way to prevent it from doing
+so?)
+ 
+&gt; &gt; gets turned into this code:
+&gt; &gt; ---------------8&lt; cut here 8&lt;---------------
+&gt; &gt;         print &lt;&lt;"END IMGLINK";
+&gt; &gt; &lt;a href="$rss-&gt;{'image'}-&gt;{'link'}"&gt;&lt;img src="$rss-&gt;{'image'}-&gt;{'url'}" alt="$rss-&gt;{'image'}-&gt;{'title'}" border="0" align="right" END IMGLINK print 
+" width="$rss-&gt;{'image'}-&gt;{'width'}"" if $rss-&gt;{'image'}-&gt;{'width'};
+&gt; &gt;         print " height=\"$rss-&gt;{'image'}-&gt;{'height'}\""
+&gt; &gt;                 if $rss-&gt;{'image'}-&gt;{'height'};
+&gt; &gt;         print " /&gt;&lt;/a&gt;\n";
+&gt; &gt; ---------------8&lt; cut here 8&lt;---------------
+&gt; Indeed concatenate attributes of the img tag and you obtain the code
+&gt; above.  The solution is to prevent parsing &lt;img&gt; tag, e.g. with
+&gt;         print &lt;&lt;"END IMGLINK";
+&gt; &lt;a href="$rss-&gt;{'image'}-&gt;{'link'}"&gt;&lt;&lt;suck&gt;img src="$rss-&gt;{'image'}-&gt;{'url'}"
+&gt;  alt="$rss-&gt;{'image'}-&gt;{'title'}" border="0" align="right"
+&gt; END IMGLINK
+&gt; The &lt;suck&gt; tag prevents scanning by mp4h, and is automatically removed
+&gt; in pass 8.
+&gt; Another solution is to enclose your ePerl code with
+&gt; &lt;protect pass=2&gt;...&lt;/protect&gt; whenever possible.
+
+OK, thanks for your help.  :-)
+
+-- 
+AlexDW &lt;alexdw@locl.net&gt; -- KB9SYM -- DOCTOR WHO FOREVER
+Pecor's Health-Food Principle:
+        Never eat rutabaga on any day of the week that has a "y" in it.
+Visit The Home of AlexDW at <A  HREF="http://www.locl.net/homes/alexdw/">http://www.locl.net/homes/alexdw/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01604" HREF="msg01604.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01601" HREF="msg01601.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Howard Alexander LaHurreau</li>
+<li><strong><A NAME="01602" HREF="msg01602.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01602.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01604.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01602.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01604.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01603"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01603"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

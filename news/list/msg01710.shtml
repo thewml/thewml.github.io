@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Include misunderstanding -->
+<!--X-From-R13: Osnz Otobqvxr <nsnzNpbec.tblbtv.pbz> -->
+<!--X-Date: Fri, 9 Jun 2000 14:34:28 +0200 (MET DST) -->
+<!--X-Message-Id: 3940E482.E37FFFA5@corp.goyogi.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0006071448560.359&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01710">Date Index</a>][<a href="thrd35.shtml#01710">Thread Index</a>]<br>
+[<A HREF="msg01709.shtml">Date Prev</A>][<A HREF="msg01711.shtml">Date Next</A>][<A HREF="msg01704.shtml">Thread Prev</A>][<A HREF="msg01712.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Include misunderstanding</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Afam Agbodike &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 09 Jun 2000 05:35:14 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Well, I figured out my previous problem of getting wmk to traverse
+directories, use the -a switch RTFM eh? Well, now something weird is
+happening. in my root directory, I have the files.
+
+index.wml -- the index page
+3col_template.winc -- this is a template for a 3 column page layout
+which
+  includes:
+left_nav_bar.winc -- the left column for the page
+  and:
+right.winc -- the right bar for the page.
+
+there are a number of variable defined in the .wmlrc file as follows:
+
+-D SUBJECT_LOC="Page Title"
+-D META_KEYWORDS="keywords"
+-D NAV_BAR_COLOR="FFCC66" -- the bgcolor for the left bar
+-D PRIMARY_HILIGHT="FF6600" -- prominent hilight color
+-D SECONDARY_HILIGHT="FF9933" -- secondary hilight color
+
+I am substituting the variables using the &lt;get-var MAIN_BODY_WIDTH&gt;
+functionality
+
+I have a directory below root called "mats" which has the files
+
+index.wml -- the index page
+left_nav_bar.winc -- the left column for mats pages
+right.winc -- the right bar for mats pages
+
+the index.wml for mats starts with
+#include "../3col_template.winc"
+
+Everything works perfectly in the root directory.
+
+when wmk enters the mats directory, as I expected, when I run wmk it
+includes 3col_template.winc from the root directory and
+left_nav_bar.winc and right.winc from the *mats* directory. The problem
+is, once it reaches the left_nav_bar.winc include which is inside
+3col_template.winc it stops replacing any of the &lt;get-var VARIABLE_NAME&gt;
+tags, nor does it replace the {#BODY#} segment. What is going on here?
+
+all the files are almost identical, as far as I can tell the problem
+comes from the fact that some files are in a different directory. Can
+anybody tell me what I'm doing wrong?
+
+Also, is there a short tutorial on how to build a multi level site? I'm
+trying to convert over a completely established site to wml, and I have
+a very short time period to do this. most of the docs don't cover
+anything about building a site, just individual pages, and the stuff the
+does go over site creation is either too basic or way over my head. It
+would be really great if there was something that gave a step by step on
+how do define universal variable, that apply accross the entire site,
+and local variables that apply to only a certain directory or file. I'm
+looking at the example of the wml site, but so for it is too complicated
+for me. I don't understand much of anything that's going on in there.
+
+Thanks for any help you can give,
+
+Afam
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01712" HREF="msg01712.shtml">Re: Include misunderstanding</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01704" HREF="msg01704.shtml">Problems moving from 1.7.4 to 2.0.1</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01709.shtml">wml example section</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01711.shtml">problems with the wml site</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01704.shtml">Problems moving from 1.7.4 to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01712.shtml">Re: Include misunderstanding</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01710"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01710"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

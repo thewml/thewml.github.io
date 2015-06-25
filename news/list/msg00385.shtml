@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml::std::lang -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 5 Feb 1999 03:43:17 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990204212724.15667A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36B9DB49.8AC94BEC@irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00385">Date Index</a>][<a href="thrd3.shtml#00385">Thread Index</a>]<br>
+[<A HREF="msg00384.shtml">Date Prev</A>][<A HREF="msg00386.shtml">Date Next</A>][<A HREF="msg00386.shtml">Thread Prev</A>][<A HREF="msg00394.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml::std::lang</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 4 Feb 1999 21:36:07 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 4 Feb 1999, Frederic Le Mouel wrote:
+
+&gt; Hello,
+&gt; 
+&gt; I'm novice in wml use (2 days :) and I have a little 
+&gt; basic problem:
+[...]
+&gt; Does I missed something ? wrongs compilations arguments ?
+
+Welcome Frédéric,
+
+you may read the documentation (type wmd), and then try
+&lt;lang:new id=en&gt;
+&lt;lang:new id=fr&gt;
+&lt;lang:en: Hello&gt;&lt;lang:fr: Salut&gt;
+
+(note the extra space) or
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=fr short&gt;
+&lt;en&gt;Hello&lt;/en&gt;
+&lt;fr&gt;Salut&lt;/fr&gt;
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00383" HREF="msg00383.shtml">wml::std::lang</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00384.shtml">Getting filenames..</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00386.shtml">Re: Getting filenames..</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00386.shtml">Re: Getting filenames..</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00394.shtml">Re: wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00385"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00385"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

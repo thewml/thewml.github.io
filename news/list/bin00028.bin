@@ -1,0 +1,66 @@
+64a65,69
+> # Assignment mode: 1 for 'single quotes', 2 for "double quotes"
+> <define-tag perl:assign:mode whitespace=delete>
+>     __perl:assign<get-var __perl:level />
+> </define-tag>
+> 
+67c72
+<   <define-tag perl:checkprint></define-tag>\
+---
+> <set-var <perl:assign:mode />=%0 />\
+71,80c76,88
+< <define-tag perl:print:enable whitespace=delete>
+<   <define-tag perl:checkprint>
+<   <set-var __perl:print= />
+<   <if <eq <get-var __perl:level /> 1 />
+<     <set-var __perl:print=true /> />
+<   <if <string-neq <array-topvalue __perl:fh />
+<                 <get-var __perl:filehandle /> />
+<     <set-var __perl:print=true /> />
+<   <get-var __perl:print />
+<   </define-tag>
+---
+> <define-tag perl:print:enable whitespace=delete>\
+> <unset-var <perl:assign:mode /> />\
+> </define-tag>
+> <define-tag perl:checkprint whitespace=delete>
+> <when <not <get-var <perl:assign:mode /> /> />>
+> <set-var __perl:print= />
+> <if <eq <get-var __perl:level /> 1 />
+>   <set-var __perl:print=true /> />
+> <if <string-neq <array-topvalue __perl:fh />
+>               <get-var __perl:filehandle /> />
+>   <set-var __perl:print=true /> />
+> <get-var __perl:print />
+> </when>
+82,84d89
+< 
+< #   Default behaviour
+< <perl:print:enable />
+88c93
+< <perl:print:disable />
+---
+> <perl:print:disable 2 />
+108c113
+< <perl:print:disable />
+---
+> <perl:print:disable 1 />
+161c166
+< <when <neq <get-var __perl:level /> 0 />>
+---
+> <when <neq <get-var __perl:level /> 0 />><when <get-var <perl:assign:mode /> />>
+167c172
+< </when>\
+---
+> </when></when>\
+185c190,196
+<    <__perl_var-1 /> .= <perl:var /> . <<"EPERL_EOT";
+---
+>    <__perl_var-1 /> .= <perl:var />;
+> <when <eq <get-var __perl:assign<substract <get-var __perl:level /> 1 /> /> 2 />>\
+>    <__perl_var-1 /> .= <<"EPERL_EOT";
+> </when>\
+> <when <eq <get-var __perl:assign<substract <get-var __perl:level /> 1 /> /> 1 />>\
+>    <__perl_var-1 /> .= <<'EPERL_EOT';
+> </when>\
+ 

@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 1.99.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 21 Mar 2000 01:21:11 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000320215127.579B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200003201850.DAA02358@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01464">Date Index</a>][<a href="thrd30.shtml#01464">Thread Index</a>]<br>
+[<A HREF="msg01463.shtml">Date Prev</A>][<A HREF="msg01465.shtml">Date Next</A>][<A HREF="msg01463.shtml">Thread Prev</A>][<A HREF="msg01467.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 1.99.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 20 Mar 2000 22:06:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 21 Mar 2000, Nobuyuki Tsuchimura wrote:
+
+&gt;   Hi,
+&gt; 
+&gt; &gt; i just released wml-1.99.3
+&gt; 
+&gt;   I tried, then I found...
+&gt; 
+&gt; 1) "/*...*/" doesn't seem to be comment,
+&gt;    but its entry exist in 'man wml_tags'.
+
+You are right, i have to modify this file.
+
+&gt; 2) &lt;sub&gt; is override by built-in tag.
+&gt;    How can I write &lt;sub&gt;subscript&lt;/sub&gt; ?
+
+In fact, &lt;sub&gt; was defined in mhc but not in mp4h where it is replaced
+by &lt;substract&gt;.  But for compatibility reasons, WML defines an alias
+sub=substract.  You have 2 solutions:
+ a) write &lt;sub*&gt;...&lt;/sub*&gt;
+or
+ b) put &lt;undef sub&gt; at the beginning of your templates.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01467" HREF="msg01467.shtml">Re: WML 1.99.3</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+<li><strong><A NAME="01470" HREF="msg01470.shtml">Re: WML 1.99.3</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01463" HREF="msg01463.shtml">Re: WML 1.99.3</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01463.shtml">Re: WML 1.99.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01465.shtml">Re: return and subst-in-page</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01463.shtml">Re: WML 1.99.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01467.shtml">Re: WML 1.99.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01464"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01464"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

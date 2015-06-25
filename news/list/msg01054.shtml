@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problems with wml_aux_tidy -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 12 Oct 1999 00:28:45 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991011212307.3415A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991011182222.19525S&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01054">Date Index</a>][<a href="thrd22.shtml#01054">Thread Index</a>]<br>
+[<A HREF="msg01053.shtml">Date Prev</A>][<A HREF="msg01055.shtml">Date Next</A>][<A HREF="msg01053.shtml">Thread Prev</A>][<A HREF="msg01055.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problems with wml_aux_tidy</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Oct 1999 00:28:02 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 11 Oct 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Hello,
+&gt; 
+&gt; I run tidy after wml-izing with
+&gt; 
+&gt; -E ~/bin/epilog 
+&gt; 
+&gt; in .wmlrc
+&gt; 
+&gt; epilog is a skript:
+&gt; 
+&gt; #! /bin/sh
+&gt; /opt/wml/lib/exec/wml_aux_tidy -mu $1
+&gt; 
+&gt; When I use it, I get the following errormessage
+&gt; 
+&gt; $ wmk -f 1999/19991011.wml
+&gt; /opt/wml/bin/wml -n -o '(ALL-LANG_*)uLANG_DA:19991011.html' -o '(ALL-LANG_*)uLANG_HE:../heute/index.html' 19991011.wml
+&gt; -\|/-\|/-
+&gt; Tidy (vers 26th July 1999) Parsing "19991011.html"
+&gt; line 78 column 1 - Warning: trimming empty &lt;p&gt;
+&gt; line 99 column 1 - Warning: trimming empty &lt;p&gt;
+&gt; line 153 column 1 - Warning: trimming empty &lt;p&gt;
+&gt; line 263 column 1 - Warning: trimming empty &lt;p&gt;
+&gt; line 265 column 1 - Warning: html doctype doesn't match content
+&gt; 
+&gt; "19991011.html" appears to be HTML 4.0 Transitional
+&gt; 5 warnings/errors were found!
+&gt; 
+&gt; HTML &amp; CSS specifications are available from <A  HREF="http://www.w3.org/">http://www.w3.org/</A>
+&gt; To learn more about Tidy see <A  HREF="http://www.w3.org/People/Raggett/tidy/">http://www.w3.org/People/Raggett/tidy/</A>
+&gt; Please send bug reports to Dave Raggett care of &lt;html-tidy@w3.org&gt;
+&gt; Lobby your company to join W3C, see <A  HREF="http://www.w3.org/Consortium">http://www.w3.org/Consortium</A>
+&gt; ** WML:Error: epilog failed: /home/juh/bin/epilog 19991011.html
+&gt; ** WMk:Break: Error in WML (rc=256)
+&gt; 
+&gt; Tidy has run sucessfully but wmk stops, so I cannot run wnk on
+&gt; multiple files. 
+
+No, tidy has not run sucessfully. From wml_aux_tidy(1)
+   If you want to run Tidy from a Perl or other scripting language you
+   may find it of value to inspect the result returned by Tidy when it
+   exits: 0 if everything is fine, 1 if there were warnings and 2 if
+   there were errors.
+
+So you could rewrite your epilog script this way if you want to skip
+warnings:
+  #! /bin/sh
+  /opt/wml/lib/exec/wml_aux_tidy -mu $1
+  [ $? -ne 2 ]
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01053" HREF="msg01053.shtml">Problems with wml_aux_tidy</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01053.shtml">Problems with wml_aux_tidy</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01055.shtml">file permissions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01053.shtml">Problems with wml_aux_tidy</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01055.shtml">file permissions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01054"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01054"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

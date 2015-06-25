@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.1, Red Hat Linux 5.2 (kernel 2.2.9) -->
+<!--X-From-R13: syrroNsyrro.pbz -->
+<!--X-Date: Tue, 15 Jun 1999 07:21:17 +0200 (MET DST) -->
+<!--X-Message-Id: 199906141442.QAA20513@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00770">Date Index</a>][<a href="thrd16.shtml#00770">Thread Index</a>]<br>
+[<A HREF="msg00769.shtml">Date Prev</A>][<A HREF="msg00771.shtml">Date Next</A>][<A HREF="msg00791.shtml">Thread Prev</A>][<A HREF="msg00772.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.1, Red Hat Linux 5.2 (kernel 2.2.9)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 14 Jun 1999 16:42:46 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.1
+Operating System: Red Hat Linux 5.2 (kernel 2.2.9)
+
+Problem Description:
+| Very, very minor problem:
+| 
+| &lt;href url=$(IGNORE_THIS) hint="John's Possessive"&gt;
+| 
+| yields:
+| 
+| &lt;a href=$(IGNORE_THIS)
+| onMouseOver="self.status='John's Possessive';return true"&gt;
+| 
+| Causing the onMouseOver to fail.  It needs to create:
+| 
+| &lt;a href=$(IGNORE_THIS)
+| onMouseOver="self.status='John\'s Possessive';return true"&gt;
+| 
+| to work properly.
+| 
+| Current Workaround:
+| 
+| &lt;href url=$(IGNORE_THIS) hint="John\\'s Possessive"&gt;
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00769.shtml">Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00771.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00791.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00772.shtml">1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00770"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00770"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

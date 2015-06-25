@@ -1,0 +1,88 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont and truetype ? -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Wed, 24 Feb 1999 16:03:45 +0100 (CET) -->
+<!--X-Message-Id: 87btijhmui.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990224010753.A31392@ganymede -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00403">Date Index</a>][<a href="thrd10.shtml#00403">Thread Index</a>]<br>
+[<A HREF="msg00402.shtml">Date Prev</A>][<A HREF="msg00404.shtml">Date Next</A>][<A HREF="msg00402.shtml">Thread Prev</A>][<A HREF="msg00404.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont and truetype ?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 24 Feb 1999 15:56:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Alexander Graefe &lt;nachtfalke@usa.net&gt; writes:
+&gt; I recently toyed around with the gfont tag, and I was wondering, if
+&gt; there is a way to get TrueType fonts working with it. I really like
+&gt; the gfont-tag, but the more fonts, the better.
+
+Yes, you just have to get your TeX-installation to use TT, which can
+be done using ttf2pk and ttf2tfm. See www.freetype.org or ask your
+favourite TeX guru.
+
+Yours, Florian
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00402" HREF="msg00402.shtml">gfont and truetype ?</A></strong>, <em>From:</em> Alexander Graefe</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00402.shtml">gfont and truetype ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00404.shtml">#!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00402.shtml">gfont and truetype ?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00404.shtml">#!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00403"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00403"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

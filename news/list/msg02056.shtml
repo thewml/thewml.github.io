@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Nested ePerl tags implementation -->
+<!--X-From-R13: Brge Oaqerlri <crgeNknanqh.eh> -->
+<!--X-Date: Wed, 8 Nov 2000 21:15:17 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10011082253200.29799&#45;100000@ns.xanadu.ru -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200011081859.TAA24394@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02056">Date Index</a>][<a href="thrd42.shtml#02056">Thread Index</a>]<br>
+[<A HREF="msg02055.shtml">Date Prev</A>][<A HREF="msg02057.shtml">Date Next</A>][<A HREF="msg02055.shtml">Thread Prev</A>][<A HREF="msg02058.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Nested ePerl tags implementation</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Petr Andreyev &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 8 Nov 2000 23:15:16 +0300 (MSK)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!
+
+I found the following problem when using &lt;perl... tags defined in std/tags.wml
+(I am sorry if this is a known issue): (the funny) nesting ePerl tags
+construction sometimes does not work. An example
+
+#use wml::std::tags
+&lt;define-tag nesting endtag=required whitespace=delete&gt;
+&lt;perl&gt;
+    &lt;perl:assign:sq $body&gt;%body&lt;/perl:assign:sq&gt;
+    &lt;perl:print: $body&gt;
+&lt;/perl&gt;
+&lt;/define-tag&gt;
+&lt;nesting&gt;&lt;nesting&gt;ABC&lt;/nesting&gt;&lt;/nesting&gt;
+&lt;nesting&gt;D&lt;nesting&gt;E&lt;/nesting&gt;F&lt;/nesting&gt;
+
+
+This script produces:
+ABC
+
+I found the reason for such a behaviour. Here is the diff:
+
+181,182c181
+&lt;    $perl_var&lt;substract &lt;get-var __perl:level /&gt; 1 /&gt; .= &lt;&lt;"EPERL_EOT";
+&lt; &lt;perl:var /&gt;\
+---
+&gt;    $perl_var&lt;substract &lt;get-var __perl:level /&gt; 1 /&gt; .= &lt;perl:var /&gt; . &lt;&lt;"EPERL_EOT";
+
+It works. In particular, with the new version of tags.wml the example above
+produces:
+ABC
+DEF
+
+Hope, this will be helpful for somebody.
+With best regards,
+Petr Andreyev
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02058" HREF="msg02058.shtml">Re: Nested ePerl tags implementation</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02055.shtml">Re: Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02057.shtml">Open System Manager Positions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02055.shtml">Re: Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02058.shtml">Re: Nested ePerl tags implementation</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02056"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02056"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

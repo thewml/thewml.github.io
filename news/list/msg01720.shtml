@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: relative links -->
+<!--X-From-R13: Znybg Rbzvavdhr <ynybgNhavi&#45;nvk.se> -->
+<!--X-Date: Fri, 16 Jun 2000 10:04:39 +0200 (MET DST) -->
+<!--X-Message-Id: 200006160804.KAA01976@romarin.univ&#45;aix.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01720">Date Index</a>][<a href="thrd36.shtml#01720">Thread Index</a>]<br>
+[<A HREF="msg01719.shtml">Date Prev</A>][<A HREF="msg01721.shtml">Date Next</A>][<A HREF="msg01719.shtml">Thread Prev</A>][<A HREF="msg01721.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>relative links</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Lalot Dominique &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 16 Jun 2000 10:09:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I have developped some perl script around wml.
+My purpose is to manage a site, without explaining wml to end users.
+
+So I have made a generic.wml (template) for all the pages, in which I
+include files named foo.src.html.
+My script generate foo.html.
+This script is launched from the root of my pages.
+It reads nb.inc (navbar) discover the hierarchy of pages. Then call wml
+like that:
+wml -o path.html -DFIC=path.src.html generic.wml
+As it was not working correctly for sub directories, I was obliged to put
+hard links instead of relative ones.
+What could I do whithout putting wml files in each subdirs and launching wmk?
+
+Thanks in advance
+
+Dominique
+_______________________________________________________________________
+
+Mr. Dominique Lalot                           (33) 04 42 91 34 24
+Ingenieur Systemes et Reseaux                  Email: lalot@univ-aix.fr
+Faculte de Sciences Economiques                14 Av Jules Ferry
+13621 Aix en Provence                          France
+Correspondant Ciscam                <A  HREF="http://ciscam.univ-aix.fr">http://ciscam.univ-aix.fr</A>
+_______________________________________________________________________
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01719.shtml">Re: [LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01721.shtml">Re: relative links</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01719.shtml">Re: [LONG] Last call for comments before WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01721.shtml">Re: relative links</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01720"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01720"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

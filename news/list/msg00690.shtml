@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Placing files -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 25 May 1999 17:12:29 +0200 (MET DST) -->
+<!--X-Message-Id: m13e0lp4iy.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990524182246.A207@meu.debian -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00690">Date Index</a>][<a href="thrd15.shtml#00690">Thread Index</a>]<br>
+[<A HREF="msg00689.shtml">Date Prev</A>][<A HREF="msg00691.shtml">Date Next</A>][<A HREF="msg00689.shtml">Thread Prev</A>][<A HREF="msg00691.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Placing files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 25 May 1999 17:12:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Xose Manoel Ramos &lt;xmanoel@i.am&gt; writes:
+
+We develop our sites in a directory structure identical to but
+separate from the published site. 
+
+This has the advantage that you can play around without the "customer"
+(visitor of your website) getting annoyed by broken pages while you
+are rebuilding them.
+
+We then use rsync to update the actual site.
+
+With rsync you can exclude certain files from being synced, so you
+have the choice of just transfering html-files, etc, or of transfering
+everything, including the wml-files. 
+
+We do the latter and are thus being nice to other WML users you can
+look at the wml-files and see how we implemented them.
+
+Cheers,
+Fritz
+
+P.S.: Be careful with rsync. It is easy to screw up and sync the wrong
+      way. We have a shell script doing it, so that we don't have to
+      enter the parameters manually. Here is an example:
+
+#! /bin/csh -f
+rsync  --links --verbose --delete --exclude '*~' --times --rsh=ssh -r . afg@tardis:/home/afg/public_html/ 
+
+BTW, the source and destination can be on the same host, of course, or
+on separate ones. Using rsync also speeds up updates a lot, as you
+often only have to copy a few files as nothing else changed. This is
+especially great if you sync over a slow link.
+
+
+
+
+
+&gt; I just wanted a tip...
+&gt; 
+&gt; When creating web pages using WML... What to do?
+&gt; 
+&gt;   * Mix the .html files in the same directory where the .wml files
+&gt;   are
+&gt; 
+&gt;   * Have the .wml files in one directory, and the .html in other
+&gt; 
+&gt;   * Create test .html files mixed with the .wml, and then move them
+&gt;   to it's own directory
+&gt; 
+&gt; Probably that's not a big deal, but I am just beginning with a few
+&gt; pages, probably in the future this kind of decissions will avoid
+&gt; having a mess.  
+&gt; 
+&gt; -- 
+&gt; Saudos:
+&gt; &gt;&lt;ose        xmanoel@i.am        (Vigo/Galicia/España)
+&gt;          <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+&gt;          <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+&gt; 
+&gt; 05/24	Bob Dylan (Robert Zimmerman) is born in Duluth, 1941
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00689" HREF="msg00689.shtml">Placing files</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00689.shtml">Placing files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00691.shtml">Placing files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00689.shtml">Placing files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00691.shtml">Placing files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00690"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00690"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

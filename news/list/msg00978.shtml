@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Very complicated m4 stuff -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 19 Sep 1999 00:40:32 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990918232802.2136A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990914132314.C280@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00978">Date Index</a>][<a href="thrd17.shtml#00978">Thread Index</a>]<br>
+[<A HREF="msg00976.shtml">Date Prev</A>][<A HREF="msg00979.shtml">Date Next</A>][<A HREF="msg00964.shtml">Thread Prev</A>][<A HREF="msg00802.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Very complicated m4 stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 19 Sep 1999 00:39:44 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 14 Sep 1999, Xose Manoel Ramos wrote:
+
+[...]
+&gt; My problem is, the files I insert if they are inserted in Pass 2,
+&gt; Pass 3 or Pass 4, they will not work fine because certain expansions
+&gt; will not work (like the #include and #use they have inside) or any
+&gt; $(var) expansion. For example, making this in M4 is quite terrible,
+&gt; because all the MH and eP macros will never be executed.
+[...]
+
+Hi Xose Manoel,
+
+[i will have a look at your xbox macro]
+
+Below is a patch to change pass order, when appending an exclamation
+mark to the pass specification, e.g.
+   wml -p1-4,1-9! foo.wml
+
+But take care that pass 9 must be the last one.
+
+Denis
+
+--- wml_frontend/wml.src     1999/09/10 10:05:46     1.28
++++ wml_frontend/wml.src     1999/09/18 21:11:19
+@@ -926,7 +926,14 @@
+     return $x;
+ }
+ $p =~ s|(\d)-(\d)|&amp;expandrange($1, $2)|sge;
+-@p = sort {$a &lt;=&gt; $b} (split('', $p));
++@p = split('', $p);
++if ($p =~ m/!$/) {
++    $p =~ s/!$//;
++    @p = split('', $p);
++}
++else {
++    @p = sort {$a &lt;=&gt; $b} (split('', $p));
++}
+ 
+ #   only pre-processing if -M option specified
+ @p = ( '1' ) if $opt_M ne '-';
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00964" HREF="msg00964.shtml">Re: Very complicated m4 stuff</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00976.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00979.shtml">WML 1.7.2: Undocumented feature in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00964.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00802.shtml">Spaces in filnames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00978"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00978"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

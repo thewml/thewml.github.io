@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: GIFs, LZW, gd, and gFont again... -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Tue, 30 Nov 1999 17:27:01 +0100 (MET) -->
+<!--X-Message-Id: 19991130081833.B5467@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9911291614450.26592&#45;100000@gtt&#45;ixs.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01164">Date Index</a>][<a href="thrd25.shtml#01164">Thread Index</a>]<br>
+[<A HREF="msg01163.shtml">Date Prev</A>][<A HREF="msg01165.shtml">Date Next</A>][<A HREF="msg01163.shtml">Thread Prev</A>][<A HREF="msg01166.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: GIFs, LZW, gd, and gFont again...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 Nov 1999 08:18:33 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Nov 29, 1999, Stephan Petersen wrote:
+
+&gt; the latest version of gd (<A  HREF="http://www.boutell.com/gd/">http://www.boutell.com/gd/</A>) doesn't support the
+&gt; creation of GIFs any more. Does/should that have any effect on wml/gFont?
+
+Yes, T.Boutell switched to PNG because the GIF license issue.  But it doesn't
+directly affect gFONT, because currently gFONT still uses it's own local gd
+library and this was patched to support the loading of the TeX/gdf fonts, etc.
+What actually should be done is to perhaps move from this old gd library to
+the recent one, but only if GIFs can be still generated for backward
+compatibility.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01166" HREF="msg01166.shtml">Re: GIFs, LZW, gd, and gFont again...</A></strong>, <em>From:</em> Howard Alexander LaHurreau</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01163" HREF="msg01163.shtml">GIFs, LZW, gd, and gFont again...</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01163.shtml">GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01165.shtml">Specifying an alternate output extension</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01163.shtml">GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01166.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01164"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01164"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

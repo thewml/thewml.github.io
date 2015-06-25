@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Blank lines (once more) -->
+<!--X-From-R13: [nep Pnhqbva <ononsbhNononsbh.rh.bet> -->
+<!--X-Date: Thu, 10 Dec 1998 03:11:17 +0100 (CET) -->
+<!--X-Message-Id: 19981209214514.A477@skiff.babafou.eu.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00269">Date Index</a>][<a href="thrd6.shtml#00269">Thread Index</a>]<br>
+[<A HREF="msg00268.shtml">Date Prev</A>][<A HREF="msg00270.shtml">Date Next</A>][<A HREF="msg00292.shtml">Thread Prev</A>][<A HREF="msg00273.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Blank lines (once more)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Marc Baudoin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 9 Dec 1998 21:45:15 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+As you may have noticed from my few messages to this list, I
+discovered WML not long ago and it looks like a great tool to
+produce and maintain HTML pages in a consistent way.  I'd love to
+use it.
+
+But (because there's a big but, no joke here) I can't use it for
+now.
+
+I'm very picky about blank lines and I want my HTML the way I've
+decided and the -O0 option (so that pass 8 doesn't strip blank
+lines) is not enough for me.  You can have an idea about my blank
+line paranoia by looking at &lt;URL:<A  HREF="http://www.agm-ita.ensta.fr/">http://www.agm-ita.ensta.fr/</A>&gt;.
+
+I'd like to use WML that way :
+
+- #use some files used to define custom tags (no HTML code here)
+- #define some files to get standard headers/footers (only HTML
+  code here)
+
+Here's what I think would be a typical page:
+
+-----------------------------------------------------------------
+
+#use wml::agm-ita::agm-ita
+#include "header.wml"
+
+&lt;P&gt;
+My HTML page is here
+&lt;/P&gt;
+
+#include "footer.wml"
+
+-----------------------------------------------------------------
+
+I want to keep my blank lines the way they are in the HTML code
+of the main page and in the included header.wml and footer.wml
+but not in wml::agm-ita::agm-ita.
+
+The problem is I use -O0 and this does not make differences about
+#use'd and #include'd files as this occurs in pass 1 and there's
+no real difference between #include and #use.  So I get a bunch
+of blank lines from wml::agm-ita::agm-ita at the beginning of my
+page, which I don't want.
+
+A solution would be to change the structure of WML so that it
+makes a real difference between #use'd and #include'd files but
+that would imply a lot of rewrite...
+
+What are your comments?
+
+-- 
+Marc Baudoin   -=-   &lt;babafou@babafou.eu.org&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00273" HREF="msg00273.shtml">Re: Blank lines (once more)</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00268.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00270.shtml">variables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00292.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00273.shtml">Re: Blank lines (once more)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00269"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00269"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

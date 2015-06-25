@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question about the images locations ... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 30 Aug 1999 16:38:08 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990830162521.5856A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 37CA4CF8.79B7A804@solutions.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00913">Date Index</a>][<a href="thrd19.shtml#00913">Thread Index</a>]<br>
+[<A HREF="msg00912.shtml">Date Prev</A>][<A HREF="msg00914.shtml">Date Next</A>][<A HREF="msg00911.shtml">Thread Prev</A>][<A HREF="msg00915.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question about the images locations ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 30 Aug 1999 16:31:28 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 30 Aug 1999, Caillaud Nicolas wrote:
+
+&gt; when I try to put
+&gt; &lt;navbar:filter&gt;
+&gt;     my ($mcode) = @_;
+&gt;     return $mcode;
+&gt; &lt;/navbar:filter&gt;
+&gt; I get an error :
+&gt; ePerl : Error : ....
+&gt; undefined subroutine &amp;main:: called at :tmp:wml.xxxx
+&gt; any idea ?
+
+No.
+
+Please send an example.
+Did this one work ?
+
+  #use wml::des::navbar
+
+  &lt;navbar:define name=test&gt;
+  &lt;navbar:button id=foo txt=foo url=foo.html&gt;
+  &lt;navbar:button id=bar txt=bar url=bar.html&gt;
+  &lt;navbar:filter&gt;
+       my ($mcode) = @_;
+       return $mcode;
+  &lt;/navbar:filter&gt;
+  &lt;/navbar:define&gt;
+
+  &lt;navbar:render name=test&gt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00915" HREF="msg00915.shtml">Re: question about the images locations ...</A></strong>, <em>From:</em> Caillaud Nicolas</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00911" HREF="msg00911.shtml">Re: question about the images locations ...</A></strong>, <em>From:</em> Caillaud Nicolas</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00912.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00914.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00911.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00915.shtml">Re: question about the images locations ...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00913"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00913"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

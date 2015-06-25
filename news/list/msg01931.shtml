@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: fix for des::navbar -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 12 Sep 2000 22:35:48 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0009122231110.22148&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01931">Date Index</a>][<a href="thrd39.shtml#01931">Thread Index</a>]<br>
+[<A HREF="msg01930.shtml">Date Prev</A>][<A HREF="msg01932.shtml">Date Next</A>][<A HREF="msg01930.shtml">Thread Prev</A>][<A HREF="msg01932.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>fix for des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Sep 2000 22:35:41 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I have just started using the built in navbar code of wml again and
+found that there is a problem with nesting and the epilog .... 
+I think prolog and epilog should occure next to the button even
+when there is a sub navbar ... at the moment the sub navbar comes
+between the end of the button and the epilog ... here is the patch
+
+--- /usr/pack/wml-2.0.3-za/lib/include/des/navbar.wml   Wed Sep  6
+15:53:49 2000
++++ .wml/navbar.wml     Tue Sep 12 17:16:41 2000
+@@ -517,10 +517,6 @@
+             }
+         }
+ 
+-        if ($menu ne '' and $NAVBAR{"$menu"}-&gt;{OPEN}) {
+-            $O .= &amp;navbar_render_&lt;lang:current /&gt;($menu, $select, $subselected,
+-                $txtcol_n, $txtcol_s, $txtonly, $nohints, $nbcount);
+-        }
+ 
+         
+         #
+@@ -539,6 +535,13 @@
+                 }
+             }
+         }
++        #
++        # Any Sub Menus
++        #
++        if ($menu ne '' and $NAVBAR{"$menu"}-&gt;{OPEN}) {
++            $O .= &amp;navbar_render_&lt;lang:current /&gt;($menu, $select, $subselected,
++                $txtcol_n, $txtcol_s, $txtonly, $nohints, $nbcount);
++        }
+ 
+     }
+
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01932" HREF="msg01932.shtml">Re: fix for des::navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01930.shtml">Re: Bug reporting</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01932.shtml">Re: fix for des::navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01930.shtml">Re: Bug reporting</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01932.shtml">Re: fix for des::navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01931"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01931"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

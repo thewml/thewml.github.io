@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 May 1999 09:06:51 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990517085122.3015A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9905161939140.17295&#45;100000@hal.saar.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00664">Date Index</a>][<a href="thrd14.shtml#00664">Thread Index</a>]<br>
+[<A HREF="msg00663.shtml">Date Prev</A>][<A HREF="msg00665.shtml">Date Next</A>][<A HREF="msg00663.shtml">Thread Prev</A>][<A HREF="msg00683.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 May 1999 09:00:45 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 16 May 1999, Michael Kress wrote:
+
+&gt; On Sun, 9 May 1999, jeff covey wrote:
+&gt; 
+&gt; &gt; hey there!
+&gt; &gt; 
+&gt; &gt; i wanted to try wml, but i can't seem to get it installed.  i have a
+&gt; &gt; redhat 5.2 system with perl 5.005_02.  i've tried both of the rpms at:
+&gt; &gt; 
+&gt; &gt; <A  HREF="http://www.rpmfind.net/linux/RPM/wml.html">http://www.rpmfind.net/linux/RPM/wml.html</A>
+&gt; &gt; 
+&gt; &gt; , but i get this when i run wml:
+&gt; 
+&gt; [...snipped away errors...]
+&gt; 
+&gt; same to me - I upgraded a RedHat-5.2 box to RedHat-6.0; I didn't recompile
+&gt; the package and I got exactly the same error as described by you.
+&gt; 
+&gt; mk@superhal ~/p/kn/v2 [2]$ rpm -q perl
+&gt; perl-5.00503-2
+&gt; mk@superhal ~/p/kn/v2 [0]$ rpm -q wml
+&gt; wml-1.6.8-8
+&gt; 
+&gt; Thanx god, I still got a working installation somewhere else ... ;-)
+&gt; 
+&gt; cu - Michael
+
+Hi Michael,
+
+where did you find this wml-1.6.8-8 ?  The only one i find is wml-1.6.8-1.
+
+&gt;From the source rpm, i have build another source rpm which includes the
+patch for perl 5.005. You can get it at
+   <A  HREF="ftp://imacs.polytechnique.fr/pub/tmp/redhat/wml-1.6.8-2.src.rpm">ftp://imacs.polytechnique.fr/pub/tmp/redhat/wml-1.6.8-2.src.rpm</A>
+
+Rebuild it with
+   prompt$ rpm --rebuild wml-1.6.8-2.src.rpm
+This will create both binary and source rpms for your RH6.0.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00683" HREF="msg00683.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00663" HREF="msg00663.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00663.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00665.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00663.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00683.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00664"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00664"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

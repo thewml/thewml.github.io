@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 23 Jun 2000 00:42:17 +0200 (MET DST) -->
+<!--X-Message-Id: 20000623004404.A31710@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01730">Date Index</a>][<a href="thrd36.shtml#01730">Thread Index</a>]<br>
+[<A HREF="msg01729.shtml">Date Prev</A>][<A HREF="msg01731.shtml">Date Next</A>][<A HREF="msg01769.shtml">Thread Prev</A>][<A HREF="msg01733.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jun 2000 00:44:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+In one word, WML-2.0.2 is out.  I am working very hard those days and
+prefer going to sleep than writing detailed information on changes,
+sorry.
+
+This version implements the syntax for tag processing discussed here,
+and should be easier to use than wml-2.0.0 and wml-2.0.1, because
+compatibility with WML 1.x has been improved.
+
+I am really happy with the latest mp4h-1.0.2 which is the processor run
+on Pass 2, thanks to those who contribute to make it much better :o)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01733" HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01729.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01731.shtml">RE: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01769.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01730"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01730"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

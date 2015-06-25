@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.3 -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Mon, 16 Mar 1998 17:05:08 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980316101755.15535A&#45;100000@keymaster.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199803151737.MAA03595@vitro.mph.msu.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00114">Date Index</a>][<a href="thrd3.shtml#00114">Thread Index</a>]<br>
+[<A HREF="msg00113.shtml">Date Prev</A>][<A HREF="msg00115.shtml">Date Next</A>][<A HREF="msg00113.shtml">Thread Prev</A>][<A HREF="msg00115.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 16 Mar 1998 10:59:02 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 15 Mar 1998, Niels Larsen wrote:
+
+&gt; 1. I am trying to figure how much work it would be to use WML
+&gt;    when HTML is already very intertwined with Perl, and to weigh
+&gt;    this against the advantages.
+&gt; 
+e-perl by itself would be good for this... You take pages like this
+
+hello world
+&lt;: perl code; 
+:&gt;
+more text
+
+&gt; 2. Will WML work reasonably fast for pages that are all put 
+&gt;    together at run time? (at first I thought WML was just for
+&gt;    static pages, but it can be used to expand pages on the fly,
+&gt;    right?)
+
+I currently am playing with this. It's too slow. If you want _all_ of what
+wml provides, on the fly, perhaps the 2.0 rewrite that I seem to recall
+involving speedups (stuff written in C rather than perl or something?)
+will be something to wait for. However, I think Ralf uses e-perl on the
+fly by itself right now, and that'd probably be fine for you.
+
+OTOH, if you DID want to make wml happen on the fly, I'd recommend
+figgering out making mod_perl do the work, so that there was no perl
+startup overhead, eliminating passes that you didn't need, and doing as
+much else as you could to speed it up. Luckily I don't need to worry about
+any of this since my work is for a semester-only project and doesn't need
+to get past proof-of-concept. =)
+
+jim
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00113" HREF="msg00113.shtml">Re: ANNOUNCE: WML 1.6.3</A></strong>, <em>From:</em> Niels Larsen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00113.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00115.shtml">ANNOUNCE: WML 1.6.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00113.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00115.shtml">ANNOUNCE: WML 1.6.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00114"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00114"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

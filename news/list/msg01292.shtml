@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Questions... -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Sun, 23 Jan 2000 01:01:59 +0100 (MET) -->
+<!--X-Message-Id: 14474.356.921459.269113@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01292">Date Index</a>][<a href="thrd27.shtml#01292">Thread Index</a>]<br>
+[<A HREF="msg01291.shtml">Date Prev</A>][<A HREF="msg01293.shtml">Date Next</A>][<A HREF="msg01287.shtml">Thread Prev</A>][<A HREF="msg01293.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Questions...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 23 Jan 2000 00:59:41 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I have installed wml 1.7.4 on a debian potato, till I get it to work
+on my main machine, the potato system is a 486 with 8MB RAM, so
+working isn´t really fun ;-)
+
+My site is evolving good, but before I get into filling it with stuff
+I have to clear some questions:
+
+I want to have a news and quicklinks area on my site, so I thought it
+would be the easiest to make directories "news" and "quicks" which
+contain simple files like i.e. NewVersion1.72.wml:
+
+&lt;date&gt;12.12.1999&lt;/date&gt;
+&lt;link&gt;www.blender.nl&lt;/link&gt;
+&lt;text&gt;Blender Version 1.72&lt;/text&gt;
+
+and let wml render them into a nice table (the tags are definied in my 
+common.wml).
+
+I first come up with the idea to let  perl do the work:
+
+#include "common.wml"
+&lt;:
+	@FILES = ();
+    push(@FILES, `find ./news/ -depth -type f -name "*.wml" -print`);
+        @FILES = sort(@FILES);
+    foreach $file (@FILES) {
+	@DATEI = ();
+        $file =~ s|\n$||;
+        $file =~ s|^\./||;
+	push(@DATEI, `cat $file`);
+	print @DATEI;
+	print "\n";
+    }
+:&gt;
+
+This works some kind, but naturally the tags didn´t get expanded,
+because perl is pass 3... I tried to call wml with the option -p
+1-3,1-9 but this didn´t work, it does the passes this way:
+1,1,2,2,3,3,... (why?)
+
+Maybe I´m totally wrong with my idea and someone could point me into
+the right direction.
+
+Thanks,
+Carsten.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01291.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01293.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01287.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01293.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01292"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01292"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: vim syntax file? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Mon, 25 Jan 1999 14:02:49 +0100 (CET) -->
+<!--X-Message-Id: 19990125140246.A14583@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990125103551.A7643@skater.htu.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00368">Date Index</a>][<a href="thrd8.shtml#00368">Thread Index</a>]<br>
+[<A HREF="msg00367.shtml">Date Prev</A>][<A HREF="msg00369.shtml">Date Next</A>][<A HREF="msg00366.shtml">Thread Prev</A>][<A HREF="msg00371.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: vim syntax file?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Jan 1999 14:02:46 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 25, 1999, Gerfried Fuchs wrote:
+
+&gt;  I'm quite new to this list but I hope someone of you can help me
+&gt; anyway. I guess there must be many of wml users out there which are
+&gt; editing with vim. Has anyone of you done a syntax file for vim yet?
+&gt; Maybe just alpha but still better of a simple copy of the html.vim file?
+&gt; 
+&gt;  That would be great!
+
+Someone wanted to write such a thing a few months ago for Emacs, AFAIK.  I
+gave the hint to start with the wml_tags document where all existing WML tags
+are listed.
+
+&gt;  And another thing I wanted to ask: When I write a .wml file and use the
+&gt; magic line:
+&gt; #!/usr/local/bin/wml -n -o test.html
+&gt;  as first line and then mark it executeable just like a shell-script -
+&gt; that doesn't work  :(
+
+You mean for server-side includes via XBitHack of Apache? You can use:
+
+#!/usr/local/bin/wml -n -o u+x@test.html
+
+&gt;  What am I missing? Isn't this possible?
+
+In a hacker tool like WML anything *IS* possible.  The question is just, how
+much effort is actually needed to make it possible... ;-)
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00371" HREF="msg00371.shtml">Re: vim syntax file? Yesss</A></strong>, <em>From:</em> Alvise Belotti</li>
+<li><strong><A NAME="00372" HREF="msg00372.shtml">Re: vim syntax file?</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00366" HREF="msg00366.shtml">vim syntax file?</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00367.shtml">how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00369.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00366.shtml">vim syntax file?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00371.shtml">Re: vim syntax file? Yesss</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00368"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00368"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

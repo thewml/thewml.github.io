@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ePerl and '#' characters -->
+<!--X-From-R13: "=?vfb&#45;8859&#45;2?P?GUT3Lo[tHAcwrzS=?=" <cnjry.grpmnNcbpmgn.sz> -->
+<!--X-Date: Tue, 30 Oct 2001 16:02:23 +0100 (MET) -->
+<!--X-Message-Id: 005a01c16153$05fad8f0$3a140b0a@ptecza -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02416">Date Index</a>][<a href="thrd49.shtml#02416">Thread Index</a>]<br>
+[<A HREF="msg02415.shtml">Date Prev</A>][<A HREF="msg02417.shtml">Date Next</A>][<A HREF="msg02414.shtml">Thread Prev</A>][<A HREF="msg02417.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ePerl and '#' characters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Pawe&lstrok; T&eogon;cza&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 Oct 2001 15:56:15 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!!!
+
+It's probably question about ePerl and not WML, but I need your help,
+because I don't know perl hackers :-( I have defined following container for
+the examples of console commands:
+
+&lt;define-container example&gt;
+&lt;table border="0" cellpadding="5" cellspacing="0"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;tt&gt;
+&lt;:
+my @body = '';
+$body = q/%body/;
+
+$body =~ s/  /&amp;nbsp;&amp;nbsp;/g;
+$body =~ s/\n/&lt;br&gt;\n/g;
+
+print $body;
+:&gt;
+&lt;/tt&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/define-container&gt;
+
+If a body of example container includes lines with '#' characters in front
+of line (look at the example below), then ePerl cuts those lines :-(
+
+&lt;example&gt;
+# Ble ble ble ...
+# Bla bla ...
+
+XXX YYY              ZZZZ ...
+# Ble ble ble ...
+&lt;/example&gt;
+
+I want ePerl ignores '#' characters in body of example. What am I doing
+wrong? Thanks a lot for any help.
+
+My best regards
+Pawel Tecza
+
+
+
+------------------------------------------------------------
+Szyfrowane polaczenia telefoniczne pomiedzy komorkami???
+<A  HREF="http://fakty.interia.pl/nauka/tech/news?inf=103486">http://fakty.interia.pl/nauka/tech/news?inf=103486</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02415.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02417.shtml">RE: ePerl and '#' characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02414.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02417.shtml">RE: ePerl and '#' characters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02416"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02416"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

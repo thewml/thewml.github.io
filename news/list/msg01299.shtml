@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: defining tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 24 Jan 2000 10:19:03 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000124101300.23977A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14475.27248.276346.615402@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01299">Date Index</a>][<a href="thrd27.shtml#01299">Thread Index</a>]<br>
+[<A HREF="msg01298.shtml">Date Prev</A>][<A HREF="msg01300.shtml">Date Next</A>][<A HREF="msg01297.shtml">Thread Prev</A>][<A HREF="msg01300.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: defining tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 24 Jan 2000 10:22:38 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 23 Jan 2000, Carsten Wartmann wrote:
+
+[...]
+&gt; This works but is not very self explaining, so I tried this:
+&gt; 
+&gt; &lt;news date="19.01.2000" link="www.dunbar.com" text="Python Doc Browser"&gt;
+&gt; 
+&gt; As I understand the documentation I came up with this:
+&gt; 
+&gt; &lt;define-tag news2 date link text&gt;
+&gt; &lt;tr&gt;&lt;td bgcolor="#00FFFF" width="168"&gt;
+&gt; &lt;get-var date&gt;:&amp;nbsp; &lt;a href="http://&lt;get-var link&gt;/"&gt;&lt;get-var text&gt;&lt;/a&gt;
+&gt; &lt;/td&gt;&lt;/tr&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; which doesn't works quite as expected, a &lt;get-var date&gt; expands to
+&gt; date="19.01.2000" and not only "19.01.2000". So is it possible to
+&gt; define tags like the second?
+[...]
+
+You are right, documentation has not been my priority since i maintain
+WML. This is bad, but if anyone want to rewrite some parts of docs, it
+will really help me.
+
+For your problem, here is the ``standard'' way:
+  #   &lt;preserve&gt; and &lt;restore&gt; are defined in wml::std::tags
+  #use wml::std::tags
+
+  &lt;define-tag news&gt;
+  &lt;preserve date&gt;
+  &lt;preserve link&gt;
+  &lt;preserve text&gt;
+  &lt;set-var %attributes&gt;
+  &lt;tr&gt;&lt;td bgcolor="#00FFFF" width="168"&gt;\
+  &lt;get-var date&gt;:&amp;nbsp; &lt;a href="http://&lt;get-var link&gt;/"&gt;&lt;get-var text&gt;&lt;/a&gt;\
+  &lt;/td&gt;&lt;/tr&gt;
+  &lt;restore text&gt;
+  &lt;restore link&gt;
+  &lt;restore date&gt;
+  &lt;/define-tag&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01297" HREF="msg01297.shtml">defining tags</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01298.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01300.shtml">Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01297.shtml">defining tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01300.shtml">Still no .wmlrc on my system...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01299"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01299"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

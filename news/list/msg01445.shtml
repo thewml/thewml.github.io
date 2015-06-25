@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Upgrade problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 18 Mar 2000 23:03:22 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000318204517.587B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: jhwya7gfvl3.wl@velocity.optix.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01445">Date Index</a>][<a href="thrd29.shtml#01445">Thread Index</a>]<br>
+[<A HREF="msg01444.shtml">Date Prev</A>][<A HREF="msg01443.shtml">Date Next</A>][<A HREF="msg01437.shtml">Thread Prev</A>][<A HREF="msg01449.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Upgrade problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 18 Mar 2000 23:01:54 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 18 Mar 2000, Daisuke Yabuki wrote:
+
+&gt; Folks,
+&gt; 
+&gt; I tried some search regarding my issue and couldn't find postings 
+&gt; on a similar situation. I, therefore, expect this is not FAQ. 
+
+Indeed your problem seems very special.
+
+&gt; I finally upgraded from perl-5.00404 to perl-5.00503 a couple of 
+&gt; days ago since 5.00503 was required by a software I was trying 
+&gt; to install, which was not WML, by the way.
+&gt; 
+&gt; Yesterday, I noticed wml was not working anymore. One problem seemed
+&gt; that wml was looking for the old perl modules. So I reinstalled 
+&gt; wml-1.7.4 using perl-5.00503, but it still didn't work.
+
+This is indeed a feature.
+[...]
+
+&gt; t/09-p9_slice.......Can't locate object method "Max" via package "€" at /usr/local/src/www/authoring/wml-1.7.4/wml_test/TEST.root/lib/exec/wml_p9_slice line 662.
+&gt; ** WML:Break: Error in Pass 9 (rc=255).
+[...]
+
+&gt; Something seems to go wrong with Bit::Vector, so I looked at
+&gt; $WML_PREFIX/lib/perl/lib/5.00503/sun4-solaris/Bit/Vector.pm 
+&gt; but couldn't fiture out what's wrong.
+[...]
+
+There is nothing i can do. Maybe you could download slice from
+  <A  HREF="http://www.engelschall.com/sw/slice/">http://www.engelschall.com/sw/slice/</A>
+and see if it works (slice comes with a test which is not included
+into WML). This will give us useful clues.
+
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01449" HREF="msg01449.shtml">Re: Upgrade problem</A></strong>, <em>From:</em> Daisuke Yabuki</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01437" HREF="msg01437.shtml">Upgrade problem</A></strong>, <em>From:</em> Daisuke Yabuki</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01444.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01443.shtml">Re: align (1.99.1)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01437.shtml">Upgrade problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01449.shtml">Re: Upgrade problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01445"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01445"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

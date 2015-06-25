@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [RFC] &#38; in URLs -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 14 Nov 2000 11:02:13 +0100 (MET) -->
+<!--X-Message-Id: 20001114110745.A28590@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001113091013.A18699@imacs.polytechnique.fr -->
+<!--X-Reference: 3A10F702.1D954405@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02064">Date Index</a>][<a href="thrd42.shtml#02064">Thread Index</a>]<br>
+[<A HREF="msg02063.shtml">Date Prev</A>][<A HREF="msg02065.shtml">Date Next</A>][<A HREF="msg02063.shtml">Thread Prev</A>][<A HREF="msg02065.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [RFC] &amp; in URLs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Nov 2000 11:07:45 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Nov 14, 2000 at 09:25:38AM +0100, Werner Heuser wrote:
+&gt; ...
+&gt; &gt;   c.2) By default, substitutions are performed.  An extra attribute
+&gt; &gt;        preserve from this substitution either in link, or in both text
+&gt; &gt;        and links.
+&gt; Me, too. I use the &amp;amp; in the URLs of some of my pages, because
+&gt; `tidy' produced errors otherwise. I never encountered any
+&gt; problems with this construct.
+&gt; 
+&gt; Therefore I appreciate this new feature.
+
+But then, your
+  &lt;href url="foo.html?bar=x&amp;amp;baz=quux"&gt;
+will be transformed into
+  &lt;a href="foo.html?bar=x&amp;amp;amp;baz=quux"&gt;foo.html?bar=x&amp;amp;amp;baz=quux&lt;/a&gt;
+unless a special attribute is set.
+
+If there is no objection, i will implement c.2, since there is a
+consensus on it.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02065" HREF="msg02065.shtml">Re: [RFC] &amp; in URLs</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02059" HREF="msg02059.shtml">[RFC] &amp; in URLs</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02063" HREF="msg02063.shtml">Re: [RFC] &amp; in URLs</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02063.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02065.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02063.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02065.shtml">Re: [RFC] &amp; in URLs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02064"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02064"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

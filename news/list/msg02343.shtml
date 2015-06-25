@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <break> when using included <while> tags -->
+<!--X-From-R13: Uuvfynvar Znobherg <Uuvfynvar.ZnobhergNufp.se> -->
+<!--X-Date: Tue, 31 Jul 2001 11:04:55 +0200 (MET DST) -->
+<!--X-Message-Id: 20010731110342.A82960@itesec.hsc.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02343">Date Index</a>][<a href="thrd47.shtml#02343">Thread Index</a>]<br>
+[<A HREF="msg02342.shtml">Date Prev</A>][<A HREF="msg02344.shtml">Date Next</A>][<A HREF="msg02346.shtml">Thread Prev</A>][<A HREF="msg02350.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;break&gt; when using included &lt;while&gt; tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ghislaine Labouret &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 31 Jul 2001 11:03:42 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Is there a way to make the &lt;break&gt; tag act on the _current_ while loop,
+instead of the innermost one? Or maybe another way to get the same 
+result...
+
+To make myself clear, here is the current behaviour of this tag:
+
+Exemple from the doc:
+Source
+  &lt;set-var i=10&gt;
+  &lt;while &lt;gt &lt;get-var i&gt; 0&gt;&gt;;;;
+    &lt;get-var i&gt; &lt;decrement i&gt;;;;
+    &lt;ifeq &lt;get-var i&gt; 5 &lt;break&gt;&gt;;;;
+  &lt;/while&gt;
+Output
+10 9 8 7 6
+
+But if I add another while loop, than the &lt;break&gt; affects the next
+instance of that inner loop, which is not what I want:
+Source
+  &lt;set-var i=10&gt;
+  &lt;while &lt;gt &lt;get-var i&gt; 0&gt;&gt;;;;
+    &lt;get-var i&gt; &lt;decrement i&gt;;;;
+  &lt;ifeq &lt;get-var i&gt; 5 &lt;break&gt;&gt;;;;
+    &lt;set-var j=1&gt;
+    &lt;while &lt;lt &lt;get-var j&gt; 3&gt;&gt;;;;
+      &lt;get-var j&gt; &lt;increment j&gt;;;;
+    &lt;/while&gt;
+  &lt;/while&gt;
+Output
+10
+  1 2
+9
+  1 2
+8
+  1 2
+7
+  1 2
+6
+5
+  1 2
+4
+  1 2
+3
+  1 2
+2
+  1 2
+1
+  1 2
+
+
+Sincerely,
+
+--
+Ghislaine Labouret, Network security consultant
+Hervé Schauer Consultants (HSC) - <A  HREF="http://www.hsc.fr/">http://www.hsc.fr/</A>
+Phone (+33)-141-409-700 - Fax (+33)-141-409-709
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02350" HREF="msg02350.shtml">Re: &lt;break&gt; when using included &lt;while&gt; tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02342.shtml">&lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02344.shtml">Re: wml 2.0.7: ePerl printf</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02346.shtml">Re: xhtml vs. wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02350.shtml">Re: &lt;break&gt; when using included &lt;while&gt; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02343"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02343"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

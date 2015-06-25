@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multilangual Problem -->
+<!--X-From-R13: "Oyoreg DSW@SD" <nervareNgcu.ghjvra.np.ng> -->
+<!--X-Date: Fri, 6 Oct 2000 18:02:05 +0200 (MET DST) -->
+<!--X-Message-Id: 20001005211229.B423@frithjof -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39D5F185.98069089@ik1.fzk.de -->
+<!--X-Reference: 20001002103854.A22556@imacs.polytechnique.fr -->
+<!--X-Reference: 39DC5551.76321BDE@ik1.fzk.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02021">Date Index</a>][<a href="thrd41.shtml#02021">Thread Index</a>]<br>
+[<A HREF="msg02020.shtml">Date Prev</A>][<A HREF="msg02022.shtml">Date Next</A>][<A HREF="msg02018.shtml">Thread Prev</A>][<A HREF="msg02004.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multilangual Problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Albert REINER&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 5 Oct 2000 21:12:29 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Oct 05, 2000 at 12:17:53PM +0200, Kai Daumiller wrote:
+...
+&gt; To make it possible to switch from one language to the other at any
+&gt; page, I want to place links on each page (or, better in the navbar) that
+&gt; point to the same content, but in the other languages. 
+...
+
+I had the same problem for my pages in Esperanto. This artificial
+language uses some non-US-ASCII characters, and with Unicode support
+still missing on many systems, I have Unicode, ISO-Latin-3, and a
+couple of common transliterations. Basically I have a file where I put
+some general information on the different pages of a given site, and
+this file is read into the templates for the others. And then, the
+true files have names that differ only in a predictable manner -
+e.g. appending some (language) code. A simple perl loop can then
+create what you need. If you want, I can send you some wml files that
+do just that (probably it would not be a good idea to post them on the
+list, I guess), but they don't use navbars - I'm a lynx user.
+
+
+HTH,
+
+Albert.
+
+
+
+-- 
+
+--------------------------------------------------------------------------
+Albert Reiner                                   &lt;areiner@tph.tuwien.ac.at&gt;
+Deutsch       *       English       *       Esperanto       *       Latine
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02003" HREF="msg02003.shtml">Multilangual Problem</A></strong>, <em>From:</em> Kai Daumiller</li>
+<li><strong><A NAME="02009" HREF="msg02009.shtml">Re: Multilangual Problem</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02016" HREF="msg02016.shtml">Re: Multilangual Problem</A></strong>, <em>From:</em> Kai Daumiller</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02020.shtml">Re: [wml] differences between wap and i-mode</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02022.shtml">Problems with relative paths</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02018.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02004.shtml">ipp: documentation bug</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02021"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02021"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug in IF implementation? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 9 May 2001 00:35:19 +0200 (MET DST) -->
+<!--X-Message-Id: 20010509004359.D11816@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.10105071909060.30954&#45;100000@ns.xanadu.ru -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02223">Date Index</a>][<a href="thrd45.shtml#02223">Thread Index</a>]<br>
+[<A HREF="msg02222.shtml">Date Prev</A>][<A HREF="msg02224.shtml">Date Next</A>][<A HREF="msg02222.shtml">Thread Prev</A>][<A HREF="msg02224.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug in IF implementation?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 9 May 2001 00:43:59 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, May 07, 2001 at 07:26:11PM +0400, Petr Andreyev wrote:
+&gt; Hello Collegues,
+&gt; 
+&gt; it looks like the IF-tag implementation in mp4h is a bit peculiar. Namely, the
+&gt; condition seems to be checked twice: for the then-part and for the else-part
+&gt; separately. Therefore, if in the then-part I make the condition false, the
+&gt; else-part will be evaluated as well:
+&gt; 
+&gt; ====CODE====
+&gt; &lt;set-var a=o /&gt;
+&gt; &lt;if &lt;string-eq &lt;get-var a /&gt; o /&gt; &lt;set-var a=u /&gt; &lt;set-var b=r /&gt; /&gt;
+&gt; 
+&gt; A=&lt;get-var a /&gt;;B=&lt;get-var b /&gt;
+&gt; 
+&gt; ====OUTPUT====
+&gt; A=u;B=r
+&gt; ======================
+&gt; 
+&gt; I have wml version 2.0.6. It is interesting whether the same goes under
+&gt; version 2.1.
+
+Hi Petr,
+
+this bug has been fixed on 07-Nov-2000, and should not appear with WML
+2.1a1; latest CVS does indeed print the right output.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02222" HREF="msg02222.shtml">Bug in IF implementation?</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02222.shtml">Bug in IF implementation?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02224.shtml">verbatim</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02222.shtml">Bug in IF implementation?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02224.shtml">verbatim</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02223"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02223"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

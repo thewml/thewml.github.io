@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml incorrectly munging \" in perl -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 2 Jun 2000 12:15:10 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000602120716.1175A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000601230619.A20117@entropy.cnc.ifokr.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01686">Date Index</a>][<a href="thrd34.shtml#01686">Thread Index</a>]<br>
+[<A HREF="msg01685.shtml">Date Prev</A>][<A HREF="msg01687.shtml">Date Next</A>][<A HREF="msg01683.shtml">Thread Prev</A>][<A HREF="msg01736.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml incorrectly munging \&quot; in perl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 2 Jun 2000 12:12:34 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 1 Jun 2000, Brian Hatch wrote:
+
+&gt; PROBLEM DESCRIPTION:
+&gt; 
+&gt; \" being corrupted in perl print statements
+&gt; 
+&gt; The following test.wml file
+&gt; 
+&gt; 
+&gt; survives pass 1 fine.  In pass 2 it becomes
+[...]
+&gt; 	&lt;:  print "&lt;a href="$variable"&gt; \n"; :&gt;
+&gt; 
+&gt; Note the '\' was lost before the " in the print statement.  Pass 3
+&gt; dies with the obvious error 
+&gt; 	"Scalar found where operator expected at /tmp/wml.20070.tmp1.wml line 15"
+
+This ``feature'' will be discussed later.  Meanwhile you may replace 
+	&lt;:  print "&lt;a href=\"$variable\" &gt; \n"; :&gt;
+by
+	&lt;:  print "&lt;"."a href=\"$variable\" &gt; \n"; :&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01683" HREF="msg01683.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Brian Hatch</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01685.shtml">Re: wishlist: text in rollover,navbar buttons and class for anchortags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01687.shtml">[LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01683.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01736.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01686"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01686"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

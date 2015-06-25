@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: mirror&#45;sw for uploading (Re: Ouput directory other than source directory) -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 4 Oct 1999 11:04:11 +0200 (MET DST) -->
+<!--X-Message-Id: 199910040901.LAA07675@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991002112141.4770B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01028">Date Index</a>][<a href="thrd21.shtml#01028">Thread Index</a>]<br>
+[<A HREF="msg01027.shtml">Date Prev</A>][<A HREF="msg01029.shtml">Date Next</A>][<A HREF="msg01023.shtml">Thread Prev</A>][<A HREF="msg01042.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>mirror-sw for uploading (Re: Ouput directory other than source directory)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 4 Oct 1999 11:01:47 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Sat, 2 Oct 1999 14:51:37 +0200 (MEST), Jan Ulrich Hasecke
+&lt;juh@pironet.de&gt; wrote:
+
+&gt; I now installed mirror, but mirror is a download-tool, which can
+&gt; also upload, but the whole design is for downloading. So I am
+&gt; testing in the moment. Do you know a better tool?
+
+Sorry for the late answer. The tool I use is from
+<A  HREF="http://www.heise.de/">http://www.heise.de/</A> . But I could not find it again 
+after your former question.
+
+But you can get it from <A  HREF="http://www.inetcom.ch/pub/mirror.zip">http://www.inetcom.ch/pub/mirror.zip</A>.
+I will leave it there until 20. Oct.
+
+NOTE:
+- All documentation is in german.
+- Runs on Windows too (is written in perl).
+- YOU HAVE to PATCH it as it is described in the docs.
+- You need a quite new perl-release.
+- ALL FILES include CRs aka ctrl-M !!!
+- Test it before you use it.
+- It sometimes get stuck into a loop. Break it, and rename
+  mirror.tmp to mirror.dat.
+- You have to wrap it if you want to mirror one single side
+  to different locations (in a simple shell-script to rename 
+  the config and data-files).
+
+It works best with regular small changes to the site. It
+has (at least at my place, and my link is fast) some
+timing-problems with complete sites-updates.
+
+Have fun, don't ask any questions since I am away until the
+20.10. and anyway I am not the author or the software.
+
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01020" HREF="msg01020.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01027.shtml">Re: [PATCH] wml_p5_divert dramatically slow in WML-1.7.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01029.shtml">Re: BUG REPORT: Website META Language 1.7.3 (30-Sep-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01023.shtml">Upload Tool (was: Ouput directory other than source directory)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01042.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01028"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01028"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

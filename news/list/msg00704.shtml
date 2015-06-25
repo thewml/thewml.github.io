@@ -1,0 +1,193 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.6.8 (12&#45;01&#45;1999) -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Fri, 28 May 1999 22:54:39 +0200 (MET DST) -->
+<!--X-Message-Id: 199905281647.SAA05884@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00704">Date Index</a>][<a href="thrd8.shtml#00704">Thread Index</a>]<br>
+[<A HREF="msg00703.shtml">Date Prev</A>][<A HREF="msg00705.shtml">Date Next</A>][<A HREF="msg00382.shtml">Thread Prev</A>][<A HREF="msg00709.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.6.8 (12-01-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 28 May 1999 18:47:25 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Davor Cengija
+Reply-To: davor@linuxfan.com
+
+PROBLEM DESCRIPTION:
+
+       (i did this by purpose, but this situation could actually apprear
+       in the real life):
+
+
+       when nesting navbars recursivelly, eperl eats up all the memory 
+       (as expected)
+
+ePerl:Error: Perl runtime error (interpreter rc=1)
+
+---- Contents of STDERR channel: ---------
+Out of memory!
+------------------------------------------
+
+** WML:Break: Error in Pass 3 (rc=74).
+** WMk:Break: Error in WML (rc=256)
+
+       this is the .wml file:
+
+=================================================
+#use 'navbar.src'
+#use wml::std::page
+
+&lt;page&gt;
+
+&lt;navbar:define name=main txtonly&gt;
+	&lt;navbar:header&gt;&lt;ul&gt;&lt;/navbar:header&gt;
+	&lt;navbar:footer&gt;&lt;/ul&gt;&lt;/navbar:footer&gt;
+	&lt;navbar:prolog&gt;&lt;li&gt;&lt;/navbar:prolog&gt;
+	&lt;navbar:button id="item1" url="item1.html" txt="item1"&gt;
+	&lt;navbar:button id="item2" url="item2.html" txt="itme2" menu="menu1"&gt;
+	&lt;navbar:button id="item3" url="item3.html" txt="item3" menu="menu2"&gt;
+	&lt;navbar:button url="#PREV#" txt="[PREV]"&gt;
+	&lt;navbar:button url="#NEXT#" txt="[NEXT]"&gt;
+&lt;/navbar:define&gt;
+&lt;navbar:define name="menu1" txtonly&gt;
+	&lt;navbar:header&gt;&lt;ul&gt;&lt;/navbar:header&gt;
+	&lt;navbar:footer&gt;&lt;/ul&gt;&lt;/navbar:footer&gt;
+	&lt;navbar:prolog&gt;&lt;li&gt;&lt;/navbar:prolog&gt;
+	&lt;navbar:button id="subitem1" url="item2.html#subitem1" txt="subitem1"&gt;
+	&lt;navbar:button id="subitem2" url="item2.html#subitem2" txt="subitem2" menu="menu2"&gt;
+&lt;/navbar:define&gt;
+&lt;navbar:define name="menu2" txtonly&gt;
+	&lt;navbar:header&gt;&lt;ul&gt;&lt;/navbar:header&gt;
+	&lt;navbar:footer&gt;&lt;/ul&gt;&lt;/navbar:footer&gt;
+	&lt;navbar:prolog&gt;&lt;li&gt;&lt;/navbar:prolog&gt;
+	&lt;navbar:button id="subitem3" url="item3.html#subitem3" txt="subitem3"&gt;
+	&lt;navbar:button id="subitem4" url="item3.html#subitem4" txt="subitem4" menu="menu1"&gt;
+&lt;/navbar:define&gt;
+
+&lt;navbar:render name="main" select=subitem2&gt;
+=================================================
+
+       menu1 calls menu2 which calls menu1 etc.
+
+       i think some kind of checking should be incorporated to avoid recursion.
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.005_02 (/usr/bin/perl)
+    User: root@kanta.smece.hr
+    Date: 10-Feb-1999
+Built Location:
+    Prefix: /opt2/local/wml
+    BinDir: /opt2/local/wml/bin
+    LibDir: /opt2/local/wml/lib
+    ManDir: /opt2/local/wml/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+  Platform:
+    osname=linux, osvers=2.0.36, archname=i386-linux
+    uname='linux porky.redhat.com 2.0.36 #1 tue oct 13 22:17:11 edt 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=egcs-2.91.60 19981201 (egcs-1.1.1 release)
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Dec  5 1998 05:01:34
+  @INC:
+    /usr/lib/perl5/5.00502/i386-linux
+    /usr/lib/perl5/5.00502
+    /usr/lib/perl5/site_perl/5.005/i386-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00709" HREF="msg00709.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00703.shtml">Old Q/A</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00705.shtml">m4 under WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00382.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00709.shtml">Re: BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00704"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00704"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: SGML&#45;DTD for WML? -->
+<!--X-From-R13: "Rnivq Vneevf" <quneevfNqeu.arg> -->
+<!--X-Date: Tue, 10 Nov 1998 19:37:34 +0100 (CET) -->
+<!--X-Message-Id: 000301be0cd6$c3087a80$0500a8c0@delf -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19981109204131.A7104@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00254">Date Index</a>][<a href="thrd6.shtml#00254">Thread Index</a>]<br>
+[<A HREF="msg00253.shtml">Date Prev</A>][<A HREF="msg00255.shtml">Date Next</A>][<A HREF="msg00251.shtml">Thread Prev</A>][<A HREF="msg00250.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: SGML-DTD for WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;David Harris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 10 Nov 1998 13:20:14 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi
+
+Ditto that on the short tags. They should be kept, and I love how the
+redirection tags are almost like a little pictorial of what they mean.
+"..TAG&gt;&gt; &lt;&lt;.."
+
+Anyway, check out the wml::std::tags include file. It translates the non
+SGML compliant tags into nice SGML compliant forms if that is your thing.
+For example, the following tags are defined:
+
+-----
+&lt;dump NAME&gt;
+&lt;enter NAME&gt; ... &lt;leave&gt;
+&lt;divert NAME&gt; ... &lt;/divert&gt;
+-----
+
+Opps, the &lt;enter&gt; .. &lt;leave&gt; pair is not standard (I don' think), but that
+could be easily changed to &lt;enter NAME&gt; ... &lt;/enter&gt;.
+Check out the man page on that include file at:
+     <A  HREF="http://www.engelschall.com/sw/wml/docs/incl/wml::std::tags.html">http://www.engelschall.com/sw/wml/docs/incl/wml::std::tags.html</A>
+
+ - David Harris
+   Principal Engineer, DRH Internet Services
+
+
+-----Original Message-----
+From:	owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>] On
+Behalf Of Stefan `Sec` Zehl
+Sent:	Monday, November 09, 1998 2:42 PM
+To:	sw-wml@engelschall.com
+Subject:	Re: SGML-DTD for WML?
+
+On Mon, Nov 09, 1998 at 06:07:06PM +0100, Ralf S. Engelschall wrote:
+&gt; &gt; PS.: Hello Ralf! I hope WML 2.0 would look like real SGML. I mean, you
+&gt; &gt; avoid any tag names like &lt;&lt;NAME&gt;&gt;, &lt;: ... :&gt;, {#NAME#} and so on and
+&gt; &gt; use only &lt;NAME&gt; &lt;/NAME&gt; pairs.
+&gt; &lt;grin&gt; Yeah, the different tags are mainly needed inside WML 1.x to avoid
+&gt; parsing conflicts inside the different tools. A WML 2.0 should be based on
+a
+&gt; single parser and so a homogen syntax can be used for all tags, of course.
+
+Noooooooooooo! Please keep the old methods. I love wml for that short
+tags. I like to type as few as possible to archive my goal.
+
+CU,
+    Sec
+--
+So viel ist in so kurzer Zeit zu tun.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00251" HREF="msg00251.shtml">Re: SGML-DTD for WML?</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00253.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00255.shtml">Re: Creating Thumbnails</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00251.shtml">Re: SGML-DTD for WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00250.shtml">Re: SGML-DTD for WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00254"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00254"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

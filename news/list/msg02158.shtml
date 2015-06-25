@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML HML Documentation, NT -->
+<!--X-From-R13: [nexhf.PnepusryqNtzk.qr -->
+<!--X-Date: Sun, 11 Mar 2001 11:48:09 +0100 (MET) -->
+<!--X-Message-Id: 200102251139.MAA09091@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02158">Date Index</a>][<a href="thrd44.shtml#02158">Thread Index</a>]<br>
+[<A HREF="msg02160.shtml">Date Prev</A>][<A HREF="msg02165.shtml">Date Next</A>][<A HREF="msg02175.shtml">Thread Prev</A>][<A HREF="msg02165.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML HML Documentation, NT</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sun, 25 Feb 2001 12:39:43 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML HML Documentation
+Operating System: NT
+
+Problem Description:
+| You write in your Description of WML:
+| 
+| &gt;Input: 
+| &gt;
+| &gt;
+| &gt; 1| {#BAR#:this is:##}
+| &gt; 2| foo
+| &gt; 3| {#BAR#}
+| &gt; 4| quux
+| &gt; 5| {#BAR#: bar:##}
+| &gt; 6| foobar
+| &gt; 7| {#BAR#}
+| &gt;
+| &gt;Output: 
+| &gt;
+| &gt;
+| &gt; 1| foo
+| &gt; 2| this is bar
+| &gt; 3| quux
+| &gt; 4| foobar
+| &gt; 5| this is bar
+| 
+| The second line of output should possibly be
+| "this is"
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02160.shtml">gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02165.shtml">[wml] New release (unstable)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02175.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02165.shtml">[wml] New release (unstable)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02158"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02158"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

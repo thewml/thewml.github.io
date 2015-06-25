@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Automating the creation of buttons -->
+<!--X-From-R13: "Hnyragva i. Erttrea" <yhvfkviNtzk.qr> -->
+<!--X-Date: Wed, 2 Feb 2000 00:05:24 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10002011659220.5116&#45;100000@aleph.balcor.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 38976398.A3BC0DE7@research.bell&#45;labs.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01319">Date Index</a>][<a href="thrd27.shtml#01319">Thread Index</a>]<br>
+[<A HREF="msg01318.shtml">Date Prev</A>][<A HREF="msg01320.shtml">Date Next</A>][<A HREF="msg01318.shtml">Thread Prev</A>][<A HREF="msg01320.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Automating the creation of buttons</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Valentin v. Seggern&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 1 Feb 2000 17:05:08 -0600 (CST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hey Tom, 
+Although I never used either of the two methods, I remember 1) Reading the
+manual page for `convert` (A part of Imagemagick) showed some ways to
+automate image-creation. The other thing is the gd library for perl (I
+believe this is the name) that allowed autogenerate images from perl.
+I never used any of the methods, but I could imagine, that creating simple
+images using `convert` can not be really hard.
+I hope this helps and I am sorry, that I can't really come up with
+examples
+Bye
+Valentin
+
+- --
+"Valentin v. Seggern" - luisxiv@gmx.net 
+<A  HREF="http://www.nipplepalooza.com/~luisxiv/">http://www.nipplepalooza.com/~luisxiv/</A>
+<A  HREF="http://www.nipplepalooza.com/~luisxiv/stuff/luisxiv.gpg">http://www.nipplepalooza.com/~luisxiv/stuff/luisxiv.gpg</A> - public key
+Key fingerprint = CF10 B8D2 E39D C8BC DEA8  6FC9 1FB7 55BC 89D8 65CB
+
+On Tue, 1 Feb 2000, Tom Limoncelli wrote:
+
+&gt; [ Warning: this is a little off-topic.  I did check with engelshall first. ]
+&gt; 
+&gt; Does anyone have a good automated method to generate buttons, like the ones
+&gt; on the WML web page?  In theory, GIMP should be programmable enough to do
+&gt; this, but I've found it to be frustrating.
+&gt; 
+&gt; I have a situation where I need to create buttons with the same color, and
+&gt; then come back a week or two later and make more buttons and have the same
+&gt; colors, etc.  Doing this by hand is difficult and error-prone.  Isn't this a
+&gt; good job for "make"?
+&gt; 
+&gt; My GIMP experience:  I spend half a day trying and gave up.  The language is
+&gt; terrible and the documentation is worse (at one point it admits that this
+&gt; isn't the best thing since sliced bread).  Ok, maybe I should try harder
+&gt; (and I'm sure I will).  However, if someone has already figured it out, I'd
+&gt; gladly not have to re-invent the wheel.  I'll even offer to maintain it as a
+&gt; GPL'ed package or something.
+&gt; 
+&gt; I figure that fellow WML users would appreciate what I'm describing here,
+&gt; since you obviously feel the same way about generating, not editing,
+&gt; HTML/web pages.
+&gt; 
+&gt; Thanks in advance!
+&gt; 
+&gt; --tal
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+&gt; 
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.0.1 (GNU/Linux)
+Comment: For info see <A  HREF="http://www.gnupg.org">http://www.gnupg.org</A>
+
+iD8DBQE4l2alH7dVvInYZcsRAhwOAJ9PGaCJnTMy2IZOkjjKCTzSduVQzgCeNSJ+
+yxLAWuF4pg7sL/tur9Nhsp8=
+=3Y9n
+-----END PGP SIGNATURE-----
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01318" HREF="msg01318.shtml">Automating the creation of buttons</A></strong>, <em>From:</em> Tom Limoncelli</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01318.shtml">Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01320.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01318.shtml">Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01320.shtml">Re: Automating the creation of buttons</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01319"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01319"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: GIFs, LZW, gd, and gFont again... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 2 Dec 1999 08:43:00 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991130101813.7297A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9911291614450.26592&#45;100000@gtt&#45;ixs.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01174">Date Index</a>][<a href="thrd25.shtml#01174">Thread Index</a>]<br>
+[<A HREF="msg01173.shtml">Date Prev</A>][<A HREF="msg01175.shtml">Date Next</A>][<A HREF="msg01171.shtml">Thread Prev</A>][<A HREF="msg01165.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: GIFs, LZW, gd, and gFont again...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 Nov 1999 10:32:42 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 29 Nov 1999, Stephan Petersen wrote:
+
+&gt; Hi everybody,
+&gt; 
+&gt; the latest version of gd (<A  HREF="http://www.boutell.com/gd/">http://www.boutell.com/gd/</A>) doesn't support the
+&gt; creation of GIFs any more. Does/should that have any effect on wml/gFont?
+
+No, because gFONT and WML contain their own versions of gd.
+I will continue to support GIF images (IIRC Remco's ttfont contains a
+patched gd with support of GIF and PNG formats).
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01163" HREF="msg01163.shtml">GIFs, LZW, gd, and gFont again...</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01173.shtml">Re: output file ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01175.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01171.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01165.shtml">Specifying an alternate output extension</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01174"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01174"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

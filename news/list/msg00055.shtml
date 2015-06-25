@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to define an \<expire\> tag\? -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Sat, 24 Jan 1998 17:53:58 +0100 (MET) -->
+<!--X-Message-Id: 199801241653.RAA18217@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00055">Date Index</a>][<a href="thrd2.shtml#00055">Thread Index</a>]<br>
+[<A HREF="msg00054.shtml">Date Prev</A>][<A HREF="msg00056.shtml">Date Next</A>][<A HREF="msg00054.shtml">Thread Prev</A>][<A HREF="msg00056.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to define an \&lt;expire\&gt; tag\?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Sat, 24 Jan 1998 17:53:56 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00053.shtml">199801241542.QAA13556@en1.engelschall.com</A>&gt; you wrote:
+&gt; Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt;&gt; --- WML input starts below ---
+&gt;&gt; &lt;title&gt;Title of the page&lt;/title&gt;
+&gt;&gt; &lt;h1&gt;Header&lt;/h1&gt;
+&gt;&gt; 
+&gt;&gt; &lt;expire 1999/12/31&gt;
+&gt;&gt; 
+&gt;&gt; Whatever is going onto the page ...
+&gt;&gt; --- End of WML input file ---
+&gt;&gt; 
+
+&gt;     | &lt;define-tag expire&gt;
+&gt;     | &lt;:{
+&gt;     |      use Date::Parse;
+&gt;     |      my $et = Date::Parse::str2time('%0');
+&gt;     |      my $ct = time();
+&gt;     |      print '&lt;&lt;main..' if ($et &lt;= $ct);
+&gt;     | }:&gt;
+&gt;     | &lt;/define-tag&gt;
+
+Hmmm... while this Date::Parse-based approach is powerful (because it
+recognizes a lot of formats) I now was not really happy with it because
+Date::Parse is not a standard Perl module. On the other hand because our
+expire decision is done at _generation_ time and more then once per day a
+cronjob will not regenerate a webpage to let this &lt;expire&gt; tag apply, your
+yyyy-mm-dd format is all we need. And because this format is such simple we
+can do a second try for an &lt;expires&gt; tag which runs out-of-the-box without the
+need for 3rd party modules to be installed: 
+
+    | &lt;define-tag expires&gt;
+    | &lt;:{
+    |      #   parse yy-mm-dd format into (dd, mm, yyyy)
+    |      my @et = reverse(split(/-/, '%0')); 
+    |      #   parse localtime into (dd, mm, yyyy)
+    |      my @ct = (localtime(time()))[3..5]; $ct[1] += 1; $ct[2] += 1900;
+    | 
+    |      #   leave all standard locations
+    |      #   (and implicitly enter "null" location)
+    |      #   if already expired
+    |      if (   $ct[0]+31*$ct[1]*395*$ct[2]
+    |          &gt;= $et[0]+31*$et[1]*395*$et[2]) {
+    |          print '&lt;&lt;main..'
+    |      }
+    | }:&gt;
+    | &lt;/define-tag&gt;
+
+Isn't it a little bit better? ;_)
+Perhaps someone of you makes it even better. At least the if-statement?
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00056" HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00054.shtml">Re: How to define an &lt;expire&gt; tag?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00054.shtml">Re: How to define an &lt;expire&gt; tag?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00055"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00055"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

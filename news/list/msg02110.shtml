@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: what is the new synthax for this... -->
+<!--X-From-R13: Drzpb ina qra Pret <DiqPretNqfr.ay> -->
+<!--X-Date: Wed, 17 Jan 2001 00:34:24 +0100 (MET) -->
+<!--X-Message-Id: 20010117003416.A29079@jupiter.strijp.Ehv.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02110">Date Index</a>][<a href="thrd43.shtml#02110">Thread Index</a>]<br>
+[<A HREF="msg02109.shtml">Date Prev</A>][<A HREF="msg02111.shtml">Date Next</A>][<A HREF="msg02109.shtml">Thread Prev</A>][<A HREF="msg02111.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>what is the new synthax for this...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Jan 2001 00:34:16 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Can somebody tell me the new syntax for this:
+
+&lt;if &lt;get-var show_counter&gt;
+&lt;prog
+  (4,1) align=center valign=top height=20 bgcolor=&lt;red&gt;
+    &lt;text-white&gt;&lt;dump COUNTER&gt;&lt;/text-white&gt;
+  (4,2) align=center valign=top bgcolor=&lt;red&gt;
+    &lt;text-white&gt;&lt;dump UNDERTITLE&gt;&lt;/text-white&gt;
+&gt;
+&lt;prog
+  (4,1)  colspan=2 align=center bgcolor=&lt;red&gt;
+    &lt;text-white&gt;&lt;dump UNDERTITLE&gt;&lt;/text-white&gt;
+&gt;
+&gt;
+
+I get the &lt;prog commands in my output file when using wml-2.0.6
+
+Thanks for the help,
+
+-Remco
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02109.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02111.shtml">lost javascript code for navbar</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02109.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02111.shtml">lost javascript code for navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02110"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02110"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: IPP improvements -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 14 Jan 1999 17:57:12 +0100 (CET) -->
+<!--X-Message-Id: 19990114175711.A4939@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 000301be3fd9$4256f200$0500a8c0@delf -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00318">Date Index</a>][<a href="thrd7.shtml#00318">Thread Index</a>]<br>
+[<A HREF="msg00317.shtml">Date Prev</A>][<A HREF="msg00319.shtml">Date Next</A>][<A HREF="msg00317.shtml">Thread Prev</A>][<A HREF="msg00319.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: IPP improvements</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 17:57:11 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jan 14, 1999, David Harris wrote:
+
+&gt; Back around 9/10/98 I dove into the WML IPP processor and re-wrote some of
+&gt; it to be more efficient. At that time I posted my results, but no one was
+&gt; maintaining WML and it didn't get rolled into a release. I just checked the
+&gt; newest release on the web-site and see that my changes have not been
+&gt; implemented - the same inefficient text handling methods are being used.
+&gt; 
+&gt; Back then, I did some comparisons between the old IPP and my IPP. On one
+&gt; particularly large test case (including all of the WML files) the old one
+&gt; used 1m34.20s of user time while mine used 0m5.75s. Others reported success
+&gt; in installing the patch and getting speed improvements.
+&gt; 
+&gt; I'm wondering if this got lost in the upgrade to 1.6.8 or there is some
+&gt; other reason why that work was not rolled into the WML release.
+
+We went over the old mails, of course. But either it's part of another
+old-mail-folder I've still not send to Denis for checking or I totally lost
+this. But that should be no problem. The WML 1.6.8 version was to sync us all
+with the lastest changed which I've already done. Now that we're in sync,
+please (re-)post all your patches so Denis can look at it and consider it for
+inclusion into WML 1.7.0.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00317" HREF="msg00317.shtml">IPP improvements</A></strong>, <em>From:</em> David Harris</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00317.shtml">IPP improvements</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00319.shtml">Re: IPP improvements</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00317.shtml">IPP improvements</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00319.shtml">Re: IPP improvements</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00318"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00318"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

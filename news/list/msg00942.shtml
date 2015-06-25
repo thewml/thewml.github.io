@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2, Solaris 2.5.1, 2.7 -->
+<!--X-From-R13: Terqrevp.Zr[bhryNvevfn.se -->
+<!--X-Date: Tue, 7 Sep 1999 13:18:02 +0200 (MET DST) -->
+<!--X-Message-Id: 199909071117.NAA06997@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00942">Date Index</a>][<a href="thrd20.shtml#00942">Thread Index</a>]<br>
+[<A HREF="msg00941.shtml">Date Prev</A>][<A HREF="msg00943.shtml">Date Next</A>][<A HREF="msg00941.shtml">Thread Prev</A>][<A HREF="msg00958.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2, Solaris 2.5.1, 2.7</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 7 Sep 1999 13:17:58 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2
+Operating System: Solaris 2.5.1, 2.7
+
+Problem Description:
+| I have a little problem with the IO perl module.
+| I tried with our module and with the module of WML package with the same result.
+| Any idea ?
+| 
+| garfield[11:54]%cat essai.wml
+| #use wml::des::imgdot
+| garfield[11:57]%wml essai.wml
+| ePerl:Error: Perl parsing error (interpreter rc=2)
+| 
+| ---- Contents of STDERR channel: ---------
+| Can't load '/soft/wml/snap/lib/perl/lib/5.00503/sun4-solaris/auto/IO/IO.so' for module IO: ld.so.1: /soft/wml/snap/lib/exec/wml_p3_eperl: fatal : erreur de réadressage : fichier /soft/wml/snap/lib/perl/lib/5.00503/sun4-solaris/auto/IO/IO.so : symbole PL_stack_sp : symbole référencé introuvable at /usr/local/lib/perl5/5.00503/sun4-solaris/DynaLoader.pm line 169.
+| 
+|  at /soft/wml/snap/lib/perl/lib/5.00503/sun4-solaris/IO/Handle.pm line 241
+| BEGIN failed--compilation aborted at /soft/wml/snap/lib/perl/lib/5.00503/sun4-solaris/IO/Handle.pm line 241.
+| BEGIN failed--compilation aborted at /soft/wml/snap/lib/perl/lib/5.00503/sun4-solaris/IO/Seekable.pm line 51.
+| BEGIN failed--compilation aborted at /soft/wml/snap/lib/perl/lib/5.00503/sun4-solaris/IO/File.pm line 112.
+| BEGIN failed--compilation aborted at /tmp/wml.1900.tmp1 line 100.
+| ------------------------------------------
+| ** WML:Break: Error in Pass 3 (rc=74).
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00941.shtml">Mime-Types and WML source files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00943.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00941.shtml">Mime-Types and WML source files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00958.shtml">OT: Link to WML in Spiegel Online</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00942"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00942"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

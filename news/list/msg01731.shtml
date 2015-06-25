@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: Problem after switching to 2.0.1 -->
+<!--X-From-R13: "Enagvntb Sedhvpvn" <fredhvpvnNirybpbz.pbz.ne> -->
+<!--X-Date: Fri, 23 Jun 2000 00:46:08 +0200 (MET DST) -->
+<!--X-Message-Id: 002501bfdc9b$a57f7ae0$d90bfea9@pc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01731">Date Index</a>][<a href="thrd36.shtml#01731">Thread Index</a>]<br>
+[<A HREF="msg01730.shtml">Date Prev</A>][<A HREF="msg01732.shtml">Date Next</A>][<A HREF="msg01735.shtml">Thread Prev</A>][<A HREF="msg01732.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: Problem after switching to 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Santiago Erquicia&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Jun 2000 19:44:07 -0300</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+How did you get it work with perl 5.6.0??  I've switch to Mandrake 7.1 and
+that is the version of perl and I didn't know how to use it.
+
+Thanks
+-----Mensaje original-----
+De: Krishna V Motukuri &lt;krishna@univapp.com&gt;
+Para: sw-wml@engelschall.com &lt;sw-wml@engelschall.com&gt;
+Fecha: Jueves, 22 de Junio de 2000 02:30 a.m.
+Asunto: Problem after switching to 2.0.1
+
+
+&gt;Hi,
+&gt;   I just switched from 1.7.* to 2.0.1 and now my &lt;define-container&gt; tag
+&gt;is not being recognised by the parser. All "define-container" tags appear
+&gt;as it is in the html document. I'm not sure what went wrong. I got the new
+&gt;tarball from the website itself. Can someone please help with this
+&gt;problem?
+&gt;
+&gt;eg:
+&gt;-------------------------
+&gt;#use wml::std::tags
+&gt;
+&gt;&lt;define-container content-submission-form&gt;
+&gt;&lt;/define-container&gt;
+&gt;
+&gt;&lt;title&gt;Test Page&lt;/title&gt;
+&gt;&lt;body bgcolor=white&gt;
+&gt;Hello World
+&gt;&lt;/body&gt;
+&gt;-------------------------
+&gt;
+&gt;produces
+&gt;--------------------------
+&gt;&lt;define-container content-submission-form&gt;
+&gt;&lt;/define-container&gt;
+&gt;
+&gt;&lt;title&gt;Test Page&lt;/title&gt;
+&gt;&lt;body bgcolor=white&gt;
+&gt;Hello World
+&gt;&lt;/body&gt;
+&gt;-------------------------
+&gt;
+&gt;
+&gt;I'm running:
+&gt;Redhat 6.2
+&gt;gcc version egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
+&gt;perl 5.6.0
+&gt;
+&gt;Thanks,
+&gt;Krishna
+&gt;
+&gt;
+&gt;______________________________________________________________________
+&gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt;Automated List Manager                       majordomo@engelschall.com
+&gt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01732" HREF="msg01732.shtml">Re: Problem after switching to 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01734" HREF="msg01734.shtml">RE: Problem after switching to 2.0.1</A></strong>, <em>From:</em> Krishna V Motukuri</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01730.shtml">[ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01732.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01735.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01732.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01731"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01731"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

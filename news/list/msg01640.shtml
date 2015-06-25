@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: possible bug in <box> ? -->
+<!--X-From-R13: Fbz Uvyoreg <tvyoreggNyvahkoevg.pb.hx> -->
+<!--X-Date: Sun, 28 May 2000 14:17:58 +0200 (MET DST) -->
+<!--X-Message-Id: 20000528131816.C30017@ummagumma -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01640">Date Index</a>][<a href="thrd35.shtml#01640">Thread Index</a>]<br>
+[<A HREF="msg01639.shtml">Date Prev</A>][<A HREF="msg01641.shtml">Date Next</A>][<A HREF="msg01664.shtml">Thread Prev</A>][<A HREF="msg01645.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>possible bug in &lt;box&gt; ?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tom Gilbert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 May 2000 13:18:16 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hey folks,
+
+First off, I have to say thanks :-) WML has changed the way I work with
+the web. For the better. Big time ;-)
+
+Now I have a question. I could be being dim, but take a look at the
+following:
+
+#use wml::std::box
+&lt;box bdcolor="#000000" bgcolor="#FFFFFF" border="1" width="50%"&gt;
+Hello world!
+&lt;/box&gt;
+
+So I want a box 50% the width of the page, right? Well, the generated
+html is:
+
+&lt;table cellspacing="0" cellpadding="1" bgcolor="#000000" border="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;table bgcolor="#FFFFFF" width="50%" cellspacing="0" cellpadding="4" border="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;Hello world!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+
+Notice that the width="50%" is in the *inner* table. Is this correct?
+I'm pretty sure it should be in the outer table, no? Because using this
+example I do *not* get a 50% width table, but the inner table is 50% the
+width of the outer one.
+
+Shouldn't the generated code be:
+
+&lt;table width="50%" cellspacing="0" cellpadding="1" bgcolor="#000000" border="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;table bgcolor="#FFFFFF" width="100%" cellspacing="0" cellpadding="4" border="0"&gt;
+&lt;tr&gt;
+&lt;td&gt;Hello world!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+I guess there's a chance I'm just being dense here....
+
+Tom.
+-- 
+            .------------------------------------------------------.
+    .^.     | Tom Gilbert, England | <A  HREF="http://www.linuxbrit.co.uk">http://www.linuxbrit.co.uk</A>    |
+    /V\     |----------------------| gilbertt@linuxbrit.co.uk      |
+   // \\    | Sites I recommend:   `-------------------------------|
+  /(   )\   | www.freshmeat.net www.enlightenment.org slashdot.org |
+   ^^-^^    `------------------------------------ vim: set tw=72: -'
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01645" HREF="msg01645.shtml">Re: possible bug in &lt;box&gt; ?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01639.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01641.shtml">feature query</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01664.shtml">Re: WML embbeded in XSL.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01645.shtml">Re: possible bug in &lt;box&gt; ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01640"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01640"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

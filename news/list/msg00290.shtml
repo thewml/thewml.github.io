@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New WML&#45;generated website: www.openssl.org -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 31 Dec 1998 16:33:21 +0100 (CET) -->
+<!--X-Message-Id: 19981231163319.A21432@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00290">Date Index</a>][<a href="thrd7.shtml#00290">Thread Index</a>]<br>
+[<A HREF="msg00289.shtml">Date Prev</A>][<A HREF="msg00291.shtml">Date Next</A>][<A HREF="msg00284.shtml">Thread Prev</A>][<A HREF="msg00285.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New WML-generated website: www.openssl.org</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 31 Dec 1998 16:33:19 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00284.shtml">19981229162829.B18846@engelschall.com</A>&gt; you wrote:
+
+&gt; I've created a new complete website with WML:
+
+&gt;   The OpenSSL Project
+&gt;   <A  HREF="http://www.openssl.org/">http://www.openssl.org/</A>
+
+&gt; The whole site is generated out of a single template file with WML, the images
+&gt; are created with Photoshop.
+
+&gt; When you want to find out more, just use the usual trick: Replace xxx/xxx.html
+&gt; with xxx/xxx.wml and xxx/ with xxx/index.wml to see the source. The template
+&gt; is under common/tpl/.
+
+The website was now finally cleaned up and the WML stuff documented.  When
+you're now still interested in the WML source for www.openssl.org have a look
+at the final template: <A  HREF="http://www.openssl.org/openssl.wml">http://www.openssl.org/openssl.wml</A> It provides the
+complete layout and navigation stuff you see on www.openssl.org. Feel free to
+rip out whatever you like for your own WML-based hacks.
+
+PS: Especially the sub-navbar stuff is implemented very tricky. 
+    For instance constructs like
+      (page:*# )$(page:+#include ")$(SNB_RC:-.wmlsnb)$(page:+")
+    are used to achieve some sort of conditional includes, etc.
+    So, when you love WML tricks, look at it. You'll find
+    a lot of such stuff in openssl.wml ;-)
+
+Greetings,
+                                       talf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00289.shtml">[patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00291.shtml">Re: [patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00284.shtml">New WML-generated website: www.openssl.org</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00285.shtml">[Patch gfont] adds border</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00290"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00290"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

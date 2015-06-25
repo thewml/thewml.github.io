@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 &#45; Solaris 8 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 18 Jun 2001 19:32:30 +0200 (MET DST) -->
+<!--X-Message-Id: 20010618193845.A2905@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200105081551.RAA07637@opensource.ee.ethz.ch -->
+<!--X-Reference: 20010525221727.B21509@imacs.polytechnique.fr -->
+<!--X-Reference: 20010617220107.C2182@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02264">Date Index</a>][<a href="thrd46.shtml#02264">Thread Index</a>]<br>
+[<A HREF="msg02263.shtml">Date Prev</A>][<A HREF="msg02265.shtml">Date Next</A>][<A HREF="msg02260.shtml">Thread Prev</A>][<A HREF="msg02247.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 18 Jun 2001 19:38:45 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jun 17, 2001 at 10:01:07PM +0200, Axel Beckert wrote:
+&gt; Denis Barbier wrote:
+&gt; &gt; i applied the following patch:
+&gt; &gt; +++ wml_backend/p7_htmlfix/htmlfix.src  2001/05/25 20:03:47     1.16
+&gt; &gt; @@ -253,7 +253,7 @@
+&gt; &gt;  sub Fixup_center {
+&gt; &gt;      &amp;verbose("replacing &lt;center&gt;..&lt;/center&gt; by &lt;div align=center&gt;..&lt;/div&gt;");
+&gt; &gt;  
+&gt; &gt; -    $buffer =~ s|&lt;[cC][eE][nN][tT][eE][rR]&gt;|&lt;div align="center"&gt;|g;
+&gt; &gt; +    $buffer =~ s|&lt;[cC][eE][nN][tT][eE][rR](\s[^&gt;]*)?&gt;|&lt;div align="center"$1&gt;|g;
+&gt; &gt;      $buffer =~ s|&lt;/[cC][eE][nN][tT][eE][rR]&gt;|&lt;/div&gt;|g;
+&gt; &gt;  }
+&gt; 
+&gt; Just being curious: Why using 
+&gt; 
+&gt;    $buffer =~ s|&lt;[cC][eE][nN][tT][eE][rR]&gt;|&lt;div align="center"&gt;|g;
+&gt; 
+&gt; instead of
+&gt; 
+&gt;    $buffer =~ s|&lt;center&gt;|&lt;div align="center"&gt;|gi;
+&gt;                                                ^
+&gt; ?
+&gt; 
+&gt; Any performance reasons?
+
+Yes, but i am not sure it makes any difference with current Perl
+versions.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02246" HREF="msg02246.shtml">[BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> hoffmana</li>
+<li><strong><A NAME="02248" HREF="msg02248.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02260" HREF="msg02260.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02263.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02265.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02260.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02247.shtml">WML v2.x in Debian/Testing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02264"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02264"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: #include oddities. -->
+<!--X-From-R13: Yra [pUybguyra <zptyxNnegybtvk.pbz> -->
+<!--X-Date: Sat, 20 Oct 2001 12:29:43 +0200 (MET DST) -->
+<!--X-Message-Id: 877ktrq6gf.fsf@ralf.artlogix.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 871yjzs4ec.fsf_&#45;_@ralf.artlogix.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02402">Date Index</a>][<a href="thrd48.shtml#02402">Thread Index</a>]<br>
+[<A HREF="msg02401.shtml">Date Prev</A>][<A HREF="msg02403.shtml">Date Next</A>][<A HREF="msg02403.shtml">Thread Prev</A>][<A HREF="msg02404.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: #include oddities.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ken McGlothlen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 19 Oct 2001 21:30:08 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I cut and pasted the wrong error message---I'd been trying to pare down the
+example as far as I could, and I got distracted.  :)  The error message
+*should* be:
+
+        $ wml --verbose=3 test.wml
+        ** WML:Verbose: PASS 1:
+        ** WML:Verbose: source: /usr/local/lib/wml/exec/wml_p1_ipp  "-DWML_TMPDIR=/tmp" "-DWML_VERSION=2.0.7 (21-Jun-2001)" "-DWML_LOC_MANDIR=/usr/local/man" "-DWML_LOC_LIBDIR=/usr/local/lib/wml" "-DWML_LOC_BINDIR=/usr/local/bin" "-DWML_LOC_PREFIX=/usr/local" "-DWML_GEN_HOSTNAME=[host]" "-DWML_GEN_REALNAME=Ken McGlothlen" "-DWML_GEN_USERNAME=mcglk" "-DWML_GEN_GMT_ISOTIME=2001-10-20 04:29:03" "-DWML_GEN_GMT_CTIME=Sat Oct 20 04:29:03 2001" "-DWML_GEN_ISOTIME=2001-10-19 21:29:03" "-DWML_GEN_CTIME=Fri Oct 19 21:29:03 2001" "-DWML_GEN_TIME=1003552143" "-DWML_SRC_REALNAME=Ken McGlothlen" "-DWML_SRC_USERNAME=mcglk" "-DWML_SRC_GMT_ISOTIME=2001-10-19 21:27:31" "-DWML_SRC_GMT_CTIME=Fri Oct 19 21:27:31 2001" "-DWML_SRC_ISOTIME=2001-10-19 14:27:31" "-DWML_SRC_CTIME=Fri Oct 19 14:27:31 2001" "-DWML_SRC_TIME=1003526851" "-DWML_SRC_BASENAME=test" "-DWML_SRC_FILENAME=test.wml" "-DWML_SRC_DIRNAME=/home/mcglk/www" -DIPP_SRC_REALNAME=test.wml -v -S /usr/local/lib/wml/include -n test.wml   -s 'sys/bootp3.wml' -s 'sys/bootp4.wml'  -o /tmp/wml.78303.tmp2.wml /tmp/wml.78303.tmp1.wml
+        |
+        +-- /tmp/ipp.78303.tmp
+          |
+          +-- /usr/local/lib/wml/include/sys/bootp3.wml
+          |
+          +-- /usr/local/lib/wml/include/sys/bootp4.wml
+        |
+        +-- /tmp/ipp.78303.tmp
+          |
+          +-- .toc/tt.wmi
+        ** IPP:Error: file not found: tt.chp
+        ** WML:Break: Error in Pass 1 (rc=1).
+        $ _
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02403" HREF="msg02403.shtml">#include oddities.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02401.shtml">Re: Line numbers</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02403.shtml">#include oddities.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02403.shtml">#include oddities.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02404.shtml">RE: #include oddities.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02402"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02402"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

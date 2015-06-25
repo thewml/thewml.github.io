@@ -1,0 +1,267 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML&#45;1.7.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 30 Sep 1999 12:08:41 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990930112631.29091A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01008">Date Index</a>][<a href="thrd21.shtml#01008">Thread Index</a>]<br>
+[<A HREF="msg01007.shtml">Date Prev</A>][<A HREF="msg01009.shtml">Date Next</A>][<A HREF="msg01012.shtml">Thread Prev</A>][<A HREF="msg01021.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML-1.7.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Sep 1999 12:01:55 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi all,
+
+I am glad to announce that WML-1.7.3 is available at
+  <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-1.7.3.tar.gz">http://www.engelschall.com/sw/wml/distrib/wml-1.7.3.tar.gz</A>
+
+Below is the portion of the ChangeLog file describing changes
+between 1.7.2 and 1.7.3. Thanks to all contributors and those i
+forgot to mention below.
+
+Changes between 1.7.2 and 1.7.3:
+
+    *) Fix wml::std::logo (27-Sep-1999):
+       Fixes default logo to wml.
+       [Denis Barbier]
+
+    *) Upgrade of tidy (25-Sep-1999):
+       Upgrade from tidy15apr99 to tidy26apr99.
+       [Alvise Belotti]
+
+    *) Fix wml::std::grid (22-Sep-1999):
+       The ``height'' attribute must be applied to cells, and not
+       tables.
+       [Jacques Supcik &lt;supcik@ip-plus.net&gt;]
+
+    *) Fix wml::sup::path (21-Sep-1999):
+       The ``canonpath'' routine is modified to return ``./'' instead
+       of an empty string ; this fixes problems with wml::des::navbar
+       and other include files.
+       This patch is also applied to ipp.src, wmk.src and wml.src
+       [Hans Ulrich Niedermann]
+
+    *) Add documentation in wml::des::navbar (19-Sep-1999):
+       The nohints attribute of the &lt;navbar:render&gt; tag was missing.
+       [Hans Ulrich Niedermann &lt;ulrich@niedermann.bb.bawue.de&gt;]
+
+    *) Fix the &lt;include&gt; tag (19-Sep-1999):
+       When files are included via the &lt;include&gt; tag, the
+       &lt;*parser*::push-file&gt; and &lt;*parser*::pop-file&gt; tags were
+       printed, but these tags were removed from wml_p2_mhc.
+       [Denis Barbier]
+
+    *) Allow any pass order (19-Sep-1999):
+       The -p option of WML allow users to specify which pass are to
+       be invoked ; in wml-1.7.3, when pass specifications are followed
+       by an exclamation mark, passes are not sorted.
+       [Xose Manoel Ramos &lt;xmanoel@bigfoot.com&gt;
+
+    *) Accepts any suffix in input fle names (19-Sep-1999):
+       Many files are updated to accept any input file suffix. Temporary
+       files take the same suffix of the input file.
+       [Denis Barbier]
+
+    *) Fix the :NAME#} construction in wml_p5_divert (19-Sep-1999):
+       The wml_p5_divert accepts two equivalent sets of commands. As for
+       now, the preferred one is ``&lt;&lt;NAME&gt;&gt; ..NAME&gt;&gt; &lt;&lt;NAME..''. But
+       those angle brackets cause trouble in conjunction with wml_p2_mhc,
+       so documentation is updated to prefer alternative commands
+       ``{#NAME#} {#NAME:  :NAME#}''.
+       Moreover a bug has been fixed with the ``:NAME#}'' command.
+       [Denis Barbier]
+
+    *) Fix configure bugs with some Perl versions (19-Sep-1999):
+       Some Perl versions, like the EUC JP one caused an error when
+       running the configure script.
+       [Andrew S. Howell &lt;andy@tibcofinance.com&gt;]
+
+    *) Fix compilation of wml_p2_mhc (19-Sep-1999):
+       Build wml_p2_mhc with the C compiler found at configure
+       time, and not necessarily gcc.
+       [Lars Kellogg-Stedman &lt;lars@larsshack.org&gt;]
+
+    *) Bug fix : 1-char directory name (10-Sep-1999):
+       Wmk and wml did not handle right 1-char directory name.
+       [Nico Galoppo &lt;scratch@ace.ulyssis.student.kuleuven.ac.be&gt;]
+
+    *) Fix the --without-openworld configure option (09-Sep-1999):
+       The --without-openworld did not work as expected, it is fixed.
+       [Gerfried Fuchs &lt;alfie@innocent.com&gt;]
+
+    *) Fix the __FILE__ automatic variable in wml_p1_ipp (06-Sep-1999):
+       The __FILE__ variable did not work as expected because of a
+       problem with scope.
+       [Nobuyuki Tsuchimur &lt;tutimura@nn.iij4u.or.jp&gt;]
+
+    *) Use of the TMPDIR environment variable (28-Aug-1999):
+       To conform with POSIX standard, this variable contains
+       the directory name where temporary files are kept. By default,
+       this directory is /tmp.
+       [Thomas Roessler &lt;roessler@guug.de&gt;]
+
+    *) Use GNU shtool for configuring (25-Aug-1999):
+       All scripts in etc/ sub-directories were still replaced by
+       Ralf's shtool since 01-Jul-1999. They are now removed.
+       [Denis Barbier]
+
+    *) Fix include files (23-Aug-1999):
+       In all include files, perl ``system'' function is replaced by
+       backticks, to allow error reporting.
+       [Denis Barbier]
+
+    *) Write empty file during pass 9 (23-Aug-1999):
+       On latest version, empty output files were not written. It has 
+       been changed to suppress this error
+           cannot load /tmp/wml.xxx.tmp4 for unprotection at
+           /usr/bin/wml line 658.
+       [Denis Barbier]
+
+    *) New wml_include/mod/version.src (21-Aug-1999):
+       Provides the &lt;require&gt; tag to indicate a minimal WML version
+       number to process a given file.
+       [Denis Barbier]
+
+    *) Fix wml::fmt::verbatim (20-Aug-1999):
+       Added &lt;protect&gt;&lt;/protect&gt; to insert files really verbatim
+       [Thomas Roessler &lt;roessler@guug.de&gt;]
+
+    *) New wml_include/mod directory (20-Aug-1999):
+       This directory is devoted for modularity. The first include file
+       is MakeMaker.src, a Makefile generator to distribute WML modules.
+       It is inspired by the ExtUtils::MakeMaker Perl module.
+       [Denis Barbier]
+
+    *) Add wml_contrib/mkwml (20-Jul-1999):
+       This Perl script is an alternative to wmk.
+       [Jim Bowlin &lt;bowlin@sirius.com&gt;]
+
+    *) Fix the --safe long option name (19-Jul-1999):
+       The --speedup option was used instead of --safe in wmk.src and
+       wml.src
+       [Simon Burr &lt;simes@bpfh.net&gt;]
+
+    *) Better detection of relative paths in navbar.src (19-Jul-1999):
+       When including images, absolute pathnames were either paths
+       beginning with a slash or with ``http://''. Obviously other
+       cases may occur, e.g. with ftp. The new algorithm is inspired
+       from the URI perl module.
+       [Dave Plonka &lt;plonka@doit.wisc.edu&gt;]
+
+    *) Allow quotes around pass numbers in &lt;protect&gt; tags (09-Jul-1999):
+       [Davor Cengija]
+
+    *) Fix variable evaluation in Pass 1 (09-Jul-1999):
+       The regular expression used to substitute variables in wml_p1_ipp
+       was wrong with two adjacent variables, like $(foo)$(bar).
+       [Uwe Mindrup &lt;uwe@mindrup.de&gt;]
+
+    *) Fix installation of Perl modules (05-Jul-1999):
+       On some platforms, Perl modules are not installed under
+       ...prefix/lib/wml/perl.
+       Rules in Makefiles now invoke pure_perl_install
+       [Tobias Oetiker]
+
+    *) Define a WML environment variable (01-Jul-1999):
+       Contains the path of the wml binary. It is needed to perform
+       tests on wmk when wml is not yet installed.
+       [Denis Barbier]
+
+    *) More robust -D flag (01-Jul-1999):
+       A variable defined with the -D flag could not contain spaces or
+       metacharacters. It's fixed now, one can write
+           -DFOO="this \"and that\""
+       on the command line, the shebang line, in RC-files or in the
+       environment variable WMLOPTS.
+       [&lt;simes@bpfh.net&gt;, Jim Hebert]
+
+    *) Improve dependency checking (09-Jun-1999):
+       If output files depend on certain data files, one may tell WMk
+       about these dependencies by using the new ``#depends''
+       directive.  File is not included but dependency is updated.
+       The metacharacters [?*] are allowed in file names after #use
+       #include and #depends. Bracketed expressions are also recognized.
+       [Jay Treacy &lt;treacy@debian.org&gt;]
+
+    *) Enhanced wml::fmt::verbatim (08-Jun-1999):
+       Add the &lt;verbatim-file&gt; tag which is much more readable than
+       the perl wml_fmt_verbatim routine.
+       [Tobias Oetiker]
+
+    *) Makes ePerl more portable (08-Jun-1999):
+       ePerl uses the ppport.h file to deal with old and new perl.
+       [Denis Barbier]
+
+    *) Clean-up include files (06-Jun-1999):
+       Simplification have been done in include files to use the new
+       Meta-HTML tags.
+       All references to the /tmp directory have been replaced by the
+       WML_TMPDIR variable.
+       [Denis Barbier]
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01007.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01009.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01012.shtml">Re: Solution to &quot;Problems with Install.pm&quot; (now really solved)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01021.shtml">[BUG REPORT] WML 1.7.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01008"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#01008"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem with PS fonts on big&#45;endian platforms (patch included) -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Thu, 22 Jul 1999 09:06:39 +0200 (MET DST) -->
+<!--X-Message-Id: 874sixrwo4.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990721234621.20642A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00869">Date Index</a>][<a href="thrd18.shtml#00869">Thread Index</a>]<br>
+[<A HREF="msg00868.shtml">Date Prev</A>][<A HREF="msg00870.shtml">Date Next</A>][<A HREF="msg00866.shtml">Thread Prev</A>][<A HREF="msg00876.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem with PS fonts on big-endian platforms (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 22 Jul 1999 09:06:02 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; default (defined in exbase.mf). If a German people could explain how
+&gt; they use EC fonts with LaTeX, i could try to fix this. Meanwhile a
+&gt; workaround is to copy exbase.mf into /tmp, edit it and
+&gt; set classic_sharp_s to true, and then generate all fonts.
+
+This is not exactly compliant with the licence of the ec fonts. For
+those who can read german, I have once written a more or less complete
+summary, it is available at <A  HREF="http://www.deja.com/getdoc.xp?AN=327893442">http://www.deja.com/getdoc.xp?AN=327893442</A>
+
+Yours, Florian
+
+-- 
++ when hideous hordes of web designers will leave ripped bloodless bodies of
+hosts they parasited upon and convulsively start tearing limbs of each other
+in agony illuminated by artificial light [...], then we know that time has
+come for dêë|||zêïñe++++ &gt;&gt;&gt;&gt; Å.Ñ.Ñ.Ï.H.Î.L.Ä.T.Î.Ö.Ñ      -- www.absurd.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00876" HREF="msg00876.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00866" HREF="msg00866.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00868.shtml">ePerl substitions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00870.shtml">Re: filenames/directories</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00866.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00876.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00869"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00869"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

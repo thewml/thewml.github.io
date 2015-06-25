@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15 -->
+<!--X-From-R13: YhegNbcrayqnc.bet -->
+<!--X-Date: Sat, 16 Oct 1999 13:39:15 +0200 (MET DST) -->
+<!--X-Message-Id: 199910132054.WAA25507@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01067">Date Index</a>][<a href="thrd22.shtml#01067">Thread Index</a>]<br>
+[<A HREF="msg01065.shtml">Date Prev</A>][<A HREF="msg01068.shtml">Date Next</A>][<A HREF="msg01060.shtml">Thread Prev</A>][<A HREF="msg01071.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.4, AverageOS 0.8.15</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Wed, 13 Oct 1999 22:54:42 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.4
+Operating System: AverageOS 0.8.15
+
+Problem Description:
+| (feature request)
+| 
+| WML_SRC_ISOTIME and other time variables defined
+| by wml(1) provide the time string adjusted to the
+| current user's timezone settings.  In our environment,
+| fixing the timezone to GMT would be much more
+| appropriate.  Though we could require each user
+| to adjust their TZ settings before running wml(1),
+| this is ackward.
+| 
+| I suggest that some mechanism to specify the
+| timezone to use for these variables be provided
+| OR that GMT versions of the defines be provided.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01071" HREF="msg01071.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01065.shtml">Re: file permissions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01068.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01060.shtml">Re: WML site?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01071.shtml">Re: [BUG REPORT] WML 1.7.4, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01067"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01067"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

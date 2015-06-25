@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [RFC] Slices within slices -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 12 May 1999 19:23:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990512191642.25929B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00650">Date Index</a>][<a href="thrd15.shtml#00650">Thread Index</a>]<br>
+[<A HREF="msg00649.shtml">Date Prev</A>][<A HREF="msg00651.shtml">Date Next</A>][<A HREF="msg00649.shtml">Thread Prev</A>][<A HREF="msg00654.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[RFC] Slices within slices</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 12 May 1999 19:17:31 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Here are my reflexions.
+The problem is: with those slices,
+
+      DE         EN               DE         EN
+    +-----+    +-----+          +-----+    +-----+
+            DE                          EN
+  +---------------------+     +---------------------+
+
+how to extract english and german text?
+1) Slices with the same name couldn't be nested, it has been fixed.
+2) When writing the german part, the german slice inside the english
+   text must be discarded. To do this, put an ``@'' after the slice
+   name (it's in the doc).
+3) But... in this case the slices above will be equivalent to
+            DE                          EN
+  +---------------------+     +---------------------+
+   which is not what we want.
+
+I guess i will add an option flag to ``flatten'' slices with the same
+name, i.e.
+      DE         EN               DE         EN
+    +-----+    +-----+          +-----+    +-----+
+            DE                          EN
+  +---------------------+     +---------------------+
+
+will become equivalent to
+
+                 EN               DE
+               +-----+          +-----+           
+            DE                          EN
+  +---------------------+     +---------------------+
+
+and
+
+      DE         EN               DE         EN
+    +-----+    +-----+          +-----+    +-----+
+            DE                          EN
+  +---------------------+     +---------------------+
+                         EN
+  +-------------------------------------------------+
+
+becomes
+
+                 EN               DE
+               +-----+          +-----+
+            DE
+  +---------------------+
+                         EN
+  +-------------------------------------------------+
+
+Any opinion?
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00654" HREF="msg00654.shtml">Re: [RFC] Slices within slices</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00649.shtml">Tidy and HTML::Clean become part of WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00651.shtml">[BUG REPORT] WML 1.6.8, Linux</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00649.shtml">Tidy and HTML::Clean become part of WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00654.shtml">Re: [RFC] Slices within slices</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00650"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00650"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

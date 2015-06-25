@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug in documentation -->
+<!--X-From-R13: eitNperngb.bet -->
+<!--X-Date: Fri, 24 Aug 2001 14:06:05 +0200 (MET DST) -->
+<!--X-Message-Id: 200108241212.f7OCCJB05765@powai.creato.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02373">Date Index</a>][<a href="thrd48.shtml#02373">Thread Index</a>]<br>
+[<A HREF="msg02372.shtml">Date Prev</A>][<A HREF="msg02374.shtml">Date Next</A>][<A HREF="msg02372.shtml">Thread Prev</A>][<A HREF="msg02374.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug in documentation</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 24 Aug 2001 17:42:19 +0530</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I think there is a bug in the documentation on
+<A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mp4h.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mp4h.html</A>
+
+Where the author discusses the %body macro, the output does not seem 
+consistent with the input source.  Here is the extract from the page
+
+Source:
+&lt;define-tag mail2 endtag=required whitespace=delete&gt;
+&lt;set-var %attributes&gt;
+&lt;a href="mailto:&lt;get-var mail&gt;"&gt;%body&lt;/a&gt;
+&lt;/define-tag&gt;
+&lt;mail2 mail="hello@foo.com"&gt;
+&lt;img src="photo.png" alt="Dr. Foo" border=0&gt;
+&lt;/mail2&gt;
+
+Output:
+&lt;a href="<A  HREF="mailto:hello@foo.com">mailto:hello@foo.com</A>"&gt;
+&lt;img border="0"  &gt;
+&lt;/a&gt;
+
+However this is the output I get (seems correct to me) when I pass that
+source through wml.
+&lt;a href="<A  HREF="mailto:hello@foo.com">mailto:hello@foo.com</A>"&gt;
+&lt;img src="photo.png" alt="Dr. Foo" border="0"&gt;
+&lt;/a&gt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02374" HREF="msg02374.shtml">Re: Bug in documentation</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02372.shtml">RE: How to do if..then..elsif</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02374.shtml">Re: Bug in documentation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02372.shtml">RE: How to do if..then..elsif</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02374.shtml">Re: Bug in documentation</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02373"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02373"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

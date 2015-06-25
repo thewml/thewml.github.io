@@ -1,0 +1,176 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problems moving from 1.7.4 to 2.0.1 (resent) -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Fri, 7 Jul 2000 15:49:24 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007071554240.355&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01792">Date Index</a>][<a href="thrd37.shtml#01792">Thread Index</a>]<br>
+[<A HREF="msg01791.shtml">Date Prev</A>][<A HREF="msg01793.shtml">Date Next</A>][<A HREF="msg01794.shtml">Thread Prev</A>][<A HREF="msg01795.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problems moving from 1.7.4 to 2.0.1 (resent)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 Jul 2000 15:56:39 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi guys,
+
+a month ago I posted these questions to the list, but I haven't received
+any replies so far. I just downloaded and installed the latest snapshot,
+the effect is the same.
+
+If anybody can provide some hints, I'd be grateful.
+
+All the best,
+
+Stephan
+
+
+
+---------- Forwarded message ----------
+Date: Wed, 7 Jun 2000 15:29:46 +0200 (MEST)
+From: Stephan Petersen &lt;sp@gtt.lth.rwth-aachen.de&gt;
+Reply-To: sw-wml@engelschall.com
+To: sw-wml@engelschall.com
+Subject: Problems moving from 1.7.4 to 2.0.1
+
+
+Hi everybody,
+
+I'm trying to move from wml V1.7.4 to 2.0.1 and I'm having a few problems.
+Since I'm not that familiar with wml yet and couldn't find any suitable
+hints in the docs (which doesn't mean there aren't any), maybe somebody
+out here can point me in the right direction.
+
+So far I compiled and installed 2.0.1. Is that enough, or do I have to
+explicitely remove 1.7.4 first to prevent clashes?
+
+I do get lots of warnings like these:
+
+/usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:2:
+unknown syntax `defsubst' in &lt;let&gt;
+/usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:2:
+unknown syntax `define-tag' in &lt;let&gt;
+/usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:3:
+unknown syntax `defmacro' in &lt;let&gt;
+/usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:3:
+unknown syntax `define-container' in &lt;let&gt;
+/usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:4:
+unknown syntax `prog' in &lt;let&gt;
+[...]
+
+I'm not sure why I get them, I assume they relate to the move to mp4h and
+specifically the inclusion of /usr/local/lib/wml/include/sys/bootp2.wml,
+but I don't know why I get them.
+
+
+All my wml files first #include an include file of my own, which in turn
+contains all the necessary #use commands, then starts to define some
+frequently-needed tags. V2.0.1 complains during the ePerl pass about the
+"@" in the following example:
+
+&lt;define-tag myemail&gt; 
+&lt;a href="<A  HREF="mailto:me@my.com">mailto:me@my.com</A>"&gt;me@my.com&lt;/a&gt; 
+&lt;/define-tag&gt;
+
+I have to replace that with 
+
+&lt;define-tag aspemail&gt; 
+&lt;a href=\"<A  HREF="mailto:info@aspetersen.de\">mailto:info@aspetersen.de\</A>"&gt;info@aspetersen.de&lt;/a&gt; 
+&lt;/define-tag&gt;
+
+(i.e. escape the quotes), is that a side-effect of the change to mp4h
+too, or is that due to an updated ePerl?
+
+
+On another note: README.mp4h contains this example, which I don't
+understand:
+
+ With mp4h,
+ &lt;define-tag foo&gt;Here:%attributes!!&lt;/foo&gt;
+ &lt;foo "x &lt;foo "1" "2"&gt; y&gt;"
+ gives
+ Arg1:y Attrs:x Arg1:2 Attrs:1 2!! y!!
+ 
+Before I dig into that one: is there maybe something missing?
+
+
+Thanks in advance for any pointers,
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01795" HREF="msg01795.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01791.shtml">Re: [wml] [BUG REPORT] WML 2.0.2, Any OS</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01793.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01794.shtml">Re: [BUG REPORT] WML 2.0.2, Any OS</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01795.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01792"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01792"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: v@rgQbz znvyfreivpr <wuNvargpbz.pu> -->
+<!--X-Date: Sat, 4 Dec 1999 12:00:48 +0100 (MET) -->
+<!--X-Message-Id: 199912041100.MAA21408@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01194">Date Index</a>][<a href="thrd9.shtml#01194">Thread Index</a>]<br>
+[<A HREF="msg01193.shtml">Date Prev</A>][<A HREF="msg01195.shtml">Date Next</A>][<A HREF="msg01123.shtml">Thread Prev</A>][<A HREF="msg01201.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: iNetCom mailservice &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 4 Dec 1999 12:00:06 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+well, the user you wanted to reach does not exist on this server, please
+try again, it could be the user is not present anymore.
+--
+Subject: Re: [BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10
+References: &lt;<A HREF="msg01192.shtml">199912021734.SAA01839@opensource.ee.ethz.ch</A>&gt;
+In-Reply-To: &lt;<A HREF="msg01192.shtml">199912021734.SAA01839@opensource.ee.ethz.ch</A>&gt;
+X-loop: mailservice@inetcom.ch 
+
+&gt;Reply-To: lohner@debian.org
+&gt;Sender: nobody@opensource.ee.ethz.ch
+&gt;To: sw-wml@engelschall.com
+
+&gt;BUG REPORT
+
+&gt;Package: WML 1.7.4
+&gt;Operating System: SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10
+
+
+&gt;Problem Description:
+&gt;| in wml_common, the CC and LD variables are not inherited, causing it to use 'cc' instead of 'gcc' 
+&gt;| and therefore failing to build since 'cc' is not installed on the systems here.
+&gt;| The Makefiles jsut need to be modified to inherit this froma higher level to resolve the problem.
+&gt;| 
+&gt;| Regards, Nils.
+&gt;| 
+&gt;| ps if you have a fix, I'd be happy to try it
+
+&gt;______________________________________________________________________
+&gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt;Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01193.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01195.shtml">Re: [BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01123.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01201.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01194"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#01194"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

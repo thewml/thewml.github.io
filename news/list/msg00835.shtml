@@ -1,0 +1,217 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Very complicated m4 stuff -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 8 Jul 1999 01:16:25 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990708003459.375E&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990702183505.A2308@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00835">Date Index</a>][<a href="thrd17.shtml#00835">Thread Index</a>]<br>
+[<A HREF="msg00834.shtml">Date Prev</A>][<A HREF="msg00836.shtml">Date Next</A>][<A HREF="msg00828.shtml">Thread Prev</A>][<A HREF="msg00964.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Very complicated m4 stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 01:15:20 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 2 Jul 1999, Xose Manoel Ramos wrote:
+
+&gt; El Mon, Jun 28, 1999 at 12:53:42AM +0200, Denis Barbier contaba:
+&gt; 
+&gt; &gt;PS: I did not understand your other post, could you send a simple
+&gt; &gt;    example to explain what you want?
+
+A complete example, great ;-)
+
+&gt; I have such a group of m4 macros:
+&gt; 
+&gt; This defines a loop executes `_comando' for each element in a list. 
+&gt;  
+&gt; m4_define(&lt;`_gira'&gt;,&lt;`m4_ifelse($#,1,&lt;`_comando(&lt;`$1'&gt;)'&gt;,&lt;`_comando(&lt;`$1'&gt;)'&gt;&lt;`
+&gt; _gira(m4_shift($@))'&gt;)'&gt;)
+&gt; 
+&gt; And this is very messy (as I supose m4 is most of the time). I have
+&gt; to redefine some commands, so the included file has some of this
+&gt; commands they will not be used (this could make some strange things). 
+&gt; 
+&gt; m4_define(&lt;`_comando'&gt;,&lt;`
+&gt; m4_divert(-1)
+&gt; m4_pushdef(&lt;`m4_divert'&gt;)
+&gt; m4_pushdef(&lt;`m4_sinclude'&gt;)
+&gt; m4_include(&lt;`macros.m4'&gt;)
+&gt; m4_include(&lt;`$1'&gt;)
+&gt; m4_popdef(&lt;`m4_sinclude'&gt;)
+&gt; m4_popdef(&lt;`m4_divert'&gt;)
+&gt; m4_divert(0)m4_dnl
+&gt; _test_macro()
+&gt; m4_divert(0)m4_dnl
+&gt; '&gt;)
+&gt; 
+&gt; Well, this probably is not easy understandable. Just an example:
+&gt; 
+&gt; I have several files this way:
+&gt; 
+&gt; ---- file3
+&gt; m4_define(_test_macro,xxxx)
+&gt; ----
+&gt; 
+&gt; ---- file2
+&gt; m4_define(_test_macro,yuyy)
+&gt; ----
+&gt; 
+&gt; ---- file1
+&gt; m4_define(_test_macro,zzzz)
+&gt; ----
+&gt; 
+&gt; And a file that calls the defined macros this way:
+&gt; 
+&gt; ------------ 
+&gt; _gira(file1,file2,file3)
+&gt; ------------
+&gt; 
+&gt; It will output:
+&gt; 
+&gt;  zzzz
+&gt;  yyyy
+&gt;  xxxx
+&gt; 
+&gt; Did somebody understand all this?
+
+Hmmm, i hope so. What did you expect? This output seems good, isn't it?
+  _gira(file1,file2,file3
+expands to
+  _comando(file1)_comando(file2)_comando(file3)
+and then to
+  zzzz
+  yyyy
+  xxxx
+
+&gt; Another way of explaining it. This code tries to include several
+&gt; files from a list inside the page. The program can extract certain
+&gt; information from them, and even do clever things: knowing what his
+&gt; name is, do not include itself. 
+&gt; 
+&gt; It this could be possible something like:
+&gt; 
+&gt; #include for(file*) do
+&gt;             if file == $(FILENAME) skip
+&gt;             else include it
+
+Not directly via pass 1, ePerl is your friend.
+
+&gt; I don't know if I explain myself.
+&gt; 
+&gt; Well, I do this trick inside m4, but the problem is this is pass 4,
+&gt; so I cannot use Meta-HTML or eperl.
+
+And so the solution is to rewrite it with Meta-HTML or eperl. Here are
+some hints.
+You can perform a kind of conditional inclusion via pass 1 like this:
+$(INCLUDE_FILENAME:*# )#include 'file1'
+
+File1 will be included only if INCLUDE_FILENAME is defined.
+Of course, this is quite rough and you are certainly not very happy with
+this.
+
+Next try with Meta-HTML (not tested):
+
+#use wml::std::tags
+&lt;define-tag alt-include&gt;
+&lt;preserve src&gt;
+&lt;set-var %attributes&gt;
+&lt;ifeq &lt;get-var src&gt; "$(FILENAME)" ""
+   &lt;include &lt;get-var src&gt;&gt;&gt;
+&lt;restore src&gt;
+&lt;/define-tag&gt;
+
+&lt;set-var list-of-files="file1\nfile2\nfile3"&gt;
+&lt;foreach file list-of-files&gt;
+  &lt;alt-include src=&lt;get-var file&gt;&gt;
+&lt;/foreach&gt;
+
+But for such complex programming tasks, you should use ePerl.
+#use wml::std::tags
+&lt;define-tag alt-include&gt;
+&lt;preserve src&gt;
+&lt;set-var %attributes&gt;
+&lt;:
+  my $file = qq(&lt;get-var src&gt;);
+  if ($file ne '$(FILENAME)') {#  $(FILENAME) is expanded in pass1
+    open(IN, "$file") || die;
+    local($/) = undef;
+    my $body = &lt;IN&gt;;
+    close(IN);
+    ... operations on $body ...
+  }
+:&gt;
+&lt;restore src&gt;
+&lt;/define-tag&gt;
+
+Hope this helps.
+
+--
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00828" HREF="msg00828.shtml">Very complicated m4 stuff</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00834.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00836.shtml">I'll be busy</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00828.shtml">Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00964.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00835"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00835"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

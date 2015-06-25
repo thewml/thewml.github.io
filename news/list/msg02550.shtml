@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Upgraded wml from potato to woody, divert doesnt work any more ? -->
+<!--X-From-R13: wpoNzarg.se (Xrna&#45;Quneyrf Pntarevf) -->
+<!--X-Date: Thu, 7 Mar 2002 16:00:18 +0100 (MET) -->
+<!--X-Message-Id: 20020307145908.GE4347@mnet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02550">Date Index</a>][<a href="thrd52.shtml#02550">Thread Index</a>]<br>
+[<A HREF="msg02549.shtml">Date Prev</A>][<A HREF="msg02551.shtml">Date Next</A>][<A HREF="msg02542.shtml">Thread Prev</A>][<A HREF="msg02551.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Upgraded wml from potato to woody, divert doesnt work any more ?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Jean-Charles Bagneris)</LI>
+<LI><em>Date</em>: Thu, 7 Mar 2002 15:59:08 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I recently upgraded from potato to woody.
+I just re-built one of my wml pages with wml-woody (WML v. 2.0.8) and the
+body of the page is outside the whole template.
+
+Short example :
+=== template file ====
+[ ... wml and html stuff, including rendering of a navbar ]
+{#BODY#}
+[ ... more html stuff ]
+&lt;/body&gt;
+&lt;/html&gt;
+
+{#BODY:
+
+=== end of template file ====
+
+=== file to render ===
+#include "template.tmpl"  # &lt;--- this is the name of my template file
+[ html stuff ]
+=== end of file to render ===
+
+Whenever I render this file (or any other), the diversion does not run any
+more, i.e., the contents of the file to render is actually put at the
+bottom of the rendered file (after &lt;/html&gt;).
+
+I tried this with unmodified source files - unmodified since I upgraded, I
+mean - same result. It worked perfectly with potato.
+
+Did I miss anything ?
+
+Thanks
+-- 
+Jean-Charles Bagneris
+PGP/GnuPG public key : <A  HREF="http://perso.mnet.fr/jcb">http://perso.mnet.fr/jcb</A>
+Cryptographie ? <A  HREF="http://www.geocities.com/openpgp/index.html">http://www.geocities.com/openpgp/index.html</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02551" HREF="msg02551.shtml">Re: Upgraded wml from potato to woody, divert doesnt work any more ?</A></strong>, <em>From:</em> Jean-Charles Bagneris</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02549.shtml">AW: NAVBAR and CSS</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02551.shtml">Re: Upgraded wml from potato to woody, divert doesnt work any more ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02542.shtml">Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02551.shtml">Re: Upgraded wml from potato to woody, divert doesnt work any more ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02550"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02550"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

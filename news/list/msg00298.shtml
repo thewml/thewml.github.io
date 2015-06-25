@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: what is needed to support other charsets in wml? -->
+<!--X-From-R13: @beoreg Qerggby <apNbzrqvn.pu> -->
+<!--X-Date: Mon, 4 Jan 1999 19:01:16 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.95.990104183013.8300V&#45;100000@amitaba.omedia.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990104110140.E2190@debian.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00298">Date Index</a>][<a href="thrd6.shtml#00298">Thread Index</a>]<br>
+[<A HREF="msg00297.shtml">Date Prev</A>][<A HREF="msg00299.shtml">Date Next</A>][<A HREF="msg00297.shtml">Thread Prev</A>][<A HREF="msg00299.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: what is needed to support other charsets in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Norbert Crettol &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 4 Jan 1999 18:32:04 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 4 Jan 1999, James A. Treacy wrote:
+
+&gt; On Sun, Dec 27, 1998 at 05:49:46PM +0100, Rafael Cordones Marcos wrote:
+&gt; &gt; 
+&gt; &gt; I am sorry I do not know the answer to your question but I was
+&gt; &gt; wondering if wml sources for the Debian website are available as they
+&gt; &gt; are in different languages and I could learn A LOT from them. Thanks
+&gt; &gt; in advance.
+&gt; &gt; 
+&gt; The source for the portion of the Debian web site that is created using
+&gt; wml can be retrieved using CVS. It can not be reached using the web as
+&gt; the html is generated in another directory. This is done because the
+&gt; web site is mirrored (no point in wasting bandwidth).
+&gt; 
+&gt; You can get a copy of the repository using the following commands
+&gt; (requires that CVS be installed):
+&gt; 
+&gt;   cvs -d :pserver:anonymous@cvs.debian.org:/cvs/webwml login
+&gt; just hit &lt;return&gt; for the password
+&gt;   cvs -d :pserver:anonymous@cvs.debian.org:/cvs/webwml checkout webwml/english
+
+I've tried it but was rejected :
+
+[amitaba: ~/src/webdesign/debian]$ cvs -d
+:pserver:anonymous@cvs.debian.org:/cvs/webwml login
+(Logging in to anonymous@cvs.debian.org)
+CVS password: 
+cvs [login aborted]: connect to cvs.debian.org:2401 failed: Connection
+refused
+
+Something wrong ?
+
+norbert
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00299" HREF="msg00299.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00301" HREF="msg00301.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00297" HREF="msg00297.shtml">Re: what is needed to support other charsets in wml?</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00297.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00299.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00297.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00299.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00298"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00298"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

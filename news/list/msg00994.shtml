@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to include lines starting with a # sign -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 25 Sep 1999 17:59:19 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990925173113.750C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: NDBBJOMIEJPJILMHKHDJMEDHCAAA.dkrizic@bsb&#45;software.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00994">Date Index</a>][<a href="thrd21.shtml#00994">Thread Index</a>]<br>
+[<A HREF="msg00995.shtml">Date Prev</A>][<A HREF="msg00996.shtml">Date Next</A>][<A HREF="msg00992.shtml">Thread Prev</A>][<A HREF="msg00999.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to include lines starting with a # sign</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 25 Sep 1999 17:58:31 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 22 Sep 1999, Darko Krizic wrote:
+
+&gt;  Question: I want to include a source code file (perl program) that contains
+&gt; a lot of (very useful) lines starting with a comment sign #. Problem is:
+&gt; These lines are stripped in any method that I use to include the file
+&gt; (preprocessor include, fsview...).
+&gt; 
+&gt; Any ideas?
+
+Yes, you have to protect your files against pass 8, which removes lines
+beginning with a hash sign.
+Something like
+&lt;protect pass=8&gt;
+&lt;:
+...your Perl code here...
+:&gt;
+&lt;/protect&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00992" HREF="msg00992.shtml">How to include lines starting with a # sign</A></strong>, <em>From:</em> Darko Krizic</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00995.shtml">Re: Are there online articles about WML ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00996.shtml">Re: emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00992.shtml">How to include lines starting with a # sign</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00999.shtml">Solution to &quot;Problems with Install.pm&quot;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00994"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#00994"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

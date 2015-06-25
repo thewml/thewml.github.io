@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Compilation problem -->
+<!--X-From-R13: Oyivfr Prybggv <nyivfrNyrggrer.havcq.vg> -->
+<!--X-Date: Thu, 29 Jan 1998 15:17:22 +0100 (MET) -->
+<!--X-Message-Id: 19980129122054.09666@fedro -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00065">Date Index</a>][<a href="thread.shtml#00065">Thread Index</a>]<br>
+[<A HREF="msg00064.shtml">Date Prev</A>][<A HREF="msg00066.shtml">Date Next</A>][<A HREF="msg00031.shtml">Thread Prev</A>][<A HREF="msg00066.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Compilation problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alvise Belotti &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Jan 1998 12:20:54 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi there,
+first at all, I apologize for my very poor english
+this is my first attempt to use the "wml toolkit"
+I've found it very great...but
+when I tried to compile the 1.5.1 version I had some troubles.
+In the make process the eperl executable wasn't create.
+Here is a brief excerpt from the make messages:
+--------------
+eperl_main.o(.text+0x1f02): undefined reference to `perl_init_i18nl14n'
+make[1]: *** [eperl] Error 1
+make[1]: Leaving directory `/home/alvise/src/wml-1.5.1/wml_p3_eperl'
+&lt;=== wml_p3_eperl
+-------------
+I've solved the problem with a dirty trick:
+I commented out the if...endif statement in 
+wml-1.5.1/wml_p3_eperl/eperl_main.c
+
+    /*  initialise the Perl Locale environment  */
+/*    #if AC_perl_vnum &lt; 500400 */
+/*    perl_init_i18nl14n(1); /* Perl 5.003 or lower */
+/*    #else */
+/*    perl_init_i18nl10n(1); /* Perl 5.004 or higher */
+/*    #endif */
+
+and all seems to go fine (I hope, I haven't tested it yet;-)
+
+My system is a Linux box running GNU/Debian 1.3.1r6 (bo)
+with perl 5.0037 (&lt;-is this the problem?)
+thanks
+Alvise
+--
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-%
+	% Alvise Belotti - via Pulle', 24/A - 35136 Padova PD - Italy %
+	% Tel. Home: +39(0)49 8900439 Office: +39(0)49 8274696        %
+	% E-Mail: alvise@lettere.unipd.it                             %
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-%
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00066" HREF="msg00066.shtml">Re: Compilation problem</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00064.shtml">Re: Feature request: removal of &quot;unwanted&quot; tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00066.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00031.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00066.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00065"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00065"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

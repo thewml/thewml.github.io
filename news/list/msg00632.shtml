@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: It's time... -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sat, 8 May 1999 07:08:59 +0200 (MET DST) -->
+<!--X-Message-Id: 19990507225847.A28555@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199905071849.OAA16644@no.cs.brown.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00632">Date Index</a>][<a href="thrd14.shtml#00632">Thread Index</a>]<br>
+[<A HREF="msg00631.shtml">Date Prev</A>][<A HREF="msg00633.shtml">Date Next</A>][<A HREF="msg00629.shtml">Thread Prev</A>][<A HREF="msg00631.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: It's time...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 May 1999 22:58:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, May 07, 1999, John Bazik wrote:
+
+&gt; &gt; Please let me know now if you want other features included in the
+&gt; &gt; next release.
+&gt; 
+&gt; How about dropping the DST from WML_SRC_CTIME and WML_GEN_CTIME?
+&gt; 
+&gt; &gt;From wml_frontend/wml.src:
+&gt; 
+&gt;  sub ctime {
+&gt;      my ($time) = @_;
+&gt; -  
+&gt; -    my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = 
+&gt; -        localtime($time);
+&gt; -    my ($str) = sprintf("%s %s %2d %02d:%02d:%02d 19%s%s",
+&gt; -         $dow[$wday], $moy[$mon], $mday, $hour, $min, $sec, $year, 
+&gt; -         $isdst ?  " DST" : "");
+&gt; -    return $str;
+&gt; +
+&gt; +    return scalar(localtime($time));
+&gt;  }
+&gt; 
+&gt; This would also fix the Y2K problem I see there...
+
+Yeah, +1. This ctime() function I've written for very ancient Perl versions
+and is not needed for any Perl 5 AFAIK.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00629" HREF="msg00629.shtml">Re: It's time...</A></strong>, <em>From:</em> John Bazik</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00631.shtml">RE: It's time...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00633.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00629.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00631.shtml">RE: It's time...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00632"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00632"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Old Q/A -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 28 May 1999 10:25:10 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990528101737.14242A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00703">Date Index</a>][<a href="thrd15.shtml#00703">Thread Index</a>]<br>
+[<A HREF="msg00702.shtml">Date Prev</A>][<A HREF="msg00704.shtml">Date Next</A>][<A HREF="msg00698.shtml">Thread Prev</A>][<A HREF="msg00711.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Old Q/A</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 28 May 1999 10:19:15 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi folks,
+
+below are answers to some questions posted here.
+I am writing some comments in the FAQ, performing more tests on WMk and
+if everything is fine, i plan to release WML-1.7.0 next week.
+
+Denis
+
+------------------------------------------------------------
+=== Q: Why does this fail?
+| &lt;lang:area&gt; 
+| (de) Referenziere: &lt;lang:star:href: index.*.html|index.html&gt;
+| (en) Referencing : &lt;lang:star:href: index.*.html|index.html&gt;
+| &lt;/lang:area&gt; 
+
++++ A: With Slice 1.3.2, it was not possible to have nested slices with
+the same name, like in [X: foo [X:bar:]:]
+It has been fixed in slice 1.3.3 which is included in wml 1.7.0
+_But_ take care on how to generate output files:
+#!wml -o (ALL-LANG_*)+LANG_EN-LANG_DE:%BASE.en.html \
+      -o (ALL-LANG_*)+LANG_DE-LANG_EN:%BASE.de.html
+When you have more than 2 languages, it becomes unreadable.
+
+An idea is to add another wildcard, to expand to all values except a
+given string. For instance, LANG_*!EN could expand to all LANG_* except
+LANG_EN. The shebang line is then
+#!wml -o ALL-LANG_*!EN:%BASE.en.html -o ALL-LANG_*!DE:%BASE.de.html
+
+I have to think of a good syntax for this operator, so any comments are
+welcome.
+------------------------------------------------------------
+=== Q: Installation failed on Solaris
+Can't load 
+'/opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so'
+for module IO: ld.so.1: /opt/gnu/lib/wml/exec/wml_p3_eperl: fatal:
+relocation error: file 
+...
++++ A: None. No idea about this problem
+------------------------------------------------------------
+=== Q: Why there is no error when an epilog filter fail?
+
++++ A: It has been fixed. All failures (in prolog, epilog, ...) now
+raise exceptions and abort execution.
+------------------------------------------------------------
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00702.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00704.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00698.shtml">Re: Slice-1.3.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00711.shtml">1.6.8 or 1.7.0 What's the latest version?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00703"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00703"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

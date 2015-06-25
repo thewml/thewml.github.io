@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: minor buglet -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 4 Mar 1998 07:49:54 +0100 (MET) -->
+<!--X-Message-Id: 199803040649.HAA27830@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980304031333.A3369@matrix.42.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00108">Date Index</a>][<a href="thrd3.shtml#00108">Thread Index</a>]<br>
+[<A HREF="msg00107.shtml">Date Prev</A>][<A HREF="msg00109.shtml">Date Next</A>][<A HREF="msg00107.shtml">Thread Prev</A>][<A HREF="msg00109.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: minor buglet</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 4 Mar 1998 07:49:53 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Stefan `Sec` Zehl, in a previous mail you wrote:
+
+&gt; I just stumbled accross this one:
+&gt; 
+&gt; matrix:~&gt;echo '&lt;center&gt;&lt;center&gt;&lt;/center&gt;&lt;/center&gt;'|wml
+&gt; &lt;div align="center"&gt;&lt;center&gt;&lt;/div&gt;&lt;/center&gt;
+
+Fixed for WML 1.6.3:
+
+:&gt; echo '&lt;center&gt;&lt;center&gt;&lt;/center&gt;&lt;/center&gt;'| ./htmlfix 
+&lt;div align="center"&gt;&lt;div align="center"&gt;&lt;/div&gt;&lt;/div&gt;
+
+Thanks for the hint. As a workaround for your problem before 1.6.3 is
+available just replace line 192 of wml_backend/p7_htmlfix/htmlfix.src with
+
+   $buffer =~ s|&lt;center&gt;|&lt;div align=center&gt;|isg;
+   $buffer =~ s|&lt;/center&gt;|&lt;/div&gt;|isg;
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00107" HREF="msg00107.shtml">minor buglet</A></strong>, <em>From:</em> Stefan `Sec` Zehl</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00107.shtml">minor buglet</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00109.shtml">Webdesign Magnifying Glass</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00107.shtml">minor buglet</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00109.shtml">Webdesign Magnifying Glass</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00108"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00108"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Examples: WML Itself -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 23 Dec 1997 10:22:45 +0100 (MET) -->
+<!--X-Message-Id: 199712230922.KAA04418@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00007">Date Index</a>][<a href="thread.shtml#00007">Thread Index</a>]<br>
+[<A HREF="msg00006.shtml">Date Prev</A>][<A HREF="msg00008.shtml">Date Next</A>][<A HREF="msg00006.shtml">Thread Prev</A>][<A HREF="msg00009.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Examples: WML Itself</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 23 Dec 1997 10:22:43 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+For those of you who still haven't found the
+WML-&gt;Example-&gt;WML-Itself page:
+
+<A  HREF="http://www.engelschall.com/sw/wml/example/myself.html">http://www.engelschall.com/sw/wml/example/myself.html</A>
+
+There I've located hyperlinks to all(!) WML files which theirself
+form the WML webarea. Use this chance to have a look how the
+various optical and functional parts of the WML webarea where
+created by me. 
+
+Very interesting is the multiple use of the new wml::des::navbar:
+Once for the graphical main navbar at the left hand side of each
+page and once for the textual navbar on top of every sub page. 
+
+Feel free to grab and idea or code snippets from this area...
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00006.shtml">Re: Mirror available for the distribution tarballs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00008.shtml">ANNOUNCE: WML 1.4.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00006.shtml">Re: Mirror available for the distribution tarballs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00009.shtml">Re: Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00007"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00007"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

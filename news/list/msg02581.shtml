@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Telling <toc> to ignore <Hn> entries? -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Mon, 25 Mar 2002 10:34:37 +0100 (MET) -->
+<!--X-Message-Id: 3C9EF002.6030108@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C9B4D1F.BC8A8FF6@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Reference: 20020322170732.A5691@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02581">Date Index</a>][<a href="thrd52.shtml#02581">Thread Index</a>]<br>
+[<A HREF="msg02580.shtml">Date Prev</A>][<A HREF="msg02582.shtml">Date Next</A>][<A HREF="msg02580.shtml">Thread Prev</A>][<A HREF="msg02583.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Mar 2002 09:38:10 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Dennis,
+
+thanks for the hint!
+
+&gt;&gt;I would like to use &lt;toc&gt;, but only by specifically adding &lt;toc_Hn&gt;
+&gt;&gt;entries to the table. Is there a way to tell &lt;toc&gt; to ignore regular 
+&gt;&gt;&lt;Hn&gt; entries? That would be a useful option for &lt;toc&gt;.
+&gt;&gt;
+&gt;&gt;I had a look at toc.wml, but I have no idea how to modify that code :-)
+&gt; 
+&gt; 
+&gt; The simplest solution is to redefine &lt;hN&gt;:
+&gt;   #use wml::std::toc
+&gt;   &lt;define-tag h1 endtag=required&gt;&lt;h1* %attributes&gt;%body&lt;/define-tag&gt;
+&gt;   &lt;define-tag h2 endtag=required&gt;&lt;h2* %attributes&gt;%body&lt;/define-tag&gt;
+
+
+It works if I add the corresponding &lt;/hN&gt; end tags after %body.
+
+All the best,
+
+Stephan
+
+
+-- 
+
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+ &gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+ &gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02578" HREF="msg02578.shtml">Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></strong>, <em>From:</em> Stephan Petersen</li>
+<li><strong><A NAME="02580" HREF="msg02580.shtml">Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02580.shtml">Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02582.shtml">Bug in wml::std::page with bugfix.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02580.shtml">Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02583.shtml">Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02581"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02581"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

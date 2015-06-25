@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installationproblems on Freebsd -->
+<!--X-From-R13: Ibystnat Rnhgreznaa <qnhgvNbru.gh&#45;tenm.np.ng> -->
+<!--X-Date: Tue, 22 Aug 2000 21:11:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.10008222105060.8808&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000822003058.F1200@sequoia.mondomaineamoi.megalo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01901">Date Index</a>][<a href="thrd39.shtml#01901">Thread Index</a>]<br>
+[<A HREF="msg01900.shtml">Date Prev</A>][<A HREF="msg01902.shtml">Date Next</A>][<A HREF="msg01900.shtml">Thread Prev</A>][<A HREF="msg01905.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installationproblems on Freebsd</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wolfgang Dautermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 22 Aug 2000 21:11:07 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 22 Aug 2000, Stephane Legrand wrote:
+
+&gt; Hello,
+&gt; 
+&gt; Have you tried with the FreeBSD port ? :
+
+Can I not use the usual .tar.gz for Freebsd (I do not really know much
+about Freebsd, I know Linux (and a bit Irix and True64)). Where can I get
+a port for Freebsd?
+ 
+&gt; cd /usr/ports/www/wml
+&gt; make; make test; make install; make clean
+
+I wanted to install wml on my own account, I do not have root permissions
+on this machine.
+
+Bye, Wolfgang 
+
+-- 
+Meine Homepage: <A  HREF="http://oeh.tu-graz.ac.at/~dauti/">http://oeh.tu-graz.ac.at/~dauti/</A> Ausserdem Webmaster von:
+<A  HREF="http://ers.dhs.org/lugg/">http://ers.dhs.org/lugg/</A>, <A  HREF="http://www.usenet.at">http://www.usenet.at</A>,
+<A  HREF="http://oeh.tu-graz.ac.at">http://oeh.tu-graz.ac.at</A>, <A  HREF="http://www.wist.vc-graz.ac.at">http://www.wist.vc-graz.ac.at</A>, 
+<A  HREF="http://fahrzeugtechnik.fh-joanneum.at">http://fahrzeugtechnik.fh-joanneum.at</A>, <A  HREF="http://www.koma.dyn.priv.at">http://www.koma.dyn.priv.at</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01905" HREF="msg01905.shtml">Re: Installationproblems on Freebsd</A></strong>, <em>From:</em> Stephane Legrand</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01900" HREF="msg01900.shtml">Re: Installationproblems on Freebsd</A></strong>, <em>From:</em> Stephane Legrand</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01900.shtml">Re: Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01902.shtml">Re: [BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01900.shtml">Re: Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01905.shtml">Re: Installationproblems on Freebsd</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01901"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01901"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

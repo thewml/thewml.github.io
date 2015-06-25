@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 17 Mar 1999 10:39:36 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990317102431.19244C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199903162103.WAA17781@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00490">Date Index</a>][<a href="thrd11.shtml#00490">Thread Index</a>]<br>
+[<A HREF="msg00489.shtml">Date Prev</A>][<A HREF="msg00491.shtml">Date Next</A>][<A HREF="msg00486.shtml">Thread Prev</A>][<A HREF="msg00488.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Mar 1999 10:34:12 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 16 Mar 1999 rvbijl39@calvin.edu wrote:
+
+&gt; Problem Description:
+&gt; | I wanted to embed variable A as the default value for
+&gt; | variable B. When filled in, it didn't work properly. 
+&gt; | (thus the bug report ;)
+[...]
+&gt; | &lt;HEAD&gt;
+&gt; |   &lt;META...&gt;
+&gt; |   &lt;TITLE&gt;$(TITLE_BAR:-$(TITLE))&lt;/TITLE&gt;
+&gt; | &lt;/HEAD&gt;
+&gt; | ...
+
+Hi Ryan,
+
+indeed nested substitutions don't work. An alternative is to write
+ &lt;HEAD&gt;
+   &lt;TITLE&gt;
+$(TITLE_BAR:+# )$(TITLE)
+$(TITLE_BAR:*# )$(TITLE_BAR)
+   &lt;/TITLE&gt;
+ &lt;/HEAD&gt;
+ 
+&gt; | One other thing which i was looking for, was a way
+&gt; | to insert the date of the file (or the compile date,
+&gt; | or something like that. Or both?). It would make the
+&gt; | last changed date a lot easier to do.  Insertable in
+&gt; | various date formats would be good too, IMO.
+
+There are 4 variables named
+  WML_SRC_CTIME WML_SRC_ISOTIME WML_GEN_CTIME and WML_GEN_ISOTIME.
+SRC means the last modification time of the file you are processing.
+CTIME and ISOTIME are formats.
+
+If you want more customization, you have to write your own perl macros.
+
+&gt; | Other than that, i love WML! 
+
+Thanks,
+
+   Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00486" HREF="msg00486.shtml">[BUG REPORT] WML This is WML Version 1.6.8 (12-01-1999), SunOS ursa 5.5.1 Generic_103640-24 sun4u sparc SUNW,Ultra-2</A></strong>, <em>From:</em> rvbijl39</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00489.shtml">Re: Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00491.shtml">Always substitutions ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00486.shtml">[BUG REPORT] WML This is WML Version 1.6.8 (12-01-1999), SunOS ursa 5.5.1 Generic_103640-24 sun4u sparc SUNW,Ultra-2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00488.shtml">Substitution of asteriks</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00490"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00490"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

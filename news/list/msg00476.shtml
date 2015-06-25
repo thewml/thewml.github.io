@@ -1,0 +1,195 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [patch] Re: WML wml::std::lang questions -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 13 Mar 1999 16:57:33 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990313165042.20966A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199903131516.HAA19358@appr.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00476">Date Index</a>][<a href="thrd11.shtml#00476">Thread Index</a>]<br>
+[<A HREF="msg00475.shtml">Date Prev</A>][<A HREF="msg00477.shtml">Date Next</A>][<A HREF="msg00475.shtml">Thread Prev</A>][<A HREF="msg00477.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[patch] Re: WML wml::std::lang questions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Mar 1999 16:52:13 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Mike and others
+
+i decided to post this patch, because i think it is easier
+for you to patch wml_p9_slice rather than recompiling a new wml.
+
+Denis
+
+--- wml_p9_slice	Tue Feb 16 14:19:25 1999
++++ wml_p9_slice	Sat Mar 13 16:50:35 1999
+@@ -109,6 +109,13 @@
+     exit(1);
+ }
+ 
++sub printwarning {
++    my ($str) = @_;
++
++    $str =~ s|^|** Slice:Warning: |mg;
++    print STDERR $str;
++}
++
+ ##EOF##
+ 
+ package SliceTermParser;
+@@ -442,7 +449,9 @@
+     my ($tmp);
+ 
+     if ($main::CFG-&gt;{SLICE}-&gt;{SET}-&gt;{OBJ}-&gt;{"$name"} eq '') {
+-        &amp;main::error("no such slice '$name'\n");
++        &amp;main::printwarning("no such slice '$name'\n");
++        $main::CFG-&gt;{SLICE}-&gt;{SET}-&gt;{OBJ}-&gt;{"$name"} = 
++                $main::CFG-&gt;{SLICE}-&gt;{SET}-&gt;{OBJ}-&gt;{DEF0}-&gt;Clone;
+     }
+     $tmp = sprintf("\$T%03d", $tmpcnt++);
+     return $tmp;
+@@ -899,7 +908,7 @@
+     foreach $entry (@{$CFG-&gt;{OPT}-&gt;{O}}) {
+ 
+         #   determine parameters
+-        if ($entry =~ m|^([A-Z0-9~!+u*n\-\\^x()@]+):(.+)@(.+)$|) {
++        if ($entry =~ m|^([_A-Z0-9~!+u*n\-\\^x()@]+):(.+)@(.+)$|) {
+             # full syntax
+             ($slice, $outfile, $chmod) = ($1, $2, $3);
+         }
+@@ -917,16 +926,6 @@
+         }
+         &amp;verbose("    file `$outfile': sliceterm='$slice', chmodopts='$chmod'\n");
+ 
+-        #   open output file
+-        if ($outfile eq '-') {
+-            $out = new IO::Handle;
+-            $out-&gt;fdopen(fileno(STDOUT), 'w');
+-        }
+-        else {
+-            $out = new IO::File;
+-            $out-&gt;open("&gt;$outfile");
+-        }
+-
+         #   now when there is plain data cut out the slices
+         if (length($CFG-&gt;{INPUT}-&gt;{PLAIN}) &gt; 0) {
+             #   parse the sliceterm and create corresponding
+@@ -948,22 +947,37 @@
+             #   and move result to $set
+             eval "$cmds; \$set = $var";
+     
+-            #   now scan the set and write out characters
+-            #   which have a corresponding bit set.
+-            $start = 0;
+-            while (($start &lt; $set-&gt;Size()) &amp;&amp;
+-                   (($min, $max) = $set-&gt;Interval_Scan_inc($start))) {
+-                $out-&gt;print(substr($CFG-&gt;{INPUT}-&gt;{PLAIN}, $min, ($max-$min+1)));
+-                $start = $max + 2;
+-            }
+-        }
++            #   test if this slice is non-empty
++            if (! $set-&gt;is_empty) {
++
++                #   open output file
++                if ($outfile eq '-') {
++                    $out = new IO::Handle;
++                    $out-&gt;fdopen(fileno(STDOUT), 'w');
++                }
++                else {
++                    $out = new IO::File;
++                    $out-&gt;open("&gt;$outfile");
++                }
+ 
+-        #   close outputfile
+-        $out-&gt;close;
++                #   now scan the set and write out characters
++                #   which have a corresponding bit set.
++                $start = 0;
++                while (($start &lt; $set-&gt;Size()) &amp;&amp;
++                       (($min, $max) = $set-&gt;Interval_Scan_inc($start))) {
++                    $out-&gt;print(substr($CFG-&gt;{INPUT}-&gt;{PLAIN},
++                                       $min, ($max-$min+1)));
++                    $start = $max + 2;
++                }
++
++                #   close outputfile
++                $out-&gt;close;
+ 
+-        #   additionally run chmod on the output file
+-        if ($outfile ne '-' and $chmod ne '' and -f $outfile) {
+-            system("chmod $chmod $outfile");
++                #   additionally run chmod on the output file
++                if ($outfile ne '-' and $chmod ne '' and -f $outfile) {
++                    system("chmod $chmod $outfile");
++                }
++            }
+         }
+     }
+ }
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00477" HREF="msg00477.shtml">Re: [patch] Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00475" HREF="msg00475.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Mike McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00475.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00477.shtml">Re: [patch] Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00475.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00477.shtml">Re: [patch] Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00476"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00476"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

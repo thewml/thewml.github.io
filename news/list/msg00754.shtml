@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.1, Linux -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 8 Jun 1999 17:20:28 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990608170725.9745A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199906081116.NAA22077@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00754">Date Index</a>][<a href="thrd16.shtml#00754">Thread Index</a>]<br>
+[<A HREF="msg00753.shtml">Date Prev</A>][<A HREF="msg00755.shtml">Date Next</A>][<A HREF="msg00752.shtml">Thread Prev</A>][<A HREF="msg00762.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.1, Linux</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 8 Jun 1999 17:14:26 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 8 Jun 1999 zany@darkride.net wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.1
+&gt; Operating System: Linux
+&gt; 
+&gt; Problem Description:
+&gt; | Hi,
+&gt; | 
+&gt; | wml::des::navbar seems to be broken in 1.7.1
+&gt; | If there is _no_ select= in navbar:render
+&gt; |  _no_ links (a href=) will be created!
+&gt; | 
+&gt; | Seems to me like
+&gt; |  my $idselect = ($select eq $id or $select eq $alias ? 1 : 0);
+&gt; | always matches if $select is empty???
+&gt; | 
+&gt; | Thank you in advance!
+
+You're right, Christian
+Thanks for the report.
+
+Below is the patch i commit
+
+As there are still 3 boring bugs, i have created a page dedicated to
+these patches under
+   <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+
+Denis
+
+--- wml_include/des/navbar.src	1999/06/08 10:37:42	1.7
++++ wml_include/des/navbar.src	1999/06/08 15:09:15
+@@ -420,7 +420,7 @@
+         my $hint   = $B-&gt;{HINT};
+         my $menu   = $B-&gt;{MENU};
+ 
+-        my $idselect = ($select eq $id or $select eq $alias ? 1 : 0);
++        my $idselect = ($select eq $id or ($select eq $alias and $alias ne '') ? 1 : 0);
+ 
+         #
+         #   PROLOG
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00752" HREF="msg00752.shtml">[BUG REPORT] WML 1.7.1, Linux</A></strong>, <em>From:</em> zany</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00753.shtml">Re: [BUG REPORT] WML 1.7.1, Linux</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00755.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00752.shtml">[BUG REPORT] WML 1.7.1, Linux</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00762.shtml">#use wml::all</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00754"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00754"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

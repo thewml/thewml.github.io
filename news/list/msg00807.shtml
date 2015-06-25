@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: multiple files in command line -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 28 Jun 1999 00:54:43 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990628003853.3030A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990626220831.A346@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00807">Date Index</a>][<a href="thrd17.shtml#00807">Thread Index</a>]<br>
+[<A HREF="msg00806.shtml">Date Prev</A>][<A HREF="msg00808.shtml">Date Next</A>][<A HREF="msg00806.shtml">Thread Prev</A>][<A HREF="msg00828.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: multiple files in command line</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 28 Jun 1999 00:53:42 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 26 Jun 1999, Xose Manoel Ramos wrote:
+
+&gt; I was trying to feed several files to wml command line. As in:
+&gt; 
+&gt;  # wml test1.wml test2.wml
+&gt; 
+&gt; And I did not get any output.
+
+Hi,
+
+only the first file is read in this case, and i guess it's a
+macro file.
+
+&gt; Well, the docs say wml only expects a filename to work for. 
+&gt; 
+&gt; Humm... why?
+
+Because test1.wml does not contain input datas. So you should write
+    wml -I test1.wml test2.wml
+or better add in test2.wml
+#include 'test1.wml'
+
+&gt; I suppose this can be easily achieved with:
+&gt; 
+&gt;  # cat test1.wml test2.wml | wml -
+&gt; 
+&gt; But it breaks somehow the Unix way of working.
+
+Again, i see no reason to invoke wml this way.
+
+PS: I did not understand your other post, could you send a simple
+    example to explain what you want?
+
+__
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00806" HREF="msg00806.shtml">multiple files in command line</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00806.shtml">multiple files in command line</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00808.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00806.shtml">multiple files in command line</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00828.shtml">Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00807"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00807"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

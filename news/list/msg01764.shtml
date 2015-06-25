@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [2.0.1] How to get outputfile name? -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Tue, 27 Jun 2000 20:30:20 +0200 (MET DST) -->
+<!--X-Message-Id: 200006271731.TAA12544@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000622114605.M18991@spinnaker.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01764">Date Index</a>][<a href="thrd36.shtml#01764">Thread Index</a>]<br>
+[<A HREF="msg01763.shtml">Date Prev</A>][<A HREF="msg01765.shtml">Date Next</A>][<A HREF="msg01729.shtml">Thread Prev</A>][<A HREF="msg01769.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [2.0.1] How to get outputfile name?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue 27 Jun 2000 19:30:26 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thu, 22 Jun 2000 11:46:05 +0200, Roland wrote:
+
+&gt; #!wml -o (ALL-LANG_*)+LANG_DE:%BASE.html \
+&gt;       -o (ALL-LANG_*)+LANG_EN:%BASE-en.html
+&gt; 
+&gt; Now I want to write the URL of the created file into the created file
+&gt; (like "This is URL http://...").  For this I need a mechanism to find
+&gt; out the name of the output file.  Until now I only found how to get
+&gt; the inputfile name (using the variables WML_SRC_DIRNAME,
+&gt; WML_SRC_FILENAME, WML_SRC_BASENAME), but is there an easy way to get
+&gt; the output file name?
+
+This is still interesting. Would it be hard to implement
+that directly in the source and have something like
+WML_OUT_FILENAME (, WML_OUT_DIRNAME) ?
+
+Cheers!
+ -jan
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01769" HREF="msg01769.shtml">Re: [2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Albert REINER</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01727" HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01763.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01765.shtml">#use / verbose level</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01729.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01769.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01764"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01764"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

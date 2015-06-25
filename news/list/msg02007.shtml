@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: One&#45;line patch for navbar.wml in WML 2.0.4 -->
+<!--X-From-R13: Oagubal Tbx <sbxnNqrovna.bet> -->
+<!--X-Date: Mon, 2 Oct 2000 10:17:25 +0200 (MET DST) -->
+<!--X-Message-Id: 20001001201103.A4868@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02007">Date Index</a>][<a href="thrd41.shtml#02007">Thread Index</a>]<br>
+[<A HREF="msg02006.shtml">Date Prev</A>][<A HREF="msg02008.shtml">Date Next</A>][<A HREF="msg02006.shtml">Thread Prev</A>][<A HREF="msg02008.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>One-line patch for navbar.wml in WML 2.0.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 1 Oct 2000 20:11:03 -0600</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis,
+
+Please apply the following patch to navbar.wml in WML 2.0.4, otherwise
+$menumode is left undefined, with the resulting behaviour of
+menumode=outer even when menumode=inner is set explicitly.
+
+Thanks!
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+   Debian GNU/Linux Chinese Project -- <A  HREF="http://www.debian.org/zh/">http://www.debian.org/zh/</A>
+Come visit Our Lady of Victory Camp -- <A  HREF="http://www.olvc.ab.ca/">http://www.olvc.ab.ca/</A>
+
+</PRE>
+<PRE>
+--- navbar.wml~	Tue Sep 19 17:36:40 2000
++++ navbar.wml	Sun Oct  1 19:54:51 2000
+@@ -591,6 +591,7 @@
+     #   import attributes to ePerl
+     my $select      =  qq|&lt;get-var select /&gt;|;
+     my $subselected = (qq|&lt;get-var subselected /&gt;| eq '' ? 1 : 0);
++    my $menumode    =  qq|&lt;get-var menumode /&gt;|;
+     my $txtonly     = (qq|&lt;get-var txtonly /&gt;|     eq '' ? 1 : 0);
+     my $nohints     = (qq|&lt;get-var nohints /&gt;|     eq '' ? 1 : 0);
+ 
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02008" HREF="msg02008.shtml">Re: One-line patch for navbar.wml in WML 2.0.4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02006.shtml">Re: prolog options</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02008.shtml">Re: One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02006.shtml">Re: prolog options</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02008.shtml">Re: One-line patch for navbar.wml in WML 2.0.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02007"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02007"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Filtering with wml, security considerations? -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Fri, 30 Jan 1998 12:22:40 +0100 (MET) -->
+<!--X-Message-Id: 199801301122.MAA05644@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.95.980129140821.27514F&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00070">Date Index</a>][<a href="thrd2.shtml#00070">Thread Index</a>]<br>
+[<A HREF="msg00069.shtml">Date Prev</A>][<A HREF="msg00071.shtml">Date Next</A>][<A HREF="msg00074.shtml">Thread Prev</A>][<A HREF="msg00075.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Filtering with wml, security considerations?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Fri, 30 Jan 1998 12:22:38 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Jim Hebert, in a previous mail you wrote:
+
+&gt; I'm working on a project, which, in a nutshell, would allow people to type
+&gt; in some text in a form and have it appear as a web page. I would like to
+&gt; make the wml facilities availible to persons, within the confines of
+&gt; security. The cgi would presumably take the input, pipe it to wml, and
+&gt; grab the output for posting as it saw fit. I'll bet I'll have to turn off
+&gt; some of the passes...
+&gt; 
+&gt; I'm pertty sure e-perl is out, right? I don't want people to be able to
+&gt; execute commands on the system by embedding some e-perl that creats a
+&gt; setuid shell for the userid running the cgi.
+&gt; 
+&gt; OTOH, I'm not concerned all *that* much about
+&gt; things like #include including /etc/passwd -- call
+&gt; 
+&gt; I recall there being some stuff in m4 that I might not like too -- that
+&gt; would let them run arbitary commands on the machine. Right?
+&gt; 
+&gt; What else are potential gotchas, and solutions? I assume for many of these
+&gt; things disallowing certain passes to take place with be the big answer.
+&gt; However, perhaps some standard neutralizer could be prepended to the user
+&gt; input would would alias away or otherwise hide some of the problematic
+&gt; commands? Perl is probably highly problematic and I'll bet it has to be
+&gt; turned off, but perhaps there'd be a way to alias away (or equivalent) the
+&gt; 1 or 2 bad m4 commands or other problems?
+
+In a nusthell, Pass 2 (Meta-HTML), Pass 3 (ePerl) and Pass 4 (GNU m4) are
+problematic for you, because all provide shell command execution. Pass 1 (IPP)
+can also be risky but as you said you can live with it. All other passes 5-9
+should be ok for you. BUT: Is is useful to only use Pass 1,5-9?  When you
+accept that you can use core-functionalities of these passes, only!  Because
+every WML include file uses Pass 1 and 2 and 50% of them also use Pass 3. So,
+you can leave passes 2-4 out, but then WML's usefulness very limited.
+
+So, the best solution would be really to use a wrapper like the "tagfilter"
+idea from Fritz Zaucker and me which we discussed the last days.  This one can
+be used to only allow those stuff (we though about tags but we can program it
+so we can match any stuff) you really want. And then feed this to WML while
+using all its power to create the final page.
+
+I really had to say that I never thought about this case because from my point
+of view WML is a tool for experts who know what they are doing and not vor Joe
+Average. So, whenever you want to give WML to the average user while you don't
+trust them you need some sort of frontend and only use WML as the generation
+backend. Because WML is far away from being a secure tool. It wasn't designed
+to be such a secure tool, so even when we try to disable some stuff we would
+have security holes. So, best solution is when someone of you writes a generic
+filtering frontend which can be configured to only accept plain text and a
+limited set of meta commands (tags, etc.).
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00068" HREF="msg00068.shtml">Filtering with wml, security considerations?</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00069.shtml">conflict between passes</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00071.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00074.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00075.shtml">Questions about wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00070"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00070"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,89 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] Does anybody need basic regular expressions? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 19 Jul 2000 00:40:20 +0200 (MET DST) -->
+<!--X-Message-Id: 20000719004120.A17339@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01852">Date Index</a>][<a href="thrd38.shtml#01852">Thread Index</a>]<br>
+[<A HREF="msg01561.shtml">Date Prev</A>][<A HREF="msg01853.shtml">Date Next</A>][<A HREF="msg01839.shtml">Thread Prev</A>][<A HREF="msg01864.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] Does anybody need basic regular expressions?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Jul 2000 00:41:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i will let mp4h use PCRE (Perl Compatible Regular Expressions) instead
+of GNU regexp. This has many advantages, but one drawback: this library
+can handle Perl and Extended regexps, but not basic regexp (the ones
+used within sed, for instance).
+
+Let me know if you need those basic regular expressions.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01864" HREF="msg01864.shtml">Re: [wml] [wml] Does anybody need basic regular expressions?</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01561.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01853.shtml">mp4h problem with diversions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01839.shtml">Re: Quick bugdrop</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01864.shtml">Re: [wml] [wml] Does anybody need basic regular expressions?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01852"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01852"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

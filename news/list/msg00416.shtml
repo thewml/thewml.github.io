@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Install problem on Debian -->
+<!--X-From-R13: Knaa [hyyre <zhyyrelNhx.voz.pbz> -->
+<!--X-Date: Tue, 2 Mar 1999 07:13:41 +0100 (CET) -->
+<!--X-Message-Id: 5060100029762232000002L022*@MHS -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00416">Date Index</a>][<a href="thrd10.shtml#00416">Thread Index</a>]<br>
+[<A HREF="msg00415.shtml">Date Prev</A>][<A HREF="msg00417.shtml">Date Next</A>][<A HREF="msg00413.shtml">Thread Prev</A>][<A HREF="msg00417.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Install problem on Debian</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Yann Muller &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Mar 1999 23:08:00 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I recently changed my Linux distribution to Debian GNU/Linux so I have to
+re-install WML.
+Configure and make work OK, but make test fails with something like this:
+
+t/01-wml.............cannot load /tmp/wml.227.tmp2 for unprotection at
+/home/yann/src/wml-1.6.8/wml_test/TEST.root/bin/wml line 604.
+cmp: EOF on tmp.01
+
+And the same for the second test.
+
+Any help would be very much appreciated as I need to update my site soon (I
+should have done it last week actually ;-)
+
+Thanks,
+Yann
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00417" HREF="msg00417.shtml">Re: Install problem on Debian</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00415.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00417.shtml">Re: Install problem on Debian</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00413.shtml">Re: Pb with gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00417.shtml">Re: Install problem on Debian</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00416"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00416"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

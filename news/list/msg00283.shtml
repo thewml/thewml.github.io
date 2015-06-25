@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [patch] gfont and 8&#45;bit characters -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Tue, 29 Dec 1998 16:25:24 +0100 (CET) -->
+<!--X-Message-Id: 19981229162521.A18846@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.981229142135.7075A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00283">Date Index</a>][<a href="thrd7.shtml#00283">Thread Index</a>]<br>
+[<A HREF="msg00282.shtml">Date Prev</A>][<A HREF="msg00284.shtml">Date Next</A>][<A HREF="msg00282.shtml">Thread Prev</A>][<A HREF="msg00284.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [patch] gfont and 8-bit characters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 29 Dec 1998 16:25:21 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Dec 29, 1998, Denis Barbier wrote:
+
+&gt; here is a patch i applied to allow eight-bit characters in strings.
+&gt; It works fine with EC and PS fonts, and remove those characters when
+&gt; used in conjunction with CM fonts.
+
+Puhh... a huge patch, but it looks good to me.
+I'll try it out. Thanks for the patch.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00282" HREF="msg00282.shtml">[patch] gfont and 8-bit characters</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00282.shtml">[patch] gfont and 8-bit characters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00284.shtml">New WML-generated website: www.openssl.org</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00282.shtml">[patch] gfont and 8-bit characters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00284.shtml">New WML-generated website: www.openssl.org</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00283"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00283"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

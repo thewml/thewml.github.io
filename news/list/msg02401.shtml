@@ -1,0 +1,160 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Line numbers -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 10 Oct 2001 11:14:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20011010112358.A1391@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010926142908.CBC6D10E05@itesec.hsc.fr -->
+<!--X-Reference: 20010927002439.A13046@imacs.polytechnique.fr -->
+<!--X-Reference: 20011004120357.DB6D010E0D@itesec.hsc.fr -->
+<!--X-Reference: 20011006000436.A22031@imacs.polytechnique.fr -->
+<!--X-Reference: 20011010085120.0C04C10ECA@itesec.hsc.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02401">Date Index</a>][<a href="thrd48.shtml#02401">Thread Index</a>]<br>
+[<A HREF="msg02400.shtml">Date Prev</A>][<A HREF="msg02402.shtml">Date Next</A>][<A HREF="msg02400.shtml">Thread Prev</A>][<A HREF="msg02403.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Line numbers</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 10 Oct 2001 11:23:58 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Oct 10, 2001 at 10:52:13AM +0200, Ghislaine Labouret wrote:
+&gt; On Sat, 6 Oct 2001 00:04:37 +0200, Denis Barbier wrote:
+&gt; 
+&gt; &gt; &gt; Also, I noticed that error lines given by WML do not correspond to
+&gt; &gt; &gt; "real" lines (vim's line count for exemple) when using \ at the end of
+&gt; &gt; &gt; lines: a lines ending with \ and the following one is counted as a
+&gt; &gt; &gt; single line. This makes debugging more difficult...
+&gt; &gt; 
+&gt; &gt; You are right :(
+&gt; &gt; But I did not find exactly where does this problem come from, I am not
+&gt; &gt; sure it is caused by escaped newlines.
+&gt; 
+&gt; I guess the line count is performed after regrouping lines ending with \
+&gt; and stripping comment lines. Here are exemples of what I was refering
+&gt; to:
+&gt; 
+&gt; Input:
+&gt; 1.
+&gt; 2. \
+&gt; 3. Source line number for mp4h: &lt;__line__&gt;
+&gt; 
+&gt; Output:
+&gt; 1.
+&gt; 2. 3. Source line number for mp4h: 2
+&gt; 
+&gt; But the line in the source is 3 if not taking the \ into account.
+&gt; Same for the line number given when issuing a warning:
+&gt; 
+&gt; Input:
+&gt; 1. 
+&gt; 2. \
+&gt; 3. Error: &lt;ifeq
+&gt; 
+&gt; Output:
+&gt; /usr/local/lib/wml/exec/wml_p2_mp4h: ERROR:toto.wml:2: EOF when reading
+&gt; argument of the `ifeq' tag
+&gt; ** WML:Break: Error in Pass 2 (rc=1).
+&gt; 
+&gt; Also, comment lines are not counted:
+&gt; 
+&gt; Input:
+&gt; 1. 
+&gt; #2.
+&gt; 3. Source line number for mp4h: &lt;__line__&gt;
+&gt; 
+&gt; Output:
+&gt; 1.
+&gt; 3. Source line number for mp4h: 2
+
+Oh yes I see now.  There is indeed a line number mismatch; note that
+it should be fixed after including files via #use or #include, because
+these directives add proper &lt;__line__&gt; tags to let pass 2 know where
+these lines are in input file.  There is unfortunately no general
+solution to this problem, maybe I could acknowledge line numbers are
+not accurate in documentation.
+
+In order to debug, you may preprocess your file with a filter which
+replaces vomments and trailing backslashes by &lt;dnl&gt;, e.g. fixline.pl
+   #!/usr/bin/perl
+   while (&lt;&gt;) {
+        chomp;
+        s/^\s*#(?!use|include|depends).*$/&lt;dnl&gt;/;
+        s/\\\s*$/&lt;dnl&gt;/;
+        print $_."\n";
+   }
+and run wml -P ./fixline.pl
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02403" HREF="msg02403.shtml">#include oddities.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02392" HREF="msg02392.shtml">Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+<li><strong><A NAME="02393" HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02394" HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+<li><strong><A NAME="02396" HREF="msg02396.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02400" HREF="msg02400.shtml">Line numbers</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02400.shtml">Line numbers</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02402.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02400.shtml">Line numbers</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02403.shtml">#include oddities.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02401"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02401"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

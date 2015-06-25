@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: WML, HOME~ and the redirections -->
+<!--X-From-R13: "Rnivq Vneevf" <quneevfNqeu.arg> -->
+<!--X-Date: Thu, 14 Jan 1999 17:39:16 +0100 (CET) -->
+<!--X-Message-Id: 000201be3fd6$32d93700$0500a8c0@delf -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199901141225.NAA23227@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00316">Date Index</a>][<a href="thrd7.shtml#00316">Thread Index</a>]<br>
+[<A HREF="msg00315.shtml">Date Prev</A>][<A HREF="msg00317.shtml">Date Next</A>][<A HREF="msg00308.shtml">Thread Prev</A>][<A HREF="msg00306.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: WML, HOME~ and the redirections</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;David Harris&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 10:54:42 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+Have you tried using "ErrorDocument 404
+<A  HREF="http://www.yoursite.com/notfound.html">http://www.yoursite.com/notfound.html</A>"? Slapping the full "http://" should
+make Apache issue and external redirect.
+
+The documentation on the ErrorDocument directive states that:
+
+-----
+In the event of a problem or error, Apache can be configured to do one of
+four things,
+1. output a simple hardcoded error message
+2. output a customized message
+3. redirect to a local URL to handle the problem/error
+4. redirect to an external URL to handle the problem/error
+-----
+
+What you want is option four, and this is achieved through giving apache a
+full URL. BTW, the ErrorDocument documentation is at:
+      <A  HREF="http://www.apache.org/docs/mod/core.html#errordocument">http://www.apache.org/docs/mod/core.html#errordocument</A>
+
+Hope this is not redundant information, I've not been following this
+conversation. Please excuse me if this was.
+
+ - David Harris
+   Principal Engineer, DRH Internet Services
+
+
+-----Original Message-----
+From:	owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>] On
+Behalf Of Stephane Bortzmeyer
+Sent:	Thursday, January 14, 1999 7:25 AM
+To:	sw-wml@engelschall.com
+Subject:	Re: WML, HOME~ and the redirections
+
+On Wednesday 13 January 1999, at 10 h 36, the keyboard of Stephane
+Bortzmeyer
+&lt;bortzmeyer@pasteur.fr&gt; wrote:
+
+&gt; On Tuesday 12 January 1999, at 17 h 10, the keyboard of Stephane
+Bortzmeyer
+&gt; &lt;bortzmeyer@pasteur.fr&gt; wrote:
+&gt;
+&gt; &gt; The problem is that HOME is expansed at compile time, in the directory
+of
+&gt; &gt; forbidden.wml. It makes:
+&gt; &gt;
+&gt; &gt; &lt;A HREF="../search/"&gt;
+
+After discussions with the people of Lynx, it seems there is no easy
+solution since Apache's ErrorDocuments are not HTTP redirections (despite
+what I said in the subject) and so the client has no way of knowing the base
+URL. So, is there a way to ask WML to replace $(HOME) (HOME is defined as
+~.) by a server-relative link and not a relative-one ? A command-line
+option?
+
+Or should I redefine HOME for my ErrorDocuments? Since WML does not accept
+'HOME=' or 'HOME=""', I had to do a 'HOME=<A  HREF="http://www.pasteur.fr">http://www.pasteur.fr</A>' which I do
+not find elegant.
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00308" HREF="msg00308.shtml">Re: WML, HOME~ and the redirections</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00315.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00317.shtml">IPP improvements</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00308.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00306.shtml">[BUG REPORT] WML 1.6.8, AverageOS 0.8.15</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00316"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00316"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

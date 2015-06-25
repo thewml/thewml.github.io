@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: WML 2.0.1 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 28 May 2000 13:17:43 +0200 (MET DST) -->
+<!--X-Message-Id: 20000528131515.A68648@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0005270116370.14337&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Reference: Pine.LNX.3.96.1000527110050.15045A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01639">Date Index</a>][<a href="thrd34.shtml#01639">Thread Index</a>]<br>
+[<A HREF="msg01638.shtml">Date Prev</A>][<A HREF="msg01640.shtml">Date Next</A>][<A HREF="msg01636.shtml">Thread Prev</A>][<A HREF="msg01643.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: WML 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 May 2000 13:15:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, May 27, 2000, Denis Barbier wrote:
+
+&gt; What to do with HTML tags?
+&gt; 
+&gt; Consider
+&gt;    &lt;ifneq 0 0 &lt;img src="foo.png"&gt;&gt;
+&gt; 
+&gt; I see 2 ways to parse this expression:
+&gt;    a) `&lt;img' is not defined, and thus expanded as a string. So previous
+&gt;       expression is
+&gt;         &lt;ifneq
+&gt;             0              1st attribute
+&gt;             0              2nd attr.
+&gt;             &lt;img           3rd attr.
+&gt;             src="foo.png"  4th attr.
+&gt;         &gt;                  end of the `ifneq' tag
+&gt;         &gt;
+&gt;    b) `&lt;img' is not defined, but is parsed as a valid tag.
+&gt;         &lt;ifneq
+&gt;             0                    1st attribute
+&gt;             0                    2nd attr.
+&gt;             &lt;img src="foo.png"&gt;  3th attr.
+&gt;         &gt;                        end of the `ifneq' tag
+
+I vote for keeping the current variant b), because it is more intuitive
+for human readers.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01643" HREF="msg01643.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01628" HREF="msg01628.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="01629" HREF="msg01629.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01638.shtml">Re: [wml] Re: c) or d)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01640.shtml">possible bug in &lt;box&gt; ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01636.shtml">Re: a) or b)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01643.shtml">Re: [wml] Re: [wml] Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01639"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01639"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

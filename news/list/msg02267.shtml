@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WML 2.0.7 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 21 Jun 2001 01:55:16 +0200 (MET DST) -->
+<!--X-Message-Id: 20010621020151.A14513@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02267">Date Index</a>][<a href="thrd46.shtml#02267">Thread Index</a>]<br>
+[<A HREF="msg02266.shtml">Date Prev</A>][<A HREF="msg02268.shtml">Date Next</A>][<A HREF="msg02269.shtml">Thread Prev</A>][<A HREF="msg02268.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WML 2.0.7</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 21 Jun 2001 02:01:51 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+i am very pleased to announce that WML 2.0.7 has just been released
+and available from
+      <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+
+As you know, there had been discussions on CVS branches.
+Unfortunately i did not do my job here and did not incorporate fixes
+into the stable branch, so backporting them now was a pain and i decided
+to release WML 2.1a2 (which is very stable despite its name, it only
+demonstrates that it is part of the CVS trunk) and copy this version
+into 2.0.7.  This is why these 2 versions have the same timestamp.
+
+Here is a brief summary of changes between 2.0.6 and 2.0.7, have a look
+at     <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-2.0.7/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-2.0.7/ChangeLog</A>
+for further details.
+
+    *) Change &lt;tli&gt; in wml::des::typography (20-Jun-2001)
+    *) Fix compilation of Bit::Vector with perl &lt; 5.005 (20-Jun-2001)
+    *) Fix nested ePerl tags implementation (19-Jun-2001)
+    *) Upgraded to Image::Size 2.93 (19-Jun-2001)
+    *) Fix wml_p7_htmlfix (19-Jun-2001)
+    *) Fix wml::fmt::verbatim (19-Jun-2001)
+    *) Fix diversion (19-Jun-2001)
+    *) Upgraded to Bit::Vector 6.0 (19-Jun-2001)
+    *) Fix protection (19-Jun-2001)
+    *) Update wml_contrib/wml.spec.in (19-Jun-2001)
+    *) Fixed wml::std::href (19-Jun-2001)
+    *) Fixed wml::std::page (19-Jun-2001)
+    *) Fixed wml::des::preload (19-Jun-2001)
+    *) Remove special characters in debugging output (19-Jun-2001)
+    *) New &lt;disjoin&gt; tag (19-Jun-2001)
+    *) Fix bug with body tag surrounded by quotes (19-Jun-2001)
+    *) New logos (19-Jun-2001)
+    *) Upgraded to txt2html 1.28 (19-Jun-2001)
+    *) Fix wml::fmt::text (19-Jun-2001)
+    *) Change transparency in wml::des::imgdot (19-Jun-2001)
+    *) Improve wml_p5_divert (19-Jun-2001)
+    *) Improve wml::des::navbar (19-Jun-2001)
+    *) Improve wml_p7_htmlfix (19-Jun-2001)
+    *) Fix bugs with conditionals (19-Jun-2001)
+    *) Fix wml::des::navbar (19-Jun-2001)
+    *) Upgrade ePerl to current CVS version (19-Jun-2001)
+    *) New `all except' operator in slice terms (29-Oct-2000)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02266.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02268.shtml">Warning: new WML 2.0.7 tarball</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02269.shtml">Re: Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02268.shtml">Warning: new WML 2.0.7 tarball</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02267"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02267"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

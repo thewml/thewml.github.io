@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2 -->
+<!--X-From-R13: serqql77Nnatrysver.pbz -->
+<!--X-Date: Sun, 26 Nov 2000 17:33:27 +0100 (MET) -->
+<!--X-Message-Id: 200011251558.QAA23169@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02071">Date Index</a>][<a href="thrd42.shtml#02071">Thread Index</a>]<br>
+[<A HREF="msg02070.shtml">Date Prev</A>][<A HREF="msg02072.shtml">Date Next</A>][<A HREF="msg02068.shtml">Thread Prev</A>][<A HREF="msg02072.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.6, Linux RedHat 6.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sat, 25 Nov 2000 16:58:46 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.6
+Operating System: Linux RedHat 6.2
+
+Problem Description:
+| I detected 2 problem in wml::fmt::text
+| 
+| with this source
+| ---test1.wml---
+| #use wml::fmt::text
+| 
+| &lt;text&gt;PROVA&lt;/text&gt;
+| --
+| 
+| Output:
+| --test1.html---
+| &lt;strong&gt;PROV&lt;/strong&gt;
+| --
+| 
+| If you use filenames containig space in wml_fmt_text the function fail.
+| 
+| If I use wml_fmt_text and the file has line that begin with # I don't see this line. Is a BUG or not ?
+| 
+| If I use table and not provide summary the program output &lt;table ... summary=""&gt; instead of removing summary attribute.
+| 
+| freddy77
+| 
+| PS: my english is poor
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02072" HREF="msg02072.shtml">Re: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02080" HREF="msg02080.shtml">Bug report, I think, regarding &lt;attributes-quote %attributes&gt;.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02070.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02072.shtml">Re: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02068.shtml">RE: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02072.shtml">Re: [BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02071"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02071"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

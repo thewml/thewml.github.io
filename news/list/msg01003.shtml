@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: May I run wml from a setuid program? (It seems not) -->
+<!--X-From-R13: <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 29 Sep 1999 13:04:45 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990929120049.13950A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199909290911.LAA14811@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01003">Date Index</a>][<a href="thrd20.shtml#01003">Thread Index</a>]<br>
+[<A HREF="msg01002.shtml">Date Prev</A>][<A HREF="msg01004.shtml">Date Next</A>][<A HREF="msg01002.shtml">Thread Prev</A>][<A HREF="msg00972.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: May I run wml from a setuid program? (It seems not)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Sep 1999 13:06:19 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 29 Sep 1999, Stephane Bortzmeyer wrote:
+
+&gt; On Wednesday 29 September 1999, at 0 h 10, the keyboard of Denis Barbier 
+&gt; &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; 
+&gt; &gt; You have to define $ENV{PATH} _inside_ your Perl scripts.
+&gt; 
+&gt; I do it in the Perl script which runs wml. But wml resets it :-( which is not 
+&gt; a good idea, IMHO.
+
+No, WML does not reset it.
+
+Let's see what i did yesterday:
+
+prompt$ su -
+prompt# cd /tmp
+prompt# cat &lt;&lt;EOT &gt; suid
+#!/usr/bin/perl
+use Cwd;
+\$cwd=cwd;
+print \$cwd . "\\n";
+EOT
+prompt# chmod u+s,a+x suid
+prompt# exit
+prompt$ cd /tmp
+prompt$ ./suid
+Insecure $ENV{PATH} while running setuid at /usr/lib/perl5/Cwd.pm line
+69.
+
+The line number does not fit because i run Perl 5.004, but it is the
+same line in Cwd.pm
+
+Now, let's use a wrapper
+prompt$ su -
+prompt# chmod u-s suid
+prompt# mv suid nosuid
+prompt# cat &lt;&lt;EOT &gt; suidwrap
+#!/usr/bin/perl
+\$ENV{PATH}='/bin:/usr/bin';
+system('/tmp/nosuid');
+1;
+EOT
+prompt# chmod u+s,a+x suidwrap
+prompt# exit
+prompt$ cd /tmp
+prompt$ ./suidwrap
+Insecure $ENV{ENV} while running setuid at ./suidwrap line 3.
+
+Ok, as stated in the perlsec manpage, i added this line to suidwrap:
+  delete @ENV{'IFS', 'CDPATH', 'ENV', 'BASH_ENV'};
+
+prompt$ ./suidwrap
+Insecure $ENV{PATH} while running setuid at /usr/lib/perl5/Cwd.pm line
+69.
+
+
+BUT if you define $ENV{PATH} inside nosuid, then it works fine.
+That's why i stated you have to define $ENV{PATH} inside your perl
+scripts, and not inside your wrapper. Setting it in the wrapper is
+exactly like setting it in your environment.
+
+OR, and i just discover it, change uid solve this.
+
+&gt; Running from another account, with the setuid wrapper (which sets uid to me):
+&gt; 
+&gt; /local/bin/wml -o index_all.html   index_all.wml 
+&gt; cannot load /tmp/wml.12907.tmp2 for unprotection: No such file or directory at /local/bin/wml line 642.
+&gt; 
+&gt; (The .tmp1 file is properly created, and with the proper UID, mine)
+&gt; 
+&gt; Running from my account, it works.
+
+Now what do my files look like?
+prompt$ cat suidwrap
+#!/usr/bin/perl
+delete @ENV{'IFS', 'CDPATH', 'ENV', 'BASH_ENV'};
+$ENV{PATH}='/bin:/usr/bin';
+$&lt; = 33;
+$&gt; = 33;
+system('/usr/bin/wml -o index.html index.wml');
+1;
+prompt$ cat index.wml
+before
+&lt;: print "OK\n" :&gt;
+after
+prompt$ ./suidwrap
+
+And everything works fine, with right IDs.
+So i can't help you anymore. Maybe you could run wml verbosely with -v9.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01002" HREF="msg01002.shtml">Re: May I run wml from a setuid program? (It seems not)</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01002.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01004.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01002.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00972.shtml">[BUG REPORT] WML 1.7.2, RedHat Linux 5.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01003"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#01003"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

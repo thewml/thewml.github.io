@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] ideas on multi site maintnance -->
+<!--X-From-R13: Ineera Fhexny <jghexnyNpoh.rqh> -->
+<!--X-Date: Sun, 15 Jul 2001 06:14:15 +0200 (MET DST) -->
+<!--X-Message-Id: E15LdHx&#45;0000my&#45;00@braindead.automatedproperties.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.33.0107131555140.12585&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02298">Date Index</a>][<a href="thrd46.shtml#02298">Thread Index</a>]<br>
+[<A HREF="msg02297.shtml">Date Prev</A>][<A HREF="msg02299.shtml">Date Next</A>][<A HREF="msg02297.shtml">Thread Prev</A>][<A HREF="msg02299.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] ideas on multi site maintnance</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Warren Turkal &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 15 Jul 2001 00:13:49 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I must be retarded. :)
+Oh well, I have another problem revolving around the same idea though.
+Each of my sites has a cgi-bin script that handles mailing forms.  When 
+this script is called there is a hidden form element that tells it 
+where to return to after submitting the form.  It is currently defined 
+as ../contact.html which works for my sites that have contact.html in 
+the root.  I also have sites that are multilevel (a business with 
+multiple locations each with a different directory storing its location 
+specific site).  These site need to have the return thing set to 
+../(sitedir)/
+
+On Friday 13 July 2001 09:56, you wrote:
+&gt; How about symbolic links into the various trees and then a Makefile
+&gt; that calls wmk -a on the various trees.
+&gt;
+&gt; This would seem the easiest way to deal with possible variations in
+&gt; templates etc for the various sites.
+&gt;
+&gt; Cheers,
+&gt; Fritz
+&gt;
+&gt; On Thu, 12 Jul 2001, Warren Turkal wrote:
+&gt; &gt; How would a person have some sites where some of the pages are
+&gt; &gt; generated from the same .wml files without copying the .wml files
+&gt; &gt; all over.  I would like it so that when I type wmk -a it would
+&gt; &gt; rebuild the files for each site.
+&gt; &gt; ___________________________________________________________________
+&gt; &gt;___ Website META Language (WML)               
+&gt; &gt; www.engelschall.com/sw/wml/ Official Support Mailing List          
+&gt; &gt;         sw-wml@engelschall.com Automated List Manager              
+&gt; &gt;         majordomo@engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02299" HREF="msg02299.shtml">Re: [wml] ideas on multi site maintnance</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02297" HREF="msg02297.shtml">Re: [wml] ideas on multi site maintnance</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02297.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02299.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02297.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02299.shtml">Re: [wml] ideas on multi site maintnance</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02298"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02298"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: pass one forces use of pass two -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Wed, 11 Feb 1998 07:09:24 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.95.980210195348.12184A&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00089">Date Index</a>][<a href="thrd2.shtml#00089">Thread Index</a>]<br>
+[<A HREF="msg00088.shtml">Date Prev</A>][<A HREF="msg00090.shtml">Date Next</A>][<A HREF="msg00086.shtml">Thread Prev</A>][<A HREF="msg00091.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>pass one forces use of pass two</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 10 Feb 1998 19:57:08 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+If I turn pass 1 but turn pass 2 off, I get this at the top of my web
+pages:
+
+&lt;:
+BEGIN {
+    unshift @INC, qw(
+        /home/scratch/hebert/dwddis/WML/lib/wml/perl/lib
+/home/scratch/hebert/dwddis/WML/lib/wml/perl/lib/sun4-solaris/5.00404
+        /home/scratch/hebert/dwddis/WML/lib/wml/perl/lib/site_perl
+/home/scratch/hebert/dwddis/WML/lib/wml/perl/lib/site_perl/sun4-solaris
+    );
+    $^W = 0;
+}
+:&gt;
+
+I guess I understand why it happens this way -- wml's ipp pass is getting
+used as the point in the code where this prep for e-perl takes place.
+
+But, I'm sure this can either be conditionally done (testing for pass 2
+being on) or moved such that it pass 1 without pass 2 no longer produces
+this.
+
+Can this be a 1.6.1 change?
+
+Thanks,
+jim
+
+-- 
+[L]inux has an installed base conservatively estimated at around 3 million
+users.... [V]endors say that most of the top companies in the US have bought
+the OS - but that few will readily admit to running their multimillion-dollar
+corporations on code put together by a band of software idealists. -- _Wired_
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00088.shtml">Re: I'm trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00090.shtml">Re: I\'m trying to use wml in a cgi...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00086.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00091.shtml">Re: pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00089"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00089"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

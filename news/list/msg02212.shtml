@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: parent dir breaks Diversion -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Fri, 27 Apr 2001 08:00:46 +0200 (MET DST) -->
+<!--X-Message-Id: 200104270600.PAA20967@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200104261821.DAA20959@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02212">Date Index</a>][<a href="thrd45.shtml#02212">Thread Index</a>]<br>
+[<A HREF="msg02211.shtml">Date Prev</A>][<A HREF="msg02213.shtml">Date Next</A>][<A HREF="msg02209.shtml">Thread Prev</A>][<A HREF="msg02215.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: parent dir breaks Diversion</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 27 Apr 2001 15:00:26 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi,
+
+&gt;   I found a bug in wml-2.1a1 (also in SNAP).
+&gt; 
+&gt; ---- input
+&gt; &lt;&lt;head&gt;&gt;
+&gt; ..head&gt;&gt;This is OK.&lt;&lt;..
+&gt; &lt;a href="../"&gt;Parent dir&lt;/a&gt;
+&gt; ..head&gt;&gt;This is NG.&lt;&lt;..
+
+&gt;   I made a patch, but I'm not good at perl,
+&gt; so please take care.
+&gt; 
+&gt; --- /usr/lib/wml/exec/wml_p5_divert.orig	Fri Apr 27 02:44:37 2001
+&gt; +++ /usr/lib/wml/exec/wml_p5_divert	Fri Apr 27 02:52:35 2001
+&gt; @@ -203,9 +203,12 @@
+&gt;          #   calculate the minimum amount of plain characters we can skip
+&gt;          my $l = length($remain);
+&gt;          my $i1 = index($remain, '&lt;&lt;');  $i1 = ($i1 == -1 ? $l : $i1);
+&gt; -        my $i2 = index($remain, '..');
+&gt; +        my $i2 = -1;
+&gt;          #   Skip ../ which is often used in URLs
+&gt; -        $i2 = $l if ($i2 == -1 or substr($remain, $i2+2, 1) eq '/');
+&gt; +        do {
+&gt; +            $i2 = index($remain, '..', $i2+1);
+&gt; +        } while (substr($remain, $i2+2, 1) eq '/');
+&gt; +        $i2 = $l if $i2 == -1;
+
+  Sorry, this patch causes an endless loop against a line starting with '/'.
+I noticed in my bed. :-)  I should have wrote as below.
+
++          } while ($i2 &gt; -1 and substr($remain, $i2+2, 1) eq '/');
+                    ^^^^^^^^^^^^^
+-- Regards,
+Nobuyuki Tsuchimura
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02215" HREF="msg02215.shtml">Re: parent dir breaks Diversion</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02209" HREF="msg02209.shtml">parent dir breaks Diversion</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02211.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02213.shtml">Re: [wml] Re: your mail</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02209.shtml">parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02215.shtml">Re: parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02212"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02212"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 6 Apr 1999 10:43:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990406103413.1003A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990406103358.1022A&#45;100000@beethoven.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00548">Date Index</a>][<a href="thrd13.shtml#00548">Thread Index</a>]<br>
+[<A HREF="msg00547.shtml">Date Prev</A>][<A HREF="msg00549.shtml">Date Next</A>][<A HREF="msg00547.shtml">Thread Prev</A>][<A HREF="msg00549.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 6 Apr 1999 10:38:21 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 5 Apr 1999, Myrddin Emrys wrote:
+
+&gt; I am getting the following error when trying to run
+&gt; wml:
+&gt; 
+&gt; cannot load /tmp/wml.7925.tmp2 for unprotection 
+[...]
+
+It looks like you define -DROOT= without any value (or with an empty
+value). This is forbidden in wml 1.6.8, and is implemented in wml-SNAP
+since 12-Mar-1999.
+
+Does your problem persist if you assign a non-empty value to the ROOT
+variable?
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00547.shtml">cannot load /tmp/wml.7925.tmp2 for unprotection</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00549.shtml">Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00547.shtml">cannot load /tmp/wml.7925.tmp2 for unprotection</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00549.shtml">Re: cannot load /tmp/wml.7925.tmp2 for unprotection  (fwd)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00548"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00548"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

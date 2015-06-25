@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: p7_htmlfix -->
+<!--X-From-R13: oneovreNvznpf.cbylgrpuavdhr.se -->
+<!--X-Date: Mon, 11 Oct 1999 09:48:35 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.991011095048.26120A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.9910101222070.28153&#45;100000@aleph.balcor.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01052">Date Index</a>][<a href="thrd22.shtml#01052">Thread Index</a>]<br>
+[<A HREF="msg01051.shtml">Date Prev</A>][<A HREF="msg01053.shtml">Date Next</A>][<A HREF="msg01049.shtml">Thread Prev</A>][<A HREF="msg01050.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: p7_htmlfix</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 11 Oct 1999 09:52:56 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 10 Oct 1999, Valentin v. Seggern wrote:
+
+&gt; Hi all
+&gt; Maybe I am too stupid, but when I say
+&gt; 
+&gt; $ wml foobar.wml 
+&gt; 
+&gt; and I have the following shebang in the first line of foobar.wml
+&gt; 
+&gt; #!wml  -o (ALL-LANG_*)uLANG_EN:../html/en/foobar.en.html \
+&gt;        -o (ALL-LANG_*)uLANG_DE:../html/de/foobar.de.html
+&gt; 
+&gt; foobar.*.html are not optimized in terms of height, width and the other
+&gt; things that p7_htmlfix should apply. When I apply htmlfix manually with
+&gt; 
+&gt; /usr/local/lib/wml/exec/wml_p7_htmlfix -v foobar.de.html -o test.html
+&gt; 
+&gt; it works. I do not specify in .wmlrc's or other commanline-options that
+&gt; htmlfix should not be applied. Did I only missed certain parts in RTFM or
+&gt; am I too stupid to do this?
+&gt; 
+&gt; I hope y'all can help me 
+&gt; Thanks 
+
+Hi Valentin,
+
+this issue has been discussed here some months ago. Have a look at
+       <A  HREF="http://www.engelschall.com/sw/wml/news/list/473.html">http://www.engelschall.com/sw/wml/news/list/473.html</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01049" HREF="msg01049.shtml">p7_htmlfix</A></strong>, <em>From:</em> Valentin v. Seggern</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01051.shtml">Re: WMLOPTS quoting bug in WML 1.7.4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01053.shtml">Problems with wml_aux_tidy</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01049.shtml">p7_htmlfix</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01050.shtml">WMLOPTS quoting bug in WML 1.7.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01052"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01052"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

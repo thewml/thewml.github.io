@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2, sparc&#45;sun&#45;solaris2.6 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 18 Jul 1999 23:03:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990718223905.1688E&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199907162225.AAA20859@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00859">Date Index</a>][<a href="thrd18.shtml#00859">Thread Index</a>]<br>
+[<A HREF="msg00862.shtml">Date Prev</A>][<A HREF="msg00863.shtml">Date Next</A>][<A HREF="msg00858.shtml">Thread Prev</A>][<A HREF="msg00853.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 18 Jul 1999 23:02:37 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 17 Jul 1999 plonka@doit.wisc.edu wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.2
+&gt; Operating System: sparc-sun-solaris2.6
+&gt; 
+&gt; Problem Description:
+&gt; | In working with navbars I noticed that it messes up "absolute" URLs
+&gt; | on buttons unless they are use HTTP as in "http://...".
+&gt; | 
+&gt; | The root of the problem is in "wml_include/des/navbar.src" which contains
+&gt; | a quick and dirty regexp which decides that a URL is absolute only if it
+&gt; | contains "http".
+&gt; | 
+&gt; | Please see my accompanying post to the "sw-wml" mailing
+&gt; | list for full details and a patch.
+&gt; | 
+&gt; | Thanks!
+&gt; | Dave
+
+Hi Dave,
+
+you're right, navbar.src does not safely detect whether a path is
+absolute or relative.
+I replaced the regexp by the one used in URI::URL. The WML tarball
+becomes bigger and bigger, but i try to keep it small. It's why i prefer
+not to include the URI perl module.
+
+Thanx for your report.
+
+--
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00858" HREF="msg00858.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></strong>, <em>From:</em> plonka</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00862.shtml">Re: [BUG REPORT] WML 1.7.2, Linux RH 6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00863.shtml">gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00858.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00853.shtml">[BUG REPORT] WML 1.7.2, Linux RH 6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00859"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00859"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

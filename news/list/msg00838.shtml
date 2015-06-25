@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug report: mistake in documentation of wml:.std.info -->
+<!--X-From-R13: Gjr [vaqehc <hjrNzvaqehc.qr> -->
+<!--X-Date: Thu, 8 Jul 1999 22:04:56 +0200 (MET DST) -->
+<!--X-Message-Id: 99070810012501.01726@abakus -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00838">Date Index</a>][<a href="thrd18.shtml#00838">Thread Index</a>]<br>
+[<A HREF="msg00837.shtml">Date Prev</A>][<A HREF="msg00839.shtml">Date Next</A>][<A HREF="msg00842.shtml">Thread Prev</A>][<A HREF="msg00843.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug report: mistake in documentation of wml:.std.info</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Uwe Mindrup &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 09:51:12 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+the documentation to wml::std::info describes a variable "keyword" like
+in 
+  &lt;info style=meta keyword="foo bar baz"&gt;
+but this don't work. Only the variable "keywords" is recognized:
+  &lt;info style=meta keywords="foo bar baz"&gt; 
+works as expected.
+
+It is only a little mistake in the documentation.
+
+Yours,
+Uwe
+
+-- 
+Uwe Mindrup  Ingersheim, Germany
+<A  HREF="http://www.mindrup.de/">http://www.mindrup.de/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00837.shtml">&quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00839.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00842.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00843.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00838"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00838"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

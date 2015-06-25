@@ -1,0 +1,166 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 17 May 1999 17:31:27 +0200 (MET DST) -->
+<!--X-Message-Id: 199905171531.RAA05148@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00665">Date Index</a>][<a href="thrd9.shtml#00665">Thread Index</a>]<br>
+[<A HREF="msg00664.shtml">Date Prev</A>][<A HREF="msg00666.shtml">Date Next</A>][<A HREF="msg00389.shtml">Thread Prev</A>][<A HREF="msg00667.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 May 1999 17:31:10 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Fritz Zaucker
+Reply-To: zaucker@ee.ethz.ch
+
+PROBLEM DESCRIPTION:
+
+wmk produces a 
+
+    -ooutputfile optionI 
+
+for wml. This is not good if -o lines are specified in the .wmlrc
+file.
+
+I tried to add an option to wmk (-N) that would suppress the creation
+of the -o line for wml. This is a rather trivial patch which I'd
+happily submit.
+
+However, when I tried to put -N into the .wmkrc file (and this is what
+would be needed in conjunction with the -o lines in .wmlrc) I noticed,
+that .wmkrc is only read if wmk process a directory and not when it
+processes a single file.
+
+Looks to me as if the code for reading .wmkrc is at the wrong place
+(inside sub determine_files).
+
+Cheers,
+Fritz
+
+P.S.: Or would the fix to my problem be that wml ignores command line
+      option -o if it finds one in .wmlrc? That would work for my
+      particular situation, but might be confusing in general.
+
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sparc-sun-solaris2.5.1
+    Perl: 5.005_03 (/usr/sepp/bin/perl)
+    User: local@engelberg.ethz.ch
+    Date: 15-Apr-1999
+Built Location:
+    Prefix: /usr/pack/wml-19990414-to
+    BinDir: /usr/pack/wml-19990414-to/bin
+    LibDir: /usr/pack/wml-19990414-to/lib
+    ManDir: /usr/pack/wml-19990414-to/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=solaris, osvers=2.5.1, archname=sun4-solaris
+    uname='sunos zinal.ee.ethz.ch 5.5.1 generic_103640-19 sun4u sparc sunw,ultra-enterprise '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O', gccversion=2.7.2
+    cppflags='-I/usr/local/include -I/usr/gnu/include'
+    ccflags ='-I/usr/local/include -I/usr/gnu/include'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib -L/usr/gnu/lib'
+    libpth=/usr/local/lib /usr/gnu/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -lgdbm -ldb -ldl -lm -lc -lcrypt
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G -L/usr/local/lib -L/usr/gnu/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at Apr 13 1999 14:44:47
+  @INC:
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503
+    /usr/sepp/var/perl-solaris251-5.00503-ak/site_perl/5.005/sun4-solaris
+    /usr/sepp/var/perl-solaris251-5.00503-ak/site_perl/5.005
+    .
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00667" HREF="msg00667.shtml">Re: Bug report</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00693" HREF="msg00693.shtml">[PATCH] -o flags in .wmkrc</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00664.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00666.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00389.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00667.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00665"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00665"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

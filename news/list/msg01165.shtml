@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Specifying an alternate output extension -->
+<!--X-From-R13: fpengpu <fpengpuNnpr.hylffvf.fghqrag.xhyrhira.np.or> -->
+<!--X-Date: Wed, 1 Dec 1999 02:07:02 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.9912010202510.19676&#45;100000@ace.ulyssis.student.kuleuven.ac.be -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01165">Date Index</a>][<a href="thrd25.shtml#01165">Thread Index</a>]<br>
+[<A HREF="msg01164.shtml">Date Prev</A>][<A HREF="msg01166.shtml">Date Next</A>][<A HREF="msg01174.shtml">Thread Prev</A>][<A HREF="msg01177.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Specifying an alternate output extension</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: scratch &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 1 Dec 1999 02:06:48 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I remember there was a discussion on the list about giving all your wml
+output files another name/location on the fly (without using shebang lines
+in every .wml file). Unfortunately, I can't seem to find it in the
+archives anymore. So here it goes:
+
+I'd like to put some line in .wmkrc or .wmlrc (someone please explain the
+difference to me):
+
+-o $(WML_SRC_BASE).shtml
+
+and then execute 'wmk' in a directory with .wml files, so that .shtml
+files are generated and not .html files. Unfortunately, the WML_SRC_BASE
+environment variable is not getting parsed.
+
+Can anyone help me?
+
+--nico
+
+:: Nico Galoppo ::  Linux - Free power for the masses  :  ::  :::::.
+                ::                                                 ::
+                ::  scratch at ace.ulyssis.student.kuleuven.ac.be  ::
+                 :                 <A  HREF="http://scratchor.dhs.org">http://scratchor.dhs.org</A>       ::
+                   .                                           .::
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01177" HREF="msg01177.shtml">Re: Specifying an alternate output extension</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01164.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01166.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01174.shtml">Re: GIFs, LZW, gd, and gFont again...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01177.shtml">Re: Specifying an alternate output extension</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01165"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01165"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

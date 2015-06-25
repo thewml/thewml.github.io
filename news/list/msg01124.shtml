@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: doc error in wmk man page? -->
+<!--X-From-R13: Vnaf Gyevpu @vrqreznaa <hyvNavrqreznaa.oo.onjhr.qr> -->
+<!--X-Date: Sun, 7 Nov 1999 12:13:22 +0100 (MET) -->
+<!--X-Message-Id: m2aeorupcp.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01124">Date Index</a>][<a href="thrd24.shtml#01124">Thread Index</a>]<br>
+[<A HREF="msg01123.shtml">Date Prev</A>][<A HREF="msg01125.shtml">Date Next</A>][<A HREF="msg01118.shtml">Thread Prev</A>][<A HREF="msg01126.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>doc error in wmk man page?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Hans Ulrich Niedermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 07 Nov 1999 01:17:42 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+in wmk(1) the syntax of wmk is describe as the following:
+
+       wmk [-a] [-A WILDMAT] [-F WILDMAT] [-x PATH] [-X PATH]
+       [-a] [-f] [-n] [-r] [WML-options] [path ...]
+
+Now if I call `wmk -M source.wml' I get only 
+
+WMk:Error: Unknown option: M
+Try `/usr/local/bin/wmk --help' for more information.
+
+Now is that 
+a) a man page bug
+b) a wmk bug
+c) an error by myself?
+
+Uli
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01126" HREF="msg01126.shtml">Re: doc error in wmk man page?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01123.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01125.shtml">Navbar in two languages</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01118.shtml">Re: [RFC] Nested ePerl tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01126.shtml">Re: doc error in wmk man page?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01124"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01124"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

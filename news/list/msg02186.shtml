@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wmk and include files -->
+<!--X-From-R13: Lovtavrj Pbzreg AB <mobzregNqbzvavxnavr.cy> -->
+<!--X-Date: Mon, 2 Apr 2001 21:45:53 +0200 (MET DST) -->
+<!--X-Message-Id: 20010402233234.A1693@sluzew.dominikanie.pl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02186">Date Index</a>][<a href="thrd44.shtml#02186">Thread Index</a>]<br>
+[<A HREF="msg02185.shtml">Date Prev</A>][<A HREF="msg02187.shtml">Date Next</A>][<A HREF="msg02185.shtml">Thread Prev</A>][<A HREF="msg02187.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wmk and include files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Zbigniew Bomert OP &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Apr 2001 23:32:40 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+First, I must say - wml is a great tool, thank you!
+
+Now, my small problem with include files. In a subdirectory
+is a main file and include file. When wmk is running in the
+root directory, it doesn't find the include file.
+
+What should be the include statement in the main file
+#include 'file'
+to work both for wml started in subdirectory and for
+wmk started in root directory?
+
+Zbigniew Bomert OP
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02187" HREF="msg02187.shtml">Re: wmk and include files</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02188" HREF="msg02188.shtml">Re: wmk and include files</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02185.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02187.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02185.shtml">Re: problem: attributes being used as body</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02187.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02186"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02186"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

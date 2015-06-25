@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: NEWBIE WARNING: Is it possible to read include variables from perl -->
+<!--X-From-R13: [vpunry Oggvyv <nggvyvNnznkb.pbz> -->
+<!--X-Date: Sun, 12 Mar 2000 22:12:32 +0100 (MET) -->
+<!--X-Message-Id: 38CC081B.C2ACEAB9@amaxo.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00031220165600.19728@alexander -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01426">Date Index</a>][<a href="thrd29.shtml#01426">Thread Index</a>]<br>
+[<A HREF="msg01425.shtml">Date Prev</A>][<A HREF="msg01427.shtml">Date Next</A>][<A HREF="msg01425.shtml">Thread Prev</A>][<A HREF="msg01427.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: NEWBIE WARNING: Is it possible to read include variables from perl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Attili &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Mar 2000 16:11:55 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I use something like:
+
+#use wml::bar bar=FooBar
+
+in the including document and then:
+
+$(bar)
+
+in bar.wml will evaluate to FooBar. See
+<A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p1_ipp.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p1_ipp.html</A>
+under 'Include Variables' for the full syntax.
+
+Peter Poulsen wrote:
+
+&gt; I'm pretty new in wml so now your warned.
+&gt;
+&gt; If I include a file like this:
+&gt; #include 'bar.wml' bar="FooBar"
+&gt;
+&gt; can I then in 'bar.wml' read the bar variable using.
+&gt; (I would like to different action, based on what variable is sent)
+&gt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01424" HREF="msg01424.shtml">NEWBIE WARNING: Is it possible to read include variables from perl</A></strong>, <em>From:</em> Peter Poulsen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01425.shtml">Re: NEWBIE WARNING: Is it possible to read include variables from perl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01427.shtml">[ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01425.shtml">Re: NEWBIE WARNING: Is it possible to read include variables from perl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01427.shtml">[ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01426"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01426"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

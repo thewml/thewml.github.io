@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Thu, 3 Feb 2000 12:52:02 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0002031205180.1917&#45;100000@jobs.hasecke.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200002031022.LAA03457@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01326">Date Index</a>][<a href="thrd28.shtml#01326">Thread Index</a>]<br>
+[<A HREF="msg01325.shtml">Date Prev</A>][<A HREF="msg01327.shtml">Date Next</A>][<A HREF="msg01335.shtml">Thread Prev</A>][<A HREF="msg01337.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Feb 2000 12:07:16 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Stephane!
+
+Stephane Bortzmeyer schrieb:
+
+&gt; No, don't. No. NO! NOT THE GUN!!!, NO!
+
+But my knife is blunt. ;-)
+
+&gt; &gt; I tried wml-1.7.4 and wml-SNAP after upgrading my Debian 2.1 perl to
+&gt; &gt; unstable. 
+&gt; 
+&gt; As its name says, 'unstable' is for the brave.
+
+Maybe I should encourage myself.;-)  I upgraded because wml-1.7.4. does
+not want to compile with the slink perl, because of an old Getopt. 
+
+&gt; There is a Debian package of wml, which is well-maintained (and is used for 
+&gt; www.debian.org). There is no need to do it yourself.
+
+wml-1.7.4? apt-get does not find an wml-1.7.4 
+
+Mh, I'll try again with wml*
+
+&gt; It seems many Perl parts are missing. Are you sure you installed 'perl' and 
+&gt; not only the default 'perl-base'?
+
+Sure? Never! I am using dselect and apt-get only since the new
+century, so how could I be sure? 
+
+&gt; &gt; $ perl --version
+&gt; &gt; This is perl, version 5.004_05 built for i386-linux  
+&gt; 
+&gt; 'unstable' has Perl 5.005 by default, which makes me wonder if you really use 
+&gt; 'unstable'.
+
+This is my /etc/apt/source.list:
+
+deb <A  HREF="http://http.us.debian.org/debian">http://http.us.debian.org/debian</A> unstable main contrib non-free
+
+I wonder that ./configure does not complain, when there are missing
+perl-packages.
+
+Thanks for the hints.
+juh
+
+-- 
+juh's Sudelbuch --- Literatur und Satire per E-Mail
+<A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+Unterstützen Sie das Sudelbuch durch eine Spende.
+<A  HREF="http://www.sudelbuch.de/spende.html">http://www.sudelbuch.de/spende.html</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01335" HREF="msg01335.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01325.shtml">Re: New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01327.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01335.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01337.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01326"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01326"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

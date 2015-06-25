@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.0, Linux 2.2.14 -->
+<!--X-From-R13: fcnprxNtrbpvgvrf.pbz -->
+<!--X-Date: Mon, 19 Jun 2000 17:21:29 +0200 (MET DST) -->
+<!--X-Message-Id: 200006181626.SAA03790@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01724">Date Index</a>][<a href="thrd36.shtml#01724">Thread Index</a>]<br>
+[<A HREF="msg01723.shtml">Date Prev</A>][<A HREF="msg01725.shtml">Date Next</A>][<A HREF="msg01723.shtml">Thread Prev</A>][<A HREF="msg01725.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.0, Linux 2.2.14</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sun, 18 Jun 2000 18:26:23 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.0
+Operating System: Linux 2.2.14
+
+Problem Description:
+| Putting <A  HREF="mailto:my@address.com">mailto:my@address.com</A> as a url to navbar:button
+| will cause it to prepend urlbase, which is not desirable
+| for a mailto: tag.
+| 
+| I have checked the source and navbar does not include 
+| the url base either when the url starts with a slash or
+| if it starts with whatever:/ but mailto: usually does 
+| not have the slash.
+| 
+| Here's a (naive) fix:
+| 
+| --- navbar.wml.old      Sat May 13 10:24:48 2000
+| +++ navbar.wml  Sun Jun 18 12:25:34 2000
+| @@ -485,7 +485,7 @@
+|              $url = $NAVBAR{$name}-&gt;{uc($1)};
+|          }
+|          if ($url ne '') {
+| -            $url  = "$urlbase/$url" if ($urlbase ne '' and $url !~ m;^([.+\-\w]+:)?/;);
+| +            $url  = "$urlbase/$url" if ($urlbase ne '' and $url !~ m;^[.+\-\w]+:; and $url !~ m;^/;);
+|              $url  = &amp;canonpath($url) if ($url !~ m;^[.+\-\w]+:/;);
+|          }
+|  
+| 
+| -Filip
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01725" HREF="msg01725.shtml">Re: [BUG REPORT] WML 2.0.0, Linux 2.2.14</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01723.shtml">Comments to my WML pages</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01725.shtml">Re: [BUG REPORT] WML 2.0.0, Linux 2.2.14</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01723.shtml">Comments to my WML pages</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01725.shtml">Re: [BUG REPORT] WML 2.0.0, Linux 2.2.14</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01724"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01724"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

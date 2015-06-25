@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: "tidy", doctype, and "summary" attribute in tables -->
+<!--X-From-R13: Rnexb Yevmvp <RYevmvpNBebRlan.qr> -->
+<!--X-Date: Thu, 3 Aug 2000 15:40:26 +0200 (MET DST) -->
+<!--X-Message-Id: F14AD0C59108D411AEF60000B4527B38068A21@infocenter.prodyna.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01873">Date Index</a>][<a href="thrd38.shtml#01873">Thread Index</a>]<br>
+[<A HREF="msg01872.shtml">Date Prev</A>][<A HREF="msg01874.shtml">Date Next</A>][<A HREF="msg01875.shtml">Thread Prev</A>][<A HREF="msg01874.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Darko Krizic &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Aug 2000 15:00:56 +0200 </LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; "tidy" likes to complain about missing "summary" attributes in
+&gt; &lt;table&gt; tags.
+
+What is tidy?
+
+I lately used wml to generate some html files that were DOM templates for
+enhydra and had similar problems with table summaries, ids in html tags and
+so on.
+
+&gt; While I can of course easily add them for my own tables, 
+&gt; wml tags like &lt;tul&gt; and &lt;grid&gt; are a bit trickier.
+
+I usually don't use such existing wml::* tools, but I did something like
+this:
+
+&lt;define-tag t2 endtag=required&gt;
+        &lt;preserve id&gt;
+        &lt;set-var %attributes&gt;
+        &lt;tr id="&lt;get-var id&gt;1"&gt;
+                &lt;td class=lt colspan=2 height=5&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr id="&lt;get-var id&gt;2"&gt;
+                &lt;td class=mt&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;td class=mt width=100%&gt;&lt;b&gt;
+                        %body
+                &lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;restore id&gt;
+&lt;/define-tag&gt;
+
+Here you can use t2 like this &lt;t2 id="abc"&gt;. The upper tr gets the id id1
+and the lower one id2.
+
+...darko
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01874" HREF="msg01874.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01872.shtml">&quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01874.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01875.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01874.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01873"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01873"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

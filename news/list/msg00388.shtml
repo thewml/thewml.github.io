@@ -1,0 +1,188 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: Rnivq [rager <Rnivq.[ragerNvevfn.se> -->
+<!--X-Date: Mon, 8 Feb 1999 16:45:17 +0100 (CET) -->
+<!--X-Message-Id: 199902080826.JAA11457@parate.irisa.fr -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00388">Date Index</a>][<a href="thrd9.shtml#00388">Thread Index</a>]<br>
+[<A HREF="msg00387.shtml">Date Prev</A>][<A HREF="msg00389.shtml">Date Next</A>][<A HREF="msg00387.shtml">Thread Prev</A>][<A HREF="msg00390.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: David Mentre &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 8 Feb 1999 09:26:41 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     David Mentré
+Reply-To: David.Mentre@irisa.fr
+
+PROBLEM DESCRIPTION:
+Table Of Content does not work with home-defined containers.
+
+* The following code :
+#use wml::std::all
+
+&lt;define-container h2&gt;
+ &lt;h2* align=center&gt;%body&lt;/h2*&gt;
+&lt;/define-container&gt;
+
+&lt;toc&gt;
+
+&lt;h1&gt; I&lt;/h1&gt;
+ &lt;h2&gt;1&lt;/h2&gt;
+  &lt;h3&gt;a&lt;/h3&gt;
+
+&lt;h1&gt;II&lt;/h1&gt;
+ &lt;h2&gt;2&lt;/h2&gt;
+  &lt;h3&gt;b&lt;/h3&gt;
+
+* renders :
+&lt;pre&gt;
+&lt;a href="#ToC1"&gt;&lt;strong&gt; I&lt;/strong&gt;&lt;/a&gt;
+  &lt;----- reference to 1 missing here
+        &lt;a href="#ToC2"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="#ToC3"&gt;&lt;strong&gt;II&lt;/strong&gt;&lt;/a&gt;
+  &lt;----- reference to 2 missing here
+        &lt;a href="#ToC4"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/a&gt;
+&lt;/pre&gt;
+&lt;H1&gt;&lt;a name="ToC1"&gt; I&lt;/a&gt;&lt;/H1&gt;
+  &lt;h2 align="center"&gt;1&lt;/h2&gt;
+  &lt;H3&gt;&lt;a name="ToC2"&gt;a&lt;/a&gt;&lt;/H3&gt;
+&lt;H1&gt;&lt;a name="ToC3"&gt;II&lt;/a&gt;&lt;/H1&gt;
+  &lt;h2 align="center"&gt;2&lt;/h2&gt;
+  &lt;H3&gt;&lt;a name="ToC4"&gt;b&lt;/a&gt;&lt;/H3&gt;
+
+* Without the &lt;h2&gt; container redefinition, everything is fine :
+&lt;pre&gt;
+&lt;a href="#ToC1"&gt;&lt;strong&gt; I&lt;/strong&gt;&lt;/a&gt;
+    &lt;a href="#ToC2"&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/a&gt;
+        &lt;a href="#ToC3"&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/a&gt;
+&lt;a href="#ToC4"&gt;&lt;strong&gt;II&lt;/strong&gt;&lt;/a&gt;
+    &lt;a href="#ToC5"&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/a&gt;
+        &lt;a href="#ToC6"&gt;&lt;strong&gt;b&lt;/strong&gt;&lt;/a&gt;
+&lt;/pre&gt;
+&lt;H1&gt;&lt;a name="ToC1"&gt; I&lt;/a&gt;&lt;/H1&gt;
+ &lt;H2&gt;&lt;a name="ToC2"&gt;1&lt;/a&gt;&lt;/H2&gt;
+  &lt;H3&gt;&lt;a name="ToC3"&gt;a&lt;/a&gt;&lt;/H3&gt;
+&lt;H1&gt;&lt;a name="ToC4"&gt;II&lt;/a&gt;&lt;/H1&gt;
+ &lt;H2&gt;&lt;a name="ToC5"&gt;2&lt;/a&gt;&lt;/H2&gt;
+  &lt;H3&gt;&lt;a name="ToC6"&gt;b&lt;/a&gt;&lt;/H3&gt;
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sparc-sun-solaris2.6
+    Perl: 5.004_04 (/usr/local/bin/perl5)
+    User: flemouel@garfield.irisa.fr
+    Date: 03-Feb-1999
+Built Location:
+    Prefix: /soft/wml/1.6.8
+    BinDir: /soft/wml/1.6.8/bin
+    LibDir: /soft/wml/1.6.8/lib
+    ManDir: /soft/wml/1.6.8/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration:
+  Platform:
+    osname=solaris, osvers=2.4, archname=sun4-solaris
+    uname='sunos mingus 5.4 generic_101945-59 sun4m sparc '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O', gccversion=
+    cppflags='-I/usr/local/include'
+    ccflags ='-I/usr/local/include'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=8, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -ldb -ldl -lm -lc -lcrypt
+    libc=/lib/libc.so, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-Kpic', lddlflags='-G -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at Sep 14 1998 11:27:50
+  @INC:
+    /usr/local/lib/perl5/sun4-solaris/5.00404
+    /usr/local/lib/perl5
+    /usr/local/lib/perl5/site_perl/sun4-solaris
+    /usr/local/lib/perl5/site_perl
+    .
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00390" HREF="msg00390.shtml">Re: Bug report</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00387.shtml">Re: Getting filenames..</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00389.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00387.shtml">Re: Getting filenames..</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00390.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00388"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00388"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

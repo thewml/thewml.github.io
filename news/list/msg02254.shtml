@@ -1,0 +1,524 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml&#45;2.0.6 fails to build -->
+<!--X-From-R13: Rvex Ecreeyr <fcreeyrNvasbezngvx.hav&#45;servohet.qr> -->
+<!--X-Date: Fri, 8 Jun 2001 22:31:48 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.32.0106072249400.26767&#45;300000@herkules.informatik.uni&#45;freiburg.de -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02254">Date Index</a>][<a href="thrd46.shtml#02254">Thread Index</a>]<br>
+[<A HREF="msg02253.shtml">Date Prev</A>][<A HREF="msg02255.shtml">Date Next</A>][<A HREF="msg02262.shtml">Thread Prev</A>][<A HREF="msg02255.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml-2.0.6 fails to build</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Dirk Sperrle &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 7 Jun 2001 22:58:00 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+gcc is:
+  gcc version 2.8.1
+
+Perl is:
+  Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration
+
+Attached are logs of the configure run and the make run ...
+
+
+System is a SUN Ultra10, running Solaris 7
+
+
+HTH,
+
+Dirk
+
+
+-- 
+--------------------------------------------------------------------------
+ Dirk Sperrle           |  sperrle@informatik.uni-freiburg.de
+                        |  dirk.sperrle@web.de
+ Universitaet Freiburg  |  <A  HREF="http://www.informatik.uni-freiburg.de/~sperrle">http://www.informatik.uni-freiburg.de/~sperrle</A>
+--------------------------------------------------------------------------
+</PRE>
+<PRE>
+[1mConfiguring for WML 2.0.6 (25-Oct-2000)[m
+creating cache ./config.cache
+checking whether to enable maintainer-specific portions of Makefiles... no
+
+[1mCHECK: Build Environment[m
+checking for built user... sperrle@herkules.informatik.uni-freiburg.de
+checking for built date... 07-Jun-2001
+
+[1mCHECK: Build Utilities[m
+checking for gcc... gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... yes
+checking whether gcc accepts -g... yes
+checking how to run the C preprocessor... gcc -E
+checking for ranlib... ranlib
+checking whether make sets ${MAKE}... yes
+
+[1mCHECK: Perl Language[m
+checking for Perl language... /usr/local/gnu/bin/perl v5.004
+checking for MakeMaker's private install paths... ok
+
+[1mRESULT: Substituting Files[m
+updating cache ./config.cache
+creating ./config.status
+creating Makefile
+creating wml_frontend/Makefile
+creating wml_backend/Makefile
+creating wml_backend/p1_ipp/Makefile
+creating wml_backend/p5_divert/Makefile
+creating wml_backend/p6_asubst/Makefile
+creating wml_backend/p7_htmlfix/Makefile
+creating wml_backend/p8_htmlstrip/Makefile
+creating wml_backend/p9_slice/Makefile
+creating wml_common/Makefile
+creating wml_docs/Makefile
+creating wml_aux/Makefile
+creating wml_aux/htmlinfo/Makefile
+creating wml_aux/htmlclean/Makefile
+creating wml_aux/linklint/Makefile
+creating wml_aux/map2html/Makefile
+creating wml_aux/txt2html/Makefile
+creating wml_aux/tidy/Makefile
+creating wml_aux/weblint/Makefile
+creating wml_aux/freetable/Makefile
+creating wml_misc/Makefile
+creating wml_include/Makefile
+creating wml_test/Makefile
+
+Configuring for wml_backend/p2_mp4h
+running /bin/sh ./configure  --prefix=/home/sperrle/sun --with-tidy=/tmp/sperrle/wml-2.0.6/wml_aux/tidy/tidy --disable-modules --cache-file=../.././config.cache --srcdir=.
+loading cache ../.././config.cache
+Configuring for [1mmp4h 1.1.1 (30-Aug-2000) [m
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking for ranlib... (cached) ranlib
+checking whether make sets ${MAKE}... (cached) yes
+
+Checking for [1mheaders and libraries[m
+checking for AIX... no
+checking for minix/config.h... no
+checking for POSIXized ISC... no
+checking for gcc option to accept ANSI C... none needed
+checking for function prototypes... yes
+checking for ANSI C header files... yes
+checking for size_t... yes
+checking for working const... yes
+checking for limits.h... yes
+checking for locale.h... yes
+checking for memory.h... yes
+checking for string.h... yes
+checking for unistd.h... yes
+checking for time.h... yes
+checking for pwd.h... yes
+checking for grp.h... yes
+checking for dirent.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for sys/times.h... yes
+checking for mkstemp... yes
+checking for strerror... yes
+checking for tmpfile... yes
+checking for getpwuid... yes
+checking for getgrgid... yes
+checking for bcopy... yes
+checking for memmove... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for vprintf... yes
+checking for strtol... yes
+checking for obstack... no
+checking for xmalloc... no
+checking for xstrdup... no
+checking for getopt_long... no
+checking if malloc debugging is wanted... no
+checking for HTML postprocessing... /tmp/sperrle/wml-2.0.6/wml_aux/tidy/tidy
+checking if support for loadable modules is requested... no
+updating cache ../.././config.cache
+creating ./config.status
+creating Makefile
+creating pcre/Makefile
+creating lib/Makefile
+creating src/Makefile
+creating packages/Makefile
+creating packages/WML/Makefile
+creating modules/Makefile
+creating doc/Makefile
+creating tests/Makefile
+creating config.h
+
+Now please type [1mmake[m to compile mp4h
+
+
+Configuring for wml_backend/p3_eperl
+running /bin/sh ./configure  --prefix=/home/sperrle/sun --with-tidy=/tmp/sperrle/wml-2.0.6/wml_aux/tidy/tidy --disable-modules --cache-file=../.././config.cache --srcdir=.
+[1mConfiguring for ePerl 2.2.14 (02-Aug-1998)[m
+loading cache ../.././config.cache
+
+[1mCHECK: Configuration of Perl Language[m
+checking for Perl language... /usr/local/gnu/bin/perl v5.004
+checking for Perl knowledge of system... solaris-2.4
+checking for Perl standard compiler... gcc
+checking for Perl standard optimization flags... -O2
+checking for Perl standard compilation flags... -I/usr/local/include
+checking for Perl standard link flags...  -L/usr/local/lib
+checking for Perl library files... -lsocket -lnsl -ldl -lm -lc -lcrypt
+checking for Perl architecture directory... /usr/local/gnu/lib/perl5/sun4-solaris/5.00404
+checking for Perl dynamic loading support... yes
+checking for Perl dynamic loading compilation flags... -fpic
+checking for Perl dynamic loading link flags... none
+
+[1mCHECK: System Build Environment[m
+checking for build user... sperrle@herkules.informatik.uni-freiburg.de
+checking for build time... 07-Jun-2001
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for ranlib... (cached) ranlib
+checking for ar... ar
+checking for size... size
+checking for compilation debug mode... disabled
+checking whether make sets ${MAKE}... (cached) yes
+
+[1mCHECK: Characteristic of System Headers and Libraries[m
+checking for working const... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking for ANSI C header files... (cached) yes
+checking for stdio.h... yes
+checking for stdarg.h... yes
+checking for stdlib.h... yes
+checking for string.h... (cached) yes
+checking for ctype.h... yes
+checking for unistd.h... (cached) yes
+checking for time.h... (cached) yes
+checking for signal.h... yes
+checking for pwd.h... (cached) yes
+checking for grp.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for netinet/in.h... yes
+checking for netdb.h... yes
+checking for bool... no
+checking for memmove... (cached) yes
+checking for seteuid... yes
+checking for setegid... yes
+checking for strdup... yes
+
+[1mRESULT: Sourcefile Substitution[m
+updating cache ../.././config.cache
+creating ./config.status
+creating Makefile
+creating config_sc.h
+creating config_ac.h
+
+Configuring for wml_backend/p4_gm4
+running /bin/sh ./configure  --prefix=/home/sperrle/sun --with-tidy=/tmp/sperrle/wml-2.0.6/wml_aux/tidy/tidy --disable-modules --cache-file=../.././config.cache --srcdir=.
+loading cache ../.././config.cache
+checking for mawk... no
+checking for gawk... gawk
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for a BSD compatible install... /usr/local/gnutils/bin/install -c
+checking whether make sets ${MAKE}... (cached) yes
+checking for ranlib... (cached) ranlib
+checking how to run the C preprocessor... (cached) gcc -E
+checking for AIX... no
+checking for POSIXized ISC... no
+checking for minix/config.h... (cached) no
+checking for gcc option to accept ANSI C... 
+checking for function prototypes... yes
+checking for working const... (cached) yes
+checking for limits.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for siginfo.h... yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking return type of signal handlers... void
+checking for size_t... (cached) yes
+checking for mkstemp... (cached) yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for sigstack... yes
+checking for sigvec... no
+checking for strerror... (cached) yes
+checking for tmpfile... (cached) yes
+checking for working alloca.h... (cached) yes
+checking for alloca... (cached) yes
+checking for vprintf... (cached) yes
+checking for strtol... (cached) yes
+checking ecvt declaration... yes
+checking if changeword is wanted... no
+checking if malloc debugging is wanted... no
+updating cache ../.././config.cache
+creating ./config.status
+creating Makefile
+creating lib/Makefile
+creating src/Makefile
+creating config.h
+
+Configuring for wml_aux/iselect
+running /bin/sh ./configure  --prefix=/home/sperrle/sun --with-tidy=/tmp/sperrle/wml-2.0.6/wml_aux/tidy/tidy --disable-modules --cache-file=../.././config.cache --srcdir=.
+[1mConfiguring for iSelect 1.2.0 (01-Jul-2000)[m
+Copyright (c) 1996-1999 Ralf S. Engelschall, All Rights Reserved.
+loading cache ../.././config.cache
+
+[1mCHECK: Build Environment[m
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking for compilation debug mode... disabled
+checking whether make sets ${MAKE}... (cached) yes
+
+[1mCHECK: Curses Environment[m
+checking for additional include dir... none particular
+checking for additional library dir... none particular
+checking for ncurses.h... no
+checking for initscr in -lncurses... yes
+checking for slcurses.h... no
+checking for SLcurses_initscr in -lslang... no
+checking which Curses to use... Vendor Curses
+
+[1mCHECK: System Ingredients[m
+checking for working const... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking for stdio.h... (cached) yes
+checking for stddef.h... yes
+checking for string.h... (cached) yes
+checking for strings.h... yes
+checking for stdlib.h... (cached) yes
+
+[1mRESULT: Sourcefile Substitution[m
+updating cache ../.././config.cache
+creating ./config.status
+creating Makefile
+creating config_sc.h
+creating config_ac.h
+
+Configuring for wml_common/gd
+running /bin/sh ./configure  --prefix=/home/sperrle/sun --with-tidy=/tmp/sperrle/wml-2.0.6/wml_aux/tidy/tidy --disable-modules --cache-file=../.././config.cache --srcdir=.
+loading cache ../.././config.cache
+
+CHECK: Build Utilities
+checking for gcc... (cached) gcc
+checking whether the C compiler (gcc  ) works... yes
+checking whether the C compiler (gcc  ) is a cross-compiler... no
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking for ranlib... (cached) ranlib
+checking whether make sets ${MAKE}... (cached) yes
+
+CHECK: PNG Support
+checking for png_write_image in -lpng... no
+checking for png.h... yes
+updating cache ../.././config.cache
+creating ./config.status
+creating Makefile.PL
+creating libgd/Makefile.PL
+
+Now please type '[1mmake[m' to compile. Good luck.
+
+</PRE>
+<PRE>
+===&gt; wml_frontend (all)
+make[1]: Entering directory `/tmp/sperrle/wml-2.0.6/wml_frontend'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@|--prefix=/home/sperrle/sun|g' \
+        -e 's|\@perlprog\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@perlvers\@|5.004|g' \
+        -e 's|\@built_system\@|sun4u-sun-solaris2.7|g' \
+        -e 's|\@built_user\@|sperrle@herkules.informatik.uni-freiburg.de|g' \
+        -e 's|\@built_date\@|07-Jun-2001|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/home/sperrle/sun|g' \
+        -e 's|\@bindir\@|/home/sperrle/sun/bin|g' \
+        -e 's|\@libdir\@|/home/sperrle/sun/lib/wml|g' \
+        -e 's|\@mandir\@|/home/sperrle/sun/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/home/sperrle/sun/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/home/sperrle/sun/lib/wml/perl/lib/sun4-solaris|g' \
+          &lt;wmk.src &gt;wmk.pl &amp;&amp; chmod a+x wmk.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@|--prefix=/home/sperrle/sun|g' \
+        -e 's|\@perlprog\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@perlvers\@|5.004|g' \
+        -e 's|\@built_system\@|sun4u-sun-solaris2.7|g' \
+        -e 's|\@built_user\@|sperrle@herkules.informatik.uni-freiburg.de|g' \
+        -e 's|\@built_date\@|07-Jun-2001|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/home/sperrle/sun|g' \
+        -e 's|\@bindir\@|/home/sperrle/sun/bin|g' \
+        -e 's|\@libdir\@|/home/sperrle/sun/lib/wml|g' \
+        -e 's|\@mandir\@|/home/sperrle/sun/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/home/sperrle/sun/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/home/sperrle/sun/lib/wml/perl/lib/sun4-solaris|g' \
+          &lt;wml.src &gt;wml.pl &amp;&amp; chmod a+x wml.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@|--prefix=/home/sperrle/sun|g' \
+        -e 's|\@perlprog\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@perlvers\@|5.004|g' \
+        -e 's|\@built_system\@|sun4u-sun-solaris2.7|g' \
+        -e 's|\@built_user\@|sperrle@herkules.informatik.uni-freiburg.de|g' \
+        -e 's|\@built_date\@|07-Jun-2001|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/home/sperrle/sun|g' \
+        -e 's|\@bindir\@|/home/sperrle/sun/bin|g' \
+        -e 's|\@libdir\@|/home/sperrle/sun/lib/wml|g' \
+        -e 's|\@mandir\@|/home/sperrle/sun/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/home/sperrle/sun/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/home/sperrle/sun/lib/wml/perl/lib/sun4-solaris|g' \
+          &lt;wmb.src &gt;wmb.pl &amp;&amp; chmod a+x wmb.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@|--prefix=/home/sperrle/sun|g' \
+        -e 's|\@perlprog\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@perlvers\@|5.004|g' \
+        -e 's|\@built_system\@|sun4u-sun-solaris2.7|g' \
+        -e 's|\@built_user\@|sperrle@herkules.informatik.uni-freiburg.de|g' \
+        -e 's|\@built_date\@|07-Jun-2001|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/home/sperrle/sun|g' \
+        -e 's|\@bindir\@|/home/sperrle/sun/bin|g' \
+        -e 's|\@libdir\@|/home/sperrle/sun/lib/wml|g' \
+        -e 's|\@mandir\@|/home/sperrle/sun/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/home/sperrle/sun/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/home/sperrle/sun/lib/wml/perl/lib/sun4-solaris|g' \
+          &lt;wmd.src &gt;wmd.pl &amp;&amp; chmod a+x wmd.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@|--prefix=/home/sperrle/sun|g' \
+        -e 's|\@perlprog\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@perlvers\@|5.004|g' \
+        -e 's|\@built_system\@|sun4u-sun-solaris2.7|g' \
+        -e 's|\@built_user\@|sperrle@herkules.informatik.uni-freiburg.de|g' \
+        -e 's|\@built_date\@|07-Jun-2001|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/home/sperrle/sun|g' \
+        -e 's|\@bindir\@|/home/sperrle/sun/bin|g' \
+        -e 's|\@libdir\@|/home/sperrle/sun/lib/wml|g' \
+        -e 's|\@mandir\@|/home/sperrle/sun/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/gnu/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/home/sperrle/sun/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/home/sperrle/sun/lib/wml/perl/lib/sun4-solaris|g' \
+          &lt;wmu.src &gt;wmu.pl &amp;&amp; chmod a+x wmu.pl
+cp wmk.src wmk.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmk.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' &gt; wmk.1
+rm -f wmk.pod
+cp wml.src wml.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wml.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' &gt; wml.1
+rm -f wml.pod
+cp wmb.src wmb.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmb.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' &gt; wmb.1
+rm -f wmb.pod
+cp wmd.src wmd.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmd.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' &gt; wmd.1
+rm -f wmd.pod
+cp wmu.src wmu.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmu.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' &gt; wmu.1
+rm -f wmu.pod
+cp wmd_missing.src wmd_missing.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmd_missing.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.6 (25-Oct-2000)|g' &gt; wmd_missing.1
+rm -f wmd_missing.pod
+make[1]: Leaving directory `/tmp/sperrle/wml-2.0.6/wml_frontend'
+&lt;=== wml_frontend
+===&gt; wml_aux (all)
+make[1]: Entering directory `/tmp/sperrle/wml-2.0.6/wml_aux'
+===&gt; wml_aux/iselect (all)
+make[2]: Entering directory `/tmp/sperrle/wml-2.0.6/wml_aux/iselect'
+gcc -O2 -I. -o iselect_main.o -c iselect_main.c
+gcc -O2 -I. -o iselect_browse.o -c iselect_browse.c
+gcc -O2 -I. -o iselect_keys.o -c iselect_keys.c
+gcc -O2 -I. -o iselect_getopt.o -c iselect_getopt.c
+gcc -O2 -I. -o iselect_version.o -c iselect_version.c
+gcc -O2 -I. -o iselect_help.o -c iselect_help.c
+gcc -O2 -I. -o iselect_readme.o -c iselect_readme.c
+gcc  -o iselect iselect_main.o iselect_browse.o iselect_keys.o iselect_getopt.o iselect_version.o iselect_help.o iselect_readme.o  -lcurses
+make[2]: Leaving directory `/tmp/sperrle/wml-2.0.6/wml_aux/iselect'
+make[1]: Leaving directory `/tmp/sperrle/wml-2.0.6/wml_aux'
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02253.shtml">Re: How can I find out which language version is currently generated by WML?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02255.shtml">info request</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02262.shtml">Re: Documentation improvement</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02255.shtml">info request</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02254"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02254"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

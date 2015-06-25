@@ -1,0 +1,176 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: v@rgQbz znvyfreivpr <wubNcvatarg.pu> -->
+<!--X-Date: Mon, 17 May 1999 18:01:26 +0200 (MET DST) -->
+<!--X-Message-Id: 199905171600.SAA07241@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00666">Date Index</a>][<a href="thrd9.shtml#00666">Thread Index</a>]<br>
+[<A HREF="msg00665.shtml">Date Prev</A>][<A HREF="msg00667.shtml">Date Next</A>][<A HREF="msg00699.shtml">Thread Prev</A>][<A HREF="msg00680.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: iNetCom mailservice &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 May 1999 18:00:12 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+       The user you wanted to contact is not present at this system.
+       ______________________________________________________________________
+
+
+--
+References: &lt;<A HREF="msg00665.shtml">199905171531.RAA05148@foobar.ee.ethz.ch</A>&gt;
+In-Reply-To: &lt;<A HREF="msg00665.shtml">199905171531.RAA05148@foobar.ee.ethz.ch</A>&gt;
+X-loop: mailservice@gensuisse.ch 
+
+&gt;__        ___  __ _     
+&gt;\ \      / / \/  | |      Website META Language
+&gt; \ \ /\ / / |\/| | |      Version 1.6.8 (12-01-1999)
+&gt;  \ V  V /| |  | | |___ 
+&gt;   \_/\_/ |_|  |_|_____|  BUG REPORT
+&gt;_________________________________________________________
+
+&gt;From:     Fritz Zaucker
+&gt;Reply-To: zaucker@ee.ethz.ch
+
+&gt;PROBLEM DESCRIPTION:
+
+&gt;wmk produces a 
+
+&gt;    -ooutputfile optionI 
+
+&gt;for wml. This is not good if -o lines are specified in the .wmlrc
+&gt;file.
+
+&gt;I tried to add an option to wmk (-N) that would suppress the creation
+&gt;of the -o line for wml. This is a rather trivial patch which I'd
+&gt;happily submit.
+
+&gt;However, when I tried to put -N into the .wmkrc file (and this is what
+&gt;would be needed in conjunction with the -o lines in .wmlrc) I noticed,
+&gt;that .wmkrc is only read if wmk process a directory and not when it
+&gt;processes a single file.
+
+&gt;Looks to me as if the code for reading .wmkrc is at the wrong place
+&gt;(inside sub determine_files).
+
+&gt;Cheers,
+&gt;Fritz
+
+&gt;P.S.: Or would the fix to my problem be that wml ignores command line
+&gt;      option -o if it finds one in .wmlrc? That would work for my
+&gt;      particular situation, but might be confusing in general.
+
+
+
+&gt;PLATFORM CHARACTERISTICS:
+&gt;Used WML System:
+&gt;Built Environment:
+&gt;    Host: sparc-sun-solaris2.5.1
+&gt;    Perl: 5.005_03 (/usr/sepp/bin/perl)
+&gt;    User: local@engelberg.ethz.ch
+&gt;    Date: 15-Apr-1999
+&gt;Built Location:
+&gt;    Prefix: /usr/pack/wml-19990414-to
+&gt;    BinDir: /usr/pack/wml-19990414-to/bin
+&gt;    LibDir: /usr/pack/wml-19990414-to/lib
+&gt;    ManDir: /usr/pack/wml-19990414-to/man
+
+&gt;Used Perl System:
+&gt;Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+&gt;  Platform:
+&gt;    osname=solaris, osvers=2.5.1, archname=sun4-solaris
+&gt;    uname='sunos zinal.ee.ethz.ch 5.5.1 generic_103640-19 sun4u sparc sunw,ultra-enterprise '
+&gt;    hint=recommended, useposix=true, d_sigaction=define
+&gt;    usethreads=undef useperlio=undef d_sfio=undef
+&gt;  Compiler:
+&gt;    cc='gcc', optimize='-O', gccversion=2.7.2
+&gt;    cppflags='-I/usr/local/include -I/usr/gnu/include'
+&gt;    ccflags ='-I/usr/local/include -I/usr/gnu/include'
+&gt;    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+&gt;    intsize=4, longsize=4, ptrsize=4, doublesize=8
+&gt;    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+&gt;    alignbytes=8, usemymalloc=y, prototype=define
+&gt;  Linker and Libraries:
+&gt;    ld='gcc', ldflags =' -L/usr/local/lib -L/usr/gnu/lib'
+&gt;    libpth=/usr/local/lib /usr/gnu/lib /lib /usr/lib /usr/ccs/lib
+&gt;    libs=-lsocket -lnsl -lgdbm -ldb -ldl -lm -lc -lcrypt
+&gt;    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+&gt;  Dynamic Linking:
+&gt;    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+&gt;    cccdlflags='-fPIC', lddlflags='-G -L/usr/local/lib -L/usr/gnu/lib'
+
+
+&gt;Characteristics of this binary (from libperl): 
+&gt;  Built under solaris
+&gt;  Compiled at Apr 13 1999 14:44:47
+&gt;  @INC:
+&gt;    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503/sun4-solaris
+&gt;    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503
+&gt;    /usr/sepp/var/perl-solaris251-5.00503-ak/site_perl/5.005/sun4-solaris
+&gt;    /usr/sepp/var/perl-solaris251-5.00503-ak/site_perl/5.005
+&gt;    .
+
+&gt;______________________________________________________________________
+&gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt;Automated List Manager                       majordomo@engelschall.com
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00665.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00667.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00699.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00680.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00666"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00666"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

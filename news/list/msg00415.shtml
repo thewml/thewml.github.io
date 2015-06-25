@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: #!/usr/local/bin/wml -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 1 Mar 1999 16:46:31 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990301162452.820B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990301134222.A16369@skater.htu.tuwien.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00415">Date Index</a>][<a href="thrd10.shtml#00415">Thread Index</a>]<br>
+[<A HREF="msg00414.shtml">Date Prev</A>][<A HREF="msg00416.shtml">Date Next</A>][<A HREF="msg00414.shtml">Thread Prev</A>][<A HREF="msg00420.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: #!/usr/local/bin/wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Mar 1999 16:31:35 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 1 Mar 1999, Gerfried Fuchs wrote:
+
+&gt;  I don't want to call it with 'wml test.wml' but with 'test.wml'. I
+&gt; don't see the point for that - besides to not have to specify the
+&gt; options on the commandline.....  But somehow it seems to me that that is
+&gt; not possible? Does the kernel check the program which is noticed in the
+&gt; first line to be a binary file? Or is that some other problem?
+
+The problem is that you did not specify any filename. Typing
+   wml -o toto.html
+and writing on the first line of your file
+   #!/usr/local/bin/wml -ototo.html
+are equivalent. Writing
+   #!/usr/local/bin/wml -ototo.html toto.wml
+should work.
+But this is *not* a shebang line in the wml sense.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00420" HREF="msg00420.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00414" HREF="msg00414.shtml">Re: #!/usr/local/bin/wml</A></strong>, <em>From:</em> Gerfried Fuchs</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00414.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00416.shtml">Install problem on Debian</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00414.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00420.shtml">Re: #!/usr/local/bin/wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00415"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00415"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: "wmk &#45;a" and auto&#45;adjusted variables? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 9 Jul 1999 16:46:51 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990709161553.30387A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990709085453.61858@doit.wisc.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00850">Date Index</a>][<a href="thrd18.shtml#00850">Thread Index</a>]<br>
+[<A HREF="msg00849.shtml">Date Prev</A>][<A HREF="msg00851.shtml">Date Next</A>][<A HREF="msg00849.shtml">Thread Prev</A>][<A HREF="msg00842.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &quot;wmk -a&quot; and auto-adjusted variables?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Jul 1999 16:40:36 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 9 Jul 1999 plonka@doit.wisc.edu wrote:
+
+[...]
+&gt; As I said, personally, I liked the idea of adding a wmk switch that causes
+&gt; it to remain in the same directory in which it was invoked because that's
+&gt; the easiest way I can think of to get the "wmk -DNAME~PATH sub-dir" to work
+&gt; as desired.  However, since you don't care for that, perhaps the wmk
+&gt; man-page could read:
+&gt;
+&gt; CAVEAT
+&gt; 
+&gt;    Auto-adjusted variables specfied as "-DNAME~PATH" on the wmk command-
+&gt;    line will not necessarily have the same effect as a similar definition
+&gt;    in a "./.wmlrc" file.  This is because, when processing sub-directories,
+&gt;    wmk changes its working directory to each of those directories, which
+&gt;    can influence the interpolation of such auto-adjusted variables.
+&gt;    When specified on the command line, such variables are interpolated
+&gt;    with respect to wml's current working directory at the time of its
+&gt;    invocation.  So, if you wish such variables to be interpolated relative
+&gt;    to wmk's current working directory at the time of its invocation, one
+&gt;    can work-around this issue by specifying "-DNAME~PATH" in a ".wmlrc"
+&gt;    in that directory rather than specifying it on the wmk command-line.
+&gt; 
+&gt; Without such a warning, the only way I could find an explanation of the
+&gt; behavior I observed was to read the wmk source (and see the chdir(2) calls).
+
+Ok, it's now in the documentation.
+Thanx
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00849" HREF="msg00849.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></strong>, <em>From:</em> plonka</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00849.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00851.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00849.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00842.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00850"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00850"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

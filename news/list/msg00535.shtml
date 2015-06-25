@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: any chance to se PHP incorporated in wml? -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Thu, 1 Apr 1999 10:01:01 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9904010248350.3032&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9903312153180.955&#45;100000@kanta.smece.hr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00535">Date Index</a>][<a href="thrd12.shtml#00535">Thread Index</a>]<br>
+[<A HREF="msg00534.shtml">Date Prev</A>][<A HREF="msg00536.shtml">Date Next</A>][<A HREF="msg00534.shtml">Thread Prev</A>][<A HREF="msg00541.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: any chance to se PHP incorporated in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Apr 1999 03:00:55 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 31 Mar 1999, Davor Cengija wrote:
+
+&gt;        greetings everyone.
+&gt; 
+&gt;        is it there any chance to use PHP language in wml? i see ePerl
+&gt;        is incorporated into wml (pass 3), but my Perl knowledge is
+&gt;        poor, so i'm looking for a way to use PHP code.
+
+Well, how you implement this largely depends on which pass you'd like php3
+to be. We'll assume that somewhere in the neighborhood of 3 is good, since
+you mention ePerl.
+
+That really means we can use passes 1, 2, and 3 to implement this. The
+include file stuff doesn't help here, nor does meta-html (maybe it does
+but I'm not very imaginative tonight). So let's see what we can do in
+Perl.
+
+I have no idea how the php3 interpreter is used/invoked/whatever, but
+let's assume I can just feed it code on the stdin and get results on the
+stdout. *shrug*
+
+&lt;!-- some perl code off the top of my head, it probably sucks --&gt;
+&lt;perl&gt;
+open PHP, "|/usr/local/bin/php &gt; /home/me/tmp/php-tmp$$"; # watch for races!
+print PHP &lt;&lt;END_OF_PHP;
+php3 code goes here
+END_OF_PHP
+close PHP;
+open PHP, "&lt;/home/me/tmp/php-tmp$$";
+print &lt;PHP&gt;;
+close PHP;
+&lt;/perl&gt;
+
+And now that I think about it, you could use meta html to make your &lt;?php
+?&gt; tag, I think, basically making it replace the &lt;?php with the first part
+and the ?&gt; with the last part. Then you wouldn't have to clutter up each
+file with any special syntax, just the appropriate #use to import the
+right definitions.
+
+This would in effect make php3 processing happen during/after "pass 3"
+depending on your perspective.
+
+Something much cleaner to encapsulate the interaction with php3 could be come
+up with I'm sure, but I'm such a lame perl hacker. =)
+
+HTH
+jim
+
+&gt; 
+&gt;        can i somehow call /usr/local/bin/php (maybe even from ePerl)
+&gt;        to parse my code?
+&gt; 
+&gt;        &lt;?php .. ?&gt; tag will be very useful in the future, maybe just
+&gt;        as an option while compiling and it could use already
+&gt;        installed and compiled php cgi module.
+&gt; 
+&gt;        the key benefit would be the possibility to create static
+&gt;        pages with the content taken from some database (php is very
+&gt;        powerful there).
+&gt; 
+&gt;        regards, Davor
+&gt; 
+
+-- 
+"[T]hey said something to the effect that Linux has 'the tendency not to 
+crash.' ... It's like me listing 'the tendency not to murder people' as one of
+my good character traits. :-&gt; It seems that people have grown so accustomed to
+buggy OS's that when Linux simply does what it's supposed to do, it comes 
+across as something new and different." Scott Webster on linux-biz 20 Feb 1999
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00541" HREF="msg00541.shtml">Re: any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00534" HREF="msg00534.shtml">any chance to se PHP incorporated in wml?</A></strong>, <em>From:</em> Davor Cengija</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00534.shtml">any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00536.shtml">Nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00534.shtml">any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00541.shtml">Re: any chance to se PHP incorporated in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00535"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00535"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

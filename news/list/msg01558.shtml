@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: A bit long: What is the right way to add extensions to wml? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 5 May 2000 00:02:06 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000504234159.5963C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.10.10005031200340.4941&#45;100000@samaritan.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01558">Date Index</a>][<a href="thrd32.shtml#01558">Thread Index</a>]<br>
+[<A HREF="msg01557.shtml">Date Prev</A>][<A HREF="msg01559.shtml">Date Next</A>][<A HREF="msg01557.shtml">Thread Prev</A>][<A HREF="msg01559.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: A bit long: What is the right way to add extensions to wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 May 2000 00:01:43 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Joey
+
+On Wed, 3 May 2000, Joey wrote:
+
+&gt; There are a few things I want to do to WML, and I am not sure what is the
+&gt; right way to do them, so I will propose them here, and if anyone has any
+&gt; input, please make sure to include me in the email list, as I am not
+&gt; currently subscribed to the WML list...though this may change if there is
+&gt; interest in this stuff.
+
+And traffic on this list is low... see archives.
+
+&gt; Here are the things I am considering:
+&gt; 
+&gt; #1: Adding an XHTML option to (possibly htmlstrip). This would be nothing
+&gt; more than lowercasing all element names and attributes, and double quoting
+&gt; attribute values. I think it can all be done inside of StripHTMLTag, part
+&gt; of htmlstrip (pass 8). I am definitely going to be doing this somehow, I
+&gt; am just wondering if you all have any input on whether this would be good
+&gt; for the "language proper", perhaps as a level in htmlstrip. Notice I am
+&gt; not looking to do validation or anything in this stage.
+
+Seems more logical to perform this in htmlfix.
+
+&gt; #2: Adding #if, #else, and #endif in pass 1. This is still in the "idea"
+&gt; phase, not even sure if it would be useful. I'm sure I am not the first
+&gt; person to approach this subject, so if someone could quickly enlighten
+&gt; me (please don't flame me...I'm really a nice guy!) on the current
+&gt; theory/plans/reasoning here, I'd really appreciate it.
+
+These tests may be done with current variable substitution, but a syntax
+a la cpp will be much more familiar to newcomers. So yes it would be
+useful to have such directives (and #define #undef #ifdef #ifndef).
+
+&gt; #3: Perhaps adding a pass that runs the phase 9 output through a
+&gt; validator? Again, still in the idea phase.
+
+See the -E flag.
+
+&gt; Also, in general, if I want to extend WML, is it possible to add
+&gt; additional phases?
+
+Same answer.
+
+All your suggestions look nice, and should not break backward
+compatibility. So you have either to wait until i implement them, or to
+do it yourself (of course the latter will incredibly speed up the
+process ;-))
+The best solution to contribute is to download the latest snapshot from
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+and send me a patch file obtained with `diff -u'. If you have low
+connectivity, a diff against any WML release is okay too.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01557" HREF="msg01557.shtml">A bit long: What is the right way to add extensions to wml?</A></strong>, <em>From:</em> Joey</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01557.shtml">A bit long: What is the right way to add extensions to wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01559.shtml">[RFC] New document for writing macros</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01557.shtml">A bit long: What is the right way to add extensions to wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01559.shtml">[RFC] New document for writing macros</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01558"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01558"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

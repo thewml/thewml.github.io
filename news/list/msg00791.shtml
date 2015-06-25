@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slow motion in mhc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 23 Jun 1999 17:18:29 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990623163918.20511A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990614095929.15835B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00791">Date Index</a>][<a href="thrd16.shtml#00791">Thread Index</a>]<br>
+[<A HREF="msg00790.shtml">Date Prev</A>][<A HREF="msg00792.shtml">Date Next</A>][<A HREF="msg00781.shtml">Thread Prev</A>][<A HREF="msg00770.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slow motion in mhc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 23 Jun 1999 17:12:16 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 14 Jun 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Hello!
+&gt; 
+&gt; main | ipp  mhc   epl   gm4  div  asub hfix hstr slic | TOTAL
+&gt; ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+&gt; 2.35 | 1.89 16.65 2.95  0.33 0.94 0.33 1.04 1.23 1.76 | 29.47
+&gt;             *****
+&gt; Is this a hint, that I made something wrong? Pentium100 with 
+&gt; Linux.
+
+We will see when you post your file. Meanwhile, i ask for volunteers to
+help me speeding up this second pass. Below is a test sample to compare
+passes 2 and 4. Time results are
+** WML:Verbose: Processing time (seconds):
+** WML:Verbose: main |  ipp   mhc   epl  gm4  div asub hfix hstr slic | TOTAL
+** WML:Verbose: ---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+** WML:Verbose: 0.87 | 0.22  8.05  0.10 1.72   --   --   --   --   -- | 10.96
+
+I believe one of the problem is that Meta-HTML spends a lot of time
+allocating and deallocating packages (in the Meta-HTML sense) we do not
+use. Suppressing references to those packages is not an easy task.
+
+########## test.24 #########
+#    Number of iterations
+&lt;set-var limit=4000&gt;
+
+#    wml-1.6.8 needs the following line, otherwise loops are limited
+#    to 500 iterations
+&lt;set-var mhtml::iteration-limit=&lt;get-var limit&gt;&gt;
+
+&lt;define-tag deftest whitespace=delete&gt;
+&lt;%%eval &lt;subst-in-string
+   "&lt;XdefineX-tag test%0&gt;&lt;test&lt;add 1 %0&gt;&gt;&lt;/XdefineX-tag&gt;" "XdefineX"
+"define"&gt;&gt;
+&lt;/define-tag&gt;
+#    &lt;test1&gt; expands to &lt;test2&gt; which in turn expands to &lt;test3&gt;...
+&lt;set-var i=0&gt;
+&lt;while &lt;lt i &lt;get-var limit&gt;&gt;&gt;&lt;increment i&gt;&lt;deftest &lt;get-var i&gt;&gt;&lt;/while&gt;
+#    Display
+&lt;test1&gt;
+
+#    Pass 4
+#    forloop is defined in the m4 manual
+m4_quotes
+m4_define(`forloop',
+   `m4_pushdef(`$1', `$2')_forloop(`$1', `$2', `$3', `$4')m4_popdef(`$1')')
+m4_define(`_forloop',
+           `$4`'m4_ifelse($1, `$3', ,
+            `m4_define(`$1', m4_incr($1))_forloop(`$1', `$2', `$3', `$4')')')
+m4_define(`deftest', `m4_define(`test$1', test`'m4_incr($1))')
+forloop(`i', 1, &lt;get-var limit&gt;, `deftest(i)')
+test1
+## EOF ##
+
+--
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00769" HREF="msg00769.shtml">Slow motion in mhc</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00790.shtml">Re: &lt;preserve notypo&gt; causing problems???</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00792.shtml">OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00781.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00770.shtml">[BUG REPORT] WML 1.7.1, Red Hat Linux 5.2 (kernel 2.2.9)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00791"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00791"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

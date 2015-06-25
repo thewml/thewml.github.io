@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: attribute urlopts in navbar doesn't seem to work -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 25 Oct 2001 23:49:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20011025235853.B13252@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3BD82DD6.D8EA195C@snafu.de -->
+<!--X-Reference: 20011025233737.A13252@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02413">Date Index</a>][<a href="thrd49.shtml#02413">Thread Index</a>]<br>
+[<A HREF="msg02412.shtml">Date Prev</A>][<A HREF="msg02414.shtml">Date Next</A>][<A HREF="msg02412.shtml">Thread Prev</A>][<A HREF="msg02414.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: attribute urlopts in navbar doesn't seem to work</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Oct 2001 23:58:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Oct 25, 2001 at 11:37:37PM +0200, Denis Barbier wrote:
+&gt; On Thu, Oct 25, 2001 at 05:20:54PM +0200, Werner Heuser wrote:
+&gt; &gt; Hi,
+&gt; &gt; 
+&gt; &gt; I would like to use the urlopts feature as follows:
+&gt; &gt; &lt;navbar:button url="index.html" id=index urlopts="title=titletest"
+&gt; &gt; hint="MobiliX Start Page" txt="MobiliX"&gt;
+&gt; &gt; but I can't get it to work. The title tag doesn't occur in the 
+&gt; &gt; rendered HTML code. I have tried to quote it (
+&gt; &gt; urlopts="title=\"titletest\"" ),
+&gt; &gt; but this doesn't help. Do you have any recommendations?
+&gt; 
+&gt; Huh?  It is indeed documented, but not implemented, sorry.
+&gt; I will instead propose another scheme, with generic attributes:
+&gt; 
+&gt;   &lt;navbar:button url="index.html" id=index :a:title="titletest"
+&gt;   hint="MobiliX Start Page" txt="MobiliX"&gt;
+&gt; 
+&gt; You need to apply attached patch against wml::des::navbar
+
+And you also need some other files which are not yet released, sorry.
+I will do my best to ship WML 2.0.8 very soon, it will incorporate
+this patch.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02414" HREF="msg02414.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02411" HREF="msg02411.shtml">attribute urlopts in navbar doesn't seem to work</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02412" HREF="msg02412.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02412.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02414.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02412.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02414.shtml">Re: attribute urlopts in navbar doesn't seem to work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02413"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02413"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

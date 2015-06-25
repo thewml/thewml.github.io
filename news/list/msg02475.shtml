@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Strange bug in mp4h parsing -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 29 Dec 2001 02:44:12 +0100 (MET) -->
+<!--X-Message-Id: 20011229025239.B6848@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20011224033957.A30809@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02475">Date Index</a>][<a href="thrd50.shtml#02475">Thread Index</a>]<br>
+[<A HREF="msg02474.shtml">Date Prev</A>][<A HREF="msg02476.shtml">Date Next</A>][<A HREF="msg02472.shtml">Thread Prev</A>][<A HREF="msg02473.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Strange bug in mp4h parsing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 29 Dec 2001 02:52:39 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Dec 24, 2001 at 03:39:57AM +0100, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; I've got a strange parsing bug in mp4h (wml 2.0.7, system details at
+&gt; the end of the email...):
+&gt; 
+&gt; If I use a &lt;subst-in-string&gt; inside a &lt;define-tag&gt; to make recursive
+&gt; tag definitions, &lt;subst-in-string&gt; seems to require a space after the
+&gt; first parameter and doesn't work, if there immediately follows a
+&gt; newline after the first parameter. Maybe there are some more pedantic
+&gt; circumstances necessary to reproduce this bug, but at least I could
+&gt; reduce the complexity to the following to examples work the difference
+&gt; out:
+&gt; 
+&gt; ---8&lt;---
+&gt; # Doesn't work
+&gt; &lt;define-tag add_foo whitespace=delete&gt;
+&gt; &lt;subst-in-string
+&gt;     "=LT=define-tag %0-only endtag=required&gt;[%0:%%body:%0]=LT=/define-tag&gt;"
+&gt;     "=LT=" "&lt;" /&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;add_foo bar /&gt;
+&gt; 
+&gt; &lt;bar-only&gt;baz&lt;/bar-only&gt;
+&gt; 
+&gt; # Works fine
+&gt; &lt;define-tag add_foo whitespace=delete&gt;
+&gt; &lt;subst-in-string
+&gt;     "=LT=define-tag %0-only endtag=required&gt;[%0:%%body:%0]=LT=/define-tag&gt;" 
+&gt;     "=LT=" "&lt;" /&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; &lt;add_foo bar /&gt;
+&gt; 
+&gt; &lt;bar-only&gt;baz&lt;/bar-only&gt;
+&gt; ---&gt;8---
+&gt; 
+&gt; Please note the blank behind the second '=LT=/define-tag&gt;"'! The result
+&gt; of this piece of WML code is:
+&gt; 
+&gt; ---8&lt;---
+&gt; =LT=define-tag bar-only endtag=required&gt;[bar:%body:bar]=LT=/define-tag&gt;=LT=
+&gt; &lt;bar-only&gt;baz&lt;/bar-only&gt;
+&gt; [bar:baz:bar]
+&gt; ---&gt;8---
+
+Hi Axel,
+
+this piece of code looks indeed strange, let me explain what happens.
+The culprit is the `whitespace=delete' attribute, because it tries to
+remove all whitespace not enclosed in tags.  To do so, body macro is
+parsed to find left and right angle brackets, and whitespace is removed
+when balanced brackets are found.  Unfortunately, quotes are not taken
+into account, thus
+  &lt;subst-in-string
+      "=LT=define-tag %0-only endtag=required&gt;[%0:%%body:%0]=LT=/define-tag&gt;" 
+      "=LT=" "&lt;" /&gt;
+is changed into
+  &lt;subst-in-string
+      "=LT=define-tag %0-only endtag=required&gt;# Metch left angle bracket
+[%0:%%body:%0]=LT=/define-tag&gt;""=LT=""&lt;"/&gt;
+
+Now, is it the desired behaviour?  Obviously not, but I am not sure
+being able to provide a robust solution, I have to think about it.
+In the meantime, you may use balanced brackets, e.g. with
+
+  &lt;subst-in-string
+      "&lt;subst-define-tag %0-only endtag=required&gt;[%0:%%body:%0]&lt;/subst-define-tag&gt;" 
+      "subst-define-tag" "define-tag" /&gt;
+
+Thanks for your report.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02472" HREF="msg02472.shtml">Strange bug in mp4h parsing</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02474.shtml">Re: Bug in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02476.shtml">logo size, date format</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02472.shtml">Strange bug in mp4h parsing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02473.shtml">Bug in wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02475"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02475"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

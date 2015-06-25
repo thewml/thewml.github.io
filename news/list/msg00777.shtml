@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slow motion in mhc -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 17 Jun 1999 16:07:38 +0200 (MET DST) -->
+<!--X-Message-Id: 19990617160643.A60279@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990614095929.15835B&#45;100000@hasecke.hasecke -->
+<!--X-Reference: 19990616132414.A384@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00777">Date Index</a>][<a href="thrd16.shtml#00777">Thread Index</a>]<br>
+[<A HREF="msg00776.shtml">Date Prev</A>][<A HREF="msg00778.shtml">Date Next</A>][<A HREF="msg00776.shtml">Thread Prev</A>][<A HREF="msg00779.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slow motion in mhc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 17 Jun 1999 16:06:43 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 16, 1999, Xose Manoel Ramos wrote:
+
+&gt; El Mon, Jun 14, 1999 at 09:37:06PM +0200, Jan Ulrich Hasecke contaba:
+&gt; &gt;main | ipp  mhc   epl   gm4  div  asub hfix hstr slic | TOTAL
+&gt; &gt;---- | ---- ----- ----- ---- ---- ---- ---- ---- ---- | ------
+&gt; &gt;2.35 | 1.89 16.65 2.95  0.33 0.94 0.33 1.04 1.23 1.76 | 29.47
+&gt; &gt;            *****
+&gt; &gt;
+&gt; &gt;Is this a hint, that I made something wrong? Pentium100 with 
+&gt; &gt;Linux.
+&gt; 
+&gt; Only a guess:
+&gt; 
+&gt;  How many eperl o m4 do you use in your pages. Probably you only use
+&gt;  metaHTML? ;-)
+&gt; 
+&gt; How did you get this chart?
+&gt; [...]
+
+wml -v
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00769" HREF="msg00769.shtml">Slow motion in mhc</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+<li><strong><A NAME="00776" HREF="msg00776.shtml">Re: Slow motion in mhc</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00776.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00778.shtml">Re: 1.7.1 Compilation Problems</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00776.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00779.shtml">Re: Slow motion in mhc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00777"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00777"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

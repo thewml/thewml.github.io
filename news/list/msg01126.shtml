@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: doc error in wmk man page? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 8 Nov 1999 10:55:34 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991108110109.12777A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m2aeorupcp.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01126">Date Index</a>][<a href="thrd24.shtml#01126">Thread Index</a>]<br>
+[<A HREF="msg01125.shtml">Date Prev</A>][<A HREF="msg01127.shtml">Date Next</A>][<A HREF="msg01124.shtml">Thread Prev</A>][<A HREF="msg01130.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: doc error in wmk man page?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 8 Nov 1999 11:05:06 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 7 Nov 1999, Hans Ulrich Niedermann wrote:
+
+&gt; Hi,
+&gt; 
+&gt; in wmk(1) the syntax of wmk is describe as the following:
+&gt; 
+&gt;        wmk [-a] [-A WILDMAT] [-F WILDMAT] [-x PATH] [-X PATH]
+&gt;        [-a] [-f] [-n] [-r] [WML-options] [path ...]
+&gt; 
+&gt; Now if I call `wmk -M source.wml' I get only 
+&gt; 
+&gt; WMk:Error: Unknown option: M
+&gt; Try `/usr/local/bin/wmk --help' for more information.
+&gt; 
+&gt; Now is that 
+&gt; a) a man page bug
+&gt; b) a wmk bug
+&gt; c) an error by myself?
+
+Answer is b).
+I forgot to declare this option. The patch below fixes this bug
+
+--- wmk.src     1999/10/03 20:17:04     1.22
++++ wmk.src     1999/11/08 08:54:51
+@@ -125,6 +125,7 @@
+             "t|settime",
+             "p|pass=s@",
+             "W|passoption=s@",
++            "M|depend:s",
+             "s|safe",
+             "v|verbose:i",
+             "q|quiet",
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01130" HREF="msg01130.shtml">wmk -M (was: doc error in wmk man page?)</A></strong>, <em>From:</em> Hans Ulrich Niedermann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01124" HREF="msg01124.shtml">doc error in wmk man page?</A></strong>, <em>From:</em> Hans Ulrich Niedermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01125.shtml">Navbar in two languages</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01127.shtml">Re: Navbar in two languages</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01124.shtml">doc error in wmk man page?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01130.shtml">wmk -M (was: doc error in wmk man page?)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01126"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01126"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

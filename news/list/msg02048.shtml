@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: rendering of tables -->
+<!--X-From-R13: Ireare Vrhfre <jrurNfansh.qr> -->
+<!--X-Date: Sat, 28 Oct 2000 04:36:06 +0200 (MET DST) -->
+<!--X-Message-Id: 20001028020734.A1118@snafu.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39F92D24.75D0C75A@snafu.de -->
+<!--X-Reference: 20001027102654.B9092@imacs.polytechnique.fr -->
+<!--X-Reference: 20001027134902.A1919@snafu.de -->
+<!--X-Reference: 20001027234817.A22018@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02048">Date Index</a>][<a href="thrd41.shtml#02048">Thread Index</a>]<br>
+[<A HREF="msg02047.shtml">Date Prev</A>][<A HREF="msg02049.shtml">Date Next</A>][<A HREF="msg02047.shtml">Thread Prev</A>][<A HREF="msg02044.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: rendering of tables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Werner Heuser &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 28 Oct 2000 02:07:34 -0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Oct 27, 2000 at 11:48:17PM +0200, Denis Barbier wrote:
+...
+&gt; I believe that with this example and wml_macros(7), you have all the
+&gt; material you need ;o)
+&gt; 
+&gt; &lt;define-tag tablebody&gt;
+&gt; ... table content here ...
+&gt; &lt;/define-tag&gt;
+Hi Denis,
+
+I checked your trick a little further, and as far as I can see
+you can't sort the order of columns and rows. But this is
+one thing I will try myself.
+
+Werner
+-- 
+-=* MobiliX  - Home of the Laptop-Guide <A  HREF="http://mobilix.org">http://mobilix.org</A> *=-
+-=* Xtops.DE - Laptops and PDAs with Linux <A  HREF="http://Xtops.DE">http://Xtops.DE</A> *=-
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02042" HREF="msg02042.shtml">rendering of tables</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02043" HREF="msg02043.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02045" HREF="msg02045.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Werner Heuser</li>
+<li><strong><A NAME="02046" HREF="msg02046.shtml">Re: rendering of tables</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02047.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02049.shtml">[wml] Problems with JS functions and navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02047.shtml">Re: rendering of tables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02044.shtml">WML 2.0.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02048"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02048"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

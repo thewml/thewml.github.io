@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4} -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 26 Sep 2000 17:09:32 +0200 (MET DST) -->
+<!--X-Message-Id: 20000926171130.A11651@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000926163233.B21024@ibm&#45;0.MPA&#45;Garching.MPG.DE -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01988">Date Index</a>][<a href="thrd40.shtml#01988">Thread Index</a>]<br>
+[<A HREF="msg01987.shtml">Date Prev</A>][<A HREF="msg01989.shtml">Date Next</A>][<A HREF="msg01987.shtml">Thread Prev</A>][<A HREF="msg01990.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Sep 2000 17:11:31 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Sep 26, 2000 at 04:32:34PM +0200, Norbert Gruener wrote:
+&gt; Hello,
+&gt; 
+&gt; I have downloaded WML version 2.0.4 and I tried to install it under AIX
+&gt; 4.3.  But I was not successful  :-(   BTW, I have got the same error
+&gt; for version 2.0.3 too.  
+&gt; 
+&gt; When I run make, it gets an error somewhere in the GD part.  I have
+&gt; included the log of the make run.  I am running AIX 4.3 and 
+&gt; perl 5.500_02. 
+&gt; 
+&gt; Did I miss something ?   Any help would be appreciated very much.
+
+Hi Norbert,
+
+there is a bug here (and it has been for a while).
+In wml_common/gd/libgd delete routines
+     gdImageGif in gd_gif.c
+     gdImagePng in gd_png.c
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01987" HREF="msg01987.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></strong>, <em>From:</em> Norbert Gruener</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01987.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01989.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01987.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01990.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01988"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01988"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

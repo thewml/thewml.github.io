@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [ANNOUNCE] WML 2.0.2 -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 23 Jun 2000 20:49:28 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0006232006580.3026&#45;100000@drwho.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000623010848.C31710@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01740">Date Index</a>][<a href="thrd36.shtml#01740">Thread Index</a>]<br>
+[<A HREF="msg01739.shtml">Date Prev</A>][<A HREF="msg01741.shtml">Date Next</A>][<A HREF="msg01741.shtml">Thread Prev</A>][<A HREF="msg01742.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [ANNOUNCE] WML 2.0.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 23 Jun 2000 20:49:15 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Some comments:
+
+1) I figured out the problem with &lt;if ...&gt; reported earlier. I think
+   there should be some more examples in the documentation.
+
+2) The following did work in 1.7.4 and not anymore:
+
+   &lt;define-tag TITLE&gt;
+   ..!TITLE&gt;&gt;Something here&lt;&lt;..
+   &lt;/define-tag&gt;
+
+   &lt;&lt;TITLE&gt;&gt;
+
+   Now one must use &lt;&lt;TITLE*&gt;&gt; instead. Seems to make sense, but is
+   somewhat of a trap while migrating.
+
+3) This doesn't work anymore either (leads to a segmentation fault):
+
+   &lt;define-tag MYTAG&gt;
+   Whatever
+   &lt;/define-tag MYTAG&gt;
+
+   You mustn't have an argument in the closing tag.
+
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01742" HREF="msg01742.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01733" HREF="msg01733.shtml">Re: [ANNOUNCE] WML 2.0.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01739.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01741.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01741.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01742.shtml">Re: [wml] Re: [ANNOUNCE] WML 2.0.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01740"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01740"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: "Evh Quhat Znh" <puhatNqbenznvy.pbz> -->
+<!--X-Date: Fri, 17 Mar 2000 08:30:33 +0100 (MET) -->
+<!--X-Message-Id: 20000317072752.73244.qmail@doramail.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01430">Date Index</a>][<a href="thrd9.shtml#01430">Thread Index</a>]<br>
+[<A HREF="msg01429.shtml">Date Prev</A>][<A HREF="msg01431.shtml">Date Next</A>][<A HREF="msg01205.shtml">Thread Prev</A>][<A HREF="msg01432.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Siu Chung Lau&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 15:27:52 +0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am doing something like this on all of my templates (.wml - about 50 of them):
+
+#!wml -o (ALL-LANG_*)uLANG_US:/home/philip/wml/common/us/tos.htm \
+ -o (ALL-LANG_*)uLANG_JP:/home/philip/wml/common/jp/tos.htm \
+ -o (ALL-LANG_*)uLANG_DE:/home/philip/wml/common/de/tos.htm \
+ -o (ALL-LANG_*)uLANG_FR:/home/philip/wml/common/fr/tos.htm
+
+#use wml::std::lang
+
+#include '/home/philip/wml/common/translation/define_language.txt'
+#include '/home/philip/wml/common/translation/text_tos.txt'
+
+And the text_tos.txt looks like:
+
+&lt;define-tag text_terms_of_use whitespace=delete&gt;
+&lt;us: Terms of Use&gt;
+&lt;jp: Blah blah blah&gt;
+&lt;de: Blah blah blah&gt;
+&lt;fr: Blah blah blah&gt;
+&lt;/define-tag&gt;
+
+My problem is, everytime when I add a new language, I have to add a new line to the wml file, let's say, Chinese (cn):
+
+#!wml -o (ALL-LANG_*)uLANG_US:/home/philip/wml/common/us/tos.htm \
+ -o (ALL-LANG_*)uLANG_JP:/home/philip/wml/common/jp/tos.htm \
+ -o (ALL-LANG_*)uLANG_DE:/home/philip/wml/common/de/tos.htm \
+ -o (ALL-LANG_*)uLANG_FR:/home/philip/wml/common/fr/tos.htm \
+ -o (ALL-LANG_*)uLANG_FR:/home/philip/wml/common/cn/tos.htm
+
+#use wml::std::lang
+
+#include '/home/philip/wml/common/translation/define_language.txt'
+#include '/home/philip/wml/common/translation/text_tos.txt'
+
+But I have got more than 50 files to add this line. Is there anyway I can avoid that??
+-- 
+Get your free email from www.doramail.com with 30 Megs of disk space in webhosting and e-mail storage!
+
+powered by OutBlaze
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01432" HREF="msg01432.shtml">Re: adding languages</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01429.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01431.shtml">How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01205.shtml">Re: none</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01432.shtml">Re: adding languages</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01430"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#01430"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

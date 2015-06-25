@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml &#38; jsp -->
+<!--X-From-R13: renyqb.irppvneryyvNgyfbsg.vg -->
+<!--X-Date: Sun, 11 Mar 2001 11:48:07 +0100 (MET) -->
+<!--X-Message-Id: 3A8A96A2.4F3DD4FB@tlsoft.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02159">Date Index</a>][<a href="thrd44.shtml#02159">Thread Index</a>]<br>
+[<A HREF="msg02157.shtml">Date Prev</A>][<A HREF="msg02160.shtml">Date Next</A>][<A HREF="msg02167.shtml">Thread Prev</A>][<A HREF="msg02166.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml &amp; jsp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Wed, 14 Feb 2001 15:30:58 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+I would like to make a select element
+with a dynamic number of options elements,
+in other word, the number of options depent, for instance,
+from the number of string stored in an array of string ...
+
+I tried to do in the following way, but the compilation
+went wrong
+
+&lt;% String  str[] = {"aaa","bbb","ccc","ddd"} %&gt;
+&lt;select name="my_select" &gt;
+
+    &lt;% for(i=0;  i&lt; 5;  i++)  {  %&gt;
+        &lt;option value="" &gt; &lt;%= str[i] %&gt; &lt;/option&gt;
+    &lt;% } %&gt;
+
+&lt;/select&gt;
+
+
+How can do that ??
+
+thanks a lot in advance
+Best Regard
+enry
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02166" HREF="msg02166.shtml">Re: wml &amp; jsp</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02157.shtml">Is there a syntax-file for vim?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02160.shtml">gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02167.shtml">Re: Is there a syntax-file for vim?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02166.shtml">Re: wml &amp; jsp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02159"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02159"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

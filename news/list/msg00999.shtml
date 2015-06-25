@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Solution to "Problems with Install.pm" -->
+<!--X-From-R13: Tenam Yavcc <senamNxavcc.bet> -->
+<!--X-Date: Tue, 28 Sep 1999 16:06:24 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990928154245.20918B&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00999">Date Index</a>][<a href="thrd21.shtml#00999">Thread Index</a>]<br>
+[<A HREF="msg00998.shtml">Date Prev</A>][<A HREF="msg01001.shtml">Date Next</A>][<A HREF="msg00994.shtml">Thread Prev</A>][<A HREF="msg01000.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Solution to &quot;Problems with Install.pm&quot;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Sep 1999 16:03:28 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello people!
+
+After a time consuming trial-and-error phase I can present a receipt to
+solve the problem:
+
+$ pwd
+/home/fknipp/workpad/wml-1.7.2
+$ ./configure --prefix=/home/fknipp/wml --with-openworld
+
+I choose "--with-openworld" because without it doesn't work...
+
+$ make
+
+No errors.
+
+$ make test
+[...lots of error messages...]
+
+The error messages say that it cannot find File/PathConvert.pm... The
+problem is that Install.pm tries to install the perl stuff into some
+site-perl directories - and I've no permission to write there ;-)
+
+Therefore let's do it by hand:
+
+$ for i in blockparser bitvector delimmatch filepathconvert gd imagesize \
+&gt; termreadkey io; do cp -r wml_common/$i/blib/lib/* \
+&gt; wml_test/TEST.root/lib/perl/lib/i386-linux/5.004/; done
+$ for i in bitvektor gd termreadkey io; \
+&gt; do cp -r wml_common/$i/blib/arch/* wml_test/TEST.root/lib/perl/lib/; \
+&gt; done
+
+Now the different perl files are distributed into the appropriate wml_test
+paths. There is no need for the .exists-files there, therefore we remove
+them:
+
+$ find wml_test -name ".exists" -exec rm '{}' ';'
+
+And now we install it:
+
+$ make install
+
+The same error with Install.pm as above occur - to fix it, we copy the
+perl files to their new place:
+
+$ cd
+$ cp -r workpad/wml-1.7.2/wml_test/TEST.root/lib/perl/* wml/lib/perl
+
+I know that this is a little bit dirty solution but I don't know how to
+fix the "Makefile" or "configure" to avoid this problem.
+
+I hope this description will help somebody...
+
+Greetings from Spain
+
+Franz (who is Austrian)
+
+PS: Unhappily the hypertext version of the mailing list did not work while
+I wrote my first email, but now it seems working.
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               c/o Marco Doñate
+C/ Poeto Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01000" HREF="msg01000.shtml">Re: Solution to &quot;Problems with Install.pm&quot;</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00998.shtml">Re: emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01001.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00994.shtml">Re: How to include lines starting with a # sign</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01000.shtml">Re: Solution to &quot;Problems with Install.pm&quot;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00999"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#00999"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

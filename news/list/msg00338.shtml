@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: QVevfgvna @vff <puevfNgbcvgzntvp.qr> -->
+<!--X-Date: Sun, 17 Jan 1999 15:01:30 +0100 (CET) -->
+<!--X-Message-Id: 36A1DFBA.AD006C5E@topitmagic.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A06357.3A7CFBDA@topitmagic.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00338">Date Index</a>][<a href="thrd8.shtml#00338">Thread Index</a>]<br>
+[<A HREF="msg00337.shtml">Date Prev</A>][<A HREF="msg00339.shtml">Date Next</A>][<A HREF="msg00336.shtml">Thread Prev</A>][<A HREF="msg00339.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: CHristian Niss &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Jan 1999 14:03:54 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi, 
+
+I have reduced my problem to the fact, that I donot have 
+setpgrp in my system ... the configure-script therefore
+stops in wml_backend/p2_mhc line 1645 ...
+
+Which rpm do I have to install to get some kind of setpgrp ???
+
+Thanks in advance ...
+
+CHristian
+-- 
+--------------------------------------------------------------------
+CHRISTIAN NISS     computer science student @ FAU Erlangen Nuremberg
+                        eMail: cnniss@cip.informatik.uni-erlangen.de 
+<A  HREF="http://www.topitmagic.de">http://www.topitmagic.de</A>  -  DAS Online-Magazin fuer Zauberkuenstler
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00339" HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00332" HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00337.shtml">Re: Question about pass 4 (m4)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00336.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00339.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00338"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00338"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 2.0.1 (23&#45;May&#45;2000) -->
+<!--X-From-R13: "Oyoreg DSW@SD" <nervareNgcu.ghjvra.np.ng> -->
+<!--X-Date: Fri, 7 Jul 2000 18:12:30 +0200 (MET DST) -->
+<!--X-Message-Id: 20000707162820.A942@frithjof -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01793">Date Index</a>][<a href="thrd34.shtml#01793">Thread Index</a>]<br>
+[<A HREF="msg01792.shtml">Date Prev</A>][<A HREF="msg01794.shtml">Date Next</A>][<A HREF="msg01739.shtml">Thread Prev</A>][<A HREF="msg01796.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 2.0.1 (23-May-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Albert REINER&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 Jul 2000 16:28:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.1 (23-May-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Albert Reiner &lt;areiner@tph.tuwien.ac.at&gt;
+Reply-To: &lt;areiner@tph.tuwien.ac.at&gt;
+
+PROBLEM DESCRIPTION:
+Consider the following minimal input file:
+
+&gt; &lt;:
+&gt; 
+&gt; system "ls -alF $SCRIPT_SRC_PATH";
+&gt; 
+&gt; print "\$SCRIPT_SRC_DIR = $ENV{'SCRIPT_SRC_DIR'}\n";
+&gt; print "\$SCRIPT_SRC_PATH = $SCRIPT_SRC_PATH\n";
+&gt; 
+&gt; :&gt;
+
+For some reason, on my system this will give me the directory listing,
+but the two explicit print statements will yield:
+
+&gt; $SCRIPT_SRC_DIR =
+&gt; $SCRIPT_SRC_PATH =
+
+, i.e. I don't seem to be able to access the variables even though
+they are obviously used in the system call. This is true not only with
+wml but also by using eperl alone, so the problem is obviously in pass
+3.
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu2
+    Perl: 5.005 (/usr/bin/perl)
+    User: root@frithjof
+    Date: 28-May-2000
+Built Location:
+    Prefix: /usr/local/
+    BinDir: /usr/local//bin
+    LibDir: /usr/local//lib/wml
+    ManDir: /usr/local//man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=linux, osvers=2.0.35, archname=i586-linux
+    uname='linux frithjof 2.0.35 #7 sun dec 27 18:40:22 met 1998 i586 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=2.7.2.1
+    cppflags='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    ccflags ='-Dbool=char -DHAS_BOOL -I/usr/local/include'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lgdbm -ldbm -ldb -ldl -lm -lc
+    libc=/lib/libc.so.5.4.46, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Aug 13 1999 21:52:56
+  @INC:
+    /usr/lib/perl5/5.00503
+    /usr/lib/perl5/site_perl/5.005/i586-linux
+    /usr/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01796" HREF="msg01796.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01792.shtml">Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01794.shtml">Re: [BUG REPORT] WML 2.0.2, Any OS</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01739.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01796.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01793"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01793"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

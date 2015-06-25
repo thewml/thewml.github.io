@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: something done -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 1 Jul 1999 16:09:20 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990701145839.8469A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990701143710.A1386@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00817">Date Index</a>][<a href="thrd17.shtml#00817">Thread Index</a>]<br>
+[<A HREF="msg00816.shtml">Date Prev</A>][<A HREF="msg00818.shtml">Date Next</A>][<A HREF="msg00816.shtml">Thread Prev</A>][<A HREF="msg00821.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: something done</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Jul 1999 16:03:11 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 1 Jul 1999, Xose Manoel Ramos wrote:
+
+[...]
+&gt; When I moved into WML I thought I will change everything to
+&gt; Meta-HTML, but I am still using a lot of M4. To be honest most of the
+&gt; macros are still M4. That makes the code look very ugly, but it works
+&gt; and it seems quite fast.
+&gt; 
+&gt; Meta-HTML seems much more easy to read and beautifull, but first I
+&gt; have to get used to it and make my programs.
+
+Hmmm, do you speak of Meta-HTML or wml_p2_mhc? WML uses a stripped down
+version of Meta-HTML and interfaces are completely different. 
+
+For instance, let's define a tag writing a link to your mail address
+With WML
+  #use wml::std::tags
+  &lt;define-tag email&gt;
+  &lt;preserve name&gt;
+  &lt;preserve mail&gt;
+  &lt;set-var %attributes&gt;
+  &lt;a href="mailto:&lt;get-var mail&gt;"&gt;&lt;get-var name&gt;&lt;/a&gt;
+  &lt;restore mail&gt;
+  &lt;restore name&gt;
+  &lt;/define-tag&gt;
+
+With Meta-HTML 5.09
+  &lt;define-tag email &amp;key mail &amp;key name&gt;
+  &lt;a href="mailto:&lt;get-var mail&gt;"&gt;&lt;get-var name&gt;&lt;/a&gt;
+  &lt;/define-tag&gt;
+
+As you see, there are differences.
+In both cases, &lt;email name="me" mail="my@mail"&gt; expands to
+&lt;a href="<A  HREF="mailto:my@mail">mailto:my@mail</A>"&gt;me&lt;/a&gt;
+
+Moreover, lots of functions of Meta-HTML are removed, because they can
+easily be written in Perl. I believe that this combination of
+``restricted Meta-HTML'' and ePerl is much more powerful and
+user-friendly than Meta-HTML.
+
+For instance, i hope i will find a guru to write Perl Gimp scripts.
+(are you ?). Then i could provide nice drawing tools to replace &lt;gfont&gt;.
+
+&gt; By the way. Did you get any of my previous messages? I have to get
+&gt; any message from the list for days. My ISP is fiddling with the mail
+&gt; server and it does not work very nicely.
+
+Yes we did, and i replied.
+You should replace the m4_includes by wml_p1_ipp directives. As i don's
+see your m4 macros, i can't explain you how to do it.
+
+&gt; I will annoy you a little bit more when I get more into WML. 
+
+You're welcome ;-)
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00816" HREF="msg00816.shtml">something done</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00816.shtml">something done</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00818.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00816.shtml">something done</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00821.shtml">Info on wml, please</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00817"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00817"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

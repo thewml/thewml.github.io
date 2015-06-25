@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG&#45;REPORT WML 2.1a1: .wmlrc ignored? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 16 Mar 2001 11:02:18 +0100 (MET) -->
+<!--X-Message-Id: 20010316011806.B1318@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010311013751.A18320@imacs.polytechnique.fr -->
+<!--X-Reference: 20010312005421.B19639@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02176">Date Index</a>][<a href="thrd44.shtml#02176">Thread Index</a>]<br>
+[<A HREF="msg02175.shtml">Date Prev</A>][<A HREF="msg02177.shtml">Date Next</A>][<A HREF="msg02174.shtml">Thread Prev</A>][<A HREF="msg02177.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 16 Mar 2001 01:18:06 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Mar 12, 2001 at 12:54:21AM +0100, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; Denis Barbier wrote:
+&gt; &gt; WML 2.1a1 is out, this is the first unstable release since the
+&gt; &gt; discussion about having stable and unstable branches.
+&gt; 
+&gt; OK, and here's the first bug report:
+&gt; 
+&gt; WML 2.1a1 seems to ignore all .wmlrc files. Neither my -I directives
+&gt; nor --verbose are noticed when appearing inside a .wmlrc file in the
+&gt; same directory as the wml file is located as well as inside .wmlrc
+&gt; files somewhere else between / and that directory.
+
+Hi Axel,
+very strange, it works for me.
+You may run wml with -v9 command-line flag to check if files are loaded
+or not:
+
+   $ cd /tmp
+   $ : &gt; .wmlrc
+   $ wml -v9 &lt; /dev/null
+   ** WML:Verbose: Reading RC file: /home/barbier/.wmlrc
+   ** WML:Verbose: Reading RC file: /tmp/.wmlrc
+   ** WML:Verbose: PASS 9:
+   ...
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02177" HREF="msg02177.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02165" HREF="msg02165.shtml">[wml] New release (unstable)</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02174" HREF="msg02174.shtml">BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02175.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02177.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02174.shtml">BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02177.shtml">Re: BUG-REPORT WML 2.1a1: .wmlrc ignored?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02176"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02176"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

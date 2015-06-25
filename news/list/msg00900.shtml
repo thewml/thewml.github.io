@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Announce: gfont 1.0.3 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 26 Aug 1999 11:46:59 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990826111324.5958A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00900">Date Index</a>][<a href="thrd19.shtml#00900">Thread Index</a>]<br>
+[<A HREF="msg00899.shtml">Date Prev</A>][<A HREF="msg00901.shtml">Date Next</A>][<A HREF="msg00899.shtml">Thread Prev</A>][<A HREF="msg00901.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Announce: gfont 1.0.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 26 Aug 1999 11:40:10 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am glad to announce gfont 1.0.3
+      <A  HREF="http://www.engelschall.com/sw/gfont/">http://www.engelschall.com/sw/gfont/</A>
+
+This release includes
+- ability to use TeX T1 fonts for 8-bit characters
+- gracefully exit when output filename can not be written
+- fixes for big-endian platforms
+- use of GNU xmalloc for memory allocation
+
+Use of T1 fonts is still experimental, lots of work has still to be
+done.
+
+
+Thanks to all contributors, especially
+* John Bazik
+* Jan Ulrich Hasecke
+* Frederic le Mouel
+* Dave Plonka
+and others i forgot to mention (if i do, drop me a message)...
+
+Denis
+
+PS to Ryan VanderBijl: in an old private message, you wrote you
+    patched gfont, but i do not remember whether you sent me
+    your patches.  Did you?
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00899.shtml">Re: New include files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00901.shtml">Modules (again)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00899.shtml">Re: New include files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00901.shtml">Modules (again)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00900"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00900"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

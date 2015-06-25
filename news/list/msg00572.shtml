@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: newbie: skeletons for slides? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 13 Apr 1999 10:08:40 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990413092943.6799A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.9904121637280.22054&#45;100000@yoda.u&#45;strasbg.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00572">Date Index</a>][<a href="thrd13.shtml#00572">Thread Index</a>]<br>
+[<A HREF="msg00571.shtml">Date Prev</A>][<A HREF="msg00573.shtml">Date Next</A>][<A HREF="msg00569.shtml">Thread Prev</A>][<A HREF="msg00571.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: newbie: skeletons for slides?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 13 Apr 1999 10:03:02 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 12 Apr 1999, Bruno Boettcher wrote:
+
+[...]
+&gt; I searched the mailing list archive for slides, but found nothing, so is there
+&gt; somebody out there that is willing to publish a skeleton for making
+&gt; speech-slides?
+[...]
+
+I think it's too hard. With LaTeX you have control on the page layout.
+When writing HTML files (with WML or anything else) you don't know how
+it will be render. Did you try pdflatex ? It's in the teTeX0.9 beta
+release <A  HREF="ftp://ftp.rrzn.uni-hannover.de/pub/local/misc/teTeX-beta">ftp://ftp.rrzn.uni-hannover.de/pub/local/misc/teTeX-beta</A>
+
+Here is what i did for LaTeX to HTML translations:
+* Run latex2html
+     latex2html -init_file l2h.rc -split 4 file.tex
+  The l2h.rc contains options and local definitions.
+* Translate those HTML files into wml.
+  I wrote a very simple perl script which extracts the information i
+  need: title, navbar and body. Then i write wml files with these
+  informations.
+* Run wml
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00569" HREF="msg00569.shtml">newbie: skeletons for slides?</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00571.shtml">Weblint 1.9.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00573.shtml">Seeking for maintainers for ePerl and gFONT</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00569.shtml">newbie: skeletons for slides?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00571.shtml">Weblint 1.9.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00572"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00572"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

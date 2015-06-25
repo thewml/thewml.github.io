@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wmk and include files -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 2 Apr 2001 21:56:39 +0200 (MET DST) -->
+<!--X-Message-Id: 20010402220618.A10908@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010402233234.A1693@sluzew.dominikanie.pl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02187">Date Index</a>][<a href="thrd44.shtml#02187">Thread Index</a>]<br>
+[<A HREF="msg02186.shtml">Date Prev</A>][<A HREF="msg02188.shtml">Date Next</A>][<A HREF="msg02186.shtml">Thread Prev</A>][<A HREF="msg02188.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wmk and include files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Apr 2001 22:06:18 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Apr 02, 2001 at 11:32:40PM +0200, Zbigniew Bomert OP wrote:
+&gt; First, I must say - wml is a great tool, thank you!
+&gt; 
+&gt; Now, my small problem with include files. In a subdirectory
+&gt; is a main file and include file. When wmk is running in the
+&gt; root directory, it doesn't find the include file.
+&gt; 
+&gt; What should be the include statement in the main file
+&gt; #include 'file'
+&gt; to work both for wml started in subdirectory and for
+&gt; wmk started in root directory?
+
+Hi Zbigniew,
+
+write
+  #include "file"
+in your source file and put
+  -I your_subdir
+in root/.wmkrc
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02186" HREF="msg02186.shtml">wmk and include files</A></strong>, <em>From:</em> Zbigniew Bomert OP</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02186.shtml">wmk and include files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02188.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02186.shtml">wmk and include files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02188.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02187"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02187"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

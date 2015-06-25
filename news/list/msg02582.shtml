@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug in wml::std::page with bugfix. -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNenqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Tue, 26 Mar 2002 07:36:53 +0100 (MET) -->
+<!--X-Message-Id: 000801c1d490$6b302120$4004a8c0@darryl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C95EB0A.A6E5F0C7@web.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02582">Date Index</a>][<a href="thrd52.shtml#02582">Thread Index</a>]<br>
+[<A HREF="msg02581.shtml">Date Prev</A>][<A HREF="msg02583.shtml">Date Next</A>][<A HREF="msg02572.shtml">Thread Prev</A>][<A HREF="msg02578.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug in wml::std::page with bugfix.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Mar 2002 17:35:22 +1100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+There is a bug in WML::STD:PAGE (Or Microsoft Internet Explorer) that is
+affecting me. It affects the &lt;BODY&gt; tag that is generaged by the &lt;PAGE&gt;
+tag through the above library.
+
+Microsoft (and maybe others) have a border arround the side of the
+screen so that graphics and coloured tables do not extend right to the
+edge. This is an issue for some sites that you might want to create. The
+new paramaters are
+
+	TOPMARGIN
+	LEFTMARGIN
+	MARGINWIDTH
+	MARGINHEIGHT
+
+In order to use these you need to be able to say
+	&lt;PAGE tOPMARGIN="0" LeftMargin=0 marginwidth=0 marginheight=0&gt;
+to set these paramaters. This does not set these paramaters though since
+they are programatically checked for. 
+
+The fix is to copy LINE 39 of PAGE.WML and paste it just after 4 times.
+Then on each line change the word alink to the names of the tags listed
+above. I set the defaults as being 10 for each. I don't know what the
+defaults should be
+
+Darrtl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02572" HREF="msg02572.shtml">WML Presentation Slides - Updated</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02581.shtml">Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02583.shtml">Re: Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02572.shtml">WML Presentation Slides - Updated</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02578.shtml">Telling &lt;toc&gt; to ignore &lt;Hn&gt; entries?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02582"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02582"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: bug report : <page_end> definition in wml::std::page -->
+<!--X-From-R13: Xrna&#45;[vpury Enhintr <wrna&#45;zvpury.fnhintrNpyho&#45;vagrearg.se> -->
+<!--X-Date: Mon, 22 Jan 2001 18:24:50 +0100 (MET) -->
+<!--X-Message-Id: 3A6C6B42.5040802@club&#45;internet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02118">Date Index</a>][<a href="thrd43.shtml#02118">Thread Index</a>]<br>
+[<A HREF="msg02117.shtml">Date Prev</A>][<A HREF="msg02119.shtml">Date Next</A>][<A HREF="msg02117.shtml">Thread Prev</A>][<A HREF="msg02147.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>bug report : &lt;page_end&gt; definition in wml::std::page</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jean-Michel Sauvage &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Jan 2001 18:17:54 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+When using multiple pages capabilities from wml::std::page, there's a 
+problem after pass 5 : all heads, titles and bodies are diverted in each 
+output page !
+
+The problem occurs when &lt;page_end&gt; decrements __std_page_cnt variable, 
+so this variable is always set to value 1 !
+
+------------------
+
+## wml 2.0.6 wml::std::page &lt;page_end&gt; tag definition
+
+Line |
+|
+63  | #   end page
+64  | &lt;define-tag page_end&gt;
+65  | :#WML_PAGE_BODY_&lt;get-var __std_page_cnt /&gt;#}
+66  | &lt;decrement __std_page_cnt /&gt;
+67  | &lt;/define-tag&gt;
+
+
+## bug solution : remove line 66, there's no need to change page counter 
+value.
+
+------------------
+
+
+Jean-Michel SAUVAGE
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02147" HREF="msg02147.shtml">Re: bug report : &lt;page_end&gt; definition in wml::std::page</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02117.shtml">global variables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02119.shtml">Can you explain the behaviour of the following?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02117.shtml">global variables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02147.shtml">Re: bug report : &lt;page_end&gt; definition in wml::std::page</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02118"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02118"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

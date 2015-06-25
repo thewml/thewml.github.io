@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 &#45; Solaris 8 -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Mon, 18 Jun 2001 14:59:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20010617220107.C2182@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Reference: 200105081551.RAA07637@opensource.ee.ethz.ch -->
+<!--X-Reference: 20010525221727.B21509@imacs.polytechnique.fr -->
+<!--X-Derived: pgp00011.pgp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02260">Date Index</a>][<a href="thrd45.shtml#02260">Thread Index</a>]<br>
+[<A HREF="msg02259.shtml">Date Prev</A>][<A HREF="msg02261.shtml">Date Next</A>][<A HREF="msg02248.shtml">Thread Prev</A>][<A HREF="msg02264.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 17 Jun 2001 22:01:07 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+&gt; i applied the following patch:
+&gt; +++ wml_backend/p7_htmlfix/htmlfix.src  2001/05/25 20:03:47     1.16
+&gt; @@ -253,7 +253,7 @@
+&gt;  sub Fixup_center {
+&gt;      &amp;verbose("replacing &lt;center&gt;..&lt;/center&gt; by &lt;div align=center&gt;..&lt;/div&gt;");
+&gt;  
+&gt; -    $buffer =~ s|&lt;[cC][eE][nN][tT][eE][rR]&gt;|&lt;div align="center"&gt;|g;
+&gt; +    $buffer =~ s|&lt;[cC][eE][nN][tT][eE][rR](\s[^&gt;]*)?&gt;|&lt;div align="center"$1&gt;|g;
+&gt;      $buffer =~ s|&lt;/[cC][eE][nN][tT][eE][rR]&gt;|&lt;/div&gt;|g;
+&gt;  }
+
+Just being curious: Why using 
+
+   $buffer =~ s|&lt;[cC][eE][nN][tT][eE][rR]&gt;|&lt;div align="center"&gt;|g;
+
+instead of
+
+   $buffer =~ s|&lt;center&gt;|&lt;div align="center"&gt;|gi;
+                                               ^
+?
+
+Any performance reasons?
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+</PRE>
+<P><A HREF="pgp00011.pgp" >PGP signature</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02264" HREF="msg02264.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02246" HREF="msg02246.shtml">[BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> hoffmana</li>
+<li><strong><A NAME="02248" HREF="msg02248.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02259.shtml">Recommended handling of sites with subdirs?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02261.shtml">Re: [BUG REPORT] WML 2.0.2, Linux 2.2.16 (RH 6.2)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02248.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02264.shtml">Re: [BUG REPORT] WML 2.0.6, SunOS Release 5.8 - Solaris 8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02260"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02260"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

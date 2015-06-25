@@ -1,0 +1,160 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <protect> does not work -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 14 Feb 2000 12:28:30 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000214123418.13697A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.10002121331001.21155&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01357">Date Index</a>][<a href="thrd28.shtml#01357">Thread Index</a>]<br>
+[<A HREF="msg01356.shtml">Date Prev</A>][<A HREF="msg01359.shtml">Date Next</A>][<A HREF="msg01355.shtml">Thread Prev</A>][<A HREF="msg01356.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;protect&gt; does not work</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 14 Feb 2000 12:36:38 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 12 Feb 2000, Wolfgang Dautermann wrote:
+
+&gt; Hi,
+&gt; 
+&gt; I want to create two pages from one input file - one html-only page
+&gt; and one with php-scripts. A small example:
+&gt; 
+&gt; #use wml::std::lang
+&gt; &lt;lang:new id=html&gt;
+&gt; &lt;lang:new id=php&gt;
+&gt; &lt;lang:star:slice: %BASE.*&gt;
+&gt; &lt;h1&gt; Linux&lt;/h1&gt;
+&gt; &lt;lang:html&gt;&lt;/lang:html&gt;
+&gt; &lt;lang:php&gt;
+&gt; &lt;H3&gt;Linux Headlines&lt;/H3&gt;
+&gt; &lt;P&gt;
+&gt; &lt;protect&gt;
+&gt; &lt;?php
+&gt;          readfile("<A  HREF="http://lwn.net/headlines/html">http://lwn.net/headlines/html</A>");
+&gt; ?&gt;
+&gt; &lt;/protect&gt;
+&gt; &lt;/lang:php&gt;
+&gt; 
+&gt; Wml (1.7.4) should leave the php-code (everything between "&lt;?php" and
+&gt; "?&gt;") untouched - therefore the &lt;protect&gt;-container.
+
+This patch should fix your problem. Apply it against wml.src or the wml
+perl script.
+
+Regards
+
+--- wml_frontend/wml.src	2000/01/07 23:23:16	1.37
++++ wml_frontend/wml.src	2000/02/12 20:50:24	1.38
+@@ -829,22 +829,29 @@
+ 
+ sub pass9 {
+     my ($opt, $from, $to, $tmp) = @_;
+-    my ($rc, $shebang, @ARGV, @X);
++    my ($rc, $shebang, @X);
+ 
+-    #   first check whether a shebang line is found
+-    open(SLICE,"&lt;$from");
+-    $shebang = &lt;SLICE&gt;;
+-    close(SLICE);
+-    if ($shebang =~ m|%!slice\s+(.*)$|) {
+-        #   this line has been produced by previous passes
++    #   first check whether a shebang line is found and no
++    #   output files were assigned on command line
++    if ($#opt_o == -1) {
++        open(SLICE,"&lt;$from");
++        do { $shebang = &lt;SLICE&gt;; }
++            while ($shebang =~ m|^\s*$|);
++        @ARGVLINE = @ARGV;
+         @ARGV = ();
+-        @X = &amp;split_argv($1);
+-        push(@ARGV, @X);
+-        &amp;ProcessOptions();
+-        #   Don't override command-line output file options
+-        &amp;ProcessOutfiles() if $#opt_o == -1;
+-        $opt = "$verbose $out";
+-        $out_istmp = 0;
++        while ($shebang =~ m|%!slice\s+(.*)$|) {
++            @X = &amp;split_argv($1);
++            push(@ARGV, @X);
++            $shebang = &lt;SLICE&gt;;
++        }
++        close(SLICE);
++        if ($#ARGV &gt; -1) {
++            &amp;ProcessOptions();
++            &amp;ProcessOutfiles();
++            $opt = "$verbose $out";
++            $out_istmp = 0;
++        }
++        @ARGV = @ARGVLINE;
+     }
+     #   slice contains "package" commands and
+     #   other stuff, so we cannot source it.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01355" HREF="msg01355.shtml">&lt;protect&gt; does not work</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01356.shtml">Re: &lt;protect&gt; does not work</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01359.shtml">Re: WML port to Win32</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01355.shtml">&lt;protect&gt; does not work</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01356.shtml">Re: &lt;protect&gt; does not work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01357"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01357"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

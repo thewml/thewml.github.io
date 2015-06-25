@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem with ifeq under 2.0.0 -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Fri, 19 May 2000 22:04:51 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0005181302240.25995&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000517233701.31914A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01582">Date Index</a>][<a href="thrd33.shtml#01582">Thread Index</a>]<br>
+[<A HREF="msg01583.shtml">Date Prev</A>][<A HREF="msg01581.shtml">Date Next</A>][<A HREF="msg01577.shtml">Thread Prev</A>][<A HREF="msg01575.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem with ifeq under 2.0.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 18 May 2000 13:09:35 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!
+
+On Wed, 17 May 2000, Denis Barbier wrote:
+&gt; read the file README.mp4h in top-level directory, it describes what to
+&gt; do with this expression (and why it is broken now):
+&gt;       &lt;ifeq 0 0 &lt;img src="foo.png" alt=""&gt;&gt;
+
+I read README.mp4h and found the following line:
+
+    In mp4h, unknown tags are simply considered as normal text.
+
+I think, that &lt;group ...&gt; should be known to mp4h, but:
+
+&lt;ifeq 0 0 &lt;group &lt;img src="foo.png" alt=""&gt;&gt;&gt;
+
+doesn't work, too.
+
+Is this an error in mp4h or do I have to change all of this into:
+
+&lt;ifeq 0 0 &lt;group "&lt;img src=\"foo.png\" alt=\"\"&gt;"&gt;&gt;
+
+to get it working?
+
+Keep in mind, that &lt;prog ...&gt; from wml::sys::compat1 doesn't work right,
+if the additional quotes are necessary!
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01575" HREF="msg01575.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01572" HREF="msg01572.shtml">Re: Problem with ifeq under 2.0.0</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01583.shtml">Bug report - Pass 2: &lt;group&gt; tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01581.shtml">BUG REPORT: Website META Language 2.0.0 (11-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01577.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01575.shtml">Re: Problem with ifeq under 2.0.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01582"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01582"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

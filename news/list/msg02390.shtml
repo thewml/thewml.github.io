@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: configure does not find installed Perl modules -->
+<!--X-From-R13: Pynve Lnwnp <oynveNbepnjner.pbz> -->
+<!--X-Date: Mon, 10 Sep 2001 00:42:29 +0200 (MET DST) -->
+<!--X-Message-Id: 3B9BF03B.7CA6DBC5@orcaware.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3B8EA9E9.BF001676@orcaware.com -->
+<!--X-Reference: 20010910002826.A32052@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02390">Date Index</a>][<a href="thrd48.shtml#02390">Thread Index</a>]<br>
+[<A HREF="msg02389.shtml">Date Prev</A>][<A HREF="msg02391.shtml">Date Next</A>][<A HREF="msg02389.shtml">Thread Prev</A>][<A HREF="msg02391.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: configure does not find installed Perl modules</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Blair Zajac &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 09 Sep 2001 15:42:03 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+I don't see any reasons why that won't work.
+
+Best,
+Blair
+
+Denis Barbier wrote:
+&gt; 
+&gt; On Thu, Aug 30, 2001 at 02:02:33PM -0700, Blair Zajac wrote:
+&gt; &gt; When I use WML 2.0.7 configure with the --with-openworld option to
+&gt; &gt; search for already installed Perl modules that WML needs, it does not
+&gt; &gt; properly find them.
+&gt; [...]
+&gt; &gt; --- ../wml-2.0.7-orig/config/aclocal.m4       Sun Jun 17 15:44:29 2001
+&gt; &gt; +++ ./config/aclocal.m4       Thu Aug 30 13:47:01 2001
+&gt; &gt; @@ -69,12 +69,12 @@
+&gt; &gt;  TMPFILE=$tmpdir/ac.$$
+&gt; &gt;  rm -f $TMPFILE
+&gt; &gt;  cat &gt;$TMPFILE &lt;&lt;'EOT'
+&gt; &gt; -eval {
+&gt; &gt; -    require $1;
+&gt; &gt; -    if ('$2' ne 'ANY') {
+&gt; &gt; -        $1-&gt;require_version('$2');
+&gt; &gt; -    }
+&gt; &gt; -};
+&gt; &gt; +my $string = 'use $1';
+&gt; &gt; +if ('$2' ne 'ANY') {
+&gt; &gt; +    $string .= ' $2';
+&gt; &gt; +}
+&gt; &gt; +$string .= ';';
+&gt; &gt; +eval $string;
+&gt; &gt;  if ([$]@) {
+&gt; &gt;      print "failed";
+&gt; &gt;  } else {
+&gt; [...]
+&gt; 
+&gt; Hi Blair,
+&gt; 
+&gt; unless you tell it does not work, I will use m4 `ifelse':
+&gt;    eval { require $1 ifelse($2, ANY, , $2); };
+&gt; And also clean up some other constructs in config files.
+&gt; 
+&gt; Thanks for your report
+&gt; 
+&gt; --
+&gt; Denis Barbier
+&gt; WML Maintainer
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02387" HREF="msg02387.shtml">configure does not find installed Perl modules</A></strong>, <em>From:</em> Blair Zajac</li>
+<li><strong><A NAME="02389" HREF="msg02389.shtml">Re: configure does not find installed Perl modules</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02389.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02391.shtml">Organizing a &quot;Lecture&quot; in a Tree + Having a page flow.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02389.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02391.shtml">Organizing a &quot;Lecture&quot; in a Tree + Having a page flow.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02390"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02390"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

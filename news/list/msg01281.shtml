@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Navbar in two languages again -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 19 Jan 2000 12:20:52 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000119113932.26375A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.10001151343070.14718&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01281">Date Index</a>][<a href="thrd26.shtml#01281">Thread Index</a>]<br>
+[<A HREF="msg01280.shtml">Date Prev</A>][<A HREF="msg01282.shtml">Date Next</A>][<A HREF="msg01274.shtml">Thread Prev</A>][<A HREF="msg01279.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Navbar in two languages again</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Jan 2000 12:20:57 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 15 Jan 2000, Wolfgang Dautermann wrote:
+
+&gt; Hi,
+&gt; 
+&gt; Today I found, that in both answers from Denis for my "navbar"-question
+&gt; (see <A  HREF="http://www.engelschall.com/sw/wml/news/list/12.html">http://www.engelschall.com/sw/wml/news/list/12.html</A> and
+&gt; <A  HREF="http://www.engelschall.com/sw/wml/news/list/14.html">http://www.engelschall.com/sw/wml/news/list/14.html</A>)
+&gt; the "WIDTH" and "HEIGHT" tags for the images are not created. 
+&gt; 
+&gt; [Probably I can solve that problem, if I change the order of the
+&gt; wml-passes  (Pass 7 after Pass 9 ?) , but I fear, that this will introduce
+&gt; other problems].
+
+You can't with wml-1.7.2, and in newer versions pass 9 is always the
+final pass (it was not documented, i add some explanations just now).
+
+&gt; (I did not try the solution from Florian (using a modified navbar-module,
+&gt; see <A  HREF="http://www.engelschall.com/sw/wml/news/list/16.html">http://www.engelschall.com/sw/wml/news/list/16.html</A>) now, because -
+&gt; apart from that small WIDTH/HEIGHT-bug - Denis solution works).
+&gt; 
+&gt; Is there another (clean) solution (apart from defining seperate navbars
+&gt; for each language)?
+
+Yes, <A  HREF="http://www.engelschall.com/sw/wml/news/list/105.html">http://www.engelschall.com/sw/wml/news/list/105.html</A>
+
+&gt; P.S: Some other suggestions:
+&gt; 
+&gt;  - Probably we should introduce WIDTH and HEIGHT tags for wml::std::href
+&gt;    to allow browser-based image scaling. 
+
+I am not sure this is of interest.
+
+&gt;  - Probably one could change the configuration of the webserver on
+&gt;    www.engelschall.com. It reports for ".src"-Files:
+[...]
+
+You're right. It is fixed now.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01274" HREF="msg01274.shtml">Navbar in two languages again</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01280.shtml">Re: Emacs mode for wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01282.shtml">WML und Meta-HTML (fwd)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01274.shtml">Navbar in two languages again</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01279.shtml">Emacs mode for wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01281"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01281"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

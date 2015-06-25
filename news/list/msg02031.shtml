@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML: WMK Help -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 16 Oct 2000 18:11:40 +0200 (MET DST) -->
+<!--X-Message-Id: 20001016181256.A9029@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: s9eb267a.043@icc&#45;demo.hofstaedtler.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02031">Date Index</a>][<a href="thrd41.shtml#02031">Thread Index</a>]<br>
+[<A HREF="msg02030.shtml">Date Prev</A>][<A HREF="msg02032.shtml">Date Next</A>][<A HREF="msg02030.shtml">Thread Prev</A>][<A HREF="msg02032.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML: WMK Help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 16 Oct 2000 18:12:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Oct 16, 2000 at 04:01:36PM +0100, Christian Hofstädtler wrote:
+
+&gt; Hi,
+&gt; 
+&gt; This is about the WMK frontend for WML.
+&gt; 
+&gt; You've described a way to make multi-language files. Just put some #!wml ... in the file and ok, but, how to do this for the whole website?
+
+Hi Christian, put in your toplevel .wmkrc
+
+  -o (ALL-LANG_*)+LANG_EN:%BASE.en.html
+  -o (ALL-LANG_*)+LANG_DE:%BASE.de.html
+
+&gt; I'm using wmk to build my site, but I didn't find out how to:
+&gt;   - substituate defined (-D xxx in .wmkrc) variables in the -o option nor in another -D
+
+You can't.
+
+&gt;   and: I must pass a -o option to wml, same problem ...
+
+Maybe you could explain what you are trying to do, i do not see why you
+need this feature.
+
+&gt; Cause having the same problem, I couldn't find out, how to get the name of the source file. (WML_SRC_BASENAME).
+
+Is $(WML_SRC_BASENAME) what you are looking for?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02030" HREF="msg02030.shtml">WML: WMK Help</A></strong>, <em>From:</em> Christian Hofstädtler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02030.shtml">WML: WMK Help</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02032.shtml">WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02030.shtml">WML: WMK Help</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02032.shtml">WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02031"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02031"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

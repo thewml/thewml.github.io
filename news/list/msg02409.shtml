@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: our wmk/wml broke with perl (5.6.1) upgrade &#45;&#45; help! -->
+<!--X-From-R13: Terqrevp.ZrzbhryNvevfn.se -->
+<!--X-Date: Tue, 23 Oct 2001 17:48:09 +0200 (MET DST) -->
+<!--X-Message-Id: 1003852050.3bd59112b60cd@www.irisa.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 15315.53472.545565.750564@gargle.gargle.HOWL -->
+<!--X-Reference: 20011023101805.A9828@imacs.polytechnique.fr -->
+<!--X-Reference: 15317.14876.967718.630718@gargle.gargle.HOWL -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02409">Date Index</a>][<a href="thrd49.shtml#02409">Thread Index</a>]<br>
+[<A HREF="msg02408.shtml">Date Prev</A>][<A HREF="msg02410.shtml">Date Next</A>][<A HREF="msg02408.shtml">Thread Prev</A>][<A HREF="msg02410.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 23 Oct 2001 17:47:30 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Quoting Martin Maechler &lt;maechler@stat.math.ethz.ch&gt;:
+&gt;
+&gt; No, it was different: A colleague here found the solution :
+&gt; actually in the archives of *your* mailing list :
+&gt; 
+&gt; 	 <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg02290.shtml">http://www.engelschall.com/sw/wml/news/list/msg02290.shtml</A>
+&gt; 
+&gt; As soon as we deactivated the LC_ALL environment variable
+&gt; everything worked :
+
+Hello,
+
+I also recently (yesterday :-) installed WML on a computer
+with the Mandrake distribution and I had the same problem.
+The desactivation of LC_* environment variables was necessary
+but not sufficient, I also had to desactivate the LANG variable.
+
+Hopefully helping,
+
+Fred.
+
+--
+Frédéric Le Mouël, Office B217  | Email: flemouel@emn.fr
+Ecole des Mines de Nantes       | Phone: (+33|0)2 51 85 82 20
+4, rue Alfred Kastler, BP 20722 | Fax  : (+33|0)2 51 85 82 49
+44307 Nantes Cedex 3, France    | Web  : <A  HREF="http://www.emn.fr">http://www.emn.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02410" HREF="msg02410.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02405" HREF="msg02405.shtml">our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+<li><strong><A NAME="02407" HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02408" HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02410.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02410.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02409"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02409"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

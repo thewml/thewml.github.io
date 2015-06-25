@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.4, Redhat 6.0 -->
+<!--X-From-R13: ubegvmNarhebovb.hce.pyh.rqh -->
+<!--X-Date: Wed, 20 Oct 1999 08:18:02 +0200 (MET DST) -->
+<!--X-Message-Id: 199910192104.XAA08410@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail22.shtml#01075">Date Index</a>][<a href="thrd22.shtml#01075">Thread Index</a>]<br>
+[<A HREF="msg01074.shtml">Date Prev</A>][<A HREF="msg01076.shtml">Date Next</A>][<A HREF="msg01070.shtml">Thread Prev</A>][<A HREF="msg01088.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.4, Redhat 6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 19 Oct 1999 23:04:07 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.4
+Operating System: Redhat 6.0
+
+Problem Description:
+| xtables can't nest
+| 
+| #use wml::fmt::xtable
+| 
+| &lt;xtable&gt;
+| (1,1)
+| test 1
+| (2,1)
+| &lt;xtable&gt;
+| (1,1)
+| test 2
+| (1,2)
+| test 3
+| &lt;/xtable
+| &lt;/xtable&gt;
+| 
+| Produces:
+| 
+| &lt;xtable&gt;
+| (1,1)
+| test 1
+| (2,1)
+| &lt;xtable&gt;
+| (1,1)
+| test 2
+| (1,2)
+| test 3
+| &lt;/xtable
+| &lt;/xtable&gt;
+| 
+| The wml_aux_wwwtable documentation says wwwtables can nest.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01088" HREF="msg01088.shtml">Re: [BUG REPORT] WML 1.7.4, Redhat 6.0</A></strong>, <em>From:</em> barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01074.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01076.shtml">[BUG REPORT] WML 1.7.4, Redhat linux 6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01070.shtml">Re: Suggestionen for man page addition</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01088.shtml">Re: [BUG REPORT] WML 1.7.4, Redhat 6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail22.shtml#01075"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd22.shtml#01075"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: our wmk/wml broke with perl (5.6.1) upgrade &#45;&#45; help! -->
+<!--X-From-R13: [negva [nrpuyre <znrpuyreNfgng.zngu.rgum.pu> -->
+<!--X-Date: Tue, 23 Oct 2001 11:37:15 +0200 (MET DST) -->
+<!--X-Message-Id: 15317.14876.967718.630718@gargle.gargle.HOWL -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 15315.53472.545565.750564@gargle.gargle.HOWL -->
+<!--X-Reference: 20011023101805.A9828@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02408">Date Index</a>][<a href="thrd49.shtml#02408">Thread Index</a>]<br>
+[<A HREF="msg02407.shtml">Date Prev</A>][<A HREF="msg02409.shtml">Date Next</A>][<A HREF="msg02407.shtml">Thread Prev</A>][<A HREF="msg02409.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Martin Maechler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Oct 2001 11:36:28 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt;&gt;&gt;&gt;&gt; "Denis" == Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+    Denis&gt; On Mon, Oct 22, 2001 at 09:55:12AM +0200, Martin Maechler wrote:
+    &gt;&gt; (as subject says). I have tried quite a few things, all unsuccessfully.
+    &gt;&gt; 
+    &gt;&gt; configure --prefix=....
+    &gt;&gt; make
+    &gt;&gt; make check
+    &gt;&gt; make install
+    &gt;&gt; 
+    &gt;&gt; all work fine. "make check" reports full success, but still
+    &gt;&gt; a simple "wmk" call in a directory where everything used to work, results in
+    &gt;&gt; 
+    &gt;&gt; /usr/local/app/wml/bin/wml -n -oLANG_VAR:einteilung.var '-o(ALL-LANG_*)+LANG_EN:einteilung.en.html' '-o(ALL-LANG_*)+LANG_DE:einteilung.de.html' einteilung.wml
+    &gt;&gt; ePerl:Error: Perl parsing error (interpreter rc=255)
+    &gt;&gt; 
+    &gt;&gt; ---- Contents of STDERR channel: ---------
+    &gt;&gt; DynaLoader object version 1.04 does not match $DynaLoader::VERSION 1 at /usr/local/lib/perl5/5.6.1/i686-linux/DynaLoader.pm line 100.
+    Denis&gt; [...]
+
+    Denis&gt; Hmmm, very strange.
+    Denis&gt; You could try
+    Denis&gt; ./configure --with-openworld
+    Denis&gt; but in any case I would like to fix this problem.
+    Denis&gt; I do not know where to look at, is it possible for you to make a tarball
+    Denis&gt; of the whole wml build tree after `make check' and put it online
+    Denis&gt; somewhere? Or alternatively send it to me by *private* mail?
+
+    Denis&gt; -- 
+    Denis&gt; Denis Barbier
+    Denis&gt; WML Maintainer
+
+No, it was different: A colleague here found the solution :
+actually in the archives of *your* mailing list :
+
+	 <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg02290.shtml">http://www.engelschall.com/sw/wml/news/list/msg02290.shtml</A>
+
+As soon as we deactivated the LC_ALL environment variable
+everything worked :
+
+
+  lynne{sfs}202&gt; printenv | grep LC
+  LC_ALL=de_CH
+
+  lynne{sfs}203&gt; unsetenv LC_ALL
+
+  lynne{sfs}204&gt; wmk
+
+  (and all was fine)
+
+Thanks for fixing this, or working around the perl problem if it's perl's
+fault..
+
+Martin Maechler &lt;maechler@stat.math.ethz.ch&gt;	<A  HREF="http://stat.ethz.ch/~maechler/">http://stat.ethz.ch/~maechler/</A>
+Seminar fuer Statistik, ETH-Zentrum  LEO D10	Leonhardstr. 27
+ETH (Federal Inst. Technology)	8092 Zurich	SWITZERLAND
+phone: x-41-1-632-3408		fax: ...-1228			&lt;&gt;&lt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02409" HREF="msg02409.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Frederic.Lemouel</li>
+<li><strong><A NAME="02415" HREF="msg02415.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02405" HREF="msg02405.shtml">our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+<li><strong><A NAME="02407" HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02409.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02407.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02409.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02408"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02408"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

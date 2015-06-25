@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG][RFC] WML 2.0.0, quotes and tags -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Tue, 23 May 2000 16:59:40 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0005231605240.22955&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000522211256.25343A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01599">Date Index</a>][<a href="thrd33.shtml#01599">Thread Index</a>]<br>
+[<A HREF="msg01598.shtml">Date Prev</A>][<A HREF="msg01600.shtml">Date Next</A>][<A HREF="msg01598.shtml">Thread Prev</A>][<A HREF="msg01597.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG][RFC] WML 2.0.0, quotes and tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 May 2000 16:31:32 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Denis! Hello List!
+
+On Mon, 22 May 2000, Denis Barbier wrote:
+&gt; &gt; This is shorter and needs only the implementation of an &lt;else&gt; tag (and
+&gt; &gt; I'd like to suggest an &lt;elsewhen&gt;, too)...
+&gt; Sounds great! I do not know whether it is doable (next time you could
+&gt; provide a patch too ;-))
+
+I made a look into the sources of mp4h and was very impressed :-) To
+provide a patch I'd have to understand lots of code which wasn't possible
+yet.
+
+&gt; I am quite conservative and this suggestion does not break previous
+&gt; files, it is IMO a very nice idea.
+&gt; If there is no objection, i'll try to implement it.
+
+:-) Would be fine!
+
+&gt; There could be some discussion whether the &lt;else&gt; clause is a single or
+&gt; complex tag.
+
+Single tag, because:
+
+&lt;when something&gt;
+lets dance
+&lt;else&gt;
+lets rock
+&lt;/else&gt;
+?!? WHAT TO PUT HERE ?!?
+&lt;/when&gt;
+
+The &lt;/when&gt; implicates the end of the else clause... 
+
+And I would like the &lt;elsewhen&gt; really because the &lt;var-case&gt;[1] tag seems
+to be that `complicate' like the &lt;if&gt; tag ;-) (and IMO has to be
+implemented also as simple tag for the same reasons as above)
+
+[1] &lt;var-case&gt; supports execution of multiple branches (rules) in one run,
+but doen't offer a default rule - A construcion of &lt;when&gt;&lt;elsewhen&gt;...
+&lt;else&gt;&lt;/when&gt; allows the execution of only one branch but offers a
+default rule - therefore the nomination of &lt;var-case&gt; is given as
+example of a tag which does similar things but not exact the same :-)
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01598" HREF="msg01598.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01598.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01600.shtml">WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01598.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01597.shtml">Re: [LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01599"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01599"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: defining tags -->
+<!--X-From-R13: Qnefgra Inegznaa <pjNvzntb&#45;ivin.qr> -->
+<!--X-Date: Sun, 23 Jan 2000 22:15:53 +0100 (MET) -->
+<!--X-Message-Id: 14475.27248.276346.615402@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01297">Date Index</a>][<a href="thrd27.shtml#01297">Thread Index</a>]<br>
+[<A HREF="msg01296.shtml">Date Prev</A>][<A HREF="msg01298.shtml">Date Next</A>][<A HREF="msg01354.shtml">Thread Prev</A>][<A HREF="msg01299.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>defining tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Wartmann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 23 Jan 2000 22:15:01 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+It´s me again...
+
+the problem with the multiple includeof files was a 
+#include "" instead #include ''.
+
+
+In the small news-files I want a simple tag similar to that:
+
+&lt;news 19.01.2000 www.dunbar.com "Python Doc Browser"&gt;
+
+This is easy with the documentation:
+
+&lt;define-tag news&gt;
+&lt;tr&gt;&lt;td bgcolor="#00FFFF" width="168"&gt;
+%0:&amp;nbsp; &lt;a href="<A  HREF="http://%1/">http://%1/</A>"&gt;%2&lt;/a&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/define-tag&gt;
+
+This renders a new cell into the news-table.
+
+This works but is not very self explaining, so I tried this:
+
+&lt;news date="19.01.2000" link="www.dunbar.com" text="Python Doc Browser"&gt;
+
+As I understand the documentation I came up with this:
+
+&lt;define-tag news2 date link text&gt;
+&lt;tr&gt;&lt;td bgcolor="#00FFFF" width="168"&gt;
+&lt;get-var date&gt;:&amp;nbsp; &lt;a href="http://&lt;get-var link&gt;/"&gt;&lt;get-var text&gt;&lt;/a&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/define-tag&gt;
+
+which doesn´t works quite as expected, a &lt;get-var date&gt; expands to
+date="19.01.2000" and not only "19.01.2000". So is it possible to
+define tags like the second?
+
+Thanks,
+Carsten.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01299" HREF="msg01299.shtml">Re: defining tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01296.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01298.shtml">Re: Questions...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01354.shtml">[HELP] New macro-processor for pass 2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01299.shtml">Re: defining tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01297"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01297"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

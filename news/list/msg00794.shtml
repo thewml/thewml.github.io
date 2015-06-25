@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: need help again.... for multilingual support -->
+<!--X-From-R13: Pehab Pbrggpure <oobrggNrez1.h&#45;fgenfot.se> -->
+<!--X-Date: Thu, 24 Jun 1999 12:07:06 +0200 (MET DST) -->
+<!--X-Message-Id: 19990624120341.G23238@erm1.u&#45;strasbg.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail16.shtml#00794">Date Index</a>][<a href="thrd17.shtml#00794">Thread Index</a>]<br>
+[<A HREF="msg00793.shtml">Date Prev</A>][<A HREF="msg00795.shtml">Date Next</A>][<A HREF="msg00801.shtml">Thread Prev</A>][<A HREF="msg00795.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>need help again.... for multilingual support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Bruno Boettcher &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 Jun 1999 12:03:41 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+sorry to be too stupid.... but i am stuck again....
+
+this time, i thought that it would be nice to harmonise my official web-page
+between the languages (was the primary goal why i installed wml...)
+
+followed the tutorial, and issued crap.... (could be seen at
+<A  HREF="http://erm1.u-strasbg.fr/~bboett/test/index.html.[en,de,fr,it">http://erm1.u-strasbg.fr/~bboett/test/index.html.[en,de,fr,it</A>])
+
+read the man, identifiyed some discrepancy between man and tutorial, changed
+to the syntax explained in the man....
+
+BTW a general remark for the tutorial, at least for sub-intellignece people
+like me in most cases the command line launching the wml process could be
+really important to know....
+
+
+now....
+
+the wml source is at <A  HREF="http://erm1.u-strasbg.fr/~bboett/test/index.wml">http://erm1.u-strasbg.fr/~bboett/test/index.wml</A>,
+
+when i launch wml index.wml it issued a big file with the language slices
+mostly removed (it seems to have a problem with the italian tag...) but the
+whole text in one issued on the stdout....
+
+trying to execute the file (ehm mybe i am not understanding the things
+correctly, but the first line seems to make the thing executable...) produces
+only a syntax error ./index.wml 
+./index.wml: line 2: syntax error near unexpected token `(ALL-LANG_*)'
+./index.wml: line 2: `               -o (ALL-LANG_*)+LANG_DE:index.html.de \'
+
+so i thought to having layd out the thing as described in the man, and i have
+not the faintest idea on whats going wrong again.... so if maybe some of you
+could help me out there again...
+
+-- 
+ciao bboett
+==============================================================
+bboett@earthling.net
+<A  HREF="http://erm6.u-strasbg.fr/~bboett">http://erm6.u-strasbg.fr/~bboett</A>
+===============================================================
+the total amount of intelligence on earth is constant.
+human population is growing....
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00795" HREF="msg00795.shtml">Re: need help again.... for multilingual support</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00796" HREF="msg00796.shtml">Re: need help again.... for multilingual support</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00793.shtml">Re: OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00795.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00801.shtml">Re: OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00795.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail16.shtml#00794"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00794"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

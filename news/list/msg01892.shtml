@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml&#45;2.0.2 on solaris -->
+<!--X-From-R13: "T. Vrvaevpuzrlre" <sevgm.urvaevpuzrlreNsreahav&#45;untra.qr> -->
+<!--X-Date: Mon, 14 Aug 2000 14:26:21 +0200 (MET DST) -->
+<!--X-Message-Id: 3997E564.6DD97DB2@fernuni&#45;hagen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01892">Date Index</a>][<a href="thrd38.shtml#01892">Thread Index</a>]<br>
+[<A HREF="msg01891.shtml">Date Prev</A>][<A HREF="msg01893.shtml">Date Next</A>][<A HREF="msg01891.shtml">Thread Prev</A>][<A HREF="msg01907.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml-2.0.2 on solaris</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;F. Heinrichmeyer&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 14 Aug 2000 14:26:12 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello i tried to install wml-2.0.2 on solaris (with perl-5.6):
+
+there was a silli problem with curses, so i left out iselect ...
+but this one is more serious:
+
+make[2]: Entering directory
+`/vu/vu-et/public/wml-2.0.2/wml_backend/p3_eperl'
+cc -O -fno-strict-aliasing -I/usr/local/include -D_LARGEFILE_SOURCE
+-D_FILE_OFFSET_BITS=64
+-I/usr/local/lib/perl5/5.6.0/sun4-solaris-multi/CORE -I. -c
+eperl_perl5.c
+eperl_perl5.c: In function `Perl5_XSInit':
+eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+eperl_perl5.c:58: (Each undeclared identifier is reported only once
+eperl_perl5.c:58: for each function it appears in.)
+eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+incompatible pointer type
+eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+eperl_perl5.c:70: `my_perl' undeclared (first use in this function)
+eperl_perl5.c: In function `Perl5_SetScalar':
+eperl_perl5.c:98: `my_perl' undeclared (first use in this function)
+
+Hmmm...
+
+-- 
+Fritz Heinrichmeyer <A  HREF="mailto:fritz.heinrichmeyer@fernuni-hagen.de">mailto:fritz.heinrichmeyer@fernuni-hagen.de</A>
+FernUniversitaet Hagen, LG ES, 58084 Hagen (Germany)
+tel:+49 2331/987-1166 fax:987-355 <A  HREF="http://www-es.fernuni-hagen.de/~jfh">http://www-es.fernuni-hagen.de/~jfh</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01907" HREF="msg01907.shtml">Re: wml-2.0.2 on solaris</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01891.shtml">useful snippets</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01893.shtml">mp4h strips \ from \&quot;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01891.shtml">useful snippets</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01907.shtml">Re: wml-2.0.2 on solaris</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01892"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01892"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

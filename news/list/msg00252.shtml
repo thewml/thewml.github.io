@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation failed -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Tue, 10 Nov 1998 13:56:51 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981110114524.4437A&#45;100000@hasecke.hasecke -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.02.9811080033080.14833&#45;100000@solar02.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00252">Date Index</a>][<a href="thrd6.shtml#00252">Thread Index</a>]<br>
+[<A HREF="msg00251.shtml">Date Prev</A>][<A HREF="msg00253.shtml">Date Next</A>][<A HREF="msg00243.shtml">Thread Prev</A>][<A HREF="msg00253.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation failed</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 10 Nov 1998 11:50:06 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 8 Nov 1998, Florian Hars wrote:
+
+&gt; Yes, you can. Just say "make install", it is the "mate test" part that is
+&gt; buggy, not perl or wml.
+
+Thanks for the encouragement, but: No, I can't. I installed it in /tmp and
+executed ./wml
+
+with this error:
+
+Getopt::Long version 2.13 required--this is only version 2.10 at ./wml line 52.
+BEGIN failed--compilation aborted at ./wml line 52.
+
+&lt;german&gt;
+Perlen vor die Säue!
+&lt;/german&gt;
+
+I think I have a serious problem with perl...
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Täglich tagesfrische Sudeleien
+<A  HREF="http://literatur.lake.de/in/sudelbuch">http://literatur.lake.de/in/sudelbuch</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00253" HREF="msg00253.shtml">Re: Installation failed</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00243" HREF="msg00243.shtml">Re: Installation failed</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00251.shtml">Re: SGML-DTD for WML?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00253.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00243.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00253.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00252"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00252"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

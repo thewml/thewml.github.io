@@ -1,0 +1,151 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 6 Jan 1998 17:20:26 +0100 (MET) -->
+<!--X-Message-Id: 199801061620.RAA27133@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1btxqnduj.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00021">Date Index</a>][<a href="thread.shtml#00021">Thread Index</a>]<br>
+[<A HREF="msg00020.shtml">Date Prev</A>][<A HREF="msg00022.shtml">Date Next</A>][<A HREF="msg00019.shtml">Thread Prev</A>][<A HREF="msg00022.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 17:20:24 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; I currently do the following:
+&gt; 
+&gt; &lt;define-container xx&gt;
+&gt; [xx:%body:xx]
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; and then in my *.wml files I use
+&gt; 
+&gt; &lt;en&gt;Welcome&lt;/en&gt;
+&gt; &lt;de&gt;Willkommen&lt;/de&gt;
+&gt; 
+&gt; I think especially for longer sections of text I would almost prefer
+&gt; an opening/closing-tag approach, I think this makes the input somewhat
+&gt; more readable.
+
+Ok, that's mostly the same my current &lt;lang:xx&gt; tag does except that &lt;lang:xx&gt;
+is a simple tag. Hmmm... seems we also need something between
+
+  &lt;lang:xx ...Text...&gt;
+
+and
+
+  &lt;lang:area&gt;
+  (xx) ...Text...
+  &lt;/lang:area&gt;
+
+Perhaps:
+
+  &lt;lang:xx:area&gt;
+  Text
+  &lt;/lang:xx:area&gt;
+
+And with an option for &lt;lang:new xx&gt; we can let the defined
+tagnames be shortened to what you used: &lt;xx&gt;...&lt;/xx&gt;
+
+How about this?
+
+&gt; Of course, I have no strong feelings about which pass does the actual
+&gt; substitution.
+&gt; 
+&gt; I also use multi-linguals inside other tags, for example for the
+&gt; hints-parameter in the &lt;url&gt; tag or also inside the &lt;img&gt; and &lt;page&gt;
+&gt; tags. I think it would be important to make sure that this can be
+&gt; done. I am not sure, but for that the ultimate substitution might have
+&gt; to be in the last pass of the translation.
+
+Thats the point why I really tried to avoid programming it with ePerl (Pass 3)
+because a lot of tags are programmed this way and nesting then is not
+possible.
+
+&gt; P.S.: I also noticed that in my approach I am having some difficulties
+&gt;       with spurious spaces being inserted into the html-code when
+&gt;       splitting the languages over several lines in the *.wml
+&gt;       file. Could I overcome this with the &lt;suck&gt; tag or are those
+&gt;       spaces introduced in pass 9? I guess I could just try ..., so
+&gt;       far I use backslashes at the end of the line (but those tend to
+&gt;       be forgotten ...)
+
+These spaces are not "introduced" in Pass 9, but I know what effect you mean:
+Because Pass 9 (Slice) only does what it is asked for, you usually lost
+linefeeds when these are outside the slices. One really has to make sure where
+to place the newlines. Can you give me your example, so we can fix it
+together?
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00022" HREF="msg00022.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00019" HREF="msg00019.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00020.shtml">Re: question wml 1.4.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00022.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00019.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00022.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00021"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00021"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

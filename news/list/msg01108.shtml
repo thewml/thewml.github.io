@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: An idea... -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Mon, 1 Nov 1999 17:55:36 +0100 (MET) -->
+<!--X-Message-Id: 14365.50650.892947.910163@medusa.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01108">Date Index</a>][<a href="thrd24.shtml#01108">Thread Index</a>]<br>
+[<A HREF="msg01107.shtml">Date Prev</A>][<A HREF="msg01109.shtml">Date Next</A>][<A HREF="msg01133.shtml">Thread Prev</A>][<A HREF="msg01110.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>An idea...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Nov 1999 08:54:50 -0800 (PST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+       Thinking about org charts, and the navbar.
+
+       Imagine defining an employees as:
+
+       &lt;employee 
+         orgchart=main
+         id=web1
+         title=webmaster 
+	 reportsto=president
+	 name="William Master"
+	 img=w_master.jpg
+	 phone="555-1214"
+	 email="webmaster"&gt;
+
+       &lt;employee
+         orgchart=main
+         id=web2
+         title="Member of Technical Staff"
+	 reportsto=web1
+	 name="Billy Master"
+	 img=b_master.jpg
+	 phone="555-1215"
+	 email="bill"&gt;
+
+	 ...
+
+       &lt;employee
+         orgchart=main
+         id=president
+         title="President"
+	 name="Fred Flintsone"
+	 img=f_flintsone.jpg
+	 phone="555-1201"
+	 email="fred"&gt;
+	 
+
+	 And then saying:
+
+	 &lt;page title="Company Orgchart"&gt;
+	 &lt;body&gt;
+	 &lt;orgchart main start=president&gt;
+	 &lt;/body&gt;
+	 &lt;/page&gt;	 
+
+
+and have it spit out a page that starts with the employee with id
+specified by start (in this case "president"), with direct reports
+listed underneath (likely using navbar:prolog and navbar:epilog type
+specifications so that folks can lay it out left to right, or
+vertical)
+
+Each direct report, if they have direct reports, has a link to a page
+that magically gets made which lists their direct reports.  Everyone's
+email has a &lt;a href="<A  HREF="mailto:email">mailto:email</A>"&gt;&lt;/a&gt; tag around it. And so on.
+
+Just an idea for those idle hackers out there...
+
+-- 
+    /\     Michael McNamara             &lt;mac@surefirev.com&gt;
+   /\//    SureFire Verification        408-374-4100 x 100
+  /\///\   &lt;<A  HREF="http://www.surefirev.com">http://www.surefirev.com</A>&gt;   408-374-4174 FAX
+ _\///\/        Formerly Silicon Sorcery
+  \//\/    Get my verilog emacs mode from
+    \/     &lt;<A  HREF="http://www.surefirev.com/verilog-mode.html">http://www.surefirev.com/verilog-mode.html</A>&gt;
+                                     
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01110" HREF="msg01110.shtml">Re: An idea...</A></strong>, <em>From:</em> Jim Hebert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01107.shtml">Re: Slice Warning/Newbie Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01109.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01133.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01110.shtml">Re: An idea...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01108"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01108"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

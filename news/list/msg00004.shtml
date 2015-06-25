@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Mirror available for the distribution tarballs -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 22 Dec 1997 11:09:06 +0100 (MET) -->
+<!--X-Message-Id: 199712221009.LAA02221@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00004">Date Index</a>][<a href="thread.shtml#00004">Thread Index</a>]<br>
+[<A HREF="msg00003.shtml">Date Prev</A>][<A HREF="msg00005.shtml">Date Next</A>][<A HREF="msg00003.shtml">Thread Prev</A>][<A HREF="msg00005.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Mirror available for the distribution tarballs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 22 Dec 1997 11:09:02 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now the first complete mirror of the FTP area 
+
+    <A  HREF="ftp://ftp.engelschall.com/sw/">ftp://ftp.engelschall.com/sw/</A>
+    
+(which contains the WML stuff in its subdir wml/) is available:
+
+    <A  HREF="ftp://ftp.hyperreal.com/software/engelschall/">ftp://ftp.hyperreal.com/software/engelschall/</A>
+
+This mirror is provided by courtesy of Brian Behlendorf &lt;brian@apache.org&gt;
+from the Apache Group. The mirror resides on the Hyperreal server (the same
+machine ftp.apache.org is on ;_) and is connected to the Internet with Organic
+Online's and Wired's T1 Internet link (1.544 Mb/s), so it provides really
+better service than ftp.engelschall.com which currently shares its Internet
+link with the one from sd&amp;m GmbH &amp; Co KG in Munich (only 128 Kb/s). The mirror
+is under direct control of myself, so will by in sync with ftp.engelschall.com
+all the time. Don't blame Brian or Organic Online for problems. Contact me
+instead.
+
+BTW: I really need a few more mirror locations, especially in Germany.
+     If someone of you can provide such a service, feel free to
+     establish a mirror now. Contact me for details.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00005" HREF="msg00005.shtml">Re: Mirror available for the distribution tarballs</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00003.shtml">ANNOUNCE: WML 1.4.7</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00005.shtml">Re: Mirror available for the distribution tarballs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00003.shtml">ANNOUNCE: WML 1.4.7</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00005.shtml">Re: Mirror available for the distribution tarballs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00004"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00004"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

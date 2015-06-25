@@ -1,0 +1,160 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: multi site problem -->
+<!--X-From-R13: Ineera Fhexny <jghexnyNpoh.rqh> -->
+<!--X-Date: Wed, 4 Jul 2001 12:50:16 +0200 (MET DST) -->
+<!--X-Message-Id: E15HkE9&#45;0001E5&#45;00@braindead.localdomain -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02277">Date Index</a>][<a href="thrd46.shtml#02277">Thread Index</a>]<br>
+[<A HREF="msg02276.shtml">Date Prev</A>][<A HREF="msg02278.shtml">Date Next</A>][<A HREF="msg02276.shtml">Thread Prev</A>][<A HREF="msg02278.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>multi site problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Warren Turkal &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 4 Jul 2001 06:49:48 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+a real dir tree for the example
+
+
+|-- .wmkrc
+|-- update_site_dirs   #should copy common files to sites
+|-- mknewsite          #makes new single level site
+|-- multi_site         #common stuff between sites
+|   |-- .wmkrc
+|   |-- content
+|   |   |-- .wmlrc
+|   |   |-- calc.wml
+|   |   |-- index.wml
+|   |   `-- location.wml
+|   |-- include
+|   |   |-- attribute_tags.inc
+|   |   |-- calc_tags.inc
+|   |   |-- footer.inc
+|   |   |-- header.inc
+|   |   |-- leftNavMenu.inc
+|   |   |-- template.inc
+|   |   `-- template_with_header_and_menu.inc
+|   |-- scripts
+|   |   |-- common_scripts.js
+|   |   `-- devel_scripts.js
+|   `-- style
+|       `-- master.css
+|-- odenton   #single level site
+|   |-- .wmlrc
+|   |-- calc.html
+|   |-- calc.wml
+|   |-- cgi-bin
+|   |-- contact.html
+|   |-- contact.wml
+|   |-- faq.html
+|   |-- faq.wml
+|   |-- features.html
+|   |-- features.wml
+|   |-- index.html
+|   |-- index.wml
+|   |-- location.html
+|   |-- location.wml
+|   |-- pics
+|   |   |-- lot of pics
+|   |-- scripts
+|   |   |-- common_scripts.js
+|   |   `-- devel_scripts.js
+|   |-- site_common.inc
+|   |-- staff.html
+|   |-- staff.wml
+|   `-- style
+|       `-- master.css
+|-- sentry            #multilevel site
+|   |-- churchland
+|   |   |-- calc.wml
+|   |   |-- index.wml
+|   |   `-- location.wml
+|   |-- newport-news
+|   |   |-- calc.wml
+|   |   |-- index.wml
+|   |   `-- location.wml
+|   |-- style
+|   |   `-- master.css
+|   |-- white-stone
+|   |   |-- calc.wml
+|   |   |-- index.wml
+|   |   `-- location.wml
+|   `-- williamsburg
+|       |-- calc.wml
+|       |-- index.wml
+|       `-- location.wml
+
+Problem: I need all pages to refer to the master.css in their tree.
+
+In the all site, master.css is in &lt;base&gt;/style/master.css .
+Right now the template that is included in all the .wml files looks 
+like the following.
+&lt;head&gt;
+    &lt;info style="meta"
+      keywords="{#KEYWORDS#}"
+      description="{#DESCRIPTION#}"/&gt;
+    &lt;link rel=stylesheet href="style/master.css" type="text/css"&gt; 
+    &lt;title&gt;{#PRETITLE#} {#SITEFULLNAME#} {#POSTTITLE#}&lt;/title&gt;
+&lt;/head&gt;
+
+The line with &lt;link&gt; is the important one.  How do I make all the files 
+refer to the master.css without forcing them to be in the root 
+directory of a site?
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02276.shtml">multi site problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02278.shtml">Web page margins</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02276.shtml">multi site problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02278.shtml">Web page margins</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02277"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02277"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

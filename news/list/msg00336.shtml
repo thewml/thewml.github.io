@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation problems with WML&#45;1.6.8 -->
+<!--X-From-R13: QVevfgvna @vff <puevfNgbcvgzntvp.qr> -->
+<!--X-Date: Sat, 16 Jan 1999 18:24:20 +0100 (CET) -->
+<!--X-Message-Id: 36A0AC92.1F8096CA@topitmagic.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36A06357.3A7CFBDA@topitmagic.de -->
+<!--X-Reference: 36A092A8.4AA32252@pfaffenhofen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00336">Date Index</a>][<a href="thrd7.shtml#00336">Thread Index</a>]<br>
+[<A HREF="msg00335.shtml">Date Prev</A>][<A HREF="msg00337.shtml">Date Next</A>][<A HREF="msg00335.shtml">Thread Prev</A>][<A HREF="msg00338.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation problems with WML-1.6.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: CHristian Niss &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 16 Jan 1999 16:13:22 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Christoph Rauch wrote:
+&gt; 
+&gt; I had exactly the same problem with gnome 0.99 and SuSE 5.3!
+&gt; i hacked through the config.status file a bit and came to no conclusion as
+&gt; i am not a hacker-guru.
+&gt; but i think it has something to do with automake or whatever was used to
+&gt; compile this stuff.
+&gt; have you ever upgraded or changed your automake or autoconf binaries?
+
+Hi again,
+
+I found the SuSE 5.0 distribution and installed the autoconf and
+automake-packages from the 5.0 CDs, but I get the same errors as 
+described in my first mail, even if I want to configure wml-1.6.7
+I get exactly the same errors ;-(((((((
+
+CHristian
+
+P.S: In which packet could I find setpgrp, since the missing of that
+program causes the configure script to halt.
+
+&gt; checking whether setpgrp takes no argument... configure: error: 
+&gt; cannot check setpgrp if cross compiling  
+-- 
+--------------------------------------------------------------------
+CHRISTIAN NISS     computer science student @ FAU Erlangen Nuremberg
+                        eMail: cnniss@cip.informatik.uni-erlangen.de 
+<A  HREF="http://www.topitmagic.de">http://www.topitmagic.de</A>  -  DAS Online-Magazin fuer Zauberkuenstler
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00332" HREF="msg00332.shtml">Installation problems with WML-1.6.8</A></strong>, <em>From:</em> CHristian Niss</li>
+<li><strong><A NAME="00334" HREF="msg00334.shtml">Re: Installation problems with WML-1.6.8</A></strong>, <em>From:</em> Christoph Rauch</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00335.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00337.shtml">Re: Question about pass 4 (m4)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00335.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00338.shtml">Re: Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00336"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00336"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

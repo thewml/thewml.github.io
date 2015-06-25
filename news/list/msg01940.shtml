@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Thu, 14 Sep 2000 13:49:37 +0200 (MET DST) -->
+<!--X-Message-Id: 200009141148.e8EBmrW15850@apo.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000914122559.L409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01940">Date Index</a>][<a href="thrd39.shtml#01940">Thread Index</a>]<br>
+[<A HREF="msg01939.shtml">Date Prev</A>][<A HREF="msg01941.shtml">Date Next</A>][<A HREF="msg01957.shtml">Thread Prev</A>][<A HREF="msg01941.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu 14 Sep 2000 13:47:44 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thu, 14 Sep 2000 12:25:59 +0200, Roland Rosenfeld wrote:
+
+&gt; On Thu, 14 Sep 2000, Denis Barbier wrote:
+&gt;&gt; Hi Axel, this is a feature documented in
+&gt; |    *) Add `summary' attribute in tables (03-Aug-2000):
+
+&gt; But is it really a feature or a bug?  I'm not completely sure, about
+&gt; this, because &lt;table summary=""&gt; isn't defined in HTML 3.2 but only in
+
+&gt; a table for non-visual output like speech or Braille).  But does
+&gt; summary="" make much sense?  What about adding this empty attribute
+&gt; only when DOCTYPE defines HTML 4?
+
+Yes! Please avoid such "dirty" tricks like adding unwanted
+options to tags per se. It may (or may not) break standards.
+
+Please allow that I add some "critisism" towards wml 2.0.x: I
+strongly suggest a split-up in a developers line and a
+stable production line like it is been done with linux.
+
+We still keep our hands away from wml 2.0.x since I read too
+many times about bugs and problems such as the things above.
+
+If you like to see wml as a professional web-meta-language
+you have to make sure, that it is consistent in its use.
+
+I suggest that you skip wml 2.0. name it 2.1 and release
+the really stable and tested(!) version as 2.2.
+Please consider that testing nowadays uses around a 3rd of
+the time of the whole progress. You cannot almost skip it and
+do it like Microsoft (or Intel lately) and have the enduser
+test the results. It bothers the producer as well because
+of all the patches he has to take care of instead of
+developing further.
+
+Still wml is _great_ software and I don't want to miss it.
+I use it every day.
+
+Just my two cents
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01941" HREF="msg01941.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="01949" HREF="msg01949.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01938" HREF="msg01938.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01939.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01941.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01957.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01941.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01940"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01940"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

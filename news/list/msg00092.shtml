@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.0 -->
+<!--X-From-R13: Hvbery O@UVSZ <inatNryl.yrnqre.eb> -->
+<!--X-Date: Thu, 12 Feb 1998 12:50:58 +0100 (MET) -->
+<!--X-Message-Id: 19980212095452.23521@zeus.advatech.ro -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980210145036.58261@zeus.advatech.ro -->
+<!--X-Reference: 199802101829.TAA26784@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00092">Date Index</a>][<a href="thrd2.shtml#00092">Thread Index</a>]<br>
+[<A HREF="msg00091.shtml">Date Prev</A>][<A HREF="msg00093.shtml">Date Next</A>][<A HREF="msg00087.shtml">Thread Prev</A>][<A HREF="msg00086.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Viorel ANGHEL &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 12 Feb 1998 09:54:52 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Feb 10, 1998 at 07:29:52PM +0100, Ralf S. Engelschall wrote:
+&gt; Hello vang@ely.leader.ro, in a previous mail you wrote:
+&gt; 
+&gt; &gt; &gt; &gt; Running WML Test Suite (still incomplete):
+&gt; &gt; &gt; &gt; t/01-wml............** IPP:Error: Bad argument to option ':
+&gt; &gt; &gt; &gt; WML_GEN_REALNAME=
+
+...
+
+&gt; 
+&gt; Ok, the particular problem you have is that the WML_GEN_REALNAME variable
+&gt; couldn't we determined correctly by the "wml" frontend.  This is your name
+&gt; which should be available through ``(getpwuid($&lt;)){6]'' in Perl. Perhaps you
+&gt; are using NIS, AFS or some other mechanism which leads to no result here.  As
+&gt; a workaround you can apply the following patch to wml_frontend/wml.src.  It
+&gt; makes sure that these variables at least hold some content.
+&gt; 
+...
+
+Err, thanks and sorry for bothering you with this stupid problem. Once i
+understanded what is WML_GEN_REALNAME, i realised what was the
+problem:
+(again screenshot ;-)
+	
+	[vang@zeus]:~ $ chfn
+	Changing finger information for vang.
+	Password: 
+	Name []: 
+
+My name was not set in /etc/passwd (because i reinstalled recently the 
+operating system...).
+
+Thanks and sorry again, next time i will RTFM.
+
+---
+Viorel ANGHEL &lt;vang@leader.ro&gt;                "World domination. Fast!"
+<A  HREF="http://www.pub.ro/~vang/">http://www.pub.ro/~vang/</A>                          (Linus Torvalds)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00085" HREF="msg00085.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> vang</li>
+<li><strong><A NAME="00087" HREF="msg00087.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00091.shtml">Re: pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00093.shtml">web site troubles?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00087.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00086.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00092"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00092"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

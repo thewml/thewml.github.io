@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: trouble installing wml -->
+<!--X-From-R13: wrss pbirl <wrss.pbirlNcbobk.pbz> -->
+<!--X-Date: Sun, 9 May 1999 19:19:21 +0200 (MET DST) -->
+<!--X-Message-Id: 14133.49802.667070.212201@plaything.smart.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00639">Date Index</a>][<a href="thrd14.shtml#00639">Thread Index</a>]<br>
+[<A HREF="msg00638.shtml">Date Prev</A>][<A HREF="msg00640.shtml">Date Next</A>][<A HREF="msg00637.shtml">Thread Prev</A>][<A HREF="msg00642.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: jeff covey &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun,  9 May 1999 13:19:12 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hey there!
+
+i wanted to try wml, but i can't seem to get it installed.  i have a
+redhat 5.2 system with perl 5.005_02.  i've tried both of the rpms at:
+
+<A  HREF="http://www.rpmfind.net/linux/RPM/wml.html">http://www.rpmfind.net/linux/RPM/wml.html</A>
+
+, but i get this when i run wml:
+
+---------------------------------------------------------------------
+Can't load '/usr/lib/wml/perl/lib/site_perl/i386-linux/auto/IO/IO.so'
+for module IO:
+/usr/lib/wml/perl/lib/site_perl/i386-linux/auto/IO/IO.so: undefined
+symbol: Perl_markstack_ptr at
+/usr/lib/perl5/5.00502/i386-linux-thread/DynaLoader.pm line 168.
+
+ at /usr/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241
+BEGIN failed--compilation aborted at
+/usr/lib/wml/perl/lib/site_perl/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at
+/usr/lib/wml/perl/lib/site_perl/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at
+/usr/lib/wml/perl/lib/site_perl/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /usr/bin/wml line 55.
+---------------------------------------------------------------------
+
+i've tried compiling from source, but at the "make test" stage, wml
+complains that it can't find Term/ReadKey.pm.
+
+any suggestions?
+
+thanks,
+
+-- 
+|----------------------------------------------------------------------------|
+| jeff covey jeff.covey@pobox.com <A  HREF="http://pobox.com/~jeff.covey/">http://pobox.com/~jeff.covey/</A> 410-669-4926 |
+|----------------------------------------------------------------------------|
+|america is the only place i know where even the poor people are overweight. |
+|                                                             -- john waters |
+|----------------------------------------------------------------------------|
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00642" HREF="msg00642.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00663" HREF="msg00663.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00638.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00640.shtml">Bug in wmk?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00637.shtml">Re: It's time...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00642.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00639"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00639"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

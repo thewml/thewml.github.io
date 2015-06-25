@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: mp4h warning in 2.0.8 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 6 Nov 2001 12:44:23 +0100 (MET) -->
+<!--X-Message-Id: 20011106125438.A26030@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 3BE7A9D2.ECB3115B@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02431">Date Index</a>][<a href="thrd49.shtml#02431">Thread Index</a>]<br>
+[<A HREF="msg02430.shtml">Date Prev</A>][<A HREF="msg02432.shtml">Date Next</A>][<A HREF="msg02429.shtml">Thread Prev</A>][<A HREF="msg02432.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: mp4h warning in 2.0.8</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 6 Nov 2001 12:54:39 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Nov 06, 2001 at 10:13:54AM +0100, Werner Heuser wrote:
+&gt; Hi,
+&gt; 
+&gt; when using new WML 2.0.8 I get this warning:
+&gt; 
+&gt; wml -DTEMPLATE=template_li.wml -O2 -o
+&gt; /dos/d/home/html_public/howtos.html howtos.wml
+&gt; /usr/lib/wml/exec/wml_p2_mp4h: WARNING:howtos.wml:0: variable stack not
+&gt; empty, it means &lt;preserve&gt; pushed more items than &lt;restore&gt; popped
+&gt; 
+&gt; Finally I found out it is caused by:
+&gt; 
+&gt; &lt;ul&gt;
+&gt; #use wml::std::toc style=ul
+&gt; &lt;define-tag toc_section endtag=required whitespace=delete&gt;
+&gt; &lt;when &lt;eq %0 2&gt;&gt;
+&gt; %body
+&gt; &lt;/when&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; {:
+&gt; [[s/\n\n+/\n/g]]
+&gt; [[s/&lt;strong&gt;//g]]
+&gt; [[s/&lt;\/strong&gt;//g]]
+&gt; 
+&gt; [[s/&lt;a href/&lt;li&gt;&lt;a href/g]]
+&gt; [[s/&lt;\/a&gt;/&lt;\/a&gt;&lt;\/li&gt;/g]]
+&gt; &lt;toc&gt;
+&gt; :}
+&gt; &lt;/ul&gt;
+&gt; 
+&gt; This construct (programmed with help from Denis) builds a toc
+&gt; from &lt;h2&gt; tags only. It worked without warning in 2.0.7. I have
+&gt; looked up the WML source toc.wml, to solve the problem, but
+&gt; this is to much for me. The generated HTML code works well,
+&gt; so it's not a problem for me. But it may be of interest anyway.
+
+Good catch, there was indeed a bug in wml::std::toc, which is there
+for a long time. A fix is attached.
+This extra check in wml_p2_mp4h seems to do its job, it's nice.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+Index: toc.src
+===================================================================
+RCS file: /home/barbier/cvsdepot/wml/wml_include/std/toc.src,v
+retrieving revision 1.16
+diff -u -r1.16 toc.src
+--- toc.src	2001/10/28 21:25:32	1.16
++++ toc.src	2001/11/06 11:48:35
+@@ -114,11 +114,11 @@
+ =LT=a href=\"#ToC=LT=get-var __TOCCNT/&gt;\"&gt;&lt;strong&gt;\
+ =LT=or =LT=get-var alt/&gt; %body/&gt;\
+ &lt;/strong&gt;&lt;/a&gt;\
+-=LT=restore alt/&gt;\
+ =LT=/toc_section&gt;\
+ &lt;get-var toc_eol/&gt;
+ :#ToC#}\
+ =LT=increment __TOCCNT/&gt;\
++=LT=restore alt/&gt;\
+ =LT=/define-tag&gt;\
+ "
+         "=LT=" "&lt;"
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02432" HREF="msg02432.shtml">Re: mp4h warning in 2.0.8</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02429" HREF="msg02429.shtml">mp4h warning in 2.0.8</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02430.shtml">Re: img-dimensions in navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02432.shtml">Re: mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02429.shtml">mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02432.shtml">Re: mp4h warning in 2.0.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02431"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02431"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

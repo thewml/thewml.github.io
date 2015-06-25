@@ -1,0 +1,161 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 6 Sep 1999 11:14:07 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990906105947.16057B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199909060032.JAA24073@nn.iij4u.or.jp -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00933">Date Index</a>][<a href="thrd20.shtml#00933">Thread Index</a>]<br>
+[<A HREF="msg00932.shtml">Date Prev</A>][<A HREF="msg00934.shtml">Date Next</A>][<A HREF="msg00931.shtml">Thread Prev</A>][<A HREF="msg00937.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 6 Sep 1999 11:08:34 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 6 Sep 1999, Nobuyuki Tsuchimura wrote:
+
+&gt;   Hi,
+&gt; I'll write detail about my own bug report.
+
+Hi, thanx for detailed informations, it helps solving problems ;-)
+
+&gt;   Then, I found a little trouble.
+&gt; Macro __FILE__ does not work as described in manual wml_p1_ipp(1).
+&gt; It is replaced by empty string.
+&gt; It works well ONLY at the first line of the file.
+
+Not really. It works before any file inclusion, due to a problem with
+variable scope. The patch below fixes this problem
+
+[...]
+&gt;   I think &lt;__FILE__&gt; is better.
+
+WML defines the WML_SRC_FILENAME variable. So you have to type
+  &lt;get-var WML_SRC_FILENAME&gt;
+
+Thanx for this bug report.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+--- wml_backend/p1_ipp/ipp.src	1999/08/28 20:18:03	1.19
++++ wml_backend/p1_ipp/ipp.src	1999/09/06 09:05:35
+@@ -251,7 +251,7 @@
+ 
+ sub ProcessFile {
+     my ($mode, $delimiter, $file, $level, $noid, %arg) = @_;
+-    my ($in, $found, $line, $type, %argO, $out, $store);
++    my ($in, $found, $line, $incfile, $type, %argO, $out, $store);
+ 
+     #
+     #   first check whether this is a filename pattern in which case
+@@ -381,30 +381,30 @@
+         #   ``#include'', ``#use'' and ``#depends'' directives
+         #
+ 
+-        if (($cmd, $file, $args) = ($l =~ m/^#(use|include|depends)\s+(\S+)(.*)$/)) {
++        if (($cmd, $incfile, $args) = ($l =~ m/^#(use|include|depends)\s+(\S+)(.*)$/)) {
+             #   set arguments
+             %argO = %arg;
+             &amp;setargs(\%arg, $args);
+ 
+             #   do possible argument mapping
+-            $file = &amp;mapfile($file);
++            $incfile = &amp;mapfile($incfile);
+ 
+             #   determine raw filename and type
+-            if ($file =~ m|^(\S+?)::(\S+)$|) {
++            if ($incfile =~ m|^(\S+?)::(\S+)$|) {
+                 $type = '&lt;';
+-                $file = "$2.$1";
+-                $file =~ s|::|/|g;
++                $incfile = "$2.$1";
++                $incfile =~ s|::|/|g;
+             }
+-            elsif ($file =~ m|^(['"&lt;])([^'"&gt;]+)['"&gt;]$|) {
++            elsif ($incfile =~ m|^(['"&lt;])([^'"&gt;]+)['"&gt;]$|) {
+                 $type = $1;
+-                $file = $2;
++                $incfile = $2;
+             }
+             else {
+-                &amp;error("Unknown file-argument syntax: ``$file''");
++                &amp;error("Unknown file-argument syntax: ``$incfile''");
+             }
+ 
+             #   now recurse down
+-            $out .= &amp;ProcessFile($cmd, $type, $file, $level+1, 0, %arg);
++            $out .= &amp;ProcessFile($cmd, $type, $incfile, $level+1, 0, %arg);
+ 
+             #   reset arguments
+             %arg = %argO;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00937" HREF="msg00937.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00931" HREF="msg00931.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Nobuyuki Tsuchimura</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00932.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00934.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00931.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00937.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00933"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00933"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

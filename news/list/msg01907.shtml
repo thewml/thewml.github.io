@@ -1,0 +1,274 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml&#45;2.0.2 on solaris -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 27 Aug 2000 02:09:43 +0200 (MET DST) -->
+<!--X-Message-Id: 20000827021250.B20945@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 3997E564.6DD97DB2@fernuni&#45;hagen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01907">Date Index</a>][<a href="thrd38.shtml#01907">Thread Index</a>]<br>
+[<A HREF="msg01906.shtml">Date Prev</A>][<A HREF="msg01908.shtml">Date Next</A>][<A HREF="msg01892.shtml">Thread Prev</A>][<A HREF="msg01893.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml-2.0.2 on solaris</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 27 Aug 2000 02:12:50 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Aug 14, 2000 at 02:26:12PM +0200, F. Heinrichmeyer wrote:
+
+&gt; Hello i tried to install wml-2.0.2 on solaris (with perl-5.6):
+&gt; 
+&gt; there was a silli problem with curses, so i left out iselect ...
+&gt; but this one is more serious:
+&gt; 
+&gt; make[2]: Entering directory
+&gt; `/vu/vu-et/public/wml-2.0.2/wml_backend/p3_eperl'
+&gt; cc -O -fno-strict-aliasing -I/usr/local/include -D_LARGEFILE_SOURCE
+&gt; -D_FILE_OFFSET_BITS=64
+&gt; -I/usr/local/lib/perl5/5.6.0/sun4-solaris-multi/CORE -I. -c
+&gt; eperl_perl5.c
+&gt; eperl_perl5.c: In function `Perl5_XSInit':
+&gt; eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+&gt; eperl_perl5.c:58: (Each undeclared identifier is reported only once
+&gt; eperl_perl5.c:58: for each function it appears in.)
+&gt; eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+&gt; incompatible pointer type
+&gt; eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+&gt; eperl_perl5.c:70: `my_perl' undeclared (first use in this function)
+&gt; eperl_perl5.c: In function `Perl5_SetScalar':
+&gt; eperl_perl5.c:98: `my_perl' undeclared (first use in this function)
+&gt; 
+&gt; Hmmm...
+
+Perl threads have a very changing nature, and it is very hard to write
+portable code. I wrote this patch weeks ago, but it has never been
+incorporated, because i am not sure it won't break compilations with
+older Perl versions.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+--- ORIG/wml_backend/p3_eperl/eperl_main.c	Sun Jul 30 01:34:53 2000
++++ NEW/wml_backend/p3_eperl/eperl_main.c	Wed Jul 26 00:13:14 2000
+@@ -1056,9 +1056,6 @@
+     perl_construct(my_perl); 
+     /* perl_destruct_level = 1; */
+ 
+-    /*  initialise the Perl Locale environment  */
+-    perl_init_i18nl10n(1); /* Macro defined in eperl_perl5.h */
+-
+     /*  create command line...  */
+     myargc = 0;
+     /*  - program name and possible -T -w options */
+@@ -1126,10 +1123,10 @@
+     }
+ 
+     /*  Set the previously remembered Perl 5 scalars (option -d) */
+-    Perl5_SetRememberedScalars();
++    Perl5_SetRememberedScalars(aTHX);
+ 
+     /*  Force unbuffered I/O */
+-    Perl5_ForceUnbufferedStdout();
++    Perl5_ForceUnbufferedStdout(aTHX);
+ 
+     /*  NOW IT IS TIME to evaluate/execute the script!!! */
+     rc = perl_run(my_perl);
+--- ORIG/wml_backend/p3_eperl/eperl_perl5.c	Sun Jul 30 01:34:53 2000
++++ NEW/wml_backend/p3_eperl/eperl_perl5.c	Tue Jul 25 23:45:55 2000
+@@ -41,14 +41,14 @@
+ 
+ #ifdef HAVE_PERL_DYNALOADER
+ 
+-extern void boot_DynaLoader _((CV* cv));
++extern void boot_DynaLoader _((pTHX_ CV* cv));
+ 
+ /*
+ **
+ **  the Perl XS init function for dynamic library loading
+ **
+ */
+-void Perl5_XSInit(void)
++void Perl5_XSInit(pTHX)
+ {
+    char *file = __FILE__;
+    /* dXSUB_SYS; */
+@@ -64,7 +64,7 @@
+ **  Force Perl to use unbuffered I/O
+ **
+ */
+-void Perl5_ForceUnbufferedStdout(void)
++void Perl5_ForceUnbufferedStdout(pTHX)
+ {
+     dTHR;
+     IoFLAGS(GvIOp(PL_defoutgv)) |= IOf_FLUSH; /* $|=1 */
+@@ -92,13 +92,13 @@
+ **  sets a Perl scalar variable
+ **
+ */
+-void Perl5_SetScalar(char *pname, char *vname, char *vvalue)
++void Perl5_SetScalar(pTHX_ char *pname, char *vname, char *vvalue)
+ {
+     dTHR;
+     ENTER;
+     save_hptr(&amp;PL_curstash); 
+     PL_curstash = gv_stashpv(pname, TRUE);
+-    sv_setpv(perl_get_sv(vname, TRUE), vvalue);
++    sv_setpv(perl_get_sv(aTHX_ vname, TRUE), vvalue);
+     LEAVE;
+     return;
+ }
+@@ -129,7 +129,7 @@
+     return;
+ }
+ 
+-void Perl5_SetRememberedScalars(void) 
++void Perl5_SetRememberedScalars(pTHX) 
+ {
+     char ca[1024];
+     char *cp;
+@@ -139,7 +139,7 @@
+         strcpy(ca, Perl5_RememberedScalars[i]);
+         cp = strchr(ca, '=');
+         *cp++ = '\0';
+-        Perl5_SetScalar("main", ca, cp);
++        Perl5_SetScalar(aTHX_ "main", ca, cp);
+     }
+ }
+ 
+diff -ur ../../src/wml_backend/p3_eperl/eperl_perl5.h ./eperl_perl5.h
+--- ORIG/wml_backend/p3_eperl/eperl_perl5.h	Sun Jul 30 01:34:53 2000
++++ NEW/wml_backend/p3_eperl/eperl_perl5.h	Tue Jul 25 23:27:13 2000
+@@ -42,6 +42,24 @@
+ #include &lt;perl.h&gt;                 
+ #include "ppport.h"
+ 
++#ifndef aTHX
++#  define aTHX
++#  define aTHX_
++#  define pTHX void
++#  define pTHX_
++#endif
++
++/* eperl_perl5.c */
++/*  These prototypes can no longer be included in eperl_proto.h because
++    pTHX argument has been introduced in Perl 5.6.0  */
++extern void Perl5_XSInit(pTHX);
++extern void Perl5_ForceUnbufferedStdout(pTHX);
++extern char **Perl5_SetEnvVar(char **env, char *str);
++extern void Perl5_SetScalar(pTHX_ char *pname, char *vname, char *vvalue);
++extern char *Perl5_RememberedScalars[1024];
++extern void Perl5_RememberScalar(char *str);
++extern void Perl5_SetRememberedScalars(pTHX);
++
+ 
+ /*  try to adjust for PerlIO handling  */
+ #ifdef USE_PERLIO
+@@ -65,8 +83,6 @@
+ #ifndef WITH_THR
+ #define PL_defoutgv defoutgv
+ #endif
+-
+-#include "ppport.h"
+ 
+ #endif /* EPERL_PERL5_H */
+ /*EOF*/
+--- ORIG/wml_backend/p3_eperl/eperl_proto.h	Sun Jul 30 01:34:53 2000
++++ NEW/wml_backend/p3_eperl/eperl_proto.h	Tue Jul 25 22:33:33 2000
+@@ -57,15 +57,6 @@
+ extern struct option options[];
+ extern int main(int argc, char **argv, char **env);
+ 
+-/* eperl_perl5.c */
+-extern void Perl5_XSInit(void);
+-extern void Perl5_ForceUnbufferedStdout(void);
+-extern char **Perl5_SetEnvVar(char **env, char *str);
+-extern void Perl5_SetScalar(char *pname, char *vname, char *vvalue);
+-extern char *Perl5_RememberedScalars[1024];
+-extern void Perl5_RememberScalar(char *str);
+-extern void Perl5_SetRememberedScalars(void);
+-
+ /* eperl_parse.c */
+ extern char *ePerl_begin_delimiter;
+ extern char *ePerl_end_delimiter;
+--- ORIG/wml_backend/p3_eperl/ppport.h	Sun Jul 30 01:34:53 2000
++++ NEW/wml_backend/p3_eperl/ppport.h	Tue Jul 25 23:45:30 2000
+@@ -38,9 +38,9 @@
+ 
+ /* To verify whether ppport.h is needed for your module, and whether any
+    special defines should be used, ppport.h can be run through Perl to check
+-   your source code. Simply say:
++   your source code. Simply say: (quotes are to preserve C comments)
+    
+-   	perl -x ppport.h *.c *.h *.xs foo/*.c [etc]
++   	perl -x ppport.h *.c *.h *.xs foo"/"*.c [etc]
+    
+    The result will be a list of patches suggesting changes that should at
+    least be acceptable, if not necessarily the most efficient solution, or a
+@@ -158,7 +158,7 @@
+ #define PERL_BCDVERSION ((PERL_REVISION * 0x1000000L) + (PERL_VERSION * 0x1000L) + PERL_SUBVERSION)
+ 
+ #ifndef ERRSV
+-#	define ERRSV perl_get_sv("@",FALSE)
++#	define ERRSV perl_get_sv(aTHX_ "@",FALSE)
+ #endif
+ 
+ #if (PERL_VERSION &lt; 4) || ((PERL_VERSION == 4) &amp;&amp; (PERL_SUBVERSION &lt;= 5))
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01892" HREF="msg01892.shtml">wml-2.0.2 on solaris</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01906.shtml">Re: slice 1.3.6 hangs on a file</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01908.shtml">[BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01892.shtml">wml-2.0.2 on solaris</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01893.shtml">mp4h strips \ from \&quot;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01907"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01907"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

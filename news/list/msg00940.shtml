@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to write a paper about WML in WML -->
+<!--X-From-R13: Uresevrq Thpuf <nysvrNvaabprag.pbz> -->
+<!--X-Date: Tue, 7 Sep 1999 08:42:46 +0200 (MET DST) -->
+<!--X-Message-Id: 19990907084246.B22649@skater.htu.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1r9kb7lgk.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail19.shtml#00940">Date Index</a>][<a href="thrd20.shtml#00940">Thread Index</a>]<br>
+[<A HREF="msg00939.shtml">Date Prev</A>][<A HREF="msg00941.shtml">Date Next</A>][<A HREF="msg00938.shtml">Thread Prev</A>][<A HREF="msg00944.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to write a paper about WML in WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Gerfried Fuchs &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 7 Sep 1999 08:42:46 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 06 Sep 1999, Fritz Zaucker &lt;zaucker@ee.ethz.ch&gt; wrote:
+&gt; Anybody have some ideas/coments?
+
+ How about writing a short eperl-code that reads in your file and
+substitutes the &amp;, &lt; and &gt; to &amp;amp;, &amp;lt; and &amp;gt; and prints that? And
+not to forget to substitute \n with &lt;br&gt;. I think that should be
+suitable enough to be practicable :)
+
+ Just my idea ;)  I thought about something similar, too. Well, I
+thought about a cgi-script that also does some parsing and prints out a
+polished up version of the wml-file (some syntax highlighting and such
+stuff...). Well, I only haven't found the time for that yet ;-/
+
+ So long, and I hope that works for you!
+Alfie
+-- 
+"Sometimes I simply feel that the whole world is a cigarette and I'm
+the only ashtray."
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00938" HREF="msg00938.shtml">How to write a paper about WML in WML</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00939.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00941.shtml">Mime-Types and WML source files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00938.shtml">How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00944.shtml">[LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail19.shtml#00940"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00940"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

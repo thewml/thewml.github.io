@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: your mail -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 27 Apr 2001 10:29:01 +0200 (MET DST) -->
+<!--X-Message-Id: 20010427101140.A26519@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010427010716.B24971@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.33.0104270935150.17235&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02214">Date Index</a>][<a href="thrd10.shtml#02214">Thread Index</a>]<br>
+[<A HREF="msg02213.shtml">Date Prev</A>][<A HREF="msg02215.shtml">Date Next</A>][<A HREF="msg02213.shtml">Thread Prev</A>][<A HREF="msg02364.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: your mail</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 27 Apr 2001 10:11:40 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Apr 27, 2001 at 09:36:45AM +0200, Fritz Zaucker wrote:
+&gt; Hi Denis,
+&gt; 
+&gt; I just stumbled over this when somebody mentioned WML 2.1 and I had a
+&gt; look at the website to see if I missed a new release.
+&gt; 
+&gt; This is just trivialities, but I thought I'll send them anyway.
+
+Sure, i will discuss some issues later.
+Concerning the versioning scheme, next version will be WML 2.0.7,
+snapshots are numbered as before, and the new 2.1aN series is somewhere
+between these ones, it contains some experimental code which may not be
+put into stable releases, and is more reliable than snapshots because
+it passed `make test' stage and can successfully rebuild the WML
+website.
+When it is time, stable releases are 2.1.x (so there is no even/odd
+distinction).
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02211" HREF="msg02211.shtml">Re: your mail</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02213" HREF="msg02213.shtml">Re: [wml] Re: your mail</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02213.shtml">Re: [wml] Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02215.shtml">Re: parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02213.shtml">Re: [wml] Re: your mail</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02364.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02214"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#02214"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

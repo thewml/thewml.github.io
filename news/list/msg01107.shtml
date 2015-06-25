@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Slice Warning/Newbie Question -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 1 Nov 1999 17:05:11 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991101162834.1407A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 381B9050.34FDF6A0@his.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01107">Date Index</a>][<a href="thrd23.shtml#01107">Thread Index</a>]<br>
+[<A HREF="msg01106.shtml">Date Prev</A>][<A HREF="msg01108.shtml">Date Next</A>][<A HREF="msg01104.shtml">Thread Prev</A>][<A HREF="msg01105.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Slice Warning/Newbie Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Nov 1999 17:04:30 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 30 Oct 1999, Kevin Kitts wrote:
+
+&gt; Hello,
+
+Hi,
+
+&gt; I hope that I won't draw too many flames for a newbie question.
+&gt; I've just downloaded wml and I'm trying to recreate the example listed
+&gt; in the navbar section of the docuementation (in wmd). The code listed
+&gt; below gives me the following error:
+&gt; 
+&gt; **Slice Warning: No such Slice 'All'
+
+This message means there is no output at all.
+
+You misunderstood the example listed in your post, the files nb.wml,
+.wmlrc, foo.wml and bar.wml are all parts of this example.
+The navbar is defined in nb.wml with 3 buttons named ``foo'', ``bar''
+and ``baz''.  Files foo.wml and bar.wml are examples of how to include
+this navbar in your documents. Only foo.wml and bar.wml have to be
+processed through wml, other files are included when processing.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01104" HREF="msg01104.shtml">Slice Warning/Newbie Question</A></strong>, <em>From:</em> Kevin Kitts</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01106.shtml">using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01108.shtml">An idea...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01104.shtml">Slice Warning/Newbie Question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01105.shtml">[BUG REPORT] WML 1.7.41/www.e, Linux (RedHat 5.2 Kernel 2.034)ý´??*´</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01107"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01107"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

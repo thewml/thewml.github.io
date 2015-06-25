@@ -1,0 +1,91 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] php + wml -->
+<!--X-From-R13: "Brge Oaqerlri" <crgeNknanqh.eh> -->
+<!--X-Date: Tue, 19 Feb 2002 11:38:51 +0100 (MET) -->
+<!--X-Message-Id: 015601c1b931$ec3fe130$3256e6c3@xanadu.ru -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020218181649.GA24369@jonas.server0.de -->
+<!--X-Reference: Pine.GSO.4.43.0202181846100.26365&#45;100000@nova.ee.ethz.ch -->
+<!--X-Reference: 20020219083356.0e4e8a8f.fritz.heinrichmeyer@fernuni&#45;hagen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02522">Date Index</a>][<a href="thrd51.shtml#02522">Thread Index</a>]<br>
+[<A HREF="msg02521.shtml">Date Prev</A>][<A HREF="msg02523.shtml">Date Next</A>][<A HREF="msg02521.shtml">Thread Prev</A>][<A HREF="msg02523.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] php + wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Petr Andreyev&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 19 Feb 2002 13:41:00 +0300</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; One possible problem:
+&gt; 
+&gt; Your php code must produce proper html and quote all parameters, else the
+&gt; tidy part of wml run will create additional "" pairs that break your php
+&gt; strings.
+
+You can make WML skip some passes for your PHP code ( &lt;protect&gt; ).
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02518" HREF="msg02518.shtml">php + wml</A></strong>, <em>From:</em> Jonas Meurer</li>
+<li><strong><A NAME="02519" HREF="msg02519.shtml">Re: [wml] php + wml</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="02521" HREF="msg02521.shtml">Re: [wml] php + wml</A></strong>, <em>From:</em> Fritz Heinrichmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02521.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02523.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02521.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02523.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02522"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02522"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: [wml] Problems with define&#45;tag -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 17 Jul 2000 23:05:37 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0007172304140.14250&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717224902.A11476@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01832">Date Index</a>][<a href="thrd10.shtml#01832">Thread Index</a>]<br>
+[<A HREF="msg01831.shtml">Date Prev</A>][<A HREF="msg01833.shtml">Date Next</A>][<A HREF="msg01834.shtml">Thread Prev</A>][<A HREF="msg01835.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 23:05:31 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 17 Jul 2000, Denis Barbier wrote:
+
+Hmm, this didn't really help. And I think that the group-tags are
+needed, there are several lines belonging to the &lt;ifeq clauses.
+
+Did you try to compile other.wml? index.wml is less of a problem.
+
+Fritz
+
+
+&gt; it is always the same problem, some quotes are removed in attributes.
+&gt; But i must admit this is a bug in this case.  I will fix it, but
+&gt; meantime you may remove the two &lt;group&gt; tags in .wml/nestednavbar.inc,
+&gt; they are useless here and cause trouble.
+&gt; 
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01835" HREF="msg01835.shtml">Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01830" HREF="msg01830.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01831.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01833.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01834.shtml">Re: [wml] Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01835.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01832"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01832"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

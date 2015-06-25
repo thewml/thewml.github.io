@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: possible patch to WML -->
+<!--X-From-R13: Inlar Epuyvgg <jnlarNzvqjrfgpf.pbz> -->
+<!--X-Date: Thu, 5 Oct 2000 03:28:58 +0200 (MET DST) -->
+<!--X-Message-Id: x4n1gk9iul.fsf@backbone.midwestcs.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02015">Date Index</a>][<a href="thrd41.shtml#02015">Thread Index</a>]<br>
+[<A HREF="msg02014.shtml">Date Prev</A>][<A HREF="msg02016.shtml">Date Next</A>][<A HREF="msg02014.shtml">Thread Prev</A>][<A HREF="msg02036.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>possible patch to WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wayne Schlitt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 04 Oct 2000 20:28:50 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+Hi.
+
+I'm a newbie web designer, and a newbie to WML, so there may be good
+reasons why WML works the way it does, but I would like to propose a
+patch anyway:
+
+--- cut here ---
+--- page.wml.orig	Fri Sep 29 14:02:36 2000
++++ page.wml	Wed Oct  4 19:19:20 2000
+@@ -33,10 +33,10 @@
+ &lt;/head*&gt;
+ &lt;body*&lt;if &lt;get-var background /&gt; " background=\"&lt;get-var background /&gt;\"" "" /&gt;\
+       &lt;if &lt;get-var bgcolor /&gt; &lt;group &lt;ifeq "&lt;get-var bgcolor /&gt;" "none" "" " bgcolor=\"&lt;get-var bgcolor /&gt;\"" /&gt; /&gt; " bgcolor=\"#ffffff\"" /&gt;\
+-      &lt;if &lt;get-var text /&gt; " text=\"&lt;get-var text /&gt;\"" " text=\"#000000\"" /&gt;\
+-      &lt;if &lt;get-var link /&gt; " link=\"&lt;get-var link /&gt;\"" " link=\"#333399\"" /&gt;\
+-      &lt;if &lt;get-var alink /&gt; " alink=\"&lt;get-var alink /&gt;\"" " alink=\"#9999ff\"" /&gt;\
+-      &lt;if &lt;get-var vlink /&gt; " vlink=\"&lt;get-var vlink /&gt;\"" " vlink=\"#000066\"" /&gt;\
++      &lt;if &lt;get-var text /&gt; &lt;group &lt;ifeq "&lt;get-var text /&gt;" "none" "" " text=\"&lt;get-var text /&gt;\""&gt;&gt; " text=\"#000000\""&gt;\
++      &lt;if &lt;get-var link /&gt; &lt;group &lt;ifeq "&lt;get-var link /&gt;" "none" "" " link=\"&lt;get-var link /&gt;\""&gt;&gt; " link=\"#333399\""&gt;\
++      &lt;if &lt;get-var alink /&gt; &lt;group &lt;ifeq "&lt;get-var alink /&gt;" "none" "" " alink=\"&lt;get-var alink /&gt;\""&gt;&gt; " alink=\"#9999ff\""&gt;\
++      &lt;if &lt;get-var vlink /&gt; &lt;group &lt;ifeq "&lt;get-var vlink /&gt;" "none" "" " vlink=\"&lt;get-var vlink /&gt;\""&gt;&gt; " vlink=\"#000066\""&gt;\
+       &lt;if &lt;get-var onload /&gt; " onload=\"&lt;get-var onload /&gt;\"" "" /&gt;\
+ &gt;
+ &lt;set-var __i=0 /&gt;
+--- cut here ---
+
+
+Basically, all this patch does is let you *not* set the text, link, alink
+and vlink colors on the &lt;body&gt; tag.  You have always been able to skip 
+setting the bgcolor by specifying the color "none", this just extends
+that functionality.
+
+I have been told that if you set one of these, you should set all
+because you don't know how the user has set up their defaults on their 
+browswer and your choice of colors may be bad for what they have
+choosen.
+
+
+Thoughts and suggestions are welcome.
+
+
+-wayne
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02036" HREF="msg02036.shtml">Re: possible patch to WML</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02014.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02016.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02014.shtml">Re: Script to upgrade from WML 1.x to 2.x</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02036.shtml">Re: possible patch to WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02015"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02015"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

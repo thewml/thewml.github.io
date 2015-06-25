@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem with PS fonts on big&#45;endian platforms (patch included) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 28 Jul 1999 01:32:00 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990727231607.836A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 874sixrwo4.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00876">Date Index</a>][<a href="thrd18.shtml#00876">Thread Index</a>]<br>
+[<A HREF="msg00875.shtml">Date Prev</A>][<A HREF="msg00877.shtml">Date Next</A>][<A HREF="msg00869.shtml">Thread Prev</A>][<A HREF="msg00867.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem with PS fonts on big-endian platforms (patch included)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 28 Jul 1999 01:31:11 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 22 Jul 1999, Florian Hars wrote:
+
+&gt; Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; &gt; default (defined in exbase.mf). If a German people could explain how
+&gt; &gt; they use EC fonts with LaTeX, i could try to fix this. Meanwhile a
+&gt; &gt; workaround is to copy exbase.mf into /tmp, edit it and
+&gt; &gt; set classic_sharp_s to true, and then generate all fonts.
+&gt; 
+&gt; This is not exactly compliant with the licence of the ec fonts. For
+&gt; those who can read german, I have once written a more or less complete
+&gt; summary, it is available at <A  HREF="http://www.deja.com/getdoc.xp?AN=327893442">http://www.deja.com/getdoc.xp?AN=327893442</A>
+
+Sorry, i can't.
+
+Another way is to use PS fonts. I have slightly modified gFont to allow
+a syntax similar to psfonts.map. For instance, i added the line
+  HelveticaBoldOutline    ps:phvb8r Helvetica-Bold "/PaintType 2 store TeXBase1Encoding ReEncodeFont" &lt;8r.enc
+in the Fontmap file.  One could try
+  prompt$ gfont -F HelveticaBoldOutline-24 'OUTLINED'
+
+Any line which is valid in a .map file could be written after the
+``ps:'' delimiter.
+
+There is still no way to specify such commands on the command-line.
+
+Any help to provide useful Postscript commands will be great, i am not
+very fond of those type 1 fonts.
+
+Thanks to John Bazik, distributions are now smaller because compiled
+fonts are removed.
+A new alpha release is at
+   <A  HREF="http://imacs.polytechnique.fr/~barbier/gfont-1.0a303.tar.gz">http://imacs.polytechnique.fr/~barbier/gfont-1.0a303.tar.gz</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00869" HREF="msg00869.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00875.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00877.shtml">rollover and slice</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00869.shtml">Re: gfont problem with PS fonts on big-endian platforms (patch included)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00867.shtml">filenames/directories</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00876"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00876"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

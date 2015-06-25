@@ -1,0 +1,274 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [LONG][WML] Mp4h parsing: summary -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 2 Jun 2000 16:42:17 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000602162912.1898A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01687">Date Index</a>][<a href="thrd35.shtml#01687">Thread Index</a>]<br>
+[<A HREF="msg01686.shtml">Date Prev</A>][<A HREF="msg01688.shtml">Date Next</A>][<A HREF="msg01682.shtml">Thread Prev</A>][<A HREF="msg01691.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[LONG][WML] Mp4h parsing: summary</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 2 Jun 2000 16:42:27 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi folks,
+
+this post tries to give clear hints about tag parsing to let you decide
+how this must be done.
+
+Tags begin a left-angle bracket ("&lt;" sign), followed by a succession of
+characters (tag name), attributes, and a right-angle bracket ("&gt;" sign).
+We suppose here that tag names match the "[a-z][a-z*]*" regular
+expression (this is of course a simplified expression).
+
+When finding the "&lt;" character, parser reads next chars and decides in
+which category this token belongs:
+  1. Mp4h tags
+  2. Complex HTML tag
+  3. Simple HTML tag
+  4. Embedded HTML tag
+  5. Masqueraded HTML tag
+  6. Not a tag.
+
+These categories need some explanations:
+  1. Mp4h tags
+     There is no need to distinguish simple and complex tags, because
+     this feature has been determined at definition time.
+
+  2. Complex HTML tag
+
+  3. Simple HTML tag
+
+  4. Embedded HTML tag
+     This is an HTML tag, but it is embedded into another programming
+     language (e.g. javascript, ePerl,...) and thus cannot be parsed.
+
+  5. Masqueraded HTML tag
+     In ePerl or other programming languages, inferior sign is part of
+     its syntax.  For instance it is valid to write
+        open (IN, "&lt;foo ") or die "File foo not found";
+     or
+        print &lt;&lt;EOT
+        hello world!
+        EOT
+        ;
+     Mp4h believes that these are respectively &lt;FOO&gt; and &lt;EOT&gt; tags
+     if these tags have been defined.  There is no way to automatically
+     prevent mp4h to parse these expressions, so they *must* be
+     protected against mp4h expansion.
+
+  6. Not a tag.
+     The "&lt;" sign does not begin a tag, because it is not followed
+     by a letter (like "&lt;:", "&lt;?", "&lt;!--", etc.)
+
+Now the question is how do we want these tags being parsed?
+I explain roughly below how it was done in WML 2.0.0 and WML 2.0.1,
+what i suggest for WML 2.0.2, give some pros and cons of each type, and
+after that you have to decide which one (or another one) is better
+fitted for our needs.
+
+There is a consensus on case 1 and 6: mp4h tags are parsed and expanded,
+whereas "invalid tags" are simply printed as text.
+There has been no consensus on case 5 yet, but there is no alternative
+IMO, and i would not discuss this point in this message. Feel free to do
+it, but you need killer arguments ;-)
+
+A) WML 2.0.0
+============
+
+  2. Complex HTML tag
+     The inferior sign has no special meaning, it is printed as any
+     other character.
+
+  3. Simple HTML tag
+     The inferior sign has no special meaning, it is printed as any
+     other character.
+
+  4. Embedded HTML tag
+     The inferior sign has no special meaning, it is printed as any
+     other character.
+
+PROS:
+  * embedded HTML tags do not require any special treatment, just write
+       document.write('&lt;img src="foo.png" alt="');
+       document.write(text+'"&gt;');
+
+CONS:
+  * HTML tags must be quoted
+wrong: &lt;ifeq 0 0 &lt;b&gt;foo&lt;/b&gt;&gt;
+                   ^
+               Close &lt;ifeq
+right: &lt;ifeq 0 0 "&lt;b&gt;foo&lt;/b&gt;"&gt;
+
+wrong: &lt;ifeq 0 0
+          &lt;group &lt;a href="foo.html"&gt;Click here&lt;/a&gt; now&gt;&gt;
+                                   ^             ^
+                             Close &lt;group     Close &lt;ifeq
+right: &lt;ifeq 0 0
+          &lt;group "&lt;a href=\"foo.html\"&gt;Click here&lt;/a&gt;" now&gt;&gt;
+
+  * Because of this need for quotes, inner quotes must be escaped
+
+B) WML 2.0.1
+============
+
+  2. Complex HTML tag
+     This tag is parsed like a simple tag, i.e. attributes are read
+     and other characters are ordinary text.
+
+  3. Simple HTML tag
+     Parser reads attributes.
+
+  4. Embedded HTML tag
+     These tags are expanded as in 2 or 3, and so must be protected
+     against expansion when necessary.
+
+PROS:
+  * Better respect of the structure of the document.
+
+CONS:
+  * HTML complex tags are divided into more than one token, which
+    implies that parsing may differ if tag is defined or not.
+
+  * Embedded HTML tags must be protected, for instance
+       document.write('&lt;img src="foo.png" alt="');
+       document.write(text+'"&gt;');
+   is replaced by
+       document.write('&lt;'+'img src="foo.png" alt="');
+       document.write(text+'"&gt;');
+   All tags belonging to this category must be changed into category 6
+   with appropriate fixes
+
+  * Quoting has not been well defined, i tried to be compatible with
+    Meta-HTML when it was impossible.
+
+C) Suggestions
+==============
+
+  2. Complex HTML tag
+     Parser reads attributes and body.
+
+  3. Simple HTML tag
+     Parser reads attributes. To let mp4h know this tag is simple,
+     it must conform to xhtml standard and contain a trailing slash.
+
+  4. Embedded HTML tag
+     When this is an HTML complex tag but appear as a simple tag, e.g.
+       &lt;navbar:header&gt;&lt;table&gt;&lt;tr&gt;&lt;/navbar:header&gt;
+     a trailing star marks this tag as a non parsable complex HTML tag
+       &lt;navbar:header&gt;&lt;table*&gt;&lt;tr*&gt;&lt;/navbar:header&gt;
+     When it is simple, there is no problem because of the trailing slash
+       &lt;navbar:epilog&gt;&lt;br /&gt;&lt;/navbar:epilog&gt;
+     When this tag cannot be parsed, it must be protected with a
+     leading star, which will make it fall into category 6.
+       document.write('&lt;*img src="foo.png" alt="');
+       document.write(text+'"&gt;');
+
+PROS:
+  * Best respect of the structure of the document.
+  * Fewer side effects, syntax cannot be broken by defining mp4h tags.
+
+CONS:
+  * Embedded HTML tags must be protected, for instance
+       document.write('&lt;img src="foo.png" alt="');
+       document.write(text+'"&gt;');
+    is replaced by
+       document.write('&lt;*img src="foo.png" alt="');
+       document.write(text+'"&gt;');
+    All tags belonging to this category must be changed into category 6
+    with appropriate fixes.
+
+  * All HTML tags must be protected in templates and simple tags must
+    contain a trailing slash.
+
+
+Note About Quoting:
+===================
+
+I did not want to expose how quoting is performed, because it is a
+complex task. If you want to play with Meta-HTML and mp4h quoting,
+consider these lines:
+  &lt;img url="foo.png" alt="This is $ref-&gt;{'name'}" /&gt; foo bar
+  print "&lt;img url="foo.png" alt="This is $ref-&gt;{'name'}" /&gt; foo bar"
+  &lt;group "&lt;img url="foo.png" alt="This is $ref-&gt;{'name'}" /&gt; foo bar" /&gt;
+  &lt;group &lt;img url="foo.png" alt="This is $ref-&gt;{'name'}" /&gt; foo bar /&gt;
+  &lt;ifeq 0 0 "&lt;img url="foo.png" alt="This is $ref-&gt;{'name'}" /&gt; foo bar" /&gt;
+and the same lines when escaping quotes.
+
+It is quite hard to provide a robust syntax, but here is how it could
+be done with the suggested scheme above:
+
+   Quotes should never be escaped, unless they must be escaped in output.
+
+So in lines above only the 2nd must be changed to
+ print "&lt;img url=\"foo.png\" alt=\"This is $ref-&gt;{'name'}\" /&gt; foo bar"
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01691" HREF="msg01691.shtml">Re: [LONG][WML] Mp4h parsing: summary</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01692" HREF="msg01692.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01686.shtml">Re: wml incorrectly munging \&quot; in perl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01688.shtml">Re: embedding ePerl commands in grid cells</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01682.shtml">Re: [BUG REPORT] WML 2.0.1, Solaris 2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01691.shtml">Re: [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01687"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01687"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

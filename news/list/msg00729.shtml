@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wmk 1.7.1 slower than wmk 1.6.8? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 6 Jun 1999 00:11:16 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990606000449.19028A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990605225244.13042A&#45;100000@liberte.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00729">Date Index</a>][<a href="thrd16.shtml#00729">Thread Index</a>]<br>
+[<A HREF="msg00728.shtml">Date Prev</A>][<A HREF="msg00730.shtml">Date Next</A>][<A HREF="msg00727.shtml">Thread Prev</A>][<A HREF="msg00731.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wmk 1.7.1 slower than wmk 1.6.8?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 6 Jun 1999 00:10:13 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 5 Jun 1999, Denis Barbier wrote:
+
+&gt; On Sat, 5 Jun 1999, Jan Ulrich Hasecke wrote:
+&gt; 
+&gt; &gt; Hello Denis,
+&gt; &gt; 
+&gt; &gt; is this a right impression? 
+&gt; &gt; 
+&gt; &gt; I led wmk go through a whole directory with up-to-date HTML-Files,
+&gt; &gt; so it must skip all files. But this goes a big bit slower than
+&gt; &gt; with 1.6.8.
+&gt; 
+&gt; Hi Jan Ulrich
+&gt; [i added your site to the list of WML generated stes as requested]
+&gt; 
+&gt; The only difference is that the .wmkrc files are read when typing 
+&gt;    wmk file
+&gt; With wmk-1.6.8 these files were read only with ``wmk dir''.
+&gt; 
+&gt; So if oyu have a Makefile containing something like
+&gt; %.html: %.wml
+&gt; 	wmk -f $&lt;
+&gt; 
+&gt; then wmk-1.7.1 will be slower.
+
+Oops, i was wrong sorry.
+WMk-1.7.1 is much more intelligent and determine which files the .html
+depends on by executing
+   wml -MM source.wml
+
+WMk will find that source.html depends on source.wml and all your
+templates.
+
+So it's a little bit slower.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00731" HREF="msg00731.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00727" HREF="msg00727.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00728.shtml">Re: Is there a better way to do this?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00730.shtml">BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00727.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00731.shtml">Re: wmk 1.7.1 slower than wmk 1.6.8?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00729"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00729"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

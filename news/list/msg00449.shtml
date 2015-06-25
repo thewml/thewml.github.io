@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Home of WML and other stuff -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Wed, 10 Mar 1999 16:00:15 +0100 (CET) -->
+<!--X-Message-Id: Pine.GSO.4.10.9903101556370.16198&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990310145646.28231A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00449">Date Index</a>][<a href="thrd10.shtml#00449">Thread Index</a>]<br>
+[<A HREF="msg00448.shtml">Date Prev</A>][<A HREF="msg00450.shtml">Date Next</A>][<A HREF="msg00448.shtml">Thread Prev</A>][<A HREF="msg00451.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Home of WML and other stuff</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 10 Mar 1999 16:00:12 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding Re: Home of WML and other stuff:
+
+*&gt; On Wed, 10 Mar 1999, Tobias Oetiker wrote:
+*&gt; 
+*&gt; &gt; apropos features, I was wondering why there was no
+*&gt; &gt; 
+*&gt; &gt; #define something=blabla
+*&gt; &gt; 
+*&gt; &gt; in the ipp pass .... analog to -Dsomething=blabla
+*&gt; 
+*&gt; Tobias, maybe it's because ipp means ``Include Pre-Processor''?
+*&gt; 
+*&gt; I think Ralf added the -D option when he used ipp in conjonction with
+*&gt; wml, but he never implemented #define.
+*&gt; 
+*&gt; The -D option is more general, because variables are defined for all
+*&gt; passes. I am not sure it will be clear to the end-user that the variable
+*&gt; defined with #define becomes meaningless after the first pass, so it is
+*&gt; not a good idea (IMHO, of course :o).
+
+this does not matter, as all these variables would be resolved after the
+first pass ... however, maybe you can suggest something else ... 
+
+what I would like to do is to setup a wml system where the basic 'look and
+feel' elements are defined in a special file these would be things like
+colors and names of background gif files. Now the resolution of these names
+should happen in the first pass so that I can use the real values in every
+subsequent pass ... 
+
+defining these things in .wmlrc looks a bit strange to me ... I thought
+having a file with 
+
+#define PageBG=#ffffff
+#define PageFG=#000000
+.
+.
+.
+
+would be nicer ... 
+
+cheers
+tobi
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1194  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00451" HREF="msg00451.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00448" HREF="msg00448.shtml">Re: Home of WML and other stuff</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00448.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00450.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00448.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00451.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00449"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00449"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

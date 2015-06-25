@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: SGML&#45;formatting with WML -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Wed, 8 Dec 1999 16:12:48 +0100 (MET) -->
+<!--X-Message-Id: 199912081513.QAA06695@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199912081255.NAA01061@fairy.fairground -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01204">Date Index</a>][<a href="thrd25.shtml#01204">Thread Index</a>]<br>
+[<A HREF="msg01203.shtml">Date Prev</A>][<A HREF="msg01205.shtml">Date Next</A>][<A HREF="msg01203.shtml">Thread Prev</A>][<A HREF="msg01210.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: SGML-formatting with WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 08 Dec 1999 16:12:59 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wednesday 8 December 1999, at 13 h 55, the keyboard of 
+a2651866@smail.uni-koeln.de ("=?ISO-8859-1?Q?Dirk Fr=F6mbgen?=") wrote:
+
+&gt; Has anyone ever thought of using WML as a batch formatter for
+&gt; SGML input?
+
+I tried wml --includefile=foobar.wml over my SGML sources (actually XML) and, 
+yes, it works fine. So does M4 if you need a processing not available in your 
+SGML environment :-)
+
+The symbols used by WML could lead to problems. What if you have a line 
+beginning with '#' in your SGML source?
+
+&gt; This would allow WML to be used with structured editors.
+
+Well, if they refuse elements which do not belong to the DTD, what will be 
+left to WML?
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01210" HREF="msg01210.shtml">Re: SGML-formatting with WML</A></strong>, <em>From:</em> Dirk Frömbgen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01203" HREF="msg01203.shtml">SGML-formatting with WML</A></strong>, <em>From:</em> Dirk Frömbgen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01203.shtml">SGML-formatting with WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01205.shtml">Re: none</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01203.shtml">SGML-formatting with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01210.shtml">Re: SGML-formatting with WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01204"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01204"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,166 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: a few questions on using wml -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 25 Jun 1998 12:41:31 +0200 (CEST) -->
+<!--X-Message-Id: 19980625124128.A2699@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m0yotmj&#45;000DHYC@landru.math.uwaterloo.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00134">Date Index</a>][<a href="thrd3.shtml#00134">Thread Index</a>]<br>
+[<A HREF="msg00133.shtml">Date Prev</A>][<A HREF="msg00135.shtml">Date Next</A>][<A HREF="msg00132.shtml">Thread Prev</A>][<A HREF="msg00140.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: a few questions on using wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 12:41:28 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 24, 1998, James A. Treacy wrote:
+
+&gt; The Debian web pages are in the process of being converted to using
+&gt; wml. 
+
+Ohhh, great and really interesting News.  Nice to hear that WML was chosen as
+the generation tool.  Please try to inform us from time to time about the
+current states of your project.
+
+&gt; In the process I have come across a few things I haven't been
+&gt; able to figure out. Is it possible that there are things wml can't
+&gt; do? :)
+
+&lt;grin&gt; Sure, WML is like Apache: Both usually provide anything and more Joe
+Average will ever need, but the power users have special requirements which
+always create new demands for which sometimes a solution is not already known.
+But that doesn't mean that a solution doesn't exist ;-)
+
+&gt; Since I want the .html files in a different directory from the source
+&gt; a shebang path is used in the files, e.g. #!wml -o ../debian.org/%BASE.html.en
+&gt; What is actually desired is to use a variable to make it easier to move
+&gt; things around later, i.e. #!wml -o $(HTMLDIR)/%BASE.html.en where the
+&gt; variable is set in a .wmlrc file. Is this possible?
+
+Currently not, because only %DIR and %BASE are expanded. But this is a really
+good suggestion, so I'll try to add $(XXX) variables for WML 1.6.6 or 1.6.7.
+In the meantime its no problem when I understand you correctly, its just for
+feature flexibility, right?
+
+&gt; To keep the pages from being too static, I used some perl to grab the
+&gt; latest news entries and put their titles on the main page. It works
+&gt; perfectly, but 'wmk -a' does not catch the dependency (which is understandable).
+&gt; Is there a way to force a file to have a dependency on another?
+&gt; '#use &lt;file&gt;' is not appropriate in this case.
+
+Hmmmm... WMk was designed to avoid the usual tivial Makefiles which have .html
+&lt;- .wml dependencies. I've never thought about making WMk a real "built
+environment" tool.  But you can use a trick I use on the WML webarea, too.
+
+Just use "-x xxx.dep" in a .wmkrc file at the same level your xxx.wml file
+stays. When you now run "wmk" the "prolog program" "xxx.dep" is started before
+WMk starts its actual processing. In "xxx.dep" you now do a mtime-comparison
+of your external file and the xxx.html file. If the external file is newer
+than the xxx.html file then simply "touch" the xxx.wml file (i.e. make it
+newer then the xxx.html file). Now after the prolog program ran WMk compares
+the mtimes between xxx.wml and xxx.html and finds that he has to run WML to
+convert xxx.wml-&gt;xxx.html. BINGO!  Ok, for a single dependency its overkill,
+but because xxx.dep can be any executable program you can do as complex
+dependencies you want.
+
+A first (untested) cut for xxx.dep could be:
+
+   #!/path/to/bin/perl
+   $ext_file = '/path/to/somewhere';
+   $wml_file = 'xxx.wml'
+   $out_file = 'xxx.wml'
+   if (-f $ext_file) {
+       $ext_mtime = -M _;
+       if (-f $out_file) {
+           $out_mtime = -M _;
+           if ($ext_mime &gt; $out_mtime) {
+               $now = time;
+               utime($now, $now, $wml_file);
+           }
+       }
+   }
+
+If you have more such dependecies, I recommend you to write a generic .dep
+file which reads a config file with depencies and does the above procedure for
+each of the contained entries. 
+
+&gt; I tried 'wmk -a -F template/debian/*.wml' so all .wml files would
+&gt; be processed except for the template files. What's the proper way
+&gt; to do this?
+
+Your templates have .wml extension, right? Hmmm.. then you have to use inside
+a .wmkrc file "-F template.wml" options.  Or just name same .tmpl or .inc or
+whatever.
+
+BTW: Always feel free to ask. Although my time is very limited I enjoy it when
+people use my programs and create good things with it. And so I always try to
+reserve some time for answering questions because support is one of the most
+important decision points people have when using a software package ;-)
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00132" HREF="msg00132.shtml">a few questions on using wml</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00133.shtml">question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00135.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00132.shtml">a few questions on using wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00140.shtml">Re: a few questions on using wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00134"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00134"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

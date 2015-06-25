@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: y2k readiness of wml -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 20 May 1999 11:26:34 +0200 (MET DST) -->
+<!--X-Message-Id: 19990520112440.A6813@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990518125147.922B&#45;100000@liszt.polytechnique.fr -->
+<!--X-Reference: 374217AD.8CDCE3C6@its.monash.edu.au -->
+<!--X-Reference: m1ogjg5e42.fsf@foobar.ee.ethz.ch -->
+<!--X-Reference: 19990520185548.A28167@lib.monash.edu.au -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00675">Date Index</a>][<a href="thrd9.shtml#00675">Thread Index</a>]<br>
+[<A HREF="msg00674.shtml">Date Prev</A>][<A HREF="msg00676.shtml">Date Next</A>][<A HREF="msg00674.shtml">Thread Prev</A>][<A HREF="msg00676.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: y2k readiness of wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 May 1999 11:24:40 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, May 20, 1999, Oliver Daly wrote:
+
+&gt; On Thu, May 20, 1999 at 10:39:41AM +0200, Fritz Zaucker wrote:
+&gt; &gt; Oliver Daly &lt;Oliver.Daly@its.monash.edu.au&gt; writes:
+&gt; &gt; 
+&gt; &gt; &gt; I was wondering if wml is y2k ready?
+&gt; &gt; 
+&gt; &gt; Are you?
+&gt; 
+&gt; I'll rephrase the question, are there any statements on the y2k readiness/compliance of 
+&gt; wml? Or are any statements prepared to be made. Sure, I could check the source myself,
+&gt; however having about 800 other packages to check, in the next two weeks, does require
+&gt; as many shortcuts to be made, including relying on vendor statements. Any useful
+&gt; information that can be offered on this would be greatly appreciated.
+
+I don't know whether Denis wants to give a statement, but I personally would
+avoid it myself. For instance I give such statements only in exceptional
+situations (e.g. for my mod_ssl), because it's not worth the trouble in
+general. When you're paid for a product, you have to give such statements and
+people can come back when the product will fail later. That's ok. 
+
+But for unpaid Open Source products the author just opens a can of worms when
+giving such statements. Every author should try hard to make its product Y2K
+complaint, of course. And both I and Denis tried this for WML, too. But when
+it still isn't, either help us to make it compliant (contribute patches) or
+accept the fact that you usually can't receive a definitive statement because
+it's an unpaid Open Source product where authors don't want to give such
+statements. For instance for OpenSSL we intentionally don't give such
+statements, too.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00676" HREF="msg00676.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> Oliver Daly</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00670" HREF="msg00670.shtml">Re: Bug report</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00672" HREF="msg00672.shtml">y2k readiness of wml</A></strong>, <em>From:</em> Oliver Daly</li>
+<li><strong><A NAME="00673" HREF="msg00673.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> Fritz Zaucker</li>
+<li><strong><A NAME="00674" HREF="msg00674.shtml">Re: y2k readiness of wml</A></strong>, <em>From:</em> Oliver Daly</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00674.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00676.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00674.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00676.shtml">Re: y2k readiness of wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00675"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00675"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

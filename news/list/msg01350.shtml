@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: A few questions on using wmk -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 10 Feb 2000 10:20:54 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000210094933.30933A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000209160440.A27002@landru.math.uwaterloo.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01350">Date Index</a>][<a href="thrd28.shtml#01350">Thread Index</a>]<br>
+[<A HREF="msg01348.shtml">Date Prev</A>][<A HREF="msg01351.shtml">Date Next</A>][<A HREF="msg01349.shtml">Thread Prev</A>][<A HREF="msg01348.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: A few questions on using wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 10 Feb 2000 10:28:18 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 9 Feb 2000, James A. Treacy wrote:
+
+&gt; The wml man page says that an executable used in --epilog should be in your path.
+&gt; Is there a way to specify the executable exactly? I'd like to have something like
+&gt; the following in the .wmlrc file:
+&gt; 
+&gt; -D HOME~.
+&gt; -E $(HOME)/convert
+&gt; 
+&gt; This doesn't work though. Any suggestions?
+&gt; This would be a lot easier than requiring all the people working on the pages to
+&gt; change their path.
+
+Agree.
+Below is a patch against wml.src version 1.7.4 (should also work with
+other versions), let me know if you are happy with it.
+
+--- wml.src	1999/09/30 09:28:07	1.31
++++ wml.src	2000/02/10 09:15:44
+@@ -972,10 +972,34 @@
+     }
+ }
+ 
+-#   determine prologs
++#   adjust prologs and epilogs
+ $prolog = '';
+-foreach $p (@opt_P) {
+-    $prolog .= " -P '$p'";
++{
++    my %defs = ();
++    foreach $d (@opt_D) {
++        ($var, $dummy, $val) = ($d =~ m|^(.+?)=("?)(.*)\2\n*$|);
++        $defs{$var} = $val;
++    }
++    foreach $p (@opt_P) {
++        1 while ($p =~ s|\$\(([A-Za-z0-9_]+)\)|$defs{$1}|g);
++        $prolog .= " -P '$p'";
++    }
++    my @opt_E_OLD = @opt_E;
++    @opt_E = ();
++    foreach $e (@opt_E_OLD) {
++        if ($e =~ m|^htmlinfo(.*)|) {
++            $e = "@libdir@/exec/wml_aux_htmlinfo$1";
++        }
++        elsif ($e =~ m|^weblint(.*)|) {
++            $e = "@libdir@/exec/wml_aux_weblint$1";
++        }
++        elsif ($e =~ m|^linklint(.*)|) {
++            $e = "@libdir@/exec/wml_aux_linklint$1";
++            $e .= " -nocache -one -summary" if ($1 eq '');
++        }
++        1 while ($e =~ s|\$\(([A-Za-z0-9_]+)\)|$defs{$1}|g);
++        push(@opt_E, $e);
++    }
+ }
+ 
+ $defipp = '';
+@@ -1240,16 +1264,6 @@
+     #   run epilog filters
+     foreach $o (@outfiles) {
+         foreach $e (@opt_E) {
+-            if ($e =~ m|^htmlinfo(.*)|) {
+-                $e = "@libdir@/exec/wml_aux_htmlinfo$1";
+-            }
+-            elsif ($e =~ m|^weblint(.*)|) {
+-                $e = "@libdir@/exec/wml_aux_weblint$1";
+-            }
+-            elsif ($e =~ m|^linklint(.*)|) {
+-                $e = "@libdir@/exec/wml_aux_linklint$1";
+-                $e .= " -nocache -one -summary" if ($1 eq '');
+-            }
+             &amp;verbose(2, "EPILOG: $e $o\n");
+             $rc = system("$e $o");
+             if ($rc != 0) {
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01349" HREF="msg01349.shtml">A few questions on using wmk</A></strong>, <em>From:</em> James A. Treacy</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01348.shtml">A further demonstration</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01351.shtml">WML port to Win32</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01349.shtml">A few questions on using wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01348.shtml">A further demonstration</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01350"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01350"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

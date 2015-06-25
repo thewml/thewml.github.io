@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML wml::std::lang questions -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 13 Mar 1999 10:55:41 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990313104652.20753A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14057.21708.262781.833634@medusa.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00474">Date Index</a>][<a href="thrd11.shtml#00474">Thread Index</a>]<br>
+[<A HREF="msg00473.shtml">Date Prev</A>][<A HREF="msg00475.shtml">Date Next</A>][<A HREF="msg00473.shtml">Thread Prev</A>][<A HREF="msg00475.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML wml::std::lang questions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Mar 1999 10:50:17 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 12 Mar 1999, Michael McNamara wrote:
+
+&gt; Unfortunately, if there is no use of the LANG tag FOO in xx.wml,
+&gt; the following command fails:
+&gt; 
+&gt; % wml --o UNDEFuFOO:xx.html xx.wml
+&gt; ** Slice:Error: no such slice 'FOO'
+&gt; ** WML:Break: Error in Pass 9 (rc=1).
+&gt; 
+&gt; I believe it should accept this with no complaints.  Perhaps a
+&gt; --strict switch can be added to select the existing behavior.
+
+Hi Michael,
+
+i have modified wml_p9_slice to report a warning instead of an error
+when an unknown slice is encountered. It's on my home computer, and
+should be available on Monday.
+
+Cheers
+
+  Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00475" HREF="msg00475.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Mike McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00472" HREF="msg00472.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00473.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00475.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00473.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00475.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00474"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00474"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

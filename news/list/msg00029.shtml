@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Compilation problem -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Thu, 8 Jan 1998 13:10:42 +0100 (MET) -->
+<!--X-Message-Id: 199801081210.NAA02917@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00029">Date Index</a>][<a href="thread.shtml#00029">Thread Index</a>]<br>
+[<A HREF="msg00028.shtml">Date Prev</A>][<A HREF="msg00030.shtml">Date Next</A>][<A HREF="msg00030.shtml">Thread Prev</A>][<A HREF="msg00031.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Compilation problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Thu, 8 Jan 1998 13:10:39 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00028.shtml">m1wwgbgx8z.fsf@foobar.ee.ethz.ch</A>&gt; you wrote:
+
+&gt; ich habe versucht, auf unseren Sun Ultras wml mit cc -fast zu
+&gt; kompilieren. Dies hat auch funktioniert, indem ich
+&gt; make CC=cc CFLAGS=-fast 
+&gt; gemacht habe, ausser fuer den ePerl Teil. 
+
+&gt; Kannst Du das mal ausprobieren und gegebenenfalls reparieren? Bzw mir
+&gt; sagen, wenn ich es irgendwie anders machen muss (mit configure?).
+
+&gt; CC=cc CFLAGS=-fast ./configure 
+
+&gt; hat nicht funktioniert.
+
+(BTW: Fritz, please be careful, the other list members don't
+      have german as their native language ;_)
+
+The problem is clear: ePerl usually has to be compiled with the
+same compiler/options the Perl system was compiled. For this
+ePerl's configure usually uses the one Perl used.  When you
+overwrite it via WML's configure options, ePerl uses this one.
+And this can lead to problems. The solution is simple: We have
+just to port ePerl to the native Solaris "cc -fast" compiler for
+feature versions. 
+
+Because I have no non-GCC compilers for Solaris available on any
+boxes I have access to, you have to post the error messages here,
+please. Then I can investigate. Even better would be if I can try
+it myself? (Can Tobias install the Sun "cc" on
+engelschall.ethz.ch? Or have you any test account on a machine
+where this compiler exists?)
+
+&gt; P.S.: Auch ohne ePerl ging die Zeit fuer unsere Homepage von 70 auf 40
+&gt;       Sekunden runter ...
+
+Hmmmm... because most of the parts are written in plain Perl, I think Pass 2
+(Meta-HTML) now is much faster. Try a WML -v1 run which gives nice time
+statistic and compare there the times for the passes. Please post the output
+of a WML -v1 run here so we can see which pass still needs most of the
+processing time.
+
+One more idea: Try to compile your Perl system itself with "cc
+-fast"! This should speed up the other WML passes which are
+entirely written in Perl.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00031" HREF="msg00031.shtml">Re: Compilation problem</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00028.shtml">Compilation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00030.shtml">Re: wml::des::navbar: automatically selecting the right button</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00030.shtml">Re: wml::des::navbar: automatically selecting the right button</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00031.shtml">Re: Compilation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00029"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00029"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

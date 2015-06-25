@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.4 -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 23 Mar 1998 14:59:30 +0100 (MET) -->
+<!--X-Message-Id: 199803231359.OAA27133@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00115">Date Index</a>][<a href="thrd3.shtml#00115">Thread Index</a>]<br>
+[<A HREF="msg00114.shtml">Date Prev</A>][<A HREF="msg00116.shtml">Date Next</A>][<A HREF="msg00114.shtml">Thread Prev</A>][<A HREF="msg00116.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 23 Mar 1998 14:59:28 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now available:
+
+Website META Language, Version 1.6.4
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+ <A  HREF="ftp://ftp.engelschall.com/sw/wml/">ftp://ftp.engelschall.com/sw/wml/</A>
+
+The entry from the ChangeLog file:
+
+  Changes between 1.6.3 and 1.6.4:
+      980313 - fixed a few typos in the INSTALL file
+      980314 - Upgraded Bit::Vector 5.0 to 5.1
+             - Upgraded Getopt::Long 2.13 to 2.15
+      980318 - Fixed wml::des::gfont which called gfont
+               with option -s instead of -r [Thanks to Andy
+               Hawkins &lt;andy@gently.demon.co.uk&gt; for hint]
+      980322 - Fixed &lt;vspace&gt; tag in wml::des::space [Thanks to
+               Igor V.  Spiridonov &lt;garris@trunk.uco.ru&gt; and
+               Tomasz Cholewo &lt;t.cholewo@ieee.org&gt; for hint]
+      980323 - Added support for escaped sharp-comments via
+               ``\#'' for escaping such comments, for instance
+               when needed inside &lt;verbatim&gt; environments [Thanks
+               to Igor V. Spiridonov &lt;garris@trunk.uco.ru&gt; for
+               hint]
+             - Fixed Pass 7 (HTMLfix): Now the width/height=*
+               placeholder constructs are removed when the image
+               file from &lt;img&gt; tags are not accessible.  [Thanks
+               to Igor V. Spiridonov &lt;garris@trunk.uco.ru&gt; for
+               hint]
+             - Fixed etc/newvers, so that it not always just
+               tries to use "cc". Instead now first "gcc" is
+               searched and "cc" is the fallback.  [Thanks to Dan
+               Ludden &lt;dan.ludden@lmco.com&gt; for hint]
+             - Added SCALE=&lt;factor&gt; and SCALE=&lt;percent&gt;% to the
+               &lt;img&gt; support in Pass 7. This way you can scale
+               the WIDTH/HEIGHT attributes of &lt;img&gt; tags.
+               [Thanks to Dan Ludden &lt;dan.ludden@lmco.com&gt; for
+               patch]
+             - Enhanced the wml::std::toc include file: Now you
+               can use ``#use wml::std::toc
+               style=pre|nbsp|hspace'' to let the Table Of
+               Contents create in a particular style.  The "pre"
+               style is the old &lt;pre&gt;-based style, the
+               "nbsp"-style used plain HTML text with &amp;nbsp;'s
+               and &lt;br&gt;'s and the "hspace" style uses &lt;hspace&gt;'s
+               (from wml::des::space) and &lt;br&gt;'s to layout the
+               ToC.  [Thanks to Dan Ludden &lt;dan.ludden@lmco.com&gt;
+               for idea]
+             - Added optional "alt" attribute to &lt;navbar:button&gt;
+               which can be used for explicitly setting the &lt;img
+               alt=".."&gt; stuff.  It defaults to the value of the
+               non-optional "txt" attribute.  [Thanks to Dan
+               Ludden &lt;dan.ludden@lmco.com&gt; for idea]
+             - Added generated "type" attribute to the generated
+               &lt;script&gt; container tag for &lt;javascript&gt; and added
+               "defer" attribute for HTML 4.0.  [Thanks to Any
+               Hawkins &lt;andy@gently.demon.co.uk&gt; for hint]
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00114.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00116.shtml">Perl Presentation Slideset (german)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00114.shtml">Re: ANNOUNCE: WML 1.6.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00116.shtml">Perl Presentation Slideset (german)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00115"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00115"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

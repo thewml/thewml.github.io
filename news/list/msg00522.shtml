@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: problem undrstanding cotainers -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 30 Mar 1999 11:09:51 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990330104051.2720A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36FFE8C2.E269BE2F@savera.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail11.shtml#00522">Date Index</a>][<a href="thrd12.shtml#00522">Thread Index</a>]<br>
+[<A HREF="msg00521.shtml">Date Prev</A>][<A HREF="msg00523.shtml">Date Next</A>][<A HREF="msg00521.shtml">Thread Prev</A>][<A HREF="msg00524.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: problem undrstanding cotainers</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 Mar 1999 11:04:07 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 29 Mar 1999, Krishna Motukuri wrote:
+
+&gt; Hi,
+&gt; 	I have defined multiple containers in my code which have the same set
+&gt; of attributes. My requirements are such that I have to include one
+&gt; container in another and pass the attributes of the top-level container
+&gt; to the nested container. The problem is that the values of the
+&gt; attributes seem to be lost when they get to the second container.
+
+You're right, it's because a variable is cleared when it is preserved.
+Don't know why (Ralf, any idea?)
+
+To fix this, redefine the ``preserve'' tag:
+&lt;defsubst preserve __variable whitespace=delete&gt;
+&lt;set-var __index=&lt;array:size __vars&gt;&gt;
+&lt;if &lt;var-exists &lt;get-var-once __variable&gt;&gt;
+    &lt;set-var __vars[&lt;get-var __index&gt;]="&lt;get-var-once &lt;get-var-once __variable&gt;&gt;"&gt;
+    &lt;set-var __vars[&lt;get-var __index&gt;]="-"&gt;
+&gt;
+&lt;/defsubst&gt;
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00524" HREF="msg00524.shtml">Re: problem undrstanding cotainers</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00521" HREF="msg00521.shtml">problem undrstanding cotainers</A></strong>, <em>From:</em> Krishna Motukuri</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00521.shtml">problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00523.shtml">Some news</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00521.shtml">problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00524.shtml">Re: problem undrstanding cotainers</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail11.shtml#00522"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00522"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

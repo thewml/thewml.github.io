@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Quick bugdrop -->
+<!--X-From-R13: Quevf [nefgba <pznefgbaNcbvffba.qlaqaf.bet> -->
+<!--X-Date: Tue, 18 Jul 2000 07:36:44 +0200 (MET DST) -->
+<!--X-Message-Id: 20000718013910.A3368@poisson.dyndns.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01838">Date Index</a>][<a href="thrd38.shtml#01838">Thread Index</a>]<br>
+[<A HREF="msg01837.shtml">Date Prev</A>][<A HREF="msg01839.shtml">Date Next</A>][<A HREF="msg01851.shtml">Thread Prev</A>][<A HREF="msg01839.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Quick bugdrop</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Chris Marston &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 01:39:10 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Er, I sent this to rse@engelschall.com, but I'm not sure it got through,
+so I joined the list and am resubmitting it. :)
+
+There seems to be a bug in WML2.0.2's &lt;rollover&gt; (at least, so far as
+interaction with Netscape is concerned). Essentially, since each dhtml layer
+(``absolutely positioned block'', in CSS-speak) is a javascript 'document'
+object in its own right, any javascript it contains cannot see the javascript
+functions of its peers. This means that javascript errors are thrown 
+when code looks like:
+
+&lt;span id=floatingyogi&gt;
+&lt;rollover ... &gt;
+&lt;/span&gt;
+&lt;span id=magicbunny&gt;
+&lt;rollover ... &gt;
+&lt;/span&gt;
+
+'magicbunny's rollover will complain that the rollover functions cannot
+be found.
+
+
+Enclosed is a workaround in mp4h/eperl.
+
+#workaround for an annoying rollover bug that causes 
+#javascript errors on dhtml netscape docs.
+
+&lt;define-tag span endtag=required&gt;
+	&lt;: push @LAYERS, {}; :&gt;
+	&lt;span* %attributes &gt;
+	%body
+	&lt;/span*&gt;
+	&lt;: pop @LAYERS; :&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag div endtag=required&gt;
+	&lt;: push @LAYERS, {}; :&gt;
+	&lt;div* %attributes &gt;
+	%body
+	&lt;/div*&gt;
+	&lt;: pop @LAYERS; :&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag layer endtag=required&gt;
+	&lt;: push @LAYERS, {}; :&gt;
+	&lt;layer* %attributes &gt;
+	%body
+	&lt;/layer*&gt;
+	&lt;: pop @LAYERS; :&gt;
+&lt;/define-tag&gt;
+
+&lt;define-tag cmarstonRollover whitespace=delete&gt;
+	&lt;:print q (
+&lt;script type="text/javascript" language="JavaScript"&gt;
+&lt;!-- cmarston@trentu.ca: a quick layering patch
+
+function ro_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_n.src");
+        self.status = '';
+    }
+}
+function ro_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + "_o.src");
+        self.status = descript;
+    }
+}
+--&gt; &lt;/script&gt; 
+)  unless (  $LAYERS[$#LAYERS]-&gt;{'rolled'} || 
+	     $LAYERS-&gt;{'first'}  );
+$LAYERS[$#LAYERS]-&gt;{'rolled'} = 1;
+$LAYERS-&gt;{'first'} = 0;
+:&gt;
+&lt;rollover %attributes &gt;
+&lt;/define-tag&gt;
+
+
+-- 
+Civilization advances by extending the number of important operations which we can perform without thinking. (Alfred North Whitehead) 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01839" HREF="msg01839.shtml">Re: Quick bugdrop</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01837.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01839.shtml">Re: Quick bugdrop</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01851.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01839.shtml">Re: Quick bugdrop</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01838"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01838"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

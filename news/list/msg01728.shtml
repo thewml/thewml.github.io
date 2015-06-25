@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problem after switching to 2.0.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 22 Jun 2000 22:37:35 +0200 (MET DST) -->
+<!--X-Message-Id: 20000622223924.A31543@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0006212207370.25621&#45;100000@univapp.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01728">Date Index</a>][<a href="thrd36.shtml#01728">Thread Index</a>]<br>
+[<A HREF="msg01727.shtml">Date Prev</A>][<A HREF="msg01729.shtml">Date Next</A>][<A HREF="msg01726.shtml">Thread Prev</A>][<A HREF="msg01735.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problem after switching to 2.0.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Jun 2000 22:39:24 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jun 21, 2000 at 10:28:33PM -0700, Krishna V Motukuri wrote:
+
+&gt; Hi,
+&gt;    I just switched from 1.7.* to 2.0.1 and now my &lt;define-container&gt; tag
+&gt; is not being recognised by the parser. All "define-container" tags appear
+&gt; as it is in the html document. I'm not sure what went wrong. I got the new
+&gt; tarball from the website itself. Can someone please help with this
+&gt; problem?
+
+Hi, this is explained in README.mp4h shipped with the distribution.
+Some tags are obsolete, and requires call to wml::sys::compat1 to be
+available.  So putting
+   -i wml::sys::compat1
+in your top-level .wmlrc should solve this problem.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01735" HREF="msg01735.shtml">Re: Problem after switching to 2.0.1</A></strong>, <em>From:</em> Krishna V Motukuri</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01726" HREF="msg01726.shtml">Problem after switching to 2.0.1</A></strong>, <em>From:</em> Krishna V Motukuri</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01727.shtml">[2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01729.shtml">Re: [2.0.1] How to get outputfile name?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01726.shtml">Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01735.shtml">Re: Problem after switching to 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01728"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01728"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

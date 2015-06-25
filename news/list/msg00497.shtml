@@ -1,0 +1,217 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: dependeny dump for wml_p1_ipp -->
+<!--X-From-R13: Oaqernf Vbszrvfgre <ubszrvfgNvasbezngvx.hav&#45;servohet.qr> -->
+<!--X-Date: Thu, 18 Mar 1999 06:05:40 +0100 (MET) -->
+<!--X-Message-Id: 36F08B17.A18E157A@informatik.uni&#45;freiburg.de -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: Pine.LNX.3.96.990317175830.22425A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00497">Date Index</a>][<a href="thrd12.shtml#00497">Thread Index</a>]<br>
+[<A HREF="msg00496.shtml">Date Prev</A>][<A HREF="msg00498.shtml">Date Next</A>][<A HREF="msg00495.shtml">Thread Prev</A>][<A HREF="msg00499.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: dependeny dump for wml_p1_ipp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Andreas Hofmeister &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 18 Mar 1999 05:11:51 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier wrote:
+
+&gt; Of course.
+&gt; Please use diff -u on the source file ipp.src, so that it can easily be
+&gt; incorporated.
+&gt; If your patch is small, send it to the list, it may interest other
+&gt; people. If it's big, or if you don't know how to proceed, send it to me
+&gt; directly.
+
+Ok, hree it is. I did not  change  the dokumentation (because of my poor
+english ) , so i think you need some additional infos.  I  modified the
+preprocessor to output something like
+
+abc.html : abc.wml \
+    my-tags.wml \
+   ...
+
+on  STDOUT . This can be included in a makefile as desribed in the (info)
+docs for make.
+Because i did not modify "wml" itself, i need to run ipp as
+
+   wml_p1_ipp -I.  -I&lt;more  dirs&gt; -S/usr/local/lib/wml/include -o X.html
+X.wml  &gt;  X.html.dep
+
+To make this feature real useable, one should change "wml" to accept
+--depend , so one could write
+
+   wml --depend -o X.html X.wml &gt; X.html.dep
+
+or better
+
+   wml --depend  X.html.dep -o X.html  X.wml
+
+--
+Andreas Hofmeister (see <A  HREF="http://www.informatik.uni-freiburg.de/~hofmeist">http://www.informatik.uni-freiburg.de/~hofmeist</A>)
+
+"I can do it in Quake, why not in real life ?"
+                                (Lan Solaris (Illiad))
+</PRE>
+<PRE>
+--- ipp.src	Thu Mar 18 05:32:27 1999
++++ ipp.src.new	Thu Mar 18 05:30:42 1999
+@@ -59,9 +59,12 @@
+     print STDERR "  -m, --mapfile=&lt;file&gt;         use include file mapping table\n";
+     print STDERR "  -o, --outputfile=&lt;file&gt;      set output file instead of stdout\n";
+     print STDERR "  -v, --verbose                verbosity\n";
++
++    print STDERR "  -d, --depend                 dump dependencies\n";
+     exit(1);
+ }
+ $opt_v = 0;
++$opt_d = 0;
+ @opt_I = ('.');
+ @opt_D = ();
+ @opt_S = ();
+@@ -74,6 +77,7 @@
+ $Getopt::Long::getopt_compat = 0;
+ if (not Getopt::Long::GetOptions(
+     "v|verbose", 
++    "d|depend" ,
+     "S|sysincludedir=s@", 
+     "D|define=s@", 
+     "I|includedir=s@", 
+@@ -219,7 +223,22 @@
+             $found = 1;
+         }
+     }
+-    &amp;error("file not found: $file") if not $found;
++
++    if( not $found ) {
++      if( ! $opt_d ) {
++    	&amp;error("file not found: $file");
++      } else {
++	# while checking dependencies, only warn at missing files 
++
++    	&amp;warning("file not found: $file");
++        $id = &amp;CanonPath($file);
++
++	# forget the missing file 
++        undef($INCLUDES{$id});
++	return '';
++
++      }
++    }
+ 
+     #
+     #   stop if file was still included some time before
+@@ -437,19 +456,40 @@
+                      0, 1, '"', "\\", '"')             # the escapes, etc.
+           if $outbuf =~ m|/\*|;
+ 
+-#
+-#  create output file
+-#
+-if ($opt_o eq '-') {
+-    $out = new IO::Handle;
+-    $out-&gt;fdopen(fileno(STDOUT), "w");
+-}
+-else {
+-    $out = new IO::File;
+-    $out-&gt;open("&gt;$opt_o");
++# dependencies ?
++if( $opt_d ) {
++	
++    $depout = STDOUT;	# dependecy file as commandline argument ?
++
++    # print dependencies to stdout
++   
++    print $depout $opt_o . ": " ;
++    print $depout join(" " , @ARGV ) . "\\\n"  ;
++
++    # print a line for each included file
++    foreach $inc (keys(%INCLUDES)) {
++	print $depout "\t$inc \\\n" ;
++    }
++    print $depout "\n";
++
++} else {
++
++    # normal run - print preprocessed buffer
++
++    #
++    #  create output file
++    #
++    if ($opt_o eq '-') {
++        $out = new IO::Handle;
++        $out-&gt;fdopen(fileno(STDOUT), "w");
++    }
++    else {
++        $out = new IO::File;
++        $out-&gt;open("&gt;$opt_o");
++    }
++    print $out $outbuf;
++    $out-&gt;close();
+ }
+-print $out $outbuf;
+-$out-&gt;close();
+ 
+ #   die gracefully
+ exit(0);
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00499" HREF="msg00499.shtml">Re: dependeny dump for wml_p1_ipp</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00495" HREF="msg00495.shtml">Re: dependeny dump for wml_p1_ipp</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00496.shtml">Piece of news</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00498.shtml">Strange behaviour of &lt;big&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00495.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00499.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00497"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00497"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

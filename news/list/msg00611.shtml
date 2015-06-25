@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Running WML from WML? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 6 May 1999 12:19:15 +0200 (MET DST) -->
+<!--X-Message-Id: 19990506121717.A47700@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199905051645.SAA20155@ezili.sis.pasteur.fr -->
+<!--X-Reference: Pine.LNX.3.96.990508152719.751A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00611">Date Index</a>][<a href="thrd12.shtml#00611">Thread Index</a>]<br>
+[<A HREF="msg00610.shtml">Date Prev</A>][<A HREF="msg00612.shtml">Date Next</A>][<A HREF="msg00609.shtml">Thread Prev</A>][<A HREF="msg00615.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Running WML from WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 6 May 1999 12:17:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, May 08, 1999, Denis Barbier wrote:
+
+&gt; &gt; BTW, the same bug occurs if you run wml from an ePerl CGI as well. 
+&gt; &gt;  
+&gt; &gt; &gt; foreach $key (keys (%ENV)) {
+&gt; &gt; &gt;     if ($key =~ /^SCRIPT_SRC/) {
+&gt; &gt; &gt; 	delete $ENV{$key};
+&gt; &gt; &gt;     }
+&gt; &gt; &gt; }
+&gt; &gt; 
+&gt; &gt; And you need to delete VERSION_* as well (ePerl environment variables).
+&gt; 
+&gt; Ralf, could you explain why ePerl recursive calls are prohibited?
+&gt; I think the problem comes from the ``URL &lt;--&gt; real paths'' translation
+&gt; which must be performed when server side scripting. Stéphane showed how
+&gt; to work around this problem by clearing some environment variables, but
+&gt; there must be a better way.
+
+The problem is that the runtime mode of ePerl is determined from the CGI
+environment. So when you want to force a different mode the environment has to
+be cleaned. Perhaps WML should always run ePerl with --mode=FILTER?
+ 
+&gt; I put the modSSL web page on the list of WML generated web sites.
+
+Oh, thanks, Denis. I've totally forgot this.
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00615" HREF="msg00615.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00606" HREF="msg00606.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+<li><strong><A NAME="00609" HREF="msg00609.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00610.shtml">Re: Bug in gfont?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00612.shtml">Re: New WML-generated website: www.modssl.org</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00609.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00615.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00611"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00611"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

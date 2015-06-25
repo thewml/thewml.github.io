@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: some typos in help -->
+<!--X-From-R13: Hrerf Trerap <yvbaNargatvar.uh> -->
+<!--X-Date: Mon, 25 Feb 2002 16:01:43 +0100 (MET) -->
+<!--X-Message-Id: 3C7A5158.9020902@netngine.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02524">Date Index</a>][<a href="thrd51.shtml#02524">Thread Index</a>]<br>
+[<A HREF="msg02523.shtml">Date Prev</A>][<A HREF="msg02525.shtml">Date Next</A>][<A HREF="msg02520.shtml">Thread Prev</A>][<A HREF="msg02525.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>some typos in help</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Veres Ferenc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Feb 2002 15:59:36 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+First I want to say thanks for the very cool system, WML.
+I am new to it, not made anything, just learning the things
+and trying some examples and my works since 1.5 weeks.
+I decided to send the errors in help system. Later I will have
+questions. (I had a lot, but I always switch to new parts of
+the system to have an overall view first, and always forget
+the problems. :-)
+
+in documentation of wmd::des::navbar
+
+s/one point fot the/one point for the/
+s/There are two possible/There are three possible/
+s/my ($mycode, /my ($mycode);\nmy (/
+
+Will mail questions later. And some more errors in
+documentation if you like. Please check these and fix
+if you agree. (hope they are understandable)
+
+Congratulations for the great system, Mr. Engelshcall!
+
+Two question, what may pop up for beginners, so did
+for me as well:
+
+1. This is used to convert ONE wml file to one-or-more
+(pass9) html files. This is not clear in the first seek, please
+state it more clearly, and if this is true, please state that
+I have to make a little script or makefile to have all
+my pages processed. Currently I made a little shell
+script: for i in *.wml; do; wml $i; done. Is this the
+way? I was reading the overreview and docs millon
+times to understand this! Thought it can work with
+more input files (even if the docs says _one_) but
+overreview says, "generating complete webpages".
+Which means more than one input files, or what..
+
+2. The TEMPLATE system some examples use
+are VERY FINE. But this is not documented well!
+I spent 1 weeks on reading and testing to see, that
+I don't need system like:
+#include header
+&lt;some html stuff&gt;
+#include menupart
+&lt;other html stuff&gt;
+#include footer
+
+(like we did with our own similar but lame system
+and as we do with .shtml!) Please write documentation
+of the idea behind having a complete template
+and diverting the stuff, the body suff. This is clear
+only after reading _most_ of docs, and starting
+understnad the example sites! (not after 3 days)
+
+While if it was documented better, it would be
+easier for "beginners". Hope you agree.
+
+Thanks,
+Lion
+ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02525" HREF="msg02525.shtml">Re: some typos in help</A></strong>, <em>From:</em> Veres Ferenc</li>
+<li><strong><A NAME="02528" HREF="msg02528.shtml">Re: some typos in help</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02523.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02525.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02520.shtml">Re: php + wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02525.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02524"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02524"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Idea how not to need future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Tue, 4 Jul 2000 18:35:09 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007041610450.21905&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.10007032218590.330&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01782">Date Index</a>][<a href="thrd32.shtml#01782">Thread Index</a>]<br>
+[<A HREF="msg01781.shtml">Date Prev</A>][<A HREF="msg01783.shtml">Date Next</A>][<A HREF="msg01779.shtml">Thread Prev</A>][<A HREF="msg01785.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Idea how not to need future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 4 Jul 2000 16:43:45 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Matthias!
+
+On Mon, 3 Jul 2000, Matthias Bernhardt wrote:
+&gt; On Sun, 25 Jun 2000, Franz Knipp wrote:
+[ quote deleted ]
+&gt; &lt;define-container text&gt;
+&gt; &lt;font color="&lt;get-var color&gt;"&gt;%body&lt;/font&gt;
+&gt; &lt;/define-container&gt;
+
+I've been sure that somebody will understand the colors like this ;-)
+
+&lt;red&gt; and &lt;blue&gt; are only examples, you can also imagine &lt;table-version&gt;
+and &lt;text-version&gt; instead of this, for example...
+
+These two environments should have nothing in common.
+
+The `old´ (pre-mp4h) idea was to define an environment-variable which had
+to be evaluated in the following way:
+
+&lt;define-container text&gt;
+&lt;if-eq "&lt;get-var env&gt;" "red"  &lt;group
+	.... do something ...
+&gt;&gt;
+&lt;if-eq "&lt;get-var env&gt;" "blue"  &lt;group
+	.... do something ...
+&gt;&gt;
+&lt;/define-tag&gt;
+
+As you can imagine, the extension with another environment needed a lot of
+work in many tag-definitions and you had to fear to overwrite a working
+environment unintentionally.
+
+Therefore I created the idea of environments ;-)
+
+Another point of view: Imagine three different styles for your web-page: a
+text-only-version, a compact graphical version and an extensive graphical
+version... You want to write the content only once, with normal text,
+inside links done with &lt;href&gt;, images with &lt;img&gt; and so on... But
+depending on the style the right layout-environment is used. We go a
+little bit further: you want to make a rainbow-flower-power style. With
+environments you simple add an environment &lt;rainbow&gt; and define
+&lt;rainbow:text&gt;, &lt;rainbow:href&gt;, &lt;rainbow:img&gt; ;-)
+
+Let's come to an end: this idea was created more or less in January. Now
+we have a &lt;let&gt;-tag and I'll use it for this purpose ;-) because I want to
+name my tags as clear as possible, therefore I used, e. g. &lt;ptable:text&gt;
+or &lt;ptable:pic&gt; in a &lt;ptable&gt; container - &lt;text&gt; and &lt;pic&gt; would be even
+shorter (and ptable stands for phototable) ;-) (and I'll give up the idea
+of multi-level environments described in this old mail)
+
+Ok, I hope you understand my idea now
+
+Franz
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01785" HREF="msg01785.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01778" HREF="msg01778.shtml">Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01781.shtml">Re: [wml] Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01783.shtml">Multilingual title</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01779.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01785.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01782"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01782"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

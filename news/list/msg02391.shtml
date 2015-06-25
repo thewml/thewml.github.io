@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Organizing a "Lecture" in a Tree + Having a page flow. -->
+<!--X-From-R13: Euybzv Tvfu <fuybzvsNivcr.grpuavba.np.vy> -->
+<!--X-Date: Wed, 19 Sep 2001 12:54:20 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.10109191248280.25178&#45;100000@vipe.technion.ac.il -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02391">Date Index</a>][<a href="thrd48.shtml#02391">Thread Index</a>]<br>
+[<A HREF="msg02390.shtml">Date Prev</A>][<A HREF="msg02392.shtml">Date Next</A>][<A HREF="msg02390.shtml">Thread Prev</A>][<A HREF="msg02392.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Organizing a &quot;Lecture&quot; in a Tree + Having a page flow.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Shlomi Fish &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Sep 2001 13:00:34 +0200 (IST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi!
+
+I wrote a tool called QuaD-Pres
+(<A  HREF="http://vipe.technion.ac.il/~shlomif/quadpres/">http://vipe.technion.ac.il/~shlomif/quadpres/</A>) in Perl, which I used to
+assist me in creating HTML lectures. Now, the main feature of Quad-Pres
+is the ability to organize the lecture in a tree and to present
+latex2html-like "Next", "Prev" and "Up" buttons. It also has the ability
+to present the sub-tree emerging from the current node.
+
+Now, I learned WML only later, and discovered it had many features not
+present in Quad-Pres, which may prove useful instead of working with Raw
+HTML. However, if it doesn't has the features I just described, I'll have
+to stick with Quad-Pres or (better yet) port the relevant Quad-Pres APIs  
+to work with WML.
+
+Does anybody know of any pre-coded and/or standard solution that exists
+for WML?
+
+For your reference here are some lectures I prepared with Quad-Pres (in
+order of preparation):
+
+<A  HREF="http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/lecture1/">http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/lecture1/</A>
+<A  HREF="http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/lecture2/">http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/lecture2/</A>
+<A  HREF="http://vipe.technion.ac.il/~shlomif/lecture/Gimp/1/slides/">http://vipe.technion.ac.il/~shlomif/lecture/Gimp/1/slides/</A>
+<A  HREF="http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/lecture3/">http://vipe.technion.ac.il/~shlomif/lecture/Perl/Newbies/lecture3/</A>
+
+The latter is not completely finished, and the Gimp one lacks some
+material in the middle. I'd like to fix it when I have some time, but it
+is still usable as it is.
+
+Regards,
+
+	Shlomi Fish
+
+
+
+----------------------------------------------------------------------
+Shlomi Fish        shlomif@vipe.technion.ac.il 
+Home Page:         <A  HREF="http://t2.technion.ac.il/~shlomif/">http://t2.technion.ac.il/~shlomif/</A>
+Home E-mail:       shlomif@techie.com
+
+A more experienced programmer does not make less bugs. He just realizes
+what went wrong more quickly.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02390.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02392.shtml">Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02390.shtml">Re: configure does not find installed Perl modules</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02392.shtml">Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02391"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02391"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

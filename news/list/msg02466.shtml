@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: m4 und divert -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 Dec 2001 14:16:14 +0100 (MET) -->
+<!--X-Message-Id: 20011217142547.A11487@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 000801c186ee$27d39280$3300a8c0@TOnline -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02466">Date Index</a>][<a href="thrd50.shtml#02466">Thread Index</a>]<br>
+[<A HREF="msg02465.shtml">Date Prev</A>][<A HREF="msg02467.shtml">Date Next</A>][<A HREF="msg02465.shtml">Thread Prev</A>][<A HREF="msg02467.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: m4 und divert</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Dec 2001 14:25:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Dec 17, 2001 at 12:29:56PM +0100, Philipp Meisen wrote:
+&gt; Could someone gibe me an example, why I should use divert and m4?
+&gt; 
+&gt; Here my example, why I ask
+&gt; 
+&gt; with divert:
+&gt; {#TEST#:lalala:##}
+&gt; 
+&gt; Ausgabe: {#TEST#}
+&gt; 
+&gt; with m4:
+&gt; m4_define(TEST, lalala)
+&gt; 
+&gt; Ausgabe: TEST
+&gt; 
+&gt; I mean where is the different? In my opinion everything I can realize with m4 I also can realize with divert...
+
+As m4 has also its own diversions, I too believe that everything done
+with wml_p5_divert can be done with m4.
+But at least you do not have to learn m4 and spend time trying to figure
+why certain constructs do not work as expected.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02465" HREF="msg02465.shtml">m4 und divert</A></strong>, <em>From:</em> Philipp Meisen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02465.shtml">m4 und divert</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02467.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02465.shtml">m4 und divert</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02467.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02466"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02466"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

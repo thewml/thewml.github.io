@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux -->
+<!--X-From-R13: revpu.fpuhoregNzhpy.qr -->
+<!--X-Date: Tue, 15 Feb 2000 18:03:53 +0100 (MET) -->
+<!--X-Message-Id: 20000210202528.18820.qmail@erich.myip.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000208175423.19856A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01358">Date Index</a>][<a href="thrd28.shtml#01358">Thread Index</a>]<br>
+[<A HREF="msg01359.shtml">Date Prev</A>][<A HREF="msg01360.shtml">Date Next</A>][<A HREF="msg01347.shtml">Thread Prev</A>][<A HREF="msg01349.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 10 Feb 2000 21:25:28 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt;&gt; Problem Description:
+&gt;&gt; | Known Bug, i think:
+&gt;&gt; | WML is stripping Spaces after closing Tags.
+&gt;&gt; | This can be _very_ annoying especially after
+&gt;&gt; | &lt;/A&gt; Tags...
+&gt;&gt; | I'm using -O4
+&gt; 
+&gt; Indeed this is a known bug, but i forgot to put it on my TODO list.
+&gt; Could you tell me whether the patch below fixes this problem?
+&gt; You may apply it against wml_p8_htmlstrip as well.
+
+The patch seems to fix this bug.
+I've not noticed any new bugs after applying it.
+
+THANKS for this fast response and this great software to all developers!
+
+cu
+Erich
+
+---
+                                Erich Schubert
+               Projektleitung Bürgernetz München-Land - Technik
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01347" HREF="msg01347.shtml">Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01359.shtml">Re: WML port to Win32</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01360.shtml">Re: WML port to Win32</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01347.shtml">Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux potato</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01349.shtml">A few questions on using wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01358"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01358"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

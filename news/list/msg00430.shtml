@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.6.8, debian linux -->
+<!--X-From-R13: fgvrtryrNvasbezngvx.hav&#45;servohet.qr -->
+<!--X-Date: Mon, 8 Mar 1999 16:05:50 +0100 (CET) -->
+<!--X-Message-Id: 199903081201.NAA26369@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail9.shtml#00430">Date Index</a>][<a href="thrd10.shtml#00430">Thread Index</a>]<br>
+[<A HREF="msg00429.shtml">Date Prev</A>][<A HREF="msg00431.shtml">Date Next</A>][<A HREF="msg00429.shtml">Thread Prev</A>][<A HREF="msg00431.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.6.8, debian linux</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 8 Mar 1999 13:01:13 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.6.8
+Operating System: debian linux
+
+Problem Description:
+| 	hallo, 	
+| 
+| 	in phase 4 deines wml-packetes scheint sich ein
+| kleiner bug eingeschlichen zu haben. folgende eingabe
+| fuehrt naemlich bei mir dazu, dass sich der computer
+| ne ganze weile mit phase 4 beschaeftigt, bevor er meint,
+| dass sein speicher jetzt alle sei.
+| 
+| &lt;use "all.wml"&gt;
+| &lt;symbol donald "donald.jpg"&gt;
+| donald
+| 
+| ich vermute, dass nach dem ersetzen eines symbols
+| am beginn der ersetzungsstrings weitergemacht wird,
+| statt am ende. im obigen beispiel wuerde dann immer
+| wieder "donald" durch "donald.jpg" ersetzt werden, bis
+| der speicher mit ".jpg"'s vollaeuft.
+| 
+| wenn ich mich richtig erinnere, hast du zwar die phase
+| 4 nicht selbst programmiert, daber ich denke, dass
+| diese bugmeldung dich trotzdem interessiert, oder?
+| 
+| 	viele gruesse,
+| 	
+| 		patrick
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00431" HREF="msg00431.shtml">Re: [BUG REPORT] WML 1.6.8, debian linux</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00429.shtml">[HUMOR] Another WML and a nice confusion</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00431.shtml">Re: [BUG REPORT] WML 1.6.8, debian linux</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00429.shtml">[HUMOR] Another WML and a nice confusion</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00431.shtml">Re: [BUG REPORT] WML 1.6.8, debian linux</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail9.shtml#00430"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#00430"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

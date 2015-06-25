@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML 1.7.2: Undocumented feature in wml::des::navbar -->
+<!--X-From-R13: <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 20 Sep 1999 16:49:47 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990920164713.25541A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m21zbtk9lu.fsf@chef.niedermann.bb.bawue.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00980">Date Index</a>][<a href="thrd21.shtml#00980">Thread Index</a>]<br>
+[<A HREF="msg00979.shtml">Date Prev</A>][<A HREF="msg00981.shtml">Date Next</A>][<A HREF="msg00979.shtml">Thread Prev</A>][<A HREF="msg00981.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML 1.7.2: Undocumented feature in wml::des::navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 20 Sep 1999 16:51:41 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 20 Sep 1999, Hans Ulrich Niedermann wrote:
+
+&gt; Hi all,
+&gt; 
+&gt; in wml::des::navbar(3) a description of the "nohints" param to the
+&gt; &lt;navbar:render&gt; tag is missing. My suggestion is to add 
+[...]
+
+You're right, your suggestion has been put into the navbar documentation.
+If you have other comments on documentation, please send them now
+because the next release will come soon.
+
+Thanx
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00979" HREF="msg00979.shtml">WML 1.7.2: Undocumented feature in wml::des::navbar</A></strong>, <em>From:</em> Hans Ulrich Niedermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00979.shtml">WML 1.7.2: Undocumented feature in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00981.shtml">emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00979.shtml">WML 1.7.2: Undocumented feature in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00981.shtml">emh: checking for existing functions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00980"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd21.shtml#00980"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

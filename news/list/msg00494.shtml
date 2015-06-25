@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Always substitutions ... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 17 Mar 1999 17:52:21 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990317173107.22304A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 36EFC981.40A2CFC7@irisa.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00494">Date Index</a>][<a href="thrd11.shtml#00494">Thread Index</a>]<br>
+[<A HREF="msg00493.shtml">Date Prev</A>][<A HREF="msg00495.shtml">Date Next</A>][<A HREF="msg00491.shtml">Thread Prev</A>][<A HREF="msg00492.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Always substitutions ...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Mar 1999 17:46:56 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 17 Mar 1999, Frederic Le Mouel wrote:
+
+&gt; I always have problems with substitution in combining navbar
+&gt; and lang :
+&gt; 
+&gt; 	&lt;navbar:button id   = Truc
+&gt; 		       img  = &lt;lang:star: Icons-*&gt;-*.gif
+&gt; 		       txt  = "&lt;lang:en: English&gt;&lt;lang:fr: Francais&gt;"
+&gt; 		       hint = "&lt;lang:en: English&gt;&lt;lang:fr: Francais&gt;"
+&gt; 		       url  = &lt;lang:star: ./Welcome.html.*&gt;&gt;
+&gt; 
+&gt; Does I miss something ?
+
+No, you're right. The colon is the separator for languages and images,
+and can not be mixed.
+Fortunately, images and languages selections do not happen during the
+same pass. If you want, you can try this funnny trick:
+     img  = m4_replace(&lt;subst-in-string &lt;lang:star: Icons-*&gt; ":" ";"&gt;-*.gif)
+after having defined
+&lt;m4&gt;
+
+m4_define(`m4_replace',`m4_translit($1,;,:)')
+&lt;/m4&gt;
+
+The empty line is to fix a bug of wml-1.6.8 (already fixed in wml-SNAP)
+The subst-in-string is for replacing colons by semi-colons during the
+pass2. Then the pass3 performs the navigation tasks, and pass4 put the
+colons back ;o)
+You may also use pass6 to this final substitution.
+
+    Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00491" HREF="msg00491.shtml">Always substitutions ...</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00493.shtml">dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00495.shtml">Re: dependeny dump for wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00491.shtml">Always substitutions ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00492.shtml">List of WML generated sites</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00494"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00494"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

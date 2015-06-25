@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Too complex (was: e) or f) : unknown tags parsing) -->
+<!--X-From-R13: [ngguvnf Preauneqg <zngguoNthkuntra.arg> -->
+<!--X-Date: Tue, 30 May 2000 13:25:20 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.10005301000351.2251&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000529171536.28615B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01661">Date Index</a>][<a href="thrd34.shtml#01661">Thread Index</a>]<br>
+[<A HREF="msg01660.shtml">Date Prev</A>][<A HREF="msg01663.shtml">Date Next</A>][<A HREF="msg01659.shtml">Thread Prev</A>][<A HREF="msg01665.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Too complex (was: e) or f) : unknown tags parsing)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Matthias Bernhardt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 10:07:27 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 29 May 2000, Denis Barbier wrote:
+
+DB&gt; &gt; &gt; in xhtml it is invalid to have lone tags like &lt;BR&gt; or &lt;HR&gt; they
+DB&gt; &gt; &gt; musst be called &lt;BR/&gt; and &lt;HR/&gt; resectively [...]
+
+DB&gt; Tobias told me i misunderstood his point, here is some clarification.
+DB&gt; He requested that unknown tags are parsed according to xhtml rules, i.e.
+DB&gt; they are complex unless a trailing slash appears in attributes list,
+DB&gt; [...]
+DB&gt; Could anyone evaluate pros and cons and send feedback?
+
+I would really like to, but I have to admit that you are taking
+so many things into consideration now, that I just can't follow.
+Just try to forget what I've added to the discussion up to now,
+find a good solution and write a good documentation at the end,
+which will explain to me and perhaps some other people who focus
+on just several (three or so) Web-techniques, why you've chosen
+what you will have chosen until then (hopefully).
+
+Yours Matthias &lt;- being completely dazzeled at the moment
+
+
+----------------------------------------------------------------
+<A  HREF="http://www.guxhagen.net/matthb/">http://www.guxhagen.net/matthb/</A>       <A  HREF="mailto:matthb@guxhagen.net">mailto:matthb@guxhagen.net</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01665" HREF="msg01665.shtml">Re: Too complex (was: e) or f) : unknown tags parsing)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01653" HREF="msg01653.shtml">[wml] e) or f) : unknown tags parsing</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01660.shtml">Re: wishlist: text in rollover,navbar buttons and class for anchor tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01663.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01659.shtml">Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01665.shtml">Re: Too complex (was: e) or f) : unknown tags parsing)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01661"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01661"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I like this navbar -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Fri, 9 Apr 1999 15:19:47 +0200 (MET DST) -->
+<!--X-Message-Id: 87aewilyps.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990408144525.32691A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00559">Date Index</a>][<a href="thrd13.shtml#00559">Thread Index</a>]<br>
+[<A HREF="msg00558.shtml">Date Prev</A>][<A HREF="msg00561.shtml">Date Next</A>][<A HREF="msg00557.shtml">Thread Prev</A>][<A HREF="msg00566.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I like this navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 09 Apr 1999 15:17:51 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; I think you should not mix button definition and image generation. 
+[...]
+&gt; It's easier to debug and maintain.
+
+I'm not sure about both things.
+
+The definition of the apperance of the button can be viewed as part of
+its definition (we are talking about someting derived from a wml::des
+package, so html purism is not really adequate here), and if you do,
+it appears unnatural to separate the two. The actual image generation
+is done during rendering, not during the definition.
+
+And I think it is easier to debug and maintain this way. There are
+exactly 6 (in words: six) statements in navbar-FH.wml related to image
+genaration (a protect/restore pair, one each to put the information
+into the $CFG hash and read it out again, and two conditional calls of
+the appropriate function).
+If I remove them I have to reimplement all the &lt;lang:star: *&gt; and
+imgstar image name and text splitting things in every template file
+(or does &lt;gfont notag&gt;&lt;de: Deutsch&gt;&lt;en: English&gt;&lt;/gfont&gt; do what you
+want?), this seems rather clumsy and error prone in comparision to my
+current solution.
+
+But I am not dogmatic about this, in fact I do not even use images for
+my buttons right now :-).
+
+Yours, Florian.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00566" HREF="msg00566.shtml">Re: I like this navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00557" HREF="msg00557.shtml">Re: I like this navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00558.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00561.shtml">bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00557.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00566.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00559"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00559"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

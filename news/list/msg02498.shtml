@@ -1,0 +1,169 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested slices and variables -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 9 Feb 2002 23:23:07 +0100 (MET) -->
+<!--X-Message-Id: 20020209233241.A30561@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020209194708.A41097@itesec.hsc.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02498">Date Index</a>][<a href="thrd50.shtml#02498">Thread Index</a>]<br>
+[<A HREF="msg02497.shtml">Date Prev</A>][<A HREF="msg02499.shtml">Date Next</A>][<A HREF="msg02496.shtml">Thread Prev</A>][<A HREF="msg02499.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested slices and variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 9 Feb 2002 23:32:41 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, Feb 09, 2002 at 07:47:08PM +0100, Ghislaine Labouret wrote:
+&gt; When nesting languages slices into another one like this :
+&gt; 
+&gt; &lt;en: &lt;fr: français&gt;&lt;en: english&gt;&gt;
+&gt; 
+&gt; the output is, as I expected :
+&gt; - nothing in the .fr file
+&gt; - "english" in the .en file
+&gt; 
+&gt; But, if the inside slices come from a variable, like this :
+&gt; 
+&gt; &lt;set-var foo="&lt;fr: français&gt;&lt;en: english&gt;"&gt;
+&gt; &lt;en: &lt;get-var foo&gt;&gt;
+&gt; 
+&gt; the output becomes this :
+&gt; - "français" in the .fr file
+&gt; - "françaisenglish" in the .en file
+&gt; 
+&gt; Is this a feature or a bug?
+
+Good question ;)
+
+Basically,
+  &lt;fr: francais&gt;&lt;en: english&gt;
+is replaced during pass 2 by
+  [LANG_FR:francais:LANG_FR][LANG_EN:english:LANG_EN]
+which is splitted into several files by wml_p9_slice.
+Now if you look into wml_p9_slice documentation, it is clear that
+
+  %!slice -o UNDEF+LANG_EN:foo.en -o UNDEF+LANG_FR:foo.fr
+  [LANG_EN:[LANG_FR:francais:LANG_FR][LANG_EN:english:LANG_EN]:LANG_EN:]
+
+gives:
+
+  === foo.en ===
+  francaisenglish
+  === foo.fr ===
+  francais
+ 
+But maybe there are other slices, so a better alternative is:
+
+  %!slice -o (ALL-LANG_*)+LANG_EN:foo.en -o (ALL-LANG_*)+LANG_FR:foo.fr
+  [LANG_EN:[LANG_FR:francais:LANG_FR][LANG_EN:english:LANG_EN]:LANG_EN:]
+
+which gives the same output here.
+
+As this is not what might be expected, wml::std::lang has been slightly
+modified to use a language stack, and only output strings if it is not
+already included inside another language slice.
+So 
+  &lt;en: &lt;fr: francais&gt;&lt;en: english&gt;&gt;
+is in fact replaced by
+  [LANG_EN:english:LANG_EN]
+because FR slice is skipped, and output is correct.
+
+But with variable expansion,
+  &lt;set-var foo="&lt;fr: français&gt;&lt;en: english&gt;"&gt;
+  &lt;en: &lt;get-var foo&gt;&gt;
+gives
+  &lt;set-var foo="[LANG_FR:français:LANG_FR][LANG_EN:english:LANG_EN]"&gt;
+  [LANG_EN:[LANG_FR:français:LANG_FR][LANG_EN:english:LANG_EN]:LANG_EN]
+and previous problems are back because WML does not know of nested
+language slices.
+
+As you see, this is only a workaround to hide problems to end users,
+which is sometimes confusing.
+
+You could use variables if their content is not expanded until it is
+printed at the desired place, by replacing &lt;set-var&gt; tags by
+&lt;set-var-verbatim&gt;.  This way, WML can detect nested slices again.
+
+Another (much better) solution is to redefine slice selection: instead of
+  %!slice -o LANG_FRuUNDEF:$(WML_SRC_BASENAME).html.fr -o LANG_ENuUNDEF:$(WML_SRC_BASENAME).html.en
+write
+  %!slice -o (LANG_FRuUNDEF)-LANG_*{FR}:$(WML_SRC_BASENAME).html.fr -o (LANG_ENuUNDEF)-LANG_*{EN}:$(WML_SRC_BASENAME).html.en
+where `LANG_*{FR}' means union of all LANG_* slices except LANG_FR.
+This is different from `LANG_*-LANG_FR', it's why a new operator was
+needed.
+
+I will change default slice selection to use this operator.
+
+For those who like experimental and undocumented features,
+  &lt;lang:star:slice: (LANG_**uUNDEF)-LANG_*{**}:$(WML_SRC_BASENAME).html.* &gt;
+write the previous %!slice line.  Double stars are replaced by language
+id in uppercase letters when they appear before the colon delimiter.
+It has never been documented because I do not like this syntax, so feel
+free to send improvements.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02496" HREF="msg02496.shtml">Nested slices and variables</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02497.shtml">Re: Reverse engineer a website?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02499.shtml">Re: Nested slices and variables</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02496.shtml">Nested slices and variables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02499.shtml">Re: Nested slices and variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02498"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02498"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

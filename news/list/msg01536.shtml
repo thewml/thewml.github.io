@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WMK dependencies -->
+<!--X-From-R13: Fnznf Bncc <gcnccNzngniarg.uh> -->
+<!--X-Date: Wed, 19 Apr 2000 19:34:48 +0200 (MET DST) -->
+<!--X-Message-Id: 20000419083433.A1521@matavnet.hu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.10004182141320.322&#45;100000@yamazaki.guxhagen.net -->
+<!--X-Reference: Pine.LNX.3.96.1000418230406.31391B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01536">Date Index</a>][<a href="thrd23.shtml#01536">Thread Index</a>]<br>
+[<A HREF="msg01535.shtml">Date Prev</A>][<A HREF="msg01537.shtml">Date Next</A>][<A HREF="msg01531.shtml">Thread Prev</A>][<A HREF="msg01533.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WMK dependencies</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tamas Papp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 19 Apr 2000 08:34:33 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Apr 18, 2000 at 11:11:43PM +0200, Denis Barbier wrote:
+
+&gt; &gt; Since WMK already does all this interpretation, would it make
+&gt; &gt; sense to include a switch that lets wmk output the dependencies
+&gt; &gt; found rather than actually remaking the file?
+&gt; &gt; Would it make sense then to add parameters that allow to choose
+&gt; &gt; whether or not to care for "system files", as well in depend
+&gt; &gt; mode as in normal operation?
+&gt; &gt; Would it otherwise make sense to write an auxiliary program,
+&gt; &gt; called e.g. "wmakedepend" with the full functionality of
+&gt; &gt; makedepend combined with the understanding of wml?
+&gt; 
+&gt; Everything useful makes sense ;-)
+&gt; I guess you missed the -M flag of wm{k,l} which implements all the
+&gt; features you asked for.
+
+I use this switch with cook, a sophisticated make replacement. I found
+cook very useful for maintaining things with a lot of dependencies,
+and it's syntax is a lot saner than make's.
+
+Regards,
+
+Tamas
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01530" HREF="msg01530.shtml">Re: WMK dependencies</A></strong>, <em>From:</em> Matthias Bernhardt</li>
+<li><strong><A NAME="01531" HREF="msg01531.shtml">Re: WMK dependencies</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01535.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01537.shtml">Re: [ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01531.shtml">Re: WMK dependencies</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01533.shtml">Re: WMK dependencies</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01536"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01536"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

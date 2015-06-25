@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml::std::case (wml 2.0.4) -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Wed, 27 Sep 2000 14:08:29 +0200 (MET DST) -->
+<!--X-Message-Id: 200009271208.VAA26837@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01991">Date Index</a>][<a href="thrd40.shtml#01991">Thread Index</a>]<br>
+[<A HREF="msg01990.shtml">Date Prev</A>][<A HREF="msg01992.shtml">Date Next</A>][<A HREF="msg01990.shtml">Thread Prev</A>][<A HREF="msg01993.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml::std::case (wml 2.0.4)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 27 Sep 2000 21:08:12 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+  This is not a serious problem.
+"&lt;case:upper&gt;&lt;/PRE&gt;&lt;/case:upper&gt;" isn't upper on wml 2.0.4.
+wml 2.0.0 is OK.
+
+Built Environment:
+    Host: i586-pc-linux-gnu2
+    Perl: 5.005 (/usr/bin/perl) jperl5.005_03-990822 EUC version
+
+---- &lt;&lt; input 
+#use wml::std::case
+&lt;case:upper&gt;ORIGINAL&lt;pre&gt;LOWER&lt;/pre&gt;&lt;PRE&gt;UPPER&lt;/PRE&gt;&lt;/case:upper&gt;
+&lt;case:lower&gt;original&lt;pre&gt;lower&lt;/pre&gt;&lt;PRE&gt;upper&lt;/PRE&gt;&lt;/case:lower&gt;
+
+---- &gt;&gt; output
+ORIGINAL&lt;PRE&gt;LOWER&lt;/pre&gt;&lt;PRE&gt;UPPER&lt;/pre&gt;
+original&lt;pre&gt;lower&lt;/pre&gt;&lt;pre&gt;upper&lt;/pre&gt;
+
+Thanks!
+-- Nobuyuki Tsuchimura
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01993" HREF="msg01993.shtml">Re: wml::std::case (wml 2.0.4)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01990.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01992.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01990.shtml">Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01993.shtml">Re: wml::std::case (wml 2.0.4)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01991"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01991"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

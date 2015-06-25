@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [PATCH] &#45;o flags in .wmkrc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 26 May 1999 13:02:30 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990526120009.14570B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1aeuskytk.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00696">Date Index</a>][<a href="thrd9.shtml#00696">Thread Index</a>]<br>
+[<A HREF="msg00695.shtml">Date Prev</A>][<A HREF="msg00697.shtml">Date Next</A>][<A HREF="msg00695.shtml">Thread Prev</A>][<A HREF="msg00699.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [PATCH] -o flags in .wmkrc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 26 May 1999 12:56:36 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 26 May 1999, Fritz Zaucker wrote:
+
+&gt; Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+&gt; 
+&gt; Great, I'll try to apply that to our current version.
+&gt; I agree, the -N option can go away with this.
+
+I made some changes in wmk.src this morning, maybe you could get
+  <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_frontend/wmk.src">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_frontend/wmk.src</A>
+
+&gt; P.S.: One of the problems with wmk is that it "pretends" to be more
+&gt;       intelligent as it really is. It doesn't handle include files and
+&gt;       stuff like that. This might not be obvious to a user that
+&gt;       doesn't know much about WML. I am not sure that this can be
+&gt;       solved at all, as it would mean implementing make.
+&gt; 
+&gt;       Perhaps a Makefile-Generator would be a solution?
+
+It's a long term issue.
+With wml-1.7.0, one could easily write Makefile fragments via the -M
+option.
+
+After 1.7.0, i plan to implement a more sophisticated mechanism.
+WMk could read and write those Makefile fragments, which contain
+dependancies.
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00699" HREF="msg00699.shtml">Re: [PATCH] -o flags in .wmkrc</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00695" HREF="msg00695.shtml">Re: [PATCH] -o flags in .wmkrc</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00695.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00697.shtml">Slice-1.3.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00695.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00699.shtml">Re: [PATCH] -o flags in .wmkrc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00696"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00696"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

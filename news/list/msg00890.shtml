@@ -1,0 +1,165 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ./configure &#45;&#45;prefix fails -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Thu, 5 Aug 1999 23:33:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.10.9908052324430.17717&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990805224531.2577B&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00890">Date Index</a>][<a href="thrd18.shtml#00890">Thread Index</a>]<br>
+[<A HREF="msg00889.shtml">Date Prev</A>][<A HREF="msg00891.shtml">Date Next</A>][<A HREF="msg00888.shtml">Thread Prev</A>][<A HREF="msg00887.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ./configure --prefix fails</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 5 Aug 1999 23:32:52 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Today you sent me mail regarding Re: ./configure --prefix fails:
+
+*&gt; On Fri, 30 Jul 1999, Tobias Oetiker wrote:
+*&gt; 
+*&gt; &gt; Folks,
+*&gt; &gt; 
+*&gt; &gt; I just tried to compile wml (latest SNAP) on several systems here at SDSC and found that
+*&gt; &gt; there are still problems with the --prefix for systems where siteperl is not
+*&gt; &gt; installed in a standard location ... there seem to be some issues with
+*&gt; &gt; MakeMaker in connection with regexp maching on the site-perl path ...
+*&gt; &gt; 
+*&gt; &gt; Anyhow, I suggest to add some apropriate perl -0777 -p -e 's|....|ddd|g' code
+*&gt; &gt; to fix the output of Maefile.PL to make sure the modules actually get
+*&gt; &gt; installed within the the wml install tree and not in the site-perl directory
+*&gt; &gt; .. 
+*&gt; 
+*&gt; Hi tobias,
+*&gt; 
+*&gt; could you send me more infos on those systems, e.g. the Config.pm and the
+*&gt; location of your perl system?
+
+for example this one:
+
+&gt; perl -V
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=freebsd, osvers=4.0-current, archname=i386-freebsd
+    uname='freebsd freefall.freebsd.org 4.0-current freebsd 4.0-current #0:
+$Date: 1999/05/
+05 19:42:40 $'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='undef', gccversion=egcs-2.91.66 19990314 (egcs-1.1.2
+release)
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=undef, usevfork=true
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags ='-Wl,-E'
+    libpth=/usr/lib
+    libs=-lm -lc -lcrypt
+    libc=/usr/lib/libc.so, so=so, useshrplib=true, libperl=libperl.so.3
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-DPIC -fpic', lddlflags='-shared'
+
+
+Characteristics of this binary (from libperl): 
+  Built under freebsd
+  Compiled at May 18 1999 02:56:17
+  @INC:
+    /usr/libdata/perl/5.00503/mach
+    /usr/libdata/perl/5.00503
+    /usr/local/lib/perl5/site_perl/5.005/i386-freebsd
+    /usr/local/lib/perl5/site_perl/5.005
+    .
+
+------------------------------------
+the problem is somewhere in perl/5.00503/ExtUtils/MM_Unix.pm
+
+this module tries to handle the PREFIX argument in MakeMaker it does this by
+regexp matching to the @INC contents (I thing) unfortunately it fails
+sometimes and the modules will endup in the site_perl dir instead of below
+PREFIX ...
+
+cheers
+tobi
+ 
+*&gt; Denis
+*&gt; 
+*&gt; 
+*&gt; ______________________________________________________________________
+*&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+*&gt; Official Support Mailing List                   sw-wml@engelschall.com
+*&gt; Automated List Manager                       majordomo@engelschall.com
+*&gt; 
+
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00888" HREF="msg00888.shtml">Re: ./configure --prefix fails</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00889.shtml">Re: gfont SEGV, patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00891.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00888.shtml">Re: ./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00887.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00890"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00890"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

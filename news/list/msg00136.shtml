@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.6 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Thu, 25 Jun 1998 14:02:30 +0200 (CEST) -->
+<!--X-Message-Id: 19980625140227.A6605@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00136">Date Index</a>][<a href="thrd4.shtml#00136">Thread Index</a>]<br>
+[<A HREF="msg00135.shtml">Date Prev</A>][<A HREF="msg00137.shtml">Date Next</A>][<A HREF="msg00139.shtml">Thread Prev</A>][<A HREF="msg00142.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 25 Jun 1998 14:02:27 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Now available:
+
+Website META Language, Version 1.6.6
+<A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+ <A  HREF="ftp://ftp.engelschall.com/sw/wml/">ftp://ftp.engelschall.com/sw/wml/</A>
+
+The entry from the ChangeLog file:
+
+  Changes between 1.6.5 and 1.6.6:
+      970617 - upgrade CSS2 document to latest REC 12-05-1998 version
+             - fix dates of standard documents in WMd document list
+             - Upgraded Getopt::Long from 2.16 to 2.17
+      970618 - Fixed wml::std:toc which caused problems with &lt;Hx&gt;&lt;/Hx&gt; blocks.
+               The closing tag was always &lt;/H1&gt;.  [Thanks to Andy Hawkins
+               &lt;andy@gently.demon.co.uk&gt; for patch]
+             - Add support to WMd's search feature for compressed/gzipped
+               manual pages (for instance under FreeBSD port they are gzipped)
+      970622 - Fixed the hostname determine stuff in the configure script
+               [Thanks to Clayton Wheeler &lt;cswheeler@halcyon.com&gt; and Aleksi
+               Niemelä &lt;AleksiN@hex.fi&gt; for hints]
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00135.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00137.shtml">Re: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00139.shtml">RE: question regarding dependencies with wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00142.shtml">XML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00136"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00136"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,89 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont problem... -->
+<!--X-From-R13: Xbua Pnmvx <wfoNpf.oebja.rqh> -->
+<!--X-Date: Mon, 26 Jul 1999 22:15:14 +0200 (MET DST) -->
+<!--X-Message-Id: 199907262014.QAA05139@no.cs.brown.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00872">Date Index</a>][<a href="thrd18.shtml#00872">Thread Index</a>]<br>
+[<A HREF="msg00871.shtml">Date Prev</A>][<A HREF="msg00873.shtml">Date Next</A>][<A HREF="msg00874.shtml">Thread Prev</A>][<A HREF="msg00873.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont problem...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: John Bazik &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Jul 1999 16:14:39 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I downloaded the latest gfont distribution, with the big-endian patch.
+Works perfectly!
+
+One problem: I think the precompiled fonts are little-endian.  I
+regenerated them for myself and all is well.  Include two sets or
+generate during the build?
+
+[I've only been skimming the mailing list the last few days, so pardon
+me if this has been pointed out already and I missed it...]
+
+John Bazik
+jsb@cs.brown.edu
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00873" HREF="msg00873.shtml">Re: gfont problem...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00871.shtml">html2wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00873.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00874.shtml">Re: html2wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00873.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00872"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00872"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

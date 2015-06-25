@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Minor fix for command line options -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 18 Jul 1999 23:03:19 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990718223632.1688C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199907161459.PAA25758@triad.bpfh.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00861">Date Index</a>][<a href="thrd18.shtml#00861">Thread Index</a>]<br>
+[<A HREF="msg00860.shtml">Date Prev</A>][<A HREF="msg00862.shtml">Date Next</A>][<A HREF="msg00856.shtml">Thread Prev</A>][<A HREF="msg00857.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Minor fix for command line options</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 18 Jul 1999 23:02:23 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 16 Jul 1999, Simon Burr wrote:
+
+&gt; Whilst playing with wml today I came across the following - whilst the
+&gt; wml usage info says that the safe mode can be used by giving -s or --safe,
+&gt; the getopts function is told that the options are -s or -speedup. The following
+&gt; patch, against the current CVS tree, fixes this,
+
+Hi Simon,
+
+i commit it (and apply your patch to wmk.src too)
+Thanx for your report.
+
+--
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00856" HREF="msg00856.shtml">Minor fix for command line options</A></strong>, <em>From:</em> Simon Burr</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00860.shtml">Re: print &quot;&lt;DIV ...&quot;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00862.shtml">Re: [BUG REPORT] WML 1.7.2, Linux RH 6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00856.shtml">Minor fix for command line options</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00857.shtml">navbar problem with non-HTTP URLs (patch included)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00861"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00861"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

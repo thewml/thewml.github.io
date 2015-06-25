@@ -1,0 +1,134 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: toc for <h1> only? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 30 Dec 1999 12:11:11 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991230115031.21913A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 386B15D5.42455E2A@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01248">Date Index</a>][<a href="thrd26.shtml#01248">Thread Index</a>]<br>
+[<A HREF="msg01247.shtml">Date Prev</A>][<A HREF="msg01249.shtml">Date Next</A>][<A HREF="msg01247.shtml">Thread Prev</A>][<A HREF="msg01250.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: toc for &lt;h1&gt; only?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 30 Dec 1999 12:18:48 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 30 Dec 1999, Werner Heuser wrote:
+
+[...]
+&gt; Hi Denis,
+&gt; 
+&gt; thank you for your fast and detailed response. I guess I have
+&gt; catched the idea of &lt;toc_hN&gt; now.
+&gt; 
+&gt; Still I would like to use a ToC which contains &lt;h1&gt; headers only.
+&gt; As I can see from your example above, WML knows about different
+&gt; &lt;hN&gt; levels and uses it for the indentation of the ToC. Can
+&gt; someone tell me how I can use this feature or another
+&gt; mechanism to build a smaller ToC?
+
+I did not think about it. One solution is to write headers with a
+starred form, e.g. &lt;h2*&gt;Section 2&lt;/h2*&gt;, starred tags are
+not interpreted by WML.
+
+An alternative is to redefine how headers are written into ToC.
+You may try
+  #use wml::std::toc
+  &lt;define-container toc_section whitespace=delete&gt;
+  &lt;when &lt;lt %0 2&gt;&gt;
+  #  Below is the original replacement text of toc_section
+  %body
+  &lt;/when&gt;
+  &lt;/define-container&gt;
+
+  &lt;h1&gt;Chapter 1&lt;/h1&gt;
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+  &lt;h1&gt;Chapter 2&lt;/h1&gt;
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+  &lt;toc&gt;
+
+But there are unwanted newlines. To remove them, you may write
+  {:[[s/\n\n+/\n/g]]
+  &lt;toc&gt;
+  :}
+
+When you render ToC with another style, e.g. style=ol, you have to
+adjust the definition of toc_section. Use &lt;function-def toc_section&gt;
+to print its definition and paste it into the newer one.
+
+Looks ugly :-(
+I will try to improve it in future releases.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01250" HREF="msg01250.shtml">Re: toc for &lt;h1&gt; only?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01247" HREF="msg01247.shtml">Re: toc for &lt;h1&gt; only?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01247.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01249.shtml">WML-Server down?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01247.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01250.shtml">Re: toc for &lt;h1&gt; only?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01248"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01248"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

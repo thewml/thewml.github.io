@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml with scripting languages -->
+<!--X-From-R13: Osnz Otobqvxr <nsnzNpbec.tblbtv.pbz> -->
+<!--X-Date: Tue, 6 Jun 2000 11:13:45 +0200 (MET DST) -->
+<!--X-Message-Id: 393CC1DE.5267BB7B@corp.goyogi.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 393C6862.48D06578@corp.goyogi.com -->
+<!--X-Reference: 20000606081020.A1131@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01699">Date Index</a>][<a href="thrd35.shtml#01699">Thread Index</a>]<br>
+[<A HREF="msg01698.shtml">Date Prev</A>][<A HREF="msg01700.shtml">Date Next</A>][<A HREF="msg01698.shtml">Thread Prev</A>][<A HREF="msg01700.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml with scripting languages</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Afam Agbodike &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 06 Jun 2000 02:18:22 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thanks for the offer, but I don't think that's necessary... It seems
+that wml only replaces the backslashes in the php scripts... so not
+every single page needs to be changed... only pages with backslashes...
+
+Plus, I'd rather work with a pristine version of the code... since it
+will simplify upgrades.
+
+I guess I'll have to live with the protect tag :-)
+
+Denis Barbier wrote:
+&gt; 
+&gt; On Mon, Jun 05, 2000 at 07:56:34PM -0700, Afam Agbodike wrote:
+&gt; 
+&gt; &gt; I'm administering a site with php as the scripting language, And I'd
+&gt; &gt; like to use wml to generate all sections of the site that do not use
+&gt; &gt; dynamic content, but still be able to scripting in the pages. The
+&gt; &gt; problem is that wml changes some escape characters, which need to be
+&gt; &gt; preserved within the script areas. I've already found that I can use the
+&gt; &gt; &lt;protect&gt; tag in these areas, but that is not sufficient, as I would
+&gt; &gt; have to change every single file to have the protect tag around the
+&gt; &gt; script areas.
+&gt; &gt;
+&gt; &gt; my scripts use &lt;? and ?&gt; as the opening and closing delimiters, it seems
+&gt; &gt; that there should be a way to prevent wml from acting within these
+&gt; &gt; regions, but I haven't found anything in the documentation describing
+&gt; &gt; how to do so.
+&gt; &gt;
+&gt; &gt; Could somebody please explain how this can be done?
+&gt; 
+&gt; Hi Afam,
+&gt; 
+&gt; the only simple solution is with &lt;protect&gt;. If you know Perl, you may cut and
+&gt; paste the protect and unprotect routines in the wml binary, put protect in a
+&gt; prolog filter (called with -P) and unprotect in a post-processor program
+&gt; (called with -E).
+&gt; 
+&gt; This feature will be added in next release. But if you are running WML 2.x, i
+&gt; could send a patch against mp4h to implement it.
+&gt; 
+&gt; --
+&gt; Denis Barbier
+&gt; WML maintainer
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01697" HREF="msg01697.shtml">wml with scripting languages</A></strong>, <em>From:</em> Afam Agbodike</li>
+<li><strong><A NAME="01698" HREF="msg01698.shtml">Re: wml with scripting languages</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01698.shtml">Re: wml with scripting languages</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01700.shtml">[BUG REPORT] WML 2.0.1, Linux</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01698.shtml">Re: wml with scripting languages</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01700.shtml">[BUG REPORT] WML 2.0.1, Linux</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01699"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01699"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

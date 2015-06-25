@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: multiple files in command line -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Sun, 27 Jun 1999 18:41:47 +0200 (MET DST) -->
+<!--X-Message-Id: 19990626220831.A346@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14194.4292.649328.918167@plaything.smart.net -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00806">Date Index</a>][<a href="thrd17.shtml#00806">Thread Index</a>]<br>
+[<A HREF="msg00805.shtml">Date Prev</A>][<A HREF="msg00807.shtml">Date Next</A>][<A HREF="msg00804.shtml">Thread Prev</A>][<A HREF="msg00807.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>multiple files in command line</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 26 Jun 1999 22:08:31 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I was trying to feed several files to wml command line. As in:
+
+ # wml test1.wml test2.wml
+
+And I did not get any output.
+
+Well, the docs say wml only expects a filename to work for. 
+
+Humm... why?
+
+I suppose this can be easily achieved with:
+
+ # cat test1.wml test2.wml | wml -
+
+But it breaks somehow the Unix way of working.
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00807" HREF="msg00807.shtml">Re: multiple files in command line</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00797" HREF="msg00797.shtml">multiple outputs from one input file?</A></strong>, <em>From:</em> jeff.covey</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00805.shtml">Not skippin passes</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00807.shtml">Re: multiple files in command line</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00804.shtml">Re: multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00807.shtml">Re: multiple files in command line</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00806"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00806"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

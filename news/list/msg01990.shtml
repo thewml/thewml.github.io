@@ -1,0 +1,1073 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Installationproblem on AIX 4.3 for WML version 2.0.{3,4} -->
+<!--X-From-R13: @beoreg Uehrare <abtN[BO&#45;Unepuvat.[BU.RS> -->
+<!--X-Date: Wed, 27 Sep 2000 10:49:26 +0200 (MET DST) -->
+<!--X-Message-Id: 20000926131401.C21022@ibm&#45;0.MPA&#45;Garching.MPG.DE -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01990">Date Index</a>][<a href="thrd40.shtml#01990">Thread Index</a>]<br>
+[<A HREF="msg01989.shtml">Date Prev</A>][<A HREF="msg01991.shtml">Date Next</A>][<A HREF="msg01988.shtml">Thread Prev</A>][<A HREF="msg01991.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Norbert Gruener &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Sep 2000 13:14:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I have downloaded WML version 2.0.4 and I tried to install it under AIX
+4.3.  But I was not successful  :-(   BTW, I have got the same error
+for version 2.0.3 too.  
+
+When I run make, it gets an error somewhere in the GD part.  I have
+included the log of the make run.  I am running AIX 4.3 and 
+perl 5.500_02. 
+
+Did I miss something ?   Any help would be appreciated very much.
+
+Cheers,
+
+Norbert
+-- 
+   +-------------------------------------------------------------------+
+   | Norbert E. Gruener           <A  HREF="http://www.MPA-Garching.MPG.DE/~nog/">http://www.MPA-Garching.MPG.DE/~nog/</A> |
+   | Max-Planck-Institut          &lt;nog@MPA-Garching.MPG.DE&gt;            |
+   | fuer Astrophysik             PGP encrypted mail preferred         |
+   | PGPprint(RSA):  66 64 C0 D0 6F 1A 16 02  C2 C6 37 83 3A 5F 88 9B  |
+   | PGPprint(DH):  EBBF 02ED 1B91 39C3 5FB9  4D2F 9478 E224 334C 34CD |
+   | PGPprint(DSS): A3F0 BDFA EAC0 128D A6C5  B11D 6EEC 0A88 47CD A77D |
+   +-------------------------------------------------------------------+
+</PRE>
+<PRE>
+===&gt; wml_frontend (all)
+make[1]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_frontend'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@||g' \
+        -e 's|\@perlprog\@|/usr/local/bin/perl|g' \
+        -e 's|\@perlvers\@|5.005|g' \
+        -e 's|\@built_system\@|4C00-ibm-aix4.3|g' \
+        -e 's|\@built_user\@|nog@ibm-0.MPA-Garching.MPG.DE|g' \
+        -e 's|\@built_date\@|26-Sep-2000|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/usr/local|g' \
+        -e 's|\@bindir\@|/usr/local/bin|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@mandir\@|/usr/local/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;wmk.src &gt;wmk.pl &amp;&amp; chmod a+x wmk.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@||g' \
+        -e 's|\@perlprog\@|/usr/local/bin/perl|g' \
+        -e 's|\@perlvers\@|5.005|g' \
+        -e 's|\@built_system\@|4C00-ibm-aix4.3|g' \
+        -e 's|\@built_user\@|nog@ibm-0.MPA-Garching.MPG.DE|g' \
+        -e 's|\@built_date\@|26-Sep-2000|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/usr/local|g' \
+        -e 's|\@bindir\@|/usr/local/bin|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@mandir\@|/usr/local/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;wml.src &gt;wml.pl &amp;&amp; chmod a+x wml.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@||g' \
+        -e 's|\@perlprog\@|/usr/local/bin/perl|g' \
+        -e 's|\@perlvers\@|5.005|g' \
+        -e 's|\@built_system\@|4C00-ibm-aix4.3|g' \
+        -e 's|\@built_user\@|nog@ibm-0.MPA-Garching.MPG.DE|g' \
+        -e 's|\@built_date\@|26-Sep-2000|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/usr/local|g' \
+        -e 's|\@bindir\@|/usr/local/bin|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@mandir\@|/usr/local/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;wmb.src &gt;wmb.pl &amp;&amp; chmod a+x wmb.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@||g' \
+        -e 's|\@perlprog\@|/usr/local/bin/perl|g' \
+        -e 's|\@perlvers\@|5.005|g' \
+        -e 's|\@built_system\@|4C00-ibm-aix4.3|g' \
+        -e 's|\@built_user\@|nog@ibm-0.MPA-Garching.MPG.DE|g' \
+        -e 's|\@built_date\@|26-Sep-2000|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/usr/local|g' \
+        -e 's|\@bindir\@|/usr/local/bin|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@mandir\@|/usr/local/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;wmd.src &gt;wmd.pl &amp;&amp; chmod a+x wmd.pl
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' \
+        -e 's|\@WML_CONFIG_ARGS\@||g' \
+        -e 's|\@perlprog\@|/usr/local/bin/perl|g' \
+        -e 's|\@perlvers\@|5.005|g' \
+        -e 's|\@built_system\@|4C00-ibm-aix4.3|g' \
+        -e 's|\@built_user\@|nog@ibm-0.MPA-Garching.MPG.DE|g' \
+        -e 's|\@built_date\@|26-Sep-2000|g' \
+        -e 's|\@compat\@|@compat@|g' \
+        -e 's|\@prefix\@|/usr/local|g' \
+        -e 's|\@bindir\@|/usr/local/bin|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@mandir\@|/usr/local/man|g' \
+        -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;wmu.src &gt;wmu.pl &amp;&amp; chmod a+x wmu.pl
+cp wmk.src wmk.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmk.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' &gt; wmk.1
+rm -f wmk.pod
+cp wml.src wml.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wml.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' &gt; wml.1
+rm -f wml.pod
+cp wmb.src wmb.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmb.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' &gt; wmb.1
+rm -f wmb.pod
+cp wmd.src wmd.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmd.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' &gt; wmd.1
+rm -f wmd.pod
+cp wmu.src wmu.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmu.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' &gt; wmu.1
+rm -f wmu.pod
+cp wmd_missing.src wmd_missing.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" wmd_missing.pod |\
+    sed -e 's|\@WML_VERSION\@|2.0.4 (19-Sep-2000)|g' &gt; wmd_missing.1
+rm -f wmd_missing.pod
+make[1]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_frontend'
+&lt;=== wml_frontend
+===&gt; wml_aux (all)
+make[1]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux'
+===&gt; wml_aux/iselect (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/iselect'
+gcc -O2 -I. -o iselect_main.o -c iselect_main.c
+gcc -O2 -I. -o iselect_browse.o -c iselect_browse.c
+gcc -O2 -I. -o iselect_keys.o -c iselect_keys.c
+gcc -O2 -I. -o iselect_getopt.o -c iselect_getopt.c
+gcc -O2 -I. -o iselect_version.o -c iselect_version.c
+gcc -O2 -I. -o iselect_help.o -c iselect_help.c
+gcc -O2 -I. -o iselect_readme.o -c iselect_readme.c
+gcc  -o iselect iselect_main.o iselect_browse.o iselect_keys.o iselect_getopt.o iselect_version.o iselect_help.o iselect_readme.o  -lcurses
+set -e; \
+V=`./etc/shtool version -lc -d long iselect_version.c`; \
+pod2man --section=1 \
+        --center="Ralf S. Engelschall" \
+        --release="EN" \
+    iselect.pod | sed -e "s|\@V\@|$V|g" &gt;iselect.1
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/iselect'
+&lt;=== wml_aux/iselect
+===&gt; wml_aux/htmlclean (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/htmlclean'
+sed -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;htmlclean.src &gt;htmlclean.pl &amp;&amp; chmod a+x htmlclean.pl
+cp htmlclean.src htmlclean.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" htmlclean.pod &gt;htmlclean.1
+rm -f htmlclean.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/htmlclean'
+&lt;=== wml_aux/htmlclean
+===&gt; wml_aux/htmlinfo (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/htmlinfo'
+sed -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;htmlinfo.src &gt;htmlinfo.pl &amp;&amp; chmod a+x htmlinfo.pl
+cp htmlinfo.src htmlinfo.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" htmlinfo.pod &gt;htmlinfo.1
+rm -f htmlinfo.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/htmlinfo'
+&lt;=== wml_aux/htmlinfo
+===&gt; wml_aux/linklint (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/linklint'
+sed -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;linklint.src &gt;linklint.pl &amp;&amp; chmod a+x linklint.pl
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/linklint'
+&lt;=== wml_aux/linklint
+===&gt; wml_aux/map2html (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/map2html'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;map2html.src &gt;map2html.pl &amp;&amp; chmod a+x map2html.pl
+cp map2html.src map2html.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" map2html.pod &gt;map2html.1
+rm -f map2html.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/map2html'
+&lt;=== wml_aux/map2html
+===&gt; wml_aux/tidy (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/tidy'
+gcc -g -O2   -c attrs.c -o attrs.o
+In file included from attrs.c:7:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c istack.c -o istack.o
+In file included from istack.c:8:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c parser.c -o parser.o
+In file included from parser.c:8:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c tags.c -o tags.o
+In file included from tags.c:12:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c entities.c -o entities.o
+In file included from entities.c:8:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c lexer.c -o lexer.o
+In file included from lexer.c:32:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c pprint.c -o pprint.o
+In file included from pprint.c:12:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c clean.c -o clean.o
+In file included from clean.c:45:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c localize.c -o localize.o
+In file included from localize.c:11:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c config.c -o config.o
+In file included from config.c:22:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2   -c tidy.c -o tidy.o
+In file included from tidy.c:48:
+platform.h:72: warning: redefinition of `uint'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:469: warning: `uint' previously declared here
+platform.h:75: warning: redefinition of `ulong'
+/usr/local/appl/gcc-2.95.2/lib/gcc-lib/powerpc-ibm-aix4.3.3.0/2.95.2/include/sys/types.h:470: warning: `ulong' previously declared here
+gcc -g -O2 -o tidy  attrs.o         istack.o        parser.o        tags.o entities.o      lexer.o         pprint.o        clean.o localize.o      config.o        tidy.o -lc
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/tidy'
+&lt;=== wml_aux/tidy
+===&gt; wml_aux/txt2html (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/txt2html'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;txt2html.src &gt;txt2html.pl &amp;&amp; chmod a+x txt2html.pl
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/txt2html'
+&lt;=== wml_aux/txt2html
+===&gt; wml_aux/weblint (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/weblint'
+sed -e 's|\@libdir\@|/usr/local/lib/wml|g' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;weblint.src &gt;weblint.pl &amp;&amp; chmod a+x weblint.pl
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/weblint'
+&lt;=== wml_aux/weblint
+===&gt; wml_aux/freetable (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/freetable'
+sed -e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+          &lt;freetable.src &gt;freetable.pl &amp;&amp; chmod a+x freetable.pl
+cp freetable.src freetable.pod
+pod2man --section=1 \
+            --center="GNU/Linux Freedomization Project" \
+            --release="GNU/Linux Freedomization Project" \
+            freetable.pod &gt; freetable.1
+rm -f freetable.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux/freetable'
+&lt;=== wml_aux/freetable
+make[1]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_aux'
+&lt;=== wml_aux
+===&gt; wml_backend (all)
+make[1]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend'
+===&gt; wml_backend/p1_ipp (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p1_ipp'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;ipp.src &gt;ipp.pl &amp;&amp; chmod a+x ipp.pl
+cp ipp.src ipp.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" ipp.pod |\
+    sed -e 's/^.ds N" """""/.ds N" ""/g' \
+        -e 's/^.ds T" """""/.ds T" ""/g' &gt;ipp.1
+rm -f ipp.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p1_ipp'
+&lt;=== wml_backend/p1_ipp
+===&gt; wml_backend/p2_mp4h (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+        -e 's|\@VERSION\@|1.1.1|g' \
+        -e 's|\@prefix\@|/usr/local|g' \
+        -e 's|\@pkglibdir\@|/usr/local/lib/mp4h|g' \
+        -e 's|\@mandir\@|/usr/local/man|g' \
+        -e 's|\@CC\@|gcc|g' \
+        -e 's|\@CFLAGS\@|-g -O2|g' \
+          &lt; mp4h-config.src &gt;mp4h-config &amp;&amp; chmod a+x mp4h-config
+===&gt; wml_backend/p2_mp4h/pcre (all)
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/pcre'
+gcc -c -g -O2 -I. -I. -I.. maketables.c
+gcc -c -g -O2 -I. -I. -I.. study.c
+gcc -o dftables -g -O2 -I. -I. -I.. dftables.c
+./dftables &gt;chartables.c
+gcc -c -g -O2 -I. -I. -I.. pcre.c
+rm -f libpcre.a
+ar cru libpcre.a maketables.o study.o pcre.o
+ranlib libpcre.a
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/pcre'
+&lt;=== wml_backend/p2_mp4h/pcre
+===&gt; wml_backend/p2_mp4h/lib (all)
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/lib'
+gcc -DHAVE_CONFIG_H -I. -I. -I..   -g -O2 -c error.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..   -g -O2 -c obstack.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..   -g -O2 -c xmalloc.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..   -g -O2 -c xstrdup.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..   -g -O2 -c getopt1.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..   -g -O2 -c getopt.c
+rm -f libmp4h.a
+ar cru libmp4h.a error.o obstack.o xmalloc.o xstrdup.o getopt1.o getopt.o
+ranlib libmp4h.a
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/lib'
+&lt;=== wml_backend/p2_mp4h/lib
+===&gt; wml_backend/p2_mp4h/src (all)
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/src'
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c mp4h.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c builtin.c
+builtin.c: In function `builtin_init':
+builtin.c:596: warning: assignment from incompatible pointer type
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c debug.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c devel.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c freeze.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c input.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c macro.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c output.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c path.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c symtab.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../lib -I../pcre   -g -O2 -c version.c
+gcc -g -O2  -o mp4h mp4h.o builtin.o debug.o devel.o freeze.o input.o macro.o  output.o path.o symtab.o version.o  ../lib/libmp4h.a ../pcre/libpcre.a -lm
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/src'
+&lt;=== wml_backend/p2_mp4h/src
+===&gt; wml_backend/p2_mp4h/doc (all)
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/doc'
+../src/mp4h -X 0 -D format=pod mp4h.mp4h \
+        | sed -e 's/_LT_/&lt;/g' -e 's/_GT_/&gt;/g' &gt; mp4h.pod
+pod2man --section=1 \
+            --center="HTML Tools" \
+            --release="HTML Tools" \
+        mp4h.pod &gt; mp4h.1
+../src/mp4h -X 0 -D format=html mp4h.mp4h &gt; mp4h.html
+/afs/mpa/home/nog/wml-2.0.4/wml_aux/tidy/tidy  -m mp4h.html
+
+Tidy (vers 4th August 2000) Parsing "mp4h.html"
+
+mp4h.html: Document content looks like HTML 4.01 Transitional
+no warnings or errors were found
+
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/doc'
+&lt;=== wml_backend/p2_mp4h/doc
+===&gt; wml_backend/p2_mp4h/packages (all)
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/packages'
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/packages'
+&lt;=== wml_backend/p2_mp4h/packages
+===&gt; wml_backend/p2_mp4h/tests (all)
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/tests'
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h/tests'
+&lt;=== wml_backend/p2_mp4h/tests
+cp mp4h-config.src mp4h-config.pod
+pod2man --section=1 --center="Web Tools" --release="Web Tools" \
+            mp4h-config.pod |\
+            sed -e 's|\@VERSION\@|1.1.1|g' &gt; mp4h-config.1
+rm -f mp4h-config.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p2_mp4h'
+&lt;=== wml_backend/p2_mp4h
+===&gt; wml_backend/p3_eperl (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p3_eperl'
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_main.c
+/usr/local/bin/perl eperl_perl5_sm.pl &gt;eperl_perl5_sm.h
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_perl5.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_parse.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_pp.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_sys.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_http.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_getopt.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_debug.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_config.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_version.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_readme.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_license.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_logo.c
+cc -O -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -I/usr/local/lib/perl5/5.00502/aix/CORE -I. -c eperl_powered.c
+cc -bE:/usr/local/lib/perl5/5.00502/aix/CORE/perl.exp -L/usr/local/lib -L/usr/local/lib/perl5/5.00502/aix/CORE  -o eperl eperl_main.o eperl_perl5.o eperl_parse.o eperl_pp.o eperl_sys.o eperl_http.o eperl_getopt.o eperl_debug.o eperl_config.o eperl_version.o eperl_readme.o eperl_license.o eperl_logo.o eperl_powered.o /usr/local/lib/perl5/5.00502/aix/auto/DynaLoader/DynaLoader.a -lperl -lnsl -ldbm -ldl -lld -lm -lc -lbsd -lPW 
+ld: 0711-319 WARNING: Exported symbol not defined: Mycalloc
+ld: 0711-319 WARNING: Exported symbol not defined: Myfree
+ld: 0711-319 WARNING: Exported symbol not defined: Mymalloc
+ld: 0711-319 WARNING: Exported symbol not defined: Myremalloc
+ld: 0711-319 WARNING: Exported symbol not defined: PL_cryptseen
+ld: 0711-319 WARNING: Exported symbol not defined: PL_curthr
+ld: 0711-319 WARNING: Exported symbol not defined: PL_eval_cond
+ld: 0711-319 WARNING: Exported symbol not defined: PL_eval_mutex
+ld: 0711-319 WARNING: Exported symbol not defined: PL_eval_owner
+ld: 0711-319 WARNING: Exported symbol not defined: PL_malloc_mutex
+ld: 0711-319 WARNING: Exported symbol not defined: PL_nthreads
+ld: 0711-319 WARNING: Exported symbol not defined: PL_nthreads_cond
+ld: 0711-319 WARNING: Exported symbol not defined: PL_opsave
+ld: 0711-319 WARNING: Exported symbol not defined: PL_statusvalue_vms
+ld: 0711-319 WARNING: Exported symbol not defined: PL_sv_mutex
+ld: 0711-319 WARNING: Exported symbol not defined: PL_svref_mutex
+ld: 0711-319 WARNING: Exported symbol not defined: PL_sys_intern
+ld: 0711-319 WARNING: Exported symbol not defined: PL_thr_key
+ld: 0711-319 WARNING: Exported symbol not defined: PL_threadnum
+ld: 0711-319 WARNING: Exported symbol not defined: PL_threads_mutex
+ld: 0711-319 WARNING: Exported symbol not defined: PL_threadsv_names
+ld: 0711-319 WARNING: Exported symbol not defined: PL_thrsv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_Argv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_Cmd
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBcv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBline
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBsignal
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBsingle
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBsub
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_DBtrace
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_abs_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_add_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_add_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_additem
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ampergv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_archpat_auto
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_argvgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_argvoutgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_atan2_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_band_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_basetime
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_beginav
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_block_type
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bodytarget
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bool__amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bor_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bostr
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bxor_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bytecode_iv_overflows
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bytecode_obj_list
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bytecode_obj_list_fill
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bytecode_pv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_bytecode_sv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_calloc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_cddir
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_check_uni
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_checkcomma
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_chopset
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ck_aelem
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_colors
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_colorset
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_compcv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_compiling
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_compl_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_comppad
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_comppad_name
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_comppad_name_fill
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_comppad_name_floor
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_concat_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_concat_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_condpair_magic
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_copline
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_cos_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_curcop
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_curcopdb
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_curpm
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_curstack
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_curstash
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_curstname
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dbargs
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_debdelim
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_debname
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_debstash
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dec_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_defgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_defoutgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_defstash
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_delaymagic
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_diehook
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dirty
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_div_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_div_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dlevel
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dlmax
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_doextract
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dofindlabel
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dopoptoeval
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_doswitches
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dowarn
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dump_fds
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dump_mstats
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_dumplvl
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_e_script
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_endav
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_envgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_eq_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_errgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_eval_root
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_eval_start
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_exitlist
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_exitlistlen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_exp_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_expectterm
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_extralen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_fallback_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_fdpid
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_fetch_gv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_fetch_io
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_filemode
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_find_threadsv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_firstgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_force_ident
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_force_next
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_force_word
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_forkprocess
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_formfeed
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_formtarget
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_free
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ge_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_generation
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_gensym
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_globalstash
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_gt_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_hintgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_hv_stashpv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_in_clean_all
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_in_clean_objs
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_in_eval
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_inc_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_incgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_init_thread_intern
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_initav
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_inplace
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_intuit_more
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_know_next
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_last_in_gv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_last_proto
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lastfd
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lastgotoprobe
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lastscream
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lastsize
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lastspbase
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_laststatval
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_laststype
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_le_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_leftgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lineary
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_linestart
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_localizing
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_localpatches
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_log_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lshift_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lshift_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_lt_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_magic_mutexfree
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_main_cv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_main_root
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_main_start
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mainstack
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_malloc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_malloced_size
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_maxscream
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_maxsysfd
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mess_sv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_minus_F
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_minus_a
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_minus_c
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_minus_l
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_minus_n
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_minus_p
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mod_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mod_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_modcount
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_modglobal
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_modkids
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mstats
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mult_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mult_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_multiline
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_bcopy
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_bzero
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_chsize
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_htonl
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_memcmp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_memset
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_ntohl
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_my_swap
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_mystrk
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ncmp_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ne_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_neg_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_newXSUB
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_new_struct_thread
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_no_fh_allowed
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_no_op
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_nointrp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_nomem
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_nomethod_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_not_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_nrs
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_numer_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ofmt
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ofs
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ofslen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_oldlastpm
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_oldname
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_op_mask
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_origargc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_origargv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_origfilename
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_ors
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_orslen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_parsehook
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_patchlevel
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pending_ident
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_perl_destruct_level
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_perldb
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pow_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pow_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pp_cswitch
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pp_entersubr
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pp_evalonce
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pp_interp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pp_map
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_pp_nswitch
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_preambleav
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_preambled
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_preprocess
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_profiledata
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_q
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reall_srchlen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_realloc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reg_eval_set
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reg_flags
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reg_start_tmp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reg_start_tmpl
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regbol
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regcc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regcode
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regcomp_parse
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regcomp_rx
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regcompp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regdata
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regdummy
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regendp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regeol
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regexecp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regflags
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regindent
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reginput
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reginterp_cnt
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_reglastparen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regnarrate
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regnaughty
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regnpar
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regprecomp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regprev
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regprogram
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regsawback
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regseen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regsize
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regstartp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regtill
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_regxend
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_repeat_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_repeat_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_replgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_restartop
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_rightgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_rs
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_rsfp
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_rsfp_filters
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_rshift_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_rshift_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_safexcalloc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_safexfree
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_safexmalloc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_safexrealloc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_same_dirent
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_saw_return
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sawampersand
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sawstudy
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sawvec
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_const
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_formline
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_heredoc
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_ident
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_inputsymbol
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_pat
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_prefix
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_str
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_subst
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_trans
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scan_word
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_scmp_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_screamfirst
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_screamnext
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_secondgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_seen_evals
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_seen_zerolen
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_seq_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sge_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sgt_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_siggv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sin_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_skipspace
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sle_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_slt_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sne_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sortcop
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sortcxix
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sortstash
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_splitstr
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sqrt_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_start_env
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_statcache
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_statgv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_statname
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_statusvalue
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_statusvalue_vms
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_stdingv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_strchop
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_string_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_strtab
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sub_generation
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sublex_info
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_subtr_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_subtr_ass_amg
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sv_arenaroot
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sv_count
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sv_objcount
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sv_ref
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sv_root
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sv_setptrobj
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_sys_intern
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_tainted
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_tainting
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_threadnum
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_thrsv
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_tmps_floor
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_tmps_ix
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_tmps_max
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_tmps_stack
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_too_few_arguments
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_too_many_arguments
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_top_env
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_toptarget
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_unlnk
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_unlock_condpair
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_unsafe
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_vtbl_mutex
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_warnhook
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_watchaddr
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_watchok
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_yyname
+ld: 0711-319 WARNING: Exported symbol not defined: Perl_yyrule
+set -e; \
+V=`./etc/shtool version -lc -d long eperl_version.c`; \
+pod2man --section=1 \
+        --center="Ralf S. Engelschall" \
+        --release="EN" \
+    eperl.pod |\
+sed -e "s|\@V\@|$V|g" -e "s|\@prefix\@|/usr/local|" &gt;eperl.1
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p3_eperl'
+&lt;=== wml_backend/p3_eperl
+===&gt; wml_backend/p4_gm4 (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p4_gm4'
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p4_gm4/lib'
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 regex.c
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 getopt.c
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 getopt1.c
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 error.c
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 obstack.c
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 xmalloc.c
+gcc -c -DHAVE_CONFIG_H -I.. -I.  -g -O2 xstrdup.c
+rm -f libm4.a
+ar cru libm4.a regex.o getopt.o getopt1.o error.o obstack.o xmalloc.o xstrdup.o  
+ranlib libm4.a
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p4_gm4/lib'
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p4_gm4/src'
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 m4.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 builtin.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 debug.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 eval.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 format.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 freeze.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 input.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 macro.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 output.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 path.c
+gcc -c -DHAVE_CONFIG_H -I.. -I. -I./../lib  -g -O2 symtab.c
+gcc  -o m4 m4.o builtin.o debug.o eval.o format.o freeze.o input.o macro.o output.o path.o symtab.o ../lib/libm4.a 
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p4_gm4/src'
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p4_gm4'
+&lt;=== wml_backend/p4_gm4
+===&gt; wml_backend/p5_divert (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p5_divert'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;divert.src &gt;divert.pl &amp;&amp; chmod a+x divert.pl
+cp divert.src divert.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" divert.pod &gt;divert.1
+rm -f divert.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p5_divert'
+&lt;=== wml_backend/p5_divert
+===&gt; wml_backend/p6_asubst (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p6_asubst'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;asubst.src &gt;asubst.pl &amp;&amp; chmod a+x asubst.pl
+cp asubst.src asubst.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" asubst.pod &gt;asubst.1
+rm -f asubst.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p6_asubst'
+&lt;=== wml_backend/p6_asubst
+===&gt; wml_backend/p7_htmlfix (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p7_htmlfix'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;htmlfix.src &gt;htmlfix.pl &amp;&amp; chmod a+x htmlfix.pl
+cp htmlfix.src htmlfix.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" htmlfix.pod &gt;htmlfix.1
+rm -f htmlfix.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p7_htmlfix'
+&lt;=== wml_backend/p7_htmlfix
+===&gt; wml_backend/p8_htmlstrip (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p8_htmlstrip'
+sed -e '/^=head1/,/^=cut/d' \
+        -e '/^__END__/,$d' \
+-e 's|\@PATH_PERL\@|/usr/local/bin/perl|g' \
+        -e 's|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|g' \
+        -e 's|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|g' \
+          &lt;htmlstrip.src &gt;htmlstrip.pl &amp;&amp; chmod a+x htmlstrip.pl
+cp htmlstrip.src htmlstrip.pod
+pod2man --section=1 --center="EN Tools" --release="EN Tools" htmlstrip.pod &gt;htmlstrip.1
+rm -f htmlstrip.pod
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p8_htmlstrip'
+&lt;=== wml_backend/p8_htmlstrip
+===&gt; wml_backend/p9_slice (all)
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p9_slice'
+./etc/expand slice_main.pl | sed -e "s|\@PATH_PERL\@|/usr/local/bin/perl|" -e '/@(#)/d' -e '/^;#/d' -e "s|\@INSTALLPRIVLIB\@|/usr/local/lib/wml/perl/lib|" -e "s|\@INSTALLARCHLIB\@|/usr/local/lib/wml/perl/lib/aix|"  &gt;slice
+chmod a+x slice
+set -e; \
+V=`../../etc/shtool version -l perl -d long slice_vers.pl`; \
+pod2man --section=1 \
+        --center="Ralf S. Engelschall" \
+        --release="EN Tools" slice.pod |\
+sed -e "s|\@SLICE_VERSION\@|$V|" &gt;slice.1
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend/p9_slice'
+&lt;=== wml_backend/p9_slice
+make[1]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_backend'
+&lt;=== wml_backend
+===&gt; wml_common (all)
+make[1]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common'
+===&gt; wml_common/bitvector (all)
+Checking if your kit is complete...
+Looks good
+Writing Makefile for Bit::Vector
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/bitvector'
+mkdir blib
+mkdir blib/lib
+mkdir blib/lib/Bit
+mkdir blib/arch
+mkdir blib/arch/auto
+mkdir blib/arch/auto/Bit
+mkdir blib/arch/auto/Bit/Vector
+mkdir blib/lib/auto
+mkdir blib/lib/auto/Bit
+mkdir blib/lib/auto/Bit/Vector
+cp Vector.pm blib/lib/Bit/Vector.pm
+/usr/local/bin/perl "-I/usr/local/lib/perl5/5.00502/aix" "-I/usr/local/lib/perl5/5.00502" -e 'use ExtUtils::Mksymlists; \
+Mksymlists("NAME" =&gt; "Bit::Vector", "DL_FUNCS" =&gt; {  }, "DL_VARS" =&gt; []);'
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"5.8\" -DXS_VERSION=\"5.8\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  BitVector.c
+/usr/local/bin/perl -I/usr/local/lib/perl5/5.00502/aix -I/usr/local/lib/perl5/5.00502 /usr/local/lib/perl5/5.00502/ExtUtils/xsubpp  -typemap /usr/local/lib/perl5/5.00502/ExtUtils/typemap -typemap typemap Vector.xs &gt;Vector.tc &amp;&amp; mv Vector.tc Vector.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"5.8\" -DXS_VERSION=\"5.8\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  Vector.c
+Running Mkbootstrap for Bit::Vector ()
+chmod 644 Vector.bs
+LD_RUN_PATH="" ld -o blib/arch/auto/Bit/Vector/Vector.so  -bhalt:4 -bM:SRE -bI:/usr/local/lib/perl5/5.00502/aix/CORE/perl.exp -bE:Vector.exp -b noentry -lc -L/usr/local/lib BitVector.o Vector.o     
+chmod 755 blib/arch/auto/Bit/Vector/Vector.so
+cp Vector.bs blib/arch/auto/Bit/Vector/Vector.bs
+chmod 644 blib/arch/auto/Bit/Vector/Vector.bs
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/bitvector'
+&lt;=== wml_common/bitvector
+===&gt; wml_common/filepathconvert (all)
+Checking if your kit is complete...
+Looks good
+Writing Makefile for File::PathConvert
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/filepathconvert'
+mkdir blib
+mkdir blib/lib
+mkdir blib/lib/File
+mkdir blib/arch
+mkdir blib/arch/auto
+mkdir blib/arch/auto/File
+mkdir blib/arch/auto/File/PathConvert
+mkdir blib/lib/auto
+mkdir blib/lib/auto/File
+mkdir blib/lib/auto/File/PathConvert
+cp PathConvert.pm blib/lib/File/PathConvert.pm
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/filepathconvert'
+&lt;=== wml_common/filepathconvert
+===&gt; wml_common/gd (all)
+Checking if your kit is complete...
+Looks good
+Writing Makefile for libgd
+Writing Makefile for WML::GD
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd'
+mkdir blib
+mkdir blib/lib
+mkdir blib/lib/WML
+mkdir blib/arch
+mkdir blib/arch/auto
+mkdir blib/arch/auto/WML
+mkdir blib/arch/auto/WML/GD
+mkdir blib/lib/auto
+mkdir blib/lib/auto/WML
+mkdir blib/lib/auto/WML/GD
+cp GD.pm blib/lib/WML/GD.pm
+AutoSplitting blib/lib/WML/GD.pm (blib/lib/auto/WML/GD)
+DEFINE=''; export DEFINE INC; \
+cd libgd &amp;&amp; make -e
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_gif.c
+"gd_gif.c", line 760.2: 1506-342 (W) "/*" detected in comment.
+"gd_gif.c", line 763.2: 1506-342 (W) "/*" detected in comment.
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_png.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_io.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_io_dp.c
+ar cr libgd.a gd.o gd_gif.o gd_png.o gd_io.o gd_io_dp.o
+: libgd.a
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+/usr/local/bin/perl "-I/usr/local/lib/perl5/5.00502/aix" "-I/usr/local/lib/perl5/5.00502" -e 'use ExtUtils::Mksymlists; \
+Mksymlists("NAME" =&gt; "WML::GD", "DL_FUNCS" =&gt; {  }, "DL_VARS" =&gt; []);'
+/usr/local/bin/perl -I/usr/local/lib/perl5/5.00502/aix -I/usr/local/lib/perl5/5.00502 /usr/local/lib/perl5/5.00502/ExtUtils/xsubpp  -typemap /usr/local/lib/perl5/5.00502/ExtUtils/typemap -typemap typemap GD.xs &gt;GD.tc &amp;&amp; mv GD.tc GD.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"1.23\" -DXS_VERSION=\"1.23\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  GD.c
+Running Mkbootstrap for WML::GD ()
+chmod 644 GD.bs
+LD_RUN_PATH="/lib" ld -o blib/arch/auto/WML/GD/GD.so  -bhalt:4 -bM:SRE -bI:/usr/local/lib/perl5/5.00502/aix/CORE/perl.exp -bE:GD.exp -b noentry -lc -L/usr/local/lib GD.o  libgd/libgd.a  -lm 
+ld: 0711-317 ERROR: Undefined symbol: .gdNewFileCtx
+ld: 0711-345 Use the -bloadmap or -bnoquiet option to obtain more information.
+make[2]: *** [blib/arch/auto/WML/GD/GD.so] Error 8
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common'
+make: *** [all] Error 1
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01989.shtml">Re: Help needed: I want to choose a random link</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01991.shtml">wml::std::case (wml 2.0.4)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01988.shtml">Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01991.shtml">wml::std::case (wml 2.0.4)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01990"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01990"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

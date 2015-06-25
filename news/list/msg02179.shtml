@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: patch for wml::std::toc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 25 Mar 2001 23:54:34 +0200 (MET DST) -->
+<!--X-Message-Id: 20010326000416.A15706@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010325181224.A7966@tomk32.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02179">Date Index</a>][<a href="thrd44.shtml#02179">Thread Index</a>]<br>
+[<A HREF="msg02178.shtml">Date Prev</A>][<A HREF="msg02180.shtml">Date Next</A>][<A HREF="msg02178.shtml">Thread Prev</A>][<A HREF="msg02180.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: patch for wml::std::toc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 26 Mar 2001 00:04:16 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Mar 25, 2001 at 06:12:24PM +0200, Thomas R. Koll wrote:
+&gt; Good afternoon,
+&gt; Because I need a very special ToC for my geekcode page 
+&gt; ( <A  HREF="http://www.tomk32.de/en/geekcode.php">http://www.tomk32.de/en/geekcode.php</A> ) where the whole ToC is in a single
+&gt; line. I hope I used diff proper, my version of WML is 2.0.6 (Debian package).
+&gt; Added is style=nobr
+&gt; I hope you add it to the official dist
+
+Hi Thomas,
+
+i believe you have the same output when specifying an undefined style,
+right?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02180" HREF="msg02180.shtml">Re: patch for wml::std::toc</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02178" HREF="msg02178.shtml">patch for wml::std::toc</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02178.shtml">patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02180.shtml">Re: patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02178.shtml">patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02180.shtml">Re: patch for wml::std::toc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02179"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02179"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

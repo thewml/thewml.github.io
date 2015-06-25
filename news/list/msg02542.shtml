@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 6 Mar 2002 09:32:11 +0100 (MET) -->
+<!--X-Message-Id: 20020306094414.A27792@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200203052109.WAA09994@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02542">Date Index</a>][<a href="thrd51.shtml#02542">Thread Index</a>]<br>
+[<A HREF="msg02541.shtml">Date Prev</A>][<A HREF="msg02543.shtml">Date Next</A>][<A HREF="msg02541.shtml">Thread Prev</A>][<A HREF="msg02550.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 2.0.8, Linux RH 7.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 6 Mar 2002 09:44:15 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Mar 05, 2002 at 10:09:30PM +0100, freddyz77@tin.it wrote:
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 2.0.8
+&gt; Operating System: Linux RH 7.2
+&gt; 
+&gt; Problem Description:
+&gt; | I forgot also this...
+&gt; | in sup/path.wml I done this diff ([^/.] match nothing)
+&gt; | 
+&gt; |          $path =~ s|/\.$|/|g;
+&gt; |          $path =~ s|^\./(.)|$1|g;
+&gt; | -        $path =~ s|([^/.][^/.]*)/\.\.||;
+&gt; | +        $path =~ s|([^/]+)/\.\.||;
+
+This change has already been applied to CVS version ;)
+
+&gt; |      }
+&gt; |      return $path;
+&gt; | 
+&gt; | What do I want in future?
+&gt; | - adapt wml to generate a strict xhtml
+
+WML can generate valid xhtml files, see for instance
+     <A  HREF="http://www.engelschall.com/sw/mp4h/">http://www.engelschall.com/sw/mp4h/</A>
+You have to understand how -X flag of mp4h is working.
+
+&gt; | - a method to create dymanic images with gimp (for change background in images for examples, or best title generation)
+
+Would be really nice, yes.
+
+&gt; | - communicate with some web server (such as public an .wml page can compile page on web server)
+
+If you want server-parsed wml files, I am afraid I won't support it.
+But maybe I misunderstand your point here.
+
+&gt; | - create dependency file (such as gcc), with subdirectory and wmk sometime it not recompile the source.
+
+You may have a look into wml -M flag.  I would like to generate
+dependencies on the fly, but never implemented it.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02541" HREF="msg02541.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></strong>, <em>From:</em> freddyz77</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02541.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02543.shtml">Re: image sizes, extended navbar:button</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02541.shtml">[BUG REPORT] WML 2.0.8, Linux RH 7.2</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02550.shtml">Upgraded wml from potato to woody, divert doesnt work any more ?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02542"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02542"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

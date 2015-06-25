@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: perl version output of configure? -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Wed, 11 Jul 2001 23:13:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20010711231031.D23948@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010711154211.E12681@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010711213732.A12647@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02286">Date Index</a>][<a href="thrd46.shtml#02286">Thread Index</a>]<br>
+[<A HREF="msg02285.shtml">Date Prev</A>][<A HREF="msg02287.shtml">Date Next</A>][<A HREF="msg02285.shtml">Thread Prev</A>][<A HREF="msg02288.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: perl version output of configure?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 11 Jul 2001 23:10:31 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Denis Barbier wrote:
+&gt; nothing wrong, this version number comes from
+&gt;     perl -e 'printf "%.3f", $]'
+
+Noticed it later using &lt;:=$] :&gt;, because I didn't find the position in
+the configure file, where it is determined... (As Murphy's Law
+predicted: Now I've found it...)
+
+&gt; Maybe we should use
+&gt;     perl -e 'print $]'
+&gt; instead, but is it really important?
+
+Well, at least, the actual solution is some kind of confusing, if you
+upgrade between subversions, like I did today.
+
+It wouldn't be so much confusing, if $] would have been 5.006000 in
+PERL 5.6.0, or if the output of the WML configure script would have
+been only "5.6", because in that cases the output (IMHO) would be
+clearly a truncated value.
+
+Personally I would prefer an output like "5.6.0" or "5.7.1" (based on
+$^V), but IMHO at least it should be the full value or if it's a
+truncated value, it should be clearly indicated, that the shown value
+is truncated.
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02288" HREF="msg02288.shtml">Re: perl version output of configure?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02283" HREF="msg02283.shtml">perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02285" HREF="msg02285.shtml">Re: perl version output of configure?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02285.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02287.shtml">Re: Variables between sites</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02285.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02288.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02286"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02286"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

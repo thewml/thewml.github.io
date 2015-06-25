@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation failed -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Tue, 10 Nov 1998 18:08:04 +0100 (CET) -->
+<!--X-Message-Id: 199811101657.IAA11799@seer.surefirev.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.02.9811080033080.14833&#45;100000@solar02.desy.de -->
+<!--X-Reference: Pine.LNX.3.96.981110114524.4437A&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00253">Date Index</a>][<a href="thrd6.shtml#00253">Thread Index</a>]<br>
+[<A HREF="msg00252.shtml">Date Prev</A>][<A HREF="msg00254.shtml">Date Next</A>][<A HREF="msg00252.shtml">Thread Prev</A>][<A HREF="msg00235.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation failed</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 10 Nov 1998 08:57:19 -0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Jan Ulrich Hasecke writes:
+ &gt; On Sun, 8 Nov 1998, Florian Hars wrote:
+ &gt; 
+ &gt; &gt; Yes, you can. Just say "make install", it is the "mate test" part
+ &gt; &gt; that is buggy, not perl or wml.
+ &gt; 
+ &gt; Thanks for the encouragement, but: No, I can't. I installed it in /tmp and
+ &gt; executed ./wml
+ &gt; 
+ &gt; with this error:
+ &gt; 
+ &gt; Getopt::Long version 2.13 required--this is only version 2.10 at
+ &gt; ./wml line 52.  BEGIN failed--compilation aborted at ./wml line 52.
+ &gt; 
+ &gt; &lt;german&gt;
+ &gt; Perlen vor die Säue!
+ &gt; &lt;/german&gt;
+ &gt; 
+ &gt; I think I have a serious problem with perl...
+
+	Indeed. wml seems to be very sensitive to what version of perl
+it is installed with. There is switches in the configure to enable it
+to used system perl libraries, or to install it's own; either way, I
+ended up installing the latest version of perl.
+
+ &gt; 
+ &gt; Ciao!
+ &gt; juh
+ &gt; 
+ &gt; -- 
+ &gt; juh's Sudelbuch
+ &gt; Täglich tagesfrische Sudeleien
+ &gt; <A  HREF="http://literatur.lake.de/in/sudelbuch">http://literatur.lake.de/in/sudelbuch</A>
+ &gt; 
+ &gt; ______________________________________________________________________
+ &gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+ &gt; Official Support Mailing List                   sw-wml@engelschall.com
+ &gt; Automated List Manager                       majordomo@engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00243" HREF="msg00243.shtml">Re: Installation failed</A></strong>, <em>From:</em> Florian Hars</li>
+<li><strong><A NAME="00252" HREF="msg00252.shtml">Re: Installation failed</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00252.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00254.shtml">RE: SGML-DTD for WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00252.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00235.shtml">[WML 1.6.7] blank lines and misc (was boot.wml patch)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00253"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00253"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

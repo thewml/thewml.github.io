@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: m4 under WML -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Sat, 29 May 1999 19:37:07 +0200 (MET DST) -->
+<!--X-Message-Id: 19990528113804.A9655@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990527144010.A598@perolo -->
+<!--X-Reference: Pine.LNX.3.96.990527183604.12067C&#45;100000@liszt.polytechnique.fr -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00705">Date Index</a>][<a href="thrd15.shtml#00705">Thread Index</a>]<br>
+[<A HREF="msg00704.shtml">Date Prev</A>][<A HREF="msg00706.shtml">Date Next</A>][<A HREF="msg00702.shtml">Thread Prev</A>][<A HREF="msg00707.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>m4 under WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 28 May 1999 11:38:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hei!
+
+I upgraded my WML to the latest version (I hope):
+
+ &gt;This is WML Version 1.6.8 (12-01-1999)
+
+Still, the problem with some m4 macros continues:
+
+    m4_noquotes()m4_dnl
+
+Returns:
+
+    m4_dnlm4_dnl 
+
+So it fails miserably. It was suposed to return nothing (that's the
+use of `m4_dnl'.
+
+The problem cames from the macro `m4_noquotes', defined inside
+/usr/bin/wml:
+
+  print TMP "m4_define(`m4_noquotes', `m4_changequote(, )m4_dnl')m4_dnl\n";
+  print TMP "m4_define(`m4_quotes',   `m4_changequote')m4_dnl\n";
+
+This definitions makes:
+
+   m4_noquotes()m4_dnl
+
+   m4_changequote(, )m4_dnlm4_dnl
+
+And m4 does not understand those `m4_dnlm4_dnl'.
+
+Solutions:
+
+      * Do not use any `m4_noquotes()m4_dnl'. `m4_noquotes' will do
+      it fine.
+
+      * Don't worry about blank lines. Html Strip will erase them.
+
+      * Changue the `m4_noquotes' and `m4_quotes'. Just add
+      parenthesis after `m4_dnl': 
+
+  print TMP "m4_define(`m4_noquotes', `m4_changequote(, )m4_dnl')m4_dnl()\n";
+  print TMP "m4_define(`m4_quotes',   `m4_changequote')m4_dnl()\n";
+
+      This is the usual way in `m4' to separate two macros. It works
+      pefect and means all macros will work with no problem.
+
+The winner is:
+
+   The last option. I think somebody can edit the code and add the
+   changes to the next WML distribution. 
+
+   Do I have to write a bug report, send a patch and all this?
+
+   If you like I will do, but I think this is too simple.
+
+Also.
+
+   I will recommend to all coders, to do not use `m4_noquotes()m4_dnl'.
+   It is useless, and it looks pretty awfull.  
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+05/28	First meeting of COBOL definition cte. (eventually CODASYL), 1959
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00707" HREF="msg00707.shtml">Re: m4 under WML</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00701" HREF="msg00701.shtml">Re: moving from m4</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="00702" HREF="msg00702.shtml">Re: moving from m4</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00704.shtml">BUG REPORT: Website META Language 1.6.8 (12-01-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00706.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00702.shtml">Re: moving from m4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00707.shtml">Re: m4 under WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00705"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00705"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Multi Language Support Question -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Sat, 21 Jul 2001 17:12:07 +0200 (MET DST) -->
+<!--X-Message-Id: 20010721165643.B32553@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010720160913.A20143@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010720172935.A13270@imacs.polytechnique.fr -->
+<!--X-Reference: 20010721015833.B26357@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010721135022.A16695@imacs.polytechnique.fr -->
+<!--X-Reference: 20010721163935.A32553@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02329">Date Index</a>][<a href="thrd47.shtml#02329">Thread Index</a>]<br>
+[<A HREF="msg02328.shtml">Date Prev</A>][<A HREF="msg02330.shtml">Date Next</A>][<A HREF="msg02328.shtml">Thread Prev</A>][<A HREF="msg02332.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Multi Language Support Question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 21 Jul 2001 16:56:43 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Me again... :-)
+
+Axel Beckert wrote:
+&gt; Therefore I would suggest a parameter '-S' (for *s*lice behaviour) to
+&gt; wml and slice, which gets as values a string containing one or more of
+&gt; those flags.
+&gt; 
+&gt; Examples, which result in the same file:
+&gt; 
+&gt; #!wml -S an -oDEuUNDEF:foo.de.html@g+x -oENuUNDEF:foo.en.html@g+x
+
+Of course, BSD style should be allowed here, too:
+
+#!wml -San -oDEuUNDEF:foo.de.html@g+x -oENuUNDEF:foo.en.html@g+x
+
+&gt; #!wml -oDEuUNDEF:foo.de.html@g+x#an -oENuUNDEF:foo.en.html@g+x#an
+
+As I read my own lines: Analogously a -C option for wml an slices
+could define a default chmodcmd for all following slices, which would
+be also very useful inside .wmlrc's and .wmkrc's. (I thought about
+that a few days ago, too, but had no good idea and postponed it,
+because a 'find . -name "*.html" | xargs chmod g+x' did it well for
+playing around with the XBitHack of Apache... :-)
+
+But perhaps it would be more intuitive, if we use -# instead of -S and
+-@ instead of -C, because those are the seperators in the -o
+parameter... So here's that example again:
+
+#!wml -#an -@g+x -oDEuUNDEF:foo.de.html -oENuUNDEF:foo.en.html
+#!wml -oDEuUNDEF:foo.de.html@g+x#an -oENuUNDEF:foo.en.html@g+x#an
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02332" HREF="msg02332.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02323" HREF="msg02323.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02325" HREF="msg02325.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02327" HREF="msg02327.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02328" HREF="msg02328.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02328.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02330.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02328.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02332.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02329"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02329"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: eperl&#45;mode for (X)Emacs -->
+<!--X-From-R13: "Xnzrf O. Fernpl" <gernplNqrovna.bet> -->
+<!--X-Date: Thu, 23 Nov 2000 16:52:59 +0100 (MET) -->
+<!--X-Message-Id: 20001123105740.C32659@landru.home.link -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20001122123230.C22569@icp.inpg.fr -->
+<!--X-Reference: 20001122194828.A18725@tomk32.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02070">Date Index</a>][<a href="thrd42.shtml#02070">Thread Index</a>]<br>
+[<A HREF="msg02069.shtml">Date Prev</A>][<A HREF="msg02071.shtml">Date Next</A>][<A HREF="msg02069.shtml">Thread Prev</A>][<A HREF="msg02068.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: eperl-mode for (X)Emacs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;James A. Treacy&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 23 Nov 2000 10:57:40 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Nov 22, 2000 at 07:48:28PM +0100, Thomas R. Koll wrote:
+&gt; Hi,
+&gt; I don't know much about settip up emacs, so I want to know where to install the files, I tried /usr/share/emacs/20.7/lisp but it didn't work.
+&gt; (My system is debian)
+&gt; I hope you can help me
+&gt; 
+I believe the location you want is /usr/local/share/emacs/site-lisp.
+You don't want to use /usr/share/emacs because that is the domain
+of the package and the file you added could be removed during an
+upgrade. Only changes to configuration files are guaranteed to be
+safe in the system area.
+
+Another response talked about the validity of the lisp given.
+
+-- 
+James (Jay) Treacy
+treacy@debian.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02066" HREF="msg02066.shtml">eperl-mode for (X)Emacs</A></strong>, <em>From:</em> Rafael Laboissiere</li>
+<li><strong><A NAME="02067" HREF="msg02067.shtml">Re: eperl-mode for (X)Emacs</A></strong>, <em>From:</em> Thomas R. Koll</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02069.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02071.shtml">[BUG REPORT] WML 2.0.6, Linux RedHat 6.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02069.shtml">Re: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02068.shtml">RE: eperl-mode for (X)Emacs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02070"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02070"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: trouble installing wml -->
+<!--X-From-R13: [vpunry Yerff <xerffNuny.fnne.qr> -->
+<!--X-Date: Thu, 3 Jun 1999 18:11:59 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9906031017130.31923&#45;100000@hal.saar.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990531123858.7229A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00713">Date Index</a>][<a href="thrd14.shtml#00713">Thread Index</a>]<br>
+[<A HREF="msg00712.shtml">Date Prev</A>][<A HREF="msg00714.shtml">Date Next</A>][<A HREF="msg00710.shtml">Thread Prev</A>][<A HREF="msg00640.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: trouble installing wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael Kress &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Jun 1999 10:24:56 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 31 May 1999, Denis Barbier wrote:
+
+&gt; It looks like Michael succeded in building such an RPM, maybe he could
+&gt; put it on a public URL so that you can grab it. Is it possible, Michael?
+
+Sure:  <A  HREF="http://hom.saar.de/~kress/wml.html">http://hom.saar.de/~kress/wml.html</A>
+Hope this helps. The package works on a box which has a clean RedHat-6.0
+install and on another box which has an upgraded version from 5.2 to 6.0.
+I built the package on the clean 6.0 box with perl-5.00503-2 installed.
+ciao - Michael
+
+Michael Kress / kress@hal.saar.de / coroner@irc
+<A  HREF="http://pandemonium.abyss.saar.de/~kress">http://pandemonium.abyss.saar.de/~kress</A>
+To increase system performance press CTRL+D now.
+P E N G U I N S   A R E   C O O L.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00710" HREF="msg00710.shtml">Re: trouble installing wml</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00712.shtml">[ANNOUNCE] WML 1.7.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00714.shtml">Re: [ANNOUNCE] WML 1.7.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00710.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00640.shtml">Bug in wmk?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00713"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00713"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

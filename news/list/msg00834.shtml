@@ -1,0 +1,150 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug report: Problems with variables -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 8 Jul 1999 01:15:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990708001114.375D&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 99070721560701.05594@abakus -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00834">Date Index</a>][<a href="thrd18.shtml#00834">Thread Index</a>]<br>
+[<A HREF="msg00833.shtml">Date Prev</A>][<A HREF="msg00835.shtml">Date Next</A>][<A HREF="msg00831.shtml">Thread Prev</A>][<A HREF="msg00839.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug report: Problems with variables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Jul 1999 01:14:45 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 7 Jul 1999, Uwe Mindrup wrote:
+
+&gt; Hi,
+
+Hi Uwe,
+
+&gt; I have a problem with variables.
+&gt; An example:
+&gt; I have a template.wml with this content (very simplified):
+&gt; 
+&gt; -------------------------------
+&gt; &lt;TITLE&gt;foo$(SubTitle:+: )$(SubTitle)&lt;/TITLE&gt;
+&gt; -------------------------------
+&gt; 
+&gt; This template.wml is called via
+&gt; 
+&gt; -------------------------------
+&gt; #use &lt;template.wml&gt;
+&gt; -------------------------------
+&gt; 
+&gt; or like this:
+&gt; 
+&gt; -------------------------------
+&gt; #use &lt;template.wml&gt; SubTitle="Homepage"
+&gt; -------------------------------
+&gt; 
+&gt; This second form (with SubTitle set) generates the correct
+&gt; form "foo: Homepage".  The first form generates "foo$(SubTitle)",
+&gt; but it should generate simply "foo". 
+
+I try with wml-1.7.1 and wml-1.7.2 and can't reproduce your wrong
+output.
+
+&gt; When i try this:
+&gt; 
+&gt; -------------------------------
+&gt; &lt;TITLE&gt;foo$(SubTitle:+: $(SubTitle))&lt;/TITLE&gt;
+&gt; -------------------------------
+
+This one won't work, variables can not be nested like this. If you want
+such a feature, write it ;-) Too tricky for me.
+
+&gt; then the first call generates the wrong output "foo)", and the second
+&gt; call is still correct.
+&gt; It seems, that the first SubTitle greps the wrong closing bracket.
+
+You're right.
+
+&gt; My solution (or bypass) of the problem is very simple. I use:
+&gt; 
+&gt; -------------------------------
+&gt; &lt;TITLE&gt;foo$(SubTitle:+: )\
+&gt; $(SubTitle)&lt;/TITLE&gt;
+&gt; -------------------------------
+&gt; 
+&gt; and with this slightly changed template.wml both calls are correct.
+&gt; Funny, isn't it?
+
+Strange, indeed. Are you sure you try with these examples?
+
+&gt; BTW: I have tried this with wml 1.7.1.
+
+Me too ;-)
+
+--
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00839" HREF="msg00839.shtml">Re: Bug report: Problems with variables</A></strong>, <em>From:</em> Uwe Mindrup</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00831" HREF="msg00831.shtml">Bug report: Problems with variables</A></strong>, <em>From:</em> Uwe Mindrup</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00833.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00835.shtml">Re: Very complicated m4 stuff</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00831.shtml">Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00839.shtml">Re: Bug report: Problems with variables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00834"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00834"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

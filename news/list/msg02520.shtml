@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: php + wml -->
+<!--X-From-R13: "Enaqvc Punggnpuneln" <fnaqvcNzvaqfj.pbz> -->
+<!--X-Date: Tue, 19 Feb 2002 10:00:20 +0100 (MET) -->
+<!--X-Message-Id: 1167.192.168.1.200.1014100948.squirrel@noida.mindsw.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020218181649.GA24369@jonas.server0.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02520">Date Index</a>][<a href="thrd51.shtml#02520">Thread Index</a>]<br>
+[<A HREF="msg02519.shtml">Date Prev</A>][<A HREF="msg02521.shtml">Date Next</A>][<A HREF="msg02523.shtml">Thread Prev</A>][<A HREF="msg02524.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: php + wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Sandip Bhattacharya&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 19 Feb 2002 12:12:28 +0530 (IST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+&gt; Hello, I've a simple question:
+&gt; How good does wml work with php? Is it possible?
+&gt;
+What do you want WML to do?
+
+I use wml for most of my php pages. Just use the wml shebang option to
+specify the output filenamee.g.
+
+#!wml -o index.php
+[...]
+&lt;page&gt;
+&lt;title&gt;Some title&lt;/title&gt;
+&lt;?php
+  php stuff
+ ?&gt;
+... more wml tags ..
+
+Regards,
+ Sandip
+-- 
+Sandip Bhattacharya
+
+Mindframe Software
+
+Work: sandip @ mindsw.com, <A  HREF="http://www.mindsw.com">http://www.mindsw.com</A>
+
+
+
+Play: sandipb @ bigfoot.com, <A  HREF="http://www.sandipb.net">http://www.sandipb.net</A>
+
+
+
+
+-----------------------------------------------
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02518" HREF="msg02518.shtml">php + wml</A></strong>, <em>From:</em> Jonas Meurer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02519.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02521.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02523.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02524.shtml">some typos in help</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02520"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02520"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

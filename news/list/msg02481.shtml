@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Help needed with hierarchical subnavigation bars -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNenqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Wed, 23 Jan 2002 11:51:31 +0100 (MET) -->
+<!--X-Message-Id: 005f01c1a3d5$250d3a70$4004a8c0@LAPTOP -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02481">Date Index</a>][<a href="thrd50.shtml#02481">Thread Index</a>]<br>
+[<A HREF="msg02480.shtml">Date Prev</A>][<A HREF="msg02482.shtml">Date Next</A>][<A HREF="msg02483.shtml">Thread Prev</A>][<A HREF="msg02485.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Help needed with hierarchical subnavigation bars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 23 Jan 2002 17:13:53 +1100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+G'Day
+
+[As far as I can tell my previous attempts to send this message have not
+worked, so here it goes...]
+
+I have tried on the mailing list but got no reply. I am attempting to do
+something in WML, and I know it is possible, but I think it needs a code
+revision. What I want to do is have a NAVIGATION BAR, similar to the
+SubNavBar in the WML site, but I want it to be hierarchial. This should
+not be too much of a problem, but as far as I can tell the cascading
+menus get done in the correct order.
+
+NavBar would need to be able render like
+___1___2___[3]____
+___31___[32]___33__
+__321___322___[323]__324_
+
+In other words render an entire level of the NavBar before the next one.
+I think this is just a more extreme version of menumode=inner|outer... I
+think it should be relatively straightforward for someone who knows WML
+to add another menumode for line based rendering....
+
+The documentation says that all I need to do is use my imagination, but
+I 
+Cannot work out how to use my imagination to get this to work. 
+
+Any help would be appreciated.
+
+Darryl
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International]
+Darryl@radio-active.net.au | www.radio-active.net.au for domain names 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02480.shtml">Extra attributes in &lt;cell&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02482.shtml">Re: Extra attributes in &lt;cell&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02483.shtml">Re: Extra attributes in &lt;cell&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02485.shtml">Bug in 2.0.8 navbar, limiting submenu depth to 2.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02481"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02481"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <lang:new id=tr short> -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Fri, 14 Apr 2000 16:17:49 +0200 (MET DST) -->
+<!--X-Message-Id: 87k8i0ix7d.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000414075802.70404.qmail@doramail.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01527">Date Index</a>][<a href="thrd31.shtml#01527">Thread Index</a>]<br>
+[<A HREF="msg01526.shtml">Date Prev</A>][<A HREF="msg01528.shtml">Date Next</A>][<A HREF="msg01526.shtml">Thread Prev</A>][<A HREF="msg01528.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;lang:new id=tr short&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 14 Apr 2000 16:17:10 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+"Siu Chung Lau" &lt;chung@doramail.com&gt; writes:
+&gt; This line cause many problems:
+&gt; &lt;lang:new id=tr short&gt;
+
+Yes.
+
+&lt;!ELEMENT TR       - O (TH|TD)+        -- table row --&gt;
+
+Remove the "short" attribute or rename the language to something
+that does not conflict with existing html tags.
+
+Yours, Florian
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01526" HREF="msg01526.shtml">&lt;lang:new id=tr short&gt;</A></strong>, <em>From:</em> Siu Chung Lau</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01526.shtml">&lt;lang:new id=tr short&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01528.shtml">[ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01526.shtml">&lt;lang:new id=tr short&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01528.shtml">[ANNOUNCE] WML 1.99.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01527"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01527"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

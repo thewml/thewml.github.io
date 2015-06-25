@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 2.0.2 (22&#45;Jun&#45;2000) -->
+<!--X-From-R13: Wyln [neglabi <z_vylnNntnin.pbz> -->
+<!--X-Date: Mon, 17 Jul 2000 18:06:13 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007171647340.28327&#45;100000@webster.domain -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000716221922.B7329@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01826">Date Index</a>][<a href="thrd37.shtml#01826">Thread Index</a>]<br>
+[<A HREF="msg01825.shtml">Date Prev</A>][<A HREF="msg01827.shtml">Date Next</A>][<A HREF="msg01815.shtml">Thread Prev</A>][<A HREF="msg01820.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ilya Martynov &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 16:54:58 +0400 (MSD)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 16 Jul 2000, Denis Barbier wrote:
+
+DB&gt; On Fri, Jul 14, 2000 at 01:14:38AM +0400, Ilya Martynov wrote:
+DB&gt; 
+DB&gt; &gt; Automatic generation of dependencies for Makefiles seems to be broken. Here
+DB&gt; &gt; small test case:
+DB&gt; [...]
+DB&gt; 
+DB&gt; Thanks for your report Ilya, there is indeed a bug.
+DB&gt; The patch below fixes this problem. You may apply it against
+DB&gt; wml_frontend/wml.src and recompile, or against your installed wml
+DB&gt; script.
+DB&gt; 
+
+Thanks for patch. It fixed all my problems. I've tried to use Makefiles for
+generation of static HTML from WML and one of the feautures I've used in
+them is automatic generation of dependencies. This bug was being killer for
+all my efforts to create simple Makefiles based system for generation of HTML
+documents. BTW if anybody on this mailing-list is interested in my
+experience with Makefiles and WML I can post my samples of my Makefiles.
+
+-- 
+Ilya Martynov
+AGAVA Software Company, <A  HREF="http://www.agava.com">http://www.agava.com</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01820" HREF="msg01820.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01815" HREF="msg01815.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01825.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01827.shtml">Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01815.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01820.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01826"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01826"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

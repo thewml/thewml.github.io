@@ -1,0 +1,231 @@
+--- ipp.src.orig	Mon Jan 31 13:34:22 2000
++++ ipp.src.new	Thu Feb  3 14:42:21 2000
+@@ -240,9 +240,38 @@
+             opendir(DIR, "$dirname");
+             @ls = grep { /^$pattern$/  && eval $test } readdir(DIR);
+             closedir DIR;
+-            foreach (@ls) {
+-                next if (m|/\.+$| or m|^\.+$|);
+-                $out .= &ProcessFile($mode, $delimiter, "$dirname/$_$ext", $level, $noid, %arg);
++
++            @ls = grep(! (m|/\.+$| or m|^\.+$|), @ls);
++
++  	    if ($arg{"INCLUDE_REVERSE"}) {
++  		@ls = reverse(sort(@ls));
++  	    }
++  	    elsif ($arg{"INCLUDE_SORT"}) {
++  		@ls = sort(@ls);
++  	    }
++	    
++  	    if (my $max = $arg{"INCLUDE_MAX"}) {
++  		@ls = @ls[0..$max-1] if ($max =~ m|[0-9]+| &&
++					 @ls > $max);
++  	    }
++
++            foreach (0..@ls - 1) {
++
++                # set INCLUDE_PREV, INCLUDE_SRC, INCLUDE_NEXT
++
++		if ($_ > 0) {
++		    $arg{"INCLUDE_PREV"} = "$dirname/$ls[$_ - 1]$ext"; }
++		else {
++		    delete $arg{"INCLUDE_PREV"}; }
++
++		$arg{"INCLUDE_SRC"} = "$dirname/$ls[$_]$ext";
++
++		if ($_ < @ls - 1) {
++		    $arg{"INCLUDE_NEXT"} = "$dirname/$ls[$_ + 1]$ext"; }
++		else {
++		    delete $arg{"INCLUDE_NEXT"}; }
++
++                $out .= &ProcessFile($mode, $delimiter, "$dirname/$ls[$_]$ext", $level, $noid, %arg);
+             }
+         }
+     }
+@@ -252,6 +281,7 @@
+ sub ProcessFile {
+     my ($mode, $delimiter, $file, $level, $noid, %arg) = @_;
+     my ($in, $found, $line, $incfile, $type, %argO, $out, $store);
++    my ($comment, $use);
+ 
+     #
+     #   first check whether this is a filename pattern in which case
+@@ -347,10 +377,36 @@
+     $line   = 0;
+     $out    = '';
+     $store  = '';
++    $comment = 0;
+     while ($l = <$in>) {
+         $line++;
+ 
+         #
++	#   EOL Comments
++	#
++
++	$use = 0;
++	($l =~ m/^#(use|include|depends)\s+(\S+)(.*)$/ and $use = 1)
++	    or next if $l =~ m/^[ \t]*#.*$/ ;
++	
++        #
++	#   Block Comments (C-style)
++	#
++
++	if ($comment == 1) {
++	    if ($l =~ s!(^.*?[^\\]|^)\*/(.*$)!$2!) {
++		$comment = 0;                              # end of comment
++	    } else {
++		next;                                      # lines of comment
++	    }
++	}
++
++	$l =~ s!([^\\]|^)/\*(.*?[^\\]|)\*/!$1!g;       # comments on one line
++
++	$use == 0 and $l =~ s!(^.*?[^\\]|^)/\*.*!$1!
++	    and $comment = 1;                          # start of comment
++
++	#
+         #   Variable Interpolation
+         #
+ 
+@@ -371,6 +427,14 @@
+             redo if $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+)\)/$1.$arg{$2}/ge;
+         }
+ 
++        #   This block is to set variables without output
++
++	#   Silent Assign
++	$arg{$2}=$3 while $l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):!([^\)]+)\)/$1/;
++	#   Silent Default Value
++	while ($l =~ s/((?!\\).|^)\$\(([a-zA-Z0-9_]+):%([^\)]+)\)/$1/)
++	    { exists $arg{$2} or $arg{$2}=$3 };
++
+         #   Implicit Variables
+         $l =~ s|__LINE__|$line|g;
+         $l =~ s|__FILE__|$file|g;
+@@ -534,22 +598,9 @@
+     unlink($tmpfile);
+ }
+ 
+-#
+-#   Comment Support
+-#
+-
+-#   EOL-comments
+-1 while ($outbuf =~ s/^([ \t]*)#[^\n]*\n//s); # special  case: at begin
+-$outbuf =~ s/\n[ \t]*#[^\n]*(?=\n)//sg;       # standard case: in the middle
+-$outbuf =~ s/\n[ \t]*#[^\n]*\n?$/\n/s;        # special  case: at end
+-#   $outbuf =~ s/^([ \t]*)\\(#)/$1$2/mg;      # remove escaping backslash
+-
+-#   Block-comments
+-$outbuf = parseblock($outbuf, 
+-                     sub { return '' }, 0,             # just discard the stuff 
+-                     quotemeta('/*'), quotemeta('*/'), # the delimiters
+-                     0, 1, '"', "\\", '"')             # the escapes, etc.
+-          if $outbuf =~ m|/\*|;
++#   escaped C-style comments
++$outbuf =~ s!\\/\*!/*!g;
++$outbuf =~ s!\\\*/!*/!g;
+ 
+ if ($opt_M ne '-' && $opt_o ne '-') {
+     #   Write dependencies
+@@ -673,6 +724,45 @@
+ 
+   #include "*.tmpl"
+ 
++With the following parameters you can control the order and the number
++of included files using the B<#include 'pattern'> directive:
++
++=over 4
++
++=item C<INCLUDE_SORT>   The files are included in ascending order 
++                        according to their file names.
++
++=item C<INCLUDE_REVERSE>   The files are included in descending order
++                        according to their file names.
++
++=item C<INCLUDE_MAX=n>   Only B<n> files are included.
++
++=back
++
++If you want to include the 5 newest include files of the news directory 
++with file names like C<20000131.inc>, you may write:
++
++  #include 'news/*.inc' INCLUDE_REVERSE INCLUDE_MAX=5
++
++In the files included with the B<#include 'pattern'> directive, the 
++following variables are set and can be read using B<$(name)>:
++
++=over 4
++
++=item C<INCLUDE_SRC>   the full name of the included source file including 
++                       path and extension
++
++=item C<INCLUDE_PREV>  the full name of the previos included file, unset
++                       in the first file
++
++=item C<INCLUDE_NEXT>  the full name of the next included file, unset
++                       in the last file
++
++=back
++
++Keep in mind that a directive without wildcards does not set this 
++variables.
++
+ =head2 B<Special `Use' Variant>
+ 
+ In analogon to Perl's C<use> statement, F<ipp> provides a special variant of
+@@ -786,6 +876,26 @@
+ 
+ =back
+ 
++The following tags are provided to set and use variables without 
++producing output:
++
++=over 4
++
++=item o   B<C<$(name:!value)>>
++
++`Silent Assign': Assign a value to a variable without output.
++
++ name := string
++
++=item o   B<C<$(name:%value)>>
++
++`Silent Default Value': Provide a default value for an unset variable .
++
++ if (not exists(name)) 
++     name := string
++
++=back
++
+ Notice the possibility to do simple non-nestable If-Then-Else constructs:
+ 
+   $(foo:+string_when_set)$(foo:*string_when_not_set)
+@@ -821,9 +931,13 @@
+ 
+ This type of comment is like the one found in the C programming language, i.e.
+ any characters between the start delimiter `C</*>' and the end delimiter
+-`C<*/>' are removed from the input. These block comments can be nested.
+-The parser used to strip these comments dramatically increase
+-compilation time (up to 50%!), so use them only for debugging purpose.
++`C<*/>' are removed from the input. These block comments cannot be nested.
++
++You can avoid stripping of comments by escaping it using C<\/*> and C<\*/>.
++
++Beware of the fact that C</*> is detected as start of comment even if there
++is no end delimiter. This is not the case in the C<#include>, C<#use> and 
++C<#depend> directives.
+ 
+ =back
+ 
+@@ -834,7 +948,9 @@
+   __END__
+ 
+ occurs. Use this to append POD documents to include files for documentation
+-purposes as in Perl.
++purposes as in Perl. You can use C<__END__> in constructs like 
++C<$(SHORTENING:+__END__)>, so that the processing is only stopped
++when the variable SHORTENING is set.
+ 
+ =head2 B<End-Of-Line Continuation>
+ 

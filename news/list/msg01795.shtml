@@ -1,0 +1,159 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Problems moving from 1.7.4 to 2.0.1 (resent) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 7 Jul 2000 22:32:14 +0200 (MET DST) -->
+<!--X-Message-Id: 20000707223321.A23214@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0007071554240.355&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01795">Date Index</a>][<a href="thrd37.shtml#01795">Thread Index</a>]<br>
+[<A HREF="msg01794.shtml">Date Prev</A>][<A HREF="msg01796.shtml">Date Next</A>][<A HREF="msg01792.shtml">Thread Prev</A>][<A HREF="msg01798.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Problems moving from 1.7.4 to 2.0.1 (resent)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 Jul 2000 22:33:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jul 07, 2000 at 03:56:39PM +0200, Stephan Petersen wrote:
+
+&gt; Hi guys,
+&gt; 
+&gt; a month ago I posted these questions to the list, but I haven't received
+&gt; any replies so far. I just downloaded and installed the latest snapshot,
+&gt; the effect is the same.
+[...]
+&gt; I do get lots of warnings like these:
+&gt; 
+&gt; /usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:2:
+&gt; unknown syntax `defsubst' in &lt;let&gt;
+&gt; /usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:2:
+&gt; unknown syntax `define-tag' in &lt;let&gt;
+&gt; /usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:3:
+&gt; unknown syntax `defmacro' in &lt;let&gt;
+&gt; /usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:3:
+&gt; unknown syntax `define-container' in &lt;let&gt;
+&gt; /usr/local/lib/wml/exec/wml_p2_mp4h: Warning:/tmp/wml.19590.tmp2.wml:4:
+&gt; unknown syntax `prog' in &lt;let&gt;
+&gt; [...]
+&gt; 
+&gt; I'm not sure why I get them, I assume they relate to the move to mp4h and
+&gt; specifically the inclusion of /usr/local/lib/wml/include/sys/bootp2.wml,
+&gt; but I don't know why I get them.
+
+The problem is that wml::sys::bootp2 is no more shipped with WML.
+Unfortunately, it will be loaded by wml if it exists.
+
+So you have to remove this file.
+
+This bug will be fixed in next release, wml will only load
+wml::sys::bootp3 and wml::sys::bootp4.
+
+&gt; All my wml files first #include an include file of my own, which in turn
+&gt; contains all the necessary #use commands, then starts to define some
+&gt; frequently-needed tags. V2.0.1 complains during the ePerl pass about the
+&gt; "@" in the following example:
+&gt; 
+&gt; &lt;define-tag myemail&gt; 
+&gt; &lt;a href="<A  HREF="mailto:me@my.com">mailto:me@my.com</A>"&gt;me@my.com&lt;/a&gt; 
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; I have to replace that with 
+&gt; 
+&gt; &lt;define-tag aspemail&gt; 
+&gt; &lt;a href=\"<A  HREF="mailto:info@aspetersen.de\">mailto:info@aspetersen.de\</A>"&gt;info@aspetersen.de&lt;/a&gt; 
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; (i.e. escape the quotes), is that a side-effect of the change to mp4h
+&gt; too, or is that due to an updated ePerl?
+
+???
+If ePerl complains, this means that &lt;aspemail&gt; is used within some ePerl
+commands. Could you send a more complete example?
+
+&gt; On another note: README.mp4h contains this example, which I don't
+&gt; understand:
+&gt; 
+&gt;  With mp4h,
+&gt;  &lt;define-tag foo&gt;Here:%attributes!!&lt;/foo&gt;
+&gt;  &lt;foo "x &lt;foo "1" "2"&gt; y&gt;"
+&gt;  gives
+&gt;  Arg1:y Attrs:x Arg1:2 Attrs:1 2!! y!!
+&gt;  
+&gt; Before I dig into that one: is there maybe something missing?
+
+Oops, one should read
+      &lt;define-tag foo&gt;Arg1:%1 Attrs:%attributes!!&lt;/define-tag&gt;
+      &lt;foo "x &lt;foo "1" "2"&gt;" y&gt;
+which gives sense to this comparison with Meta-HTML.
+
+Thanks for your report.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01798" HREF="msg01798.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01792" HREF="msg01792.shtml">Problems moving from 1.7.4 to 2.0.1 (resent)</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01794.shtml">Re: [BUG REPORT] WML 2.0.2, Any OS</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01796.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01792.shtml">Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01798.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01795"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01795"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

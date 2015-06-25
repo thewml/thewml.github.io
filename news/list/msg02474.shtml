@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug in wml? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 29 Dec 2001 02:19:14 +0100 (MET) -->
+<!--X-Message-Id: 20011229022832.A6848@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200112241125.fBOBPlq02653@powai.creato.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02474">Date Index</a>][<a href="thrd50.shtml#02474">Thread Index</a>]<br>
+[<A HREF="msg02473.shtml">Date Prev</A>][<A HREF="msg02475.shtml">Date Next</A>][<A HREF="msg02473.shtml">Thread Prev</A>][<A HREF="msg02476.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug in wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 29 Dec 2001 02:28:33 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Dec 24, 2001 at 04:55:46PM +0530, raj@creato.org wrote:
+&gt; 
+&gt; Hi all,
+&gt; 
+&gt; The following piece of WML gives a compilation error whenever the body of
+&gt; the "bid" tag matches the Perl regexp \d.*.  Is that a bug in wml or 
+&gt; am I doing something wrong?
+&gt; 
+&gt; Thanks,
+&gt; RG
+&gt; 
+&gt; 
+&gt; &lt;define-tag bid&gt;
+&gt; &lt;:
+&gt;     $bid = %body;
+&gt; 	#Some other piece of code that is irrelevant
+&gt; :&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; #Gives a compilation error if the argument to "bid" is of form
+&gt; #"\d.*"
+&gt; &lt;bid 2C&gt;
+&gt; 
+&gt; Output of wml after running "wml filename" on this file:
+&gt; 
+&gt; ePerl:Error: Perl parsing error (interpreter rc=255)
+&gt; 
+&gt; ---- Contents of STDERR channel: ---------
+&gt; Bareword found where operator expected at /tmp/wml.2639.tmp1.wml line 25,
+&gt; near "2C"
+&gt;  (Missing operator before C?)
+&gt;  syntax error at /tmp/wml.2639.tmp1.wml line 25, near "2C"
+&gt;  Execution of /tmp/wml.2639.tmp1.wml aborted due to compilation errors.
+&gt;  ------------------------------------------
+&gt;  ** WML:Break: Error in Pass 3 (rc=74).
+
+Hi,
+
+there is no bug here.  Type
+  wml -p12 filename
+to see which input file is sent to ePerl.  It looks like
+  &lt;:
+    $bid = 2C;
+  :&gt;
+which is invalid Perl code, and causes this error.  You have to add
+quotes to fix this, e.g.
+     $bid = '%body';
+or
+     $bid = q{%body};
+or
+     $bid = &lt;&lt;'HERE'
+  %body
+  HERE
+  ;
+You have to choose a delimiter which cannot appear in %body.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02473" HREF="msg02473.shtml">Bug in wml?</A></strong>, <em>From:</em> raj</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02473.shtml">Bug in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02475.shtml">Re: Strange bug in mp4h parsing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02473.shtml">Bug in wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02476.shtml">logo size, date format</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02474"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02474"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

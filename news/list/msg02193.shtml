@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: man for mp4h -->
+<!--X-From-R13: Xrna&#45;[vpury Enhintr <wrna&#45;zvpury.fnhintrNpyho&#45;vagrearg.se> -->
+<!--X-Date: Thu, 5 Apr 2001 11:42:26 +0200 (MET DST) -->
+<!--X-Message-Id: 3ACC3E66.FCFF9192@club&#45;internet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010405104936.A14814@tanit.wanadoo.es -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02193">Date Index</a>][<a href="thrd44.shtml#02193">Thread Index</a>]<br>
+[<A HREF="msg02192.shtml">Date Prev</A>][<A HREF="msg02194.shtml">Date Next</A>][<A HREF="msg02192.shtml">Thread Prev</A>][<A HREF="msg02195.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: man for mp4h</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jean-Michel Sauvage &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 05 Apr 2001 11:44:06 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Horacio wrote:
+&gt; 
+&gt; Hi,
+&gt; 
+&gt; I´m getting a print-ready postscript version of all man pages
+&gt; included with wml through
+&gt; 
+&gt; pod2man --section=n --center="wml manual" foo.pod foo.n
+&gt; 
+&gt; groff -mandoc -Tps foo.n &gt;foo.ps
+&gt; 
+&gt; A few other I just get them formatted with a2ps.  But, how can I
+&gt; get a (*roff) .ps (or simple .ps) from the mp4h documentation?
+&gt; 
+&gt; Thank You,
+&gt; 
+&gt; --
+&gt; Horacio
+
+Hello,
+
+  man -t wml &gt; wml.ps
+
+or
+
+  man -t wml | lpr
+
+etc.
+
+
+-- 
+Jean-Michel Sauvage
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02191" HREF="msg02191.shtml">man for mp4h</A></strong>, <em>From:</em> Horacio</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02192.shtml">Re: man for mp4h</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02194.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02192.shtml">Re: man for mp4h</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02195.shtml">Parsing WML to insert records into database</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02193"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02193"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

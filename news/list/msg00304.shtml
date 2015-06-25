@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WML, HOME~ and the redirections -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Tue, 12 Jan 1999 19:07:16 +0100 (CET) -->
+<!--X-Message-Id: 199901121610.RAA31833@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00304">Date Index</a>][<a href="thrd7.shtml#00304">Thread Index</a>]<br>
+[<A HREF="msg00303.shtml">Date Prev</A>][<A HREF="msg00305.shtml">Date Next</A>][<A HREF="msg00295.shtml">Thread Prev</A>][<A HREF="msg00324.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WML, HOME~ and the redirections</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Jan 1999 17:10:49 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I'm trying to convert to WML my error documents (Apache). I have in the 
+srm.conf:
+
+ErrorDocument 403 /redirects/forbidden.html
+
+And the forbidden.wml uses (indirectly, it comes from a template):
+
+&lt;A HREF="$(HOME)/search/"&gt;
+
+While HOME is defined in the .wmlrc:
+
+-D HOME~.
+
+The problem is that HOME is expansed at compile time, in the directory of 
+forbidden.wml. It makes:
+
+&lt;A HREF="../search/"&gt;
+
+And the browser (Lynx 2.8) computes the target with the old document, the one 
+which was forbidden, and which is not at the same level... So the user who 
+tries to select links in the ErrorDocument gets a new 403 or a 404. No problem 
+with Netscape 4.
+
+Which browser is right? How to combine HOME~ and the ErrorDocument feature?
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00324" HREF="msg00324.shtml">Re: WML, HOME~ and the redirections</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00303.shtml">Re: what is needed to support other charsets in wml?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00305.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00295.shtml">[patch navbar.src] Single quotes problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00324.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00304"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00304"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

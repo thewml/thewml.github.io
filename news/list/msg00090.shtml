@@ -1,0 +1,110 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I\'m trying to use wml in a cgi... -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Wed, 11 Feb 1998 13:03:50 +0100 (MET) -->
+<!--X-Message-Id: 199802111203.NAA00644@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00090">Date Index</a>][<a href="thrd2.shtml#00090">Thread Index</a>]<br>
+[<A HREF="msg00089.shtml">Date Prev</A>][<A HREF="msg00091.shtml">Date Next</A>][<A HREF="msg00091.shtml">Thread Prev</A>][<A HREF="msg00093.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I\'m trying to use wml in a cgi...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Wed, 11 Feb 1998 13:03:48 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00088.shtml">Pine.LNX.3.95.980210192832.12068A-100000@ray.compu-aid.com</A>&gt; you wrote:
+
+&gt;&gt;&gt; Hmmm... you already found that Meta-HTML is the bad guy here, so I've poked
+&gt;&gt;&gt; around its sources and found that under a CGI environment it tries to
+&gt;&gt;&gt; automatically import this. Actually the CONTENT_LENGTH variable is inspected.
+&gt;&gt;&gt; Because you say that your CGI-script received some stuff and then wants to
+&gt;&gt;&gt; process it via WML, I'm right when I'm assume that your CGI script is invoked
+&gt;&gt;&gt; via POST method?  
+&gt;&gt; 
+&gt;&gt; If yes, then the error is clear. As a workaround you had to remove or clear
+&gt;&gt; the CONTENT_LENGTH environment variable before running WML to avoid a
+&gt;&gt; re-import if it in Meta-HTML. Just add ``CONTENT_LENGTH='' in front of the WML
+&gt;&gt; call. When it then never hangs I can clear these variables in WML 1.6.1 per
+&gt;&gt; default.
+
+&gt; I unset the content length (yes, it was a post) and that solved _a_
+&gt; problem. It just let m find the next one. e-Perl woulc complain about not
+&gt; wanting to work over a file in /tmp with the wrong extension.
+
+&gt; On a hunch, I nuked all the CGI related environment before invoking wml,
+&gt; and that solved that. Sorry, I haven't done an exhaustive investigation, I
+&gt; just know one or more of those vars was the culprit, since it works now.
+
+OK, then we can be sure that the problem (the hang, etc.) is the CGI
+environment because Pass 2 (Meta-HTML) and Pass 3 (ePerl) are also
+interpreters for the CGI-environment. Ok, then I'll clear any CGI environment
+in the WML control frontend for 1.6.1, so WML can be used here, too.  Although
+I personally dislike this way of using WML because it is not the way it was
+intented to be used for. And it is too slow for this, but ok. Sometimes it can
+be useful, yes. At least when someone runs a website authoring environment
+with WML as its generation backend.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00089.shtml">pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00091.shtml">Re: pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00091.shtml">Re: pass one forces use of pass two</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00093.shtml">web site troubles?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00090"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00090"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

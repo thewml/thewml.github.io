@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: Xbrl Ezvgu <wbrlNwbrlfzvgu.pbz> -->
+<!--X-Date: Fri, 15 Sep 2000 10:24:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0009141232050.20979&#45;100000@joeysmith.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200009141543.e8EFhxW16807@apo.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01950">Date Index</a>][<a href="thrd39.shtml#01950">Thread Index</a>]<br>
+[<A HREF="msg01949.shtml">Date Prev</A>][<A HREF="msg01951.shtml">Date Next</A>][<A HREF="msg01942.shtml">Thread Prev</A>][<A HREF="msg01955.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Joey Smith &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Sep 2000 12:37:33 -0600 (MDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan:
+  Not every successful OSS project follows the even-stable/odd-unstable
+method. In the PHP project, we simply formed a team "php-qa", for
+quality assurance, and the members of that team have the task of
+running/creating regression tests, certifing releases, etc.
+
+  That said, I think WML would be a decent candidate for the even/odd
+cycle, bcz the maintainer (Denis, please take a bow) seems to be
+/almost/ the only one DOING anything here. I know I'm guilty of
+whining, and so are a few others. (No need to name names, or
+anything.) Maybe if there were a *known unstable branch*, people would
+be more willing to pitch in.
+
+  To be honest, the main reason I don't step up is because, having spent
+most of the last 5 years as a PHP developer, Perl is now frigtening to
+me. =)
+
+  Anyway, just my $.05. (Too long for only 2).
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01955" HREF="msg01955.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01958" HREF="msg01958.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01942" HREF="msg01942.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01949.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01951.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01942.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01955.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01950"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01950"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

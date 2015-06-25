@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Navbar in two languages -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Mon, 8 Nov 1999 17:52:14 +0100 (MET) -->
+<!--X-Message-Id: 87d7tllyej.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.10.9911072003030.3057&#45;100000@fhtupc07.tu&#45;graz.ac.at -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01129">Date Index</a>][<a href="thrd24.shtml#01129">Thread Index</a>]<br>
+[<A HREF="msg01128.shtml">Date Prev</A>][<A HREF="msg01130.shtml">Date Next</A>][<A HREF="msg01127.shtml">Thread Prev</A>][<A HREF="msg01131.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Navbar in two languages</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 08 Nov 1999 17:51:32 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Wolfgang Dautermann &lt;dauti@oeh.tu-graz.ac.at&gt; writes:
+&gt; My question now is: How is the correct way to generate multi-language
+&gt; navigation bars? Is ist possible?
+
+Another possibility in addition to the one mentioned by Denis is my
+slightly obsolete modified version of the 1.6.8 navbar, see
+<A  HREF="http://www.hars.de/www/wml_nav_lang.en.html">http://www.hars.de/www/wml_nav_lang.en.html</A> 
+
+It is the navbar-FH.wml in the wml_contrib directory of wml.
+
+Yours, Florian
+-- 
++ when hideous hordes of web designers will leave ripped bloodless bodies of
+hosts they parasited upon and convulsively start tearing limbs of each other
+in agony illuminated by artificial light [...], then we know that time has
+come for dêë|||zêïñe++++ &gt;&gt;&gt;&gt; Å.Ñ.Ñ.Ï.H.Î.L.Ä.T.Î.Ö.Ñ      -- www.absurd.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01125" HREF="msg01125.shtml">Navbar in two languages</A></strong>, <em>From:</em> Wolfgang Dautermann</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01128.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01130.shtml">wmk -M (was: doc error in wmk man page?)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01127.shtml">Re: Navbar in two languages</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01131.shtml">empty eperl man file</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01129"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01129"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

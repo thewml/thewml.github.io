@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Compile Problems -->
+<!--X-From-R13: Dbqtre Sgm&#45;Pebja <ebqtreroNyvahkgnt.bet> -->
+<!--X-Date: Wed, 4 Apr 2001 16:17:04 +0200 (MET DST) -->
+<!--X-Message-Id: 20010404161651.B31355@hydra.linuxtag.uni&#45;kl.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010404160141.A31355@hydra.linuxtag.uni&#45;kl.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02190">Date Index</a>][<a href="thrd44.shtml#02190">Thread Index</a>]<br>
+[<A HREF="msg02189.shtml">Date Prev</A>][<A HREF="msg02191.shtml">Date Next</A>][<A HREF="msg02189.shtml">Thread Prev</A>][<A HREF="msg02191.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Compile Problems</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rodger Etz-Brown &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 4 Apr 2001 16:16:51 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Upppsss... the moment I send it, the moment I regretted it.
+
+Problem was that I didn't have zlib-devel installed. 
+Installed it and it works.
+
+Sorry for disturbing anybody's sleep :)
+
+Have fun,
+REB
+
+* Rodger Etz-Brown (rodgereb@linuxtag.org) wrote:
+&gt; Hi all,
+&gt; 
+&gt; I am trying to compile WML Ver. 2.0.6 from a tar ball that I downloaded from
+&gt; the main site.
+&gt; 
+&gt; I made sure that I have got all the prerequisits that the INSTALL doc suggests.
+&gt; 
+&gt; Unfortunately, after I configured (./configure --prefix=/usr/) I made make.
+&gt; 
+&gt; It stops and the last chunk of messages is below. Any ideas anybody?
+&gt; 
+&gt; Thanks in advance,
+&gt; REB
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02189" HREF="msg02189.shtml">Compile Problems</A></strong>, <em>From:</em> Rodger Etz-Brown</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02189.shtml">Compile Problems</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02191.shtml">man for mp4h</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02189.shtml">Compile Problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02191.shtml">man for mp4h</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02190"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02190"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

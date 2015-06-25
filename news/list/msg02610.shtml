@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: make errors &#45; curses.h not found &#38; problem resolved.. -->
+<!--X-From-R13: wbr <wbrNqhovhz.pbz> -->
+<!--X-Date: Sun, 9 Jun 2002 16:18:07 +0200 (MET DST) -->
+<!--X-Message-Id: 20020609141801.23F974CE617@visp.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02610">Date Index</a>][<a href="thrd53.shtml#02610">Thread Index</a>]<br>
+[<A HREF="msg02609.shtml">Date Prev</A>][<A HREF="msg02611.shtml">Date Next</A>][<A HREF="msg02622.shtml">Thread Prev</A>][<A HREF="msg02612.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>make errors - curses.h not found &amp; problem resolved..</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: joe &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Jun 2002 07:17:57 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+ok, so this should be a no-brainer to most people.  ./configure.. 
+./make , use product...so I'm sending this message along for future 
+generations of less experienced people like me. 
+
+here's the result of make
+
+(running on a mandrake 8.2 workstation)
+
+...(snip...)
+&lt;=== wml_frontend
+===&gt; wml_aux (all)
+make[1]: Entering directory `/home/joe/wml-2.0.8/wml_aux'
+===&gt; wml_aux/iselect (all)
+make[2]: Entering directory `/home/joe/wml-2.0.8/wml_aux/iselect'
+gcc -O2 -I. -o iselect_main.o -c iselect_main.c
+gcc -O2 -I. -o iselect_browse.o -c iselect_browse.c
+iselect_browse.c:45:20: curses.h: No such file or directory
+make[2]: *** [iselect_browse.o] Error 1
+make[2]: Leaving directory `/home/joe/wml-2.0.8/wml_aux/iselect'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/home/joe/wml-2.0.8/wml_aux'
+make: *** [all] Error 1
+
+I've been running linux/freebsd long enough to figure out there is a 
+dependency on the libcurses package.  Installed and make work  just fine
+
+
+-- 
+----------------------------------------
+Joe
+-----------------------------------------
+All shall be well, and all shall be well,
+and all manner of things shall be well.
+               Julian of Norwich
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02609.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02611.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02622.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02612.shtml">[BUG REPORT] WML 2.0.8, all</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02610"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02610"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

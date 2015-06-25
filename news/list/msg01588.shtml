@@ -1,0 +1,177 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: v@rgQbz znvyfreivpr <wuNvargpbz.pu> -->
+<!--X-Date: Sat, 20 May 2000 00:00:50 +0200 (MET DST) -->
+<!--X-Message-Id: 200005192200.AAA15803@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01588">Date Index</a>][<a href="thrd10.shtml#01588">Thread Index</a>]<br>
+[<A HREF="msg01587.shtml">Date Prev</A>][<A HREF="msg01589.shtml">Date Next</A>][<A HREF="msg01584.shtml">Thread Prev</A>][<A HREF="msg01706.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: iNetCom mailservice &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 20 May 2000 00:00:06 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+well, the user you wanted to reach does not exist on this server, please
+try again, it could be the user is not present anymore.
+--
+References: &lt;<A HREF="msg01584.shtml">200005160633.XAA22636@tweety.main.gnac.com</A>&gt;
+In-Reply-To: &lt;<A HREF="msg01584.shtml">200005160633.XAA22636@tweety.main.gnac.com</A>&gt;
+X-loop: mailservice@inetcom.ch 
+
+&gt;__        ___  __ _     
+&gt;\ \      / / \/  | |      Website META Language
+&gt; \ \ /\ / / |\/| | |      Version 2.0.0 (11-May-2000)
+&gt;  \ V  V /| |  | | |___ 
+&gt;   \_/\_/ |_|  |_|_____|  BUG REPORT
+&gt;_________________________________________________________
+
+&gt;From:     John Sellens
+&gt;Reply-To: jsellens@gnac.com
+
+&gt;PROBLEM DESCRIPTION:
+&gt;mp4h seems to get %attributes wrong when there are tags
+
+&gt;For example:
+&gt;    &lt;define-tag endtag=required glorp&gt;
+&gt;    %attributes
+&gt;    That was attributes, this is body:
+&gt;    %body
+&gt;    &lt;/define-container&gt;
+
+&gt;    &lt;glorp &lt;b&gt;hello&lt;/b&gt;&gt;
+&gt;    this is the body
+&gt;    &lt;/glorp&gt;
+
+&gt;Produces:
+&gt;    &lt;b
+&gt;    That was attributes, this is body:
+&gt;    hello&lt;/b&gt;&gt;
+&gt;    this is the body
+&gt;In 1.7.4 with define-container it produced:
+&gt;    &lt;b&gt;hello&lt;/b&gt;
+&gt;    That was attributes, this is body:
+&gt;    this is the body
+
+&gt;If I quote the attribute "&lt;b&gt;hello&lt;/b&gt;" then it does the right thing.
+&gt;Mostly easy to work around, but I think it likely means changes to
+&gt;my .wml files rather than just my template files.
+
+&gt;I'm not sure if this is a bug, or a change in behaviour when
+&gt;given bad input.  I looked for but didn't see a warning about
+&gt;this in the README.mp4h file.
+
+&gt;WML is amazing - thanks very much for all your efforts.
+
+
+&gt;PLATFORM CHARACTERISTICS:
+&gt;Used WML System:
+&gt;Built Environment:
+&gt;    Host: sun4u-sun-solaris2.5.1
+&gt;    Perl: 5.005 (/tools/perl-5.005.02/bin/perl)
+&gt;    User: jsellens@gnac.com
+&gt;    Date: 15-May-2000
+&gt;Built Location:
+&gt;    Prefix: /Tools/SunOS_5.5.1_sparc/wml-2.0.0
+&gt;    BinDir: /Tools/SunOS_5.5.1_sparc/wml-2.0.0/bin
+&gt;    LibDir: /Tools/SunOS_5.5.1_sparc/wml-2.0.0/lib
+&gt;    ManDir: /Tools/SunOS_5.5.1_sparc/wml-2.0.0/man
+
+&gt;Used Perl System:
+&gt;Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+&gt;  Platform:
+&gt;    osname=solaris, osvers=2.5.1, archname=sun4-solaris-thread
+&gt;    uname='sunos something.gnac.com 5.5.1 generic_103640-08 sun4u sparc sunw,ultra-1 '
+&gt;    hint=previous, useposix=true, d_sigaction=define
+&gt;    usethreads=define useperlio=undef d_sfio=undef
+&gt;  Compiler:
+&gt;    cc='gcc', optimize='-O', gccversion=2.8.1
+&gt;    cppflags='-D_REENTRANT -I/tools/db/include -I/tools/gdbm/include'
+&gt;    ccflags ='-D_REENTRANT -I/tools/db/include -I/tools/gdbm/include'
+&gt;    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+&gt;    intsize=4, longsize=4, ptrsize=4, doublesize=8
+&gt;    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+&gt;    alignbytes=8, usemymalloc=y, prototype=define
+&gt;  Linker and Libraries:
+&gt;    ld='gcc', ldflags ='-L/tools/db/lib -L/tools/gdbm/lib'
+&gt;    libpth=/tools/db/lib /tools/gdbm/lib /lib /usr/lib /usr/ccs/lib
+&gt;    libs=/tools/gdbm/lib/libgdbm.a /tools/db/lib/libdb.a -lsocket -lnsl -ldl -lm -lposix4 -lpthread -lc -lcrypt
+&gt;    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+&gt;  Dynamic Linking:
+&gt;    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+&gt;    cccdlflags='-fPIC', lddlflags='-G -L/tools/db/lib -L/tools/gdbm/lib'
+
+
+&gt;Characteristics of this binary (from libperl): 
+&gt;  Built under solaris
+&gt;  Compiled at Dec  8 1998 00:14:54
+&gt;  @INC:
+&gt;    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/5.00502/sun4-solaris-thread
+&gt;    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/5.00502
+&gt;    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/site_perl/5.005/sun4-solaris-thread
+&gt;    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/site_perl/5.005
+&gt;    .
+&gt;______________________________________________________________________
+&gt;Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt;Official Support Mailing List                   sw-wml@engelschall.com
+&gt;Automated List Manager                       majordomo@engelschall.com
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01587.shtml">Re: BUG REPORT: Website META Language 2.0.0 (11-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01589.shtml">[LONG][RFC] WML 2.0.0, quotes and tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01584.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01706.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01588"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01588"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

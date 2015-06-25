@@ -1,0 +1,156 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2, sparc&#45;sun&#45;solaris2.6 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 9 Jul 1999 09:58:38 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990709092755.9149A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199907082227.AAA02197@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00846">Date Index</a>][<a href="thrd18.shtml#00846">Thread Index</a>]<br>
+[<A HREF="msg00845.shtml">Date Prev</A>][<A HREF="msg00847.shtml">Date Next</A>][<A HREF="msg00843.shtml">Thread Prev</A>][<A HREF="msg00858.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Jul 1999 09:52:25 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thanks Dave,
+
+all scripts under etc/ are being removed, so this will fix this problem ;-)
+It's a pain to deal with getopt, it's not portable new scripts don't use
+it.
+
+Denis
+
+On Fri, 9 Jul 1999 plonka@doit.wisc.edu wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.2
+&gt; Operating System: sparc-sun-solaris2.6
+&gt; 
+&gt; Problem Description:
+&gt; | When attempting to install WML on Solaris with gcc as
+&gt; | the only working C compiler installed, the make fails
+&gt; | with:
+&gt; | 
+&gt; | ===&gt; wml_backend/p9_slice
+&gt; | V=`./etc/newvers -l perl -D slice_vers.pl`; \
+&gt; | sed -e "s|\@SLICE_VERSION\@|$V|" &lt;slice.pod &gt;/tmp/slice; \
+&gt; | (cd /tmp; pod2man --section=1 \
+&gt; |         --center="Ralf S. Engelschall" \
+&gt; |                 --release="EN Tools" \
+&gt; |                 slice ) &gt;slice.1; rm -f /tmp/slice
+&gt; | ./etc/newvers: /tmp/getopt: not found
+&gt; | *** Error code 2
+&gt; | make: Fatal error: Command failed for target `slice.1'
+&gt; | 
+&gt; | There turns out to be 2 issues with the various
+&gt; | "newvers" scripts:
+&gt; | 
+&gt; | 1) "newvers" method of testing for the existence of
+&gt; | getopt(1) is not portable:
+&gt; | 
+&gt; |    eval "$getopt" &gt;/dev/null 2&gt;&amp;1
+&gt; | 
+&gt; | Under Solaris (and probably other System V Unixes,
+&gt; | and AIX) getopt(1) fails if it is not given any
+&gt; | arguments.
+&gt; | I checked the BSD and Solaris man pages and don't see
+&gt; | a defined behavior for getopt with no arguments.
+&gt; | BSD getopt(1) prints just "--" and exits with success,
+&gt; | while Solaris getopt(1) prints:
+&gt; | 
+&gt; |    usage: getopt legal-args $*
+&gt; | 
+&gt; | and exits with an error status.
+&gt; | I worked around this issue by changing the "newvers"
+&gt; | scripts to do this instead:
+&gt; | 
+&gt; |    eval "$getopt ''" &gt;/dev/null 2&gt;&amp;1
+&gt; | 
+&gt; | My thought is that this is more likely to elicit
+&gt; | defined behavior since getopt(1) actually has an
+&gt; | argument which it can pass to getopt(3).
+&gt; | 
+&gt; | Another option would be to test for the
+&gt; | getopt command with autoconf, and AC_OUTPUT the
+&gt; | "newvers" script(s).
+&gt; | 
+&gt; | 2) The "newvers" script in "wml_backend/p9_slice/etc"
+&gt; |    (probably an older revision?) doesn't detect the
+&gt; |    system-provided getopt(1) because of the issue
+&gt; |    above but then proceeds to attempt to compile its
+&gt; |    own using "cc" (which is hard-coded) rather than the
+&gt; |    compiler discovered by configure.  This, of course,
+&gt; |    fails on machines with gcc, but no working cc
+&gt; |    installed.  (This must be a known issue because
+&gt; |    some of the other "newvers" scripts suppled with
+&gt; |    WML do check for gcc.)
+&gt; | 
+&gt; | Thanks,
+&gt; | Dave
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00843" HREF="msg00843.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></strong>, <em>From:</em> plonka</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00845.shtml">Re: &quot;wmk -a&quot; and auto-adjusted variables?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00847.shtml">Re: not expanding $(SOMETHING) in &lt;import&gt; or &lt;fsview&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00843.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00858.shtml">[BUG REPORT] WML 1.7.2, sparc-sun-solaris2.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00846"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00846"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

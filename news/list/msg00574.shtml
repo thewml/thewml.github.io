@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: gfont installation problem -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Tue, 13 Apr 1999 16:34:29 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9904131630560.22047&#45;100000@gtt&#45;ixs.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00574">Date Index</a>][<a href="thrd13.shtml#00574">Thread Index</a>]<br>
+[<A HREF="msg00573.shtml">Date Prev</A>][<A HREF="msg00575.shtml">Date Next</A>][<A HREF="msg00573.shtml">Thread Prev</A>][<A HREF="msg00575.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>gfont installation problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 13 Apr 1999 16:33:32 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi there,
+
+I downloaded gfont (V1.0.2) and tried to install it, but ./configure
+aborts with:
+
+checking for Perl language... expr: syntax error
+built v5.004_04
+configure: error: required program perl'' not found
+
+My version of Perl is 5.004_04 built for i586-linux.
+ 
+Any idea what could be wrong?
+
+Thanks in advance for any help,
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00575" HREF="msg00575.shtml">Re: gfont installation problem</A></strong>, <em>From:</em> Frederic Le Mouel</li>
+<li><strong><A NAME="00576" HREF="msg00576.shtml">Re: gfont installation problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00573.shtml">Seeking for maintainers for ePerl and gFONT</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00575.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00573.shtml">Seeking for maintainers for ePerl and gFONT</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00575.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00574"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00574"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

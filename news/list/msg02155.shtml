@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Using information in other documents -->
+<!--X-From-R13: Oaqref Rvafra <naqrefNqvafra.arg> -->
+<!--X-Date: Sat, 3 Mar 2001 14:34:56 +0100 (MET) -->
+<!--X-Message-Id: Pine.NEB.4.21.0103031415440.288&#45;100000@box.lan.dinsen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010302121511.338EA3FDD@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02155">Date Index</a>][<a href="thrd44.shtml#02155">Thread Index</a>]<br>
+[<A HREF="msg02154.shtml">Date Prev</A>][<A HREF="msg02156.shtml">Date Next</A>][<A HREF="msg02153.shtml">Thread Prev</A>][<A HREF="msg02154.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Using information in other documents</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anders Dinsen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 3 Mar 2001 14:34:47 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 2 Mar 2001, Stephane Bortzmeyer wrote:
+&gt; A bit of ePerl code?
+&gt; 
+&gt; &lt;define-tag href&gt;
+&gt; &lt;:
+&gt; # Open the file
+&gt; # Find the title (HTML::HeadParser)
+&gt; # Print it
+&gt; :&gt;
+&gt; &lt;/define-tag&gt;
+
+That would take care of the HTML case, which is cool enough, not the most
+important case to me.
+
+On Fri, 2 Mar 2001, Axel Beckert wrote:
+&gt; All link descriptions are given as variable values in the source file.
+&gt; My WML template writes this data together with path and file name in
+&gt; some file named file-descriptions.psv (pipe separated values :-). When
+&gt; bulding the navigation bar, the template finds out the appropriate
+&gt; path and links to every level using the data from this file.
+&gt; 
+&gt; The disadvantage is known from the table of contents in LaTeX written
+&gt; documents: You have at least to compile all documents twice at the
+&gt; beginning, but after that usually one compilation is enough.
+
+I agree that this is not an optimal solution: Building a web site should
+be an exact science :-) But it is not necessary. Here is what I have
+thought about (without looking at the source to WML, actually):
+
+I define macros &lt;title&gt;&lt;/title&gt; &lt;description&gt;&lt;/description&gt; &lt;body&gt;&lt;/body&gt;
+and similar macros to enclose content that may be referenced from
+elsewhere.
+
+These macros divert this content into seperate diversions.
+
+Using a WML -o construct, I can extract the contents of e.g. the title and
+description diversions. This I will execute in a macro
+&lt;get-title document="wmldocument"&gt;
+
+(A generic macro &lt;get-diversion document="" diversion=""&gt; would form the
+basis of this.)
+
+Obviously, loops can be created: A title referring to the title of another
+document referring to the title of the first document. But that's okay.
+
+Another advantage of this is that if I define a tag
+&lt;related-links&gt;&lt;/related-links&gt; to contain a collection of links that are
+related to a certain document, then I can reuse this collection by doing
+&lt;get-diversion document="whatever" diversion="related-links"&gt;
+
+As far as I can see, all this can be done with WML as it is, but it will
+be slow, since for every &lt;get-diversion...&gt; tag, WML needs to be run once
+on the target document.
+
+But it should be possible to cache the results of the &lt;get-diversion...&gt;
+tag by checking modification time of the target document. It could be
+cached in a simple hashed database file with the key being the joined full
+pathname of the document and the diversion.
+
+(BTW, this caching could be extended to cover the HTML case too.)
+
+So far so good. My problem is that I'm a lousy Perl programmer (a good
+programmer, but not in Perl - I actually used to dislike Perl a lot, but
+if it can make my life easier, then I can live with its obscurity).
+
+Let me hear your input on this. Will someone help me with this project?
+
+-- 
+Anders Dinsen
+anders@dinsen.net
+<A  HREF="http://dinsen.net/anders/">http://dinsen.net/anders/</A>
+
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02153" HREF="msg02153.shtml">Re: Using information in other documents</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02154.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02156.shtml">std/href.wml space after links</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02153.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02154.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02155"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02155"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

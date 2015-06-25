@@ -1,0 +1,240 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3 -->
+<!--X-From-R13: Oagubal Tbx <sbxnNhnyoregn.pn> -->
+<!--X-Date: Sun, 2 Apr 2000 14:08:28 +0200 (MET DST) -->
+<!--X-Message-Id: 20000329020547.A27141@lovelife.olvc.ab.ca -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: Pine.LNX.3.96.1000329000901.9A&#45;100000@localhost -->
+<!--X-Reference: 200003290807.KAA14842@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01504">Date Index</a>][<a href="thrd31.shtml#01504">Thread Index</a>]<br>
+[<A HREF="msg01506.shtml">Date Prev</A>][<A HREF="msg01508.shtml">Date Next</A>][<A HREF="msg01494.shtml">Thread Prev</A>][<A HREF="msg01518.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anthony Fok &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Mar 2000 02:05:47 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Mar 29, 2000 at 10:07:14AM +0200, Jan Holler wrote:
+&gt; I do not. I checked the site at:
+&gt;  <A  HREF="http://www.debian.org/Packages/frozen/web/weblint.html">http://www.debian.org/Packages/frozen/web/weblint.html</A>
+&gt; I could not find any improvements over 1.20
+
+Look closer.  :-)  Check in /usr/doc/weblint if you have it installed.
+At first glance, there seems to be some pros and cons.  I have attached the
+relevant files for consideration.  :-)
+
+Anthony
+
+-- 
+Anthony Fok Tung-Ling                Civil and Environmental Engineering
+foka@ualberta.ca, foka@debian.org    University of Alberta, Canada
+Come visit Our Lady of Victory Camp -- <A  HREF="http://www.olvc.ab.ca/">http://www.olvc.ab.ca/</A>
+
+</PRE>
+<PRE>
+This is still BETA software.  But it actually checks HTML 4.0 instead of 
+HTML 3.2.  It's also been modularized and is 'use strict' and '-w'
+clean.  I find it much better than weblint 1.020.
+
+Here's a copy of the mail that I sent to Neil Bowers asking about
+packaging this version of weblint.  I haven't received a response yet
+(18 Jul 1999).
+
+From: "Darren/Torin/Who Ever..." &lt;torin@daft.com&gt;
+Date: 09 Jul 1999 13:35:04 PDT
+Subj: weblint 1.9.3 as a package in Debian unstable
+  To: Neil Bowers
+----------------
+I maintain weblint for the Debian Linux distribution.  I was waiting for
+weblint 2.0 to be released before I packaged up the latest weblint so as
+to not distribute beta code.
+
+But considering that it hasn't been updated since April and 1.020 is
+really old, I was wondering if you would mind if I put weblint 1.9.3
+into the Debian unstable distribution (potato).  People installed this
+distribution know that some of the packages include beta-level code and
+act accordingly.  I would revert to the 1.020 version rather than
+have 1.9.x be included when potato is released as the stable
+distribution unless I got an ok from you first.
+
+Thanks,
+  Darren
+-- 
+</PRE>
+<PRE>
+
+			  Weblint, Version 1.9.3
+
+	THIS IS AN EARLY RELEASE OF WHAT WILL BE WEBLINT 2.0.
+	AT THE MOMENT IT PROVIDES A SUBSET OF THE FINAL FUNCTIONALITY,
+	AND DOESN'T SUPPORT ALL FEATURES INCLUDED IN WEBLINT 1.020.
+
+Weblint is now broken down into a number of perl modules:
+
+	Weblint			- provides the "weblint engine"
+	Weblint::HTML::HTML4	- encapsulation of messages
+	Weblint::Messages	- encapsulation of messages
+	Weblint::Constants	- constants used in the different modules
+	Weblint::Test		- test harness
+
+Weblint implements just about all of the warnings from 1.020, and supports
+HTML 4.0 (and HTML 4.0 only). There are one or two features from 1.020
+which aren't currently available. Most will be added before it's called
+version 2.
+
+The "weblint" script is now pretty much a wrapper around the Weblint module.
+The following things aren't implemented in the weblint script at the moment:
+
+	* checking of links (will be left for a separate program)
+	* check URLs (using LWP)
+	* Netscape &amp; Microsoft extensions (do they have any these days?)
+
+The distribution also includes weblint-cgi:
+
+	* first cut at a web-based interface to weblint
+	* requires LWP
+	* doesn't have the overhead of external processes
+	* this is a very early version
+
+To install this you should just have to do:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+The weblint-cgi script won't be installed.
+
+Please let me know if any tests fail.
+
+I'm using Perl 5.005_02.
+
+Neil Bowers
+&lt;neilb@weblint.org&gt;
+</PRE>
+<PRE>
+
+			    ChangeLog for Weblint 2
+
+1.9.3 Thursday 8 April (neilb)
+	* added a button-usemap message, which checks for the illegal
+	  situation where you have a BUTTON element containing an IMG
+	  element, and you make the image an image map (USEMAP).
+	  Noticed this while reading the HTML 4.0 spec, so added a test.
+	* added test suites form frames and form elements, taken from the HTML
+	  spec. A couple of bug fixes were needed to get everything working
+	  right.
+	* Added first cut at weblint-cgi, a reference web-based gateway
+	  to Weblint.pm. Requires LWP.
+	* changed the message_handler() argument list for Weblint::Messages.
+	  Made the cgi much easier if the message text is passed as well
+	  as the line number and id.
+
+1.9.2 Tuesday 6 April (neilb)
+	* added implied-element message: for situations where seeing
+	  one element implies you should see another. Added a test for
+	  NOFRAMES - expect to see this if you see a FRAMESET.
+	* started frames.t - testcases related to frame elements.
+	* fixed handling of frames. Example from spec now works.
+	* Added message 'body-colors' (class 'style') which is generated
+	  if some but not all of the color attributes for BODY are used.
+	  Enabled by default.
+	* Fixed Makefile.PL so that the weblint script will get installed.
+	* SPAN was not being allowed as a container.
+
+1.9.1 Tuesday 30 March (neilb)
+	* Added -messages switch to list all supported messages
+		- replaces the -warnings switch
+	* First cut at pod documentation for the weblint script
+	* tossed all the command-line handling into a separate function
+	* Added support for config files: user and system config files.
+		- At the moment system config file must be specified by
+		  modifying the top of the script. Should put this in
+		  Makefile.PL
+	* Added recursive checking of directories
+	* Created first bit of documentation for Weblint::Messages
+	* added -stderr switch
+		- output_handle() method on Weblint::Messages for querying
+		  and setting the output handle, defaults to STDOUT
+		- messages() method on Weblint for getting Weblint::Messages
+		  instance from Weblint instance.
+		- -stderr switch in weblint script
+	* added message classes 'error', 'warning', 'style' &amp; 'internal'
+		- all messages classified as one of these
+		- class_enable() method added, enables/disables all messages
+		  of a given class.
+		- enable() method on Weblint::Messages can take one of
+		  these four strings as a meta message id.
+	* added message-id's for internal errors &amp; warnings
+		- so far: unknown-message, bogus-message-handler
+		- these were previously "print STDERR ..."
+		- means that they can be turned off with "-d internal"
+
+1.9.0 Wednesday 24 March (neilb)
+	* first release of weblint 2 working version to weblint victims
+	* Weblint module (and several subordinate modules)
+	* support for HTML 4.0
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01518" HREF="msg01518.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01491" HREF="msg01491.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01494" HREF="msg01494.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01506.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01508.shtml">wml_macros(7) ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01494.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01518.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01504"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01504"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

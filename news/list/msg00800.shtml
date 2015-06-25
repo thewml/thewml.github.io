@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: need help again.... for multilingual support -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Thu, 24 Jun 1999 14:56:45 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9906240853080.21663&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990624143918.D30170@erm1.u&#45;strasbg.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00800">Date Index</a>][<a href="thrd17.shtml#00800">Thread Index</a>]<br>
+[<A HREF="msg00799.shtml">Date Prev</A>][<A HREF="msg00801.shtml">Date Next</A>][<A HREF="msg00798.shtml">Thread Prev</A>][<A HREF="msg00797.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: need help again.... for multilingual support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 Jun 1999 08:56:37 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 24 Jun 1999, Bruno Boettcher wrote:
+
+&gt; first of all thanks a lot, i now have something that seems to work ;D
+&gt; 
+&gt; &gt; - You could remove all the SSI stuff (except for current date/time, but
+&gt; &gt;   is it really necessary?) and replace with adequate WML macros.
+&gt; ehm you mean  the includes? but if i do that i will have a lot of code
+&gt; duplication wouldn't i? Is this better style?? or do i once more have
+&gt; misunderstood something?
+
+Well, remember, SSI still assembles the documents in the server -- it's
+not like the client does the work. I guess the trade is simply with SSI
+you store the peices and assemble them at request-time which means you
+use a bit less disk space at the cost of some cpu time whereas with wml
+you "pre-calculate" all those assemblies and just store static pages to
+dumbly serve up. A bit more disk space used but now you can serve it off
+of anywhere and not need SSI or the cpu time spent on it (which I admit,
+is minor).
+
+You'll only have code duplication in the end-product. The idea is you'd
+still retain the elegance of having it in one spot while working on it,
+the code that is currently SSI-included would be one of your wml source
+files and you'd include it all over with wml's include directives.
+
+jim
+
+-- 
+"[T]hey said something to the effect that Linux has 'the tendency not to 
+crash.' ... It's like me listing 'the tendency not to murder people' as one of
+my good character traits. :-&gt; It seems that people have grown so accustomed to
+buggy OS's that when Linux simply does what it's supposed to do, it comes 
+across as something new and different." Scott Webster on linux-biz 20 Feb 1999
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00798" HREF="msg00798.shtml">Re: need help again.... for multilingual support</A></strong>, <em>From:</em> Bruno Boettcher</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00799.shtml">Re: multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00801.shtml">Re: OK, so it's elegant, now what?  :)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00798.shtml">Re: need help again.... for multilingual support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00797.shtml">multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00800"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00800"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

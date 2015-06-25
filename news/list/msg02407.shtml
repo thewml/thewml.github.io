@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: our wmk/wml broke with perl (5.6.1) upgrade &#45;&#45; help! -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 23 Oct 2001 10:08:44 +0200 (MET DST) -->
+<!--X-Message-Id: 20011023101805.A9828@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 15315.53472.545565.750564@gargle.gargle.HOWL -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02407">Date Index</a>][<a href="thrd49.shtml#02407">Thread Index</a>]<br>
+[<A HREF="msg02406.shtml">Date Prev</A>][<A HREF="msg02408.shtml">Date Next</A>][<A HREF="msg02405.shtml">Thread Prev</A>][<A HREF="msg02408.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 23 Oct 2001 10:18:05 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Oct 22, 2001 at 09:55:12AM +0200, Martin Maechler wrote:
+&gt; (as subject says). I have tried quite a few things, all unsuccessfully.
+&gt; 
+&gt;   configure --prefix=....
+&gt;   make
+&gt;   make check
+&gt;   make install
+&gt; 
+&gt; all work fine. "make check" reports full success, but still
+&gt; a simple "wmk" call in a directory where everything used to work, results in
+&gt; 
+&gt;    /usr/local/app/wml/bin/wml -n -oLANG_VAR:einteilung.var '-o(ALL-LANG_*)+LANG_EN:einteilung.en.html' '-o(ALL-LANG_*)+LANG_DE:einteilung.de.html' einteilung.wml
+&gt;    ePerl:Error: Perl parsing error (interpreter rc=255)
+&gt; 
+&gt;    ---- Contents of STDERR channel: ---------
+&gt;    DynaLoader object version 1.04 does not match $DynaLoader::VERSION 1 at /usr/local/lib/perl5/5.6.1/i686-linux/DynaLoader.pm line 100.
+[...]
+
+Hmmm, very strange.
+You could try
+  ./configure --with-openworld
+but in any case I would like to fix this problem.
+I do not know where to look at, is it possible for you to make a tarball
+of the whole wml build tree after `make check' and put it online
+somewhere? Or alternatively send it to me by *private* mail?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02408" HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02405" HREF="msg02405.shtml">our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></strong>, <em>From:</em> Martin Maechler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02406.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02405.shtml">our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02408.shtml">Re: our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02407"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02407"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,96 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug in gfont -->
+<!--X-From-R13: "Evh Quhat Znh" <puhatNqbenznvy.pbz> -->
+<!--X-Date: Thu, 12 Oct 2000 08:56:35 +0200 (MET DST) -->
+<!--X-Message-Id: 20001012065623.10311.qmail@doramail.com -->
+<!--X-Content-Type: text/html -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02026">Date Index</a>][<a href="thrd41.shtml#02026">Thread Index</a>]<br>
+[<A HREF="msg02025.shtml">Date Prev</A>][<A HREF="msg02027.shtml">Date Next</A>][<A HREF="msg02029.shtml">Thread Prev</A>][<A HREF="msg02027.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug in gfont</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Siu Chung Lau&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 12 Oct 2000 14:56:23 +0800</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<P>Can anyone see what is wrong this wml file??</P>
+<P>#!wml -o (ALL-LANG_*)uLANG_US-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/us/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TW-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/tw/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_CN-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/cn/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_KR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/kr/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_JP-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/jp/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_DE-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/de/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_FR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/fr/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TH-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/th/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TK-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/tr/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PH-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ph/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_VN-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/vn/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PT-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/pt/login.htm \ <BR>&nbsp;-o (ALL-LANG_*)uLANG_AR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ar/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_HE-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/hr/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_GR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/gr/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_BA-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ba/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_IT-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/it/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_MK-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/mk/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_
+
+PL-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/pl/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_RU-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ru/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_SR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/sr/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_ID-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/id/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_ES-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/es/login.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_US-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/us/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TW-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/tw/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_CN-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/cn/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_KR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/kr/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_JP-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/jp/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_DE-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/de/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_FR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/fr/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TH-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/th/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TK-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/tr/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PH-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/ph/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_VN-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/vn/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PT-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/pt/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_AR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/ar/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_HE-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/comm
+
+on/hr/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_GR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/gr/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_BA-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/ba/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_IT-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/it/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_MK-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/mk/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PL-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/pl/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_RU-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/ru/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_SR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/sr/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_ID-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/id/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_ES-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/es/login_fail.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_US-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/us/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TW-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/tw/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_CN-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/cn/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_KR-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/kr/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_JP-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/jp/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_DE-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/de/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_FR-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/fr/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TH-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/th/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_TK-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/tr/login_first_time.htm \
+
+<BR>&nbsp;-o (ALL-LANG_*)uLANG_PH-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ph/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_VN-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/vn/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PT-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/pt/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_AR-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ar/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_HE-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/hr/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_GR-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/gr/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_BA-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ba/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_IT-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/it/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_MK-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/mk/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_PL-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/pl/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_RU-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ru/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_SR-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/sr/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_ID-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/id/login_first_time.htm \<BR>&nbsp;-o (ALL-LANG_*)uLANG_ES-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/es/login_first_time.htm</P>
+<P>The output file of it is like:</P>
+<P>-o (ALL-LANG_*)uLANG_AR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ar/login.htm -o (ALL-LANG_*)uLANG_HE-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/hr/login.htm -o (ALL-LANG_*)uLANG_GR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/gr/login.htm -o (ALL-LANG_*)uLANG_BA-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ba/login.htm -o (ALL-LANG_*)uLANG_IT-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/it/login.htm -o (ALL-LANG_*)uLANG_MK-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/mk/login.htm -o (ALL-LANG_*)uLANG_PL-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/pl/login.htm -o (ALL-LANG_*)uLANG_RU-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/ru/login.htm -o (ALL-LANG_*)uLANG_SR-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/sr/login.htm -o (ALL-LANG_*)uLANG_ID-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/id/login.htm -o (ALL-LANG_*)uLANG_ES-WELCOME-FAILED:/home/mdrop/modify/webdesign.outblaze.com/common/es/login.htm -o (ALL-LANG_*)uLANG_US-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/us/login_fail.htm -o (ALL-LANG_*)uLANG_TW-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/tw/login_fail.htm -o (ALL-LANG_*)uLANG_CN-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/cn/login_fail.htm -o (ALL-LANG_*)uLANG_KR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/kr/login_fail.htm -o (ALL-LANG_*)uLANG_JP-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/jp/login_fail.htm -o (ALL-LANG_*)uLANG_DE-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/de/login_fail.htm -o (ALL-LANG_*)uLANG_FR-WELCOME:/home/mdrop/modify/webdesign.outblaze.com/common/fr/login_fail.htm -o (ALL-LANG_*)uLANG_TH- .......</P>
+-- 
+
+<BR>
+<BR>Get your free email from www.doramail.com with 30 Megs of disk space in webhosting and e-mail storage!
+
+
+
+
+
+<BR>Powered by Outblaze
+<BR>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02027" HREF="msg02027.shtml">[OT] About bug reports (was Re: Bug in gfont)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02025.shtml">Bug in gfont</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02027.shtml">[OT] About bug reports (was Re: Bug in gfont)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02029.shtml">Re: Bug in gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02027.shtml">[OT] About bug reports (was Re: Bug in gfont)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02026"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02026"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

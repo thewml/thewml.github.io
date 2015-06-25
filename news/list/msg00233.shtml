@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Installation failed -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Sat, 31 Oct 1998 03:05:36 +0100 (CET) -->
+<!--X-Message-Id: m1sog5vevi.fsf@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.981029204202.697C&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail5.shtml#00233">Date Index</a>][<a href="thrd5.shtml#00233">Thread Index</a>]<br>
+[<A HREF="msg00232.shtml">Date Prev</A>][<A HREF="msg00234.shtml">Date Next</A>][<A HREF="msg00232.shtml">Thread Prev</A>][<A HREF="msg00237.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Installation failed</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 30 Oct 1998 23:55:45 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan Ulrich Hasecke &lt;juh@pironet.de&gt; writes:
+
+Well, many more chances to get an answer if you stick to English I suppose.
+
+&gt; Was mach ich falsch?
+
+If you read the error messages it is pretty obvious what the problem is. 
+
+&gt; [root@hasecke wml-1.6.7]# make test
+&gt; make[1]: Entering directory `/home/juh/wml-1.6.7/wml_test'
+&gt; Running WML Test Suite (still incomplete):
+&gt; t/01-wml............Getopt::Long version 2.13 required--this is only version 2.1
+&gt; 0 at /home/juh/wml-1.6.7/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 46.
+
+
+The essential piece is
+
+	Getopt::Long version 2.13 required--this is only version 2.10
+
+Looks to me as if the Perl package you have is not very
+current. Getopt::Long is a Perl module and the one you have is version
+2.10 where WML wants at least versin 2.13
+
+I guess you should upgrade your perl.
+
+Or you could grep through the WML source for Getopt::Long and replace all occurances of
+
+use Getopt::Long 2.13;
+
+with
+
+use Getopt::Long 2.10;
+
+If you are VERY lucky, it might just work with the older version. But
+there might be a reason why 2.13 is requested.
+
+In any case, upgrading your Perl would be the best solution anyway.
+
+Cheers,
+Fritz
+
+The next error seems to be for the same reason, btw.
+
+
+&gt; 0 
+&gt; BEGIN failed--compilation aborted at /home/juh/wml-1.6.7/wml_test/TEST.root/lib/
+&gt; wml/exec/wml_p9_slice line 46.
+&gt; ** WML:Break: Error in Pass 9 (rc=2).
+&gt; cmp: EOF on tmp.01
+&gt; FAILED tests 1-2
+&gt;         Failed 2/2 tests, 0.00% okay
+&gt; t/02-p1_ipp.........Getopt::Long version 2.13 required--this is only version 2.1
+&gt; 0 at /home/juh/wml-1.6.7/wml_test/TEST.root/lib/wml/exec/wml_p9_slice line 46.
+&gt; BEGIN failed--compilation aborted at /home/juh/wml-1.6.7/wml_test/TEST.root/lib/
+&gt; wml/exec/wml_p9_slice line 46.
+&gt; ** WML:Break: Error in Pass 9 (rc=2).
+&gt; cmp: EOF on tmp.01
+&gt; FAILED tests 1-2
+&gt;         Failed 2/2 tests, 0.00% okay
+&gt; Failed Test  Status Wstat Total Fail  Failed  List of failed
+&gt; ------------------------------------------------------------------------------
+&gt; t/01-wml.t                    2    2 100.00%  1-2
+&gt; t/02-p1_ipp.t                 2    2 100.00%  1-2
+&gt; Failed 2/2 test scripts, 0.00% okay. 4/4 subtests failed, 0.00% okay.
+&gt; make[1]: *** [test] Error 29
+&gt; make[1]: Leaving directory `/home/juh/wml-1.6.7/wml_test'
+&gt; make: *** [test] Error 2                  
+&gt; 
+&gt; Ciao!
+&gt; juh
+&gt; 
+&gt; -- 
+&gt; juh's Sudelbuch
+&gt; Täglich tagesfrische Sudeleien
+&gt; <A  HREF="http://literatur.lake.de/in/sudelbuch">http://literatur.lake.de/in/sudelbuch</A>
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://www.ee-staff.ethz.ch/~zaucker/">http://www.ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00237" HREF="msg00237.shtml">Re: Installation failed</A></strong>, <em>From:</em> David Mentr'e</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00232" HREF="msg00232.shtml">Installation failed</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00232.shtml">Installation failed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00234.shtml">Re: Compiling wml 1.6.7 with perl 5.005</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00232.shtml">Installation failed</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00237.shtml">Re: Installation failed</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail5.shtml#00233"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd5.shtml#00233"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

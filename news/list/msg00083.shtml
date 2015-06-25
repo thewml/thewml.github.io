@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ANNOUNCE: WML 1.6.0 -->
+<!--X-From-R13: inatNryl.yrnqre.eb -->
+<!--X-Date: Mon, 9 Feb 1998 15:06:51 +0100 (MET) -->
+<!--X-Message-Id: 19980209153422.25404@zeus.advatech.ro -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199802091057.LAA12810@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00083">Date Index</a>][<a href="thrd2.shtml#00083">Thread Index</a>]<br>
+[<A HREF="msg00082.shtml">Date Prev</A>][<A HREF="msg00084.shtml">Date Next</A>][<A HREF="msg00082.shtml">Thread Prev</A>][<A HREF="msg00084.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ANNOUNCE: WML 1.6.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 9 Feb 1998 15:34:22 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+`Screenshot':
+
+make[1]: Entering directory /home/vang/wml-1.6.0/wml_test'
+Temporarily installing WML system into local test tree:
+............................................................
+............................................................
+............................................................
+............................................................
+...................................
+Fixing installation prefix for local test tree:
+..................
+Running WML Test Suite (still incomplete):
+t/01-wml............** IPP:Error: Bad argument to option ':
+WML_GEN_REALNAME=
+ok
+t/02-p1_ipp.........** IPP:Error: Bad argument to option ':
+WML_GEN_REALNAME=
+ok
+All tests successful.
+Files=2,  Tests=4,  6 secs ( 3.98 cusr  0.71 csys =  4.69 cpu)
+make[1]: Leaving directory /home/vang/wml-1.6.0/wml_test'
+
+
+
+-- 
+
+Viorel ANGHEL &lt;vang@roedu.net&gt;                "World domination. Fast!"
+<A  HREF="http://www.pub.ro/~vang/">http://www.pub.ro/~vang/</A>                          (Linus Torvalds)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00084" HREF="msg00084.shtml">Re: ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00082" HREF="msg00082.shtml">ANNOUNCE: WML 1.6.0</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00082.shtml">ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00084.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00082.shtml">ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00084.shtml">Re: ANNOUNCE: WML 1.6.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00083"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00083"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

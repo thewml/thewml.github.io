@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 6 Jan 1998 13:36:05 +0100 (MET) -->
+<!--X-Message-Id: 199801061236.NAA06225@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00018">Date Index</a>][<a href="thread.shtml#00018">Thread Index</a>]<br>
+[<A HREF="msg00017.shtml">Date Prev</A>][<A HREF="msg00019.shtml">Date Next</A>][<A HREF="msg00035.shtml">Thread Prev</A>][<A HREF="msg00020.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 6 Jan 1998 13:36:03 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00017.shtml">199801060809.JAA22387@en1.engelschall.com</A>&gt; you wrote:
+
+&gt;[...]
+&gt; I will write a wml::std::lang include file which should provide this
+&gt; high-level interface, but first we have to discuss what it is.  My current
+&gt; ideas of interface parts are one or more of the following (the "xx"
+&gt; abbreviations are the ISO abbreviations for the languages):
+
+The first try for a wml::std::lang is now available as: 
+
+<A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_include/std/lang.src">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_include/std/lang.src</A>
+
+It already provides the tags &lt;lang:new&gt;, &lt;lang:area&gt; and &lt;lang:xx&gt; and works
+fine. Try it out. Because WML 1.4.2 needs some more days to release because
+I'm still doing platform portability tests. See
+<A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/PORTING">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/PORTING</A> for more details.
+Currently WML pre-1.4.2 works fine under all major platforms except IRIX.
+Under this beast I've ran into problems with "cc -n32" inside ePerl. Hmmm I'll
+investigate more, because I really want 1.4.12 to build and run under all
+major platforms out-of-the-box.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00017.shtml">RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00019.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00035.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00020.shtml">Re: question wml 1.4.6</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00018"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00018"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

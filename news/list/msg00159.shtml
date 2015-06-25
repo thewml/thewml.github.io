@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Spamming and List Changes? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sun, 12 Jul 1998 10:23:05 +0200 (CEST) -->
+<!--X-Message-Id: 19980712102303.A21570@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00159">Date Index</a>][<a href="thrd4.shtml#00159">Thread Index</a>]<br>
+[<A HREF="msg00158.shtml">Date Prev</A>][<A HREF="msg00160.shtml">Date Next</A>][<A HREF="msg00158.shtml">Thread Prev</A>][<A HREF="msg00160.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Spamming and List Changes?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 12 Jul 1998 10:23:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Although I've changed the webpages to not contain directly the string
+sw-wml@engelschall.com there are still spam mails on sw-wml from time to time.
+(Sure, the spammers buy the mails from database providers and even can
+determine them by crawling the sw-wml archive, etc.)
+
+I've already configured a lot of regex in Majordomo which filter approx. 90%
+of them but I hate it to still see some of these spam mails here. So, the
+typical step is to change the Majordomo configuration to allow only subscribed
+addresses to post. The only drawback is that your mails then really have to
+come from the address you subscribed with (perhaps difficult for some of you
+like me who use a lot of intermediate addresses) or you have to explicitly
+send me your used addresses. These then have to be added to a list for
+Majordomo.
+
+Is this approach Ok for you or are there any subtle problems I missed?  If no
+one speaks up the next week and says this change is really bad I'll change
+Majordomos configuration at the end of the next week.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00160" HREF="msg00160.shtml">Re: Spamming and List Changes?</A></strong>, <em>From:</em> Florian Kuehnert</li>
+<li><strong><A NAME="00161" HREF="msg00161.shtml">Spamming and List Changes?</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00158.shtml">Free Book</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00160.shtml">Re: Spamming and List Changes?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00158.shtml">Free Book</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00160.shtml">Re: Spamming and List Changes?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00159"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00159"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

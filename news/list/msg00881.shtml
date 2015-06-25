@@ -1,0 +1,168 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: rollover and slice -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 29 Jul 1999 01:15:32 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990728220020.602B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990728125748.20219A&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00881">Date Index</a>][<a href="thrd18.shtml#00881">Thread Index</a>]<br>
+[<A HREF="msg00879.shtml">Date Prev</A>][<A HREF="msg00880.shtml">Date Next</A>][<A HREF="msg00877.shtml">Thread Prev</A>][<A HREF="msg00882.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: rollover and slice</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 29 Jul 1999 01:14:32 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 28 Jul 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Hello,
+&gt; 
+&gt; I have a strange problem and cannot solve it.
+&gt; 
+&gt; I have this definition in my template
+&gt; 
+&gt; # Slice 1
+&gt; &lt;lang:new id=free short&gt;
+&gt; 
+&gt; # Slice 2
+&gt; &lt;lang:new id=bk short&gt;
+&gt; 
+&gt; &lt;bk&gt; 
+&gt; &lt;rollover name="logo"  
+&gt; href="Kontakt.html" 
+&gt; src="../GIFS/seitenlogoa2.gif"  
+&gt; oversrc="../GIFS/seitenlogob.gif" 
+&gt; alt="Kontakt" &gt; 
+&gt; &lt;/bk&gt;
+&gt; 
+&gt; &lt;free&gt; 
+&gt; &lt;rollover name="logo"  
+&gt; href="Kontakt.html" 
+&gt; src="../GIFS/seitenlogoa1.gif"  
+&gt; oversrc="../GIFS/seitenlogob.gif" 
+&gt; alt="Kontakt" &gt;
+&gt; &lt;/free&gt;
+&gt; 
+&gt; The first slice, in this case &lt;bk&gt; is okay. But the second is
+&gt; corrupt. When I change the succession, and &lt;free&gt; is the first,
+&gt; then &lt;bk&gt;, now the second, is corrupt and the first &lt;free&gt; is
+&gt; okay.
+&gt; 
+&gt; The same result with [LANG_BK:...:] and LANG_FREE:...:]
+&gt; 
+&gt; In the second slice the first part of the script 
+&gt; 
+&gt; function ro_imgNormal(imgName) {     (and so on)
+&gt; 
+&gt; is gone.
+&gt; 
+&gt; Any hint?
+
+Hi Jan Ulrich,
+
+If you have 20 buttons with rollover, you don't want to insert 20
+definitions of the ro_imgNormal and ro_imgOver routines.
+So they are written only once.
+
+You have to ensure that the first call to &lt;rollover&gt; is _not_ in any
+slice. I see 2 solutions:
+1) use an invisible rollover with 1x1 images at the beginning of your
+   text
+     #use wml::des::imgdot
+     &lt;rollover name="hidden" href="#" alt=""
+               src="&lt;imgdot&gt;" oversrc="&lt;imgdot&gt;"&gt;
+
+2) write slices inside rollover
+     &lt;rollover name="logo" href="Kontakt.html" alt="Kontakt"
+               src="../GIFS/seitenlogoa&lt;protect pass=3&gt;&lt;bk&gt;2&lt;/bk&gt;&lt;free&gt;1&lt;/free&gt;&lt;/protect&gt;.gif"
+               oversrc="../GIFS/seitenlogob.gif"
+     &gt;
+Really clear, isn't it ;-)
+The &lt;protect&gt; trick is because slices are expanded to
+   [LANG_BK:2:][LANG_FREE:1:]
+and ePerl uses colon as a delimiter in the internals of rollover.wml ;
+the protection suppresses the expansion above during the pass 3.
+
+The (1) is simpler in this case, but you should also have (2) in mind,
+it's more general. Its drawback is that image dimensions cannot be
+checked during pass 7. One workaround is to write an epilog filter
+
+prompt$ cat epilog
+#! /bin/sh
+path/to/lib/wml/exec/wml_p7_htmlfix $1 &gt; $1.tmp &amp;&amp; mv $1.tmp $1
+prompt$ cat .wmlrc
+  -E /path/to/epilog
+prompt$ chmod a+x epilog
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00882" HREF="msg00882.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00877" HREF="msg00877.shtml">rollover and slice</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00879.shtml">Re: Small bug in wml::des::navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00880.shtml">Re: gfont problem...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00877.shtml">rollover and slice</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00882.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00881"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00881"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

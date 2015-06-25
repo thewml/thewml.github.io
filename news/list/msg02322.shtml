@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <navbar> bug? -->
+<!--X-From-R13: Ineera Fhexny <jghexnyNpoh.rqh> -->
+<!--X-Date: Fri, 20 Jul 2001 16:52:15 +0200 (MET DST) -->
+<!--X-Message-Id: E15NbdF&#45;0006pN&#45;00@braindead.automatedproperties.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15NZsG&#45;0003w3&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010720160840.A12827@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02322">Date Index</a>][<a href="thrd47.shtml#02322">Thread Index</a>]<br>
+[<A HREF="msg02321.shtml">Date Prev</A>][<A HREF="msg02323.shtml">Date Next</A>][<A HREF="msg02320.shtml">Thread Prev</A>][<A HREF="msg02324.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;navbar&gt; bug?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Warren Turkal &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 20 Jul 2001 10:51:57 -0400</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I know that my image filenames follow the pattern
+nav_button_home-std.png
+nav_button_home-sel.png
+nav_button_home-ovr.png
+
+If I replace the * with std, get rid of the imgstar attribute, and 
+re-wmk the files with the navbar it works.
+
+On Friday 20 July 2001 10:08, you wrote:
+&gt; On Fri, Jul 20, 2001 at 08:59:19AM -0400, Warren Turkal wrote:
+&gt; &gt; I am reading the docs and it says that the imgstar attribute is
+&gt; &gt; used to make your buttons change graphics on different events in
+&gt; &gt; the order std:selected:hover.  However, when I use it in the
+&gt; &gt; following way IE asks me to debug the script in the page and
+&gt; &gt; netscape does not run the script in the page.
+&gt; &gt;
+&gt; &gt; Ex code:
+&gt; &gt; #use wml::des::navbar
+&gt; &gt;
+&gt; &gt; &lt;navbar:define name="leftNavBar"
+&gt; &gt;   imgstar=std:sel:ovr
+&gt; &gt;   imgbase=$(ROOT)/pics/nav_buttons&gt;
+&gt; &gt;   &lt;navbar:header&gt;
+&gt; &gt;     &lt;p&gt;
+&gt; &gt;   &lt;/navbar:header&gt;
+&gt; &gt;   &lt;navbar:button img="nav_button_home-*.png"
+&gt; &gt;     id="homeButton"
+&gt; &gt;     alias="leftNavButton"
+&gt; &gt;     txt="Goto to the home page"
+&gt; &gt;     url="index.html"/&gt;
+&gt; &gt;   &lt;navbar:epilog&gt;
+&gt; &gt;     &lt;br/&gt;
+&gt; &gt;   &lt;/navbar:epilog&gt;
+&gt; &gt;   &lt;navbar:footer&gt;
+&gt; &gt;   &lt;/navbar:footer&gt;
+&gt; &gt; &lt;/navbar:define&gt;
+&gt; &gt;
+&gt; &gt; NOTE: If I take the imgstar out, all is good.
+&gt;
+&gt; It means that default values are good, your image filenames are
+&gt;     nav_button_home-{n,s,o}.png
+&gt; and not
+&gt;     nav_button_home-{std,sel,ovr}.png
+&gt; So you have to specify
+&gt;     imgstar=n:s:o
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02324" HREF="msg02324.shtml">Re: &lt;navbar&gt; bug?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02319" HREF="msg02319.shtml">&lt;navbar&gt; bug?</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02320" HREF="msg02320.shtml">Re: &lt;navbar&gt; bug?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02321.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02323.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02320.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02324.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02322"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02322"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

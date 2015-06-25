@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: question about #include and wmlrc -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Tue, 14 Apr 1998 10:34:28 +0200 (MET DST) -->
+<!--X-Message-Id: 19980414103426.A9275@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19980414103006.07467@zeus.advatech.ro -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00121">Date Index</a>][<a href="thrd3.shtml#00121">Thread Index</a>]<br>
+[<A HREF="msg00120.shtml">Date Prev</A>][<A HREF="msg00122.shtml">Date Next</A>][<A HREF="msg00120.shtml">Thread Prev</A>][<A HREF="msg00122.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: question about #include and wmlrc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Apr 1998 10:34:26 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Apr 14, 1998, Viorel ANGHEL wrote:
+
+&gt; I have a site with some directories structure. All wml files contain
+&gt; something like 
+&gt;   #include "header.wml"
+&gt;   ...
+&gt;   #include "footer.wml"
+&gt; 
+&gt; I want that header/footer files to be searched in current dir, then in upper
+&gt; dir and so on, i mean  like in regexp (../)*. I have tryied to put in wmlrc
+&gt; something like
+&gt;   -I./:../:../../
+&gt; but it didn't work.
+
+Ops, IPP's -I option does not support a PATH-style argument.
+Did I mis-documented it this way somewhere? Hmmm...
+
+Just use 
+
+    -I. -I.. -I../.. -I../../.. -I../../../.. 
+
+in your local .wmlrc or more intuitive only
+
+    -I.
+
+in .wmlrc's at each level. Both should work although I've
+not tested it now.
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00120" HREF="msg00120.shtml">question about #include and wmlrc</A></strong>, <em>From:</em> Viorel ANGHEL</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00120.shtml">question about #include and wmlrc</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00122.shtml">Some Problems</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00120.shtml">question about #include and wmlrc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00122.shtml">Some Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00121"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00121"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

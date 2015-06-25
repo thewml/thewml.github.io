@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 4 Feb 2000 08:13:06 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000202211946.1628C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0002011856180.17083&#45;100000@jobs.hasecke.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01333">Date Index</a>][<a href="thrd27.shtml#01333">Thread Index</a>]<br>
+[<A HREF="msg01335.shtml">Date Prev</A>][<A HREF="msg01337.shtml">Date Next</A>][<A HREF="msg01324.shtml">Thread Prev</A>][<A HREF="msg01340.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 2 Feb 2000 21:25:04 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 1 Feb 2000, Jan Ulrich Hasecke wrote:
+
+&gt; Hi!
+&gt; 
+&gt; I'm desparated!
+&gt; 
+&gt; I tried wml-1.7.4 and wml-SNAP after upgrading my Debian 2.1 perl to
+&gt; unstable. 
+&gt; 
+&gt; ./configure o.k
+&gt; make o.k
+&gt; 
+&gt; Butt all tests failed with this errormessage:
+&gt; 
+&gt; t/10-wml............Can't locate File/PathConvert.pm in @INC (@INC
+[...]
+
+&gt; $ perl --version
+&gt; This is perl, version 5.004_05 built for i386-linux  
+&gt; 
+&gt; $ uname --all
+&gt; Linux jobs 2.0.36 #1 Mon Jan 24 13:30:09 CET 2000 i586 unknown    
+&gt; 
+&gt; What shall I do?
+
+Your installation is broken, perl-5.005 should be installed (and a 2.2.x
+kernel).
+Anyway, i am not sure this will solve your problems. Could you check
+that build was really ok. Try for instance
+   make 2&gt;&amp;1 || tee error.log
+and look for error messages in error.log.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01340" HREF="msg01340.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01324" HREF="msg01324.shtml">BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01335.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01337.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01324.shtml">BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01340.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01333"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01333"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

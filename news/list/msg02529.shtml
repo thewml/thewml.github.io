@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 25 Feb 2002 22:41:04 +0100 (MET) -->
+<!--X-Message-Id: 20020225225251.C6033@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200202251738.g1PHcW311573@mariusz.darkstar -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02529">Date Index</a>][<a href="thrd24.shtml#02529">Thread Index</a>]<br>
+[<A HREF="msg02528.shtml">Date Prev</A>][<A HREF="msg02530.shtml">Date Next</A>][<A HREF="msg02527.shtml">Thread Prev</A>][<A HREF="msg01091.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 25 Feb 2002 22:52:52 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Feb 25, 2002 at 06:38:32PM +0100, root@mariusz.darkstar wrote:
+&gt; __        ___  __ _     
+&gt; \ \      / / \/  | |      Website META Language
+&gt;  \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+&gt;   \ V  V /| |  | | |___ 
+&gt;    \_/\_/ |_|  |_|_____|  BUG REPORT
+[...]
+&gt; PLATFORM CHARACTERISTICS:
+&gt; Can't locate File/PathConvert.pm in @INC (@INC contains: /usr/local/wml/lib/perl/lib/site_perl/i386-linux /usr/local/wml/lib/perl/lib/site_perl /usr/local/wml/lib/perl/lib/i386-linux /usr/local/wml/lib/perl/lib /usr/lib/perl5/i386-linux /usr/lib/perl5 /usr/lib/perl5/site_perl/i386-linux /usr/lib/perl5/site_perl .) at /usr/local/wml/bin/wml line 54.
+&gt; BEGIN failed--compilation aborted at /usr/local/wml/bin/wml line 54.
+
+Well, looks strange.  Why do we receive now a bug report about an old
+release which is apparently in an unusable state?
+If you really wants to get stuck with WML 1.7.4, I need more info to
+help you: which Perl version ? Did you try to recompile WML?  Did it
+build fine? ...
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02527" HREF="msg02527.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> root</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02528.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02530.shtml">Re: user references</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02527.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01091.shtml">Domain Name</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02529"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#02529"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

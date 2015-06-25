@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Attributes / variables delimiters -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 6 Oct 2001 00:27:15 +0200 (MET DST) -->
+<!--X-Message-Id: 20011006000436.A22031@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20010926142908.CBC6D10E05@itesec.hsc.fr -->
+<!--X-Reference: 20010927002439.A13046@imacs.polytechnique.fr -->
+<!--X-Reference: 20011004120357.DB6D010E0D@itesec.hsc.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02396">Date Index</a>][<a href="thrd48.shtml#02396">Thread Index</a>]<br>
+[<A HREF="msg02395.shtml">Date Prev</A>][<A HREF="msg02397.shtml">Date Next</A>][<A HREF="msg02394.shtml">Thread Prev</A>][<A HREF="msg02400.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Attributes / variables delimiters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 6 Oct 2001 00:04:37 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Oct 04, 2001 at 02:04:45PM +0200, Ghislaine Labouret wrote:
+&gt; On Thu, 27 Sep 2001 00:24:39 +0200, Denis Barbier wrote:
+&gt; 
+&gt; &gt; If mp4h is confused by long and complex constructs, it may be a bug in
+&gt; &gt; your pages or in mp4h, and it would be nice to have your example to add
+&gt; &gt; it to the mp4h torture suite ;)
+&gt; &gt; Could you put some sources online which demonstrate this problem?
+&gt; 
+&gt; Ok, but since my repeated includes and tag definitions don't make the
+&gt; sources easy to analyse, here is, first, a bug which I just managed to
+&gt; pin down :
+&gt; 
+&gt; Input:
+&gt; 
+&gt; &lt;set-var dir[1]="1" dir[2]="2"&gt;
+&gt; dir[1]=&lt;get-var dir[1]&gt;
+&gt; dir[2]=&lt;get-var dir[2]&gt;
+&gt; dir[3]=&lt;get-var dir[3]&gt;
+&gt; 
+&gt; Output:
+&gt; 
+&gt; dir[1]=1
+&gt; dir[2]=
+&gt; dir[3]=2
+
+Hi Ghislaine,
+
+thanks for this bugreport, it is very valuable to have such tiny
+examples.
+A patch is attached, and has been included into CVS.
+
+&gt; Also, I noticed that error lines given by WML do not correspond to
+&gt; "real" lines (vim's line count for exemple) when using \ at the end of
+&gt; lines: a lines ending with \ and the following one is counted as a
+&gt; single line. This makes debugging more difficult...
+
+You are right :(
+But I did not find exactly where does this problem come from, I am not
+sure it is caused by escaped newlines.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+--- wml_backend/p2_mp4h/src/builtin.c	2001/10/02 21:20:52	1.57
++++ wml_backend/p2_mp4h/src/builtin.c	2001/10/05 20:58:47
+@@ -3863,21 +3863,22 @@
+                     cp = old_value;
+                     for (j=0; j&lt;array_index; j++)
+                       {
+-                        cp = strchr (cp + 1, '\n');
++                        cp = strchr (cp, '\n');
+                         if (!cp)
+                           {
++                            /*  Add newlines before value at the bottom  */
+                             strcat (SYMBOL_TEXT (var), old_value);
+                             for (; j&lt;array_index; j++)
+                               strcat (SYMBOL_TEXT (var), "\n");
+                             strcat (SYMBOL_TEXT (var), value);
+                           }
++                        else
++                          cp++;
+                       }
+                     if (cp)
+                       {
+                         *cp  = '\0';
+-                        cp++;
+                         strcat (SYMBOL_TEXT (var), old_value);
+-                        strcat (SYMBOL_TEXT (var), "\n");
+                         strcat (SYMBOL_TEXT (var), value);
+                         cp = strchr (cp + 1, '\n');
+                         if (cp)
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02400" HREF="msg02400.shtml">Line numbers</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02392" HREF="msg02392.shtml">Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+<li><strong><A NAME="02393" HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02394" HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02395.shtml">WML by example</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02397.shtml">Problems with using &lt;gfont&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02400.shtml">Line numbers</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02396"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02396"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

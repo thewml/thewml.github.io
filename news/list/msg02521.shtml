@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] php + wml -->
+<!--X-From-R13: Tevgm Vrvaevpuzrlre <sevgm.urvaevpuzrlreNsreahav&#45;untra.qr> -->
+<!--X-Date: Tue, 19 Feb 2002 10:00:59 +0100 (MET) -->
+<!--X-Message-Id: 20020219083356.0e4e8a8f.fritz.heinrichmeyer@fernuni&#45;hagen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020218181649.GA24369@jonas.server0.de -->
+<!--X-Reference: Pine.GSO.4.43.0202181846100.26365&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02521">Date Index</a>][<a href="thrd51.shtml#02521">Thread Index</a>]<br>
+[<A HREF="msg02520.shtml">Date Prev</A>][<A HREF="msg02522.shtml">Date Next</A>][<A HREF="msg02519.shtml">Thread Prev</A>][<A HREF="msg02522.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] php + wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Heinrichmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 19 Feb 2002 08:33:56 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+wml simply ignores the php tags, so you cannot use php for wml macros but
+you can use wml to generate headers, footers and navigation bars for php
+pages, good for mixing static and dynamic pages.
+
+One possible problem:
+
+Your php code must produce proper html and quote all parameters, else the
+tidy part of wml run will create additional "" pairs that break your php
+strings.
+
+
+-- 
+Fritz Heinrichmeyer <A  HREF="mailto:fritz.heinrichmeyer@fernuni-hagen.de">mailto:fritz.heinrichmeyer@fernuni-hagen.de</A>
+FernUniversitaet Hagen, LG ES, 58084 Hagen (Germany)
+tel:+49 2331/987-1166 fax:987-355 <A  HREF="http://www-es.fernuni-hagen.de/~jfh">http://www-es.fernuni-hagen.de/~jfh</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02522" HREF="msg02522.shtml">Re: [wml] php + wml</A></strong>, <em>From:</em> Petr Andreyev</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02518" HREF="msg02518.shtml">php + wml</A></strong>, <em>From:</em> Jonas Meurer</li>
+<li><strong><A NAME="02519" HREF="msg02519.shtml">Re: [wml] php + wml</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02520.shtml">Re: php + wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02522.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02519.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02522.shtml">Re: [wml] php + wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02521"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02521"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

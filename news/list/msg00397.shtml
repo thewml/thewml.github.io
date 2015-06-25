@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Perl in xtable -->
+<!--X-From-R13: Qnefgra Terjreg <serjvNhav&#45;cnqreobea.qr> -->
+<!--X-Date: Wed, 17 Feb 1999 15:06:55 +0100 (CET) -->
+<!--X-Message-Id: Pine.GSO.3.96.990217124113.8742C&#45;100000@illiac.uni&#45;paderborn.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00397">Date Index</a>][<a href="thrd9.shtml#00397">Thread Index</a>]<br>
+[<A HREF="msg00396.shtml">Date Prev</A>][<A HREF="msg00398.shtml">Date Next</A>][<A HREF="msg00393.shtml">Thread Prev</A>][<A HREF="msg00398.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Perl in xtable</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Carsten Frewert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 17 Feb 1999 12:50:25 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+I can't use any Perl statements inside a &lt;xtable&gt; &lt;/xtable&gt;.
+
+wml exits with the following message:
+
+&gt; ePerl:Error: Perl parsing error (interpreter rc=2)
+&gt;
+&gt; ---- Contents of STDERR channel: ---------
+&gt; Can't find string terminator "__XTABLE__EOT" anywhere before EOF at
+&gt; /tmp/wml.11585.tmp1 line 541.
+&gt; ------------------------------------------
+&gt; ** WML:Break: Error in Pass 3 (rc=74).
+
+The same perl-code outside the xtable runs fine.
+
+Can someone reproduce this behaviour?
+
+Oops, I'm using wml 1.6.8 with perl 5.004_04
+
+
+Bye,
+	Carsten
+-- 
+ Carsten Frewert                      email: frewi@uni-paderborn.de
+ PGP-        A0 7B D1 F1 49 5F BF 2C  AX.25: DG5YFJ@DB0BQ.#NRW.DEU.EU
+ Fingerprint A7 F2 AC B6 D9 99 82 0C  phone: ++49-5251-60-6651 (univ.)
+
+        The whole is the sum of its parts, plus one or more bugs
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00398" HREF="msg00398.shtml">Re: Perl in xtable</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00396.shtml">Re: including files depending on language</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00398.shtml">Re: Perl in xtable</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00393.shtml">Re: eperl_perl5.c</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00398.shtml">Re: Perl in xtable</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00397"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00397"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

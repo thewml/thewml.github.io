@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Just some thoughts on WML and type maps / meta files -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Thu, 19 Jul 2001 17:48:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20010719172000.F419@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02308">Date Index</a>][<a href="thrd47.shtml#02308">Thread Index</a>]<br>
+[<A HREF="msg02307.shtml">Date Prev</A>][<A HREF="msg02309.shtml">Date Next</A>][<A HREF="msg02307.shtml">Thread Prev</A>][<A HREF="msg02311.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Just some thoughts on WML and type maps / meta files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 19 Jul 2001 17:20:00 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Just a weird idea I'm actually playing around a little bit:
+
+Would it be useful to add to wml::std::lang the possibility to create
+also meta data files for each output file, e.g. type maps for static
+content negotiation instead of MultiViews (regarding Apache
+mod_negotiation) or meta files for addtional headers with Apache
+mod_cern_meta or CERN HTTPd?
+
+Example: Instead of only outputting index.en.html and index.en.html,
+we also output index.var (type map) or index.en.html.meta and
+index.en.html.meta (meta files).
+
+index.wml:
+ 1| #use wml::std:lang
+ 2|
+ 3| &lt;lang:new id=de short meta&gt;
+ 4| &lt;lang:new id=en short meta&gt;
+ 5| &lt;lang:star:slice: index.*.html&gt;
+ 6|
+ 7| Everywhere
+ 8| &lt;EN&gt;Foobar&lt;/EN&gt;\
+ 9| &lt;DE&gt;Schwachfug&lt;/DE&gt;
+10| # Ok, there are more useful HTTP headers to add or modify
+11| &lt;META:EN&gt;Last-Modification: Wed, 18 Jul 2001 21:49:17 GMT&lt;/META:EN&gt;
+12| &lt;META:DE&gt;Last-Modification: Thu, 19 Jul 2001 21:49:17 GMT&lt;/META:DE&gt;
+
+index.en.html:
+ 1| Everywhere
+ 2| Foobar
+
+index.de.html:
+ 1| Everywhere
+ 2| Schwachfug
+
+index.en.html.meta:
+ 1| Last-Modification: Wed, 18 Jul 2001 21:49:17 GMT
+
+index.de.html.meta:
+ 1| Last-Modification: Thu, 19 Jul 2001 12:34:11 GMT
+
+This is useful for SSI documents, of which usually the Apache don't
+send Last-Modification header if you don't the "XBitHack full"
+directive. And I can control the sending of additional headers in the
+source file... :-)
+
+Any comments? Useful? Totally crazy? :-)
+
+BTW: I actually implemented the .meta-Version for working with Apache
+mod_cern_meta using "MetaDir ." and "MetaSuffix .meta". If anyone has
+interest in that version...
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02311" HREF="msg02311.shtml">Re: [wml] Just some thoughts on WML and type maps / meta files</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02307.shtml">UTF-8 support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02309.shtml">Re: xtable bug</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02307.shtml">UTF-8 support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02311.shtml">Re: [wml] Just some thoughts on WML and type maps / meta files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02308"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02308"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

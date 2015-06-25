@@ -1,0 +1,128 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Strange ePerl behavior: $LANG -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 31 May 2000 19:29:48 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000531184413.8142A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000531174959.A1069@frithjof -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01675">Date Index</a>][<a href="thrd35.shtml#01675">Thread Index</a>]<br>
+[<A HREF="msg01674.shtml">Date Prev</A>][<A HREF="msg01676.shtml">Date Next</A>][<A HREF="msg01674.shtml">Thread Prev</A>][<A HREF="msg01679.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Strange ePerl behavior: $LANG</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 31 May 2000 19:29:43 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 31 May 2000, Albert REINER wrote:
+
+&gt; Hi all,
+
+Hi Albert,
+
+[...]
+&gt;     ---- Contents of STDERR channel: ---------
+&gt;     perl: warning: Setting locale failed.
+&gt;     perl: warning: Please check that your locale settings:
+&gt;     	    LC_ALL = (unset),
+&gt;     	    LC_CTYPE = "de_DE",
+&gt;     	    LANG = "de"
+&gt;     	are supported and installed on your system.
+&gt;     perl: warning: Falling back to the standard locale ("C").
+&gt;     ------------------------------------------
+&gt;     ** WML:Break: Error in Pass 3 (rc=74).
+&gt; It seems something has gone quite wrong. (N.B.: when using Perl I also
+&gt; get those warnings, but I always just ignore them and everything works
+&gt; fine).
+&gt; 
+&gt; Now I unset $LANG, and everything works fine:
+&gt;     $ unset LANG
+&gt;     $ wml  x.wml
+&gt;     foo
+&gt;     bar
+&gt; 
+&gt; And now I reset $LANG to its old value, but there are no warnings any
+&gt; more!
+&gt;     $ set LANG="de"
+&gt;     $ wml  x.wml
+&gt;     foo
+&gt;     bar
+[...]
+
+You should have written
+   setenv LANG de
+
+Anyway, try
+   setenv LC_ALL de_DE
+to remove this warning (which is not related to WML, but to Perl).
+
+PS: if you are looking for archives of this list, they are available at
+        <A  HREF="http://www.engelschall.com/sw/wml/news/list">http://www.engelschall.com/sw/wml/news/list</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01674" HREF="msg01674.shtml">Strange ePerl behavior: $LANG</A></strong>, <em>From:</em> Albert REINER</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01674.shtml">Strange ePerl behavior: $LANG</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01676.shtml">BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01674.shtml">Strange ePerl behavior: $LANG</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01679.shtml">Bug in wml::std::lang</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01675"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01675"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

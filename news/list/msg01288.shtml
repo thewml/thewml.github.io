@@ -1,0 +1,202 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: pjNvzntb&#45;ivin.qr (Qnefgra Inegznaa) -->
+<!--X-Date: Fri, 21 Jan 2000 16:11:06 +0100 (MET) -->
+<!--X-Message-Id: m12BffQ&#45;001GKgC@mero.imago&#45;viva.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01288">Date Index</a>][<a href="thrd23.shtml#01288">Thread Index</a>]<br>
+[<A HREF="msg01287.shtml">Date Prev</A>][<A HREF="msg01289.shtml">Date Next</A>][<A HREF="msg01260.shtml">Thread Prev</A>][<A HREF="msg01289.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Carsten Wartmann)</LI>
+<LI><em>Date</em>: Fri, 21 Jan 2000 16:08:04 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Carsten Wartmann
+Reply-To: cw@imago-viva.de
+
+PROBLEM DESCRIPTION:
+Running wml under a normal useraccount doesn´t reads .wmlrc
+files. Running under the root-account works as expected. I have
+compared the strace output running under the two accounts but can´t
+figure out what problem occours at the point the two logs differ. 
+
+Also it wasn´t possible to compile (not make install of course) wml
+under a user account, it fails to compile Readkey and getoptlong 
+
+I am running wml under a Debian slink (2.1) Linux distribution.
+I am not shure if this is a bug or a missconfiguration here, but
+debian is a common plattform for webdesign so I like to notice.
+
+There is also an error while "make test", which I can´t figure out.
+
+mero:/usr/src/wml-1.7.4# make test
+make[1]: Entering directory `/usr/src/wml-1.7.4/wml_test'
+Running WML Test Suite (still incomplete):
+t/01-p1_ipp.........ok
+t/02-p2_mhc.........ok
+t/03-p3_eperl.......ok
+t/04-p4_gm4.........ok
+t/05-p5_divert......ok
+t/06-p6_asubst......ok
+t/07-p7_htmlfix.....ok
+t/08-p8_htmlstrip...ok
+t/09-p9_slice.......ok
+t/10-wml............ok
+t/11-wmk............Use of uninitialized value at (eval 2) line 16, &lt;TERMCAP&gt; ch
+unk 12881.
+ok
+t/des-gfont.........ePerl:Error: Perl runtime error (interpreter rc=1)
+
+---- Contents of STDERR channel: ---------
+** wml::des::gfont:
+sh: gfont: command not found
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.02
+ePerl:Error: Perl runtime error (interpreter rc=1)
+
+---- Contents of STDERR channel: ---------
+** wml::des::gfont:
+sh: gfont: command not found
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.05
+ePerl:Error: Perl runtime error (interpreter rc=1)
+
+---- Contents of STDERR channel: ---------
+** wml::des::gfont:
+sh: gfont: command not found
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+cmp: EOF on tmp.08
+FAILED tests 1-6
+        Failed 6/6 tests, 0.00% okay
+t/des-navbar........ok
+t/des-space.........ok
+Failed Test  Status Wstat Total Fail  Failed  List of failed
+-------------------------------------------------------------------------------
+t/des-gfont.t                 6    6 100.00%  1-6
+Failed 1/14 test scripts, 92.86% okay. 6/46 subtests failed, 86.96% okay.
+make[1]: [test] Error 29 (ignored)
+make[1]: Leaving directory `/usr/src/wml-1.7.4/wml_test'
+mero:/usr/src/wml-1.7.4# 
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i686-pc-linux-gnu2
+    Perl: 5.004_04 (/usr/bin/perl)
+    User: cw@mero.imago-viva.de
+    Date: 20-Jan-2000
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration:
+  Platform:
+    osname=linux, osvers=2.0.34, archname=i386-linux
+    uname='linux kitchen 2.0.34 #2 fri may 22 00:08:40 pdt 1998 i586 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=2.7.2.3
+    cppflags='-Dbool=char -DHAS_BOOL -D_REENTRANT'
+    ccflags ='-Dbool=char -DHAS_BOOL -D_REENTRANT'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Jun  5 1998 01:35:45
+  @INC:
+    /usr/lib/perl5/i386-linux/5.004
+    /usr/lib/perl5
+    /usr/local/lib/site_perl/i386-linux
+    /usr/local/lib/site_perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01289" HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01287.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01260.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01289.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01288"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01288"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

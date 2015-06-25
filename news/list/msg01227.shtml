@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: use of slices restricted with <img>&#45;tag -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Wed, 15 Dec 1999 17:30:08 +0100 (MET) -->
+<!--X-Message-Id: 199912151612.RAA07154@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991214154830.A283@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01227">Date Index</a>][<a href="thrd25.shtml#01227">Thread Index</a>]<br>
+[<A HREF="msg01226.shtml">Date Prev</A>][<A HREF="msg01228.shtml">Date Next</A>][<A HREF="msg01225.shtml">Thread Prev</A>][<A HREF="msg01229.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: use of slices restricted with &lt;img&gt;-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 15 Dec 1999 17:12:45 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Tue, 14 Dec 1999 15:48:30 +0100, xmanoel@bigfoot.com wrote:
+
+&gt; El Sun, Dec 12, 1999 at 03:19:30PM +0100, Jan Holler contaba:
+&gt; 
+&gt;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&gt;&gt;&lt;img src="$(ROOTIMG)/t_akt&lt;de: &gt;&lt;fr: _f&gt;_lo.gif"&gt;
+&gt;&gt;&lt;/body&gt;&lt;/html&gt;
+&gt; 
+&gt; IMHO this is taking things too far away. You can save some types, but
+
+you are right. at the moment i cannot see the reason why i
+have been writing it this way. let me check that sometimes
+later. im stuffed up with work up to the limit.
+
+at least it shows some problems which arise. that should be
+put into the faq. (the faq needs a rewrite anyway. why not
+making a new one? who is experienced with faqs?)
+
+&gt; An important point in using SPLIT is each section has toi be
+&gt; meaningfull.
+
+first i thought it's french but what do you mean with
+meaningfull? i have some explanation somewhere hidden in my
+old memories telling me that you might mean something like a
+closed definition? - sorry, has been years.
+
+by
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01225" HREF="msg01225.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01226.shtml">Re: Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01228.shtml">Re: Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01225.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01229.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01227"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01227"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

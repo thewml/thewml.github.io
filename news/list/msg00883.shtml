@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: rollover and slice -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 30 Jul 1999 01:53:26 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990730014150.538B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990729193535.843H&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00883">Date Index</a>][<a href="thrd18.shtml#00883">Thread Index</a>]<br>
+[<A HREF="msg00882.shtml">Date Prev</A>][<A HREF="msg00884.shtml">Date Next</A>][<A HREF="msg00882.shtml">Thread Prev</A>][<A HREF="msg00884.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: rollover and slice</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 30 Jul 1999 01:52:29 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 29 Jul 1999, Jan Ulrich Hasecke wrote:
+
+&gt; Hello Denis,
+&gt; 
+&gt; &gt;If you have 20 buttons with rollover, you don't want to insert 20
+&gt; &gt;definitions of the ro_imgNormal and ro_imgOver routines.
+&gt; &gt;So they are written only once.
+&gt; 
+&gt; I presumed that it is a feature, not a bug ;-)
+
+Well, it's an undocumented feature. Is there any volunteer to help
+providing an up-to-date documentation?
+ 
+&gt; &gt;2) write slices inside rollover
+&gt; 
+&gt; Thank you! I tried number 2 and it works fine.
+
+Great ;-)
+
+&gt; &gt;One workaround is to write an epilog filter
+&gt; 
+&gt; I was deeply impressed that it works on the first try.
+&gt; 
+&gt; Thanks!
+&gt; 
+&gt; BTW: Where can I learn more about the filter-function?
+
+&gt;From the source files. or from the wml(1) manpage?
+
+&gt; I always use tidy after wml, but this makes the files bigger. Is
+&gt; there a possibility to use tidy before htmlstrip eliminates the
+&gt; blank lines? Or shall I use html-clean as final-final cleanup?
+
+Don't know. I don't use these tools, but i'm sure Tobias or Fritz have
+useful suggestions. 
+
+Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00884" HREF="msg00884.shtml">./configure --prefix fails</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00882" HREF="msg00882.shtml">Re: rollover and slice</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00882.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00884.shtml">./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00882.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00884.shtml">./configure --prefix fails</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00883"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.shtml#00883"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

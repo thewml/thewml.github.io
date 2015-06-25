@@ -1,0 +1,126 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ePerl and language&#45;dependent output -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Tue, 18 Jul 2000 13:21:21 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0007181323220.344&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000718125839.A13479@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01847">Date Index</a>][<a href="thrd37.shtml#01847">Thread Index</a>]<br>
+[<A HREF="msg01846.shtml">Date Prev</A>][<A HREF="msg01848.shtml">Date Next</A>][<A HREF="msg01846.shtml">Thread Prev</A>][<A HREF="msg01848.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ePerl and language-dependent output</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 18 Jul 2000 13:29:08 +0200 (MEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+&gt; &gt; Is there a way to make the per-language calls inside 
+&gt; &gt; &lt;define-tag get_current_lang&gt; more elegant and "automatic" (so that when
+&gt; &gt; new languages are addes, they're automatically processed too)?
+&gt; 
+&gt; Just use perl_get_current_lang instead of get_current_lang ;-)
+&gt; Quite surprisingly it does what you want.
+
+But not when the call to &lt;perl_get_current_lang&gt; is *outside* of any
+language-dependent section, right? I mean,
+
+&lt;body&gt;
+&lt;perl_get_current_lang&gt;
+&lt;/body&gt;
+
+won't work, at least according to my experiments, and what (little) I
+understand of wml passes :-)
+
+&gt; 
+&gt; I improved wml::std::lang yesterday at home, but did not commit the
+&gt; changes, so i will comment them tonight.
+&gt; They may also help you about the JavaScript problems. With lang:current,
+&gt; you could check whether Javascript code is inside a lang slice, e.g.
+&gt; 
+&gt;   &lt;define-tag javascript endtag=required&gt;
+&gt;   &lt;divert HEAD&gt;
+&gt;   &lt;if &lt;get-var lang:current&gt; "[LANG_&lt;upcase &lt;get-var lang:current&gt;&gt;:"&gt;
+&gt;   [...]
+&gt;   &lt;if &lt;get-var lang:current&gt; ":LANG_&lt;upcase &lt;get-var lang:current&gt;&gt;]"&gt;
+&gt;   &lt;/divert&gt;
+&gt;   &lt;/define-tag&gt;
+
+Great, I'll check that tomorrow!
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01848" HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01846" HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01846.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01848.shtml">Re: ePerl and language-dependent output</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01847"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01847"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

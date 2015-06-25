@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: [wml] Problems with define&#45;tag -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 Jul 2000 23:16:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20000717231712.A11538@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717224902.A11476@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0007172251020.14250&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01833">Date Index</a>][<a href="thrd10.shtml#01833">Thread Index</a>]<br>
+[<A HREF="msg01832.shtml">Date Prev</A>][<A HREF="msg01834.shtml">Date Next</A>][<A HREF="msg01831.shtml">Thread Prev</A>][<A HREF="msg01834.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 23:17:12 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 17, 2000 at 10:55:34PM +0200, Fritz Zaucker wrote:
+
+&gt; Hi Denis,
+&gt; 
+&gt; thanks, I'll try that. No wonder I couldn't figure it out. This Path-2
+&gt; is just deadly ...
+
+If you want to patch your version of wml-2.0.2, replace l. 210 of
+wml_backend/p2_mp4h/src/builtin.c by this one:
+  { "group",            FALSE,    FALSE,  mp4h_group },
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01834" HREF="msg01834.shtml">Re: [wml] Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01830" HREF="msg01830.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01831" HREF="msg01831.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01832.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01834.shtml">Re: [wml] Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01831.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01834.shtml">Re: [wml] Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01833"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01833"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

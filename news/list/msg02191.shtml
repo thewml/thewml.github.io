@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: man for mp4h -->
+<!--X-From-R13: Vbenpvb <ubzrtnNpvorevn.rf> -->
+<!--X-Date: Thu, 5 Apr 2001 10:47:30 +0200 (MET DST) -->
+<!--X-Message-Id: 20010405104936.A14814@tanit.wanadoo.es -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02191">Date Index</a>][<a href="thrd44.shtml#02191">Thread Index</a>]<br>
+[<A HREF="msg02190.shtml">Date Prev</A>][<A HREF="msg02192.shtml">Date Next</A>][<A HREF="msg02190.shtml">Thread Prev</A>][<A HREF="msg02192.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>man for mp4h</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Horacio &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 5 Apr 2001 10:49:36 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I´m getting a print-ready postscript version of all man pages
+included with wml through
+
+pod2man --section=n --center="wml manual" foo.pod foo.n
+
+groff -mandoc -Tps foo.n &gt;foo.ps
+
+A few other I just get them formatted with a2ps.  But, how can I
+get a (*roff) .ps (or simple .ps) from the mp4h documentation?
+
+
+Thank You,
+
+-- 
+Horacio
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02192" HREF="msg02192.shtml">Re: man for mp4h</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02193" HREF="msg02193.shtml">Re: man for mp4h</A></strong>, <em>From:</em> Jean-Michel Sauvage</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02190.shtml">Re: Compile Problems</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02192.shtml">Re: man for mp4h</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02190.shtml">Re: Compile Problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02192.shtml">Re: man for mp4h</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02191"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02191"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

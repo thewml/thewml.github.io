@@ -1,0 +1,139 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug report: selecting non existant slices is treated as an error -->
+<!--X-From-R13: [vpunry [p@nznen <znpNfhersveri.pbz> -->
+<!--X-Date: Wed, 20 Jan 1999 18:03:44 +0100 (CET) -->
+<!--X-Message-Id: 199901201647.IAA06115@medusa.surefirev.com. -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00358">Date Index</a>][<a href="thrd8.shtml#00358">Thread Index</a>]<br>
+[<A HREF="msg00357.shtml">Date Prev</A>][<A HREF="msg00359.shtml">Date Next</A>][<A HREF="msg00363.shtml">Thread Prev</A>][<A HREF="msg00360.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug report: selecting non existant slices is treated as an error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Michael McNamara &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 20 Jan 1999 08:47:46 -0800 (PST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+
+BACKGROUND:
+
+	I maintain web pages for our company, from which people can
+download our software.  I use wml.
+
+	From time to time we have beta releases available of up coming 
+products.
+
+	I use make to control the running of wml on the source files,
+and to drive mirror copying the output html pages to our externally
+visible web page.
+
+	I'd like to simply add the line
+
+	SCBETA=1 
+	
+	to the Makefile, (which passes this to wml via the -DSCBETA=1
+command line argument) and type make, and have the pages built with
+the beta software included.
+
+	I tried using the
+
+	&lt;ifdef SCBETA thenstring elsestring&gt; feature, 
+but my then and else strings have white space in them.  Is there a 
+what to escape the white space?
+
+	Baring that, I use slices. I surround the text that should be
+printed only if we are doing a Beta release in the appropriate slice.
+This works great; except:
+
+	Only some of our pages change based on that fact we are doing
+a beta.  Since I use make, I'd like to use the same command line when
+ever running wml.  
+
+	If a page is processed by wml with a command line that is
+selecting slices that don't exist in the page, it is treated as an
+error.  I feel this is the wrong behavior. At most, wml should warn.
+
+REPEAT BY:
+
+	wml foo.wml --o UNDEFuJOE:foo.html
+
+where there is no slice named JOE in foo.wml
+
+WORKAROUND:
+
+	add to every page a slice named JOE that includes nothing:
+
+	
+&lt;!-- [JOE: :] --&gt;
+
+-- 
+    /\     Michael McNamara             &lt;mac@surefirev.com&gt;
+   /\//    SureFire Verification Inc.   408-374-4100 x 100
+  /\///\   &lt;<A  HREF="http://www.surefirev.com">http://www.surefirev.com</A>&gt;   408-374-4174 FAX
+ _\///\/        Formerly Silicon Sorcery
+  \//\/    Get my verilog emacs mode from
+    \/     &lt;<A  HREF="http://www.surefirev.com/verilog-mode.html">http://www.surefirev.com/verilog-mode.html</A>&gt;
+                                     
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00360" HREF="msg00360.shtml">Re: Bug report: selecting non existant slices is treated as an error</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00357.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00359.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00363.shtml">Re: Some help</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00360.shtml">Re: Bug report: selecting non existant slices is treated as an error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00358"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00358"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

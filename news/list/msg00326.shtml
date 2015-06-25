@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: How to do navbar with picture followed by text buttons? -->
+<!--X-From-R13: =?vfb&#45;8859&#45;1?C?[=S4eg?= Znnx <[neg.ZnnxNunafn.rr> -->
+<!--X-Date: Fri, 15 Jan 1999 15:01:23 +0100 (CET) -->
+<!--X-Message-Id: 369F39A2.EAEC0E8A@hansa.ee -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00326">Date Index</a>][<a href="thrd7.shtml#00326">Thread Index</a>]<br>
+[<A HREF="msg00325.shtml">Date Prev</A>][<A HREF="msg00327.shtml">Date Next</A>][<A HREF="msg00320.shtml">Thread Prev</A>][<A HREF="msg00329.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>How to do navbar with picture followed by text buttons?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Märt Laak &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Jan 1999 14:50:42 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+  I cannot figure out how to do navbars where every button consist of &lt;IMG&gt;
+and followed with tekst like that:
+  &lt;A HREF="menulink.html"&gt;&lt;IMG SRC="bubble.gif"&gt;&amp;nbsp;Menu no 1&lt;/A&gt;
+
+  So that one can point both on image and on tekst to get the link.
+
+  &lt;navbar:button&gt; allows me to specify tekst or image only?
+  
+.mÄRt. 
+----------------------------------------------
+-- Märt Laak
+-- System Integrator / Hansabank, IT Division
+-- Support Proceedings Department
+-- phone 6131573, e-mail Mart.Laak@hansa.ee
+----------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00325.shtml">Re: Combining slices and divert</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00327.shtml">RPM Intel binary for Red Hat Linux 5.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00320.shtml">use of wml with kanji</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00329.shtml">Installation problems with WML-1.6.8</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00326"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00326"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

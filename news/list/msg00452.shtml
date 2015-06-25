@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: e&#45;perl error -->
+<!--X-From-R13: urffrNyhmv.S&#45;Frpuavx.Gav&#45;Rbegzhaq.RS ("Pwbrea_Vrffr") -->
+<!--X-Date: Thu, 11 Mar 1999 13:54:31 +0100 (CET) -->
+<!--X-Message-Id: 3i90d4qjqg.fsf@luzi.e&#45;technik.uni&#45;dortmund.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00452">Date Index</a>][<a href="thrd11.shtml#00452">Thread Index</a>]<br>
+[<A HREF="msg00451.shtml">Date Prev</A>][<A HREF="msg00453.shtml">Date Next</A>][<A HREF="msg00437.shtml">Thread Prev</A>][<A HREF="msg00454.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>e-perl error</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (&quot;Bjoern_Hesse&quot;)</LI>
+<LI><em>Date</em>: 11 Mar 1999 13:44:07 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+With both wml 1.6.8 and the latest snapshot, i can reproduce this error.  
+
+&lt;-- error.wml --&gt;
+#use wml::des::space
+&lt;-- error.wml --&gt;
+
+&lt;-- log --&gt;
+magi:/home/hesse/lang/wml 55&gt; wmk error.wml
+wml -n -oerror.html error.wml
+ePerl:Error: Perl parsing error (interpreter rc=2)
+ 
+---- Contents of STDERR channel: ---------
+Can't load '/opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so' for module IO: ld.so.1: /opt/gnu/lib/wml/exec/wml_p3_eperl: fatal: relocation error: file /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/auto/IO/IO.so: symbol main: referenced symbol not found at /opt/gnu/lib/perl5/5.00502/sun4-solaris/DynaLoader.pm line 168.
+ 
+ at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Handle.pm line 241
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at /opt/gnu/lib/wml/perl/lib/site_perl/5.005/sun4-solaris/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /tmp/wml.9168.tmp1 line 84.
+&lt;-- log --&gt;
+
+Further informations:
+
+magi:/home/hesse/lang/wml 58&gt; uname -a
+SunOS magi 5.5 Generic_103093-24 sun4u sparc SUNW,Ultra-1
+
+magi:/home/hesse/lang/wml 59&gt; perl -v
+ 
+This is perl, version 5.005_02 built for sun4-solaris
+ 
+Copyright 1987-1998, Larry Wall
+
+
+Thanks 
+
+Bjoern
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00454" HREF="msg00454.shtml">Re: e-perl error</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00451.shtml">Re: Home of WML and other stuff</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00453.shtml">WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00437.shtml">Re: gfont (was: p3_eperl &amp; threads =&gt; compile problem)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00454.shtml">Re: e-perl error</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00452"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00452"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

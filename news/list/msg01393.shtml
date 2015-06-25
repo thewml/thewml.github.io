@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: wml&#45;1.7.4 and debian/potato -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Wed, 1 Mar 2000 08:27:48 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0002251343470.3944&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000223142439.A15726@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01393">Date Index</a>][<a href="thrd28.shtml#01393">Thread Index</a>]<br>
+[<A HREF="msg01392.shtml">Date Prev</A>][<A HREF="msg01394.shtml">Date Next</A>][<A HREF="msg01376.shtml">Thread Prev</A>][<A HREF="msg01379.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: wml-1.7.4 and debian/potato</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 25 Feb 2000 13:48:05 +0000 (/etc/localtime)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello folks!
+
+On Wed, 23 Feb 2000, Anthony Fok wrote:
+&gt; My guess is that you installed the "libgdbmg1" deb package but not
+&gt; "libgdbmg1-dev".  Try installing the -dev development package and
+&gt; see if it still works or not.
+
+Tnx a lot, my administrator installed the package (I don't have root
+rights on all the machines I work with) and now everything works fine.
+
+To Daniela and Ralf: Alles Gute und eine schöne Zeit miteinander!
+
+Greetings,
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01376" HREF="msg01376.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01392.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01394.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01376.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01379.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01393"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01393"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

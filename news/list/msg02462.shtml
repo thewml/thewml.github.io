@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: New to WML : separate html output from wml? -->
+<!--X-From-R13: Zbhvf ZrPynap <yroynap+jzyNxrlfynccre.bet> -->
+<!--X-Date: Wed, 12 Dec 2001 19:27:10 +0100 (MET) -->
+<!--X-Message-Id: 20011212182807.GA29653@keyslapper.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E16E68g&#45;0001Gu&#45;00@sand7.global.net.uk -->
+<!--X-Reference: 20011212144535.GC7861@keyslapper.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02462">Date Index</a>][<a href="thrd50.shtml#02462">Thread Index</a>]<br>
+[<A HREF="msg02461.shtml">Date Prev</A>][<A HREF="msg02463.shtml">Date Next</A>][<A HREF="msg02460.shtml">Thread Prev</A>][<A HREF="msg02458.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: New to WML : separate html output from wml?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Louis LeBlanc &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 12 Dec 2001 13:28:08 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 12/12/01 09:45 AM, Louis LeBlanc sat at the `puter and typed:
+&gt; On 12/12/01 09:52 AM, Sebastian Brosig sat at the `puter and typed:
+&gt; &gt; &gt; 1. Structure
+&gt; &gt; &gt; I want to separate the html output from the wml source.
+&gt; &gt; I have played around with this for a while too --- but then I realised that
+&gt; &gt; there are other implications: the non-html/wml files, such as images,
+&gt; &gt; downloads etc --- still have to be moved to your /somedir/pages, and that's
+&gt; &gt; a pain. I settled for a shell script that uses find to suck out files with
+&gt; &gt; relevant extensions (html, png, jpg, zip, ...) to /somedir/pages/. Other
+&gt; &gt; people use a Makefile, it's a matter of taste and skills I guess. I just run
+&gt; &gt; that script when I intend to publish my work to the "staging" server or
+&gt; &gt; finally upload, and have my /somedir/ as apache's DocumentRoot, so that I
+&gt; &gt; (and my proof readers) can browse into my work-in-progress as well as the
+&gt; &gt; local mirror of the externally served pages.
+&gt; &gt; seb
+&gt; 
+&gt; I'm very new to wml (like days) and even newer to the list, so forgive
+&gt; me for poking  my nose in the  middle of a thread that  I haven't been
+&gt; privy to until now.
+&gt; 
+&gt; Couldn't you  just link the  image dirs from  the staging area  to the
+&gt; build area? I've been starting  to think about this separation myself,
+&gt; and this is the first thing to  come to my mind. The HTML source would
+&gt; be a different issue.
+&gt; 
+&gt; I've literally  just started  learning WML and  haven't even  begun to
+&gt; understand the dependencies between passes yet, so I haven't been able
+&gt; to spend time on this,  but can't the -o parameter put the HTML source
+&gt; anywhere you want? You should be able to just put '-D STAGING_DIR=&lt;somedir&gt;'
+&gt; in the base  .wmlrc, then you can use  '-o $(STAGING_DIR)/out.html' in
+&gt; the. shebang line in your .wml file.
+&gt; Hmm.  That one literally just popped. into my head .
+&gt; 
+&gt; Maybe  these ideas  will help  solve your  problem. Let  me know,  I'm
+&gt; curious :)
+
+Well, I've tried it out and it turns out the $(STAGING_DIR) variable
+in the shebang line won't work.  I've been able to get around it by
+generating the wml file from a perl script, but that's only ok for the
+case where I absolutely have to do so to solve other problems as well.
+
+Darn
+Lou
+-- 
+Louis LeBlanc               leblanc@keyslapper.org
+Fully Funded Hobbyist, KeySlapper Extrordinaire :)
+<A  HREF="http://www.keyslapper.org">http://www.keyslapper.org</A>                     ԿԬ
+
+The difference between the right word and the almost right word is the
+difference between lightning and the lightning bug.
+    -- Mark Twain
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02457" HREF="msg02457.shtml">Re: New to WML : separate html output from wml?</A></strong>, <em>From:</em> Sebastian Brosig</li>
+<li><strong><A NAME="02460" HREF="msg02460.shtml">Re: New to WML : separate html output from wml?</A></strong>, <em>From:</em> Louis LeBlanc</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02461.shtml">Re: Extra attributes in &lt;href&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02463.shtml">Re: Cleaning up the HTML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02460.shtml">Re: New to WML : separate html output from wml?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02458.shtml">Extra attributes in &lt;href&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02462"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02462"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

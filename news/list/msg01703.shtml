@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: slices and optimize -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Wed, 7 Jun 2000 11:50:59 +0200 (MET DST) -->
+<!--X-Message-Id: 200006070949.LAA12497@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 393DE606.14D880D8@fernuni&#45;hagen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01703">Date Index</a>][<a href="thrd35.shtml#01703">Thread Index</a>]<br>
+[<A HREF="msg01702.shtml">Date Prev</A>][<A HREF="msg01704.shtml">Date Next</A>][<A HREF="msg01702.shtml">Thread Prev</A>][<A HREF="msg01704.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: slices and optimize</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed 07 Jun 2000 11:48:39 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Fritz
+
+Wed, 07 Jun 2000 08:04:54 +0200, you wrote:
+
+&gt; &lt;img src="images/xxxxx&lt;de: -de&gt;.jpg" &gt;
+
+&gt; Unfortunately in the htmlfix pass we have no valid image name so the
+&gt; slices have to be optimized separately. I am afraid the slice pass has
+&gt; to be the last one. Is this correct?
+
+Yes. You'll find articles related to that subject in the
+mailinglist. If you go this way, you'll avoid the troubles:
+
+&lt;en: &lt;img src="images/xxxxx.jpg" &gt; &gt; \
+&lt;de: &lt;img src="images/xxxxx-de.jpg" &gt; &gt;
+
+The only drawback is to have a slice-mark for your default
+images too.
+
+Note: You have to write it in one line or use the \
+otherwise you'll get a linebreak (which might ruin your
+tabled screendesign).
+
+Bye
+ -jan
+
+-- 
+  Holler iNetCom
+  <A  HREF="http://www.inetcom.ch/">http://www.inetcom.ch/</A>
+  tel: +41 31 9916185, bern, schweiz
+  Pubkey: <A  HREF="http://wwwkeys.ch.pgp.net:11371/pks/lookup?op=index&amp;search=jh@inetcom.ch">http://wwwkeys.ch.pgp.net:11371/pks/lookup?op=index&amp;search=jh@inetcom.ch</A>
+
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01702" HREF="msg01702.shtml">slices and optimize</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01702.shtml">slices and optimize</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01704.shtml">Problems moving from 1.7.4 to 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01702.shtml">slices and optimize</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01704.shtml">Problems moving from 1.7.4 to 2.0.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01703"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01703"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

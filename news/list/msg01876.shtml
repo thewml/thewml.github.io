@@ -1,0 +1,137 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Plans for WML 2.0.3 -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Fri, 4 Aug 2000 10:01:17 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0008040951390.28614&#45;100000@nova.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000801101726.A30370@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01876">Date Index</a>][<a href="thrd38.shtml#01876">Thread Index</a>]<br>
+[<A HREF="msg01875.shtml">Date Prev</A>][<A HREF="msg01877.shtml">Date Next</A>][<A HREF="msg01879.shtml">Thread Prev</A>][<A HREF="msg01877.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Plans for WML 2.0.3</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Aug 2000 10:01:09 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+I have a (hopefully) small request for the next release:
+
+Could we have WML_SRC_TIME in addition to WML_SRC_CTIME? This would
+make it a lot easier to customize the output format (with strftime).
+
+Right now I am first parsing WML_SRC_TIME into
+($sec,$min,$hours,$mday,$mon,$year), run this through timelocal() and
+then use strftime.
+
+Cheers, 
+Fritz
+
+On Tue, 1 Aug 2000, Denis Barbier wrote:
+
+&gt; Hi,
+&gt; 
+&gt; i will be away next week for 3 weeks, without net connectivity.
+&gt; During my vacation, i plan reading books on Perl regular expressions
+&gt; (especially how to reduce regexp processing time) and writing efficient
+&gt; C programs. Tell me if you know good books (or eventually URL pointers)
+&gt; on these topics (even classical ones). Please do not reply to this
+&gt; mailing-list when sending your advice.
+&gt; 
+&gt; WML 2.0.3 will be released at my coming back, after some final checks.
+&gt; If some of you could test current snapshot and report whether it works
+&gt; or not, it would help me a lot.  It contains no known bugs, works well
+&gt; with my input files, but almost all modules have been updated, so some
+&gt; bugs may have been introduced.
+&gt; 
+&gt; Since my last report about wml-SNAP status, following changes have been
+&gt; made:
+&gt; * Added attribute on &lt;subst-in-string&gt;, &lt;subst-in-var&gt; and &lt;match&gt;
+&gt;   to use `imsx' perl modifiers.
+&gt; * All modules have been updated to allow XHTML compliant output.
+&gt; * Passes 7, 8 and 9 are soooo slow on large files. they now run up
+&gt;   to 10 times faster.
+&gt; * &lt;protect&gt; tags are now nestable.
+&gt; 
+&gt; See <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/ChangeLog</A>
+&gt; for a more detailed list.
+&gt; 
+&gt; It would be nice to have time comparisons with WML-2.0.2, some fixed
+&gt; bugs may increase processing time.
+&gt; 
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01877" HREF="msg01877.shtml">Re: [wml] Plans for WML 2.0.3</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01868" HREF="msg01868.shtml">Plans for WML 2.0.3</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01875.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01877.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01879.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01877.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01876"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01876"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

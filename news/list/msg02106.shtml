@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: auto&#45;adjusted variables: behaviour changed? -->
+<!--X-From-R13: Drzpb ina qra Pret <DiqPretNqfr.ay> -->
+<!--X-Date: Tue, 16 Jan 2001 01:17:57 +0100 (MET) -->
+<!--X-Message-Id: 20010116011746.A23075@jupiter.strijp.Ehv.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010116011053.A22838@jupiter.strijp.Ehv.nl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02106">Date Index</a>][<a href="thrd43.shtml#02106">Thread Index</a>]<br>
+[<A HREF="msg02105.shtml">Date Prev</A>][<A HREF="msg02107.shtml">Date Next</A>][<A HREF="msg02105.shtml">Thread Prev</A>][<A HREF="msg02107.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: auto-adjusted variables: behaviour changed?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 16 Jan 2001 01:17:46 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jan 16, 2001 at 01:10:53AM +0100, Remco van den Berg wrote:
+&gt; 
+&gt; psvweb@jupiter &gt; make
+&gt; wml  _src/todolist.phpwml -o todolist.php
+&gt; 
+&gt; But in WML version 2.0.6 I see that my auto-adjusted variables get an extra
+&gt; '../' in front of it. At first I didn't understand it, but I found out that
+&gt; when I place the source files in the current working directory and I run
+&gt; 
+&gt; #&gt; wml todolist.phpwml -o todolist.php
+&gt; 
+&gt; the extra '../' in the auto-adjusted variables is gone. And everything works.
+
+I saw in the manual an option "--nocd", but it doesn't work.
+
+Can somebody confirm, that this option should be the solution for my problem?
+
+But if so, then why isn't it working?
+
+-Remco
+
+-- 
+----------------------------------------------------------------------------
+    Remco van den Berg                           Admin/SO/helpdesk DSE      
+      ICQ: 47514668         rvdberg@dse.nl         <A  HREF="http://www.dse.nl/">http://www.dse.nl/</A>       
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02107" HREF="msg02107.shtml">Re: auto-adjusted variables: behaviour changed?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02105" HREF="msg02105.shtml">auto-adjusted variables: behaviour changed?</A></strong>, <em>From:</em> Remco van den Berg</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02105.shtml">auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02107.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02105.shtml">auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02107.shtml">Re: auto-adjusted variables: behaviour changed?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02106"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02106"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

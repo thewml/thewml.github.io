@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Idea of future enhancement of WML &#45; Environment -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 24 Jun 2000 00:14:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20000624001600.B1869@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E135b0j&#45;0000TP&#45;00@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01746">Date Index</a>][<a href="thrd31.shtml#01746">Thread Index</a>]<br>
+[<A HREF="msg01745.shtml">Date Prev</A>][<A HREF="msg01747.shtml">Date Next</A>][<A HREF="msg01525.shtml">Thread Prev</A>][<A HREF="msg01756.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Idea of future enhancement of WML - Environment</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 24 Jun 2000 00:16:00 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 11 Apr 2000 11:13:13 +0200 (MEST), Franz Knipp wote:
+
+&gt; Hello people!
+&gt;
+&gt; In addition to the discussion about nested tags I want to send the
+&gt; following proposal to the list.
+&gt;
+&gt; By accident I had a similar idea like Xose Manoel Ramos, perhaps because
+&gt; I'm in Spain at the moment ;-) (=A1Saludas de Valencia a Galicia!) and I
+&gt; sent it to Denis Barbier hours before reading his mail on the list.
+&gt;
+&gt; +---------- explanation start
+&gt;
+&gt; Environments: offer the same functionality like Containers with the
+&gt; enhancement, that inside HTML tags are expanded different that outside,
+&gt; if they are defined in that kind.
+&gt; A short example:
+&gt;
+&gt; &lt;pic "maybe.png"&gt;          &lt;!--- inserts a picture ---&gt;
+&gt;
+&gt; &lt;envtable&gt;                 &lt;!--- start of environment ---&gt;
+&gt; &lt;pic "other.png"&gt;          &lt;!--- insert pictore according to the
+&gt;                                  surrounding environment ---&gt;
+&gt; &lt;/envtable&gt;                &lt;!--- end of environment ---&gt;
+&gt;
+&gt; The picture "maybe.png" is inserted in a general way but the picture
+&gt; "other.png" is inserted in a way that it fits the requirements of the
+&gt; environment "envtable".
+[...]
+Full message available at
+   <A  HREF="http://www.engelschall.com/sw/wml/news/list/msg01525.html">http://www.engelschall.com/sw/wml/news/list/msg01525.html</A>
+
+Hi Franz,
+
+i do not like this idea, because it is very confusing. And i could not
+imagine the benefits of this approach. Could you send a nice example?
+
+--
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01756" HREF="msg01756.shtml">Re: Idea of future enhancement of WML - Environment</A></strong>, <em>From:</em> Franz Knipp</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01745.shtml">Re: Welcome to the world, Noah!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01747.shtml">Re: Welcome to the world, Noah!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01525.shtml">Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01756.shtml">Re: Idea of future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01746"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd31.shtml#01746"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

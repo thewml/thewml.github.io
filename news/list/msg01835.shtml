@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Problems with define&#45;tag -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 17 Jul 2000 23:50:06 +0200 (MET DST) -->
+<!--X-Message-Id: 20000717235104.A11625@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000717224902.A11476@imacs.polytechnique.fr -->
+<!--X-Reference: Pine.GSO.4.21.0007172304140.14250&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail37.shtml#01835">Date Index</a>][<a href="thrd10.shtml#01835">Thread Index</a>]<br>
+[<A HREF="msg01834.shtml">Date Prev</A>][<A HREF="msg01836.shtml">Date Next</A>][<A HREF="msg01832.shtml">Thread Prev</A>][<A HREF="msg01836.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Problems with define-tag</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 17 Jul 2000 23:51:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 17, 2000 at 11:05:31PM +0200, Fritz Zaucker wrote:
+
+&gt; On Mon, 17 Jul 2000, Denis Barbier wrote:
+&gt; 
+&gt; Hmm, this didn't really help. And I think that the group-tags are
+&gt; needed, there are several lines belonging to the &lt;ifeq clauses.
+
+But there is only one token in each clause: &lt;navbar:define&gt;...&lt;/navbar:define&gt;
+
+&gt; Did you try to compile other.wml? index.wml is less of a problem.
+
+Not this one. and to be honest i do not see how it could work.  This mix
+of pass 2 and pass 3 is a must :-)
+Well, you have to protect the quotes needed in pass 3.  I did not pay
+enough attention to this point, it will be documented in next release.
+
+Fortunately, your MAGICK macro is divided into 2 parts: initialization
+of Perl variables, and processing.  The latter may be protected with
+&lt;protect pass=2&gt;...&lt;/protect&gt;.  In the former, replace quotes by qq
+Perl operator:
+   &lt;define-tag MAGICK endtag=required&gt;
+   &lt;preserve chro&gt;
+     ...
+   &lt;set-var %attributes&gt;
+   &lt;:
+   BEGIN{unshift @INC, qq(/usr/pack/imagemagick-4.2.9-to/solaris/perl/)};
+   use Image::Magick;
+   my $fontpath = qq($(ROOT)/.ttf);
+   umask 022;
+   my $chro = qq(&lt;get-var chro&gt;);
+     ...
+   my $deff = qq(&lt;get-var file&gt;);
+   &lt;protect pass=2&gt;
+   my $text = &lt;&lt;'sdosidufgtjseflsdj';
+     ...
+   print  "$(ROOT)/.img/$file.gif" if $deff =~ /^\s*$/s;
+   &lt;/protect&gt;
+   :&gt;
+     ...
+   &lt;restore chro&gt;
+   &lt;/define-tag&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01836" HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01830" HREF="msg01830.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01832" HREF="msg01832.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01834.shtml">Re: [wml] Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01832.shtml">Re: [wml] Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01836.shtml">Re: [wml] Re: [wml] Problems with define-tag</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail37.shtml#01835"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01835"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

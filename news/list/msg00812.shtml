@@ -1,0 +1,142 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1 -->
+<!--X-From-R13: Xvz Vroreg <wuroregNpbzch&#45;nvq.pbz> -->
+<!--X-Date: Wed, 30 Jun 1999 23:54:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9906301742280.3995&#45;100000@ray.compu&#45;aid.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990630224940.27099A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00812">Date Index</a>][<a href="thrd17.shtml#00812">Thread Index</a>]<br>
+[<A HREF="msg00811.shtml">Date Prev</A>][<A HREF="msg00813.shtml">Date Next</A>][<A HREF="msg00811.shtml">Thread Prev</A>][<A HREF="msg00814.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jim Hebert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 30 Jun 1999 17:54:49 -0400 (EDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, 30 Jun 1999, Denis Barbier wrote:
+
+&gt; It's much more complicated :-(
+&gt; In all versions, spaces and quotes are invalid when defining variables.
+&gt; One problem is that command-line arguments are parsed by the shell
+&gt; whereas .wmlrc and shebang-line are parsed by Perl by something like
+&gt;     split(' ', $string);
+&gt; Then your example is split into 
+&gt;     -DFOO="moo
+&gt;     \"bar\""
+&gt; 
+&gt; I have no solution, sorry.
+
+I hate to be the know-nothing who just read The Perl Cookbook and now
+thinks he's hot stuff, but isn't this essentially the same problem as the
+'I have comma-delimited input but some of the fields have commas
+surrounded by "" so those shouldn't be split on?"
+
+The procedure shown in TPC is based on stuff from Mastering Regular
+Expressions. Given that I am a loser I am not sure how to convert this to
+be of use to you (ie do whitespace delims instead of commas), here is the
+code in the book, modulo any typos I introduce. =)
+
+sub parse_csv {
+   my $text = shift;
+   my @new = ();
+   push(@new, $+) while $text =~ m{
+      #the first part groups the phrase inside the quotes
+      #see explanation of this pattern in MRE
+      "([^\"\\]*(?:\\.[^\"\\]*)*)",?
+         |   ([^,]+),?
+         |   ,   
+      }gx;
+   push(@new, undef) if substr($text, -1, 1) eq ',';
+   return @new;
+}
+
+it also has a note to check out the Text::ParseWords module which looks
+like it takes a delim that you specify, and presumably also would handle
+the cases of a quoted space or something.
+
+Sorry if I'm being totally dense, I'll admit not even using wml lately let
+alone ever having hacked into it. But if running that sort of
+word-separator would get you what you want for the shebang and .wmlrc
+options, and it seems easy enough to get spaces into the shell-parsed
+arguments, then the no-spaces restriction could be lefted?
+
+Best,
+
+jim
+
+-- 
+The Microsoft/Mindcraft/ZDNet benchmarks:
+     a) prove Linux is faster than you will ever, ever need.
+     b) are a fantasy and shouldn't affect your purchase decision.
+Read why and decide for yourself at <A  HREF="http://cs.alfred.edu/~lansdoct/mstest.html">http://cs.alfred.edu/~lansdoct/mstest.html</A>
+See <A  HREF="http://www.heise.de/ct/english//99/13/186-1/">http://www.heise.de/ct/english//99/13/186-1/</A> for more applicable tests.
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00814" HREF="msg00814.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00815" HREF="msg00815.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00811" HREF="msg00811.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00811.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00813.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00811.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00814.shtml">Re: [BUG REPORT] WML 1.7.2 and current CVS snapshot, SunOS 5.5.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00812"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00812"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

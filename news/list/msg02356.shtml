@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2nd try: Netscape 6 seems to screw up table layouts -->
+<!--X-From-R13: Xrna&#45;[vpury Enhintr <wrna&#45;zvpury.fnhintrNpyho&#45;vagrearg.se> -->
+<!--X-Date: Thu, 9 Aug 2001 14:48:09 +0200 (MET DST) -->
+<!--X-Message-Id: 3B7286EB.4010405@club&#45;internet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3B725ED5.58B502B7@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02356">Date Index</a>][<a href="thrd48.shtml#02356">Thread Index</a>]<br>
+[<A HREF="msg02355.shtml">Date Prev</A>][<A HREF="msg02357.shtml">Date Next</A>][<A HREF="msg02361.shtml">Thread Prev</A>][<A HREF="msg02357.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2nd try: Netscape 6 seems to screw up table layouts</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jean-Michel Sauvage &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 09 Aug 2001 14:49:47 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+The problem occurs few months ago with mozilla 0.8x &amp; 0.9x versions (and 
+Nestcape 6...) :
+all layouts vertical spaces (based on 1x1 clear gif pixels) seem to be 
+forced to 8-10 pixels by mozilla/netscape. It's not specific to WML. 
+There's another bug like this: with mosaic images, mozilla adds 
+(sometimes) some extra background pixels...
+I've tried several ways to correct this. None seems to work fine with 
+1x1 pixels...
+CSS allow you to correct this bug, but it may doesn't work fine with 
+Netscape 4.7x :-(
+
+Jean-Michel
+
+Stephan Petersen wrote:
+
+&gt; Hi again,
+&gt; 
+&gt; sorry about the last email, it got sent before it
+&gt; was complete, here´s the full version :-)
+&gt; 
+&gt; ****
+&gt; 
+&gt; Hi there,
+&gt; 
+&gt; I thought I´d give Netscape V6.1 a try and downloaded the
+&gt; new version yesterday.
+&gt; 
+&gt; I was suprised though when I used it to look at my 
+&gt; WML-generated pages: the table-based layout suddenly
+&gt; has extra vertical whitespace between the various GIFs
+&gt; that make up the page layout (top, left, and bottom), 
+&gt; and I can´t find any possible reason in my WML code, or the 
+&gt; HTML code wml generates from it.
+&gt; 
+&gt; My pages look fine with Netscape V2.x, V3.x, V4.x 
+&gt; (both Win and Linux), IE V5.x, Opera V5.12 (Win).
+&gt; 
+&gt; Can anybody confirm this? Is that possibly a bug 
+&gt; in Netscape/Gecko, or is there a problem with my HTML
+&gt; code after all?
+&gt; 
+&gt; If anybody wants to check out the effect I´m talking about,
+&gt; goto <A  HREF="http://www.aspetersen.de/home_e.html">http://www.aspetersen.de/home_e.html</A> 
+&gt; 
+&gt; Thanks in advance for any feedback,
+&gt; 
+&gt; Stephan
+&gt; 
+&gt; 
+&gt; 
+&gt; --
+&gt; Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+&gt; 
+&gt; 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02353" HREF="msg02353.shtml">2nd try: Netscape 6 seems to screw up table layouts</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02355.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02357.shtml">wml website docs: tidy missing</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02361.shtml">Re: [wml] 2nd try: Netscape 6 seems to screw up table layouts</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02357.shtml">wml website docs: tidy missing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02356"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02356"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

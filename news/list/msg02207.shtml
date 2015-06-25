@@ -1,0 +1,102 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Including multiple files while retaining order -->
+<!--X-From-R13: "Xnzrf O. Fernpl" <gernplNxyrpxre.qrovna.bet> -->
+<!--X-Date: Mon, 23 Apr 2001 17:44:02 +0200 (MET DST) -->
+<!--X-Message-Id: 20010418082125.A15336@klecker.debian.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010418091343.A5074@landru.home.link -->
+<!--X-Reference: 20010418171437.B6197@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02207">Date Index</a>][<a href="thrd45.shtml#02207">Thread Index</a>]<br>
+[<A HREF="msg02206.shtml">Date Prev</A>][<A HREF="msg02208.shtml">Date Next</A>][<A HREF="msg02206.shtml">Thread Prev</A>][<A HREF="msg02208.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Including multiple files while retaining order</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;James A. Treacy&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 18 Apr 2001 08:21:25 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Apr 18, 2001 at 05:14:37PM +0200, Denis Barbier wrote:
+&gt; On Wed, Apr 18, 2001 at 09:13:43AM -0400, James A. Treacy wrote:
+&gt; &gt; Is there a way to include all the files in a directory, like
+&gt; &gt; #include 'blah/*'
+&gt; &gt; that will include the files in alphabetic order?
+&gt; 
+&gt; Hi Jay,
+&gt; 
+&gt; try
+&gt;   #include 'blah/*' IPP_SORT
+&gt; with wml &gt; 1.7.4
+&gt; 
+&gt; This is described in wml_p1_ipp, and is a contribution by Franz Knipp.
+&gt; 
+Darn. I just wrote some mp4h to do what we wanted. Didn't look into the
+wml_p* pages. :(
+
+Well it was a good excuse to learn something new.
+
+-- 
+James (Jay) Treacy
+treacy@debian.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02203" HREF="msg02203.shtml">Including multiple files while retaining order</A></strong>, <em>From:</em> James A. Treacy</li>
+<li><strong><A NAME="02205" HREF="msg02205.shtml">Re: Including multiple files while retaining order</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02206.shtml">Re: Including multiple files while retaining order</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02208.shtml">BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02206.shtml">Re: Including multiple files while retaining order</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02208.shtml">BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02207"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02207"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

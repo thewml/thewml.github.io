@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Mirror available for the distribution tarballs -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 23 Dec 1997 08:03:58 +0100 (MET) -->
+<!--X-Message-Id: 199712230703.IAA19667@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1u3c1cszf.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00006">Date Index</a>][<a href="thread.shtml#00006">Thread Index</a>]<br>
+[<A HREF="msg00005.shtml">Date Prev</A>][<A HREF="msg00007.shtml">Date Next</A>][<A HREF="msg00005.shtml">Thread Prev</A>][<A HREF="msg00007.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Mirror available for the distribution tarballs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 23 Dec 1997 08:03:56 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; &gt; BTW: I really need a few more mirror locations, especially in Germany.
+&gt; &gt;      If someone of you can provide such a service, feel free to
+&gt; &gt;      establish a mirror now. Contact me for details.
+
+&gt; wir koennten Dir einen virtuellen ftp-site machen. Die einzige
+&gt; Bedingung ist, dass der Hostname xxxx.ethz.ch sein muss (ETH
+&gt; Policy). Da Du ja eine eigene Domain hast, kannst Du natuerlich einen
+&gt; entsprechenden DNS Eintrag machen und irgendeinen Namen darauf zeigen
+&gt; lassen. Du koenntest dann einen Account haben, zum Einloggen und Daten
+&gt; aufspielen. Alternativ koennten wir automatisch mirror-en, dazu
+&gt; muessten wir natuerlich bei Dir ftp-Zugang haben.
+&gt; 
+&gt; Falls Du das willst, schicke einfach Email an Tobias oetiker@ee.ethz.ch
+&gt; 
+&gt; Alternativ koennten wir uns bei SWITCH dafuer stark machen, das Du auf
+&gt; sunsite.cnlab-switch.ch gemirrort wirst.
+
+Ahh, das waere ja prima. Also egal wie wir es machen, am besten waere, wenn es
+so was wie <A  HREF="ftp://ftp2.engelschall.com/sw/">ftp://ftp2.engelschall.com/sw/</A> geben wuerde, weil sich das jeder am
+einfachsten merken kann und jeder fast von selber drauf kommt. Das ftp2 ist
+simpel, nur ein CNAME in meinem DNS auf xxxx.ethz.ch. Das /sw/ ist
+schwieriger.  Denn wenn es nur ftp.ethz.ch ist, muesstest ihr einen Symlink
+/sw dort machen, was unschoen ist. Andererseits, wenn ihr eh virtual-hosts
+aufsetzen koennt, dann ist das trivial. Jedenfalls mit dem WUFTPd. Dann
+schlage ich vor, machen wir das so. Ihr setzt einfach einen ftp-en.ethz.ch
+oder so auf als Virtuellen Host, der ein Verzeichnis /sw hat und einen Account
+"rse", der halt auf dieses Verzeichnis Zugriff hat. Dann kann ich wie
+ftp.hyperreal.org dort den Mirror selber verwalten und braucht euch um nix
+mehr zu kuemmern.
+
+Selbstverstaendlich bekommt ihr (ETHZ) dafuer ein Dankeschoen, und sei es nur
+mindestens durch Erwaehnung in einem CREDITS File oder halt besten Support bei
+WML-Angelegenheiten ;_). Ist ja klar. Auf jeden Fall waere ich euch sehr
+dankbar fuer so einen Mirror, denn ihr habt sicherlich schon selber gemerkt,
+dasz www/ftp.engelschall.com mit seinem 128Kbit/s Link ein absoluter
+Flaschenhals ist. Da ich als Student mit aber so schnell nichts
+eigenes/besseres leisten kann, bin ich auf Mirrors angewiesen. Ich stehe in
+eurer Schuld.
+
+Ich hoffe ich hoere von euch bzgl. dem ftp-en.ethz.ch....
+
+Gruesse,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+
+PS: Paszt bitte auf, die anderen Subscriber dieser ML sprechen 
+    eventuell kein Deutsch. In diesem Posting war es natuerlich
+    egal, aber generell in der ML Englisch schreiben. Sonst
+    wundern sich die anderen, was da los sei... Mich persoenlich
+    koennt ihr natuerlich in Deutsch an'mail'en, klar. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00005" HREF="msg00005.shtml">Re: Mirror available for the distribution tarballs</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00005.shtml">Re: Mirror available for the distribution tarballs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00007.shtml">Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00005.shtml">Re: Mirror available for the distribution tarballs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00007.shtml">Examples: WML Itself</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00006"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00006"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

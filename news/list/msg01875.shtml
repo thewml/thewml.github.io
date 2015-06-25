@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: "tidy", doctype, and "summary" attribute in tables -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 4 Aug 2000 01:25:54 +0200 (MET DST) -->
+<!--X-Message-Id: 20000804012620.A3771@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0008031441300.1538&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01875">Date Index</a>][<a href="thrd38.shtml#01875">Thread Index</a>]<br>
+[<A HREF="msg01874.shtml">Date Prev</A>][<A HREF="msg01876.shtml">Date Next</A>][<A HREF="msg01872.shtml">Thread Prev</A>][<A HREF="msg01873.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 Aug 2000 01:26:20 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Aug 03, 2000 at 02:51:02PM +0200, Stephan Petersen wrote:
+
+&gt; Hi everybody,
+&gt; 
+&gt; "tidy" likes to complain about missing "summary" attributes in
+&gt; &lt;table&gt; tags.
+&gt; 
+&gt; While I can of course easily add them for my own tables, 
+&gt; wml tags like &lt;tul&gt; and &lt;grid&gt; are a bit trickier.
+&gt; 
+&gt; Would it make sense for wml to provide summary="" as default for tables
+&gt; created by these tags?
+[...]
+
+I fixed wml_p7_htmlfix, it automatically adds this attribute now.
+
+Denis
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01872" HREF="msg01872.shtml">&quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01874.shtml">Re: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01876.shtml">Re: [wml] Plans for WML 2.0.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01872.shtml">&quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01873.shtml">RE: &quot;tidy&quot;, doctype, and &quot;summary&quot; attribute in tables</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01875"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01875"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

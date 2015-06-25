@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] [LONG][WML] Mp4h parsing: summary -->
+<!--X-From-R13: Fbovnf Argvxre <brgvxreNrr.rgum.pu> -->
+<!--X-Date: Sat, 3 Jun 2000 01:42:31 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0006030135250.26920&#45;100000@tardis.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000602162912.1898A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01692">Date Index</a>][<a href="thrd35.shtml#01692">Thread Index</a>]<br>
+[<A HREF="msg01691.shtml">Date Prev</A>][<A HREF="msg01693.shtml">Date Next</A>][<A HREF="msg01691.shtml">Thread Prev</A>][<A HREF="msg01693.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] [LONG][WML] Mp4h parsing: summary</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tobias Oetiker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 3 Jun 2000 01:42:27 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+*&gt; C) Suggestions
+*&gt; ==============
+*&gt; 
+*&gt;   2. Complex HTML tag
+*&gt;      Parser reads attributes and body.
+*&gt; 
+*&gt;   3. Simple HTML tag
+*&gt;      Parser reads attributes. To let mp4h know this tag is simple,
+*&gt;      it must conform to xhtml standard and contain a trailing slash.
+*&gt; 
+*&gt;   4. Embedded HTML tag
+*&gt;      When this is an HTML complex tag but appear as a simple tag, e.g.
+*&gt;        &lt;navbar:header&gt;&lt;table&gt;&lt;tr&gt;&lt;/navbar:header&gt;
+*&gt;      a trailing star marks this tag as a non parsable complex HTML tag
+*&gt;        &lt;navbar:header&gt;&lt;table*&gt;&lt;tr*&gt;&lt;/navbar:header&gt;
+*&gt;      When it is simple, there is no problem because of the trailing slash
+*&gt;        &lt;navbar:epilog&gt;&lt;br /&gt;&lt;/navbar:epilog&gt;
+
+note that there are still some browsers which will not like &lt;br/&gt;
+so one might want to writ &lt;br*&gt; as the * will get removed in later
+wml processing where as the &lt;br/&gt; will remain unchanged
+
+*&gt;      When this tag cannot be parsed, it must be protected with a
+*&gt;      leading star, which will make it fall into category 6.
+*&gt;        document.write('&lt;*img src="foo.png" alt="');
+*&gt;        document.write(text+'"&gt;');
+
+here you protect the opeing &lt; into not being interpreted as part of
+a tag, but if the whole combination happens inside another tag how
+do you protect the inner &gt;
+
+eg
+
+&lt;de: document.write('&lt;*img src="foo.png" alt="');
+     document.write(text+'"&gt;');
+&gt;                          ^          
+                           |
+
+apart from that I like it ...
+
+cheers
+tobi
+-- 
+ ______    __   _
+/_  __/_  / /  (_) Oetiker, Timelord &amp; SysMgr @ EE-Dept ETH-Zurich
+ / // _ \/ _ \/ / TEL: +41(0)1-6325286  FAX:...1517  ICQ: 10419518 
+/_/ \.__/_.__/_/ oetiker@ee.ethz.ch <A  HREF="http://ee-staff.ethz.ch/~oetiker">http://ee-staff.ethz.ch/~oetiker</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01693" HREF="msg01693.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01687" HREF="msg01687.shtml">[LONG][WML] Mp4h parsing: summary</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01691.shtml">Re: [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01693.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01691.shtml">Re: [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01693.shtml">Re: [wml] [LONG][WML] Mp4h parsing: summary</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01692"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01692"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

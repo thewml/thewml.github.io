@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: bug? -->
+<!--X-From-R13: Dnsnry Qbeqbarf [nepbf <ensnpzNopanegqverpgr.pbz> -->
+<!--X-Date: Sun, 29 Nov 1998 03:06:12 +0100 (CET) -->
+<!--X-Message-Id: 19981128213547.A7859@bcnartdirecte.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00257">Date Index</a>][<a href="thrd6.shtml#00257">Thread Index</a>]<br>
+[<A HREF="msg00256.shtml">Date Prev</A>][<A HREF="msg00258.shtml">Date Next</A>][<A HREF="msg00256.shtml">Thread Prev</A>][<A HREF="msg00258.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>bug?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rafael Cordones Marcos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 28 Nov 1998 21:35:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi!
+
+Consider de following file:
+
+------------------------
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ cat file-she.wml 
+#!wml -oESuUNDEF:file.es -oENuUNDEF:file.en
+
+[EN:Hello, world!:][ES:Hola, mundo!:]
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ 
+-----------------------
+
+It has a shebang line and issuing a wml command on it I get:
+
+-----------------------
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ wml file-she.wml 
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ 
+----------------------- 
+
+And as expected I get a file for each slice:
+
+-----------------------
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ ls
+file-emb.wml  file-she.wml  file.en       file.es
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ 
+-----------------------
+
+OK, so far. BUT, I have this other file:
+
+-----------------------
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ cat file-emb.wml 
+[EN:Hello, world!:][ES:Hola, mundo!:]
+&lt;:
+{
+        print "\%\!slice -oENuUNDEF:file.en\n";
+        print "\%\!slice -oESuUNDEF:file.es\n";
+}
+:&gt;
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ 
+-----------------------
+
+Which is supposed to generate the output options in pass 3 and I get:
+
+-----------------------
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ wml file-emb.wml 
+Hello, world!Hola, mundo!
+lazlo:~/devel/web/www.bcnartdirecte.com/practice$ 
+-----------------------
+
+That is, it outputs to STDOUT all slices. Up to now I have been using the
+shebang line to put the filenames for each language but I would like
+to overcome this with something like &lt;page languages="es,en,de"&gt; and
+have Perl generate de "%!slice -o..." lines. I think wml should behave
+the same in both situations and not "pollute" STDIN.
+
+I have tracked down the ¿problem? to wml-1.6.4/wml_frontend/wml.src
+line 759. 
+
+When the shebang is used, wml_p9_slice receives the shebang
+output files in $opt and any %!slice commands inside the file will be
+appended to them *by wml_p9_slice itself*. But, in the second case,
+i.e. using only %!slice commands, $opt contains a temporary file which
+is the one I think finally gets piped to STDOUT.
+
+Should wml_frontend detect in pass9 that the source file (now in
+$from) has %!slice options and reset $opt ????
+
+Thanks for your time!
+
+Best regards,
+
+
+Rafa C. Marcos
+BCN Art Directe (Promotora d'Art)
+<A  HREF="http://www.bcnartdirecte.com">http://www.bcnartdirecte.com</A>
+
+------------------------------------------------------------------------
+Visit Internet Virtual Studios at: <A  HREF="http://www.bcnartdirecte.com/studios">http://www.bcnartdirecte.com/studios</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00256.shtml">Re: A new WML Web server: Pasteur Institute</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00258.shtml">wml::des::navbar question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00256.shtml">Re: A new WML Web server: Pasteur Institute</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00258.shtml">wml::des::navbar question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00257"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00257"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

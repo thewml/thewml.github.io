@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Upgrade problem -->
+<!--X-From-R13: Rnvfhxr Knohxv <qklNbcgvk.bet> -->
+<!--X-Date: Sun, 19 Mar 2000 17:05:58 +0100 (MET) -->
+<!--X-Message-Id: jhwvh2jeyi3.wl@velocity.optix.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: jhwya7gfvl3.wl@velocity.optix.org -->
+<!--X-Reference: Pine.LNX.3.96.1000318204517.587B&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01449">Date Index</a>][<a href="thrd30.shtml#01449">Thread Index</a>]<br>
+[<A HREF="msg01448.shtml">Date Prev</A>][<A HREF="msg01450.shtml">Date Next</A>][<A HREF="msg01445.shtml">Thread Prev</A>][<A HREF="msg01439.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Upgrade problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Daisuke Yabuki &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 20 Mar 2000 01:05:40 +0900</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thanks, 
+
+barbier&gt; &gt; Yesterday, I noticed wml was not working anymore. One problem seemed
+barbier&gt; &gt; that wml was looking for the old perl modules. So I reinstalled 
+barbier&gt; &gt; wml-1.7.4 using perl-5.00503, but it still didn't work.
+
+barbier&gt; This is indeed a feature.
+barbier&gt; [...]
+
+Okay, I see.
+
+barbier&gt; &gt; t/09-p9_slice.......Can't locate object method "Max" via package "€" at /usr/local/src/www/authoring/wml-1.7.4/wml_test/TEST.root/lib/exec/wml_p9_slice line 662.
+barbier&gt; &gt; ** WML:Break: Error in Pass 9 (rc=255).
+barbier&gt; [...]
+
+barbier&gt; &gt; Something seems to go wrong with Bit::Vector, so I looked at
+barbier&gt; &gt; $WML_PREFIX/lib/perl/lib/5.00503/sun4-solaris/Bit/Vector.pm 
+barbier&gt; &gt; but couldn't fiture out what's wrong.
+barbier&gt; [...]
+
+barbier&gt; There is nothing i can do. Maybe you could download slice from
+barbier&gt;   <A  HREF="http://www.engelschall.com/sw/slice/">http://www.engelschall.com/sw/slice/</A>
+
+Thanks, I tried this.
+
+barbier&gt; and see if it works (slice comes with a test which is not included
+barbier&gt; into WML). This will give us useful clues.
+
+velocity:/usr/local/src/www/authoring/slice-1.3.4[11:39pm] make test 
+==&gt; t (test)
+make[1]: Entering directory `/usr/local/src/www/authoring/slice-1.3.4/t'
+** Slice:Verbose: 
+** Slice:Verbose: Pass 1: Determine delimiters
+** Slice:Verbose: 
+Can't locate object method "Max" via package "
+.@" at TEST.root/bin/slice line 662.
+make[1]: *** [test] Error 255
+make[1]: Leaving directory `/usr/local/src/www/authoring/slice-1.3.4/t'
+&lt;== t
+velocity:/usr/local/src/www/authoring/slice-1.3.4[11:39pm] 
+
+Unfortunately, I can't find anything new.
+If you think of anything I can try, please let me know.
+
+Regards,
+
+-- Daisuke Yabuki
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01437" HREF="msg01437.shtml">Upgrade problem</A></strong>, <em>From:</em> Daisuke Yabuki</li>
+<li><strong><A NAME="01445" HREF="msg01445.shtml">Re: Upgrade problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01448.shtml">I cannot get navbar to work</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01450.shtml">Re: Pass parameter -k to eperl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01445.shtml">Re: Upgrade problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01439.shtml">align (1.99.1)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01449"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01449"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

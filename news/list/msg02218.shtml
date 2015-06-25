@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: including files only once -->
+<!--X-From-R13: @bohlhxv Ffhpuvzhen <ghgvzhenNaa.vvw4h.be.wc> -->
+<!--X-Date: Fri, 4 May 2001 08:28:24 +0200 (MET DST) -->
+<!--X-Message-Id: 200105040628.PAA24325@nn.iij4u.or.jp -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.31.0102271334420.5866&#45;100000@engelberg.ee.ethz.ch -->
+<!--X-Reference: Pine.LNX.4.21.0105021148340.342&#45;100000@presario -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02218">Date Index</a>][<a href="thrd44.shtml#02218">Thread Index</a>]<br>
+[<A HREF="msg02217.shtml">Date Prev</A>][<A HREF="msg02219.shtml">Date Next</A>][<A HREF="msg02216.shtml">Thread Prev</A>][<A HREF="msg02152.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: including files only once</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Nobuyuki Tsuchimura &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 4 May 2001 15:28:10 +0900 (JST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+  Hi,
+
+From: Anuradha Ratnaweera &lt;anuradha@gnu.org&gt;
+Subject: including files only once
+Date: Wed, 2 May 2001 11:50:22 +0600 (LKT)
+Message-ID: &lt;<A HREF="msg02216.shtml">Pine.LNX.4.21.0105021148340.342-100000@presario</A>&gt;
+
+&gt; Is there a way to include a file only once with a method similar to C
+&gt; header files so that I can
+&gt; 
+&gt; if not defined _include_file_flag_
+&gt; define _include_file_flag_
+&gt; 
+&gt; contents of the file
+&gt; 
+&gt; endif
+
+  I don't know such a macro,
+but '#use' includes a file only once.
+Next 2 lines are equivalent,
+except for this feature.
+
+   #use type::category::file
+   #include &lt;category/file.type&gt;
+
+See 'man wml_p1_ipp' for detail.
+
+-- Regards,
+Nobuyuki Tsuchimura
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02151" HREF="msg02151.shtml">feature patch</A></strong>, <em>From:</em> Tobias Oetiker</li>
+<li><strong><A NAME="02216" HREF="msg02216.shtml">including files only once</A></strong>, <em>From:</em> Anuradha Ratnaweera</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02217.shtml">Re: [PHP] Please review our coding standards</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02219.shtml">Unicode support (Re: parent dir breaks Diversion)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02216.shtml">including files only once</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02152.shtml">Using information in other documents</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02218"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02218"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

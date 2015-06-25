@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: lost javascript code for navbar -->
+<!--X-From-R13: Drzpb ina qra Pret <DiqPretNqfr.ay> -->
+<!--X-Date: Thu, 18 Jan 2001 00:21:38 +0100 (MET) -->
+<!--X-Message-Id: 20010118002129.A4053@jupiter.strijp.Ehv.nl -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010117230556.A3439@jupiter.strijp.Ehv.nl -->
+<!--X-Reference: 20010118001459.B14322@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02113">Date Index</a>][<a href="thrd43.shtml#02113">Thread Index</a>]<br>
+[<A HREF="msg02112.shtml">Date Prev</A>][<A HREF="msg02114.shtml">Date Next</A>][<A HREF="msg02112.shtml">Thread Prev</A>][<A HREF="msg02114.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: lost javascript code for navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Remco van den Berg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 18 Jan 2001 00:21:30 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jan 18, 2001 at 12:14:59AM +0100, Denis Barbier wrote:
+&gt; 
+&gt; wml::des::navbar (1) contains an explanation (read &lt;navbar:jsfuncs&gt;
+&gt; section). You may find this is overcomplicated, but i had to face with
+&gt; many different situations, and did not find a better solution.
+
+Thanks for the solution....
+but...
+
+Why is there standing in "Options of &lt;navbar:jsfuncs&gt;:" that it is
+automatically called from &lt;navbar:render&gt;?
+
+Not so automatically? Or am I missing something?
+
+Perhaps also a good idee to include the statement in the examples,
+which should be "complete examples" as told at the top of the page.
+
+&gt; &gt; PS I found my solution for the the &lt;prog&gt; in &lt;compound&gt;
+&gt; &gt;    But why is the &lt;prog&gt; gone in wml-2.0.x?
+&gt; 
+&gt; Don't remember exactly why. Anyway, you could use &lt;group&gt; instead, and
+&gt;   &lt;let prog=group&gt;
+&gt; should make your pages WML 2.x compatible. There are some explanations
+&gt; on the README.mp4h file.
+
+&lt;group&gt; removed all the spaces between the text.
+&lt;compound&gt;...&lt;/compound&gt; didn't do that.
+
+-Remco
+
+-- 
+----------------------------------------------------------------------------
+    Remco van den Berg                           Admin/SO/helpdesk DSE      
+      ICQ: 47514668         rvdberg@dse.nl         <A  HREF="http://www.dse.nl/">http://www.dse.nl/</A>       
+----------------------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02111" HREF="msg02111.shtml">lost javascript code for navbar</A></strong>, <em>From:</em> Remco van den Berg</li>
+<li><strong><A NAME="02112" HREF="msg02112.shtml">Re: lost javascript code for navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02112.shtml">Re: lost javascript code for navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02114.shtml">&lt;cell&gt; 'valign' and 'align'  bug report (and correction)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02112.shtml">Re: lost javascript code for navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02114.shtml">&lt;cell&gt; 'valign' and 'align'  bug report (and correction)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02113"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02113"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

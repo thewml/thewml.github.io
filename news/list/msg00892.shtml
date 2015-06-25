@@ -1,0 +1,204 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: define&#45;container, preserve and &#45;Dvarname -->
+<!--X-From-R13: Rnibe Qratvwn <qnibeNyvahksna.pbz> -->
+<!--X-Date: Thu, 12 Aug 1999 10:08:48 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.10.9908111203001.7089&#45;100000@kanta.smece.hr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00892">Date Index</a>][<a href="thrd19.shtml#00892">Thread Index</a>]<br>
+[<A HREF="msg00891.shtml">Date Prev</A>][<A HREF="msg00893.shtml">Date Next</A>][<A HREF="msg00886.shtml">Thread Prev</A>][<A HREF="msg00893.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>define-container, preserve and -Dvarname</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Davor Cengija &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 11 Aug 1999 12:03:52 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+	I have a &lt;define-container&gt; tag which can have three values for an
+	attribute: first is the default, hardcoded; the second is per-page
+	default, called with -D option in #!wml -Dvarname=value and the third one is the
+	specified value for each call.
+
+	I've noticed that if &lt;preserve varname&gt; is set, -Dvarname=value is not expanded
+	where it should be, while if &lt;preserve varname&gt; is dropped or
+	commented out, the tag behaves like I want it to.
+
+	But, then the rest of the tags (where varname is not explicitly
+	defined) have the same value for the varname as the last explicitly
+	defined varname	instead of the value defined in -Dvarname=value.
+	
+	How to avoid that problem?
+
+	
+
+	Here's the (very:-)) long explanation:
+	
+	I have a container tag &lt;tbl&gt;...&lt;/tbl&gt; which is a table with a nice
+	frame in chosen color and title. Here it is:
+	
+&lt;define-container tbl&gt;
+&lt;preserve bgcolor&gt;
+&lt;preserve title&gt;
+&lt;set-var %attributes&gt;
+&lt;ifeq "&lt;get-var bgcolor&gt;" "" &lt;set-var bgcolor="red"&gt;&gt;
+&lt;ifeq "&lt;get-var title&gt;" "" &lt;set-var title="YOU MUST HAVE A TITLE!!"&gt;&gt;
+&lt;table width="220" cellspacing="0" cellpadding="1" border="0" \
+bgcolor="&lt;get-var bgcolor&gt;"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;table width="100%" \
+cellspacing="0" cellpadding="2" border="0"&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;get-var title&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;td bgcolor="white"&gt;
+%body
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;restore bgcolor&gt;
+&lt;restore title&gt;
+&lt;/define-container&gt;
+
+	So, if I write 
+
+E.1	
+&lt;tbl bgcolor="orange" title="orange border"&gt;(body)&lt;/tbl&gt;
+
+	I have an orange box.
+
+	If I write 
+
+E.2
+&lt;tbl title="default border is red"&gt;(body)&lt;/tbl&gt;
+	
+	I have a red box (no bgcolor defined-&gt;use default), which is exactly what I want.
+
+	But, what i want to do is the possibility to define bgcolor attribute
+	for that particular page, via 
+
+#!wml -Dbgcolor=blue
+
+	E.2 still gives the red frame.
+	
+	If I comment out the &lt;preserve bgcolor&gt; line:
+
+E.3
+#&lt;preserve bgcolor&gt;
+
+	Then E.2 gives me the blue frame, just like I wanted to be in
+	-Dbgcolor=blue.
+
+	The problem appeares if I have 
+
+E.4
+#!wml -Dbgcolor=blue
+
+..
+#&lt;preserve bgcolor&gt;
+..
+
+&lt;tbl title="will be rendered blue"&gt;Blue is OK&lt;/tbl&gt;
+
+&lt;tbl bgcolor="orange" title"Will be rendered orange"&gt;Orange is OK&lt;/tbl&gt;
+
+&lt;tbl title="should be blue"&gt;But it's still Orange!!&lt;/tbl&gt;
+
+	How to force the third occurence of &lt;tbl&gt; to be in the page-default
+	color?
+
+	And if I comment out the &lt;restore bgcolor&gt;
+
+E.5
+#!wml -Dbgcolor=blue
+..
+#&lt;preserve bgcolor&gt;
+..
+#&lt;restore bgcolor&gt;
+..
+
+&lt;tbl title="will be rendered blue"&gt;Blue is OK&lt;/tbl&gt;
+
+&lt;tbl bgcolor="orange" title"Will be rendered orange"&gt;Orange is OK&lt;/tbl&gt;
+
+&lt;tbl title="should be blue"&gt;But it's in RED now, which is the hardcoded
+default!!&lt;/tbl&gt;
+
+	Huh:-) Sorry for such a long post, I just wanted to explain the
+	problem in as much details as possible.
+
+	Thanks!
+
+	Davor
+
+-- 
+      v
+Davor Cengija
+davor@linuxfan.com
+===================================
+"Please allow 30 days for delivery"
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00893" HREF="msg00893.shtml">Re: define-container, preserve and -Dvarname</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00891.shtml">Re: rollover and slice</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00893.shtml">Re: define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00886.shtml">My submenus...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00893.shtml">Re: define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00892"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00892"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

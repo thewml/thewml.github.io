@@ -1,0 +1,353 @@
+
+<html>
+<head>
+<title>Website META Language (WML), Documentation: Include File wml::mod::MakeMaker</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal">
+<meta name="Copyright" content="1996-2001 Engelschall, Germany.">
+<meta name="Author"    content="WML, wml@master.thewml.org">
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)">
+<meta name="Modified"  content="2005-05-05 12:04:59">
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function nb_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function nb_imgSelect(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_s.src');
+        self.status = '';
+    }
+}
+function nb_imgOver(imgName, nohints, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        if (! nohints) self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function ro_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function ro_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+if (document.images) {
+    ro_img_unknown1_n = new Image();
+    ro_img_unknown1_n.src = '../../com/navbar/button-n-sw.gif';
+    ro_img_unknown1_o = new Image();
+    ro_img_unknown1_o.src = '../../com/navbar/button-o-sw.gif';
+}
+// done hiding -->
+</script>
+</head>
+<body background="../../com/bg/bg.gif" bgcolor="#ffffff" text="#000000" link="#6060c0" alink="#6060f0" vlink="#6060a0">
+<table border="0" cellspacing="0" cellpadding="0" summary="">
+<tr>
+  <td align="left" valign="top">
+    <a href="http://swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+></a><br>
+<a href="../../../" onmouseover="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onmouseout="ro_imgNormal('ro_img_unknown1'); return true" onfocus="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onblur="ro_imgNormal('ro_img_unknown1'); return true"><img name="ro_img_unknown1" src="../../com/navbar/button-n-sw.gif" alt="Free Software Area" border="0"></a><br>
+    <img src="../../com/navbar/button-i-wml.gif" alt=""><br>
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="140" height="1" align="bottom" border="0">
+    <p>
+  </td>
+  <td align="center" valign="top">
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="5" height="1" align="bottom" border="0">
+  </td>
+  <td valign="top">
+    <table cellspacing="0" cellpadding="0" width="550" summary="">
+    <tr>
+      <td valign="top">
+        <img src="../../com/navbar/headline-docs.gif" alt="Documentation: Include File wml::mod::MakeMaker"><br>
+        <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table cellspacing="0" cellpadding="0" border="0" summary="">
+<tr>
+<td>
+&nbsp;
+&nbsp;
+</td>
+<td>
+<table bgcolor="#666699" cellspacing="0" cellpadding="0" border="0" summary="">
+<tr><td></td><td></td><td></td><td></td><td bgcolor="#000000"><img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="1" height="1" align="bottom" border="0"></td><td></td><td></td></tr>
+<tr>
+<td>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../index.html" onmouseover="self.status = '../index.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../index.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Introduction</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../frontend.html" onmouseover="self.status = '../frontend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../frontend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Frontends</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../backend.html" onmouseover="self.status = '../backend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../backend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Backends</font></a></font>&nbsp;&nbsp;</td>
+<td bgcolor="#ccccff">&nbsp;&nbsp;<font face="Arial,Helvetica"><b><a href="../incl.html" onmouseover="self.status = '../incl.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../incl.html'; return true" onblur="self.status = ''; return true"><font color="#000000">Includes</font></a></b></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../aux.html" onmouseover="self.status = '../aux.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../aux.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Auxilliaries</font></a></font>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src="../../com/imgdot/shared.imgdot-1x1-000000.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>wml::mod::MakeMaker - A Makefile generator</title>
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+		<li><a href="#default_targets">Default targets</a></li>
+		<li><a href="#overriding_default_targets">Overriding default targets</a></li>
+		<li><a href="#defining_new_targets">Defining new targets</a></li>
+	</ul>
+	<li><a href="#attributes">ATTRIBUTES</a></li>
+	<li><a href="#example">EXAMPLE</a></li>
+	<li><a href="#notes">NOTES</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#requires">REQUIRES</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>wml::mod::MakeMaker - A Makefile generator</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+<pre>
+ &lt;write-makefile [attributes]&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This include file provides an easy way to write a Makefile to distribute
+your own WML modules. It is inspired by the <code>ExtUtils::MakeMaker</code> Perl
+module.</p>
+<p>
+</p>
+<h2><a name="default_targets">Default targets</a></h2>
+<dl>
+<dt><strong><a name="item_make_all"><strong>make all</strong></a></strong><br />
+</dt>
+<dd>
+This is the default target. It will build all include files and their
+documentation.
+</dd>
+<p></p>
+<dt><strong><a name="item_make_install"><strong>make install</strong></a></strong><br />
+</dt>
+<dd>
+Install include files and documentation in the locations given by ``wml -V2''.
+</dd>
+<p></p>
+<dt><strong><a name="item_make_clean"><strong>make clean</strong></a></strong><br />
+</dt>
+<dd>
+Remove files generated by <strong>make</strong>.
+</dd>
+<p></p>
+<dt><strong><a name="item_make_distclean"><strong>make distclean</strong></a></strong><br />
+</dt>
+<dd>
+Like <strong>make clean</strong>, plus remove the <em>Makefile</em> too.
+</dd>
+<p></p>
+<dt><strong><a name="item_make_dist"><strong>make dist</strong></a></strong><br />
+</dt>
+<dd>
+Build a distribution. Should only be used by the module maintainer.
+If there is a <em>MANIFEST</em> file, then the list of files to include is
+taken from this file. Otherwise the tarball contains all source files,
+plus <em>MakeMaker.wml</em>, <em>Makefile.wml</em>, <em>shtool</em> and <em>README</em> if these
+files exist.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<h2><a name="overriding_default_targets">Overriding default targets</a></h2>
+<p>To build the <em>Makefile</em>, all targets are put in separate buffers during
+pass 3, and those buffers are diverted by pass 5. You can override this
+defaukt target by redefining buffer contents.
+Buffer names are explicit:</p>
+<pre>
+    MK_ALL MK_INSTALL MK_CLEAN MK_DISTCLEAN MK_CONFIG MK_RELEASE</pre>
+<p>
+</p>
+<h2><a name="defining_new_targets">Defining new targets</a></h2>
+<p>The <strong>MK_USER</strong> is empty and devoted to this task.</p>
+<p>
+</p>
+<hr />
+<h1><a name="attributes">ATTRIBUTES</a></h1>
+<p>The first three attributes are mandatory.</p>
+<dl>
+<dt><strong><a name="item_package"><strong>package</strong></a></strong><br />
+</dt>
+<dd>
+The name of the package
+</dd>
+<p></p>
+<dt><strong><a name="item_version"><strong>version</strong></a></strong><br />
+</dt>
+<dd>
+Its version number
+</dd>
+<p></p>
+<dt><strong><a name="item_modules"><strong>modules</strong></a></strong><br />
+</dt>
+<dd>
+List of modules to build and install. This is a space separated list of
+filenames. Modules should reside in a sub-directory to be compliant with
+actual file hierarchy. For instance, the declaration
+</dd>
+<dd>
+<pre>
+     modules=&quot;math/log.tmpl math/exp.tmpl&quot;</pre>
+</dd>
+<dd>
+<p>tells that after compilation, there are two modules which are
+<code>math/log.tmpl</code> and <code>math/exp.tmpl</code>. This modules will be installed to
+<code>LibDir/include/math/log.tmpl</code> and <code>LibDir/include/math/exp.tmpl</code>.</p>
+</dd>
+<dd>
+<p>These modules will then be called in a WML file by</p>
+</dd>
+<dd>
+<pre>
+</dd>
+<dd>
+<p>Source files for these modules are obtained by replacing the suffix by
+<em>.src</em>.</p>
+</dd>
+<p></p>
+<dt><strong><a name="item_src_2dext"><strong>src-ext</strong></a></strong><br />
+</dt>
+<dd>
+Defines an alternate suffix for the source files.
+</dd>
+<p></p>
+<dt><strong><a name="item_man_2dext"><strong>man-ext</strong></a></strong><br />
+</dt>
+<dd>
+Section number of the manual in which man files are put. Default is 3.
+</dd>
+<p></p>
+<dt><strong><a name="item_extradistfiles"><strong>extradistfiles</strong></a></strong><br />
+</dt>
+<dd>
+Space separated list of files to include in a distribution. By default,
+all source files plus <em>MakeMaker.wml</em>, <em>Makefile.wml</em>,  <em>README</em> and
+<em>shtool</em> are included in a distribution.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<hr />
+<h1><a name="example">EXAMPLE</a></h1>
+<pre>
+ &lt;write-makefile
+    package=&quot;log&quot;
+    version=&quot;3.14&quot;
+    modules=&quot;math/log.tmpl&quot;
+    source-ext=&quot;exp&quot;
+ &gt;</pre>
+<p>This will build the <strong>tmpl::math::log</strong> include module from the
+<em>math/log.exp</em> source file. This source file will also produce the
+<strong>tmpl::math::log(3)</strong> manpage.</p>
+<p>
+</p>
+<hr />
+<h1><a name="notes">NOTES</a></h1>
+<p>Please do _not_ use a <code>.wml</code> suffix for your modules, they should be reserved
+for official WML modules shipped with WML. You may instead put your initials or
+anything else.</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<pre>
+ Denis Barbier
+ barbier@engelschall.com</pre>
+<p>
+</p>
+<hr />
+<h1><a name="requires">REQUIRES</a></h1>
+<pre>
+ Internal: P1, P2, P3, P5
+ External: --</pre>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

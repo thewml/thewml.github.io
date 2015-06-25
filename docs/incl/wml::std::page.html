@@ -1,0 +1,330 @@
+
+<html>
+<head>
+<title>Website META Language (WML), Documentation: Include File wml::std::page</title>
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen, projection" title="Normal">
+<meta name="Copyright" content="1996-2001 Engelschall, Germany.">
+<meta name="Author"    content="WML, wml@master.thewml.org">
+<meta name="Generator" content="WML 2.0.9 (18-Oct-2002)">
+<meta name="Modified"  content="2005-05-05 12:04:59">
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function nb_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function nb_imgSelect(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_s.src');
+        self.status = '';
+    }
+}
+function nb_imgOver(imgName, nohints, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        if (! nohints) self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+function ro_imgNormal(imgName) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_n.src');
+        self.status = '';
+    }
+}
+function ro_imgOver(imgName, descript) {
+    if (document.images) {
+        document[imgName].src = eval(imgName + '_o.src');
+        self.status = descript;
+    }
+}
+// done hiding -->
+</script>
+<script type="text/javascript" language="JavaScript">
+<!-- Hiding the code
+if (document.images) {
+    ro_img_unknown1_n = new Image();
+    ro_img_unknown1_n.src = '../../com/navbar/button-n-sw.gif';
+    ro_img_unknown1_o = new Image();
+    ro_img_unknown1_o.src = '../../com/navbar/button-o-sw.gif';
+}
+// done hiding -->
+</script>
+</head>
+<body background="../../com/bg/bg.gif" bgcolor="#ffffff" text="#000000" link="#6060c0" alink="#6060f0" vlink="#6060a0">
+<table border="0" cellspacing="0" cellpadding="0" summary="">
+<tr>
+  <td align="left" valign="top">
+    <a href="http://swpat.ffii.org/"
+       title="Stop Software Patents!"><img
+       src="../../com/navbar/no-e-patents.png" alt="Stop Software Patents!"
+></a><br>
+<a href="../../../" onmouseover="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onmouseout="ro_imgNormal('ro_img_unknown1'); return true" onfocus="ro_imgOver('ro_img_unknown1', 'Free Software Area'); return true" onblur="ro_imgNormal('ro_img_unknown1'); return true"><img name="ro_img_unknown1" src="../../com/navbar/button-n-sw.gif" alt="Free Software Area" border="0"></a><br>
+    <img src="../../com/navbar/button-i-wml.gif" alt=""><br>
+<ul class="navbarmain">
+<li>
+<a href="./../../">Title</a>
+</li>
+<li>
+<a href="./../../about/">About</a>
+</li>
+<li>
+<a href="./../../news/">News</a>
+</li>
+<li>
+<a href="./../">Docs</a>
+<br />
+<ul class="navbarnested">
+<li>
+<a href="./../frontend.html">Frontends</a>
+</li>
+<li>
+<a href="./../backend.html">Backends</a>
+</li>
+<li>
+<a href="./../incl.html">Includes</a>
+</li>
+<li>
+<a href="./../aux.html">Auxilliaries</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="./../../example/">Example</a>
+</li>
+<li>
+<a href="./../../distrib/index.phtml">Distrib</a>
+</li>
+<li>
+<a href="./../../related/">Related</a>
+</li>
+</ul>
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="140" height="1" align="bottom" border="0">
+    <p>
+  </td>
+  <td align="center" valign="top">
+    <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="5" height="1" align="bottom" border="0">
+  </td>
+  <td valign="top">
+    <table cellspacing="0" cellpadding="0" width="550" summary="">
+    <tr>
+      <td valign="top">
+        <img src="../../com/navbar/headline-docs.gif" alt="Documentation: Include File wml::std::page"><br>
+        <img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+        <!-- BEGIN OF ACTUAL PAGE CONTENTS -->
+        
+        
+<p>
+<table cellspacing="0" cellpadding="0" border="0" summary="">
+<tr>
+<td>
+&nbsp;
+&nbsp;
+</td>
+<td>
+<table bgcolor="#666699" cellspacing="0" cellpadding="0" border="0" summary="">
+<tr><td></td><td></td><td></td><td></td><td bgcolor="#000000"><img src="../../com/imgdot/shared.imgdot-1x1-transp-ffffff.gif" alt="" width="1" height="1" align="bottom" border="0"></td><td></td><td></td></tr>
+<tr>
+<td>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../index.html" onmouseover="self.status = '../index.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../index.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Introduction</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../frontend.html" onmouseover="self.status = '../frontend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../frontend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Frontends</font></a></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../backend.html" onmouseover="self.status = '../backend.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../backend.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Backends</font></a></font>&nbsp;&nbsp;</td>
+<td bgcolor="#ccccff">&nbsp;&nbsp;<font face="Arial,Helvetica"><b><a href="../incl.html" onmouseover="self.status = '../incl.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../incl.html'; return true" onblur="self.status = ''; return true"><font color="#000000">Includes</font></a></b></font>&nbsp;&nbsp;</td>
+<td><font face="Arial,Helvetica">&nbsp;&nbsp;<a href="../aux.html" onmouseover="self.status = '../aux.html'; return true" onmouseout="self.status = ''; return true" onfocus="self.status = '../aux.html'; return true" onblur="self.status = ''; return true"><font color="#ffffff">Auxilliaries</font></a></font>&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src="../../com/imgdot/shared.imgdot-1x1-000000.gif" alt="" width="550" height="1" align="bottom" border="0"><br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>wml::std::page - Standard HTML Page Header and Footer</title>
+<link rev="made" href="mailto:root@master.thewml.org" />
+</head>
+<body style="background-color: white">
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+<ul>
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#attributes">ATTRIBUTES</a></li>
+	<li><a href="#other_commands">OTHER COMMANDS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#requires">REQUIRES</a></li>
+	<li><a href="#seealso">SEEALSO</a></li>
+</ul>
+<!-- INDEX END -->
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>wml::std::page - Standard HTML Page Header and Footer</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+<pre>
+ &lt;page [attributes]&gt;
+ [&lt;page_end&gt;]</pre>
+<pre>
+ &lt;head&gt;...&lt;/head&gt;
+ &lt;title&gt;...&lt;/title&gt;</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>This include file provides the new <code>&lt;page&gt;</code> tag which is a advanced
+combination of the HTML <code>&lt;body&gt;</code> and <code>&lt;head&gt;</code> container
+tags. The idea is to provide complete header and footer tags via one single
+tag while providing new features like page indentation, easy title
+specification and setup of default values for the page colors.</p>
+<p>
+</p>
+<hr />
+<h1><a name="attributes">ATTRIBUTES</a></h1>
+<dl>
+<dt><strong><a name="item_title"><code>title</code></a></strong><br />
+</dt>
+<dd>
+This is a shorthand for the container tag <code>&lt;title&gt;</code>. The value of
+this attribute is placed in the <code>&lt;head&gt;</code> section of the page,
+surrounded with the <code>&lt;title&gt;</code> tag.
+</dd>
+<p></p>
+<dt><strong><a name="item_indent"><code>indent</code></a></strong><br />
+</dt>
+<dd>
+This sets the indentation level of the page in units of
+<code>&lt;blockquote&gt;</code>'s. Default is no indentation. Setting <a href="#item_indent"><code>indent</code></a> to a
+value of N means the page is surrounded by N <code>&lt;blockquote</code>&gt;&gt; tags.
+The attribute <code>indent=1</code> or <code>indent=2</code> usually provides the best readable
+layout.
+</dd>
+<p></p>
+<dt><strong><a name="item_background"><code>background</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets the background image. This is per default not used.
+</dd>
+<p></p>
+<dt><strong><a name="item_bgcolor"><code>bgcolor</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets the background color. Default is <code>bgcolor=&quot;#ffffff&quot;</code> (white).
+</dd>
+<p></p>
+<dt><strong><a name="item_text"><code>text</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets the text color. Default is <code>text=&quot;#000000&quot;</code> (black).
+</dd>
+<p></p>
+<dt><strong><a name="item_link"><code>link</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets the normal hyperlink color. Default is <code>text=&quot;#333399&quot;</code> (medium blue).
+</dd>
+<p></p>
+<dt><strong><a name="item_alink"><code>alink</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets the color for activated hyperlinks. Default is <code>text=&quot;#9999ff&quot;</code> (light
+blue).
+</dd>
+<p></p>
+<dt><strong><a name="item_vlink"><code>vlink</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets the color for already visited hyperlinks. Default is <code>text=&quot;#000066&quot;</code>
+(dark blue).
+</dd>
+<p></p>
+<dt><strong><a name="item_color"><code>color</code></a></strong><br />
+</dt>
+<dd>
+When setting <code>color=&quot;none&quot;</code>, the five previous attributes are not put
+into the <code>&lt;body&gt;</code> tag.
+</dd>
+<p></p>
+<dt><strong><a name="item_onload"><code>onload</code></a></strong><br />
+</dt>
+<dd>
+This just corresponds to the same attribute of the <code>&lt;body&gt;</code> tag and
+sets a JavaScript even handler which is activated after page was loaded. This
+is per default not used.
+</dd>
+<p></p>
+<dt><strong><a name="item_info"><code>info</code></a></strong><br />
+</dt>
+<dd>
+This automatically puts a <code>&lt;info style=meta&gt;</code> tag into the
+<code>&lt;head&gt;</code> section of the page. See <a href="wml::std::info.html">wml::std::info</a>(3) for more details.
+</dd>
+<p></p>
+<dt><strong><a name="item_slices"><code>slices</code></a></strong><br />
+</dt>
+<dd>
+This enables the creating of three slices: <code>WML_STDPAGE_HEAD</code>,
+<code>WML_STDPAGE_BODY</code> and <code>WML_STDPAGE_FOOT</code>. These can be used later in
+Pass 9 (Slice) for cutting out parts of the page.
+</dd>
+<p></p></dl>
+<p>
+</p>
+<hr />
+<h1><a name="other_commands">OTHER COMMANDS</a></h1>
+<p>This module implements two new macros, called
+<code>&lt;title&gt;</code>...<code>&lt;/title&gt;</code>
+and <code>&lt;head&gt;</code>...<code>&lt;/head&gt;</code>. The first one defines the
+title of the page, and the second appends its body into the HEAD section
+of the HTML documents. Its main purpose is to add meta-tags, either
+directly or with the help of <a href="wml::std::info.html">wml::std::info</a>(3).</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<pre>
+ Ralf S. Engelschall
+ rse@engelschall.com
+ www.engelschall.com</pre>
+<p>
+</p>
+<hr />
+<h1><a name="requires">REQUIRES</a></h1>
+<pre>
+ Internal: P1, P2, P5
+ External: --</pre>
+<p>
+</p>
+<hr />
+<h1><a name="seealso">SEEALSO</a></h1>
+<p>HTML <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code> and <code>&lt;title&gt;</code> tags;
+<a href="wml::std::info.html">wml::std::info</a>(3)</p>
+        
+        
+        <!-- END OF ACTUAL PAGE CONTENTS -->
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

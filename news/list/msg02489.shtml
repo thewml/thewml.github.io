@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: #include oddness. -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 2 Feb 2002 21:18:13 +0100 (MET) -->
+<!--X-Message-Id: 20020202212746.A20081@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87665gmkvo.fsf@ralf.artlogix.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02489">Date Index</a>][<a href="thrd50.shtml#02489">Thread Index</a>]<br>
+[<A HREF="msg02488.shtml">Date Prev</A>][<A HREF="msg02490.shtml">Date Next</A>][<A HREF="msg02488.shtml">Thread Prev</A>][<A HREF="msg02490.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: #include oddness.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 2 Feb 2002 21:27:46 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Feb 01, 2002 at 10:57:15PM -0800, Ken McGlothlen wrote:
+[...]
+&gt; I compile all the .wml files in this directory with wml
+&gt; -Ibasedirectory.  But I get an infinite include stack on sitedef.wmi,
+&gt; and wml eventually dies with an Out of memory error.
+&gt; 
+&gt; Why?  This last sitedef.wmi *should* include the one in basedirectory, right?
+
+I do not clearly understand your bug report, but you could try compiling
+with `wml -v9' to see which files are included and thus have a better
+idea on what's happening there.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02490" HREF="msg02490.shtml">Re: #include oddness.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02488" HREF="msg02488.shtml">#include oddness.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02488.shtml">#include oddness.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02490.shtml">Re: #include oddness.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02488.shtml">#include oddness.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02490.shtml">Re: #include oddness.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02489"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02489"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

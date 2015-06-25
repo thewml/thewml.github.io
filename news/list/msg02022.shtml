@@ -1,0 +1,118 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Problems with relative paths -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Fri, 6 Oct 2000 18:59:41 +0200 (MET DST) -->
+<!--X-Message-Id: 20001006185814.A18097@pironet.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02022">Date Index</a>][<a href="thrd41.shtml#02022">Thread Index</a>]<br>
+[<A HREF="msg02021.shtml">Date Prev</A>][<A HREF="msg02023.shtml">Date Next</A>][<A HREF="msg02020.shtml">Thread Prev</A>][<A HREF="msg02023.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Problems with relative paths</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 6 Oct 2000 18:58:14 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+I always run into this problem. Again in my new site
+www.generationenprojekt.de
+
+This is 
+www.generationenprojekt.de/.wmlrc:
+-DROOT~.
+-I $HOME/.wml
+-D BASE_URL=<A  HREF="http://www.generationenprojekt.de">http://www.generationenprojekt.de</A>
+-E $HOME/bin/epilog
+
+In the directory ./Texte I have a file with the following imagepath:
+
+./Texte/file.wml:
+&lt;img src="$(ROOT)/GIFS/marliese.gif"&gt; 
+
+This file is diverted into two files by the lang-shebang-line:
+
+./Texte/file.html
+./Texte/print/file.html
+
+In the first file the imagepath is correct, in the second not.
+
+I think the reason is. The pathes are resolved earlier than the
+divertion into two files. How can I set the path right? Do I have to
+create the directory "print" on the same level as "Texte"? Or do I
+have to divert it like this:
+
+./Texte/file.html
+./Texte/file-print.html
+
+I do not understand the doc about wml:sup::path 
+
+Ciao!
+juh
+
+-- 
+juh's Sudelbuch
+Best of 1999: Was gefiel, was missfiel den Lesern 1999?
+<A  HREF="http://www.sudelbuch.de/best1999/index.html">http://www.sudelbuch.de/best1999/index.html</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02023" HREF="msg02023.shtml">Re: Problems with relative paths</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02021.shtml">Re: Multilangual Problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02023.shtml">Re: Problems with relative paths</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02020.shtml">Re: [wml] differences between wap and i-mode</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02023.shtml">Re: Problems with relative paths</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02022"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02022"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

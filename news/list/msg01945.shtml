@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 14 Sep 2000 23:26:37 +0200 (MET DST) -->
+<!--X-Message-Id: 20000914232903.A16040@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00091400152400.01026@fidius -->
+<!--X-Reference: 20000914113744.A14577@imacs.polytechnique.fr -->
+<!--X-Reference: 20000914122559.L409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Reference: 20000914134618.A15004@imacs.polytechnique.fr -->
+<!--X-Reference: 20000914231741.O409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01945">Date Index</a>][<a href="thrd39.shtml#01945">Thread Index</a>]<br>
+[<A HREF="msg01944.shtml">Date Prev</A>][<A HREF="msg01946.shtml">Date Next</A>][<A HREF="msg01944.shtml">Thread Prev</A>][<A HREF="msg01956.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Sep 2000 23:29:03 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Sep 14, 2000 at 11:17:41PM +0200, Roland Rosenfeld wrote:
+
+&gt; On Thu, 14 Sep 2000, Denis Barbier wrote:
+&gt; 
+&gt; &gt; &gt; I'm not completely sure, about this, because &lt;table summary=""&gt;
+&gt; &gt; &gt; isn't defined in HTML 3.2 but only in HTML 4, which results in the
+&gt; &gt; &gt; effect, that tidy converts my DOCTYPE entry from
+&gt; &gt; &gt; 
+&gt; &gt; &gt; &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;
+&gt; &gt; &gt; 
+&gt; &gt; &gt; to
+&gt; &gt; &gt; 
+&gt; &gt; &gt; &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+&gt; 
+&gt; &gt; and a tidy's bug?
+&gt; &gt; I can't see why tidy change the doctype when it exists.
+&gt; 
+&gt; tidy tries to convert a HTML document to something which is standard
+&gt; compliant.  The summary attribute of the table tag isn't defined in
+&gt; HTML 3.2, so the logical consequence is to either remove this
+&gt; attribute or to change the DOCTYPE to something which does support
+&gt; this attribute.
+
+Agree, but it currently performs only one of these actions.
+
+&gt; &gt; What about adding ALT="" in IMG tags?
+&gt; 
+&gt; I'm not sure, whether _automatically_ adding ALT="" is a good idea,
+&gt; because if I want to give an ALT attribute, I do so (for example when
+&gt; using a transparent 1x1 GIF ALT="" usually is a good idea because on a
+&gt; non graphic browser I do not want any information about this GIF
+&gt; shown), but if I do not explicitly enter an ALT attribute this usually
+&gt; means, that I simply _forgot_ to enter it.  In this situation I prefer
+&gt; a non graphic browser to show the image file name instead of nothing
+&gt; (the latter may happen with an automatically added ALT="").
+
+Roland, WML 2.0.3 contains ``Web Content Accessibility Guidelines 1.0''
+also available at <A  HREF="http://www.w3.org/TR/WAI-WEBCONTENT">http://www.w3.org/TR/WAI-WEBCONTENT</A>
+
+I try to follow those guidelines, if you believe they are wrong, please
+tell the W3C ;-)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01956" HREF="msg01956.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01936" HREF="msg01936.shtml">2.0.3 - bug or feature</A></strong>, <em>From:</em> axel</li>
+<li><strong><A NAME="01937" HREF="msg01937.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01938" HREF="msg01938.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+<li><strong><A NAME="01939" HREF="msg01939.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01944" HREF="msg01944.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01944.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01946.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01944.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01956.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01945"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01945"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

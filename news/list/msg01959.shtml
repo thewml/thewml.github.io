@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Discussion about stable/unstable, etc. -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Fri, 15 Sep 2000 14:15:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.21.0009151257590.543&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01959">Date Index</a>][<a href="thrd40.shtml#01959">Thread Index</a>]<br>
+[<A HREF="msg01958.shtml">Date Prev</A>][<A HREF="msg01960.shtml">Date Next</A>][<A HREF="msg01948.shtml">Thread Prev</A>][<A HREF="msg01964.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Discussion about stable/unstable, etc.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Sep 2000 13:20:23 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello WML users and developers!
+
+I see the following problems in the current WML development:
+
+* the development is done mostly by one person - I'd like to split up the
+work and I'd like also to contribute, but also with the possibility that
+not only one person says, how the syntax will change, which feature will
+be implemented, etc. - maybe this was one of the biggest problem of the
+2.0.x development, namely that almost everything was done from the point
+of view of the developer (sorry, that I've to say that, but it's my
+impression)
+
+* contribution of modules and enhancements of the existing ones is not
+really possible because of the fast changes in the syntax - therefore I'd
+like a discussion about the syntax prior than the implementation. Changes
+inside the modules shouldn't be necessary in the same major version.
+
+* maybe a developer mailing list would help to do work together - so a
+clear distinction between user and developer would be possible, and also
+more discussion about syntax changes, implementation details, etc. which
+could be boring to the "only users"-group. I don't want to exclude anyone
+from these discussions, but most of the developing communication runs
+across Denis' mail account (ok, I don't know that exactly, I did it so[1])
+
+[1] mainly because the list server was a little bit slow that time
+
+I'd really like to participate in the future development of WML...
+
+I also want to say that everyone, who contributes to the
+development, esp. Denis Barbier, does a great work!
+
+Just hollering(TM) around,
+
+Franz
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01964" HREF="msg01964.shtml">Re: Discussion about stable/unstable, etc.</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01958.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01960.shtml">Re: [wml] Re: [wml] Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01948.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01964.shtml">Re: Discussion about stable/unstable, etc.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01959"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01959"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Using information in other documents -->
+<!--X-From-R13: Oaqref Rvafra <naqrefNqvafra.arg> -->
+<!--X-Date: Thu, 1 Mar 2001 21:34:49 +0100 (MET) -->
+<!--X-Message-Id: Pine.NEB.4.21.0103012024150.2069&#45;100000@box.lan.dinsen.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02152">Date Index</a>][<a href="thrd44.shtml#02152">Thread Index</a>]<br>
+[<A HREF="msg02151.shtml">Date Prev</A>][<A HREF="msg02153.shtml">Date Next</A>][<A HREF="msg02218.shtml">Thread Prev</A>][<A HREF="msg02153.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Using information in other documents</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Anders Dinsen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 1 Mar 2001 21:34:18 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I have just started using WML, and so far it looks very good! But there is
+one thing that I cannot see how I can get it to do for me: I cannot find a
+way to reference and use parts (meta information, like the title) of a
+document in another document.
+
+I want be able to write something like:
+
+&lt;href url="document"&gt;
+
+and have WML fetch the title of the document and make HTML like:
+
+&lt;a href="document"&gt;Title&lt;/a&gt;
+
+A use for this is in a location bar as seen on useit.com,
+e.g.: <A  HREF="http://www.useit.com/alertbox/20001112.html">http://www.useit.com/alertbox/20001112.html</A> or Yahoo in their
+categories.
+
+(This goes beyond referring to the title: there can be other information
+in a document that would be of use in another document: A verbatim
+description, the author, when it was last updated, the pages that it is a
+menu to...)
+
+This function would have to refer to the WML source of a document, because
+documents may refer to each other in a cyclic way. It would, however, also
+be nice to be able to refer to content and attributes of HTML documents,
+e.g. documents on another server. E.g. have 
+
+&lt;href url="<A  HREF="http://dinsen.net/anders/qms-ps810.html">http://dinsen.net/anders/qms-ps810.html</A>"&gt;
+
+expanded into &lt;A HREF="url"&gt;Title of document at the time of
+processing&lt;/A&gt;.
+
+This is mostly thoughts, as mentioned above, I have no idea how to
+implement this in WML. Hopefully some of you experienced users can help me
+here.
+
+-- 
+Anders Dinsen
+anders@dinsen.net
+<A  HREF="http://dinsen.net/anders/">http://dinsen.net/anders/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02153" HREF="msg02153.shtml">Re: Using information in other documents</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+<li><strong><A NAME="02154" HREF="msg02154.shtml">Re: Using information in other documents</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02151.shtml">feature patch</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02153.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02218.shtml">Re: including files only once</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02153.shtml">Re: Using information in other documents</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02152"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02152"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

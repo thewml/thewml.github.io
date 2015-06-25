@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Combining wml::des:navbar with per&#45;button HTML code -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Fri, 21 Jan 2000 10:26:02 +0100 (MET) -->
+<!--X-Message-Id: 200001210923.KAA01303@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01286">Date Index</a>][<a href="thrd27.shtml#01286">Thread Index</a>]<br>
+[<A HREF="msg01285.shtml">Date Prev</A>][<A HREF="msg01287.shtml">Date Next</A>][<A HREF="msg01285.shtml">Thread Prev</A>][<A HREF="msg01287.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Combining wml::des:navbar with per-button HTML code</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 21 Jan 2000 10:23:38 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thursday 20 January 2000, at 14 h 10, the keyboard of Denis Barbier 
+&lt;barbier@imacs.polytechnique.fr&gt; wrote:
+
+&gt;   #   Special text for the next button only
+&gt;   &lt;navbar:prolog pos=next&gt;...&lt;/navbar:prolog&gt;
+&gt;   &lt;navbar:epilog pos=next&gt;...&lt;/navbar:epilog&gt;
+&gt;   &lt;navbar:button .........&gt;
+
+Thanks, one more time where I saw it in the doc but decided it was irrelevant. 
+OK, I can use it now.
+
+But I have a problem using it in a new tag. I want to declare:
+
+&lt;define-tag my_button&gt;
+
+and to have a 'local' attribute which, if true, will call '&lt;navbar:prolog 
+pos=next&gt;' to generate the ePerl code.
+
+But, when, in the definition of my_button, I call:
+
+&lt;preserve id&gt;
+&lt;preserve txt&gt;
+&lt;preserve url&gt;
+&lt;preserve local&gt;
+&lt;preserve remote&gt;
+&lt;set-var %attributes&gt;
+# In the future, test for local will be added here
+&lt;navbar:button id=&lt;get-var id&gt; txt=&lt;get-var txt&gt; url=&lt;get-var url&gt;&gt;
+
+It is expansed only in:
+
+&lt;B&gt;&lt;font color="#FFFFFF"&gt;&lt;/font&gt;&lt;/B&gt;&lt;BR&gt;&lt;BR&gt;
+
+No URL and no text. (&lt;B&gt; and &lt;BR&gt; are in my prolog/epilog.)
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01287" HREF="msg01287.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01285.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01287.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01285.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01287.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01286"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01286"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

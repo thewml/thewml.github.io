@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [wml] Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6 -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 4 Jul 2000 12:17:37 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.GSO.4.21.0007041217050.10979&#45;100000@nova.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.GSO.4.21.0007041208320.10979&#45;100000@nova.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01781">Date Index</a>][<a href="thrd36.shtml#01781">Thread Index</a>]<br>
+[<A HREF="msg01780.shtml">Date Prev</A>][<A HREF="msg01782.shtml">Date Next</A>][<A HREF="msg01780.shtml">Thread Prev</A>][<A HREF="msg01763.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [wml] Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 4 Jul 2000 12:17:31 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Forget it, there is just no sense in what I am trying here ...
+
+Cheers,
+Fritz
+
+On Tue, 4 Jul 2000, Fritz Zaucker wrote:
+
+&gt; Can I define a tag that stops processing of an input file once this
+&gt; tag is processed? The following doesn't work:
+&gt; 
+&gt; &lt;define-tag EndHere&gt;
+&gt; &lt;P&gt;Some text to output to the HTML file.&lt;/P&gt;
+&gt; __FILE__
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; nor does
+&gt; 
+&gt; &lt;define-tag EndHere&gt;
+&gt; &lt;P&gt;Some text to output to the HTML file.&lt;/P&gt;
+&gt; &lt;protect&gt;
+&gt; __FILE__
+&gt; &lt;/protect&gt;
+&gt; &lt;/define-tag&gt;
+&gt; 
+&gt; 
+&gt; Cheers,
+&gt; Fritz
+&gt; 
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01780" HREF="msg01780.shtml">Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01780.shtml">Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01782.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01780.shtml">Re: [wml] Re: Re: [BUG REPORT] WML 2.0.2, Solaris2.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01763.shtml">BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01781"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01781"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

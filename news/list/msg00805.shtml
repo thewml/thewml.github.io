@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Not skippin passes -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Sun, 27 Jun 1999 18:38:55 +0200 (MET DST) -->
+<!--X-Message-Id: 19990626220404.A280@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail17.shtml#00805">Date Index</a>][<a href="thrd17.shtml#00805">Thread Index</a>]<br>
+[<A HREF="msg00804.shtml">Date Prev</A>][<A HREF="msg00806.shtml">Date Next</A>][<A HREF="msg00808.shtml">Thread Prev</A>][<A HREF="msg00809.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Not skippin passes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 26 Jun 1999 22:04:04 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hei!
+
+I have been working in the conversion of my former `m4' based pages
+to WML (It is becoming pretty awfull, maybe I should better redone
+all work from the beguinning).
+
+So I noticed there is a problem, you have to pay attention to the
+pass order before using them.
+
+An easy example:
+
+I have plenty of `m4_include()' in my docs. But if I continue using
+this command, this file will be included in pass 4 so I cannot use
+`eperl' or `meta-html' in them. 
+
+But now the real facts:
+
+The problem is I am using a loop to read certain files, and extract
+information fields from then. I use this info to build an index of
+all the pages. (It sounds pretty complicated, and I promise you it is
+somehow). All is made in `m4'. 
+
+I am not asking for a solution, but for some advice from advanced WML
+users.
+
+ * Using `magic cookies'? 
+
+ * Using m4_esyscomand(wml file.wml)?
+
+ * A strange combination in make files, passing first WML to all
+   files that are part of the page, and then passing WML with that
+   result (a bit in the way a compiler does: first *.c to *.o and
+   then to binary)?
+
+
+Any idea with a simple example will be very usefull.
+
+   
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00804.shtml">Re: multiple outputs from one input file?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00806.shtml">multiple files in command line</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00808.shtml">Re: Spaces in filnames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00809.shtml">[ANNOUNCE] WML-1.7.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail17.shtml#00805"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd17.shtml#00805"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

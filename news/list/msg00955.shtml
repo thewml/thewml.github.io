@@ -1,0 +1,148 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Wed, 8 Sep 1999 21:27:15 +0200 (MET DST) -->
+<!--X-Message-Id: 199909081927.VAA10570@engelberg.ee.ethz.ch -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00955">Date Index</a>][<a href="thrd9.shtml#00955">Thread Index</a>]<br>
+[<A HREF="msg00954.shtml">Date Prev</A>][<A HREF="msg00956.shtml">Date Next</A>][<A HREF="msg00832.shtml">Thread Prev</A>][<A HREF="msg00959.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 8 Sep 1999 21:27:10 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7a002 (21-05-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Fritz Zaucker
+Reply-To: zaucker@ee.ethz.ch
+
+PROBLEM DESCRIPTION:
+
+&lt;url&gt;At our web site (<A  HREF="http://www.ee.ethz.ch/">http://www.ee.ethz.ch/</A>) ...&lt;/url&gt;
+
+gets translated into 
+
+At our web site (&lt;a
+href="<A  HREF="http://www.ee.ethz.ch/">http://www.ee.ethz.ch/</A>)"&gt;<A  HREF="http://www.ee.ethz.ch/">http://www.ee.ethz.ch/</A>)&lt;/a&gt; ...
+
+NOTE: The URL includes the closing parenthesis )
+
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sparc-sun-solaris2.5.1
+    Perl: 5.005_03 (/usr/sepp/bin/perl)
+    User: local@foobar.ethz.ch
+    Date: 26-May-1999
+Built Location:
+    Prefix: /usr/pack/wml-19990526-za
+    BinDir: /usr/pack/wml-19990526-za/bin
+    LibDir: /usr/pack/wml-19990526-za/lib
+    ManDir: /usr/pack/wml-19990526-za/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=solaris, osvers=2.5.1, archname=sun4-solaris
+    uname='sunos zinal.ee.ethz.ch 5.5.1 generic_103640-19 sun4u sparc sunw,ultra-enterprise '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O', gccversion=2.7.2
+    cppflags='-I/usr/local/include -I/usr/gnu/include'
+    ccflags ='-I/usr/local/include -I/usr/gnu/include'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib -L/usr/gnu/lib'
+    libpth=/usr/local/lib /usr/gnu/lib /lib /usr/lib /usr/ccs/lib
+    libs=-lsocket -lnsl -lgdbm -ldb -ldl -lm -lc -lcrypt
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G -L/usr/local/lib -L/usr/gnu/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at May 20 1999 11:39:17
+  @INC:
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/5.00503
+    /usr/pack/perl-solaris251-5.00503-ak/lib/site_perl/5.005/sun4-solaris
+    /usr/pack/perl-solaris251-5.00503-ak/lib/site_perl/5.005
+    .
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00959" HREF="msg00959.shtml">Re: your mail</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00954.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00956.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00832.shtml">Re: Perl installation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00959.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00955"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00955"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Nested eperl tags -->
+<!--X-From-R13: Brge Oaqerlri <crgeNknanqh.eh> -->
+<!--X-Date: Tue, 20 Feb 2001 12:42:49 +0100 (MET) -->
+<!--X-Message-Id: Pine.WNT.4.32.0102200946300.261&#45;101000@turm.infra.net -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20010220010731.B8208@imacs.polytechnique.fr -->
+<!--X-Derived: bin00028.bin -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02142">Date Index</a>][<a href="thrd44.shtml#02142">Thread Index</a>]<br>
+[<A HREF="msg02141.shtml">Date Prev</A>][<A HREF="msg02143.shtml">Date Next</A>][<A HREF="msg02139.shtml">Thread Prev</A>][<A HREF="msg02143.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Nested eperl tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Petr Andreyev &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 12:39:58 +0100 (=?koi8-r?Q?Westeurop=E4ische_Normalzeit?=)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Denis,
+
+i'm glad that WML will be developed further. What are the  directions of the
+future WML development, except for fixing existing problems?
+
+===
+
+We have discovered a couple of bugs in embedded eperl tags construction.
+Here is an example:
+
+
+========= code ====================================
+#use wml::std::tags
+&lt;define-tag extern endtag=required&gt;
+&lt;perl&gt;
+{
+    my $body;
+    &lt;perl:print&gt; BEFORE BODY\n &lt;/perl:print&gt;
+    &lt;perl:assign $body&gt;%body&lt;/perl:assign&gt;
+    &lt;perl:print&gt; YET BEFORE BODY\n &lt;/perl:print&gt;
+    &lt;perl:print: $body /&gt;
+}
+&lt;/perl&gt;
+&lt;/define-tag&gt;
+&lt;define-tag intern whitespace=delete&gt;
+&lt;perl&gt;
+{
+    &lt;perl:print&gt; BODY %0 &lt;/perl:print&gt;
+}
+&lt;/perl&gt;
+&lt;/define-tag&gt;
+
+&lt;extern&gt;
+   BEGIN BODY
+   &lt;intern 1 /&gt;
+   MID MODY
+   &lt;intern 2 /&gt;
+   END BODY
+&lt;/extern&gt;
+===============================================
+
+====== output with wml -p 1,2,3,8 ============
+ BEFORE BODY
+   BEGIN BODY
+    BODY 1
+   MID MODY
+    YET BEFORE BODY
+  BODY 2
+   END BODY
+==============================================
+
+===== the same with our tags.wml====
+ BEFORE BODY
+  YET BEFORE BODY
+   BEGIN BODY
+    BODY 1
+   MID MODY
+    BODY 2
+   END BODY
+===============================
+
+This demonstrates one bug. The another one is that there is two printing
+modes: "double quoted" and 'single quoted'. But when when an inner printing
+finishes and we are in an outer printing again, the double quoted mode is
+always assumed.
+
+I can propose a fix for both, the diff with the november version is attached.
+It allows for using &lt;perl tags inside other &lt;perl tags as well, but I don't
+know wheter this is very useful - probably for defining some tags working
+inside &lt;perl and outside.
+
+Greetings
+--
+Petr
+</PRE>
+<P><A HREF="bin00028.bin" >diff</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02143" HREF="msg02143.shtml">Re: Nested eperl tags</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02265" HREF="msg02265.shtml">Re: Nested eperl tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02139" HREF="msg02139.shtml">I am back ;)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02143.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02139.shtml">I am back ;)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02143.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02142"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02142"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG: <sc> and umlaut characters -->
+<!--X-From-R13: =?vfb&#45;8859&#45;1?C?[=S4eg?= Znnx <[neg.ZnnxNunafn.rr> -->
+<!--X-Date: Thu, 14 Jan 1999 16:17:48 +0100 (CET) -->
+<!--X-Message-Id: 369E09DA.86BC5516@hansa.ee -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 369E0062.83025B66@hansa.ee -->
+<!--X-Reference: 19990114154314.A28820@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00312">Date Index</a>][<a href="thrd7.shtml#00312">Thread Index</a>]<br>
+[<A HREF="msg00311.shtml">Date Prev</A>][<A HREF="msg00313.shtml">Date Next</A>][<A HREF="msg00310.shtml">Thread Prev</A>][<A HREF="msg00313.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG: &lt;sc&gt; and umlaut characters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Märt Laak &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 17:14:34 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+"Ralf S. Engelschall" wrote:
+&gt; 
+&gt; Hmmmmm.. when I remember correctly I already tried to fix this a year ago.
+&gt; Either I was unsuccessful without recognizing this or I've forgotten to &gt; &gt; commit
+&gt; the change to the source tree or we have another problem.
+&gt; 
+&gt; Basically when I remember correctly what you need at least change your
+&gt; environment (LANG variable). Because without this the C functions inside WML
+&gt; and Perl will not process the stuff correctly. So, have you already changed
+&gt; the LANG variable?
+
+  I'm sorry to miss this but what exactly I have to put into LANG environment
+variable and where is it documented.
+  Umlaut, &amp;copy; and other special characters are defined also in ISO-8859-1
+(US) - so why the language here?
+
+  Hint - try to use "&lt;sc&gt;Test Copyright &amp;copy;&lt;/sc&gt;" - does not work as
+expected...
+
+Regards,
+----------------------------------------------
+-- Märt Laak
+----------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00313" HREF="msg00313.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00345" HREF="msg00345.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00309" HREF="msg00309.shtml">BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Märt Laak</li>
+<li><strong><A NAME="00310" HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00311.shtml">ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00313.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00313.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00312"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00312"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

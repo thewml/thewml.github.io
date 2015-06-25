@@ -1,0 +1,193 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] Handling unknown attributes -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 9 Jul 2000 00:39:29 +0200 (MET DST) -->
+<!--X-Message-Id: 20000709004048.A24332@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0007050932140.6672&#45;100000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Reference: 200007051136.NAA02922@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01797">Date Index</a>][<a href="thrd32.shtml#01797">Thread Index</a>]<br>
+[<A HREF="msg01796.shtml">Date Prev</A>][<A HREF="msg01798.shtml">Date Next</A>][<A HREF="msg01788.shtml">Thread Prev</A>][<A HREF="msg01802.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] Handling unknown attributes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 9 Jul 2000 00:40:48 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jul 05, 2000 at 11:40:39AM +0000, Jan Holler wrote:
+[...]
+&gt; &gt; I'll give another example which I programmed yet:
+&gt; &gt; 
+&gt; &gt; &lt;ptable&gt; is a container for a table made of photos and text.
+&gt; &gt; &lt;ptable:text&gt; is used to put text in one of this cells.
+&gt; &gt; &lt;ptable:pic&gt; is used to put a picture in one of this cells.
+&gt; 
+&gt; O.k. I use to work with tables straight away at the basic
+&gt; HTML-code because I need the following &lt;TD&gt;-features quiet often:
+&gt;  BGCOLOR
+&gt;  BACKGROUND
+&gt;  ALIGN, VALIGN
+&gt;  STYLE (Netscapes 4.x CSS-implementation is sometimes a pain)
+&gt; I think it's more powerful to use basic-HTML coding instead
+&gt; of "makros" which sometimes do not have the necessary
+&gt; extensions available.
+[...]
+
+I work on this topic for a week now after a suggestion by Ralf, and
+have good results.  The idea is to allow any attribute without having
+to know all valid names.
+
+For instance, say we want to define our own macro to write hyperlinks:
+  &lt;define-tag hyperlink whitespace=delete&gt;
+  &lt;preserve url&gt;
+  &lt;preserve text&gt;
+  &lt;set-var %attributes&gt;
+  &lt;defvar text "&lt;get-var url&gt;"&gt;
+  &lt;a href="&lt;get-var url&gt;"&gt;&lt;get-var text&gt;&lt;/a&gt;
+  &lt;restore text&gt;
+  &lt;restore url&gt;
+  &lt;/define-tag&gt;
+
+If we want to add CSS support, we have to explicitly preserve/restore
+new attributes, and write them into &lt;a&gt; tag.
+
+Mp4h version 1.0.4 introduces 3 new tags to play with attributes:
+   &lt;attributes-remove name1,name2,... %attributes&gt;
+      Like %attributes, but remove variables whose name is one of
+      name1, name2, and so on.
+   &lt;attributes-extract name1,name2,... %attributes&gt;
+      Prints only the name=value pair matching names name1, name2,...
+   &lt;attributes-quotes %attributes&gt;
+      The two macros above gobble quotes like any other mp4h macros.
+      This one prints its attributes with value between quotes. It must
+      only be used when printing its content on output without any
+      further processing.
+
+Here is a version suitable for mp4h 1.0.4:
+  &lt;define-tag hyperlink whitespace=delete&gt;
+  &lt;preserve url text&gt;
+  &lt;set-var &lt;attributes-extract url,text %attributes&gt;&gt;
+  &lt;defvar text "&lt;get-var url&gt;"&gt;
+  &lt;a &lt;attributes-quote &lt;attributes-remove url,text %attributes&gt;&gt; \
+     href="&lt;get-var url&gt;"&gt;&lt;get-var text&gt;&lt;/a&gt;
+  &lt;restore  url text&gt;
+  &lt;/define-tag&gt;
+  &lt;hyperlink url="http://..." class=www&gt;
+
+The &lt;preserve&gt;/&lt;restore&gt; commands now accept any number of arguments,
+which make this definition much more readable and easy to maintain.
+The line
+  &lt;set-var &lt;attributes-extract url,text %attributes&gt;&gt;
+sets only `url' and `text' variables if they appear in %attributes.
+And
+  &lt;attributes-remove url,text %attributes&gt;
+remove these 2 variables from %attributes, so this expression expands
+to
+  class=www
+I put this expression within &lt;attributes-quote&gt; to ensure that all
+name=value pairs are quoted as they should be (but quotes within text
+value are not escaped in current implementation).
+
+Next step is to add an `image' attribute:
+  &lt;define-tag hyperlink whitespace=delete&gt;
+  &lt;preserve url text image&gt;
+  &lt;set-var &lt;attributes-extract url,text,image %attributes&gt;&gt;
+  &lt;defvar text "&lt;get-var url&gt;"&gt;
+  &lt;a &lt;attributes-quote &lt;attributes-remove url,text,image %attributes&gt;&gt; \
+     href="&lt;get-var url&gt;"&gt;
+  &lt;if &lt;get-var image&gt;
+      &lt;img src="&lt;get-var image&gt;" alt="&lt;get-var text&gt;"&gt;
+      &lt;get-var text&gt;&gt;
+  &lt;/a&gt;
+  &lt;restore  url text image&gt;
+  &lt;/define-tag&gt;
+  &lt;hyperlink url="http://..." class=www image=foo.gif&gt;
+
+But there is a trivial flaw in this implementation, we have to choose if
+unknown attributes go into &lt;a&gt; or &lt;img&gt;.
+
+So there must be a way to specify to which tags each unknown attribute
+is for.  The only solution i found is to use namespaces, e.g.
+  &lt;hyperlink url="http://..." image=foo.gif
+             a:class=www img:id=foo&gt;
+
+But namespaces must be removed from output, previous example must expand
+into
+  &lt;a class="www" href="http://..."&gt;
+    &lt;img id="foo" src="foo.gif" alt="http://..."&gt;
+  &lt;/a&gt;
+
+I hope it will work soon, but if you have any suggestion i will be glad
+to hear of them.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01802" HREF="msg01802.shtml">Re: [wml] Handling unknown attributes</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01786" HREF="msg01786.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Franz Knipp</li>
+<li><strong><A NAME="01787" HREF="msg01787.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01796.shtml">Re: BUG REPORT: Website META Language 2.0.1 (23-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01798.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01788.shtml">Re: Idea how not to need future enhancement of WML - Environment</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01802.shtml">Re: [wml] Handling unknown attributes</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01797"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01797"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

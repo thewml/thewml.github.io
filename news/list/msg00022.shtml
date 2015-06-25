@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: RfD: Multi&#45;Lingual Support -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Wed, 7 Jan 1998 00:22:57 +0100 (MET) -->
+<!--X-Message-Id: m1k9cdiera.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199801061620.RAA27133@en1.engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00022">Date Index</a>][<a href="thread.shtml#00022">Thread Index</a>]<br>
+[<A HREF="msg00021.shtml">Date Prev</A>][<A HREF="msg00023.shtml">Date Next</A>][<A HREF="msg00021.shtml">Thread Prev</A>][<A HREF="msg00024.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: RfD: Multi-Lingual Support</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 06 Jan 1998 20:28:09 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+rse@engelschall.com (Ralf S. Engelschall) writes:
+
+&gt; Ok, that's mostly the same my current &lt;lang:xx&gt; tag does except that
+&gt; &lt;lang:xx&gt; is a simple tag. Hmmm... seems we also need something
+&gt; between
+&gt; 
+&gt;   &lt;lang:xx ...Text...&gt;
+&gt; and
+&gt;   &lt;lang:area&gt;
+&gt;   (xx) ...Text...
+&gt;   &lt;/lang:area&gt;
+&gt; 
+&gt; Perhaps:
+&gt; 
+&gt;   &lt;lang:xx:area&gt;
+&gt;   Text
+&gt;   &lt;/lang:xx:area&gt;
+&gt; 
+&gt; And with an option for &lt;lang:new xx&gt; we can let the defined
+&gt; tagnames be shortened to what you used: &lt;xx&gt;...&lt;/xx&gt;
+&gt; 
+&gt; How about this?
+
+Sounds good to me.
+ 
+&gt; Thats the point why I really tried to avoid programming it with
+&gt; ePerl (Pass 3) because a lot of tags are programmed this way and
+&gt; nesting then is not possible.
+
+Is this a principal problem? I think it is a big handicap, as one has
+to KNOW which tag is programmed in what ...
+
+&gt; These spaces are not "introduced" in Pass 9, but I know what effect
+&gt; you mean: Because Pass 9 (Slice) only does what it is asked for, you
+&gt; usually lost linefeeds when these are outside the slices. One really
+&gt; has to make sure where to place the newlines. Can you give me your
+&gt; example, so we can fix it together?
+
+      &lt;A HREF="/~elekws/"&gt;\
+        &lt;en&gt;EE Machine Shop&lt;/en&gt;\
+	&lt;de&gt;Elektrotechnik Werkstatt&lt;/de&gt;\
+	&lt;es&gt;Tienda de maquinaria&lt;/es&gt;\
+	&lt;ca&gt;Tenda de maquinària&lt;/ca&gt;\
+	&lt;fr&gt;Atelier d'électrotechnique&lt;/fr&gt;\
+	&lt;ch&gt;D'Elektrotechnik Werchschtatt&lt;/ch&gt;\
+	&lt;it&gt;Atelier di elettrotecnica&lt;/it&gt;\
+	&lt;/A&gt;
+
+Without the backslashes I get additional blanks around the link.
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group 
+Departement of Electrical Engineering,      Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241	Fax: +41-1-632-1194  <A  HREF="http://www.ee.ethz.ch/~zaucker/">http://www.ee.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00024" HREF="msg00024.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00021" HREF="msg00021.shtml">Re: RfD: Multi-Lingual Support</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00021.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00023.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00021.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00024.shtml">Re: RfD: Multi-Lingual Support</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00022"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00022"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

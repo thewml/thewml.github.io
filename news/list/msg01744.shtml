@@ -1,0 +1,106 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] CSS support and XML namespaces -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 23 Jun 2000 23:59:24 +0200 (MET DST) -->
+<!--X-Message-Id: 20000624000013.B2015@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01744">Date Index</a>][<a href="thrd36.shtml#01744">Thread Index</a>]<br>
+[<A HREF="msg01743.shtml">Date Prev</A>][<A HREF="msg01745.shtml">Date Next</A>][<A HREF="msg01760.shtml">Thread Prev</A>][<A HREF="msg01755.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] CSS support and XML namespaces</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 24 Jun 2000 00:00:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi people,
+
+these two issues are interesting and need some focus.
+
+First, WML must improve its CSS support.  As a macro-processor, it is up
+to end user to define his templates so that they provide some CSS support
+when needed.  Unfortunately, some modules are shipped with WML and so i
+also have to take care of that.
+There are basically 2 solutions:
+ a) add optional attributes in all defined tags
+or
+ b) add special tags in all HTML tags, e.g.
+      &lt;css:class tag=a text=" class=menu"&gt;
+      ...
+      &lt;a href="<A  HREF="http://domain.com/">http://domain.com/</A>"&lt;css:print tag=a&gt;&gt;Click here&lt;/a&gt;
+      ...
+      &lt;/css:class&gt;
+    In this example, we can imagine than &lt;css:print&gt; expands to a null
+    string except inside &lt;css:class&gt;...&lt;/css:class&gt;, where it expands
+    to the value of the `text' attribute.
+    I do not know whether this syntax is efficient.
+
+Second, after reading <A  HREF="http://www.w3.org/TR/REC-xml-names/">http://www.w3.org/TR/REC-xml-names/</A> i still do not
+undertand what XML namespaces are for.  Could a XML user explain if this
+notion is valuable for us?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01755" HREF="msg01755.shtml">Re: [wml] CSS support and XML namespaces</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01743.shtml">Welcome to the world, Noah!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01745.shtml">Re: Welcome to the world, Noah!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01760.shtml">Re: Welcome to the world, Noah!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01755.shtml">Re: [wml] CSS support and XML namespaces</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01744"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01744"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

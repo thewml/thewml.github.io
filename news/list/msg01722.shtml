@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.1, FreeBSD 3.4&#45;REL -->
+<!--X-From-R13: mncubqoNmncubqf.arg -->
+<!--X-Date: Mon, 19 Jun 2000 17:21:25 +0200 (MET DST) -->
+<!--X-Message-Id: 200006171307.PAA05918@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01722">Date Index</a>][<a href="thrd36.shtml#01722">Thread Index</a>]<br>
+[<A HREF="msg01721.shtml">Date Prev</A>][<A HREF="msg01723.shtml">Date Next</A>][<A HREF="msg01721.shtml">Thread Prev</A>][<A HREF="msg01723.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.1, FreeBSD 3.4-REL</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sat, 17 Jun 2000 15:07:33 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.1
+Operating System: FreeBSD 3.4-REL
+
+Problem Description:
+| ich bin wieder zurueckgegangen auf 1.7.4 (hatte ich noch auf platte) weil
+| ich es dem 2.0.1er nicht rechtmachen konnte:
+| 
+| ich bekam nach der neuinstallation von 2.0.1 folgende fehlermeldung:
+| 
+| This is WML Version 2.0.1 (23-May-2000)
+| 
+| developer@boombox Sat Jun 17 14:57:05 /www/data $ time wmk -fa
+| /usr/local/bin/wml -n -o alpha.html alpha.wml
+| ePerl:Error: Perl parsing error (interpreter rc=255)
+| 
+| ---- Contents of STDERR channel: ---------
+| In string, @zaphods now must be written as \@zaphods at
+| /tmp/wml.5272.tmp1.wml l
+| ine 727, near "&amp;#169; &lt;!--#exec cmd="/bin/date"--&gt; by
+|    &lt;a href="<A  HREF="mailto:zaphodb@zaphods">mailto:zaphodb@zaphods</A>"
+| Execution of /tmp/wml.5272.tmp1.wml aborted due to compilation errors.
+| ------------------------------------------
+| ** WML:Break: Error in Pass 3 (rc=74).
+| ** WMk:Break: Error in WML (rc=256)
+| 
+| 
+| dann habe ich versucht wie gesagt \ vor @ zu setzen im .wml file, was aber
+| nichts gebracht hat und nach einigen fehlversuchen gab ich es dann auf mit
+| der Vermutung, dass wml2 erst das .html generiert und dann dieses
+| nocheinmal auf den o.g. fehler hin untersucht, koennte das hinkommen
+| ? *grins*
+| 
+| --
+| Real computer scientists despise the idea of actual hardware.  Hardware has
+| limitations, software doesn't.  It's a real shame that Turing machines are
+| so poor at I/O.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01721.shtml">Re: relative links</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01723.shtml">Comments to my WML pages</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01721.shtml">Re: relative links</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01723.shtml">Comments to my WML pages</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01722"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd36.shtml#01722"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

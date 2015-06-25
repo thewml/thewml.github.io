@@ -1,0 +1,90 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Style Sheets and WML support? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Sat, 1 Aug 1998 19:45:18 +0200 (CEST) -->
+<!--X-Message-Id: 19980801194517.B19432@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail4.shtml#00176">Date Index</a>][<a href="thrd4.shtml#00176">Thread Index</a>]<br>
+[<A HREF="msg00175.shtml">Date Prev</A>][<A HREF="msg00177.shtml">Date Next</A>][<A HREF="msg00178.shtml">Thread Prev</A>][<A HREF="msg00179.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Style Sheets and WML support?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 1 Aug 1998 19:45:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+I've recently created a few webareas with Style Sheets (actually CSS1) and
+recognized some WML flaws: I'd to prefix own definitions `#foo { ... }' with
+two escaping backslashes, etc. This is ugly and already fixed for WML 1.6.7
+now, of course. 
+
+But I'm now thinging about Style Sheet support and asking myself: Can we do
+something to make Style Sheets easier to use within WML by providing some
+tags, some filters, whatever. Has anybody deeper experiences on working with
+Style Sheets and WML and already some suggestions on how to make life easier?
+
+What still missing functionality (which can be implemented in realistic amount
+of time, of course ;-) would be cool to have inside WML when working with
+Style Sheets?
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00175.shtml">Re: It works!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00177.shtml">Re: It works!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00178.shtml">Re: It works!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00179.shtml">ANNOUNCE: WML 1.6.7</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail4.shtml#00176"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd4.shtml#00176"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

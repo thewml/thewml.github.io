@@ -1,0 +1,140 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RegExp, Double Quotes and ^E (was: Why does <set&#45;var %body> not work?) -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Tue, 20 Feb 2001 16:47:22 +0100 (MET) -->
+<!--X-Message-Id: 20010220164710.A4928@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010219231141.A24595@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010220001349.A8016@imacs.polytechnique.fr -->
+<!--X-Reference: 20010220102135.A9799@imacs.polytechnique.fr -->
+<!--X-Reference: 20010220122117.A7139@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02144">Date Index</a>][<a href="thrd43.shtml#02144">Thread Index</a>]<br>
+[<A HREF="msg02143.shtml">Date Prev</A>][<A HREF="msg02145.shtml">Date Next</A>][<A HREF="msg02141.shtml">Thread Prev</A>][<A HREF="msg02145.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RegExp, Double Quotes and ^E (was: Why does &lt;set-var %body&gt; not work?)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 20 Feb 2001 16:47:11 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi
+
+Axel Beckert wrote:
+&gt; [...]
+&gt; DESTINATION=&lt;get-var DESTINATION&gt;
+[results in]
+&gt; DESTINATION="/fnord/"
+
+There is another little problem: Those double quotes shouldn't be
+there in the last line. But matching regexps against that strings with
+doublequotes seems not to work (single-backslash quoted double quotes
+according to the WML documentation at engelschall.com):
+
+	&lt;subst-in-var val "^\"(.*)\"$" "\\1" /&gt;
+
+The debugging output says always ^E instead of double quotes:
+
+	trace: -1- &lt;subst-in-var val ^^E(.*)^E$ \1&gt;
+
+I didn't find anything in the docs on that ^E thing which is appearing
+in the debug output. May those ^Es be the reason why I can't get rid
+of those double quotes, because subst-in-var matches ^Es against my
+variable?
+
+BTW: The easiest way to get rid of them is, not to write them into the
+CONFIGURATION body, but that's not the elegant way. ;-)
+
+Oh and another BTW: The solution from my last does not work, if values
+go over several lines (in pass 2, so you may use pass 1 to concatenate
+several lines using backslashes)...
+
+&gt; Just those empty pairs are still annoying... 
+
+Not anymore: With
+
+	&lt;subst-in-var array "^[\n\s]+" "" /&gt;
+	&lt;subst-in-var array "[\n\s]+$" "" /&gt;
+	&lt;subst-in-var array "\n\s+\n" "" /&gt;
+
+directly after setting the variable array, even blank lines inside the
+CONFIGURATION tag should work.
+
+P.S.: Hope you don't mind, that you get noticed about the advances in
+my actual debugging process step by step. :-)
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-Administrator IBFI Schloss Dagstuhl; Students Representative
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02145" HREF="msg02145.shtml">Re: RegExp, Double Quotes and ^E</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02163" HREF="msg02163.shtml">Re: RegExp, Double Quotes and ^E</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02134" HREF="msg02134.shtml">Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02136" HREF="msg02136.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02140" HREF="msg02140.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02141" HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02143.shtml">Re: Nested eperl tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02145.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02141.shtml">Re: Why does &lt;set-var %body&gt; not work?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02145.shtml">Re: RegExp, Double Quotes and ^E</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02144"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02144"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

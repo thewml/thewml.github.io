@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Test&#45;Suite 100% failed on Debian 2.1 -->
+<!--X-From-R13: Xna Gyevpu Vnfrpxr <whuNcvebarg.qr> -->
+<!--X-Date: Wed, 2 Feb 2000 19:17:05 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.21.0002011856180.17083&#45;100000@jobs.hasecke.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01324">Date Index</a>][<a href="thrd27.shtml#01324">Thread Index</a>]<br>
+[<A HREF="msg01323.shtml">Date Prev</A>][<A HREF="msg01325.shtml">Date Next</A>][<A HREF="msg01325.shtml">Thread Prev</A>][<A HREF="msg01333.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Test-Suite 100% failed on Debian 2.1</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Ulrich Hasecke &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 1 Feb 2000 19:01:08 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+I'm desparated!
+
+I tried wml-1.7.4 and wml-SNAP after upgrading my Debian 2.1 perl to
+unstable. 
+
+./configure o.k
+make o.k
+
+Butt all tests failed with this errormessage:
+
+ Failed 2/2 tests, 0.00% okay
+t/10-wml............Can't locate File/PathConvert.pm in @INC (@INC
+contains: /usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/home/juh/ARCHIV/Computer/Programme/wml-SNAP/wml_test/TEST.root/lib/perl/lib/5.004/i386-linux
+/home/juh/ARCHIV/Computer/Programme/wml-SNAP/wml_test/TEST.root/lib/perl/lib
+/usr/lib/perl5/5.004/i386-linux /usr/lib/perl5/5.004/i386-linux
+/usr/lib/perl5/5.004 /usr/local/lib/site_perl/i386-linux
+/usr/local/lib/site_perl /usr/lib/perl5
+/usr/lib/perl5/i386-linux/5.004 /usr/lib/perl5/5.004/i386-linux
+. /usr/lib/perl5/5.004/i386-linux /usr/lib/perl5/5.004
+/usr/local/lib/site_perl/i386-linux /usr/local/lib/site_perl
+/usr/lib/perl5 /usr/lib/perl5/i386-linux/5.004
+/usr/lib/perl5/5.004/i386-linux .) at
+/home/juh/ARCHIV/Computer/Programme/wml-SNAP/wml_test/TEST.root/bin/wml
+line 54.    
+
+
+Some further informations
+
+$ perl --version
+This is perl, version 5.004_05 built for i386-linux  
+
+$ uname --all
+Linux jobs 2.0.36 #1 Mon Jan 24 13:30:09 CET 2000 i586 unknown    
+
+What shall I do?
+
+Ciao!
+juh
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01333" HREF="msg01333.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01323.shtml">New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01325.shtml">Re: New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01325.shtml">Re: New #include tag - changes to &lt;box&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01333.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01324"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01324"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

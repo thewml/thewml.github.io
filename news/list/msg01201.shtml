@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: Quevfgbcu Oaqrertt <puevfgbcu.naqrerttNtzk.pu> -->
+<!--X-Date: Wed, 8 Dec 1999 13:16:50 +0100 (MET) -->
+<!--X-Message-Id: 22882.944655373@www1.gmx.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01201">Date Index</a>][<a href="thrd9.shtml#01201">Thread Index</a>]<br>
+[<A HREF="msg01199.shtml">Date Prev</A>][<A HREF="msg01202.shtml">Date Next</A>][<A HREF="msg01194.shtml">Thread Prev</A>][<A HREF="msg01205.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Christoph Anderegg &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 8 Dec 1999 13:16:13 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello
+
+I tried to compile WML on Solaris, but I run into a problem I can`t solve:
+Compilation always gets through but `make install` stops. I figured out,
+that eperl gets not completly compiled. This part breks with the following
+error:
+
+phoenix.andec[36] wml_backend/p3_eperl &gt; make
+gcc  -L/usr/local/lib -L/usr/local/lib/perl5/sun4-solaris/5.003/CORE -o
+eperl eperl_main.o  eperl_perl5.o  eperl_parse.o  eperl_pp.o  eperl_sys.o 
+eperl_http.o  eperl_getopt.o  eperl_debug.o  eperl_config.o  eperl_version.o 
+eperl_readme.o  eperl_license.o  eperl_logo.o  eperl_powered.o
+/usr/local/lib/perl5/sun4-solaris/5.003/auto/DynaLoader/DynaLoader.a -lperl -lsocket -lnsl
+-ldl -lm -lc -lcrypt 
+Undefined                       first referenced
+ symbol                             in file
+perl_init_i18nl10n                  eperl_main.o
+ld: fatal: Symbol referencing errors. No output written to eperl
+*** Error code 1
+make: Fatal error: Command failed for target `eperl'
+phoenix.andec[37] wml_backend/p3_eperl &gt; 
+
+
+Can anyone please help me?
+
+Thank you very much
+Christoph
+
+-- 
+Sent through Global Message Exchange - <A  HREF="http://www.gmx.net">http://www.gmx.net</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01205" HREF="msg01205.shtml">Re: none</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01199.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01202.shtml">Re: conditionel include</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01194.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01205.shtml">Re: none</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01201"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#01201"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

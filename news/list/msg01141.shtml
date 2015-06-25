@@ -1,0 +1,133 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: "Rnexb Yevmvp" <qxevmvpNofo&#45;fbsgjner.pbz> -->
+<!--X-Date: Sun, 14 Nov 1999 13:27:26 +0100 (MET) -->
+<!--X-Message-Id: 000201bf2dfb$9042c780$24be22c3@phrankphurt.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991113163542.4339B&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01141">Date Index</a>][<a href="thrd23.shtml#01141">Thread Index</a>]<br>
+[<A HREF="msg01137.shtml">Date Prev</A>][<A HREF="msg01142.shtml">Date Next</A>][<A HREF="msg01139.shtml">Thread Prev</A>][<A HREF="msg01143.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darko Krizic&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Nov 1999 18:21:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; /usr/local/bin/wml -n -oWEB:index.html -oPRINT:print.html index.wml
+&gt; &gt; ** WML:Break: Error in Pass 4 (rc=139).
+&gt; &gt; ** WMk:Break: Error in WML (rc=256)
+&gt; &gt;
+&gt; &gt; Compile was ok. Same when executing "make test"
+&gt;
+&gt; Darko, what does your index.wml look like?
+
+Close this bug, I solved the problem, but I still don't know the exact
+reason.
+History:
+
+- System is Suse 6.1 (Perl 5.005_02)
+- Installed wml-1.7.4 - index.wml was compiled properly
+- Updated Suse 6.1 to Suse 6.2 (Perl 5.005_03)
+- wml-1.7.4 (eperl correctly) complains about missing modules -&gt; must
+recompile wml, since Perl environment changed and does not fit to eperl
+version.
+- Two problems when compiling wml (ePerl)
+  - "union semun" redefined, found union semun in &lt;perl.h&gt; and
+&lt;linux/sem.h&gt;,
+    solved this be outcommenting union semun in perl.h.
+    Perl was compiled with kernel 2.2.10, I run 2.2.13, maybe union semun
+was
+    added between these two releases ??
+  - wml's "make test" complains about missing File::PathConvert,
+reeinstalled this
+    manually from CPAN, wml runs fine now. My index.wml is correct.
+
+SuSE 6.2 seems to be very buggy, at least after update from 6.1. I had a lot
+of
+missing Links to libraries. These links pointed to wrong version:
+
+dekay:/usr/lib&gt; ll libnss*
+lrwxrwxrwx   1 root     root           28 Nov 12 17:23 libnss_compat.so -&gt;
+../../lib/libnss_compat.so.2
+lrwxrwxrwx   1 root     root           24 Nov 12 17:23 libnss_db.so -&gt;
+../../lib/libnss_db.so.2
+lrwxrwxrwx   1 root     root           25 Nov 12 17:23 libnss_dns.so -&gt;
+../../lib/libnss_dns.so.2
+lrwxrwxrwx   1 root     root           27 Nov 12 17:23 libnss_files.so -&gt;
+../../lib/libnss_files.so.2
+lrwxrwxrwx   1 root     root           28 Nov 12 17:23 libnss_hesiod.so -&gt;
+../../lib/libnss_hesiod.so.2
+lrwxrwxrwx   1 root     root           25 Nov 12 17:23 libnss_nis.so -&gt;
+../../lib/libnss_nis.so.2
+lrwxrwxrwx   1 root     root           29 Nov 12 17:23 libnss_nisplus.so -&gt;
+../../lib/libnss_nisplus.so.2
+
+...darko
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01143" HREF="msg01143.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01139" HREF="msg01139.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01137.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01142.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01139.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01143.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01141"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01141"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

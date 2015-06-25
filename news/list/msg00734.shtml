@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.1 (05&#45;06&#45;1999) -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Mon, 7 Jun 1999 14:36:27 +0200 (MET DST) -->
+<!--X-Message-Id: m1r9no2nne.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990607120554.2241B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00734">Date Index</a>][<a href="thrd16.shtml#00734">Thread Index</a>]<br>
+[<A HREF="msg00733.shtml">Date Prev</A>][<A HREF="msg00735.shtml">Date Next</A>][<A HREF="msg00733.shtml">Thread Prev</A>][<A HREF="msg00735.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 07 Jun 1999 14:36:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan Ulrich Hasecke &lt;juh@pironet.de&gt; writes:
+
+Many Unix programs depend on lines to be terminated with a newline.
+
+make, for example, will ignore the last line if not terminated by
+newline.
+
+In the old times, I was told, this wasn't a problem, as all editors
+(vi, etc) would write that newline automatically. Emacs, on the other
+hand, as it is not really line-oriented, does not append it if you
+don't type it.
+
+BTW, in regards to your question about Makefiles: 
+	
+	man make 
+
+gives a lot of information, though not terribly user friendly.
+
+I am pretty sure there is a "animal book" about make. And there is a
+texinfo document about GNU make.
+
+Cheers,
+Fritz
+
+&gt; &gt;Can't reproduce this problem.
+&gt; &gt;Could you send me an example ? Or explain how to use the one above.
+&gt; 
+&gt; Oh,oh!
+&gt; 
+&gt; I tried to isolate the error and discovered that it was my fault.
+&gt; 
+&gt; The grid-endtag &lt;/grid&gt; was on the last line of my input file.
+&gt; There must be a newline after the endtag &lt;/grid&gt; and it works.
+&gt; 
+&gt; So NO BUG, but my fault. :-( or better :-), because nobody must do
+&gt; a workaround.
+&gt; 
+&gt; Should there always be a newline after the last line, if it
+&gt; contains a tag?
+&gt; 
+&gt; Ciao!
+&gt; juh
+&gt; 
+&gt; -- 
+&gt; juh's Sudelbuch
+&gt; Täglich tagesfrische Sudeleien
+&gt; <A  HREF="http://www.sudelbuch.de">http://www.sudelbuch.de</A>
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00733" HREF="msg00733.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00733.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00735.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00733.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00735.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00734"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00734"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

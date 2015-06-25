@@ -1,0 +1,178 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 2.0.2200007241800 (22&#45;Jun&#45;2000) -->
+<!--X-From-R13: Dbys Vrembt <ebysNphygurn.tha.qr> -->
+<!--X-Date: Tue, 25 Jul 2000 08:01:01 +0200 (MET DST) -->
+<!--X-Message-Id: 200007242039.WAA27372@freeman.gun.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01859">Date Index</a>][<a href="thrd38.shtml#01859">Thread Index</a>]<br>
+[<A HREF="msg01858.shtml">Date Prev</A>][<A HREF="msg01860.shtml">Date Next</A>][<A HREF="msg01858.shtml">Thread Prev</A>][<A HREF="msg01860.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 2.0.2200007241800 (22-Jun-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Rolf Herzog &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 24 Jul 2000 22:39:44 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.2200007241800 (22-Jun-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Rolf Herzog
+Reply-To: her@gmx.de
+
+PROBLEM DESCRIPTION:
+wml 2.0.2 and higher (snapshot) doesn't compile with ActivePerl 5.6 build 616.
+The build stopped with this error message:
+
+eperl_perl5.c: In function `Perl5_XSInit':
+eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+eperl_perl5.c:58: (Each undeclared identifier is reported only once
+eperl_perl5.c:58: for each function it appears in.)
+eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from incompatible pointer type
+eperl_perl5.c: In function `Perl5_ForceUnbufferedStdout':
+eperl_perl5.c:70: `my_perl' undeclared (first use in this function)
+eperl_perl5.c: In function `Perl5_SetScalar':
+eperl_perl5.c:98: `my_perl' undeclared (first use in this function)
+make[2]: *** [eperl_perl5.o] Error 1
+make[2]: Leaving directory `/usr/local/src/wml-2.0.2/wml_backend/p3_eperl'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/usr/local/src/wml-2.0.2/wml_backend'
+make: *** [all] Error 1
+
+After I applied this patch, all worked fine.
+
+--- /usr/local/src/wml-2.0.2/wml_backend/p3_eperl/eperl_perl5.h Tue Jun  8 12:12
+:53 1999
++++ eperl_perl5.h       Mon Jul 24 22:02:29 2000
+@@ -39,7 +39,8 @@
+ /*  first include the standard Perl 
+     includes designed for embedding   */
+ #include &lt;EXTERN.h&gt;
+-#include &lt;perl.h&gt;                 
++#include &lt;perl.h&gt;  
++#include &lt;XSUB.h&gt;               
+ #include "ppport.h"
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i686-pc-linux-gnu2
+    Perl: 5.006 (/usr/local/ActivePerl-5.6/bin/perl)
+    User: rolf@freeman.gun.de
+    Date: 24-Jul-2000
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (revision 5.0 version 6 subversion 0) configuration:
+  Platform:
+    osname=linux, osvers=2.2.15, archname=i686-linux-thread-multi
+    uname='linux churn.activestate.com 2.2.15 #1 smp thu may 25 03:22:16 pdt 2000 i686 unknown '
+    config_args='-des -Dcc=gcc -Dcf_email=ActivePerl@ActiveState.com -Uinstallusrbinperl -Dusethreads -Duseithreads -Dprefix=/usr/local/ActivePerl-5.6'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=define use5005threads=undef useithreads=define usemultiplicity=define
+    useperlio=undef d_sfio=undef uselargefiles=define 
+    use64bitint=undef use64bitall=undef uselongdouble=undef usesocks=undef
+  Compiler:
+    cc='gcc', optimize='-O2', gccversion=egcs-2.91.66 19990314/Linux (egcs-1.1.2 release)
+    cppflags='-D_REENTRANT -fno-strict-aliasing'
+    ccflags ='-D_REENTRANT -fno-strict-aliasing -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -ldl -lm -lpthread -lc -lposix -lcrypt
+    libc=/lib/libc-2.1.3.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options: MULTIPLICITY USE_ITHREADS USE_LARGE_FILES PERL_IMPLICIT_CONTEXT
+  Locally applied patches:
+  	ActivePerl Build 616
+  Built under linux
+  Compiled at Jul 14 2000 19:10:31
+  %ENV:
+    PERL_BADLANG="true"
+  @INC:
+    /usr/local/ActivePerl-5.6/lib/5.6.0/i686-linux-thread-multi
+    /usr/local/ActivePerl-5.6/lib/5.6.0
+    /usr/local/ActivePerl-5.6/lib/site_perl/5.6.0/i686-linux-thread-multi
+    /usr/local/ActivePerl-5.6/lib/site_perl/5.6.0
+    /usr/local/ActivePerl-5.6/lib/site_perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01860" HREF="msg01860.shtml">Re: BUG REPORT: Website META Language 2.0.2200007241800 (22-Jun-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01858.shtml">[wml] New cool stuff in wml-SNAP</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01860.shtml">Re: BUG REPORT: Website META Language 2.0.2200007241800 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01858.shtml">[wml] New cool stuff in wml-SNAP</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01860.shtml">Re: BUG REPORT: Website META Language 2.0.2200007241800 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01859"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01859"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

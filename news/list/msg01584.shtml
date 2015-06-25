@@ -1,0 +1,165 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: wfryyrafNtanp.pbz -->
+<!--X-Date: Fri, 19 May 2000 22:04:57 +0200 (MET DST) -->
+<!--X-Message-Id: 200005160633.XAA22636@tweety.main.gnac.com -->
+<!--X-Content-Type: text -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01584">Date Index</a>][<a href="thrd10.shtml#01584">Thread Index</a>]<br>
+[<A HREF="msg01581.shtml">Date Prev</A>][<A HREF="msg01580.shtml">Date Next</A>][<A HREF="msg01432.shtml">Thread Prev</A>][<A HREF="msg01588.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 15 May 2000 23:33:27 -0700 (PDT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.0 (11-May-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     John Sellens
+Reply-To: jsellens@gnac.com
+
+PROBLEM DESCRIPTION:
+mp4h seems to get %attributes wrong when there are tags
+
+For example:
+    &lt;define-tag endtag=required glorp&gt;
+    %attributes
+    That was attributes, this is body:
+    %body
+    &lt;/define-container&gt;
+
+    &lt;glorp &lt;b&gt;hello&lt;/b&gt;&gt;
+    this is the body
+    &lt;/glorp&gt;
+
+Produces:
+    &lt;b
+    That was attributes, this is body:
+    hello&lt;/b&gt;&gt;
+    this is the body
+In 1.7.4 with define-container it produced:
+    &lt;b&gt;hello&lt;/b&gt;
+    That was attributes, this is body:
+    this is the body
+
+If I quote the attribute "&lt;b&gt;hello&lt;/b&gt;" then it does the right thing.
+Mostly easy to work around, but I think it likely means changes to
+my .wml files rather than just my template files.
+
+I'm not sure if this is a bug, or a change in behaviour when
+given bad input.  I looked for but didn't see a warning about
+this in the README.mp4h file.
+
+WML is amazing - thanks very much for all your efforts.
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: sun4u-sun-solaris2.5.1
+    Perl: 5.005 (/tools/perl-5.005.02/bin/perl)
+    User: jsellens@gnac.com
+    Date: 15-May-2000
+Built Location:
+    Prefix: /Tools/SunOS_5.5.1_sparc/wml-2.0.0
+    BinDir: /Tools/SunOS_5.5.1_sparc/wml-2.0.0/bin
+    LibDir: /Tools/SunOS_5.5.1_sparc/wml-2.0.0/lib
+    ManDir: /Tools/SunOS_5.5.1_sparc/wml-2.0.0/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+  Platform:
+    osname=solaris, osvers=2.5.1, archname=sun4-solaris-thread
+    uname='sunos something.gnac.com 5.5.1 generic_103640-08 sun4u sparc sunw,ultra-1 '
+    hint=previous, useposix=true, d_sigaction=define
+    usethreads=define useperlio=undef d_sfio=undef
+  Compiler:
+    cc='gcc', optimize='-O', gccversion=2.8.1
+    cppflags='-D_REENTRANT -I/tools/db/include -I/tools/gdbm/include'
+    ccflags ='-D_REENTRANT -I/tools/db/include -I/tools/gdbm/include'
+    stdchar='unsigned char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16
+    alignbytes=8, usemymalloc=y, prototype=define
+  Linker and Libraries:
+    ld='gcc', ldflags ='-L/tools/db/lib -L/tools/gdbm/lib'
+    libpth=/tools/db/lib /tools/gdbm/lib /lib /usr/lib /usr/ccs/lib
+    libs=/tools/gdbm/lib/libgdbm.a /tools/db/lib/libdb.a -lsocket -lnsl -ldl -lm -lposix4 -lpthread -lc -lcrypt
+    libc=/lib/libc.so, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' '
+    cccdlflags='-fPIC', lddlflags='-G -L/tools/db/lib -L/tools/gdbm/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under solaris
+  Compiled at Dec  8 1998 00:14:54
+  @INC:
+    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/5.00502/sun4-solaris-thread
+    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/5.00502
+    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/site_perl/5.005/sun4-solaris-thread
+    /Tools/SunOS_5.5.1_sparc/perl-5.005.02/lib/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01581.shtml">BUG REPORT: Website META Language 2.0.0 (11-May-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01580.shtml">[BUG REPORT] WML 2.0.0, Solaris2.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01432.shtml">Re: adding languages</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01588.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01584"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#01584"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Introduction -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNv.nz> -->
+<!--X-Date: Fri, 14 May 1999 22:56:06 +0200 (MET DST) -->
+<!--X-Message-Id: 19990514184910.A5526@meu.debian -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00658">Date Index</a>][<a href="thrd15.shtml#00658">Thread Index</a>]<br>
+[<A HREF="msg00657.shtml">Date Prev</A>][<A HREF="msg00659.shtml">Date Next</A>][<A HREF="msg00657.shtml">Thread Prev</A>][<A HREF="msg00659.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Introduction</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 14 May 1999 18:49:10 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi to everybody!
+
+I am an amateur page creator. I am learning, when I have some free
+time. And so far, I have learned a lot of tricks this last months.
+
+To work I like to code by hand, using my favourite text editor (vi).
+WYSIWYG does not suit for me. 
+
+I also love all macro tools. After a few time using HTML, you notice
+there is a lot of code you repeat time after time. So I first began
+using abbreviations in my editor, then I began using macro
+preprocessors:
+
+    * cpp (the C pre processor) good to include files but not for
+      macros
+    * M4 very good flexibility, but strange sintax and terrible do
+      debug
+
+So I looked for another program, and more into HTML creation than
+this other programs. I found WML, and I decided to give a try.
+
+The frist I liked about WML is it supports M4, so I can continue using
+my already made macros. (There is a problem with quotes, but I have
+to solve it somehow).
+
+The second think I liked about WML is the documentation. Not only all
+components of the program are documented and so are the include
+files, but also there is a great `Tutorial' and `Introduction'. They
+are very helpfull, when you try to figure out what the hell is WML.
+
+So I understand now more or less the phylosophy of this program, and
+now I will try to get into it and prepare my first tests with the
+program.  
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@i.am        (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00657.shtml">wml::std::megatoc?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00659.shtml">question about navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00657.shtml">wml::std::megatoc?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00659.shtml">question about navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00658"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00658"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

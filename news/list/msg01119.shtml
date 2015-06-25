@@ -1,0 +1,131 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: My previous patch... -->
+<!--X-From-R13: Fubznf Oxva <gnxvaNxraarfnj.rqh> -->
+<!--X-Date: Fri, 5 Nov 1999 09:03:40 +0100 (MET) -->
+<!--X-Message-Id: 19991104165702.A10976@Aramis.kennesaw.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991102133425.A2417@Aramis.kennesaw.edu -->
+<!--X-Reference: Pine.LNX.3.96.991103154859.6357B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01119">Date Index</a>][<a href="thrd23.shtml#01119">Thread Index</a>]<br>
+[<A HREF="msg01118.shtml">Date Prev</A>][<A HREF="msg01120.shtml">Date Next</A>][<A HREF="msg01117.shtml">Thread Prev</A>][<A HREF="msg01104.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: My previous patch...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Thomas Akin &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 4 Nov 1999 16:57:02 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis,
+
+On Wed, Nov 03, 1999 at 03:57:55PM +0100, Denis Barbier wrote:
+&gt; Because when you create multiple images with gfont, you have to specify
+&gt; a unique file name for each string. With other include files (logo,
+&gt; imgbg, imgdot) the situation is different. I see no reason to have
+&gt; file1.logo-wml.gif file2.logo-wml.gif file3.logo-wml.gif ...
+&gt; because all these files are identical, so why not just "logo-wml.gif" ?
+&gt; 
+&gt; So i think the current implementation of these include files is wrong.
+
+
+        When looking at things I got the impression that
+        there was a lot of redundant file creation, but I
+        didn't look into it too deeply and just assumed that
+        it was done for a good reason... and like all good
+        assumptions this one seems to have been wrong...
+
+	After a cursory check of the include files
+
+	std::logo
+	des::imgdot
+	des::imgbg
+
+	I don't see any reasons not to simply create one
+	image rather than redundant images on a per file
+	basis. From what I can see the filename is not
+	needed for uniqueness.
+
+	You are probably the best judge about whether this
+	would actually work... If so it would certainly make
+	things much cleaner... If you can't think of any
+	reasons why it wouldn't work let me know and I'll
+	try to come up with a new set of patches....
+
+	(Without warning this might freak a few people out
+	though...)
+
+
+Thanks,
+
+
+Thomas
+-- 
+
+---------------------------------------------------------------
+Thomas Akin                       Kennesaw State University
+Networking Instructor             Continuing Education
+CNX, CSA, ICS                     1000 Chastain Road
+takin@kennesaw.edu                Kennesaw, GA 30144-5591
+---------------------------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01116" HREF="msg01116.shtml">Re: My previous patch...</A></strong>, <em>From:</em> Thomas Akin</li>
+<li><strong><A NAME="01117" HREF="msg01117.shtml">Re: My previous patch...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01118.shtml">Re: [RFC] Nested ePerl tags</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01120.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01117.shtml">Re: My previous patch...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01104.shtml">Slice Warning/Newbie Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01119"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01119"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

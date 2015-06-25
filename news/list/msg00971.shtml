@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: May I run wml from a setuid program? (It seems not) -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Fri, 17 Sep 1999 14:55:15 +0200 (MET DST) -->
+<!--X-Message-Id: 199909171255.OAA17833@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00971">Date Index</a>][<a href="thrd20.shtml#00971">Thread Index</a>]<br>
+[<A HREF="msg00970.shtml">Date Prev</A>][<A HREF="msg00972.shtml">Date Next</A>][<A HREF="msg01074.shtml">Thread Prev</A>][<A HREF="msg00973.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>May I run wml from a setuid program? (It seems not)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Sep 1999 14:55:02 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In order to run from the Web server the update of HTML pages, I made a setuid 
+program so that wml can write files in a directory wehere the WWW user cannot.
+
+But it fails:
+	 
+Insecure $ENV{PATH} while running setuid at /local/lib/perl5/5.00503/Cwd.pm 
+line 82.
+
+The programs sets the PATH before and all other Perl programs, besides WML, 
+can be launched that way. It seems WML play tricks with the PATH.
+
+%  wml --version
+This is WML Version 1.7.1 (05-06-1999)
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00973" HREF="msg00973.shtml">Re: May I run wml from a setuid program? (It seems not)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00970.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00972.shtml">[BUG REPORT] WML 1.7.2, RedHat Linux 5.2</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01074.shtml">Re: http://www.nokia.com/corporate/wap/future_wap.html</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00973.shtml">Re: May I run wml from a setuid program? (It seems not)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00971"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00971"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

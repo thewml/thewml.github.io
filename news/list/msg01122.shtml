@@ -1,0 +1,145 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: using image size functions in ePerl -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Sat, 6 Nov 1999 10:42:06 +0100 (MET) -->
+<!--X-Message-Id: 19991105093757.A3818@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991101163452.A2672@perolo -->
+<!--X-Reference: Pine.LNX.3.96.991102095621.1395A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01122">Date Index</a>][<a href="thrd24.shtml#01122">Thread Index</a>]<br>
+[<A HREF="msg01121.shtml">Date Prev</A>][<A HREF="msg01123.shtml">Date Next</A>][<A HREF="msg01111.shtml">Thread Prev</A>][<A HREF="msg01128.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: using image size functions in ePerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 Nov 1999 09:37:57 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Tue, Nov 02, 1999 at 10:04:24AM +0100, Denis Barbier contaba:
+&gt;The simplest is to install this module into the standard Perl location.
+&gt;If you have WML sources, go to wml_common/imagesize, otherwise download
+&gt;it from
+&gt;<A  HREF="http://www.perl.com/CPAN-local/modules/by-module/Image/Image-Size-2.901.tar.gz">http://www.perl.com/CPAN-local/modules/by-module/Image/Image-Size-2.901.tar.gz</A>
+&gt;or any mirror and untar it. Then run
+&gt;   perl Makefile.PL
+&gt;   make
+&gt;   su
+&gt;   make install
+
+Well, finally I decided to check the 'htmlfix' code to see how do
+they manage to use this functions and I arrived to this clean an
+pretty solution.
+
+---------------------------------------------------
+#use wml::std::tags
+
+&lt;define-tag img-size whitespace=delete&gt;
+&lt;preserve img&gt;
+&lt;preserve return&gt;
+&lt;set-var %attributes&gt;
+&lt;:
+use lib "/usr/lib/wml/perl/lib";
+use lib "/usr/lib/wml/perl/lib/i386-linux/5.004";
+
+use Image::Size;
+
+($hor,$ver,$type) = imgsize("&lt;get-var img&gt;");
+
+if ("&lt;get-var return&gt;" eq "hor") 
+           { print $hor ; } 
+           
+if ("&lt;get-var return&gt;" eq "ver") 
+           { print $ver; }  
+           
+if ("&lt;get-var return&gt;" eq "type") 
+           { print $type; }  
+
+:&gt;
+&lt;/define-tag&gt;
+
+This image is a &lt;img-size img="xose.jpg" return="type"&gt; 
+( &lt;img-size img="xose.jpg" return="hor"&gt; 
+x 
+&lt;img-size img="xose.jpg" return="ver"&gt;)
+
+--------------------------------------------
+
+The answer is simply the 'use lib .....'. (Pretty simple). 
+
+Maybe somebody finds of any use this little 'tag' I have created.
+
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01128" HREF="msg01128.shtml">Re: using image size functions in ePerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01106" HREF="msg01106.shtml">using image size functions in ePerl</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="01111" HREF="msg01111.shtml">Re: using image size functions in ePerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01121.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01123.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01111.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01128.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01122"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01122"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

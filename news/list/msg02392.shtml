@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Attributes / variables delimiters -->
+<!--X-From-R13: Uuvfynvar Znobherg <Uuvfynvar.ZnobhergNufp.se> -->
+<!--X-Date: Wed, 26 Sep 2001 16:30:11 +0200 (MET DST) -->
+<!--X-Message-Id: 20010926142908.CBC6D10E05@itesec.hsc.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02392">Date Index</a>][<a href="thrd48.shtml#02392">Thread Index</a>]<br>
+[<A HREF="msg02391.shtml">Date Prev</A>][<A HREF="msg02393.shtml">Date Next</A>][<A HREF="msg02391.shtml">Thread Prev</A>][<A HREF="msg02393.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Attributes / variables delimiters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ghislaine Labouret &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 26 Sep 2001 16:29:51 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+What could I use to delimit tag attributes when the content of those
+attributes is rather complicated and already contain spaces, double
+quotes, equal signs, language slices...? 
+
+So far I am using double quotes (&lt;MYTAG attr1="stuff" attr2="other
+stuff"&gt;), but I think it would make things easier if I could switch to
+some character not used elsewhere. I have a page using a tag with rather
+complicated attributes and nested stuff which does not compile,
+certainly because some attributes don't go through set-var correctly.
+
+I tried using &lt;attributes-quote %attributes&gt; to keep the double quotes
+around, but that does not work within set-var:
+
+toto.wml:
+  &lt;define-tag not-quoted&gt;
+  $attributes: %attributes
+  &lt;set-var %attributes&gt;
+  $foo1: &lt;get-var foo1&gt;
+  $bar1: &lt;get-var bar1&gt;
+  &lt;/define-tag&gt;
+  
+  &lt;define-tag quoted&gt;
+  $attributes-quote: &lt;attributes-quote %attributes&gt;
+  &lt;set-var &lt;attributes-quote %attributes&gt;&gt;
+  $foo2: &lt;get-var foo2&gt;
+  $bar2: &lt;get-var bar2&gt;
+  &lt;/define-tag&gt;
+  
+  &lt;not-quoted 
+  foo1="foo"
+  bar1="bar"&gt;
+  
+  &lt;quoted 
+  foo2="foo"
+  bar2="bar"&gt;
+
+output:
+$attributes: foo1=foo bar1=bar
+$foo1: foo
+$bar1: bar
+$attributes-quote: foo2="foo" bar2="bar"
+$foo2: "foo" bar2="bar"
+$bar2:
+
+The foo2 and bar2 variables don't get defined correctly.
+
+
+Sincerely,
+
+--
+Ghislaine Labouret, Network security consultant
+Hervé Schauer Consultants (HSC) - <A  HREF="http://www.hsc.fr/">http://www.hsc.fr/</A>
+Phone (+33)-141-409-700 - Fax (+33)-141-409-709
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02393" HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02391.shtml">Organizing a &quot;Lecture&quot; in a Tree + Having a page flow.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02391.shtml">Organizing a &quot;Lecture&quot; in a Tree + Having a page flow.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02392"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02392"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

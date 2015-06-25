@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml 2.0.7: ePerl printf -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 31 Jul 2001 20:27:17 +0200 (MET DST) -->
+<!--X-Message-Id: 20010731203501.C23829@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15RP8e&#45;0000KC&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 3B664DA7.FEB0DBE1@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010731085308.A21542@imacs.polytechnique.fr -->
+<!--X-Reference: 3B665803.DB9942C0@qis&#45;systemhaus.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02347">Date Index</a>][<a href="thrd47.shtml#02347">Thread Index</a>]<br>
+[<A HREF="msg02346.shtml">Date Prev</A>][<A HREF="msg02348.shtml">Date Next</A>][<A HREF="msg02341.shtml">Thread Prev</A>][<A HREF="msg02342.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml 2.0.7: ePerl printf</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 31 Jul 2001 20:35:01 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, Jul 31, 2001 at 09:02:27AM +0200, Karl-Heinz Marbaise wrote:
+&gt; Hi Denis,
+&gt; &gt; &gt; Am I not allowed to use printf in ePerl?
+&gt; &gt; You are, but %0 may be expanded because it is inside a tag definition.
+&gt; &gt; Then write
+&gt; &gt;    &lt;protect pass=2&gt;
+&gt; &gt;    printf STDOUT '%02d:%02d:%02d UTC %04d', $hour, $min, $sec, $year;
+&gt; &gt;    &lt;/protect&gt;
+&gt; I have tried to protect it like:
+&gt; printf STDOUT '\%02d...' but it didn't work either.
+&gt; 
+&gt; Many thanks it works like expected.
+
+You may also protect it with
+     printf STDOUT '%%02d...'
+I find it confusing in this special case, but maybe you prefer this
+solution.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02337" HREF="msg02337.shtml">xhtml vs. wml</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02338" HREF="msg02338.shtml">wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02340" HREF="msg02340.shtml">Re: wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02341" HREF="msg02341.shtml">Re: wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02346.shtml">Re: xhtml vs. wml</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02348.shtml">Re: &lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02341.shtml">Re: wml 2.0.7: ePerl printf</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02342.shtml">&lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02347"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02347"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

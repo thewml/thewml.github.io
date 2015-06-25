@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG: <sc> and umlaut characters -->
+<!--X-From-R13: =?vfb&#45;8859&#45;1?C?[=S4eg?= Znnx <[neg.ZnnxNunafn.rr> -->
+<!--X-Date: Thu, 14 Jan 1999 15:40:27 +0100 (CET) -->
+<!--X-Message-Id: 369E0062.83025B66@hansa.ee -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00309">Date Index</a>][<a href="thrd7.shtml#00309">Thread Index</a>]<br>
+[<A HREF="msg00308.shtml">Date Prev</A>][<A HREF="msg00310.shtml">Date Next</A>][<A HREF="msg00307.shtml">Thread Prev</A>][<A HREF="msg00310.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG: &lt;sc&gt; and umlaut characters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Märt Laak &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 14 Jan 1999 16:34:10 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+  I'm rather new to this list and don't know if this bug is already announced
+but anyway:
+  &lt;cs&gt; tag does not work properly with umlaut characters as of WML 1.6.7.
+  Either in &lt;isolatin&gt; mode and in normal &amp;{x}{uml/tilde}; mode.
+  It seems like &lt;cs&gt; does not process &amp;-sequence special characters as normal
+characters but like punctuation it have not to process.
+  Can it it be fixed somehow.? Why just let the &lt;sc&gt; to put &lt;font size="-1"&gt;
+over everything after first symbol?
+
+I'd like to thank Ralf for his work on wml. It is good piece of code. And
+welcome Denis!
+
+Regards, 
+----------------------------------------------
+-- Märt Laak
+----------------------------------------------
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00310" HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00308.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00307.shtml">ANNOUNCE: Welcome Denis Barbier, the new WML maintainer!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00309"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00309"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

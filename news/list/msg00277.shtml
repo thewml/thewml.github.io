@@ -1,0 +1,324 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Frames -->
+<!--X-From-R13: Xna Vbyyre <wubNcvatarg.pu> -->
+<!--X-Date: Mon, 14 Dec 1998 12:53:45 +0100 (CET) -->
+<!--X-Message-Id: 98121410120100.00494@apogee.aponet.priv -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199812101654.IAA26713@seer.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00277">Date Index</a>][<a href="thrd6.shtml#00277">Thread Index</a>]<br>
+[<A HREF="msg00276.shtml">Date Prev</A>][<A HREF="msg00278.shtml">Date Next</A>][<A HREF="msg00272.shtml">Thread Prev</A>][<A HREF="msg00292.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Frames</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 14 Dec 1998 09:18:43 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 10 Dec 1998, Michael McNamara wrote:
+&gt; &gt; &gt;	I am wondering is if I can get the automatic java script
+&gt; &gt; &gt;changing of navbar gifs from the 'normal' to 'over' to 'selected'
+&gt; &gt; i use my own tag-definitions and some variables with templates
+&gt; &gt; to solve this. it's working, but is not very portable. i have to modify the
+&gt; &gt; include files for every new site, but then i get exactly what i want.
+&gt; &gt; see <A  HREF="http://www.snf.ch/nfp42/">http://www.snf.ch/nfp42/</A>  (it's a very academic site, at the moment 
+&gt;	Yes I'd love to see it; it seems you've done exactly what I
+&gt;want to do: menus using navbars for major navigation, and then frames
+&gt;for selecting the various publications.
+
+i use seperate templates for
+the different kind of pages one needs for frames. the mainpages
+of the above pages are not that complicated as you can see.
+i have another site running, also made completely with WML,
+check: <A  HREF="http://www.internutrition.ch">http://www.internutrition.ch</A>
+one might ask now why does this guy use frames then for the other
+site. that's because it is much easier for non-pros using 
+netscape-composer or alikes for creating or _editing_ pages.
+
+the source:
+preface: the source is not cleaned up. there are e.g. some
+includes i do not use at all. but don't mind please.
+the top frame is different for every entry in the side frame. so
+i handle the side and top frames differently. since this is my
+second WML project only and i am still learning and producing
+my own basic definitions, top frame and side frame tag-definitions
+are kept seperat and there is a lot of code which could be shared
+in between them. below there are the sources for the top frame only
+because of the length of this mail. just tell me if you want to see the
+others too. they are not that different but there is some small extra
+functionality in them.
+
+- the top frames:
+wml_dev/com/tmpl/
+  nfppage_top.wml	# the template for the top frame
+  top_def.wml		# the tag-definitions for the top frame
+wml_dev/home/incl/
+  topmenu.wml		# the entries we like to have in the top frame
+wml_dev/home/
+  t_home.wml		# the only mainfile in this dir generating the top frame
+
+-order the files are processed: 
+ -&gt; t_home.wml -&gt; nfppage_top -&gt; topmenu -&gt; top_def -&gt; 
+
+- the side frames:
+wml_dev/nav/om/tmpl/
+  nfppage_side.wml	# the template for the side frame
+  side_def.wml		# the tag-definitions for the side frame
+wml_dev/nav/incl/
+  sidemenu.wml		# the entries we like to have in the top frame
+wml_dev/nav/
+  s_home.wml		# one of the mainfiles in this dir generating a side frame
+
+&gt;	Vis a vis your previous question: I think sharing the 'source'
+&gt;for various web pages is a useful way for us to learn good use of
+&gt;variables and such.
+
+yes. let's share our ideas.
+
+-the files:
+
+wml_dev/com/tmpl/
+  nfppage_top.wml
+--------------------
+####
+##  nfppage_top.wml -- page template: 
+##  copyright (c) 1998 jan holler, all rights reserved. 
+##  v 1.0 - 98.11.24
+####
+
+#use wml::std::tags
+#use wml::std::page
+#use wml::std::info
+#use wml::std::href
+#use wml::fmt::isolatin
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;
+[PAGE_HEAD:\
+&lt;page 
+	title="$(WEBSITE_NAME) $(TITLE_SEP) $(THEME_TITLE) $(TITLE_SEP) &lt;&lt;SUBJECT&gt;&gt;"
+	bgcolor="#ffffff" 
+	background="$(ROOT)/images/top_bg.gif" 
+	vlink="#00ff00"
+	alink="#ff0000"
+&gt;
+
+&lt;!-- 
+#include '$(COM_INCL)/disclaim.wml'
+--&gt;
+#&lt;set-var tmp="&lt;&lt;DOCDATE&gt;&gt;"&gt;
+#&lt;if &lt;match "&lt;get-var tmp&gt;" "&lt;&gt;"&gt;
+  &lt;set-var doc_creat="23-11-1998 12:00:00"&gt;
+#  &lt;set-var doc_creat="&lt;get-var tmp&gt;"&gt;
+#&gt;  
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=iso-8859-1"&gt;
+&lt;info style=meta
+#	content-type="text/html;charset=iso-8859-1"
+	copyright="1998 holler gelasma systems, Switzerland"
+	keywords="Switzerland, Foreign Policy, Security Policy, European Integration, Small State, International Relations
+"
+	description="Switzerland, Foreign Policy, Security Policy, European Integration, Small State, International Relations
+"
+	created="&lt;get-var "doc_creat"&gt;"
+&gt;
+&lt;&lt;PAGE_HEAD&gt;&gt;
+&lt;/head&gt;
+
+&lt;define-tag subject&gt;
+...SUBJECT&gt;&gt;%0&lt;&lt;..
+&lt;/define-tag&gt;
+&lt;define-tag docdate&gt;
+...DOCDATE&gt;&gt;%0&lt;&lt;..
+&lt;/define-tag&gt;
+
+
+#include '$(LOC_INCL)/topmenu.wml' 
+
+
+#&lt;!-- Begin Contents --&gt;
+:PAGE_HEAD]
+[PAGE_BODY:
+&lt;&lt;PAGE_BODY&gt;&gt;
+:PAGE_BODY]
+[PAGE_FOOT:
+#&lt;!-- End Contents --&gt;
+
+:PAGE_FOOT]
+
+# per default in body
+...PAGE_BODY&gt;&gt;
+--------------------
+
+wml_dev/com/tmpl/
+  top_def.wml		# the tag-definitions for the top frame
+--------------------
+#use wml::std::lang
+
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+&lt;lang:new id=fr short&gt;
+
+&lt;define-container js_inc&gt;
+&lt;script language="JavaScript"&gt;
+&lt;!-- 
+if (document.images) {
+&lt;get-var "loc"&gt;_lo = new Image(); &lt;get-var "loc"&gt;_lo.src = "$(LOC)/images/top/&lt;get-var "loc"&gt;_&lt;de: d&gt;&lt;en: e&gt;&lt;fr: f&gt;_lo.gif";
+&lt;get-var "loc"&gt;_hi = new Image(); &lt;get-var "loc"&gt;_hi.src = "$(LOC)/images/top/&lt;get-var "loc"&gt;_&lt;de: d&gt;&lt;en: e&gt;&lt;fr: f&gt;_hi.gif";
+&lt;get-var "loc"&gt;_ac = new Image(); &lt;get-var "loc"&gt;_ac.src = "$(LOC)/images/top/&lt;get-var "loc"&gt;_&lt;de: d&gt;&lt;en: e&gt;&lt;fr: f&gt;_ac.gif"; }
+// --&gt;
+&lt;/script&gt;
+&lt;/define-container&gt;
+
+&lt;define-container act_image&gt;
+&lt;if &lt;match "$(area)" "&lt;get-var "loc"&gt;"&gt;
+"&lt;set-var act_img="$(LOC)/images/top/&lt;get-var "loc"&gt;_&lt;de: d&gt;&lt;en: e&gt;&lt;fr: f&gt;_hi.gif"&gt;&lt;set-var js_in="imgNo"&gt;&lt;set-var js_out="imgOv"&gt;"
+"&lt;set-var act_img="$(LOC)/images/top/&lt;get-var "loc"&gt;_&lt;de: d&gt;&lt;en: e&gt;&lt;fr: f&gt;_lo.gif"&gt;&lt;set-var js_in="imgOv"&gt;&lt;set-var js_out="imgNo"&gt;"
+&gt;
+&lt;/define-container&gt;
+
+&lt;define-container js_onMouse&gt;
+onMouseOver="&lt;get-var "js_in"&gt;('&lt;get-var "loc"&gt;', '&lt;de: &lt;get-var "descr_d"&gt;&gt;&lt;en: &lt;get-var "descr_e"&gt;&gt;&lt;fr: &lt;get-var "descr_f"&gt;&gt;'); return true" \
+onMouseOut="&lt;get-var "js_out"&gt;('&lt;get-var "loc"&gt;'); return true" \
+&lt;/define-container&gt;
+
+&lt;define-container entry&gt;
+&lt;act_image&gt;&lt;/act_image&gt;
+&lt;js_inc&gt;&lt;/js_inc&gt;
+&lt;a href="$(LOC)/&lt;get-var "loc"&gt;&lt;de: _d&gt;&lt;en: _e&gt;&lt;fr: _f&gt;.html" target = "main_frame" \
+&lt;js_onMouse&gt;&lt;/js_onMouse&gt;\
+&gt;\
+&lt;img src="&lt;get-var "act_img"&gt;" alt="&lt;de: &lt;get-var "descr_d"&gt;&gt;&lt;en: &lt;get-var "descr_e"&gt;&gt;&lt;fr: &lt;get-var "descr_f"&gt;&gt;" border="0" name="&lt;get-var "loc"&gt;"&gt;&lt;/a&gt; \
+&lt;/define-container&gt;
+
+
+&lt;define-container deadentry&gt;
+&lt;/define-container&gt;
+
+# begin of actual page-definitions
+#
+
+...MENU_HEAD&gt;&gt;
+&lt;script language="JavaScript"&gt;
+&lt;!--
+function imgNo(imgName) {
+if (document.images) { document[imgName].src = eval(imgName + "_lo.src"); self.status = ''; } }
+function imgAc(imgName) {
+if (document.images) { document[imgName].src = eval(imgName + "_ac.src"); self.status = ''; } }
+function imgOv(imgName, descript) {
+if (document.images) { document[imgName].src = eval(imgName + "_hi.src"); self.status = descript; } }
+// --&gt;
+&lt;/script&gt;
+&lt;&lt;..
+...MENU_BODY&gt;&gt;
+&lt;&lt;..
+...MENU_TAIL&gt;&gt;
+&lt;&lt;..
+&lt;&lt;MENU_HEAD&gt;&gt;
+&lt;&lt;MENU_BODY&gt;&gt;
+&lt;&lt;MENU_TAIL&gt;&gt;
+# per default in body of menu, don't forget to close there
+...MENU_BODY&gt;&gt;
+--------------------
+
+wml_dev/home/incl/
+  topmenu.wml		# the entries we like to have in the top frame
+--------------------
+# local configuration for entries in the topmenu
+#
+# home
+
+#use wml::tmpl::top_def
+
+&lt;set-var loc="ueber" descr_d="&amp;Uuml;ber uns" descr_e="About us" descr_f="Sur nous"&gt;&lt;entry&gt;&lt;/entry&gt;
+&lt;set-var loc="ziele" descr_d="Ziele" descr_e="Goals" descr_f="Objectifs"&gt;&lt;entry&gt;&lt;/entry&gt;
+&lt;set-var loc="schwerp" descr_d="Schwerpunkte" descr_e="Main points" descr_f="Points centraux"&gt;&lt;entry&gt;&lt;/entry&gt;
+
+#we have to close the above inclusion (MENU_BODY)
+&lt;&lt;..
+--------------------
+
+wml_dev/home/
+  t_home.wml		# the only mainfile in this dir generating the top frame
+--------------------
+#!wml -o (ALL-LANG_*)uLANG_DE:t_home_d.html \
+      -o (ALL-LANG_*)uLANG_FR:t_home_f.html \
+      -o (ALL-LANG_*)uLANG_EN:t_home_e.html
+
+
+#use wml::tmpl::nfppage_top area=home
+
+# date of creation
+&lt;docdate "23-11-1998 12:00:00"&gt;
+# titel of page
+&lt;subject "Home"&gt;
+--------------------
+
+
+have fun...
+ -j.
+--  
+  holler gelasma systems
+  informatik, it-services, web-produktionen
+  tel: +41 31 9916185, bern, schweiz
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00272" HREF="msg00272.shtml">Re: Frames</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00276.shtml">Re: Blank lines (once more)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00278.shtml">How to disable javascript ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00272.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00292.shtml">Re: Frames</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00277"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd6.shtml#00277"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

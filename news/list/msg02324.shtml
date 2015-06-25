@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <navbar> bug? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 20 Jul 2001 23:55:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20010721000315.A14564@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15NZsG&#45;0003w3&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010720160840.A12827@imacs.polytechnique.fr -->
+<!--X-Reference: E15NbdF&#45;0006pN&#45;00@braindead.automatedproperties.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02324">Date Index</a>][<a href="thrd47.shtml#02324">Thread Index</a>]<br>
+[<A HREF="msg02323.shtml">Date Prev</A>][<A HREF="msg02325.shtml">Date Next</A>][<A HREF="msg02322.shtml">Thread Prev</A>][<A HREF="msg02335.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;navbar&gt; bug?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 21 Jul 2001 00:03:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, Jul 20, 2001 at 10:51:57AM -0400, Warren Turkal wrote:
+&gt; I know that my image filenames follow the pattern
+&gt; nav_button_home-std.png
+&gt; nav_button_home-sel.png
+&gt; nav_button_home-ovr.png
+&gt; 
+&gt; If I replace the * with std, get rid of the imgstar attribute, and 
+&gt; re-wmk the files with the navbar it works.
+
+Sorry, I still do not understand your problem.
+Could you check if rollover is okay with your browser on
+        <A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+and/or publish your page online?
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02319" HREF="msg02319.shtml">&lt;navbar&gt; bug?</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02320" HREF="msg02320.shtml">Re: &lt;navbar&gt; bug?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02322" HREF="msg02322.shtml">Re: &lt;navbar&gt; bug?</A></strong>, <em>From:</em> Warren Turkal</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02323.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02325.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02322.shtml">Re: &lt;navbar&gt; bug?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02335.shtml">ePerl within &lt;xtable&gt; tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02324"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02324"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

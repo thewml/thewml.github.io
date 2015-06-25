@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: ANNOUNCE: WML 1.6.5 -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Tue, 16 Jun 1998 15:06:09 +0200 (CEST) -->
+<!--X-Message-Id: 19980616150606.A18399@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail3.shtml#00125">Date Index</a>][<a href="thrd3.shtml#00125">Thread Index</a>]<br>
+[<A HREF="msg00124.shtml">Date Prev</A>][<A HREF="msg00126.shtml">Date Next</A>][<A HREF="msg00124.shtml">Thread Prev</A>][<A HREF="msg00126.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>ANNOUNCE: WML 1.6.5</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 16 Jun 1998 15:06:06 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+After a long time of silence I'm back with a maintainance release of WML:
+
+  Website META Language, Version 1.6.5
+  <A  HREF="http://www.engelschall.com/sw/wml/">http://www.engelschall.com/sw/wml/</A>
+   <A  HREF="ftp://ftp.engelschall.com/sw/wml/">ftp://ftp.engelschall.com/sw/wml/</A>
+
+The entry from the ChangeLog:
+
+  Changes between 1.6.4 and 1.6.5:
+      980323 - added the HTML Specifications in ASCII form
+               to wml_docs/. These are now directly accessible
+               via WMd.
+      980403 - Upgraded Bit::Vector from 5.1 to 5.2
+               (which now is again under Artistic and GPL)
+             - Upgraded Getopt::Long from 2.15 to 2.16
+      980404 - Made /etc/resolv.conf parsing in configure more
+               robust [Thanks to Stephane Bortzmeyer
+               &lt;bortzmeyer@pasteur.fr&gt; for hint]
+             - Removed stream-stuff from Pass 2 (MHC) because
+               it's TCP stuff caused problems on some platforms
+               and WML does not need it.  [Thanks to Stephane
+               Bortzmeyer &lt;bortzmeyer@pasteur.fr&gt; for hint]
+      980405 - Upgraded iSelect from 1.0.4 to 1.1.0
+      980417 - Fixed generation of 'alt' tags in wml::des::navbar
+               [Thanks to Dan Ludden &lt;dan.ludden@lmco.com&gt; for patch]
+      980616 - Upgraded Bit::Vector from 5.2 to 5.3
+             - Fixed non-"site_lib" installation of Getopt::Long
+
+The distribution size was increased dramatically (500KB) because of the added
+HTML spec documents. But IMHO it is worth the size, because one always needs
+these documents at hand. Now you can access ASCII versions of them directly
+via `wmd'.
+
+Sorry for the delay of this release but, as you perhaps know, I'm an Apache
+Group core team member and active developer and were really busy in April and
+May with Apache 1.3b6, then 1.3b7 and then finally with kicking out 1.3.0.
+I've personally added a lot of new features to Apache 1.3 for the pleasure of
+the net community (i.e. _YOU_!), so I'm sure you understand that the WML
+project had to wait a little bit ;-) But because WML 1.6.x is really stable
+since a few months this shouldn't hurt us.
+
+Currently I'm writing my diploma thesis until Aug 15, 1998, so don't expect
+active WML enhancements in the next weeks. Stay at 1.6.4 if you're happy and
+perhaps upgrade to WML 1.6.5 if you want the new documents, etc. But there is
+no real need. WML 1.6.4 is stable enough. When I find time the next project
+which gets it is ePerl where some bug reports are in the queue.
+
+PS: Sorry for the FreeBSD users who didn't received updates of the
+    WML port for 1.6.3 and 1.6.4 (as I said I was busy with Apache 1.3).  WML
+    1.6.5 is already in the ports now. Feel free to use it to install WML
+    under FreeBSD.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00124.shtml">Every Active Member Deserves A Paycheck!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00126.shtml">configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00124.shtml">Every Active Member Deserves A Paycheck!</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00126.shtml">configure bug in wml-1.6.5</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail3.shtml#00125"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd3.shtml#00125"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

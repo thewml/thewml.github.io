@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to use tidy? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 10 Mar 2000 14:47:51 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000310142803.12838B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000310141431.T21701@spinnaker.rhein.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01421">Date Index</a>][<a href="thrd29.shtml#01421">Thread Index</a>]<br>
+[<A HREF="msg01420.shtml">Date Prev</A>][<A HREF="msg01422.shtml">Date Next</A>][<A HREF="msg01420.shtml">Thread Prev</A>][<A HREF="msg01415.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to use tidy?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 10 Mar 2000 14:46:22 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, 10 Mar 2000, Roland Rosenfeld wrote:
+
+&gt; On Fri, 10 Mar 2000, Denis Barbier wrote:
+&gt; 
+&gt; &gt; &gt; -E 'tidy -mq'
+&gt; &gt; &gt; in my .wmlrc seems to do nearly what I expect.
+&gt; &gt; &gt; Now I only have to write a wrapper, which changes the exit value of
+&gt; &gt; &gt; tidy (at the moment it terminates with 1 on warnings)...
+&gt; 
+&gt; &gt; &gt; But I still think, that there should be some more elegant way to do
+&gt; &gt; &gt; so, otherwise tidy doesn't need to be installed as wml_aux_tidy.
+&gt; 
+&gt; &gt; When reading this thread i firstly agree.  After some deeper
+&gt; &gt; thoughts, i believe the current situation is not so bad.
+&gt; 
+&gt; But it's inconsistent with the other epilog filters.
+
+I do not use tidy and were asked to put it into WML. Some people find
+this tool very useful, so i have no reason to remove it now.
+
+&gt; In the wml script I find the following code for epilog filters:
+[...]
+&gt; Shouldn't you add something like this:
+&gt; 
+&gt;             elsif ($e =~ m|^tidy(.*)|) {
+&gt;                 $e = "/usr/lib/wml/exec/wml_aux_tidy$1";
+&gt;                 $e .= " -mq" if ($1 eq '');
+&gt;             }
+
+Indeed, thanks for this point.
+Are you sure that -q should be the default? What do other tidy users
+think about this proposition?
+
+&gt; And maybe change of the $rc check, not to exit on warnings (return
+&gt; value 1 of tidy, an error is signaled by return value 2).
+
+Ok, i'll take care of that.
+
+&gt; &gt; There should be a note in documentation explaining how to use
+&gt; &gt; post-processors (so called epilog filters).
+&gt; 
+&gt; There is a note about it in wml(1):
+&gt; 
+&gt;        -E, --epilog=PATH
+&gt;             Runs an epilogue filter over the finally resulting
+&gt;             output files.  Currently the following WML-specific
+&gt;             filters are known: htmlinfo, weblint and linklint.
+&gt;             But you can specify any program which is available in
+&gt;             your PATH. This program receives the file to act on
+&gt;             as its first command line argument.
+&gt; 
+&gt; But it doesn't give a hint on tidy, especially the need to use the -m
+&gt; option of tidy is missing.  Maybe the name "filter" is somewhat wrong
+&gt; here, because a filter means that it reads something on stdin, changes
+&gt; it, and writes the changed version on stdout.  But -E only runs the
+&gt; perl system() call with the program and the HTML file as parameters.
+
+Yes, that is why i called it post-processor in my previous post. I will
+write ``epilogue program'' unless it hurts some ears.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01420" HREF="msg01420.shtml">Re: How to use tidy?</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01420.shtml">Re: How to use tidy?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01422.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01420.shtml">Re: How to use tidy?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01415.shtml">Some news about life, pancakes and WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01421"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01421"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

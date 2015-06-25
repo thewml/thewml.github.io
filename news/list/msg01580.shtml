@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.0, Solaris2.6 -->
+<!--X-From-R13: qhraxvNvfv.rr.rgum.pu -->
+<!--X-Date: Fri, 19 May 2000 22:04:58 +0200 (MET DST) -->
+<!--X-Message-Id: 200005181236.OAA05230@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01580">Date Index</a>][<a href="thrd33.shtml#01580">Thread Index</a>]<br>
+[<A HREF="msg01584.shtml">Date Prev</A>][<A HREF="msg01585.shtml">Date Next</A>][<A HREF="msg01587.shtml">Thread Prev</A>][<A HREF="msg01585.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.0, Solaris2.6</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Thu, 18 May 2000 14:36:24 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.0
+Operating System: Solaris2.6
+
+Problem Description:
+| Hello,
+| 
+| Can you explain, why the following simple example
+| does not work:
+| 
+| #### Start of tst.wml ######
+| 
+| #use wml::std::lang
+| 
+| &lt;lang:new id=en short&gt;
+| &lt;lang:new id=de short&gt;
+| &lt;lang:star:slice: tst.*.html&gt;
+| 
+| &lt;en: Hallo &lt;b&gt;world&lt;/b&gt;. blabla&gt;
+| &lt;de: Hallo &lt;b&gt;jedermann&lt;/b&gt;. blabla&gt;
+| 
+| #### End #######
+| 
+| Of course, the same example works with wml-1.7.4.
+| It also translates correctly, if you use
+| &lt;xx&gt;...&lt;/xx&gt; instead of &lt;xx: ...&gt;
+| 
+| Best regards
+| Max
+| 
+| -- 
+|   _______________________________________________________________________
+|  /\  Dr. Max H. Duenki - Tel: +41 1 632 3624  Fax: +41 1 632 1208        \
+|  \_| Organisation: Swiss Federal Institute of Technology Zurich, ETHZ     |
+|    | Department:   Signal and Information Processing Laboratory ISI       |
+|    | Room:         ETF E104,                                              |
+|    | Address:      Sternwartstrasse 7, CH-8092 Zurich, Switzerland.       |
+|    | Email: duenki@isi.ee.ethz.ch, WWW: <A  HREF="http://www.isi.ee.ethz.ch/~duenki">http://www.isi.ee.ethz.ch/~duenki</A> |
+|    |  ____________________________________________________________________|___
+|    \_/_______________________________________________________________________/
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01584.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01585.shtml">[BUG REPORT] WML 2.0.0, redhat 6.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01587.shtml">Re: BUG REPORT: Website META Language 2.0.0 (11-May-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01585.shtml">[BUG REPORT] WML 2.0.0, redhat 6.1</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01580"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd33.shtml#01580"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

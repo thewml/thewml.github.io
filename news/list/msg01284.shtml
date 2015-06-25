@@ -1,0 +1,88 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Combining wml::des:navbar with per&#45;button HTML code -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Thu, 20 Jan 2000 12:14:34 +0100 (MET) -->
+<!--X-Message-Id: 200001201114.MAA11922@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01284">Date Index</a>][<a href="thrd27.shtml#01284">Thread Index</a>]<br>
+[<A HREF="msg01283.shtml">Date Prev</A>][<A HREF="msg01285.shtml">Date Next</A>][<A HREF="msg01283.shtml">Thread Prev</A>][<A HREF="msg01285.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Combining wml::des:navbar with per-button HTML code</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jan 2000 12:14:26 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+	 
+I would like to add a bit of HTML code in *some* buttons in a navbar. (It is 
+actually ePerl code to display or not the button, depending on the IP address 
+of the client.)
+
+There is apparently no per-button prolog or epilog? I can modify 
+wml::des:navbar to add a "custom-code" attribute in navbar:button but I wonder 
+if there is a better way?
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01285" HREF="msg01285.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01283.shtml">Re: WML und Meta-HTML (fwd)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01285.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01283.shtml">Re: WML und Meta-HTML (fwd)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01285.shtml">Re: Combining wml::des:navbar with per-button HTML code</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01284"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd27.shtml#01284"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

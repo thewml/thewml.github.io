@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Running WML from WML? -->
+<!--X-From-R13: "Dnys E. Satryfpunyy" <efrNratryfpunyy.pbz> -->
+<!--X-Date: Fri, 7 May 1999 10:56:25 +0200 (MET DST) -->
+<!--X-Message-Id: 19990507104713.A84789@engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990506170440.7270A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Reference: 199905070838.KAA21226@ezili.sis.pasteur.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00622">Date Index</a>][<a href="thrd12.shtml#00622">Thread Index</a>]<br>
+[<A HREF="msg00621.shtml">Date Prev</A>][<A HREF="msg00623.shtml">Date Next</A>][<A HREF="msg00620.shtml">Thread Prev</A>][<A HREF="msg00512.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Running WML from WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Ralf S. Engelschall&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 7 May 1999 10:47:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Fri, May 07, 1999, Stephane Bortzmeyer wrote:
+
+&gt; On Thursday 6 May 1999, at 18 h 2, the keyboard of Denis Barbier 
+&gt; &lt;barbier@imacs.polytechnique.fr&gt; wrote:
+&gt; 
+&gt; &gt; Below is a quick workaround ; there are 3 or 4 other memory allocations
+&gt; &gt; without checks. I will fix them later, unless someone volunteer?
+&gt; &gt; Stéphane, could you check if it solves your problem, please.
+&gt; 
+&gt; Your last patch (the longest) works fine with wml (Digital Unix 4, patch
+&gt; applied on clean WML 1.6.8, the bug is perfectly reproducable before the
+&gt; patch). Thanks a lot, I can drop the wrapper.
+&gt; 
+&gt; Someone should do it for ePerl, too...
+
+I've now already comitted it to my ePerl CVS repository.  I hope I find some
+time the next weeks to kick out ePerl 2.3.0.  Because I've still not found a
+maintainer for ePerl I've to do it myself and this means ePerl can grab only
+very less time from my available time...
+
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00615" HREF="msg00615.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00620" HREF="msg00620.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Stephane Bortzmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00621.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00623.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00620.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00512.shtml">Auto deps</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00622"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00622"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

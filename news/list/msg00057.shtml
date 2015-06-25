@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: How to define an \<expire\> tag\? -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Mon, 26 Jan 1998 16:18:35 +0100 (MET) -->
+<!--X-Message-Id: 199801261518.QAA21787@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1oh0zz61w.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00057">Date Index</a>][<a href="thrd2.shtml#00057">Thread Index</a>]<br>
+[<A HREF="msg00056.shtml">Date Prev</A>][<A HREF="msg00058.shtml">Date Next</A>][<A HREF="msg00056.shtml">Thread Prev</A>][<A HREF="msg00058.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: How to define an \&lt;expire\&gt; tag\?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Mon, 26 Jan 1998 16:18:34 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; &gt;     | &lt;define-tag expires&gt;
+&gt; &gt;     | &lt;:{
+&gt; &gt;     |      #   parse yy-mm-dd format into (dd, mm, yyyy)
+&gt; &gt;     |      my @et = reverse(split(/-/, '%0')); 
+&gt; &gt;     |      #   parse localtime into (dd, mm, yyyy)
+&gt; &gt;     |      my @ct = (localtime(time()))[3..5]; $ct[1] += 1; $ct[2] += 1900;
+&gt; &gt;     | 
+&gt; &gt;     |      #   leave all standard locations
+&gt; &gt;     |      #   (and implicitly enter "null" location)
+&gt; &gt;     |      #   if already expired
+&gt; &gt;     |      if (   $ct[0]+31*$ct[1]*395*$ct[2]
+&gt; &gt;     |          &gt;= $et[0]+31*$et[1]*395*$et[2]) {
+&gt; &gt;     |          print '&lt;&lt;main..'
+&gt; &gt;     |      }
+&gt; &gt;     | }:&gt;
+&gt; &gt;     | &lt;/define-tag&gt;
+&gt; &gt; 
+&gt; &gt; Isn't it a little bit better? ;_)
+&gt; 
+&gt; &gt; Perhaps someone of you makes it even better. At least the if-statement?
+&gt; 
+&gt; I guess the 395 should be replaced by 365???  
+
+Yes, was a typo.
+
+&gt; Anyway, this breaks for
+&gt; leap-years. How about using Timelocal instead? The problem is that
+&gt; this is (funnily) not a standard perl module either. But as I have it,
+&gt; I guess I'll use it.
+
+You can use it for your &lt;expire&gt;-variant but the one included in the WML
+distribution has to be written in a way it can work with WMLs stuff
+out-of-the-box. The only prerequisit WML have to use is the standard Perl
+distribution. So, distributed includes only can use modules of this standard
+Perl distribution or modules which are part of WML's wml_common/ dir.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00056" HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00058.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00056.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00058.shtml">Re: How to define an \&lt;expire\&gt; tag\?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00057"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00057"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

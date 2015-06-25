@@ -1,0 +1,153 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [wml] usable snapshot -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 9 Jun 2000 02:24:45 +0200 (MET DST) -->
+<!--X-Message-Id: 20000609022657.A8859@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail35.shtml#01708">Date Index</a>][<a href="thrd35.shtml#01708">Thread Index</a>]<br>
+[<A HREF="msg01707.shtml">Date Prev</A>][<A HREF="msg01709.shtml">Date Next</A>][<A HREF="msg01707.shtml">Thread Prev</A>][<A HREF="msg01709.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[wml] usable snapshot</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Jun 2000 02:26:57 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+i committed tonight some changes in WML to implement cases (A) and (C)
+discussed in previous mails.  Basically, mp4h has a -X flag to change its
+behaviour, case (C) is the default case (A) is emulated with -X 3073.
+case (B) with -X 3074.
+When calling mp4h from wml, you can change expansion flags with the -W
+wml flag, e.g.  -W2,'-X 32'
+
+You may wonder what are these numbers for, here is a brief description:
+      1 do not parse unknown tags
+      2 unknown tags are assumed being simple
+      4 trailing star in tag name do not make this tag simple
+      8 leave the trailing star in tag name
+     16 leave the trailing slash in tag attributes
+     32 backslashes are expanded in compatibility mode
+   1024 suppress warnings about bad nested tags
+   2048 suppress warnings about missing trailing slash
+
+Below are some points about quoting, which has not been discussed yet.
+In HTML, quotes are used to group attribute values. Single or double
+quotes are allowed, and it is possible to `escape' them with a
+backslash.
+
+So surprisingly, i decided that in mp4h, quotes are also used to group
+attribute values.  But only double quotes are supported (i did not try
+to implement single quotes), and they can be escaped too.
+
+This sounds simple, now let us discuss about how it really works. One
+problem is that attribute values may contain other tags, which in turn
+may contain attributes, etc.
+
+With Meta-HTML we wrote
+  &lt;group "&lt;set-var src=\"foo.gif\"&gt;"&gt;
+  &lt;group "&lt;img src=\"foo.gif\"&gt;"&gt;
+  print  "&lt;set-var src=\"foo.gif\"&gt;"
+  print  "&lt;img src=\"foo.gif\"&gt;"
+
+With defined tags, quotes do not need to be escaped, because each tag
+must be well-formed, so in
+  &lt;group "&lt;set-var src="foo.gif"&gt;"&gt;
+         1             2       3  4
+quote 2 cannot end string beginning at quote 1, because the &lt;set-var&gt;
+tag is not finished. So quote 2 begins a new string, and next steps
+are obvious.
+For this reason, i prefer this syntax:
+  &lt;group "&lt;set-var src="foo.gif"&gt;"&gt;
+  print  "&lt;set-var src="foo.gif"&gt;"
+
+Following rules describe how quoting and escaping 
+  * quotes are special only in attributes
+  * quotes within quotes are escaped by a backslash
+  * backslashes are special only in strings within attributes
+
+The last rule is to ensure that
+  print  "&lt;"."img src=\"foo.gif\"&gt;"
+will be right.
+A final note about escaping: a compatibility mode is written.  This
+compatibility refers to Meta-HTML, in which we must write
+   &lt;subst-in-string "abc" "\\(.\\)" "\\1 "&gt;
+Backslashed are printed twice, because one is gobbled at parsing time.
+When not in compatibility mode, only backslashes before 'n', 'r', 't',
+'"' and '\' are special, so one may write
+   &lt;subst-in-string "abc" "\(.\)" "\1 "&gt;
+which is much more natural.
+
+Well, some points must be rephrased, but i believe that this whole
+syntax is good.  If you want to try it, check out the latest wml
+snapshots (at least wml-SNAP-200006090600)
+
+The final question is which expansion scheme do we want now as default?
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01709" HREF="msg01709.shtml">wml example section</A></strong>, <em>From:</em> Afam Agbodike</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01707.shtml">Re: compilation problems</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01709.shtml">wml example section</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01707.shtml">Re: compilation problems</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01709.shtml">wml example section</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail35.shtml#01708"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01708"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

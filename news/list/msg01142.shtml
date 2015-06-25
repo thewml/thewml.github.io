@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: "Rnexb Yevmvp" <qxevmvpNofo&#45;fbsgjner.pbz> -->
+<!--X-Date: Sun, 14 Nov 1999 13:27:26 +0100 (MET) -->
+<!--X-Message-Id: 000101bf2dfa$4c16cda0$24be22c3@phrankphurt.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.991113163650.4339C&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01142">Date Index</a>][<a href="thrd23.shtml#01142">Thread Index</a>]<br>
+[<A HREF="msg01141.shtml">Date Prev</A>][<A HREF="msg01143.shtml">Date Next</A>][<A HREF="msg01137.shtml">Thread Prev</A>][<A HREF="msg01253.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darko Krizic&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 13 Nov 1999 18:12:43 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; WML requires the Perl-Module File::PathConvert, which is not standard
+&gt; &gt; (at least not at SuSE 6.2), but does not check for existence.
+&gt; 
+&gt; This module is shipped with WML.
+&gt; I guess you have installed a binary RPM, please complain to the
+&gt; packager.
+
+No, I did this
+
+- cd /usr/local/src
+- tar -xvzf .../wml-1.7.4.tar.gz
+- cd wml-1.7.4
+- configure --prefix=/usr/local
+- make -&gt; ok
+- make test -&gt; complaining about missing File::PathConvert
+- perl -MCPAN -e shell
+- install File::PathConvert
+- make test -&gt; ok
+- make install -&gt; ok
+- [using wml] -&gt; ok
+
+...darko
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01137" HREF="msg01137.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01141.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01143.shtml">RE: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01137.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01253.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01142"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01142"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

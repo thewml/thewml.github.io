@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: conflict between passes -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Fri, 30 Jan 1998 17:57:16 +0100 (MET) -->
+<!--X-Message-Id: 199801301657.RAA27966@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1n2geqdwg.fsf@foobar.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00074">Date Index</a>][<a href="thrd2.shtml#00074">Thread Index</a>]<br>
+[<A HREF="msg00073.shtml">Date Prev</A>][<A HREF="msg00075.shtml">Date Next</A>][<A HREF="msg00073.shtml">Thread Prev</A>][<A HREF="msg00070.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: conflict between passes</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Fri, 30 Jan 1998 17:57:14 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello Fritz Zaucker, in a previous mail you wrote:
+
+&gt; &gt; Correct, because ePerl currently doesn't support nested Perl blocks.
+&gt; &gt; As you might expect this restriction is not because I just wanted
+&gt; &gt; ePerl to support it. It is because it is very difficult to do it in
+&gt; &gt; a really useful and backward-compatible manner. I'll start a
+&gt; &gt; discussion in a different posting because it bites us a lot of times
+&gt; &gt; and I really want to implement the nesting-support now. But we need
+&gt; &gt; to make sure we decided the correct approach which is 100%
+&gt; &gt; backward-compat, so existing scripts don't get broken.
+&gt; 
+&gt; How many people are using WML right now? How important the backward
+&gt; compatibility? Could it be solved by "activating" the new mode only on
+&gt; demand, so that people can still process old stuff, while can also
+&gt; create new stuff.
+&gt; 
+&gt; Of course, I am biased, as I don't have much existing code, yet ...
+
+The WML users are not my problem, because these currently aren't too much.
+But I have not to change WML, I have to change ePerl. And ePerl is a
+long-available peace of software which has a lot of users. So either we find a
+compatible way or we _have_ to use an option in WML.
+
+Greetings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00073" HREF="msg00073.shtml">Re: conflict between passes</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00073.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00075.shtml">Questions about wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00073.shtml">Re: conflict between passes</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00070.shtml">Re: Filtering with wml, security considerations?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00074"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00074"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

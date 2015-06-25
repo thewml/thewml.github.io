@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WAP support/conversion? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 23 Oct 2000 10:41:17 +0200 (MET DST) -->
+<!--X-Message-Id: 20001023104221.A14136@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39F3454C.FBFA994@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02034">Date Index</a>][<a href="thrd41.shtml#02034">Thread Index</a>]<br>
+[<A HREF="msg02033.shtml">Date Prev</A>][<A HREF="msg02035.shtml">Date Next</A>][<A HREF="msg02032.shtml">Thread Prev</A>][<A HREF="msg02035.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WAP support/conversion?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 23 Oct 2000 10:42:21 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Oct 22, 2000 at 08:51:40PM +0100, Werner Heuser wrote:
+
+&gt; Dear List Members,
+&gt; 
+&gt; I have started to create MobiliX.ORG/wap/index.wml
+&gt; to make MobiliX available for WAP devices. 
+&gt; 
+&gt; To do so I have created another WML template,
+&gt; which creates .wml (Wireless Markup Language!) instead of .html
+&gt; files. This still needs further tweaking and probably
+&gt; some manual fine tuning.
+&gt; 
+&gt; I'm just interested whether there are others, which have
+&gt; done similar projects and give some recommendations
+&gt; or know about conversion programs
+&gt; from HTML to WML.
+
+Hi Werner,
+
+do not know for WAP/WML, but writing XHTML documents is quite easy with
+WML (the only real difference in template files is that simple tags must
+be terminated by a slash, and compile with ``-W2,--expansion=0'').
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02035" HREF="msg02035.shtml">Re: WAP support/conversion?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02032" HREF="msg02032.shtml">WAP support/conversion?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02033.shtml">minor problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02035.shtml">Re: WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02032.shtml">WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02035.shtml">Re: WAP support/conversion?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02034"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd41.shtml#02034"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

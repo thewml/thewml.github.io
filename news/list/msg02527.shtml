@@ -1,0 +1,93 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: ebbgNznevhfm.qnexfgne -->
+<!--X-Date: Mon, 25 Feb 2002 22:00:00 +0100 (MET) -->
+<!--X-Message-Id: 200202251738.g1PHcW311573@mariusz.darkstar -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02527">Date Index</a>][<a href="thrd24.shtml#02527">Thread Index</a>]<br>
+[<A HREF="msg02526.shtml">Date Prev</A>][<A HREF="msg02528.shtml">Date Next</A>][<A HREF="msg01533.shtml">Thread Prev</A>][<A HREF="msg02529.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 25 Feb 2002 18:38:32 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.4 (06-Oct-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     
+Reply-To: root@mariusz
+
+PROBLEM DESCRIPTION:
+
+
+PLATFORM CHARACTERISTICS:
+Can't locate File/PathConvert.pm in @INC (@INC contains: /usr/local/wml/lib/perl/lib/site_perl/i386-linux /usr/local/wml/lib/perl/lib/site_perl /usr/local/wml/lib/perl/lib/i386-linux /usr/local/wml/lib/perl/lib /usr/lib/perl5/i386-linux /usr/lib/perl5 /usr/lib/perl5/site_perl/i386-linux /usr/lib/perl5/site_perl .) at /usr/local/wml/bin/wml line 54.
+BEGIN failed--compilation aborted at /usr/local/wml/bin/wml line 54.
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02529" HREF="msg02529.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02526.shtml">user references</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02528.shtml">Re: some typos in help</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01533.shtml">Re: WMK dependencies</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02529.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02527"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#02527"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

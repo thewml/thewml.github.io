@@ -1,0 +1,152 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG REPORT: Website META Language 1.7.4 (06&#45;Oct&#45;1999) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 5 Nov 1999 11:08:47 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991105101628.3591A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991104164220.A10745@Aramis.kennesaw.edu -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01121">Date Index</a>][<a href="thrd23.shtml#01121">Thread Index</a>]<br>
+[<A HREF="msg01120.shtml">Date Prev</A>][<A HREF="msg01122.shtml">Date Next</A>][<A HREF="msg01120.shtml">Thread Prev</A>][<A HREF="msg01134.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 5 Nov 1999 11:18:54 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Thomas,
+
+I won't disable area substitutions within tocs, but you can.
+Try one of the following items:
+
+a) Use an alternate string in toc sections
+     {:
+     [[s|(home.page)|&lt;a href="my.home.net"&gt;$1&lt;/a&gt;|g]]
+     [[s|HOME PAGE|home page|g]]
+     &lt;&lt;BODY&gt;&gt;
+     :}
+     and write
+     &lt;toc_h1&gt;Do you have a HOME PAGE?&lt;/toc_h1&gt;
+
+b) Define new toc_h[1-6] tags
+     &lt;define-container mytoc_h1&gt;
+     &lt;toc_h1&gt;&lt;protect pass=6&gt;%body&lt;/protect&gt;&lt;/toc_h1&gt;
+     &lt;/define-container&gt;
+     ...
+
+c) Surround &lt;toc&gt; with protect tags and use an epilog filter to remove
+   unnecessary stuff.
+
+Denis
+
+On Thu, 4 Nov 1999, Thomas Akin wrote:
+
+[...]
+&gt; 	If I have a template "my.tmpl" that has
+&gt; 
+&gt; 	  {:
+&gt; 	  [[s|(home.page)|&lt;a href="my.home.net"&gt;$1&lt;/a&gt;|igs]]
+&gt; 	  &lt;&lt;BODY&gt;&gt;
+&gt; 	  :}
+&gt; 
+&gt; 	and I have a wml file test.wml
+&gt; 
+&gt; 	  #include wml::std::toc style=ol
+&gt; 	  #use "my.tmpl"
+&gt; 
+&gt; 	  &lt;divert BODY&gt;
+&gt; 	  &lt;toc&gt;
+&gt; 
+&gt; 	  &lt;toc_h1&gt;Do you have a home page?&lt;/toc_h1&gt;
+&gt; 	  &lt;br&gt;
+&gt; 	  Yes! Follow this link to see my home page.
+&gt; 
+&gt; 	  &lt;/divert BODY&gt;
+&gt; 
+&gt; 	I get the output 
+&gt; 
+&gt;           &lt;ol&gt;&lt;li&gt;&lt;a href="#ToC1"&gt;&lt;strong&gt;Do you have a 
+&gt; 	  &lt;a href="my.home.net"&gt;home page&lt;/a&gt;?&lt;/strong&gt;&lt;/a&gt;
+&gt;           &lt;/ol&gt;
+&gt; 	
+&gt; 	  &lt;a name="ToC1"&gt;Do you have a &lt;a href="my.home.net"&gt;
+&gt; 	  home page&lt;/a&gt;?&lt;/a&gt;
+&gt; 	  &lt;br&gt;
+&gt; 	  Yes! Follow this link to see my &lt;a href="my.home.net"&gt;
+&gt; 	  home page&lt;/a&gt;.
+&gt; 
+&gt;         And I have a nested href inside my TOC... Not
+&gt;         pretty...
+&gt; 	
+&gt; 	The ability to put &lt;protect pass=6&gt; &lt;/protect&gt;
+&gt; 	around the &lt;toc&gt; tag would fix this problem....
+&gt; 
+&gt; 	
+&gt; Thanks,
+&gt; 
+&gt; 
+&gt; Thomas
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01120" HREF="msg01120.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></strong>, <em>From:</em> Thomas Akin</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01120.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01122.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01120.shtml">Re: BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01134.shtml">BUG REPORT: Website META Language 1.7.4 (06-Oct-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01121"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd23.shtml#01121"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

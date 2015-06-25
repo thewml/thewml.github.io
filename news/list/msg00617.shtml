@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Running WML from WML? -->
+<!--X-From-R13: Ayvire Bnhxfgnqg <cfgnqgNfghq.su&#45;urvyoebaa.qr> -->
+<!--X-Date: Thu, 6 May 1999 20:47:09 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9905062026560.32585&#45;100000@lara.stud.fh&#45;heilbronn.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990508152719.751A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00617">Date Index</a>][<a href="thrd12.shtml#00617">Thread Index</a>]<br>
+[<A HREF="msg00616.shtml">Date Prev</A>][<A HREF="msg00618.shtml">Date Next</A>][<A HREF="msg00623.shtml">Thread Prev</A>][<A HREF="msg00620.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Running WML from WML?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Oliver Paukstadt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 6 May 1999 20:46:47 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 8 May 1999, Denis Barbier wrote:
+
+&gt; On Wed, 5 May 1999, Stephane Bortzmeyer wrote:
+&gt; 
+&gt; Ralf, could you explain why ePerl recursive calls are prohibited?
+&gt; I think the problem comes from the ``URL &lt;--&gt; real paths'' translation
+&gt; which must be performed when server side scripting. Stéphane showed how
+&gt; to work around this problem by clearing some environment variables, but
+&gt; there must be a better way.
+
+I had this Problem, too (around wml 1.6.7)
+I solved it on shell-level.
+the Basic-Construct is something like this:
+system("unset `env | perl -e 'foreach(grep(!/^PATH=/, &lt;STDIN&gt;)){s/^([^=]*)=.*\$/\$1/igs;print \"\$_\\n\";}' ` ;
+cd $Data/$dir ; wml -qs $file"); 
+I never optimized it for short writing or anything else, but every
+ENV-Variable except PATH is destroyed.
+The best should be wrapping the env-destroyer in a var, so the
+system-Statement is more readable.
+Maybe someone could kill the perl-overhead by rewriting in sed, but when I
+was born, perl still existed, so I never had to learn awk &amp; sed. ;-)
+And I would guarentee there is a shorter perl-statement by using 
+perl -e -p but I did not know this construct when I wrote this.
+Maybe it is crazy to start a shell and call perl again before starting
+wml, but I think  destroying the env on shellbase is the cleanest of the
+dirty solu..., äh, workarounds, because the main eperl still knows it's
+own Environment.
+
+BYtE Oli
+
++++Only users loose drugs....+++++++++++++++++++++++++++++++++++++++++++++
++++oliver@paukstadt.de+++<A  HREF="http://www.paukstadt.de/">http://www.paukstadt.de/</A> ++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00609" HREF="msg00609.shtml">Re: Running WML from WML?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00616.shtml">Re: New WML-generated website: www.modssl.org</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00618.shtml">[Patch] Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00623.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00620.shtml">Re: Running WML from WML?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00617"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd12.shtml#00617"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

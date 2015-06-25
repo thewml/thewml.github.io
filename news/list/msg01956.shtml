@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: 2.0.3 &#45; bug or feature -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.qr> -->
+<!--X-Date: Fri, 15 Sep 2000 13:22:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20000915131530.S409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 00091400152400.01026@fidius -->
+<!--X-Reference: 20000914113744.A14577@imacs.polytechnique.fr -->
+<!--X-Reference: 20000914122559.L409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Reference: 20000914134618.A15004@imacs.polytechnique.fr -->
+<!--X-Reference: 20000914231741.O409@spinnaker.sail.does&#45;not&#45;exist.org -->
+<!--X-Reference: 20000914232903.A16040@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01956">Date Index</a>][<a href="thrd39.shtml#01956">Thread Index</a>]<br>
+[<A HREF="msg01955.shtml">Date Prev</A>][<A HREF="msg01957.shtml">Date Next</A>][<A HREF="msg01945.shtml">Thread Prev</A>][<A HREF="msg01957.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: 2.0.3 - bug or feature</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 15 Sep 2000 13:15:30 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 14 Sep 2000, Denis Barbier wrote:
+
+&gt; &gt; I'm not sure, whether _automatically_ adding ALT="" is a good
+&gt; &gt; idea, because if I want to give an ALT attribute, I do so (for
+&gt; &gt; example when using a transparent 1x1 GIF ALT="" usually is a good
+&gt; &gt; idea because on a non graphic browser I do not want any
+&gt; &gt; information about this GIF shown), but if I do not explicitly
+&gt; &gt; enter an ALT attribute this usually means, that I simply _forgot_
+&gt; &gt; to enter it.  In this situation I prefer a non graphic browser to
+&gt; &gt; show the image file name instead of nothing (the latter may happen
+&gt; &gt; with an automatically added ALT="").
+
+&gt; Roland, WML 2.0.3 contains ``Web Content Accessibility Guidelines
+&gt; 1.0'' also available at <A  HREF="http://www.w3.org/TR/WAI-WEBCONTENT">http://www.w3.org/TR/WAI-WEBCONTENT</A>
+
+Okay, I have to admit, that I didn't read this document in whole, but
+as far as I can see, this document doesn't suggest to use alt="" or
+summary="" but to provide _information_ with these attributes.  alt=""
+or summary="" can be an information (for example to show that this
+image or table is for graphical layout purpose only), but when they
+are created automatically, this information isn't intended (if I don't
+give an alt attribute, this only means, that I missed to add this
+attribute, but it doesn't mean that this is a layout image or an image
+without any contents; same with table summary="").
+
+&gt; I try to follow those guidelines, if you believe they are wrong,
+&gt; please tell the W3C ;-)
+
+I'm not sure, whether the automatically adding these null-attributes
+is in the sense of this guidelines...
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01957" HREF="msg01957.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01936" HREF="msg01936.shtml">2.0.3 - bug or feature</A></strong>, <em>From:</em> axel</li>
+<li><strong><A NAME="01937" HREF="msg01937.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01938" HREF="msg01938.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+<li><strong><A NAME="01939" HREF="msg01939.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01944" HREF="msg01944.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+<li><strong><A NAME="01945" HREF="msg01945.shtml">Re: 2.0.3 - bug or feature</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01955.shtml">Re: [wml] Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01957.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01945.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01957.shtml">Re: 2.0.3 - bug or feature</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01956"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01956"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

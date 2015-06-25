@@ -1,0 +1,127 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: feature query -->
+<!--X-From-R13: Fbz Uvyoreg <tvyoreggNyvahkoevg.pb.hx> -->
+<!--X-Date: Mon, 29 May 2000 00:39:56 +0200 (MET DST) -->
+<!--X-Message-Id: 20000528234023.H30017@ummagumma -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000528141741.D30017@ummagumma -->
+<!--X-Reference: Pine.LNX.3.96.1000528224754.24519A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01648">Date Index</a>][<a href="thrd35.shtml#01648">Thread Index</a>]<br>
+[<A HREF="msg01647.shtml">Date Prev</A>][<A HREF="msg01649.shtml">Date Next</A>][<A HREF="msg01646.shtml">Thread Prev</A>][<A HREF="msg01663.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: feature query</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Tom Gilbert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 May 2000 23:40:23 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+* Denis Barbier (barbier@imacs.polytechnique.fr) wrote:
+&gt; On Sun, 28 May 2000, Tom Gilbert wrote:
+&gt; 
+&gt; &gt; Sorry, me again. (so many questions).
+&gt; &gt; 
+&gt; &gt; Is it possible to import content from an external program during Pass
+&gt; &gt; 1? I know I can import stuff using ePerl, but that stuff would have to
+&gt; &gt; be pre-marked-up, as it wouldn't go through pass 2 (macro expansion).
+&gt; [...]
+&gt; &gt; &lt;verbatim&gt;
+&gt; &gt; #import `fortune`
+&gt; &gt; &lt;/verbatim&gt;
+&gt; 
+&gt; Good idea, i will implement it if there is no objection (with #include
+&gt; instead of #import).
+
+Oh drat. I actually meant to type include (hence the example with a
+normal .inc file). Not having a good day really :)
+
+Anyway, thanks for considering it :)
+ 
+&gt; Note that you can do it yourself with the -P flag: 
+&gt;   wml -P ./wml-import.pl file.wml
+&gt; ---------------- wml-import.pl ----------------
+&gt; #!/usr/bin/perl
+&gt; while ($line = &lt;&gt;) {
+&gt;     if ($line =~ m|^#import `(.*)`$|) {
+&gt;         print qx/$1/;
+&gt;     } else {
+&gt;         print $line;
+&gt;     }
+&gt; }
+&gt; 1;
+&gt; ------------ end of wml-import.pl -------------
+
+That's very cool. I'll do just that :-)
+
+Thanks again.
+
+Tom.
+-- 
+            .------------------------------------------------------.
+    .^.     | Tom Gilbert, England | <A  HREF="http://www.linuxbrit.co.uk">http://www.linuxbrit.co.uk</A>    |
+    /V\     |----------------------| gilbertt@linuxbrit.co.uk      |
+   // \\    | Sites I recommend:   `-------------------------------|
+  /(   )\   | www.freshmeat.net www.enlightenment.org slashdot.org |
+   ^^-^^    `------------------------------------ vim: set tw=72: -'
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01641" HREF="msg01641.shtml">feature query</A></strong>, <em>From:</em> Tom Gilbert</li>
+<li><strong><A NAME="01646" HREF="msg01646.shtml">Re: feature query</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01647.shtml">Re: possible bug in &lt;box&gt; ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01649.shtml">Re: WML 2.0.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01646.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01663.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01648"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01648"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

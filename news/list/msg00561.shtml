@@ -1,0 +1,165 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: bugfix compile 1.6.8 and perl 5.00502 -->
+<!--X-From-R13: Tenax Qbaenq <senaxNPreyva.Oqivfre.pbz> -->
+<!--X-Date: Sat, 10 Apr 1999 15:30:17 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.05.9904091144170.11085&#45;200000@tui.berlin.adviser.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00561">Date Index</a>][<a href="thrd13.shtml#00561">Thread Index</a>]<br>
+[<A HREF="msg00559.shtml">Date Prev</A>][<A HREF="msg00560.shtml">Date Next</A>][<A HREF="msg00556.shtml">Thread Prev</A>][<A HREF="msg00563.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>bugfix compile 1.6.8 and perl 5.00502</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Frank Conrad &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 9 Apr 1999 11:47:46 +0000 (GMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hallo,
+
+um wml richtig ueberstzten zu koennen ist beiliegender Patch notwendig.
+Sonst brich er beim eperl ab ;-(
+
+Gruss Frank
+
+This is WML Version 1.6.8 (12-01-1999)
+Copyright (c) 1996,1997,1998,1999 Ralf S. Engelschall.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+Built Environment:
+    Host: i686-pc-linux-gnu
+    Perl: 5.005_02 (/usr/local/bin/perl)
+    User: frank@tui.berlin.adviser.com
+    Date: 09-Apr-1999
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+  Platform:
+    osname=linux, osvers=2.0.36, archname=i686-linux-thread
+    uname='linux tui 2.0.36 #2 sat dec 26 21:02:33 met 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=define useperlio=define d_sfio=define
+  Compiler:
+    cc='cc', optimize='-O2 -m486', gccversion=2.7.2.3
+    cppflags='-D_REENTRANT -Dbool=char -DHAS_BOOL -I/usr/local/include
+-DDEBUGGING'
+    ccflags ='-D_REENTRANT -Dbool=char -DHAS_BOOL -I/usr/local/include
+-DDEBUGGING'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lsfio -lnsl -lndbm -lgdbm -ldb -ldl -lm -lpthread -lc -lposix
+-lcrypt
+    libc=, so=so, useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options: DEBUGGING
+  Built under linux
+  Compiled at Dec 26 1998 23:37:24
+  @INC:
+    /usr/local/lib/perl5/5.00502/i686-linux-thread
+    /usr/local/lib/perl5/5.00502
+    /usr/local/lib/perl5/site_perl/5.005/i686-linux-thread
+    /usr/local/lib/perl5/site_perl/5.005
+    .
+
+
+     Frank Conrad              / Voice:     +49 30 326 939 - 0
+ Technische Beratung          / Wireless:  +49 171 80 70 164 and SMS
+    Kaiserdamm 114           / Fax:       +49 30 326 939 - 14
+    D-14057 Berlin          / Internet:  frank@Technical.Adviser.com
+       Germany             / PGP Key:   <A  HREF="http://www.adviser.com/~frank/pgp.html">http://www.adviser.com/~frank/pgp.html</A>
+                          / PGP Fingerprint: CBF9E0EDCCD18091 B0736D9F927DBF59
+                Do not feed the Keas -:)  D.O.C.
+</PRE>
+<PRE>
+--- wml_backend/p3_eperl/eperl_perl5.c.org	Tue Jan 12 15:24:14 1999
++++ wml_backend/p3_eperl/eperl_perl5.c	Fri Apr  9 12:01:47 1999
+@@ -69,6 +69,7 @@
+ #if AC_perl_vnum &lt; 500476
+     IoFLAGS(GvIOp(defoutgv)) |= IOf_FLUSH; /* $|=1 */
+ #else
++	dTHR;
+     IoFLAGS(GvIOp(PL_defoutgv)) |= IOf_FLUSH; /* $|=1 */
+ #endif
+     return;
+@@ -97,6 +98,7 @@
+ */
+ void Perl5_SetScalar(char *pname, char *vname, char *vvalue)
+ {
++	dTHR;
+     ENTER;
+     save_hptr(&amp;curstash); 
+     curstash = gv_stashpv(pname, TRUE);
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00563" HREF="msg00563.shtml">Re: bugfix compile 1.6.8 and perl 5.00502</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00559.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00560.shtml">[BUG REPORT] WML 1.6.8, Debian Linux 2.0 (kernel=2.2.5)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00556.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00563.shtml">Re: bugfix compile 1.6.8 and perl 5.00502</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00561"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00561"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

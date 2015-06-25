@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML SNAP, Any -->
+<!--X-From-R13: qhraxvNvfv.rr.rgum.pu -->
+<!--X-Date: Tue, 8 Aug 2000 12:02:48 +0200 (MET DST) -->
+<!--X-Message-Id: 200008080919.LAA28483@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01885">Date Index</a>][<a href="thrd38.shtml#01885">Thread Index</a>]<br>
+[<A HREF="msg01884.shtml">Date Prev</A>][<A HREF="msg01886.shtml">Date Next</A>][<A HREF="msg01881.shtml">Thread Prev</A>][<A HREF="msg01902.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML SNAP, Any</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 8 Aug 2000 11:19:50 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML SNAP
+Operating System: Any
+
+Problem Description:
+| Hi,
+| 
+| While compiling wml_common/bitvector you can get
+| into trouble, if your perl is of version prior to
+| 5.005. According to the INSTALL.txt (this file is
+| missing in the wml distribution) of Bit-Vector-5.8
+| a small change is needed:
+| 
+| Preliminary steps for use with Perl prior to version 5.005:
+| -----------------------------------------------------------
+| 
+| Edit the file "Vector.xs" and change all occurrences (just two)
+| of "PL_na" into "na".
+| 
+| 
+| If your perl is even prior to version 5.002, more changes are required.
+| 
+| Cheers
+| Max
+| 
+| -- 
+|   _______________________________________________________________________
+|  /\  Dr. Max H. Duenki - Tel: +41 1 632 3624  Fax: +41 1 632 1208        \
+|  \_| Organisation: Swiss Federal Institute of Technology Zurich, ETHZ     |
+|    | Department:   Signal and Information Processing Laboratory ISI       |
+|    | Room:         ETF E104,                                              |
+|    | Address:      Sternwartstrasse 7, CH-8092 Zurich, Switzerland.       |
+|    | Email: duenki@isi.ee.ethz.ch, WWW: <A  HREF="http://www.isi.ee.ethz.ch/~duenki">http://www.isi.ee.ethz.ch/~duenki</A> |
+|    |  ____________________________________________________________________|___
+|    \_/_______________________________________________________________________/
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01902" HREF="msg01902.shtml">Re: [BUG REPORT] WML SNAP, Any</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01884.shtml">Re: Praise and a question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01886.shtml">wml don't compile on NetBSD</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01881.shtml">WML and XHTML 1.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01902.shtml">Re: [BUG REPORT] WML SNAP, Any</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01885"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01885"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

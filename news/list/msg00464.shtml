@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML wml::std::lang questions -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 12 Mar 1999 11:39:40 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990312110207.16359A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: m1r9qv4rsl.fsf@engelberg.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail10.shtml#00464">Date Index</a>][<a href="thrd11.shtml#00464">Thread Index</a>]<br>
+[<A HREF="msg00463.shtml">Date Prev</A>][<A HREF="msg00465.shtml">Date Next</A>][<A HREF="msg00468.shtml">Thread Prev</A>][<A HREF="msg00466.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML wml::std::lang questions</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 12 Mar 1999 11:34:18 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 11 Mar 1999, Fritz Zaucker wrote:
+
+[...]
+&gt; To make nav-bars work one already needs some "complicated" #include or
+&gt; #use statement at the beginning of an input file. 
+&gt; 
+&gt; The shebang line adds just one more thing to it.
+
+Hi Fritz and Tobias,
+
+a lot of material can be put into the .wmlrc, not only variable
+definitions. For instance, the -i wml option allow you to include
+system and user files. Unfortunately, there was a malicious bug in
+wml_p1_ipp. As soon as the wml-SNAP-199903121200.tar.gz is released you
+could replace inclusions like
+   #use wml::des::navbar
+by any of the 2 lines in the top .wmlrc :
+   -i wml::des::navbar
+   -i &lt;des/navbar.wml&gt;
+
+You only have to retrieve wml_backend/p1_ipp/ipp.src and recompile.
+
+&gt; &gt; One could write -o(ALL-LANG_*)+LANG_IT:%BASE.it.html in the .wmlrc
+&gt; &gt; files, this feature will go in my to-do list. 
+&gt; 
+&gt; Can you put it at the top   ;-)
+
+It's done.
+Retrieve wml_frontend/wml.src and recompile.
+The %DIR/%BASE substitutions is performed after the .wmlrc files are
+read, so that you may now put these constructions into .wmlrc or even on
+the command line.
+
+Hope it helps.
+
+Cheers.
+
+   Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00466" HREF="msg00466.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Tobias Oetiker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00456" HREF="msg00456.shtml">Re: WML wml::std::lang questions</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00463.shtml">Change: mailing list delivery location</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00465.shtml">Re: Another WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00468.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00466.shtml">Re: WML wml::std::lang questions</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail10.shtml#00464"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd11.shtml#00464"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

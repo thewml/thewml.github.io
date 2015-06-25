@@ -1,0 +1,164 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug report -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 18 May 1999 09:57:21 +0200 (MET DST) -->
+<!--X-Message-Id: m1n1z2byjo.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990517182800.8461A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail14.shtml#00669">Date Index</a>][<a href="thrd9.shtml#00669">Thread Index</a>]<br>
+[<A HREF="msg00668.shtml">Date Prev</A>][<A HREF="msg00670.shtml">Date Next</A>][<A HREF="msg00668.shtml">Thread Prev</A>][<A HREF="msg00670.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug report</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 18 May 1999 09:57:15 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+Hi Denis,
+
+I have been thinking about the whole thing some more:
+
+With the -N flag to wmk and unfortunately wmk looses the
+"make-ability" to figure out if a file has to be re-created.
+
+Ideally, the -o options that can currently be specified in the .wmlrc
+file should also be read from .wmkrc so that wmk can base its decision
+about recreating a file from this option.
+
+Should I try to implement this in wmk? I guess this could then
+"replace" the -N option. 
+
+Question: where should the code to read .wmkrc be moved to?
+
+Fritz
+
+&gt; On Mon, 17 May 1999, Fritz Zaucker wrote:
+&gt; 
+&gt; &gt; PROBLEM DESCRIPTION:
+&gt; &gt; 
+&gt; &gt; wmk produces a 
+&gt; &gt; 
+&gt; &gt;     -ooutputfile optionI 
+&gt; &gt; 
+&gt; &gt; for wml. This is not good if -o lines are specified in the .wmlrc
+&gt; &gt; file.
+&gt; 
+&gt; You're right. I didn't understand this problem when you reported it few
+&gt; weeks ago, it's clear now.
+&gt; 
+&gt; &gt; I tried to add an option to wmk (-N) that would suppress the creation
+&gt; &gt; of the -o line for wml. This is a rather trivial patch which I'd
+&gt; &gt; happily submit.
+&gt; 
+&gt; Go ahead ;-)
+&gt; 
+&gt; &gt; However, when I tried to put -N into the .wmkrc file (and this is what
+&gt; &gt; would be needed in conjunction with the -o lines in .wmlrc) I noticed,
+&gt; &gt; that .wmkrc is only read if wmk process a directory and not when it
+&gt; &gt; processes a single file.
+&gt; &gt;
+&gt; &gt; Looks to me as if the code for reading .wmkrc is at the wrong place
+&gt; &gt; (inside sub determine_files).
+&gt; 
+&gt; I agree, why are the .wmkrc files read in this routine?
+&gt; 
+&gt; &gt; Cheers,
+&gt; &gt; Fritz
+&gt; &gt; 
+&gt; &gt; P.S.: Or would the fix to my problem be that wml ignores command line
+&gt; &gt;       option -o if it finds one in .wmlrc? That would work for my
+&gt; &gt;       particular situation, but might be confusing in general.
+&gt; 
+&gt; No, command-line options _must_ override those in .wmlrc.
+&gt; 
+&gt; In the next release, output files might even be computed on-the-fly
+&gt; before pass 9, so i think one should inform wml (or wmk).
+&gt; Don't know how. Your `-N' flag is a good idea. Or we could use a special
+&gt; shebang line, e.g #!wml --auto-outputfiles
+&gt; Another idea is to replace call to `wml -o outputfile' by
+&gt;     wml inputfile &gt;tmpfile
+&gt;     if size(tmpfile)&gt;0 then mv tmpfile outputfile
+&gt; 
+&gt; Denis
+&gt; 
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00670" HREF="msg00670.shtml">Re: Bug report</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00667" HREF="msg00667.shtml">Re: Bug report</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00668.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00670.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00668.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00670.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail14.shtml#00669"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd9.shtml#00669"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

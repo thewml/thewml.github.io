@@ -1,0 +1,116 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Erasing redundant newlines, spaces and tabs -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 15 Dec 1999 12:36:01 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991215123039.916E&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991214160634.A416@perolo -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01226">Date Index</a>][<a href="thrd26.shtml#01226">Thread Index</a>]<br>
+[<A HREF="msg01225.shtml">Date Prev</A>][<A HREF="msg01227.shtml">Date Next</A>][<A HREF="msg01223.shtml">Thread Prev</A>][<A HREF="msg01228.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Erasing redundant newlines, spaces and tabs</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 15 Dec 1999 12:33:33 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 14 Dec 1999, Xose Manoel Ramos wrote:
+
+&gt; I am trying to do this. 
+&gt; 
+&gt; Origin:
+&gt; 
+&gt;    This
+&gt;       is
+&gt;        just
+&gt;          a 
+&gt;           test
+&gt; 
+&gt; Result:
+&gt; 
+&gt;  This is just a test
+&gt; 
+&gt; I am using this little ePerl code:
+&gt; 
+&gt; &lt;define-container clean&gt;
+&gt; &lt;:
+&gt;  $kk="%body";
+&gt;  $kk =~ s/[\n\s]+/ /g ;
+&gt;  print $kk;
+&gt; :&gt;
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; Is there a better, safer or faster way to do this? 
+
+&lt;define-container clean&gt;
+#  inside brackets, put a space, a tab and a newline
+&lt;subst-in-string %qbody "[      
+]+" " "&gt;
+&lt;/define-container&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01223" HREF="msg01223.shtml">Erasing redundant newlines, spaces and tabs</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01225.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01227.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01223.shtml">Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01228.shtml">Re: Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01226"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01226"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

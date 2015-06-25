@@ -1,0 +1,203 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Compiling with Mandrake 7.2 -->
+<!--X-From-R13: Prabvg qrf Zvtarevf <orabvg.qrf.yvtarevfNculfvdhr.hfureo.pn> -->
+<!--X-Date: Tue, 7 Nov 2000 21:08:04 +0100 (MET) -->
+<!--X-Message-Id: 20001106234830.A6152@physique.usherb.ca -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02052">Date Index</a>][<a href="thrd42.shtml#02052">Thread Index</a>]<br>
+[<A HREF="msg02051.shtml">Date Prev</A>][<A HREF="msg02053.shtml">Date Next</A>][<A HREF="msg02053.shtml">Thread Prev</A>][<A HREF="msg02054.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Compiling with Mandrake 7.2</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Benoit des Ligneris &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 6 Nov 2000 23:48:30 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+Well, I tried to compile wml2.0.6 on Mandrake 7.2 and I've got the following error :
+
+================
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p3_eperl'
+cc -O3 -fomit-frame-pointer -pipe -s -march=pentium -ffast-math -fexpensive-optimizations -fno-strict-aliasing -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/lib/perl5/5.6.0/i386-linux/CORE -I. -c eperl_main.c
+In file included from eperl_main.c:40:
+eperl_perl5.h:42: EXTERN.h: Aucun fichier ou répertoire de ce type
+eperl_perl5.h:43: perl.h: Aucun fichier ou répertoire de ce type
+eperl_main.c: In function `main':
+eperl_main.c:333: syntax error before `*'
+eperl_main.c:1055: `my_perl' undeclared (first use in this function)
+eperl_main.c:1055: (Each undeclared identifier is reported only once
+eperl_main.c:1055: for each function it appears in.)
+make[2]: *** [eperl_main.o] Erreur 1
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p3_eperl'
+make[1]: *** [all] Erreur 1
+make[1]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend'
+make: *** [all] Erreur 1       
+================================
+
+You'll find the make output in the attached file.
+
+Thank you by advance for your help
+
+-- 
+Benoit des Ligneris 		Ph. D. Student
+<A  HREF="http://www.physique.usherb.ca/~bligneri/">http://www.physique.usherb.ca/~bligneri/</A> 
+Tel. Travail : (819) 821-8000 3018 ou 3040 
+fax.         : (819) 821-8046
+</PRE>
+<PRE>
+===&gt; wml_frontend (all)
+make[1]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_frontend'
+make[1]: Rien à faire pour `all'.
+make[1]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_frontend'
+&lt;=== wml_frontend
+===&gt; wml_aux (all)
+make[1]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux'
+===&gt; wml_aux/iselect (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/iselect'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/iselect'
+&lt;=== wml_aux/iselect
+===&gt; wml_aux/htmlclean (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/htmlclean'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/htmlclean'
+&lt;=== wml_aux/htmlclean
+===&gt; wml_aux/htmlinfo (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/htmlinfo'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/htmlinfo'
+&lt;=== wml_aux/htmlinfo
+===&gt; wml_aux/linklint (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/linklint'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/linklint'
+&lt;=== wml_aux/linklint
+===&gt; wml_aux/map2html (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/map2html'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/map2html'
+&lt;=== wml_aux/map2html
+===&gt; wml_aux/tidy (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/tidy'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/tidy'
+&lt;=== wml_aux/tidy
+===&gt; wml_aux/txt2html (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/txt2html'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/txt2html'
+&lt;=== wml_aux/txt2html
+===&gt; wml_aux/weblint (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/weblint'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/weblint'
+&lt;=== wml_aux/weblint
+===&gt; wml_aux/freetable (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_aux/freetable'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux/freetable'
+&lt;=== wml_aux/freetable
+make[1]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_aux'
+&lt;=== wml_aux
+===&gt; wml_backend (all)
+make[1]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend'
+===&gt; wml_backend/p1_ipp (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p1_ipp'
+make[2]: Rien à faire pour `all'.
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p1_ipp'
+&lt;=== wml_backend/p1_ipp
+===&gt; wml_backend/p2_mp4h (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h'
+===&gt; wml_backend/p2_mp4h/pcre (all)
+make[3]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/pcre'
+make[3]: Rien à faire pour `all'.
+make[3]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/pcre'
+&lt;=== wml_backend/p2_mp4h/pcre
+===&gt; wml_backend/p2_mp4h/lib (all)
+make[3]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/lib'
+make[3]: Rien à faire pour `all'.
+make[3]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/lib'
+&lt;=== wml_backend/p2_mp4h/lib
+===&gt; wml_backend/p2_mp4h/src (all)
+make[3]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/src'
+make[3]: Rien à faire pour `all'.
+make[3]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/src'
+&lt;=== wml_backend/p2_mp4h/src
+===&gt; wml_backend/p2_mp4h/doc (all)
+make[3]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/doc'
+make[3]: Rien à faire pour `all'.
+make[3]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/doc'
+&lt;=== wml_backend/p2_mp4h/doc
+===&gt; wml_backend/p2_mp4h/packages (all)
+make[3]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/packages'
+make[3]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/packages'
+&lt;=== wml_backend/p2_mp4h/packages
+===&gt; wml_backend/p2_mp4h/tests (all)
+make[3]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/tests'
+make[3]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h/tests'
+&lt;=== wml_backend/p2_mp4h/tests
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p2_mp4h'
+&lt;=== wml_backend/p2_mp4h
+===&gt; wml_backend/p3_eperl (all)
+make[2]: Entre dans le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p3_eperl'
+cc -O3 -fomit-frame-pointer -pipe -s -march=pentium -ffast-math -fexpensive-optimizations -fno-strict-aliasing -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/lib/perl5/5.6.0/i386-linux/CORE -I. -c eperl_main.c
+make[2]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend/p3_eperl'
+make[1]: Quitte le répertoire `/home/bligneri/wml-2.0.6/wml_backend'
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02054" HREF="msg02054.shtml">Re: Compiling with Mandrake 7.2</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02051.shtml">Newbie ...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02053.shtml">Re: Newbie ...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02053.shtml">Re: Newbie ...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02054.shtml">Re: Compiling with Mandrake 7.2</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02052"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02052"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

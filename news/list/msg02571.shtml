@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.2&#45;1, redhat linux 7.2 (2.4.7&#45;10) -->
+<!--X-From-R13: enuhytNrr.vvgo.np.va -->
+<!--X-Date: Mon, 18 Mar 2002 10:02:43 +0100 (MET) -->
+<!--X-Message-Id: 200203172105.WAA09884@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail52.shtml#02571">Date Index</a>][<a href="thrd52.shtml#02571">Thread Index</a>]<br>
+[<A HREF="msg02570.shtml">Date Prev</A>][<A HREF="msg02572.shtml">Date Next</A>][<A HREF="msg02579.shtml">Thread Prev</A>][<A HREF="msg02574.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.2-1, redhat linux 7.2 (2.4.7-10)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Sun, 17 Mar 2002 22:05:30 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.2-1
+Operating System: redhat linux 7.2 (2.4.7-10)
+
+Problem Description:
+| hi,
+| i tried to compile the demo code given on the site.( demo.wml). but it gave the following errors. i am unable to understand the error as dont know perl.
+| 
+| error------
+| 
+| /usr/bin/wml -n -o demo.html demo.wml
+| ePerl:Error: Perl parsing error (interpreter rc=255)
+| 
+| ---- Contents of STDERR channel: ---------
+| Can't modify bitwise or in scalar assignment at /tmp/wml.18726.tmp1.wml line 53, near "9;"
+| syntax error at /tmp/wml.18726.tmp1.wml line 55, near "|  for "
+| syntax error at /tmp/wml.18726.tmp1.wml line 55, near "++) "
+| syntax error at /tmp/wml.18726.tmp1.wml line 57, near "|  }"
+| Execution of /tmp/wml.18726.tmp1.wml aborted due to compilation errors.
+| ------------------------------------------
+| ** WML:Break: Error in Pass 3 (rc=74).
+| ** WMk:Break: Error in WML (rc=256)
+| 
+| 
+| please help.
+| 
+| thank
+| rahul
+| 
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02574" HREF="msg02574.shtml">Re: [BUG REPORT] WML 2.0.2-1, redhat linux 7.2 (2.4.7-10)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02570.shtml">Compiling WML with Perl5.6</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02572.shtml">WML Presentation Slides - Updated</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02579.shtml">Re: Compiling WML with Perl5.6</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02574.shtml">Re: [BUG REPORT] WML 2.0.2-1, redhat linux 7.2 (2.4.7-10)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail52.shtml#02571"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd52.shtml#02571"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

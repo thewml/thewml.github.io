@@ -1,0 +1,120 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: perl version output of configure? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 12 Jul 2001 01:19:08 +0200 (MET DST) -->
+<!--X-Message-Id: 20010712012736.A13701@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010711154211.E12681@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010711213732.A12647@imacs.polytechnique.fr -->
+<!--X-Reference: 20010711231031.D23948@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02288">Date Index</a>][<a href="thrd46.shtml#02288">Thread Index</a>]<br>
+[<A HREF="msg02287.shtml">Date Prev</A>][<A HREF="msg02289.shtml">Date Next</A>][<A HREF="msg02286.shtml">Thread Prev</A>][<A HREF="msg02289.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: perl version output of configure?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 12 Jul 2001 01:27:36 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Jul 11, 2001 at 11:10:31PM +0200, Axel Beckert wrote:
+&gt; Hi!
+&gt; 
+&gt; Denis Barbier wrote:
+&gt; &gt; nothing wrong, this version number comes from
+&gt; &gt;     perl -e 'printf "%.3f", $]'
+&gt; 
+&gt; Noticed it later using &lt;:=$] :&gt;, because I didn't find the position in
+&gt; the configure file, where it is determined... (As Murphy's Law
+&gt; predicted: Now I've found it...)
+&gt; 
+&gt; &gt; Maybe we should use
+&gt; &gt;     perl -e 'print $]'
+&gt; &gt; instead, but is it really important?
+&gt; 
+&gt; Well, at least, the actual solution is some kind of confusing, if you
+&gt; upgrade between subversions, like I did today.
+&gt; 
+&gt; It wouldn't be so much confusing, if $] would have been 5.006000 in
+&gt; PERL 5.6.0, or if the output of the WML configure script would have
+&gt; been only "5.6", because in that cases the output (IMHO) would be
+&gt; clearly a truncated value.
+&gt; 
+&gt; Personally I would prefer an output like "5.6.0" or "5.7.1" (based on
+&gt; $^V), but IMHO at least it should be the full value or if it's a
+&gt; truncated value, it should be clearly indicated, that the shown value
+&gt; is truncated.
+
+Agree, but $^V has appeared with Perl 5.6.0.  If you find a solution
+which works with all versions &gt;= 5.005 (and also future Perl
+versions ;)) then let me know.  I did not want to spend too much time on
+this, and also did not want to break this version detection.
+
+Denis
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02289" HREF="msg02289.shtml">Re: perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02283" HREF="msg02283.shtml">perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02285" HREF="msg02285.shtml">Re: perl version output of configure?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02286" HREF="msg02286.shtml">Re: perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02287.shtml">Re: Variables between sites</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02289.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02286.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02289.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02288"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02288"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

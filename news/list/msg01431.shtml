@@ -1,0 +1,97 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: How to safely test wml&#45;1.99.x -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Fri, 17 Mar 2000 09:22:32 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000317091047.15371A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01431">Date Index</a>][<a href="thrd29.shtml#01431">Thread Index</a>]<br>
+[<A HREF="msg01430.shtml">Date Prev</A>][<A HREF="msg01432.shtml">Date Next</A>][<A HREF="msg01440.shtml">Thread Prev</A>][<A HREF="msg01434.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>How to safely test wml-1.99.x</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 09:22:26 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I just think of a nice way to test wml-1.99.x without breaking actual
+templates. This new version read -I and -S option flags from right to
+left, whereas older version treat them from left to right.
+
+So if your templates are in a subdir called `templates', top-level
+.wmlrc file should contain
+   -I templates
+Copy this directory into templates-2.0 and replace previous line by
+   -I templates
+   -I templates-2.0
+
+You may now safely modify your templates as described in README.mp4h,
+and rebuild your pages at any time with wml-1.7.4
+
+Hope it helps.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01434" HREF="msg01434.shtml">Re: How to safely test wml-1.99.x</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01430.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01432.shtml">Re: adding languages</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01440.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01434.shtml">Re: How to safely test wml-1.99.x</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01431"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd29.shtml#01431"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

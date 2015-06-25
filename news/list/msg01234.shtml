@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Downstripped meta&#45;html -->
+<!--X-From-R13: Ayvire Bnhxfgnqg <cfgnqgNfghq.su&#45;urvyoebaa.qr> -->
+<!--X-Date: Mon, 27 Dec 1999 23:07:45 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.05.9912272256150.32286&#45;100000@lara.stud.fh&#45;heilbronn.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01234">Date Index</a>][<a href="thrd26.shtml#01234">Thread Index</a>]<br>
+[<A HREF="msg01233.shtml">Date Prev</A>][<A HREF="msg01235.shtml">Date Next</A>][<A HREF="msg01236.shtml">Thread Prev</A>][<A HREF="msg01235.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Downstripped meta-html</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Oliver Paukstadt &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 27 Dec 1999 23:07:38 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+HY HY
+
+I have problems with the downsized version of mhtml.
+
+I need to include all files in a special directory during the mhtml-pass
+because all defined tags in those files should be parsed.
+
+The problem is, I'm not very good at mhtml and I always miss a function or
+variable in the mhtml contained by wml to solve.
+
+My Problem is to get all the filesnames with their complete path in a
+list, so the step from 
+  &lt;directory-contents /a/special/directory &gt; 
+to
+  &lt;foreach file files&gt;
+  &lt;include &lt;get-var file&gt;&gt;
+  &lt;/foreach&gt;
+
+I don't have any more Ideas, maybe anyone of you could help?
+TNX
+
+BYtE Oli
+
++++Not Today. Not Tomorrow. Nice Try. No Thanks. +++++++++++++++++++++++++
++++oliver@paukstadt.de+++<A  HREF="http://www.paukstadt.de/">http://www.paukstadt.de/</A> ++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01235" HREF="msg01235.shtml">Re: Downstripped meta-html</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01233.shtml">[BUG REPORT] WML 1.7.4, Solaris</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01235.shtml">Re: Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01236.shtml">Re: [BUG REPORT] WML 1.7.4, Solaris</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01235.shtml">Re: Downstripped meta-html</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01234"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01234"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

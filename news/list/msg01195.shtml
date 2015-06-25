@@ -1,0 +1,171 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra&#45;5_10 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 5 Dec 1999 10:22:37 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.991204120232.4419C&#45;200000@localhost -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 199912021734.SAA01839@opensource.ee.ethz.ch -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01195">Date Index</a>][<a href="thrd25.shtml#01195">Thread Index</a>]<br>
+[<A HREF="msg01194.shtml">Date Prev</A>][<A HREF="msg01196.shtml">Date Next</A>][<A HREF="msg01192.shtml">Thread Prev</A>][<A HREF="msg01191.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 5 Dec 1999 10:21:54 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 2 Dec 1999 lohner@debian.org wrote:
+
+&gt; BUG REPORT
+&gt; 
+&gt; Package: WML 1.7.4
+&gt; Operating System: SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10
+&gt; 
+&gt; 
+&gt; Problem Description:
+&gt; | in wml_common, the CC and LD variables are not inherited, causing it to use 'cc' instead of 'gcc' 
+&gt; | and therefore failing to build since 'cc' is not installed on the systems here.
+&gt; | The Makefiles just need to be modified to inherit this froma higher level to resolve the problem.
+
+This means that Perl is misconfigured. Type
+     perl -V
+and you will see that cc is defined as your compiler.
+
+A patch is attached, re-run configure and add
+   --with-perl-opts="CC=gcc LD=gcc"
+
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+--- wml-1.7.4/configure	1999/09/30 17:18:46	1.14
++++ wml-1.7.4/configure	1999/12/04 11:45:52
+@@ -37,6 +37,8 @@
+ ac_help="$ac_help
+   --with-perl=PATH        force the usage of a specific Perl 5 interpreter"
+ ac_help="$ac_help
++  --with-perl-opts=STRING options to pass to Makefiles when compiling Perl modules"
++ac_help="$ac_help
+   --with-openworld        try to use system-wide copies of Perl modules"
+ 
+ # Initialize some variables set by options.
+@@ -933,6 +1009,17 @@
+     { echo "configure: error: required program ``perl'' not found" 1&gt;&amp;2; exit 1; }
+ fi
+ path_perl=$PATH_PERL
++# Check whether --with-perl_opts or --without-perl_opts was given.
++if test "${with_perl_opts+set}" = set; then
++  withval="$with_perl_opts"
++  
++PERL_OPTS=$with_perl_opts
++
++else
++  PERL_OPTS=
++
++fi
++
+ 
+ # Check whether --with-openworld or --without-openworld was given.
+ if test "${with_openworld+set}" = set; then
+@@ -1377,6 +1466,7 @@
+ s%@PATH_PERL@%$PATH_PERL%g
+ s%@perlprog@%$perlprog%g
+ s%@perlvers@%$perlvers%g
++s%@PERL_OPTS@%$PERL_OPTS%g
+ s%@have_getoptlong@%$have_getoptlong%g
+ s%@have_bitvector@%$have_bitvector%g
+ s%@have_filepathconvert@%$have_filepathconvert%g
+--- wml-1.7.4/config/configure.in	1999/09/30 17:18:52	1.14
++++ wml-1.7.4/config/configure.in	1999/12/04 11:45:48
+@@ -74,6 +74,13 @@
+     AC_ERROR([required program ``perl'' not found])
+ fi
+ path_perl=$PATH_PERL
++AC_ARG_WITH(perl_opts,dnl
++[  --with-perl-opts=STRING options to pass to Makefiles when compiling Perl modules],[
++PERL_OPTS=$with_perl_opts
++],[dnl
++PERL_OPTS=
++])dnl
++AC_SUBST(PERL_OPTS)
+ 
+ dnl ##  perl modules
+ AC_ARG_WITH(openworld,dnl
+--- wml_common/Makefile.in	1999/10/03 20:17:00	1.7
++++ wml_common/Makefile.in	1999/12/04 11:28:52
+@@ -23,6 +23,7 @@
+                   INSTALLMAN1DIR= \
+                   INST_MAN3DIR= \
+                   INSTALLMAN3DIR=
++PERL_OPTS       = @PERL_OPTS@
+ 
+ prefix          = @prefix@
+ exec_prefix     = $(prefix)
+@@ -70,7 +71,7 @@
+ 	            touch $$dir/.configured; \
+ 	        else :; \
+ 	        fi; \
+-	        (cd $$dir &amp;&amp; $(MAKE) pure_all) \
++	        (cd $$dir &amp;&amp; $(MAKE) $(PERL_OPTS) pure_all) \
+ 	        || case "$$amf" in *=*) exit 1;; *k*) fail=yes;; *) exit 1;; esac; \
+ 	        echo "&lt;=== wml_common/$$dir"; \
+ 	    else :; \
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01192" HREF="msg01192.shtml">[BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10</A></strong>, <em>From:</em> lohner</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01194.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01196.shtml">HELP: Slides again....</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01192.shtml">[BUG REPORT] WML 1.7.4, SunOS dibble 5.7 Generic sun4u sparc SUNW,Ultra-5_10</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01191.shtml">Using &lt;rollover&gt; etc. from EPerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01195"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd25.shtml#01195"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

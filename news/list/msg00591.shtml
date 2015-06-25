@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: patch for denis new navbar -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 22 Apr 1999 16:28:52 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990422145507.13864A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990422124942.12860A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00591">Date Index</a>][<a href="thrd13.shtml#00591">Thread Index</a>]<br>
+[<A HREF="msg00590.shtml">Date Prev</A>][<A HREF="msg00592.shtml">Date Next</A>][<A HREF="msg00588.shtml">Thread Prev</A>][<A HREF="msg00583.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: patch for denis new navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Apr 1999 16:23:06 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 22 Apr 1999, Denis Barbier wrote:
+
+&gt; About your epilog problem, you're right, thanks. Epilogs and footers
+&gt; were mixed in my brain and cause this mistake.
+
+Oops, i should have go lunch before posting, my answer was silly.
+Tobias, i tried to reproduce your problem without success, and i don't
+see how your patch could solve your problem.
+You could invoke ``wml -p1-3'' and see if epilog is present. If not,
+it's a wml bug, and if it's present, suspect pass 8.
+
+I have put a modified gimp test at
+   <A  HREF="http://www.engelschall.com/sw/wml/test/gimp2/">http://www.engelschall.com/sw/wml/test/gimp2/</A>
+In gimp.tmpl, the ``docs'' submenu has been changed to
+   &lt;gimp-navbar:define gimp-name=docs level=1&gt;
+       &lt;gimp:section sct="core_intro" subnavbar&gt;
+       &lt;gimp:section sct="tutorials"  subnavbar&gt;
+    &lt;navbar:epilog pos="next"&gt;Prolog&lt;/navbar:epilog&gt;
+    &lt;navbar:prolog pos="next"&gt;Epilog&lt;/navbar:prolog&gt;
+    &lt;navbar:button txt="dummy"&gt;    &lt;gimp:section sct="plugins_examples"&gt;
+       &lt;gimp:section sct="user_faq"&gt;
+...
+
+As you can see when this menu is active, prolog and epilog are present.
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00587" HREF="msg00587.shtml">Re: patch for denis new navbar</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00590.shtml">imgstarsep is needed</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00592.shtml">using WML for the first time!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00588.shtml">Re: patch for denis new navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00583.shtml">-o arguments in .wmlrc</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00591"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00591"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

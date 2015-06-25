@@ -1,0 +1,85 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Change in <tli> wml::des::typography -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 24 May 2001 00:13:47 +0200 (MET DST) -->
+<!--X-Message-Id: 20010524002206.A13725@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02244">Date Index</a>][<a href="thrd45.shtml#02244">Thread Index</a>]<br>
+[<A HREF="msg02243.shtml">Date Prev</A>][<A HREF="msg02245.shtml">Date Next</A>][<A HREF="msg02241.shtml">Thread Prev</A>][<A HREF="msg02245.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Change in &lt;tli&gt; wml::des::typography</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 24 May 2001 00:22:06 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+Craig Small reported on the Debian Bug Tracking System that there is a
+bug with the &lt;tli&gt; tag defined in wml::des::typography.
+I misunderstood his point for a long time, but it is now clear that this
+tag is defined as a simple tag whereas it is said being complex in
+documentation.
+So unless someone objects, &lt;tli&gt; will indeed become a complex tag.
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02243.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02245.shtml">[BUG REPORT] WML 2.0.6, Debian GNU/Linux (unstable)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02241.shtml">Re: presentation example with WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02245.shtml">[BUG REPORT] WML 2.0.6, Debian GNU/Linux (unstable)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02244"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02244"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

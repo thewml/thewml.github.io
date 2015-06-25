@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: using image size functions in ePerl -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Thu, 11 Nov 1999 09:12:42 +0100 (MET) -->
+<!--X-Message-Id: 19991110221134.C585@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19991105093757.A3818@perolo -->
+<!--X-Reference: Pine.LNX.3.96.991108163729.14168A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Reference: barbier@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail23.shtml#01132">Date Index</a>][<a href="thrd24.shtml#01132">Thread Index</a>]<br>
+[<A HREF="msg01131.shtml">Date Prev</A>][<A HREF="msg01133.shtml">Date Next</A>][<A HREF="msg01128.shtml">Thread Prev</A>][<A HREF="msg01133.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: using image size functions in ePerl</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 10 Nov 1999 22:11:34 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+El Mon, Nov 08, 1999 at 04:41:00PM +0100, Denis Barbier contaba:
+
+&gt;But your code should work without the ``use lib'' statements, they
+&gt;are provided within /usr/lib/wml/include/sys/boot.wml
+
+Thanks for the tip. This makes me ask another (probably obvious)
+question...
+
+All the Perl code is executed at the same time? I mean, the
+variables, definitions and everything are the same for each section
+of embeded code?
+
+
+Will work something like:
+
+&lt;:
+$x="test
+:&gt;
+
+&lt;:
+print $x."\n";
+:&gt;
+
+I suppose the answer is yes. Otherwise, somebody can explainme what
+does the code in `boot.wml` does.
+
+(I am intersted to use this in my own code)
+
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+11/10	Greg Lake is born in Bournemouth, England, 1948
+11/10	(11/10/1969) Sesame Street 1st aired. 
+11/10	(11/10/1925) Richard Burton (Richard Jenkins), actor. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01133" HREF="msg01133.shtml">Re: using image size functions in ePerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01122" HREF="msg01122.shtml">Re: using image size functions in ePerl</A></strong>, <em>From:</em> Xose Manoel Ramos</li>
+<li><strong><A NAME="01128" HREF="msg01128.shtml">Re: using image size functions in ePerl</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01131.shtml">empty eperl man file</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01133.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01128.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01133.shtml">Re: using image size functions in ePerl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail23.shtml#01132"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01132"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Suggestion about documentation -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 11 May 2000 23:09:29 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000511224131.3933A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200005111915.VAA02169@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail32.shtml#01565">Date Index</a>][<a href="thrd32.shtml#01565">Thread Index</a>]<br>
+[<A HREF="msg01564.shtml">Date Prev</A>][<A HREF="msg01566.shtml">Date Next</A>][<A HREF="msg01564.shtml">Thread Prev</A>][<A HREF="msg01566.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Suggestion about documentation</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 11 May 2000 23:09:19 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 11 May 2000, Jan Holler wrote:
+
+&gt; I see the online-documentation of wml is being worked over.
+&gt; You guys make a great work.
+&gt; Would there be too much hazzle to put the older mhc documentation
+&gt; back on the net? I miss it a bit. (Yes I have the old
+&gt; manpage, but I like to have all together online).
+
+Online documentation is build directly from WML sources.  In a future
+post i will discuss the ability to locally build HTML documentation.
+
+When briowsing the WML site (e.g. under docs/backend/) replace html
+suffix by wml, and you read its source.  You will see that these wml
+files use wml::imp::generic to import either plain text or pod files.
+These files are soft links, e.g. wml_p5_divert.pod points to
+../../distrib/latest/wml_backend/p5_divert/divert.src where
+distrib/latest/ is the latest stable release.  This is great, because
+after having unpacked a new release under distrib/, all i have to do is
+to run WMk in docs/backend/.
+
+The only exception is mp4h, because its documentation must be processed
+through mp4h to build either pod or html documentation. So i build
+mp4h.pod and copied it into docs/backend.
+
+I did not remove documentation for mhc, so it is still available at
+   <A  HREF="http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mhc.html">http://www.engelschall.com/sw/wml/docs/backend/wml_p2_mhc.html</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01564" HREF="msg01564.shtml">Suggestion about documentation</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01564.shtml">Suggestion about documentation</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01566.shtml">[ANNOUNCE] WML 2.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01564.shtml">Suggestion about documentation</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01566.shtml">[ANNOUNCE] WML 2.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail32.shtml#01565"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd32.shtml#01565"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

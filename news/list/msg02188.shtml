@@ -1,0 +1,88 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wmk and include files -->
+<!--X-From-R13: "Fubznf D. Ybyy" <gbzx32Ngbzx32.qr> -->
+<!--X-Date: Mon, 2 Apr 2001 22:05:27 +0200 (MET DST) -->
+<!--X-Message-Id: 20010402220511.A1575@tomk32.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010402233234.A1693@sluzew.dominikanie.pl -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02188">Date Index</a>][<a href="thrd44.shtml#02188">Thread Index</a>]<br>
+[<A HREF="msg02187.shtml">Date Prev</A>][<A HREF="msg02189.shtml">Date Next</A>][<A HREF="msg02187.shtml">Thread Prev</A>][<A HREF="msg02189.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wmk and include files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Thomas R. Koll&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 2 Apr 2001 22:05:11 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Apr 02, 2001 at 11:32:40PM +0200, Zbigniew Bomert OP wrote:
+&gt; What should be the include statement in the main file
+&gt; #include 'file'
+&gt; to work both for wml started in subdirectory and for
+&gt; wmk started in root directory?
+
+I solved it with symbolic links (ln -s ../includes
+ includes)
+-- 
+www.TomK32.de
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02186" HREF="msg02186.shtml">wmk and include files</A></strong>, <em>From:</em> Zbigniew Bomert OP</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02187.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02189.shtml">Compile Problems</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02187.shtml">Re: wmk and include files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02189.shtml">Compile Problems</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02188"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02188"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

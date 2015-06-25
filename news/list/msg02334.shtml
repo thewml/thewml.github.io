@@ -1,0 +1,132 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Behaviour configuration of slice (was: Re: Multi Language Support Question) -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 22 Jul 2001 15:44:09 +0200 (MET DST) -->
+<!--X-Message-Id: 20010722155159.A31366@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15N6xl&#45;0003Ae&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 20010719180028.B7978@imacs.polytechnique.fr -->
+<!--X-Reference: 3B57DF59.4F34BC4E@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010720160913.A20143@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010720172935.A13270@imacs.polytechnique.fr -->
+<!--X-Reference: 20010721015833.B26357@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Reference: 20010721224457.A18119@imacs.polytechnique.fr -->
+<!--X-Reference: 20010722005221.A4319@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02334">Date Index</a>][<a href="thrd47.shtml#02334">Thread Index</a>]<br>
+[<A HREF="msg02333.shtml">Date Prev</A>][<A HREF="msg02335.shtml">Date Next</A>][<A HREF="msg02331.shtml">Thread Prev</A>][<A HREF="msg02326.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Behaviour configuration of slice (was: Re: Multi Language Support Question)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 22 Jul 2001 15:51:59 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Jul 22, 2001 at 12:52:21AM +0200, Axel Beckert wrote:
+[...]
+&gt; OK, we better start at the beginning: What do we need?
+&gt; 
+&gt; Defining the behaviour of slice if
+&gt;   a) a mentioned slice doesn't exist,
+&gt;   b) a mentioned slice wildcard doesn't match and
+&gt;   c) the whole output file just contains (or would contain) only
+&gt;      white spaces or the empty string
+
+I cut this one into 2 pieces:
+    c) the whole output file is empty
+    d) the whole output file just contains only white spaces
+
+&gt; I each case, we have at least two possible behaviours:
+&gt;   1) write the file nevertheless, setting all undefined slices to the
+&gt;      empty string.
+&gt;   2) Don't write the file at all.
+&gt; 
+&gt; In the first two cases (and perhaps also in third case), we have a
+&gt; third possibility:
+&gt;   3) Exit with error message.
+&gt; 
+&gt; To get the most powerful solution, we have to assign the behaviours
+&gt; 1-3 to the cases a-c, so single on/off flags won't work. :-(
+
+I just uploaded 1.3a802 which implements the following syntax:
+above [a-d] cases are handled by resp. u, w, z and s modifiers,
+and are postfixed by a number:
+    0: output is processed as usual
+    1: this sliceset is skipped
+    2: stop processing
+These flags may be combined, e.g.
+    #u1w2z1s0
+
+I agree this is not very user-friendly, improvement are welcome ;)
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02306" HREF="msg02306.shtml">Grid question</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02310" HREF="msg02310.shtml">Re: Grid question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02314" HREF="msg02314.shtml">Multi Language Support Question</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02321" HREF="msg02321.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02323" HREF="msg02323.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02325" HREF="msg02325.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Axel Beckert</li>
+<li><strong><A NAME="02330" HREF="msg02330.shtml">Re: Multi Language Support Question</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02331" HREF="msg02331.shtml">Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02333.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02335.shtml">ePerl within &lt;xtable&gt; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02331.shtml">Behaviour configuration of slice (was: Re: Multi Language Support Question)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02326.shtml">Re: Multi Language Support Question</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02334"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02334"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

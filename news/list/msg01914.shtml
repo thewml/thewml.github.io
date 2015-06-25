@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: <text> broken in WML 2? -->
+<!--X-From-R13: Egrcunar Pbegmzrlre <obegmzrlreNcnfgrhe.se> -->
+<!--X-Date: Mon, 28 Aug 2000 20:40:08 +0200 (MET DST) -->
+<!--X-Message-Id: 200008281459.QAA21416@ezili.sis.pasteur.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail39.shtml#01914">Date Index</a>][<a href="thrd39.shtml#01914">Thread Index</a>]<br>
+[<A HREF="msg01913.shtml">Date Prev</A>][<A HREF="msg01915.shtml">Date Next</A>][<A HREF="msg01911.shtml">Thread Prev</A>][<A HREF="msg01915.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>&lt;text&gt; broken in WML 2?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephane Bortzmeyer &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 28 Aug 2000 16:59:17 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In WML 1, the following code worked fine and used txt2html to guess good HTML:
+
+
+#use wml::fmt::text
+
+&lt;text&gt;
+foo@bar
+&lt;/text&gt;
+
+
+In WML 2, it now crashes:
+
+				
+wallis:/tmp&gt; wml toto.wml
+ePerl:Error: Perl parsing error (interpreter rc=255)
+
+---- Contents of STDERR channel: ---------
+In string, @bar now must be written as \@bar at /tmp/wml.24256.tmp1.wml line 
+122, near "foo@bar"
+Execution of /tmp/wml.24256.tmp1.wml aborted due to compilation errors.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+
+
+I certainly do not want to Perl-escape all my files. I use &lt;text&gt; precisely to 
+convert anything, including email addresses.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01915" HREF="msg01915.shtml">Re: &lt;text&gt; broken in WML 2?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01913.shtml">Re: BUG REPORT: Website META Language 2.0.2 (22-Jun-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01915.shtml">Re: &lt;text&gt; broken in WML 2?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01911.shtml">Re: [BUG REPORT] WML 2.0.2, Linux (via RedHat 6.1)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01915.shtml">Re: &lt;text&gt; broken in WML 2?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail39.shtml#01914"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd39.shtml#01914"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

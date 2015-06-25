@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: useful snippets -->
+<!--X-From-R13: Quevf [nefgba <pznefgbaNcbvffba.qlaqaf.bet> -->
+<!--X-Date: Sat, 12 Aug 2000 09:03:30 +0200 (MET DST) -->
+<!--X-Message-Id: 20000812030518.A23610@poisson.dyndns.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01891">Date Index</a>][<a href="thrd38.shtml#01891">Thread Index</a>]<br>
+[<A HREF="msg01890.shtml">Date Prev</A>][<A HREF="msg01892.shtml">Date Next</A>][<A HREF="msg01890.shtml">Thread Prev</A>][<A HREF="msg01892.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>useful snippets</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Chris Marston &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 12 Aug 2000 03:05:18 -0700</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+It would be nice if wml::std had something like this in it:
+
+(note: I haven't quite got the mp4h quoting down pat yet)
+___
+&lt;: 
+	sub params { 	my @foo = split /\s+/, scalar shift ; 
+	 	 	return @foo;  } 
+	sub truss   { 	my @params = params(shift);
+			foreach (@params) {
+		 		$$1 = $2 	if /(\w+)=(\w+)/ ||
+						   /(\w+)='(.*?)'/;
+			 }
+		   }
+:&gt;
+___
+
+
+because then you could
+
+___
+&lt;define-tag foo whitespace=delete&gt;
+	&lt;: 
+		local $foo, $bar;
+		truss(q(%attributes));
+		print "$foo:$bar";
+	:&gt;
+&lt;/define-tag&gt;
+
+&lt;foo foo=la bar=toodles&gt;
+---
+
+and get 'la:toodles'.
+
+
+Basically, I think that there needs to be some quick, default way
+of importing %attributes into perl expressions.
+
+
+
+-- 
+Democracy is the theory that the common people know what they want and deserve 
+to get it good and hard.      --Henry Louis Mencke
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01890.shtml">Installation problems: ePerl complains...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01892.shtml">wml-2.0.2 on solaris</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01890.shtml">Installation problems: ePerl complains...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01892.shtml">wml-2.0.2 on solaris</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01891"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01891"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

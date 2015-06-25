@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: ISOTIME should have ISO format... -->
+<!--X-From-R13: Dbynaq Dbfrasryq <ebynaqNfcvaanxre.eurva.qr> -->
+<!--X-Date: Sun, 2 Apr 2000 14:08:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20000320130613.Y844@spinnaker.rhein.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000318182800.O844@spinnaker.rhein.de -->
+<!--X-Reference: 20000318123657.A3225@lovelife.olvc.ab.ca -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail31.shtml#01505">Date Index</a>][<a href="thrd30.shtml#01505">Thread Index</a>]<br>
+[<A HREF="msg01510.shtml">Date Prev</A>][<A HREF="msg01507.shtml">Date Next</A>][<A HREF="msg01454.shtml">Thread Prev</A>][<A HREF="msg01447.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: ISOTIME should have ISO format...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Roland Rosenfeld &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 20 Mar 2000 13:06:13 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 18 Mar 2000, Anthony Fok wrote:
+
+&gt; On Sat, Mar 18, 2000 at 06:28:00PM +0100, Roland Rosenfeld wrote:
+&gt; &gt; I noted, that the so called ISOTIME in WML has the format 
+&gt; &gt;  dd-mm-yyyy hh:mm:ss
+&gt; &gt;  yyyy-mm-dd hh:mm:ss
+
+&gt; BTW, Roland made the above patch for wml_1.7.4-6.2 in Debian
+&gt; unstable.
+
+I'm not the Debian maintainer of WML and I didn't upload the above
+mentioned version (it's only a local build).  My Debian wishilist bug
+report wasn't forwarded to this mailing list, so I decided to post it
+myself here...
+
+&gt; And indeed, this was recently implemented in WML 1.99.1 too.  :-)
+
+Great! I didn't saw this in the changelog of 1.99...
+
+Tschoeeee
+
+        Roland
+
+-- 
+ * roland@spinnaker.de * <A  HREF="http://www.spinnaker.de/">http://www.spinnaker.de/</A> *
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01442" HREF="msg01442.shtml">ISOTIME should have ISO format...</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+<li><strong><A NAME="01454" HREF="msg01454.shtml">Re: ISOTIME should have ISO format...</A></strong>, <em>From:</em> Anthony Fok</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01510.shtml">is wmb from 1.99.3 working?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01507.shtml">BUG REPORT: Website META Language 1.99.3 (19-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01454.shtml">Re: ISOTIME should have ISO format...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01447.shtml">Pass parameter -k to eperl</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail31.shtml#01505"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01505"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

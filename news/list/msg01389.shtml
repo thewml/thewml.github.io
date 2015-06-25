@@ -1,0 +1,89 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wml on powerpc -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 29 Feb 2000 18:27:56 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000229182337.14244C&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 873dqj989s.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01389">Date Index</a>][<a href="thrd28.shtml#01389">Thread Index</a>]<br>
+[<A HREF="msg01388.shtml">Date Prev</A>][<A HREF="msg01390.shtml">Date Next</A>][<A HREF="msg01375.shtml">Thread Prev</A>][<A HREF="msg01381.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wml on powerpc</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 29 Feb 2000 18:24:45 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 23 Feb 2000, Florian Hars wrote:
+
+&gt; I just found this patch against wml-1.7.4 in the debian bug database,
+&gt; is this also incorporated in the official wml?
+
+No, because wml_backend/p2_mhc/ has gone :-)
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01375" HREF="msg01375.shtml">wml on powerpc</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01388.shtml">Re: New Vim Syntax File!</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01390.shtml">Re: BUG REPORT: wml-1.7.4 and debian/potato</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01375.shtml">wml on powerpc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01381.shtml">re: WAP</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01389"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01389"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

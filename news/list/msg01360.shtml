@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML port to Win32 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 15 Feb 2000 19:44:23 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000215191848.20102A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 14498.59529.686637.148076@medusa.surefirev.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail28.shtml#01360">Date Index</a>][<a href="thrd28.shtml#01360">Thread Index</a>]<br>
+[<A HREF="msg01358.shtml">Date Prev</A>][<A HREF="msg01361.shtml">Date Next</A>][<A HREF="msg01359.shtml">Thread Prev</A>][<A HREF="msg01355.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML port to Win32</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 15 Feb 2000 19:19:55 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 10 Feb 2000, Michael McNamara wrote:
+
+&gt; Denis Barbier writes:
+&gt;  &gt; On Thu, 10 Feb 2000, Lumachi Marco wrote:
+&gt;  &gt; 
+&gt;  &gt; &gt; I am evaluating the porting WML on Windows 32 bit platform. Are there some
+&gt;  &gt; &gt; known reason and issue about this ?
+&gt;  &gt; 
+&gt;  &gt; Known reasons for doing what? Porting WML to Win32? Obviously none ;-)
+&gt;  &gt; 
+&gt;  &gt; More seriously, this should not be very hard, but i have absolutely no
+&gt;  &gt; skill on this exotic platform. If you want to do this, will you have
+&gt;  &gt; time to maintain it seriously (i.e. fix bugs, answer questions,...)?
+&gt;  &gt; 
+&gt;  &gt; -- 
+&gt;  &gt; Denis Barbier
+&gt;  &gt; WML Maintainer
+&gt; 
+&gt; I tried, and the first problem is filenames.
+&gt; 
+&gt; win32 imposes some rather backward requirements, not allowing certain
+&gt; characters (i believe ':' was one of them) in file names.
+
+But there is no colon in filenames. nor any other special character.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01359" HREF="msg01359.shtml">Re: WML port to Win32</A></strong>, <em>From:</em> Michael McNamara</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01358.shtml">Re: [BUG REPORT] WML 1.7.4 (Debian Revision 4), Debian GNU/Linux</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01361.shtml">My WML Site.</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01359.shtml">Re: WML port to Win32</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01355.shtml">&lt;protect&gt; does not work</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail28.shtml#01360"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01360"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

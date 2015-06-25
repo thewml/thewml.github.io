@@ -1,0 +1,121 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: newbie: skeletons for slides? -->
+<!--X-From-R13: Pehab Pbrggpure <oobrggNrez1.h&#45;fgenfot.se> -->
+<!--X-Date: Mon, 12 Apr 1999 16:43:52 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.4.04.9904121637280.22054&#45;100000@yoda.u&#45;strasbg.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00569">Date Index</a>][<a href="thrd13.shtml#00569">Thread Index</a>]<br>
+[<A HREF="msg00568.shtml">Date Prev</A>][<A HREF="msg00570.shtml">Date Next</A>][<A HREF="msg00568.shtml">Thread Prev</A>][<A HREF="msg00572.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>newbie: skeletons for slides?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Bruno Boettcher &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 12 Apr 1999 16:53:42 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+we organized some conferences over here, and the persons who held those
+conferences came along with nifty laptops, projecting slides made with wml...
+
+now i use latex &amp; latex2html to produce at the moment my slides, but lack
+something where i really can mix the slides with my text and issue either one
+or the other, whilst keeping all together in one document.....
+
+And BTW whilst latex2html is nice for converting longer documentations to HTML,
+it is not fancy enough for eye-hitting slides.... (AFAIK...)
+
+Now i installed wml on my machine (using debian, so it resumed installing a
+package..) read the wml_intro and wml_tutorial, looked at the website, and
+missed especially on the website a user-section for code sharing...
+
+I searched the mailing list archive for slides, but found nothing, so is there
+somebody out there that is willing to publish a skeleton for making
+speech-slides?
+
+Ideally i would need a thing of this sort:
+
+Make a document where i may specify some background image, a location for the
+navigation bar (below, on the right/left etc.), and where headlines (extracted
+as &lt;Hx&gt; or &lt;UL&gt; depending on indentation), images and tables are extracted for
+the HTML document, where on each page a navigation bar is included, and the
+rest translated where needed to latex for the complete memo?
+
+The text would be in any-case already in latex, so text should be ignored in
+the first case and passed as is in the second?
+And maybe (i can dream, can i? ;) beeing able to specify images in either ps or
+gif/jpg (in which case they should be ignored by latex, since i do not now how
+to process them in latex...)
+
+already done? too difficult? wrong tool? where should i start?
+
+ciao
+bboett
+==============================================================
+acount at earthling net 
+<A  HREF="http://erm6.u-strasbg.fr/~bboett">http://erm6.u-strasbg.fr/~bboett</A>
+===============================================================
+Unsolicited commercial email is NOT welcome at this email address
+To contact me replace acount by bboett in above addresses
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00572" HREF="msg00572.shtml">Re: newbie: skeletons for slides?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00568.shtml">Re: BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00570.shtml">Re: a suggestion: &lt;css&gt; &lt;/css&gt; tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00568.shtml">Re: BUGREPORT: Umlaute in gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00572.shtml">Re: newbie: skeletons for slides?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00569"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00569"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

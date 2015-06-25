@@ -1,0 +1,147 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: WML under Windows... -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 20 Jun 2002 12:44:39 +0200 (MET DST) -->
+<!--X-Message-Id: 20020620105315.GA5561@imacs.polytechnique.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 20020620093903.GA5007@imacs.polytechnique.fr -->
+<!--X-Reference: 000301c21843$774a51f0$4601a8c0@DELL8000 -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02622">Date Index</a>][<a href="thrd53.shtml#02622">Thread Index</a>]<br>
+[<A HREF="msg02621.shtml">Date Prev</A>][Date Next][<A HREF="msg02621.shtml">Thread Prev</A>][<A HREF="msg02610.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 12:53:16 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, Jun 20, 2002 at 08:15:51PM +1000, Darryl Smith wrote:
+&gt; Thanks....
+&gt; 
+&gt; That worked. I am getting there. WML and WMK both work... Except there
+&gt; are some issues that stop it running... The major one is that the
+&gt; .../aux/... Directory is not legal in Cygwin. That is because AUX is a
+&gt; physical device - com port from memory. I am looking through this to see
+&gt; what I can do.
+
+Not a big deal, I will then change this name in next release.
+
+&gt; I have also disabled all the STRIP commands at the moment since they
+&gt; were causing me problems. 
+
+Ok, I'll investigate why.
+
+&gt; It is looking more than hopeful that we will have WML running under
+&gt; windows soon
+
+Great ;)
+As a bonus track, here is a wmd.map to view documentation of include
+files within WMd.
+Install it under your renamed /aux/ directory, and change /aux/ paths
+into your wmd script.
+
+-- 
+Denis Barbier
+WML Maintainer
+</PRE>
+<PRE>
+wml::all=wml.all
+wml::des::all=wml.des.all
+wml::des::gfont=wml.des.gfont
+wml::des::imgbg=wml.des.imgbg
+wml::des::imgdot=wml.des.imgdot
+wml::des::lowsrc=wml.des.lowsrc
+wml::des::navbar=wml.des.navbar
+wml::des::preload=wml.des.preload
+wml::des::rollover=wml.des.rollover
+wml::des::space=wml.des.space
+wml::des::typography=wml.des.typography
+wml::fmt::all=wml.fmt.all
+wml::fmt::isolatin=wml.fmt.isolatin
+wml::fmt::pod=wml.fmt.pod
+wml::fmt::sdf=wml.fmt.sdf
+wml::fmt::text=wml.fmt.text
+wml::fmt::url=wml.fmt.url
+wml::fmt::verbatim=wml.fmt.verbatim
+wml::fmt::xtable=wml.fmt.xtable
+wml::imp::all=wml.imp.all
+wml::imp::csmap=wml.imp.csmap
+wml::imp::fsview=wml.imp.fsview
+wml::imp::generic=wml.imp.generic
+wml::std::all=wml.std.all
+wml::std::box=wml.std.box
+wml::std::case=wml.std.case
+wml::std::grid=wml.std.grid
+wml::std::href=wml.std.href
+wml::std::info=wml.std.info
+wml::std::label=wml.std.label
+wml::std::lang=wml.std.lang
+wml::std::logo=wml.std.logo
+wml::std::page=wml.std.page
+wml::std::tags=wml.std.tags
+wml::std::toc=wml.std.toc
+wml::sup::all=wml.sup.all
+wml::sup::hextriple=wml.sup.hextriple
+wml::sup::path=wml.sup.path
+wml::mod::all=wml.mod.all
+wml::mod::MakeMaker=wml.mod.MakeMaker
+wml::mod::version=wml.mod.version
+wml::sys::all=wml.sys.all
+wml::sys::bootp3=wml.sys.bootp3
+wml::sys::bootp4=wml.sys.bootp4
+wml::sys::compat1=wml.sys.compat1
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02620" HREF="msg02620.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02621" HREF="msg02621.shtml">RE: WML under Windows...</A></strong>, <em>From:</em> Darryl Smith</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02621.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02621.shtml">RE: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02610.shtml">make errors - curses.h not found &amp; problem resolved..</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02622"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02622"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

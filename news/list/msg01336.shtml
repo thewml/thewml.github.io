@@ -1,0 +1,113 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT for wmk -->
+<!--X-From-R13: Qenvt Ivrtreg <jvrtregNdhvagrffrapr.hpuvpntb.rqh> -->
+<!--X-Date: Fri, 4 Feb 2000 08:12:56 +0100 (MET) -->
+<!--X-Message-Id: 200002032319.RAA22100@quintessence.uchicago.edu -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01336">Date Index</a>][<a href="thrd28.shtml#01336">Thread Index</a>]<br>
+[<A HREF="msg01332.shtml">Date Prev</A>][<A HREF="msg01334.shtml">Date Next</A>][<A HREF="msg01332.shtml">Thread Prev</A>][<A HREF="msg01338.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT for wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Craig Wiegert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 03 Feb 2000 17:19:54 -0600</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Ralf,
+
+There is a bug in the wmk's directory traversal algorithm, read_rcfile.
+The problem is that @DIR is never cleared; it just keeps growing as wmk
+recurses its way through directories.  The result is that the time spent
+in read_rcfile grows quadratically!  Also, it looks like the wmk options
+set in path/foo/bar wind up affecting the options used while processing
+path/baz/quux, which is probably not what you want.
+
+This patch is against the current WML release (1.7.4):
+
+--- wmk.src.orig	Thu Feb  3 17:04:23 2000
++++ wmk.src	Thu Feb  3 17:09:14 2000
+@@ -366,6 +366,7 @@
+ 
+ #   read .wmkrc files and command-line options
+ sub read_rcfile {
++    my (@DIR, $cwd, $dir);
+     @opt_A_SAV = @opt_A;
+     @opt_F_SAV = @opt_F;
+     @opt_x_SAV = @opt_x;
+@@ -438,7 +439,7 @@
+ 
+ #   determine files to act on
+ sub determine_files {
+-    my ($cwd, $dir, @DIR, @files, @filesA, @filesF, $fileA, $fileF, %files);
++    my (@files, @filesA, @filesF, $fileA, $fileF, %files);
+ 
+     #   determine files
+     @filesA = glob(join(' ', @opt_A_CUR));
+
+
+Cheers,
+
+  - Craig
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01338" HREF="msg01338.shtml">Re: BUG REPORT for wmk</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01332.shtml">Screen and printing Version...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01334.shtml">Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01332.shtml">Screen and printing Version...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01338.shtml">Re: BUG REPORT for wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01336"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01336"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

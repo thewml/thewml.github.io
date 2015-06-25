@@ -1,0 +1,98 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: No Subject -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 25 Oct 2000 09:04:00 +0200 (MET DST) -->
+<!--X-Message-Id: 20001025090502.A22623@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail41.shtml#02038">Date Index</a>][<a href="thrd10.shtml#02038">Thread Index</a>]<br>
+[<A HREF="msg02037.shtml">Date Prev</A>][<A HREF="msg02039.shtml">Date Next</A>][<A HREF="msg01561.shtml">Thread Prev</A>][<A HREF="msg02210.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>No Subject</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 25 Oct 2000 09:05:02 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+  Hi people,
+
+  I just released WML 2.0.5, this version is mainly a bugfix release to
+  close some bugs which may be blocking under certain circumstances. If
+  you had hit such a bug, you are strongly advised to update, if you are
+  happy with WML 2.0.4, upgrading is not that important.
+
+  Changes between 2.0.4 and 2.0.5:
+    *) Improve wml::std::page (23-Oct-2000)
+    *) Improve WMd customization (13-Oct-2000)
+    *) Add wml_contrib/wml1to2 (02-Oct-2000)
+    *) Fix wml::des::navbar (02-Oct-2000)
+    *) Improve flags handling (02-Oct-2000)
+    *) Fix infinite loop in wml_p8_htmlstrip (28-Sep-2000)
+    *) Fix wml_p8_htmlstrip (27-Sep-2000)
+    *) Fix compilation on AIX 4.3 (27-Sep-2000)
+    *) Fix bug with conditionals in wml_p2_mp4h (27-Sep-2000)
+
+  This version can be downloaded from
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02037.shtml">Re: minor problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02039.shtml">[BUG REPORT] WML 2.0.5, Solaris2.6</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01561.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02210.shtml">No Subject</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail41.shtml#02038"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd10.shtml#02038"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

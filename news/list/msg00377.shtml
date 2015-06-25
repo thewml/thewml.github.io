@@ -1,0 +1,109 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: how to use wml_auxiliareise (htmlinfo, etc)? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 2 Feb 1999 09:14:41 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.990201085334.3301C&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 19990125140712.B14583@engelschall.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail8.shtml#00377">Date Index</a>][<a href="thrd8.shtml#00377">Thread Index</a>]<br>
+[<A HREF="msg00376.shtml">Date Prev</A>][<A HREF="msg00378.shtml">Date Next</A>][<A HREF="msg00369.shtml">Thread Prev</A>][<A HREF="msg00370.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: how to use wml_auxiliareise (htmlinfo, etc)?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 1 Feb 1999 09:09:32 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, 25 Jan 1999, Ralf S. Engelschall wrote:
+
+&gt; On Mon, Jan 25, 1999, Viorel Anghel wrote:
+&gt; 
+&gt; &gt; How can i use auxiliaries like htmlinfo, weblint, linklint from wml package?
+&gt; &gt; 
+&gt; &gt; I tried (unsuccesfull) something like
+&gt; &gt; wmk -X htmlinfo file.wml
+&gt; &gt; 
+&gt; &gt; Something wrong with my wml distribution or what?
+&gt; 
+&gt; Ops, no: the wmk is broken at this point. Seems
+&gt; like I've forgotten to do the expansion for -X in wmk.
+&gt; For -E in wml it's done. But as a workaround you
+&gt; can use `wmk -X /absolute/path/to/htmlinfo file.wml', of course.
+
+Hi Ralf i'm back,
+
+i believe the right way to do what Viorel want is to invoke
+  wmk -E htmlinfo file.wml
+
+I am totally confused with the -x/-X options. What should they do?
+BTW, it is mentioned in the doc that -x/-X options apply only on
+directories, not files, so `wmk -X htmlinfo file.wml' is an error.
+
+   Denis
+
+--
+D. Barbier
+<A  HREF="http://imacs.polytechnique.fr">http://imacs.polytechnique.fr</A>
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00369" HREF="msg00369.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00376.shtml">Re: No installation problems with 1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00378.shtml">Re: emacs mode</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00369.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00370.shtml">Re: how to use wml_auxiliareise (htmlinfo, etc)?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail8.shtml#00377"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd8.shtml#00377"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

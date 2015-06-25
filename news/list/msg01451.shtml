@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml::std::lang generated tags -->
+<!--X-From-R13: Ibystnat Rnhgreznaa <qnhgvNbru.gh&#45;tenm.np.ng> -->
+<!--X-Date: Sun, 19 Mar 2000 17:42:36 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10003191618520.11644&#45;100000@oeh.tu&#45;graz.ac.at -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01451">Date Index</a>][<a href="thrd30.shtml#01451">Thread Index</a>]<br>
+[<A HREF="msg01450.shtml">Date Prev</A>][<A HREF="msg01452.shtml">Date Next</A>][<A HREF="msg01459.shtml">Thread Prev</A>][<A HREF="msg01457.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml::std::lang generated tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Wolfgang Dautermann &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 19 Mar 2000 17:45:09 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi,
+
+today I found, that wml::std::lang provides (for example) either
+&lt;de: &gt;, &lt;en: &gt; Tags (if one uses the option "short") or
+&lt;lang:de&gt; &lt;/lang:de&gt;,  &lt;lang:en&gt; &lt;/lang:en&gt; Tags 
+- but never both variants. Is this intentional or a bug? If it is
+intentional one should clarify that in the documentation, but I think it
+would be better if the "short" Variant would provide the "long" tags in
+addition - so that one can switch to the "short" variant without having
+to change all the "long" tags.
+
+As a small demonstration the following wml-File
+-----------------------------------------------------
+#!wml -o (ALL-LANG_*)+LANG_EN:%BASE-en.html \
+      -o (ALL-LANG_*)+LANG_DE:%BASE.html
+
+#use wml::std::lang
+# &lt;lang:new id=en&gt;
+# &lt;lang:new id=de&gt;
+&lt;lang:new id=en short&gt;
+&lt;lang:new id=de short&gt;
+
+&lt;de: Test 1 deutsch  &gt;
+&lt;en: Test 1 englisch &gt;
+&lt;lang:de&gt; Test 2 deutsch &lt;/lang:de&gt;
+&lt;lang:en&gt; Test 2 englisch &lt;/lang:en&gt;
+----------------------------------------------------
+
+produces the following 2 html-Files:
+
+---------- 1st output file -------------------------
+Test 1 englisch
+&lt;lang:de&gt; Test 2 deutsch &lt;/lang:de&gt;
+&lt;lang:en&gt; Test 2 englisch &lt;/lang:en&gt;
+-----------2nd output file -------------------------
+Test 1 deutsch
+
+&lt;lang:de&gt; Test 2 deutsch &lt;/lang:de&gt;
+&lt;lang:en&gt; Test 2 englisch &lt;/lang:en&gt;
+----------------------------------------------------
+
+(it would produce for example 
+---------------------------------------------------
+&lt;de: Test 1 deutsch&gt;
+&lt;en: Test 1 englisch&gt;
+
+ Test 2 englisch
+---------------------------------------------------
+if one uses the &lt;lang:new&gt; without the "short" flag.
+
+I use wml-1.7.4 (but I found no relevant changes in the changelog).
+
+Bye, Wolfgang
+
+--
+Diese Mail kommt von: Wolfgang Dautermann
+WWW-Homepage: <A  HREF="http://oeh.tu-graz.ac.at/~dauti/">http://oeh.tu-graz.ac.at/~dauti/</A>
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01457" HREF="msg01457.shtml">Re: wml::std::lang generated tags</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01450.shtml">Re: Pass parameter -k to eperl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01452.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01459.shtml">Re: I cannot get navbar to work</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01457.shtml">Re: wml::std::lang generated tags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01451"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01451"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

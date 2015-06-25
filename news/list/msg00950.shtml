@@ -1,0 +1,327 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: [LONG] Re: How to write a paper about WML in WML -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Tue, 7 Sep 1999 19:00:55 +0200 (MET DST) -->
+<!--X-Message-Id: m1n1uyhd1i.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990907082859.29323A&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00950">Date Index</a>][<a href="thrd20.shtml#00950">Thread Index</a>]<br>
+[<A HREF="msg00949.shtml">Date Prev</A>][<A HREF="msg00951.shtml">Date Next</A>][<A HREF="msg00987.shtml">Thread Prev</A>][<A HREF="msg00951.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: [LONG] Re: How to write a paper about WML in WML</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 07 Sep 1999 19:00:41 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Denis Barbier &lt;barbier@imacs.polytechnique.fr&gt; writes:
+
+Hi Denis,
+
+I played a bit with the tags your provided for producing WML-examples.
+May I ask another question:
+
+While your tags work well for displaying WML-source and the resulting
+rendered HTML, what I would also like to do is to display the
+resulting HTML-code NOT being rendered. I played a bit with &lt;verbatim&gt;
+in the display part of your &lt;example&gt;-tag, but don't really get to
+where I want. I figured you'd be able to tell very quickly, perhaps.
+
+Thanks for your help,
+Fritz
+
+&gt; &gt; I am trying to write an article about WML for an internal journal of
+&gt; &gt; our computer center. Of course, I want to publish it on our Web-site
+&gt; &gt; as well. This leads to the problem of presenting WML-example code on a
+&gt; &gt; WMl-generated page. This leads to some interesting problems with
+&gt; &gt; including verbatim code.
+&gt; &gt; 
+&gt; &gt; While one can fool WML with for example entering
+&gt; &gt; 
+&gt; &gt; &lt; define-container foo&gt;
+&gt; &gt; 
+&gt; &gt; and then in using area substition to get rid of the the blank between
+&gt; &gt; &lt; and define, this is not particularly elegant. The problem with the
+&gt; &gt; verbatim-environment is that it is evaluated to late.
+&gt; &gt; 
+&gt; &gt; Ideally, one would like to put some WML example code into an include
+&gt; &gt; file and then include it once as verbatim and then a second time after
+&gt; &gt; being processed by WML. But I guess that would involve at least
+&gt; &gt; processing these include files separately once and then include the
+&gt; &gt; resulting .html file verbatim again.
+&gt; 
+&gt; You guess wrong ;-)
+&gt; The macros below implement this feature in a one-shot trip. Of course,
+&gt; in some cases strange problems may occur. 
+&gt; 
+&gt; I need these include files
+&gt;    #use wml::std::tags
+&gt;    #use wml::std::box
+&gt;    #use wml::fmt::verbatim
+&gt; 
+&gt; The latest has been updated on 20-Aug-1999 and i realize there is still
+&gt; a bug. Replace &lt;pass=4-8&gt; by &lt;pass=4-9&gt;, i don't see why i didn't
+&gt; protect against the last pass.
+&gt; 
+&gt; Here is a macro to write your examples to a file
+&gt; &lt;define-container verbatim-write &amp;unevalled &amp;body vw-body&gt;
+&gt; &lt;preserve file&gt;
+&gt; &lt;set-var %attributes&gt;
+&gt; &lt;:
+&gt; {
+&gt;     my $file = '&lt;get-var file&gt;';
+&gt;     if ($file eq '') {
+&gt;         my $tmpdir = $ENV{'TMPDIR'} || '/tmp';
+&gt;         $file = $tmpdir . "/wml.verbfile";
+&gt;     }
+&gt;     my $buffer = &lt;&lt;'__EOT_VERBATIM__';
+&gt; &lt;subst-in-string
+&gt;   &lt;subst-in-string
+&gt;     &lt;get-var-once vw-body&gt;
+&gt;                         "&lt;:" "&amp;lt;:"&gt;
+&gt;                         ":&gt;" ":&amp;gt;"&gt;
+&gt; __EOT_VERBATIM__
+&gt;     open(FP, "&gt;$file") || die "Unable to open $file for writing";
+&gt;     print FP $buffer;
+&gt;     close(FP);
+&gt; }
+&gt; :&gt;
+&gt; &lt;restore file&gt;
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; The subst-in-string tags are needed to escape ePerl delimiters.
+&gt; The ``&amp;unevalled &amp;body'' is a dirty trick from Meta-HTML. I hope i could
+&gt; provide a better way one day. Meanwhile i see no other solution :-(
+&gt; Use this feature only when there is no alternative, i will suppress it ASAP.
+&gt; 
+&gt; Now we can write WML code verbatim to a file. Next we have to show this
+&gt; code and execute it.
+&gt; 
+&gt; &lt;define-container example&gt;
+&gt; &lt;preserve label&gt;
+&gt; &lt;set-var %attributes&gt;
+&gt; #   Write text to a file
+&gt; &lt;verbatim-write file="/tmp/wml-example"&gt;
+&gt; %body
+&gt; &lt;/verbatim-write&gt;
+&gt; #   Print file contents
+&gt; &lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Source code : &lt;get-var label&gt;&lt;/font&gt;" \
+&gt;      bdcolor="#333399" bdwidth=2 bdspace=5 \
+&gt;      bgcolor="#ccccff"&gt;
+&gt; &lt;protect pass=2&gt;\
+&gt; &lt;:
+&gt;     #   The &lt;protect&gt; tag is to needed because of =&gt; below.
+&gt;     #   Don't know why, any idea?
+&gt;     $_ = &amp;wml_fmt_verbatim({ FILE =&gt; '/tmp/wml-example'});
+&gt; 
+&gt;     #   ePerl delimiters are coming back. The backslash prevents 
+&gt;     #   expansion during pass 3.
+&gt;     s|&amp;amp;lt;:|&lt;\:|sg;
+&gt;     s|:&amp;amp;gt;|:\&gt;|sg;
+&gt;     print;
+&gt; :&gt;\
+&gt; &lt;/protect&gt;
+&gt; &lt;/box&gt;
+&gt; #   And show what it does
+&gt; &lt;p&gt;
+&gt; &lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Result : &lt;get-var label&gt;&lt;/font&gt;" \
+&gt;      bdcolor="#993333" bdwidth=2 bdspace=5 \
+&gt;      bgcolor="#ffcccc"&gt;
+&gt; #   The line below seems to be equivalent to %body. It is not because of
+&gt; #   wml_p5_divert constructions &gt;&gt;NAME..
+&gt; #   With %body, angle brackets will close groups. With the line below this
+&gt; #   problem those angle brackets do not interfere because the are part
+&gt; #   of strings.
+&gt; &lt;concat %qbody&gt;
+&gt; &lt;/box&gt;
+&gt; &lt;restore label&gt;
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; Some examples? Ok, let's go
+&gt; 
+&gt; &lt;example label="Test Pass 2"&gt;
+&gt; &lt;define-container test&gt;
+&gt; &lt;box header="Test"
+&gt;      bdcolor="#000000" bdwidth=2 bdspace=5
+&gt;      bgcolor="#ccffcc"&gt;
+&gt; &lt;pre&gt;
+&gt; %body
+&gt; &lt;/pre&gt;
+&gt; &lt;/box&gt;
+&gt; &lt;/define-container&gt;
+&gt; &lt;test&gt;
+&gt; This is a test
+&gt; &lt;/test&gt;
+&gt; &lt;/example&gt;
+&gt; 
+&gt; &lt;example label="Test Pass 3"&gt;
+&gt; &lt;:
+&gt; sub isotime {
+&gt;     my ($time) = @_;
+&gt; 
+&gt;     my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) =
+&gt;         localtime($time);
+&gt;     my ($str) = sprintf("%02d-%02d-%04d %02d:%02d:%02d",
+&gt;         $mday, $mon+1, $year+1900, $hour, $min, $sec);
+&gt;     return $str;
+&gt; }
+&gt; :&gt;
+&gt; Last modified on &lt;:=&amp;isotime(time()):&gt;
+&gt; &lt;/example&gt;
+&gt; 
+&gt; &lt;example label="Test Pass 4"&gt;
+&gt; &lt;m4&gt;
+&gt; m4_define(`forloop',
+&gt;     `m4_pushdef(`$1', `$2')_forloop(`$1', `$2', `$3', `$4')m4_dnl
+&gt;      m4_popdef(`$1')')
+&gt; m4_define(`_forloop',
+&gt;     `$4`'m4_ifelse($1, `$3', ,
+&gt;         `m4_define(`$1', m4_incr($1))m4_dnl
+&gt;          _forloop(`$1', `$2', `$3', `$4')')')
+&gt; forloop(`i', 1, 8, `i ')
+&gt; &lt;/m4&gt;
+&gt; &lt;/example&gt;
+&gt; 
+&gt; &lt;example label="Test Pass 5"&gt;
+&gt; &lt;&lt;HEADER&gt;&gt;
+&gt; &lt;&lt;BODY&gt;&gt;
+&gt; &lt;&lt;FOOTER&gt;&gt;
+&gt; ..FOOTER&gt;&gt;
+&gt; &lt;hr&gt;Copyright (c) 1999 me@domain.com
+&gt; &lt;&lt;..
+&gt; 
+&gt; ..HEADER&gt;&gt;
+&gt; &lt;h2&gt;Diversion Test&lt;/h2&gt;
+&gt; &lt;&lt;..
+&gt; 
+&gt; ..BODY&gt;&gt;&lt;p&gt;And here goes the body.&lt;&lt;..
+&gt; &lt;/example&gt;
+&gt; 
+&gt; &lt;example label="Test Pass 6"&gt;
+&gt; {: [[tr#[a-z]#[A-Z]#]]
+&gt; Are all TheSe lEtterS iN upperCaSe?
+&gt; :}
+&gt; &lt;p&gt;
+&gt; {: [[s#(href=")([^"]*)#\1../\2#g]][[s#(this)#that#g]]
+&gt; Follow this &lt;a href="link.html"&gt;link&lt;/a&gt;
+&gt; :}
+&gt; &lt;/example&gt;
+&gt; 
+&gt; Passes 1, 5 and 9 require special attention.
+&gt; * To suppress pass 1 parsing, you must either add
+&gt;   &lt;protect pass=1&gt;...&lt;/protect&gt; around your code or read a file via pass
+&gt;   2, 3 or 4, e.g.
+&gt; &lt;define-container example-pass1&gt;
+&gt; &lt;preserve label&gt;
+&gt; &lt;preserve file&gt;
+&gt; &lt;set-var %attributes&gt;
+&gt; &lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Source code : &lt;get-var label&gt;&lt;/font&gt;" \
+&gt;      bdcolor="#333399" bdwidth=2 bdspace=5 \
+&gt;      bgcolor="#ccccff"&gt;
+&gt; &lt;verbatim-file src=&lt;get-var file&gt;&gt;
+&gt; &lt;/box&gt;
+&gt; &lt;p&gt;
+&gt; &lt;box header="&lt;font face=\"Arial, Helvetica\"&gt;Result : &lt;get-var label&gt;&lt;/font&gt;" \
+&gt;      bdcolor="#993333" bdwidth=2 bdspace=5 \
+&gt;      bgcolor="#ffcccc"&gt;
+&gt; &lt;concat %qbody&gt;
+&gt; &lt;/box&gt;
+&gt; &lt;restore file&gt;
+&gt; &lt;restore label&gt;
+&gt; &lt;/define-container&gt;
+&gt; 
+&gt; &lt;example-pass1 file="pass1.ex"&gt;
+&gt; #include 'pass1.ex' VAR=value ....
+&gt; &lt;/example-pass1&gt;
+&gt; 
+&gt; With pass 5, you have to take care of location names. All different
+&gt; buffers should have different names.
+&gt; 
+&gt; I don't know how to show examples of pass 9. you may use pass 3 to
+&gt; invoke wml:
+&gt;    system('wml -q -o A:test.a -o B:test.b test.wml');
+&gt; It will be awfully slow, and you certainly do not need to always
+&gt; regenerate output files.
+&gt; 
+&gt; -- 
+&gt; Denis Barbier
+&gt; WML Maintainer
+&gt; 
+&gt; 
+&gt; 
+&gt; 
+&gt; 
+&gt; ______________________________________________________________________
+&gt; Website META Language (WML)                www.engelschall.com/sw/wml/
+&gt; Official Support Mailing List                   sw-wml@engelschall.com
+&gt; Automated List Manager                       majordomo@engelschall.com
+&gt; 
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00944" HREF="msg00944.shtml">[LONG] Re: How to write a paper about WML in WML</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00949.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00951.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00987.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00951.shtml">Re: [LONG] Re: How to write a paper about WML in WML</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00950"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00950"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: I like this navbar -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 8 Apr 1999 15:44:50 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990408144525.32691A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 87zp4j1p1p.fsf@vlxhars.desy.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00557">Date Index</a>][<a href="thrd13.shtml#00557">Thread Index</a>]<br>
+[<A HREF="msg00556.shtml">Date Prev</A>][<A HREF="msg00558.shtml">Date Next</A>][<A HREF="msg00553.shtml">Thread Prev</A>][<A HREF="msg00559.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: I like this navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 8 Apr 1999 15:39:18 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On 8 Apr 1999, Florian Hars wrote:
+
+&gt; &gt; Concerning the ``nohints'' attribute, it's a good idea. 
+&gt; [...]
+&gt; &gt; wml_p8_htmlstrip to suppress JavaScript code. I prefer the latter, any
+&gt; &gt; opinion?
+&gt; 
+&gt; I might want to be able to suppress javascript hints on navbars, but
+&gt; still be able to use the image replacement (see the example below,
+&gt; navbar-FH actually produces different javascript code for nb_imgOver
+&gt; depending on nohints), to set hints on selected &lt;href ...&gt;s or to
+&gt; include hand-coded javascript stuff (<A  HREF="http://www.hars.de/misz/rado.html">http://www.hars.de/misz/rado.html</A>
+&gt; uses javascript to supply a functionality that can't be achieved
+&gt; otherwise), this might be difficult to do with a global option to
+&gt; remove javascript code.
+
+Yes, you're right. I've added a ``nohints'' attribute to navbar:render,
+the <A  HREF="http://www.engelschall.com/sw/wml/test/gimp">http://www.engelschall.com/sw/wml/test/gimp</A> shows the result.
+
+&gt; &gt; And i don't understand what your ``imgstyle'' attribute is for. Do you
+&gt; &gt; have an example?
+&gt; 
+&gt; It is relevant for the automatic button creation, see
+&gt; <A  HREF="http://www.hars.de/www/wml_nav_img.en.html">http://www.hars.de/www/wml_nav_img.en.html</A> for a description.  It is
+&gt; used like (real world applications should probably use PerlMagick or
+&gt; something instead of banner and netpbm):
+
+Thanks for the explanations.
+I think you should not mix button definition and image generation. 
+You may define a tag to build your pictures, with the ``imgstyle''
+attribute. Take a look at &lt;wml::des::gfont&gt;, it provides a ``notag''
+attribute for writing images without generating &lt;img&gt; tag.
+
+It's easier to debug and maintain. And in your template you can define
+your own macros to generate image files and appropriate navbar
+definitions.
+
+   Denis
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00559" HREF="msg00559.shtml">Re: I like this navbar</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00553" HREF="msg00553.shtml">Re: I like this navbar</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00556.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00558.shtml">Re: Daily Snapshot as .tar.gz</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00553.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00559.shtml">Re: I like this navbar</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00557"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00557"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

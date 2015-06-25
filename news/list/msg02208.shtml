@@ -1,0 +1,170 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 2.0.6 (25&#45;Oct&#45;2000) -->
+<!--X-From-R13: Yheg Lrvyratn <xhegNobbyrna.arg> -->
+<!--X-Date: Mon, 23 Apr 2001 17:44:03 +0200 (MET DST) -->
+<!--X-Message-Id: 200104220449.f3M4nQO17964@pretender.boolean.net -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail45.shtml#02208">Date Index</a>][<a href="thrd45.shtml#02208">Thread Index</a>]<br>
+[<A HREF="msg02207.shtml">Date Prev</A>][<A HREF="msg02209.shtml">Date Next</A>][<A HREF="msg02207.shtml">Thread Prev</A>][<A HREF="msg02242.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Kurt Zeilenga &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 22 Apr 2001 04:49:26 GMT</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.6 (25-Oct-2000)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Kurt Zeilenga
+Reply-To: kurt@openldap.org
+
+PROBLEM DESCRIPTION:
+
+htmlfix appears to be trimming the trailing "/" from unquoted attributes.
+
+The following input:
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=/&gt;BAD&lt;/a&gt;
+&lt;li&gt;&lt;a href=/ &gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="/"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/">http://www.example.net/</A>&gt;BAD&lt;/a&gt;
+&lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/">http://www.example.net/</A> &gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/">http://www.example.net/</A>"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>&gt;BAD&lt;/a&gt;
+&lt;li&gt;&lt;a href=<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A> &gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>"&gt;GOOD&lt;/a&gt;
+&lt;/ol&gt;
+
+produces
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&gt;BAD&lt;/a&gt;
+&lt;li&gt;&lt;a href="/"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="/"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net">http://www.example.net</A>"&gt;BAD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/">http://www.example.net/</A>"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/">http://www.example.net/</A>"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo">http://www.example.net/foo</A>"&gt;BAD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>"&gt;GOOD&lt;/a&gt;
+&lt;li&gt;&lt;a href="<A  HREF="http://www.example.net/foo/">http://www.example.net/foo/</A>"&gt;GOOD&lt;/a&gt;
+&lt;/ol&gt;
+
+Note the 1,4,7 list items.
+
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-freebsd4.3
+    Perl: 5.005 (/usr/bin/perl5.00503)
+    User: kurt@openldap.org
+    Date: 21-Apr-2001
+Built Location:
+    Prefix: /usr/local
+    BinDir: /usr/local/bin
+    LibDir: /usr/local/lib/wml
+    ManDir: /usr/local/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 5 subversion 3) configuration:
+  Platform:
+    osname=freebsd, osvers=4.0-current, archname=i386-freebsd
+    uname='FreeBSD freefall.FreeBSD.org 4.0-current FreeBSD 4.0-current #0: $Date$'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='undef', gccversion=2.95.2 19991024 (release)
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=undef, usevfork=true
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags ='-Wl,-E -lperl -lm '
+    libpth=/usr/lib
+    libs=-lm -lc -lcrypt
+    libc=, so=so, useshrplib=true, libperl=libperl.so.3
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags=' -Wl,-R/usr/lib'
+    cccdlflags='-DPIC -fpic', lddlflags='-Wl,-E -shared -lperl -lm '
+
+
+Characteristics of this binary (from libperl): 
+  Built under freebsd
+  Compiled at Apr 12 2001 15:40:11
+  @INC:
+    /usr/libdata/perl/5.00503/mach
+    /usr/libdata/perl/5.00503
+    /usr/local/lib/perl5/site_perl/5.005/i386-freebsd
+    /usr/local/lib/perl5/site_perl/5.005
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02242" HREF="msg02242.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02207.shtml">Re: Including multiple files while retaining order</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02209.shtml">parent dir breaks Diversion</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02207.shtml">Re: Including multiple files while retaining order</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02242.shtml">Re: BUG REPORT: Website META Language 2.0.6 (25-Oct-2000)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail45.shtml#02208"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd45.shtml#02208"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,122 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Tip: Language specification in header -->
+<!--X-From-R13: Jbfr [nabry Dnzbf <kznabryNovtsbbg.pbz> -->
+<!--X-Date: Wed, 15 Dec 1999 10:54:31 +0100 (MET) -->
+<!--X-Message-Id: 19991214155535.B283@perolo -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail25.shtml#01224">Date Index</a>][<a href="thrd26.shtml#01224">Thread Index</a>]<br>
+[<A HREF="msg01223.shtml">Date Prev</A>][<A HREF="msg01225.shtml">Date Next</A>][<A HREF="msg01228.shtml">Thread Prev</A>][<A HREF="msg01230.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Tip: Language specification in header</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Xose Manoel Ramos &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 14 Dec 1999 15:55:35 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I just came out with this little code. I think it can be useful for
+somebody.
+
+This is a smart way of adding an specification of the language used
+in the page in the header (with a 'Content-Language' meta-tag). 
+
+It is smart enough in case you are not using the 'lang' module it
+does not ouput anything. 
+
+&lt;head&gt;
+# (...)
+&lt;ifeq "&lt;get-var __languages[]&gt;" "" 
+    ""  
+    "&lt;meta http-equiv=\"Content-Language\" \ 
+    content=\"&lt;lang:es: es-ES&gt;&lt;lang:en: en-GB&gt;\"&gt;
+    "
+    &gt;
+&lt;/define-tag&gt;
+&lt;/head&gt;
+
+Example:
+
+If no  languages being used:
+
+&lt;head&gt;
+&lt;/head&gt;
+
+Spanish one:
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Language" content="es-ES"&gt;
+&lt;/head&gt;
+
+English one:
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Language" content="en-GB"&gt;
+&lt;/head&gt;
+
+
+
+-- 
+Saudos:
+&gt;&lt;ose        xmanoel@bigfoot.com   (Vigo/Galicia/España)
+         <A  HREF="http://pagina.de/xmanoel/">http://pagina.de/xmanoel/</A>
+         <A  HREF="http://w3.to/mikkeli/">http://w3.to/mikkeli/</A>
+
+12/14	(12/14/1946) NYC voted to be the UN headquarters. 
+12/14	(12/14/1503) Nostradamus (born Michel de Notredame), French prophet. 
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01223.shtml">Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01225.shtml">Re: use of slices restricted with &lt;img&gt;-tag</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01228.shtml">Re: Erasing redundant newlines, spaces and tabs</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01230.shtml">How do I start wml?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail25.shtml#01224"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01224"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

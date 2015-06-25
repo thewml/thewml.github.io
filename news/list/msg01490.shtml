@@ -1,0 +1,112 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Implicit variables: Meta&#45;HTML vs. Mp4h -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Wed, 29 Mar 2000 01:09:22 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000329003052.9B&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 200003280847.KAA11510@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01490">Date Index</a>][<a href="thrd30.shtml#01490">Thread Index</a>]<br>
+[<A HREF="msg01489.shtml">Date Prev</A>][<A HREF="msg01491.shtml">Date Next</A>][<A HREF="msg01485.shtml">Thread Prev</A>][<A HREF="msg01493.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Implicit variables: Meta-HTML vs. Mp4h</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Mar 2000 01:09:15 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 28 Mar 2000, Jan Holler wrote:
+
+&gt; The changes from 1.7.x to 1.99.x are not that severe  for
+&gt; users, most of the changes are just minor, but there is one
+&gt; which I personally think is a pain. Is there really no way
+&gt; to solve this in a compatible way?
+&gt; 
+&gt; In <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/README.mp4h">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/README.mp4h</A>
+&gt; we find:
+&gt; 
+&gt; There are two cases where ``&lt;get-var i&gt;'' could be replaced
+&gt; by ``i'' with Meta-HTML: inside arithmetic expression (e.g. &lt;add
+&gt; i j 10&gt;) and array indices (e.g. &lt;get-var foo[i]&gt;). Mp4h does
+&gt; not recognize these shortcuts, and &lt;get-var&gt; must be used
+&gt; in these cases.
+&gt; 
+&gt; So a &lt;get-var foo[i]&gt; is going to be: &lt;get-var foo[&lt;get-var i&gt;]&gt;
+
+I definitely dislike this, but it is so trivial to implement that i have
+no serious reason to reject your suggestion.
+I do not know yet how this feature will be documented.
+
+The patched version will be available at 04AM GMT at
+<A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_backend/p2_mp4h/src/builtin.c">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_backend/p2_mp4h/src/builtin.c</A>
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01493" HREF="msg01493.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01485" HREF="msg01485.shtml">Implicit variables: Meta-HTML vs. Mp4h</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01489.shtml">[1.99.4] Bug Report: continuation shebang printed to body</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01491.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01485.shtml">Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01493.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01490"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01490"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

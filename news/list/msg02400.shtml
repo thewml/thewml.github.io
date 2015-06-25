@@ -1,0 +1,143 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Line numbers -->
+<!--X-From-R13: Uuvfynvar Znobherg <Uuvfynvar.ZnobhergNufp.se> -->
+<!--X-Date: Wed, 10 Oct 2001 10:52:13 +0200 (MET DST) -->
+<!--X-Message-Id: 20011010085120.0C04C10ECA@itesec.hsc.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010926142908.CBC6D10E05@itesec.hsc.fr -->
+<!--X-Reference: 20010927002439.A13046@imacs.polytechnique.fr -->
+<!--X-Reference: 20011004120357.DB6D010E0D@itesec.hsc.fr -->
+<!--X-Reference: 20011006000436.A22031@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02400">Date Index</a>][<a href="thrd48.shtml#02400">Thread Index</a>]<br>
+[<A HREF="msg02399.shtml">Date Prev</A>][<A HREF="msg02401.shtml">Date Next</A>][<A HREF="msg02396.shtml">Thread Prev</A>][<A HREF="msg02401.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Line numbers</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Ghislaine Labouret &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 10 Oct 2001 10:52:13 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sat, 6 Oct 2001 00:04:37 +0200, Denis Barbier wrote:
+
+&gt; &gt; Also, I noticed that error lines given by WML do not correspond to
+&gt; &gt; "real" lines (vim's line count for exemple) when using \ at the end of
+&gt; &gt; lines: a lines ending with \ and the following one is counted as a
+&gt; &gt; single line. This makes debugging more difficult...
+&gt; 
+&gt; You are right :(
+&gt; But I did not find exactly where does this problem come from, I am not
+&gt; sure it is caused by escaped newlines.
+
+I guess the line count is performed after regrouping lines ending with \
+and stripping comment lines. Here are exemples of what I was refering
+to:
+
+Input:
+1.
+2. \
+3. Source line number for mp4h: &lt;__line__&gt;
+
+Output:
+1.
+2. 3. Source line number for mp4h: 2
+
+But the line in the source is 3 if not taking the \ into account.
+Same for the line number given when issuing a warning:
+
+Input:
+1. 
+2. \
+3. Error: &lt;ifeq
+
+Output:
+/usr/local/lib/wml/exec/wml_p2_mp4h: ERROR:toto.wml:2: EOF when reading
+argument of the `ifeq' tag
+** WML:Break: Error in Pass 2 (rc=1).
+
+Also, comment lines are not counted:
+
+Input:
+1. 
+#2.
+3. Source line number for mp4h: &lt;__line__&gt;
+
+Output:
+1.
+3. Source line number for mp4h: 2
+
+
+Sincerely,
+
+--
+Ghislaine Labouret, Network security consultant
+Hervé Schauer Consultants (HSC) - <A  HREF="http://www.hsc.fr/">http://www.hsc.fr/</A>
+Phone (+33)-141-409-700 - Fax (+33)-141-409-709
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02401" HREF="msg02401.shtml">Re: Line numbers</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02392" HREF="msg02392.shtml">Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+<li><strong><A NAME="02393" HREF="msg02393.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02394" HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+<li><strong><A NAME="02396" HREF="msg02396.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02399.shtml">Re: WML by example</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02401.shtml">Re: Line numbers</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02396.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02401.shtml">Re: Line numbers</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02400"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02400"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

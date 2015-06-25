@@ -1,0 +1,104 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: gFont, ttfont alternatives with good anti&#45;aliasing (Gimp anyone)? -->
+<!--X-From-R13: Egrcuna Brgrefra <fc908Ntgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Sun, 11 Mar 2001 11:48:07 +0100 (MET) -->
+<!--X-Message-Id: 3A9511D8.808305DB@gtt.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02160">Date Index</a>][<a href="thrd44.shtml#02160">Thread Index</a>]<br>
+[<A HREF="msg02159.shtml">Date Prev</A>][<A HREF="msg02158.shtml">Date Next</A>][<A HREF="msg02166.shtml">Thread Prev</A>][<A HREF="msg02169.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 22 Feb 2001 14:19:20 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi guys,
+
+I tried using gFont and ttfont to render some text into GIFs/PNGs,
+but I found that anti-aliasing is not really done, or not 
+working too well (unless I'm missing something).
+
+Has anybody tried other ways to render nice text as bitmaps 
+through wml?
+
+Maybe using the Perl interface to the Gimp toolkit?
+
+I'm grateful for any tipps! For instance, it would be interesting
+to know how the headlines in the wml docs were created, like
+<A  HREF="http://www.engelschall.com/sw/wml/com/navbar/headline-docs.gif">http://www.engelschall.com/sw/wml/com/navbar/headline-docs.gif</A>
+
+Thanks in advance,
+
+Stephan
+
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02169" HREF="msg02169.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02173" HREF="msg02173.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02159.shtml">wml &amp; jsp</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02158.shtml">[BUG REPORT] WML HML Documentation, NT</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02166.shtml">Re: wml &amp; jsp</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02169.shtml">Re: gFont, ttfont alternatives with good anti-aliasing (Gimp anyone)?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02160"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02160"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,263 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Nested navbars -->
+<!--X-From-R13: efrNratryfpunyy.pbz (Dnys E. Satryfpunyy) -->
+<!--X-Date: Tue, 17 Feb 1998 15:41:19 +0100 (MET) -->
+<!--X-Message-Id: 199802171441.PAA14313@en1.engelschall.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail2.shtml#00098">Date Index</a>][<a href="thrd2.shtml#00098">Thread Index</a>]<br>
+[<A HREF="msg00097.shtml">Date Prev</A>][<A HREF="msg00099.shtml">Date Next</A>][<A HREF="msg00097.shtml">Thread Prev</A>][<A HREF="msg00099.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Nested navbars</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx (Ralf S. Engelschall)</LI>
+<LI><em>Date</em>: Tue, 17 Feb 1998 15:41:16 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+In article &lt;<A HREF="msg00097.shtml">m1iuqfdd7s.fsf@foobar.ee.ethz.ch</A>&gt; you wrote:
+
+&gt; I was wondering, if (or better, how?) nesting of navbar's could be
+&gt; accomplished. For example:
+
+&gt; PAGE 1            PAGE 2
+
+&gt; Topic 1           Topic 1
+&gt; Topic 2           Topic 2
+&gt;   Subtopic 2a     Topic 3
+&gt;   Subtopic 2b       Subtopic 3a
+&gt;   Subtopic 2c       Subtopic 3b
+&gt; Topic 3             Subtopic 3c
+&gt; Topic 3             Subtopic 3d
+&gt; Topic 5           Topic 4
+&gt;           Topic 5
+
+Hmmm... this a non-trivial requirement which needs a non-trivial solution. But
+because WML can do anything we want ;-), after thinking deep enough about this
+problem I now came to the conclusion that it is solveable and only solveable
+in combination with the diversion mechanism (Pass 5). This is no restriction,
+just a fact.
+
+So, to make the statement short enough, here is the final working solution:
+
+==================================
+##
+##  navbar2.inc -- support nested navbar with two levels
+##  Copyright (c) 1998 Ralf S. Engelschall, All Rights Reserved. 
+##
+
+#   we are based on the original navbar tags
+#use wml::des::navbar
+#use wml::des::space
+
+#   the container tag for definition of the
+#   main navbar or a sub navbar
+&lt;define-container nb:define&gt;
+&lt;ifeq "%0" "main" &lt;prog
+    &lt;navbar:define name="main"&gt;
+      &lt;navbar:header&gt;
+        &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+        &lt;&lt;FILLER&gt;&gt;
+      &lt;/navbar:header&gt;
+      &lt;navbar:prolog&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;
+      &lt;/navbar:prolog&gt;
+      %body
+      &lt;navbar:epilog type=S&gt;
+        &lt;/b&gt;
+        #   HERE IS THE NESTING!
+        &lt;&lt;SNB&gt;&gt;
+        &lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:epilog&gt;
+        &lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:footer&gt;
+        &lt;/table&gt;
+      &lt;/navbar:footer&gt;
+    &lt;/navbar:define&gt;
+&gt; &lt;prog
+    &lt;navbar:define name="%1"&gt;
+      &lt;navbar:header&gt;
+        &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+        &lt;tr&gt;
+        &lt;td&gt;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &lt;/td&gt;
+        &lt;td&gt;
+        &lt;table cellspacing=0 cellpadding=0 border=0&gt;
+      &lt;/navbar:header&gt;
+      &lt;navbar:prolog&gt;
+        &lt;tr&gt;&lt;td&gt;
+      &lt;/navbar:prolog&gt;
+      %body
+      &lt;navbar:epilog&gt;
+        &lt;/td&gt;&lt;/tr&gt;
+      &lt;/navbar:epilog&gt;
+      &lt;navbar:footer&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/navbar:footer&gt;
+    &lt;/navbar:define&gt;
+&gt;&gt;
+&lt;/define-container&gt;
+
+#   the filler has to be coded seperatly to avoid
+#   pass conflicts (sorry)
+..FILLER&gt;&gt;&lt;space width=200&gt;&lt;&lt;..
+
+#   the tag for defining a particular button
+&lt;define-tag nb:button&gt;
+&lt;navbar:button id="%0" txt="%1" url="%2"&gt;
+&lt;/define-tag&gt;
+
+#   and finally the nested rendering
+&lt;define-tag nb:render&gt;
+&lt;navbar:render name=main select=%0&gt;
+..SNB&gt;&gt;
+&lt;navbar:render name=%0 select=%1&gt;
+&lt;&lt;..
+&lt;/define-tag&gt;
+==================================
+
+Now the specialized pagetemplate which uses this include file:
+
+==================================
+##
+##  Definition of our navigation bar structure
+##
+
+#include 'navbar2.inc'
+
+&lt;nb:define main&gt;
+&lt;nb:button topic-1 "Topic 1" topic1.html&gt;
+&lt;nb:button topic-2 "Topic 2" topic2.html&gt;
+&lt;nb:button topic-3 "Topic 3" topic3.html&gt;
+&lt;nb:button topic-4 "Topic 4" topic4.html&gt;
+&lt;nb:button topic-5 "Topic 5" topic5.html&gt;
+&lt;/nb:define&gt;
+
+&lt;nb:define sub topic-1&gt;
+&lt;nb:button subtopic-1a "Topic 1a" topic1a.html&gt;
+&lt;nb:button subtopic-1b "Topic 1b" topic1b.html&gt;
+&lt;/nb:define&gt;
+
+&lt;nb:define sub topic-2&gt;
+&lt;nb:button subtopic-2a "Topic 2a" topic2a.html&gt;
+&lt;nb:button subtopic-2b "Topic 2b" topic2b.html&gt;
+&lt;nb:button subtopic-2c "Topic 2c" topic2c.html&gt;
+&lt;/nb:define&gt;
+
+&lt;nb:define sub topic-3&gt;
+&lt;nb:button subtopic-3a "Topic 3a" topic3a.html&gt;
+&lt;nb:button subtopic-3b "Topic 3b" topic3b.html&gt;
+&lt;nb:button subtopic-3c "Topic 3c" topic3c.html&gt;
+&lt;nb:button subtopic-3c "Topic 3d" topic3d.html&gt;
+&lt;/nb:define&gt;
+
+&lt;nb:define sub topic-4&gt;
+&lt;nb:button subtopic-4a "Topic 4a" topic4a.html&gt;
+&lt;nb:button subtopic-4b "Topic 4b" topic4b.html&gt;
+&lt;/nb:define&gt;
+
+&lt;nb:define sub topic-5&gt;
+&lt;nb:button subtopic-5a "Topic 5a" topic5a.html&gt;
+&lt;nb:button subtopic-5b "Topic 5b" topic5b.html&gt;
+&lt;/nb:define&gt;
+
+##
+##  The page template itself
+##
+
+&lt;page&gt;
+
+&lt;nb:render $(area) $(subarea)&gt;
+
+&lt;p
+&lt;hr&gt;
+&lt;p&gt;
+==================================
+
+And finally the two sample pages which expand to exactly what you have
+requested:
+
+==================================
+#include 'pagetemplate.inc' area=topic-2 subarea=subtopic-2b
+
+This is page 1
+==================================
+
+==================================
+#include 'pagetemplate.inc' area=topic-3 subarea=subtopic-3b
+
+This is page 2
+==================================
+
+Gretings,
+                                       Ralf S. Engelschall
+                                       rse@engelschall.com
+                                       www.engelschall.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00099" HREF="msg00099.shtml">Re: Nested navbars</A></strong>, <em>From:</em> Fritz Zaucker</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00097.shtml">Nested navbars</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00099.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00097.shtml">Nested navbars</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00099.shtml">Re: Nested navbars</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail2.shtml#00098"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd2.shtml#00098"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

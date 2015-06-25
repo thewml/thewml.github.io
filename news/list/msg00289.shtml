@@ -1,0 +1,117 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [patch ipp] Time Optimization -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 31 Dec 1998 15:01:35 +0100 (CET) -->
+<!--X-Message-Id: Pine.LNX.3.96.981231123848.22306A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail6.shtml#00289">Date Index</a>][<a href="thrd7.shtml#00289">Thread Index</a>]<br>
+[<A HREF="msg00288.shtml">Date Prev</A>][<A HREF="msg00290.shtml">Date Next</A>][<A HREF="msg00288.shtml">Thread Prev</A>][<A HREF="msg00291.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[patch ipp] Time Optimization</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 31 Dec 1998 14:11:27 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi Ralf and others,
+
+to speed up wml, i decided to store files inside a ``format'' file, as
+TeX does. I create a file
+   ## file includes.wml
+   use wml::std::all
+   use wml::des::all
+   ##EOF##
+
+process it through wml_p1_ipp:
+   prompt&gt; wml_p1_ipp -S /usr/lib/wml/include includes.wml &gt; includes.pass1
+
+and include this file via
+   #include "includes.pass1"
+
+This file may be read verbatim, wml_p1_ipp should do nothing on it. So i
+added these few lines to ipp.src and now
+   #include "includes.pass1" verbatim
+read ``includes.pass1'' without invoking ipp on it.
+
+I admit that speed-up time is not terrific.
+
+Denis
+
+--- wml-1.6.7/wml_backend/p1_ipp/ipp.src  Thu Jul 30 10:22:16 1998
++++ wml-1.6.7/wml_backend/p1_ipp/ipp.src  Thu Dec 31 12:42:50 1998
+@@ -245,6 +245,11 @@
+     while ($l = &lt;$in&gt;) {
+         $line++;
+
++        if ($arg{'verbatim'}) {
++            $out .= $l;
++            next;
++        }
++
+         #
+         #   Variable Interpolation
+         #
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00291" HREF="msg00291.shtml">Re: [patch ipp] Time Optimization</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00288.shtml">[Patch] Borders again with gfont</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00290.shtml">Re: New WML-generated website: www.openssl.org</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00288.shtml">[Patch] Borders again with gfont</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00291.shtml">Re: [patch ipp] Time Optimization</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail6.shtml#00289"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00289"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

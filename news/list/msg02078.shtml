@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: small problem with wml -->
+<!--X-From-R13: "Xnzrf O. Fernpl" <gernplNqrovna.bet> -->
+<!--X-Date: Tue, 12 Dec 2000 21:54:13 +0100 (MET) -->
+<!--X-Message-Id: 20001212155442.A21786@landru.home.link -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail42.shtml#02078">Date Index</a>][<a href="thrd42.shtml#02078">Thread Index</a>]<br>
+[<A HREF="msg02077.shtml">Date Prev</A>][<A HREF="msg02079.shtml">Date Next</A>][<A HREF="msg02083.shtml">Thread Prev</A>][<A HREF="msg02079.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>small problem with wml</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;James A. Treacy&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 12 Dec 2000 15:54:42 -0500</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+There is clearly something wrong in the following:
+
+Running wml on the following:
+  &lt;define-tag URL whitespace=delete&gt;
+     &lt;: if(q{%0} eq "") { print "&amp;lt;none&amp;gt;";}
+        else { $tmp=q{%0}; print "&lt;a href=\"$tmp\"&gt;$tmp&lt;/a&gt;";}
+  :&gt; &lt;/define-tag&gt;
+
+  &lt;URL <A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A>&gt;
+  &lt;URL <A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A> &gt;
+
+gives
+
+&lt;a href="<A  HREF="http://a.b.c/cd">http://a.b.c/cd</A>"&gt;<A  HREF="http://a.b.c/cd">http://a.b.c/cd</A>&lt;/a&gt;
+&lt;a href="<A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A>"&gt;<A  HREF="http://a.b.c/cd/">http://a.b.c/cd/</A>&lt;/a&gt;
+
+Why is the last slash disappearing?
+
+-- 
+James (Jay) Treacy
+treacy@debian.org
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02079" HREF="msg02079.shtml">Re: small problem with wml</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02087" HREF="msg02087.shtml">Re: small problem with wml</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02077.shtml">Suggestions for wml::std::logo</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02079.shtml">Re: small problem with wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02083.shtml">Re: Suggestion for wml::fmt::url</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02079.shtml">Re: small problem with wml</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail42.shtml#02078"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd42.shtml#02078"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,101 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Implicit variables: Meta&#45;HTML vs. Mp4h -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Wed, 29 Mar 2000 10:02:03 +0200 (MET DST) -->
+<!--X-Message-Id: 200003290738.JAA14639@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000329003052.9B&#45;100000@localhost -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail30.shtml#01493">Date Index</a>][<a href="thrd30.shtml#01493">Thread Index</a>]<br>
+[<A HREF="msg01492.shtml">Date Prev</A>][<A HREF="msg01494.shtml">Date Next</A>][<A HREF="msg01490.shtml">Thread Prev</A>][<A HREF="msg01486.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Implicit variables: Meta-HTML vs. Mp4h</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 29 Mar 2000 09:38:27 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Wed, 29 Mar 2000 01:09:15 +0200 (CET), Denis Barbier wrote:
+&gt; On Tue, 28 Mar 2000, Jan Holler wrote:
+&gt; 
+&gt;&gt; In <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/README.mp4h">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/README.mp4h</A>
+&gt;&gt; we find:
+
+&gt;&gt; So a &lt;get-var foo[i]&gt; is going to be: &lt;get-var foo[&lt;get-var i&gt;]&gt;
+&gt; 
+&gt; I definitely dislike this, but it is so trivial to implement that i have
+&gt; no serious reason to reject your suggestion.
+
+Thank you. Yes I see your point of view of disliking it.
+
+&gt; I do not know yet how this feature will be documented.
+
+Have a section with compatibility issues to the former
+version.
+
+Cheers
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01490" HREF="msg01490.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01492.shtml">eperl: redefinition of `union semun'</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01494.shtml">Re: [1.99.4] Wishlist: upgrade weblint to version 1.9.3</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01490.shtml">Re: Implicit variables: Meta-HTML vs. Mp4h</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01486.shtml">[1.99.4] BUG REPORT: system(3pl) doesn't return exit value</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail30.shtml#01493"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01493"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

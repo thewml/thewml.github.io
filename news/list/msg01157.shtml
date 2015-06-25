@@ -1,0 +1,154 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Slicing and not&#45;slicing but using the same template(s). -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Wed, 24 Nov 1999 22:46:14 +0100 (MET) -->
+<!--X-Message-Id: 199911241710.SAA04442@ns.inetcom.loc -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail24.shtml#01157">Date Index</a>][<a href="thrd24.shtml#01157">Thread Index</a>]<br>
+[<A HREF="msg01156.shtml">Date Prev</A>][<A HREF="msg01159.shtml">Date Next</A>][<A HREF="msg01193.shtml">Thread Prev</A>][<A HREF="msg01159.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Slicing and not-slicing but using the same template(s).</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 24 Nov 1999 18:10:14 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+hi
+i have some websites which run under different languages
+and some which have just one single language.
+i use one(!) standard-templage as a basic layout for all(!) my
+websites. on top of that i build the "local" templates 
+for the certain sites. (two steps of abstraction).
+
+the basic template just is:
+#use wml::incl::pre_inc
+#use wml::incl::header
+&lt;!-- Begin Contents --&gt;
+[PAGE_BODY:
+&lt;&lt;PAGE_BODY&gt;&gt;
+:PAGE_BODY]
+&lt;!-- End Contents --&gt;
+[PAGE_FOOT:
+:PAGE_FOOT]
+#use wml::incl::post_inc
+.PAGE_BODY&gt;&gt;
+
+the include-file "header" does use std::page and the
+&lt;page... tag. wherein the title, keywords, ... are defined.
+&lt;page title="... according to the different languages.
+
+in pre_inc everything is defined which stands before the
+include-line in the source-file, in post_inc typically the
+divertions, so a simple source file would look:
+#!wml -o %BASE.html
+&lt;set-var pagecolor="#fefefe"&gt;
+#use wml::tmpl::stdpage
+&lt;subject="testpage"&gt;
+Say Hello
+
+Remember: 
+1. I have sites which use just one single language,
+so i use as a shebang-line: 
+ #!wml -o %BASE.html
+2. I do have sites with (partly) multilingual pages 
+which use: (e.g.)
+ #!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html \
+     -o (ALL-LANG_*)uLANG_FR:%BASE_f.html
+
+BUT: i do like to use the same basic page template.
+i do know that that runs me in some problems, but before i
+update all my hundereds of sources to be pseudo-"multilingual"
+like:
+ #!wml -o (ALL-LANG_*)uLANG_DE:%BASE.html
+and fix up my basic-template to generate multilingual pages
+per se, i look for some patchy way.
+
+i thought about it for some time and probably don't see the
+easy way, so if anybody knows the answer, i'd appreciate if
+that persons shares it with me.
+basically i thought about using variable or divertions but
+none of them do work:
+A. i learned that i can NOT set variables &lt;set-var...&gt; this
+way (assumed all prior definitions are set):
+  &lt;de: &lt;set-var foo="deutsch"&gt;&gt;
+  &lt;fr: &lt;set-var foo="francais"&gt;&gt;
+because the slicing is done in pass 9 and the variable are
+set in pass 2. it ends up with foo having the last value.
+B. the same sad story with divertions. that does NOT work:
+  &lt;de: &lt;foo="deutsch&gt;&gt;
+  &lt;fr: &lt;foo="francais"&gt;&gt;
+because slicing in pass 9 and diverting in pass 5.
+
+so how the heck can i put a value in variable
+depending on the language which is generated?
+
+if the answer is just a simple as "no" i have to go the
+hard way.
+
+thank you for your attention
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01159" HREF="msg01159.shtml">Re: Slicing and not-slicing but using the same template(s).</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01156.shtml">Re: slice-problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01159.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01193.shtml">Re: [HELP] Replacement of wml_p2_mhc</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01159.shtml">Re: Slicing and not-slicing but using the same template(s).</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail24.shtml#01157"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd24.shtml#01157"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

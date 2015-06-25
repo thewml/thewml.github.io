@@ -1,0 +1,107 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: logo size, date format -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 15 Jan 2002 00:27:34 +0100 (MET) -->
+<!--X-Message-Id: 20020115003803.A6528@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C43135B.B22AB627@snafu.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02477">Date Index</a>][<a href="thrd50.shtml#02477">Thread Index</a>]<br>
+[<A HREF="msg02476.shtml">Date Prev</A>][<A HREF="msg02478.shtml">Date Next</A>][<A HREF="msg02476.shtml">Thread Prev</A>][<A HREF="msg02478.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: logo size, date format</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 15 Jan 2002 00:38:03 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jan 14, 2002 at 06:20:27PM +0100, Werner Heuser wrote:
+&gt; Hi,
+&gt; 
+&gt; is there a way provided directly bei WML to change the size of 
+&gt; the logos (#use wml::std::logo)?
+&gt; 
+&gt; Also I would like to have the format of $(WML_SRC_CTIME) in German.
+
+Hi Werner,
+
+no there is no way no change logo size.
+About dates, you may try something like
+
+&lt;mp4h-l10n LC_ALL="de_DE"&gt;
+&lt;date time="$(WML_SRC_TIME)" format="%a %b %e %H:%M:%S %Y"&gt;
+
+or
+
+&lt;:
+use locale;
+use POSIX;
+setlocale(LC_ALL, "de_DE");
+
+print strftime "%a %b %e %H:%M:%S %Y", localtime($(WML_SRC_TIME));
+:&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02476" HREF="msg02476.shtml">logo size, date format</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02476.shtml">logo size, date format</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02478.shtml">presentation of WML in Berlin (Germany)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02476.shtml">logo size, date format</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02478.shtml">presentation of WML in Berlin (Germany)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02477"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd50.shtml#02477"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

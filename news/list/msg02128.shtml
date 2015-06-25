@@ -1,0 +1,135 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Javascript missing -->
+<!--X-From-R13: Xrna&#45;[vpury Enhintr <wrna&#45;zvpury.fnhintrNpyho&#45;vagrearg.se> -->
+<!--X-Date: Thu, 8 Feb 2001 18:35:12 +0100 (MET) -->
+<!--X-Message-Id: 3A82D7E2.80609@club&#45;internet.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0102070044520.19823&#45;100000@hal.saar.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail43.shtml#02128">Date Index</a>][<a href="thrd43.shtml#02128">Thread Index</a>]<br>
+[<A HREF="msg02127.shtml">Date Prev</A>][<A HREF="msg02129.shtml">Date Next</A>][<A HREF="msg02127.shtml">Thread Prev</A>][<A HREF="msg02131.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Javascript missing</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jean-Michel Sauvage &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 08 Feb 2001 18:31:14 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Michael Kress wrote:
+
+&gt; Hello,
+Hello !
+
+&gt; generated, while using sub navbars.
+&gt; I'm just getting errors like:
+&gt; ------------------------------------------------------------------------------------------
+&gt; JavaScript Error:
+&gt; file:/var/local/offshore/aktuelle_Projekte/mohme/version_0_3/nodistr/wml/service-al.html,
+&gt; line 93:
+&gt; nb_imgOver is not defined. 
+
+&gt; Has anybody got any clue for that behaviour ? What can I do ?
+&gt; 
+
+this problem seems to be complex :
+
+1) in /usr/lib/wml/include/des/navbar.wml file, there's a macro : 
+&lt;define-tag navbar:jsfuncs&gt;
+at the end of this macro there is this line :
+&lt;define-tag navbar:jsfuncs&gt;&lt;/define-tag&gt;
+
+so the JS code will be generated one time and only once ;
+
+2) in /usr/lib/wml/include/std/tags.wml you'll find &lt;javascript&gt; macro.
+the JS code is diverted with &lt;head&gt; tag (and [LANG_* ...)
+
+so, JS code is diverted one time in page head where your (sub)navbar is 
+define !
+
+if you define &lt;snb&gt; before &lt;page&gt; tag  and if you have a .wml file per 
+final .html page, or if you have a multipages .wml, your JS code may be 
+diverted in a wrong &lt;head&gt; (you can debug this after pass 3)
+
+a solution is to copy the &lt;javascript&gt; define-tag to make your own (eg 
+MK_javascript) and modify the navbar:jsfuncs (un)define-tag (the kind of 
+solution depends on multipages use or not)
+
+but it's not finished, there's also another problem if you use 
+multipages features :
+you will have to modify /usr/lib/include/std/page.wml :
+&lt;head&gt; and &lt;title&gt; definitions ends with :##}
+replace it with :#WML_PAGE_HEAD_&lt;get-var __std_page_cnt /&gt;#}
+if you want JS code correctly diverted to each page_head
+
+
+&gt; Thanks for any helpful comment!
+&gt; 
+you're welcome
+
+Jean-Michel Sauvage
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02131" HREF="msg02131.shtml">Re: Javascript missing</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02127" HREF="msg02127.shtml">Javascript missing</A></strong>, <em>From:</em> Michael Kress</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02127.shtml">Javascript missing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02129.shtml">wml &amp; cookies</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02127.shtml">Javascript missing</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02131.shtml">Re: Javascript missing</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail43.shtml#02128"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd43.shtml#02128"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,162 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: wml + frames = ouch -->
+<!--X-From-R13: Egrcura ina Stzbaq <finartzbNgehrfcrpgen.pbz> -->
+<!--X-Date: Wed, 14 Jan 1998 11:21:34 +0100 (MET) -->
+<!--X-Message-Id: 199801140718.CAA31804@plymouth.truespectra.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="date.shtml#00043">Date Index</a>][<a href="thread.shtml#00043">Thread Index</a>]<br>
+[<A HREF="msg00042.shtml">Date Prev</A>][<A HREF="msg00044.shtml">Date Next</A>][<A HREF="msg00042.shtml">Thread Prev</A>][<A HREF="msg00044.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>wml + frames = ouch</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephen van Egmond &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 14 Jan 1998 02:18:42 -0500 (EST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+I am personally deeply opposed to frames, but the people with the paycheck
+(fortunately, this is just a contract job) asked me to do "the things with
+the scrollbars", and so I pull up wml and wonder how am I going to do
+this.
+
+My original scheme was the two-table-cell approach to navigation: some
+list of places to go (which, for me, changes depending on where you are)
+in the left table cell (~33% of the screen), and actual content goes on
+the right.  They wanted the left cell in a frame, so it would stay put.
+Growl.
+
+What I basically came up with is a post-processing.  WML generates all its
+stuff into a file structured like so.  Instead of a properly-formatted
+html file with tables, I have a file that might look like:
+
+---8&lt;---
+This is the title for the web browser, one line
+[navigator stuff goes here, multiple-lines]
+BEGIN-CONTENT!
+[content stuff goes here, multiple lines]
+---8&lt;---
+
+My postprocessing splits this into material for frames, noframes, with
+server-including to link it all.  Let's say that our structured file
+filename.html came from filename.wml. After post-processing by perl, we'll
+have the following four files newly created:
+	filename-nav
+	filename-content
+	filename-nav.html
+	filename-content.html
+
+The first two contain, respectively, the left and right table cell
+contents; the next two are corresponding files that server-include the
+corresponding "cell", but formmated wihtin HTML so that it can be referred
+to from a &lt;frameset&gt;.
+
+Finally, my post-processor overwrites filename.html with a &lt;frameset&gt; page
+which refers to the filename-*.html files above, and in the &lt;noframes&gt;
+context creates a table which server-side includes the filename-nav and
+filename-content sections.
+
+So, after processing I have:
+
+filename.html:
+HTML
+ HEAD
+  STYLESHEET
+ FRAMESET
+	frame #1: source=filename-nav.html
+	-&gt; "filename-nav.html" server-includes "filename-nav"
+
+	frame #2: source=filename-content.html
+  	-&gt; "filename-content.html" server-includes "filename-content"
+ /FRAMESET
+ /HEAD
+ NOFRAMES, BODY, TABLE, TR, TD
+	server-include "filename-nav"
+ /TD, TD
+	server-include "filename-content"
+/TD, /TR, /TABLE, /BODY, /HTML
+
+Examples:
+<A  HREF="http://www.truespectra.com/~svanegmo/pic/index.html">http://www.truespectra.com/~svanegmo/pic/index.html</A>
+<A  HREF="http://www.truespectra.com/~svanegmo/pic/index-nav.html">http://www.truespectra.com/~svanegmo/pic/index-nav.html</A>
+<A  HREF="http://www.truespectra.com/~svanegmo/pic/index-content.html">http://www.truespectra.com/~svanegmo/pic/index-content.html</A>
+<A  HREF="http://www.truespectra.com/~svanegmo/pic/index-nav">http://www.truespectra.com/~svanegmo/pic/index-nav</A>
+<A  HREF="http://www.truespectra.com/~svanegmo/pic/index-content">http://www.truespectra.com/~svanegmo/pic/index-content</A>
+
+Source:
+<A  HREF="http://www.truespectra.com/~svanegmo/pic/index.wml">http://www.truespectra.com/~svanegmo/pic/index.wml</A>
+
+Question:
+Can anybody think of a *better* way of doing this.  My make process
+amounts to:
+	rm *.html
+	wmk -fs
+	frameify *.html
+
+Which is only a trade-off in maintenance time.  I lose a bit of wml's
+features on the encpsulating HTML, but none of it is especially complex. 
+
+Note that the files on the web right now may not be quite right; lynx
+likes them, and that's all I know.
+
+/Steve
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00044" HREF="msg00044.shtml">Re: wml + frames = ouch</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00042.shtml">Re: 1st Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00044.shtml">Re: wml + frames = ouch</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00042.shtml">Re: 1st Try: Page Explorer</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00044.shtml">Re: wml + frames = ouch</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="date.shtml#00043"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thread.shtml#00043"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

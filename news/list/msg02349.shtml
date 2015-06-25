@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <lang:current> question? -->
+<!--X-From-R13: Yney&#45;Vrvam [neonvfr <xzneonvfrNdvf&#45;flfgrzunhf.qr> -->
+<!--X-Date: Wed, 1 Aug 2001 08:22:10 +0200 (MET DST) -->
+<!--X-Message-Id: 3B679FF1.61C06FF6@qis&#45;systemhaus.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: E15RP8e&#45;0000KC&#45;00@braindead.automatedproperties.com -->
+<!--X-Reference: 3B664DA7.FEB0DBE1@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010731085308.A21542@imacs.polytechnique.fr -->
+<!--X-Reference: 3B66624F.4155DB91@qis&#45;systemhaus.de -->
+<!--X-Reference: 20010731205245.D23829@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail47.shtml#02349">Date Index</a>][<a href="thrd47.shtml#02349">Thread Index</a>]<br>
+[<A HREF="msg02348.shtml">Date Prev</A>][<A HREF="msg02350.shtml">Date Next</A>][<A HREF="msg02348.shtml">Thread Prev</A>][<A HREF="msg02344.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;lang:current&gt; question?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Karl-Heinz Marbaise &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Wed, 01 Aug 2001 08:21:37 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Thank you Denis,
+
+
+&gt;      &lt;lang:star: *&gt;
+This works. But now I'm trying to use this in 
+an other way:
+
+&lt;define-tag gmttime&gt;
+&lt;preserve lang&gt;
+&lt;set-var %attributes&gt;
+&lt;:{
+        my $language = qq/&lt;get-var lang&gt;/;
+.
+.
+        &lt;protect pass=2&gt;
+        printf STDOUT '%s %s %02d %02d:%02d:%02d UTC %04d %s',
+                      $weekdays{"$language"}{'short'}[$wday], 
+                      $month{"$language"}{'short'}[$mon], 
+                      $mday, $hour, $min, $sec, $year, $language;
+        &lt;/protect&gt;
+}:&gt;
+&lt;restore lang&gt;
+&lt;/define-tag&gt;
+
+If i use this tag &lt;gmttime lang=&lt;lang:star: *&gt;&gt; it does not
+work as expected.
+If I only use &lt;lang:star: *&gt; then I get the appropiate information, but
+it does not in relationship with the ePerl script.
+It seemed to me that it is expanded in different levels of conversion.
+Can someone help me?
+
+Thanks in advance.
+-- 
+Dipl.-Ing. Karl Heinz Marbaise | Phone: +49 (241) 4 13 26 - 48
+QIS Systemhaus GmbH Aachen     | Fax  : +49 (241) 4 13 26 - 40
+Juelicher Strasse 338          | Internet: <A  HREF="http://www.qis-systemhaus.de">http://www.qis-systemhaus.de</A>
+52070 Aachen                   | e-mail  : kmarbaise@qis-systemhaus.de
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02337" HREF="msg02337.shtml">xhtml vs. wml</A></strong>, <em>From:</em> Warren Turkal</li>
+<li><strong><A NAME="02338" HREF="msg02338.shtml">wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02340" HREF="msg02340.shtml">Re: wml 2.0.7: ePerl printf</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02342" HREF="msg02342.shtml">&lt;lang:current&gt; question?</A></strong>, <em>From:</em> Karl-Heinz Marbaise</li>
+<li><strong><A NAME="02348" HREF="msg02348.shtml">Re: &lt;lang:current&gt; question?</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02348.shtml">Re: &lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02350.shtml">Re: &lt;break&gt; when using included &lt;while&gt; tags</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02348.shtml">Re: &lt;lang:current&gt; question?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02344.shtml">Re: wml 2.0.7: ePerl printf</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail47.shtml#02349"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd47.shtml#02349"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

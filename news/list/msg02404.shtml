@@ -1,0 +1,114 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: #include oddities. -->
+<!--X-From-R13: Xna Vbyyre <wuNvargpbz.pu> -->
+<!--X-Date: Mon, 22 Oct 2001 09:45:20 +0200 (MET DST) -->
+<!--X-Message-Id: XFMail.011022094312.jh@inetcom.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 871yjzs4ec.fsf_&#45;_@ralf.artlogix.com -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail49.shtml#02404">Date Index</a>][<a href="thrd49.shtml#02404">Thread Index</a>]<br>
+[<A HREF="msg02403.shtml">Date Prev</A>][<A HREF="msg02405.shtml">Date Next</A>][<A HREF="msg02402.shtml">Thread Prev</A>][<A HREF="msg02406.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: #include oddities.</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Jan Holler &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 22 Oct 2001 09:43:12 +0200 (CEST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+On 19-Oct-01 Ken McGlothlen wrote:
+&gt; I have a situation where my WML file includes a file in a subdirectory, which
+&gt; includes another file in that same subdirectory.  Here are the files:
+ 
+&gt; test.wml:
+&gt;         #include '.toc/tt.wmi' 
+
+&gt; .toc/tt.wmi:
+&gt;         #include 'tt.chp'
+ 
+&gt; .toc/tt.chp:
+&gt;         &lt;li/&gt;Item 1
+
+That does not work since all paths are relative to test.wml.
+You should use definition-variables defined in .wmlrc:
+e.g.:
+-D TOCPATH~"./toc"
+
+then:
+
+test.wml:
+          #include '$(TOCPATH)/tt.wmi'
+.toc/tt.wmi:
+          #include '$(TOCPATH)/tt.chp'
+
+
+Cheers!
+ -jan
+
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02406" HREF="msg02406.shtml">Re: #include oddities.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02403" HREF="msg02403.shtml">#include oddities.</A></strong>, <em>From:</em> Ken McGlothlen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02403.shtml">#include oddities.</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02405.shtml">our wmk/wml broke with perl (5.6.1) upgrade -- help!</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02402.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02406.shtml">Re: #include oddities.</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail49.shtml#02404"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd49.shtml#02404"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

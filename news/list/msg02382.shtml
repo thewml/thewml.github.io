@@ -1,0 +1,123 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Questions about navbar -->
+<!--X-From-R13: "=?vfb&#45;8859&#45;2?P?GUT3Lo[tHAcwrzS=?=" <cnjry.grpmnNcbpmgn.sz> -->
+<!--X-Date: Tue, 28 Aug 2001 09:54:10 +0200 (MET DST) -->
+<!--X-Message-Id: 00af01c12f91$65dbc6b0$3a140b0a@ptecza -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02382">Date Index</a>][<a href="thrd48.shtml#02382">Thread Index</a>]<br>
+[<A HREF="msg02381.shtml">Date Prev</A>][<A HREF="msg02383.shtml">Date Next</A>][<A HREF="msg02379.shtml">Thread Prev</A>][<A HREF="msg02383.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Questions about navbar</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Pawe&lstrok; T&eogon;cza&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 28 Aug 2001 08:44:51 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello!!!
+
+I can define and generate simple navbar, but unfortunately I can't do
+following things:
+
+1. Set any attributes of &lt;a&gt; tag.
+2. Insert a subnavbar  into the navbar.
+
+Suppose I have following navbar definition:
+
+&lt;navbar:define name="mynavbar"&gt;
+    &lt;navbar:header&gt;&lt;table border="0"&gt;&lt;/navbar:header&gt;
+    &lt;navbar:prolog&gt;&lt;tr&gt;&lt;td&gt;&lt;/navbar:prolog&gt;
+    &lt;navbar:button id="item1" txt="item #1" url="1.html"&gt;
+    &lt;navbar:button id="item2" txt="item #2" url="2.html"&gt;
+    &lt;navbar:button id="item3" txt="item #3" url="3.html"&gt;
+    &lt;navbar:epilog&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/navbar:epilog&gt;
+    &lt;navbar:footer&gt;&lt;/table&gt;&lt;/navbar:footer&gt;
+&lt;/navbar:define&gt;
+
+but I want to generate navbar like this:
+
+&lt;table border="0"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href="1.html" class="myclass"&gt;item #1&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+    &lt;table border="0"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="1_1.html" class="myclass2"&gt;item
+#1_1&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="1_2.html" class="myclass2"&gt;item
+#1_2&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="1_3.html" class="myclass2"&gt;item
+#1_3&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href="2.html" class="myclass"&gt;item #2&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href="3.html" class="myclass"&gt;item #3&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+What should I change in my navbar definition?
+
+Thanks for any help
+Regards
+
+Pawel Tecza
+
+
+
+---------------------------------------------------
+<A  HREF="http://POCZTA.interia.pl/">http://POCZTA.interia.pl/</A> - sa powody by korzystac!
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02381.shtml">Re: new flag? wml -U</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02383.shtml">Documentation</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02379.shtml">Re: Problem with including files</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02383.shtml">Documentation</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02382"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02382"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

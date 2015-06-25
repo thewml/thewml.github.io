@@ -1,0 +1,181 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Bug report -->
+<!--X-From-R13: Oyivfr Prybggv <nyivfrNyrggrer.havcq.vg> -->
+<!--X-Date: Thu, 20 Dec 2001 19:12:12 +0100 (MET) -->
+<!--X-Message-Id: 20011220191129.A9065@fedro.lettere.unipd.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail50.shtml#02468">Date Index</a>][<a href="thrd46.shtml#02468">Thread Index</a>]<br>
+[<A HREF="msg02467.shtml">Date Prev</A>][<A HREF="msg02469.shtml">Date Next</A>][<A HREF="msg02275.shtml">Thread Prev</A>][<A HREF="msg02469.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Bug report</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alvise Belotti &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Dec 2001 19:11:29 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 2.0.8 (30-Oct-2001)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     Alvise Belotti
+Reply-To: alvise@laventa.it
+
+PROBLEM DESCRIPTION:
+
+It's me or
+&lt;spaced&gt;, when used in conjunction with &lt;href&gt;,
+lead to a surprising result?
+
+This file:
+test.wml
+
+#use wml::des::typography
+#use wml::std::href
+
+&lt;spaced interchar=2&gt;
+Follow &lt;href url=link.html name="this nice link"&gt;, if you can.
+&lt;/spaced&gt;
+
+compiled with wml -n -o test.html test.wml
+produce
+
+F&amp;nbsp;&amp;nbsp;o&amp;nbsp;&amp;nbsp;l&amp;nbsp;&amp;nbsp;l&amp;nbsp;&amp;nbsp;o&amp;nbsp;&amp;nbsp;w&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a href="link.html"&gt;t&amp;nbsp;&amp;nbsp;h&amp;nbsp;&amp;nbsp;i&amp;nbsp;&amp;nbsp;s&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; n&amp;nbsp;&amp;nbsp;i&amp;nbsp;&amp;nbsp;c&amp;nbsp;&amp;nbsp;e&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; l&amp;nbsp;&amp;nbsp;i&amp;nbsp;&amp;nbsp;n&amp;nbsp;&amp;nbsp;k&amp;nbsp;&amp;nbsp;&lt;&amp;nbsp;&amp;nbsp;/&amp;nbsp;&amp;nbsp;a&amp;nbsp;&amp;nbsp;&gt;&amp;nbsp;&amp;nbsp;,&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; i&amp;nbsp;&amp;nbsp;f&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; y&amp;nbsp;&amp;nbsp;o&amp;nbsp;&amp;nbsp;u&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; c&amp;nbsp;&amp;nbsp;a&amp;nbsp;&amp;nbsp;n&amp;nbsp;&amp;nbsp;.&amp;nbsp;&amp;nbsp;
+
+two &amp;nbsp; are inserted inside the closing tag &lt;/a&gt;
+--&gt;&lt;&amp;nbsp;&amp;nbsp;/&amp;nbsp;&amp;nbsp;a&amp;nbsp;&amp;nbsp;&gt;
+
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu2
+    Perl: 5.006 (/usr/bin/perl)
+    User: barbier@liberte.xtec.polytechnique.fr
+    Date: 06-Nov-2001
+Built Location:
+    Prefix: /usr
+    BinDir: /usr/bin
+    LibDir: /usr/lib/wml
+    ManDir: /usr/share/man
+
+Used Perl System:
+Summary of my perl5 (revision 5.0 version 6 subversion 1) configuration:
+  Platform:
+    osname=linux, osvers=2.4.13, archname=i386-linux
+    uname='linux duende 2.4.13 #1 wed oct 31 19:18:07 est 2001 i686 unknown '
+    config_args='-Dccflags=-DDEBIAN -Dcccdlflags=-fPIC -Darchname=i386-linux -Dprefix=/usr -Dprivlib=/usr/share/perl/5.6.1 -Darchlib=/usr/lib/perl/5.6.1 -Dvendorprefix=/usr -Dvendorlib=/usr/share/perl5 -Dvendorarch=/usr/lib/perl5 -Dsiteprefix=/usr/local -Dsitelib=/usr/local/share/perl/5.6.1 -Dsitearch=/usr/local/lib/perl/5.6.1 -Dman1dir=/usr/share/man/man1 -Dman3dir=/usr/share/man/man3 -Dman1ext=1 -Dman3ext=3perl -Dpager=/usr/bin/sensible-pager -Uafs -Ud_csh -Uusesfio -Dotherlibdirs=/usr/lib/perl5/5.6:/usr/lib/perl5/5.005 -Duseshrplib -Dlibperl=libperl.so.5.6.1 -Dd_dosuid -des'
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef use5005threads=undef useithreads=undef usemultiplicity=undef
+    useperlio=undef d_sfio=undef uselargefiles=define usesocks=undef
+    use64bitint=undef use64bitall=undef uselongdouble=undef
+  Compiler:
+    cc='cc', ccflags ='-DDEBIAN -fno-strict-aliasing -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    optimize='-O2',
+    cppflags='-DDEBIAN -fno-strict-aliasing -I/usr/local/include'
+    ccversion='', gccversion='2.95.4 20011006 (Debian prerelease)', gccosandvers=''
+    intsize=4, longsize=4, ptrsize=4, doublesize=8, byteorder=1234
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    ivtype='long', ivsize=4, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lgdbm -ldbm -ldb -ldl -lm -lc -lcrypt
+    perllibs=-ldl -lm -lc -lcrypt
+    libc=/lib/libc-2.2.4.so, so=so, useshrplib=true, libperl=libperl.so.5.6.1
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fPIC', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Compile-time options: USE_LARGE_FILES
+  Built under linux
+  Compiled at Dec  4 2001 01:54:46
+  @INC:
+    /usr/local/lib/perl/5.6.1
+    /usr/local/share/perl/5.6.1
+    /usr/lib/perl5
+    /usr/share/perl5
+    /usr/lib/perl/5.6.1
+    /usr/share/perl/5.6.1
+    /usr/local/lib/site_perl/i386-linux
+    /usr/local/lib/site_perl
+    /usr/lib/perl5/5.6
+    /usr/lib/perl5/5.005/i386-linux
+    /usr/lib/perl5/5.005
+    .
+
+Ciao, Alvise
+--
+| Alvise Belotti                     |   /"\  .  ASCII Ribbon Campaign .
+| E-mail:   alvise@laventa.it        |   \ /  .- NO HTML/RTF in e-mail .
+| La Venta: <A  HREF="http://www.laventa.it">http://www.laventa.it</A>    |    X   .- NO Word docs in e-mail.
+| E-mail:   info@laventa.it          |   / \  .. . . . . . . . . . . . .
+| PGP Key fingerprint = AD 85 93 92 A9 9C 93 14  9C 6B 3B 15 52 79 B8 BD
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02469" HREF="msg02469.shtml">Re: Bug report</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02467.shtml">Re: m4 und divert</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02469.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02275.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02469.shtml">Re: Bug report</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail50.shtml#02468"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02468"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

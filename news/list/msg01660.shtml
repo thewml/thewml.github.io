@@ -1,0 +1,108 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: wishlist: text in rollover,navbar buttons and class for anchor tags -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 30 May 2000 09:10:37 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000530090325.32132A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 39336260.9A8B3596@fernuni&#45;hagen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail34.shtml#01660">Date Index</a>][<a href="thrd34.shtml#01660">Thread Index</a>]<br>
+[<A HREF="msg01659.shtml">Date Prev</A>][<A HREF="msg01661.shtml">Date Next</A>][<A HREF="msg01658.shtml">Thread Prev</A>][<A HREF="msg01670.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: wishlist: text in rollover,navbar buttons and class for anchor tags</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 30 May 2000 09:10:23 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 30 May 2000, F. Heinrichmeyer wrote:
+
+&gt; the subject expresses my wishlist.
+&gt; 
+&gt; They all cost almost no effort and break no existing page.
+&gt; 
+&gt; The anchors for the navbar simply can get the navbar name as classname.
+&gt; Then the
+&gt; layout can be controlled conveniently by stylesheets.
+
+Hi Fritz,
+
+i did not have time to answer to your previous post, but did have a look
+at your page. If i had to do your navbar myself, i would have done it by
+generating a simple navbar either with images or text, and transform it
+with the &lt;navbar:filter&gt; tag.
+
+Anyway, you certainly already patched wml::des::navbar, could you put it
+somewhere where i can download it?
+Thanks.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01670" HREF="msg01670.shtml">Re: wishlist: text in rollover,navbar buttons and class for anchortags</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+<li><strong><A NAME="01684" HREF="msg01684.shtml">Re: wishlist: text in rollover,navbar buttons and class for anchortags</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01658" HREF="msg01658.shtml">wishlist: text in rollover,navbar buttons and class for anchor tags</A></strong>, <em>From:</em> F. Heinrichmeyer</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01659.shtml">Re: [wml] Re: [wml] Re: [wml] e) or f) : unknown tags parsing</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01661.shtml">Too complex (was: e) or f) : unknown tags parsing)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01658.shtml">wishlist: text in rollover,navbar buttons and class for anchor tags</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01670.shtml">Re: wishlist: text in rollover,navbar buttons and class for anchortags</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail34.shtml#01660"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd34.shtml#01660"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

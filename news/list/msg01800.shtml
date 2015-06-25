@@ -1,0 +1,129 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Question about <subject> -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Mon, 10 Jul 2000 15:29:12 +0200 (MET DST) -->
+<!--X-Message-Id: 20000710153022.A6769@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.21.0007101139171.497&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail36.shtml#01800">Date Index</a>][<a href="thrd37.shtml#01800">Thread Index</a>]<br>
+[<A HREF="msg01799.shtml">Date Prev</A>][<A HREF="msg01801.shtml">Date Next</A>][<A HREF="msg01799.shtml">Thread Prev</A>][<A HREF="msg01816.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Question about &lt;subject&gt;</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 10 Jul 2000 15:30:22 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Mon, Jul 10, 2000 at 11:54:08AM +0200, Stephan Petersen wrote:
+
+&gt; Hi again,
+&gt; 
+&gt; I have a question about the use of the &lt;subject&gt; tag. 
+[...]                   
+&gt; &lt;d: 
+&gt; &lt;subject "Über uns"&gt;
+&gt; &lt;headline&gt;So erreichen Sie uns&lt;/headline&gt;
+&gt; &gt;
+&gt; &lt;e: 
+&gt; &lt;subject "About us"&gt;
+&gt; &lt;headline&gt;Contact information&lt;/headline&gt;
+&gt; &gt;
+[...]
+&gt; &lt;define-tag subject&gt; 
+&gt; ..SUBJECT_LOC&gt;&gt;%0&lt;&lt;..
+&gt; &lt;/define-tag&gt; 
+[...]
+&gt; The strange result is that the &lt;title&gt; of both resulting html files is in
+&gt; *both* cases:
+&gt; 
+&gt; &lt;title&gt;Über unsAbout us&lt;/title&gt;
+&gt; 
+&gt; (i.e. both &lt;subject&gt; tag values make it into the &lt;title&gt; tag) 
+&gt; 
+&gt; All the other aspects of the language-specific html creation are perfectly
+&gt; o.k.
+&gt; 
+&gt; Is this a bug, a feature, or a side-effect? :-)
+
+Hmmm, i would say a feature. Look at your code after pass 2 (e.g. with
+-v9 flag).
+
+The only solution is to put language specifier into &lt;subject&gt;, like
+  &lt;d:
+  &lt;subject "&lt;d: Über uns&gt;"&gt;
+  ...
+or 
+  &lt;subject "&lt;d: Über uns&gt;&lt;e: About us&gt;"&gt;
+  &lt;d:
+  &lt;headline&gt;...
+  &gt;&lt;e: ...&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01816" HREF="msg01816.shtml">Re: Question about &lt;subject&gt;</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01799" HREF="msg01799.shtml">Question about &lt;subject&gt;</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01799.shtml">Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01801.shtml">Re: Problems moving from 1.7.4 to 2.0.1 (resent)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01799.shtml">Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01816.shtml">Re: Question about &lt;subject&gt;</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail36.shtml#01800"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd37.shtml#01800"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

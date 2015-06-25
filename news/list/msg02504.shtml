@@ -1,0 +1,119 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: bug in href or toc? -->
+<!--X-From-R13: "Fubznf D. Ybyy" <gbzx32Ngbzx32.qr> -->
+<!--X-Date: Mon, 11 Feb 2002 13:11:14 +0100 (MET) -->
+<!--X-Message-Id: 20020211121000.GA2156@tomk32.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 3C66F1DB.7050CB49@web.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail51.shtml#02504">Date Index</a>][<a href="thrd51.shtml#02504">Thread Index</a>]<br>
+[<A HREF="msg02503.shtml">Date Prev</A>][<A HREF="msg02505.shtml">Date Next</A>][<A HREF="msg02513.shtml">Thread Prev</A>][<A HREF="msg02505.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: bug in href or toc?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Thomas R. Koll&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Mon, 11 Feb 2002 13:10:00 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, Feb 10, 2002 at 11:19:07PM +0100, Werner Heuser wrote:
+&gt; Hi,
+&gt; 
+&gt; this line in WML
+&gt; 
+&gt; &lt;h3&gt;&lt;href url="<A  HREF="http://www.fujitsu-siemens.de">http://www.fujitsu-siemens.de</A>" name="Fujitsu"&gt;: Lifebook
+&gt; Biblo B-2130&lt;/h3&gt;
+&gt; 
+&gt; results in this HTML code
+&gt; 
+&gt; &lt;h3&gt;&lt;a name="ToC4"&gt;&lt;a href="<A  HREF="http://www.fujitsu-siemens.de">http://www.fujitsu-siemens.de</A>"&gt;Fujitsu&lt;/a&gt;:
+&gt; Lifebook Biblo B-2130&lt;/a&gt;&lt;/h3&gt;
+&gt; 
+&gt; As you see there is one &lt;/a&gt; to much. I probably shouldn't use links in
+&gt; headers,
+&gt; and have removed these construct. But just to let you know.
+
+No it ain't a bug.
+you obviously use wml::std::toc which creates a TableOfContent and adds
+a &lt;a name..&gt; to all &lt;hX&gt;
+
+IMHO wlm::std::toc is missing some features like excluding a &lt;hX&gt; from the
+TOC (even though &lt;protect&gt; might do it) and an additional &lt;nobr&gt; style
+(see my patch from last year).
+
+So try &lt;protect&gt; if you really want no TOC
+
+cya,
+Tom
+
+-- 
+Thomas R. Koll - Totalverweigerer
+
+<A  HREF="http://www.TomK32.de">http://www.TomK32.de</A> - just a geek trying to change the world
+<A  HREF="http://www.sf.net/projects/mysecretdiary/">http://www.sf.net/projects/mysecretdiary/</A> -- wanna code PHP ?
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02505" HREF="msg02505.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="02509" HREF="msg02509.shtml">Re: bug in href or toc?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02502" HREF="msg02502.shtml">bug in href or toc?</A></strong>, <em>From:</em> Werner Heuser</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02503.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02505.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02513.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02505.shtml">Re: bug in href or toc?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail51.shtml#02504"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd51.shtml#02504"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

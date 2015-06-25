@@ -1,0 +1,100 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Forcing dependencies on wmk -->
+<!--X-From-R13: Oyrknaqre Uenrsr <jn0191Nfghq.hav&#45;jhccregny.qr> -->
+<!--X-Date: Mon, 7 Jun 1999 20:13:04 +0200 (MET DST) -->
+<!--X-Message-Id: m31zfndgue.fsf@nachtfalke.dhis.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990607183833.1828A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00742">Date Index</a>][<a href="thrd16.shtml#00742">Thread Index</a>]<br>
+[<A HREF="msg00741.shtml">Date Prev</A>][<A HREF="msg00743.shtml">Date Next</A>][<A HREF="msg00740.shtml">Thread Prev</A>][<A HREF="msg00745.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Forcing dependencies on wmk</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Alexander Graefe &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 07 Jun 1999 20:07:53 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+barbier@imacs.polytechnique.fr (Denis Barbier) writes:
+
+&gt; &gt; Also, does the new wmk check dependencies recursively? It is common
+&gt; &gt; to have #includes (or #use) in included files.
+&gt; 
+&gt; Yes :-)
+&gt; Only user templates are checked, system files are supposed immutable.
+
+Do I have to use a switch to enable this behaviour ?
+I tried it out with a bunch of wml files that all include a template.wmi (wmi
+is the extension I use for WMl Include files). If I change that template file, 
+wmk still skips all wml files.
+
+Bye,
+	LeX
+-- 
+Todays excuse:
+50% of the manual is in .pdf readme files
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00745" HREF="msg00745.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00740" HREF="msg00740.shtml">Re: Forcing dependencies on wmk</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00741.shtml">Re: BUG REPORT: Website META Language 1.7.1 (05-06-1999)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00743.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00740.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00745.shtml">Re: Forcing dependencies on wmk</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00742"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd16.shtml#00742"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

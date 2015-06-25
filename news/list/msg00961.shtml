@@ -1,0 +1,157 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: BUG REPORT: Website META Language 1.7.2 (28&#45;06&#45;1999) -->
+<!--X-From-R13: fpengpuNnpr.hylffvf.fghqrag.xhyrhira.np.or -->
+<!--X-Date: Fri, 10 Sep 1999 11:01:29 +0200 (MET DST) -->
+<!--X-Message-Id: 19990910002851.A7518@intra.dhs.org -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail20.shtml#00961">Date Index</a>][<a href="thrd20.shtml#00961">Thread Index</a>]<br>
+[<A HREF="msg00960.shtml">Date Prev</A>][<A HREF="msg00962.shtml">Date Next</A>][<A HREF="msg00937.shtml">Thread Prev</A>][<A HREF="msg00962.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>BUG REPORT: Website META Language 1.7.2 (28-06-1999)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 10 Sep 1999 00:28:52 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+__        ___  __ _     
+\ \      / / \/  | |      Website META Language
+ \ \ /\ / / |\/| | |      Version 1.7.2 (28-06-1999)
+  \ V  V /| |  | | |___ 
+   \_/\_/ |_|  |_|_____|  BUG REPORT
+_________________________________________________________
+
+From:     ./scratchor\.
+Reply-To: scratch@intra
+
+PROBLEM DESCRIPTION:
+
+Here's a quick patch to a bug in wml itself, that caused '~' variable inter-
+polation with one-charactered directories go wrong (I've broken my head on 
+this for a long time, please take a look at it! :))
+
+
+--- wml.orig	Fri Sep 10 00:19:39 1999
++++ wml	Fri Sep 10 00:20:11 1999
+@@ -254,7 +254,7 @@
+             $path =~ s|//|/|g;
+             $path =~ s|/\./|/|g;
+             $path =~ s|/\.$|/|g;
+-            $path =~ s|^./||g;
++            $path =~ s|^\./||g;
+             $path =~ s|([^/.][^/.]*)/\.\.||;
+         }
+         return $path;
+
+Cya,
+
+-- Nico Galoppo, Belgium
+
+PLATFORM CHARACTERISTICS:
+Used WML System:
+Built Environment:
+    Host: i586-pc-linux-gnu
+    Perl: 5.004_04 (/usr/bin/perl)
+    User: scratch@intra.dhs.org
+    Date: 09-Sep-1999
+Built Location:
+    Prefix: /usr
+    BinDir: /usr/bin
+    LibDir: /usr/lib/wml
+    ManDir: /usr/man
+
+Used Perl System:
+Summary of my perl5 (5.0 patchlevel 4 subversion 4) configuration:
+  Platform:
+    osname=linux, osvers=2.0.36, archname=i386-linux
+    uname='linux perv 2.0.36 #2 wed nov 18 03:00:48 pst 1998 i686 unknown '
+    hint=recommended, useposix=true, d_sigaction=define
+    bincompat3=n useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='-O2', gccversion=2.7.2.3
+    cppflags='-Dbool=char -DHAS_BOOL -D_REENTRANT'
+    ccflags ='-Dbool=char -DHAS_BOOL -D_REENTRANT'
+    stdchar='char', d_stdstdio=define, usevfork=false
+    voidflags=15, castflags=0, d_casti32=define, d_castneg=define
+    intsize=4, alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='cc', ldflags =' -L/usr/local/lib'
+    libpth=/usr/local/lib /lib /usr/lib
+    libs=-lnsl -lndbm -lgdbm -ldbm -ldb -ldl -lm -lc -lposix -lcrypt
+    libc=, so=so
+    useshrplib=false, libperl=libperl.a
+  Dynamic Linking:
+    dlsrc=dl_dlopen.xs, dlext=so, d_dlsymun=undef, ccdlflags='-rdynamic'
+    cccdlflags='-fpic', lddlflags='-shared -L/usr/local/lib'
+
+
+Characteristics of this binary (from libperl): 
+  Built under linux
+  Compiled at Feb  3 1999 00:52:40
+  @INC:
+    /usr/lib/perl5/i386-linux/5.004
+    /usr/lib/perl5
+    /usr/local/lib/site_perl/i386-linux
+    /usr/local/lib/site_perl
+    .
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00962" HREF="msg00962.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00960.shtml">Re: your mail</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00962.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00937.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00962.shtml">Re: BUG REPORT: Website META Language 1.7.2 (28-06-1999)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail20.shtml#00961"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#00961"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

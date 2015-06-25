@@ -1,0 +1,167 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.99.0, Linux 2.0.36 -->
+<!--X-From-R13: qhraxvNvfv.rr.rgum.pu -->
+<!--X-Date: Sat, 18 Mar 2000 19:28:51 +0100 (MET) -->
+<!--X-Message-Id: 200003170816.JAA11080@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail29.shtml#01441">Date Index</a>][<a href="thrd30.shtml#01441">Thread Index</a>]<br>
+[<A HREF="msg01438.shtml">Date Prev</A>][<A HREF="msg01440.shtml">Date Next</A>][<A HREF="msg01513.shtml">Thread Prev</A>][<A HREF="msg01446.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.99.0, Linux 2.0.36</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Fri, 17 Mar 2000 09:16:18 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.99.0
+Operating System: Linux 2.0.36
+
+Problem Description:
+| Hi,
+| 
+| After several problems while migrating my files from WML 1.7.4 to 1.99.0
+| I made the following test (copied from the man page to wml::std::lang
+| plus few own lines):
+| 
+| ------------ begin of tst.wml ------------------------------------------
+| #use wml::std::lang
+| #use wml::std::href
+| 
+| &lt;lang:new id=en short&gt;
+| &lt;lang:new id=de short&gt;
+| &lt;lang:star:slice: index.html.*&gt;
+| 
+| &lt;h1&gt;&lt;en: Welcome&gt;&lt;de: Willkommen&gt;&lt;/h1&gt;
+| 
+| &lt;href name="The Hyperlink" url="&lt;lang:star: index.*.html&gt;"&gt;
+| &lt;href name="The Hyperlink" url="&lt;lang:star:href: index2.*.html|index2.html&gt;"&gt;
+| 
+| &lt;de:
+| Dies
+| ist
+| ein
+| Test.
+| &gt;
+| 
+| &lt;en:
+| This
+| is
+| a
+| test.
+| &gt;
+| ------------ end of tst.wml ------------------------------------------
+| 
+| WML 1.7.4 gives the following result in index.html.de:
+| 
+| &lt;h1&gt;Willkommen&lt;/h1&gt;
+| &lt;a href="index.de.html"&gt;The Hyperlink&lt;/a&gt;
+| &lt;a href="index2.html"&gt;The Hyperlink&lt;/a&gt;
+| Dies
+| ist
+| ein
+| Test.
+| 
+| 
+| WML 1.99.0 together with wml_p2_mp4h fails with:
+| 
+| /usr/local/wml1/lib/exec/wml_p2_mp4h: /tmp/wml.1415.tmp2.wml: 174: Warning:/tmp/wml.1415.tmp2.wml:174: Excess arguments to built-in `ifeq' ignored
+| /usr/local/wml1/lib/exec/wml_p2_mp4h: /tmp/wml.1415.tmp2.wml: 175: Warning:/tmp/wml.1415.tmp2.wml:175: Excess arguments to built-in `ifeq' ignored
+| &gt;
+| &gt;
+| &lt;h1&gt;&lt;en: Welcome&gt;&lt;de: Willkommen&gt;&lt;/h1&gt;
+|    &lt;a href="
+| "&gt;The Hyperlink&lt;/a&gt;
+|    &lt;a href="
+| "&gt;The Hyperlink&lt;/a&gt;
+| &lt;de:
+| Dies
+| ist
+| ein
+| Test.
+| &gt;
+| &lt;en:
+| This
+| is
+| a
+| test.
+| &gt;
+| 
+| All tests are done on a linux system. Any comment?
+| 
+| Max Duenki
+| 
+| -- 
+|   _______________________________________________________________________
+|  /\  Dr. Max H. Duenki - Tel: +41 1 632 3624  Fax: +41 1 632 1208        \
+|  \_| Organisation: Swiss Federal Institute of Technology Zurich, ETHZ     |
+|    | Department:   Signal and Information Processing Laboratory ISI       |
+|    | Room:         ETF E104,                                              |
+|    | Address:      Sternwartstrasse 7, CH-8092 Zurich, Switzerland.       |
+|    | Email: duenki@isi.ee.ethz.ch, WWW: <A  HREF="http://www.isi.ee.ethz.ch/~duenki">http://www.isi.ee.ethz.ch/~duenki</A> |
+|    |  ____________________________________________________________________|___
+|    \_/_______________________________________________________________________/
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01446" HREF="msg01446.shtml">Re: [BUG REPORT] WML 1.99.0, Linux 2.0.36</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01438.shtml">BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01440.shtml">Re: [ANNOUNCE] WML 1.99.0</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01513.shtml">Re: BUG REPORT: Website META Language 1.99.1 (16-Mar-2000)</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01446.shtml">Re: [BUG REPORT] WML 1.99.0, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail29.shtml#01441"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd30.shtml#01441"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

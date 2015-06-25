@@ -1,0 +1,95 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: BUG: <sc> and umlaut characters -->
+<!--X-From-R13: Tybevna Vnef <sybevnaNunef.qr> -->
+<!--X-Date: Fri, 15 Jan 1999 11:44:27 +0100 (CET) -->
+<!--X-Message-Id: 87hfttkl1s.fsf@vlxhars.desy.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 369E0062.83025B66@hansa.ee -->
+<!--X-Reference: 19990114154314.A28820@engelschall.com -->
+<!--X-Reference: 369E09DA.86BC5516@hansa.ee -->
+<!--X-Reference: 19990114162505.A1213@engelschall.com -->
+<!--X-Reference: 369E1035.B4DF47EE@hansa.ee -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail7.shtml#00323">Date Index</a>][<a href="thrd7.shtml#00323">Thread Index</a>]<br>
+[<A HREF="msg00322.shtml">Date Prev</A>][<A HREF="msg00324.shtml">Date Next</A>][<A HREF="msg00315.shtml">Thread Prev</A>][<A HREF="msg00345.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: BUG: &lt;sc&gt; and umlaut characters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Florian Hars &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 15 Jan 1999 09:16:47 +0100</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Märt Laak &lt;Mart.Laak@hansa.ee&gt; writes:
+&gt;   Once again - why to try to find special characters from &lt;sc&gt;&lt;/sc&gt; embedded
+&gt; text? Let just a) do uppercase conversion b) put &lt;font size=-1&gt; around text
+&gt; starting from second character after every whitespace.
+
+This won't work, it will render Names like Ludwig van Beethoven as
+Ludwig Van Beethoven.
+
+Yours, Florian
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00309" HREF="msg00309.shtml">BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Märt Laak</li>
+<li><strong><A NAME="00310" HREF="msg00310.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00312" HREF="msg00312.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Märt Laak</li>
+<li><strong><A NAME="00313" HREF="msg00313.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00315" HREF="msg00315.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></strong>, <em>From:</em> Märt Laak</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00322.shtml">Re: ANNOUNCE : WML 1.6.8</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00324.shtml">Re: WML, HOME~ and the redirections</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00315.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00345.shtml">Re: BUG: &lt;sc&gt; and umlaut characters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail7.shtml#00323"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd7.shtml#00323"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

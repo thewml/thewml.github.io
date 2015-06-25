@@ -1,0 +1,146 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Installationproblem on AIX 4.3 for WML version 2.0.{3,4} -->
+<!--X-From-R13: @beoreg Uehrare <abtN[BO&#45;Unepuvat.[BU.RS> -->
+<!--X-Date: Tue, 26 Sep 2000 16:32:45 +0200 (MET DST) -->
+<!--X-Message-Id: 20000926163233.B21024@ibm&#45;0.MPA&#45;Garching.MPG.DE -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail40.shtml#01987">Date Index</a>][<a href="thrd40.shtml#01987">Thread Index</a>]<br>
+[<A HREF="msg01986.shtml">Date Prev</A>][<A HREF="msg01988.shtml">Date Next</A>][<A HREF="msg01986.shtml">Thread Prev</A>][<A HREF="msg01988.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Norbert Gruener &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 26 Sep 2000 16:32:34 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+I have downloaded WML version 2.0.4 and I tried to install it under AIX
+4.3.  But I was not successful  :-(   BTW, I have got the same error
+for version 2.0.3 too.  
+
+When I run make, it gets an error somewhere in the GD part.  I have
+included the log of the make run.  I am running AIX 4.3 and 
+perl 5.500_02. 
+
+Did I miss something ?   Any help would be appreciated very much.
+
+Cheers,
+
+Norbert
+-- 
+   +-------------------------------------------------------------------+
+   | Norbert E. Gruener           <A  HREF="http://www.MPA-Garching.MPG.DE/~nog/">http://www.MPA-Garching.MPG.DE/~nog/</A> |
+   | Max-Planck-Institut          &lt;nog@MPA-Garching.MPG.DE&gt;            |
+   | fuer Astrophysik             PGP encrypted mail preferred         |
+   | PGPprint(RSA):  66 64 C0 D0 6F 1A 16 02  C2 C6 37 83 3A 5F 88 9B  |
+   | PGPprint(DH):  EBBF 02ED 1B91 39C3 5FB9  4D2F 9478 E224 334C 34CD |
+   | PGPprint(DSS): A3F0 BDFA EAC0 128D A6C5  B11D 6EEC 0A88 47CD A77D |
+   +-------------------------------------------------------------------+
+</PRE>
+<PRE>
+===&gt; wml_common/gd (all)
+Checking if your kit is complete...
+Looks good
+Writing Makefile for libgd
+Writing Makefile for WML::GD
+make[2]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd'
+mkdir blib
+mkdir blib/lib
+mkdir blib/lib/WML
+mkdir blib/arch
+mkdir blib/arch/auto
+mkdir blib/arch/auto/WML
+mkdir blib/arch/auto/WML/GD
+mkdir blib/lib/auto
+mkdir blib/lib/auto/WML
+mkdir blib/lib/auto/WML/GD
+cp GD.pm blib/lib/WML/GD.pm
+AutoSplitting blib/lib/WML/GD.pm (blib/lib/auto/WML/GD)
+DEFINE=''; export DEFINE INC; \
+cd libgd &amp;&amp; make -e
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_gif.c
+"gd_gif.c", line 760.2: 1506-342 (W) "/*" detected in comment.
+"gd_gif.c", line 763.2: 1506-342 (W) "/*" detected in comment.
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_png.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_io.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"0.10\" -DXS_VERSION=\"0.10\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  gd_io_dp.c
+ar cr libgd.a gd.o gd_gif.o gd_png.o gd_io.o gd_io_dp.o
+: libgd.a
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+make[3]: Entering directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd/libgd'
+/usr/local/bin/perl "-I/usr/local/lib/perl5/5.00502/aix" "-I/usr/local/lib/perl5/5.00502" -e 'use ExtUtils::Mksymlists; \
+Mksymlists("NAME" =&gt; "WML::GD", "DL_FUNCS" =&gt; {  }, "DL_VARS" =&gt; []);'
+/usr/local/bin/perl -I/usr/local/lib/perl5/5.00502/aix -I/usr/local/lib/perl5/5.00502 /usr/local/lib/perl5/5.00502/ExtUtils/xsubpp  -typemap /usr/local/lib/perl5/5.00502/ExtUtils/typemap -typemap typemap GD.xs &gt;GD.tc &amp;&amp; mv GD.tc GD.c
+cc -c  -D_ALL_SOURCE -D_ANSI_C_SOURCE -D_POSIX_SOURCE -qmaxmem=8192 -I/usr/local/include -O    -DVERSION=\"1.23\" -DXS_VERSION=\"1.23\"  -I/usr/local/lib/perl5/5.00502/aix/CORE  GD.c
+Running Mkbootstrap for WML::GD ()
+chmod 644 GD.bs
+LD_RUN_PATH="/lib" ld -o blib/arch/auto/WML/GD/GD.so  -bhalt:4 -bM:SRE -bI:/usr/local/lib/perl5/5.00502/aix/CORE/perl.exp -bE:GD.exp -b noentry -lc -L/usr/local/lib GD.o  libgd/libgd.a  -lm 
+ld: 0711-317 ERROR: Undefined symbol: .gdNewFileCtx
+ld: 0711-345 Use the -bloadmap or -bnoquiet option to obtain more information.
+make[2]: *** [blib/arch/auto/WML/GD/GD.so] Error 8
+make[2]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common/gd'
+make[1]: *** [all] Error 1
+make[1]: Leaving directory `/afs/mpa/home/nog/wml-2.0.4/wml_common'
+make: *** [all] Error 1
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01988" HREF="msg01988.shtml">Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01986.shtml">Re: My navbars broken with wml-2.0.3 and wml-2.0.4</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01988.shtml">Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01986.shtml">Re: My navbars broken with wml-2.0.3 and wml-2.0.4</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01988.shtml">Re: Installationproblem on AIX 4.3 for WML version 2.0.{3,4}</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail40.shtml#01987"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd40.shtml#01987"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

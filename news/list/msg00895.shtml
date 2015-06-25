@@ -1,0 +1,94 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 1.7.2, Linux 2.2.10 -->
+<!--X-From-R13: pfznyyNqrovna.bet -->
+<!--X-Date: Tue, 17 Aug 1999 14:12:21 +0200 (MET DST) -->
+<!--X-Message-Id: 199908170603.IAA08232@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00895">Date Index</a>][<a href="thrd19.shtml#00895">Thread Index</a>]<br>
+[<A HREF="msg00894.shtml">Date Prev</A>][<A HREF="msg00896.shtml">Date Next</A>][<A HREF="msg00894.shtml">Thread Prev</A>][<A HREF="msg00896.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 1.7.2, Linux 2.2.10</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 17 Aug 1999 08:03:25 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 1.7.2
+Operating System: Linux 2.2.10
+
+Problem Description:
+| WML doesn't create HTML 4.0 standard code.  I ran my 
+| own page and also wml's page through the validator 
+| and it complained.
+| 
+| The page i tried was  <A  HREF="http://www.engelschall.com/sw/wml">http://www.engelschall.com/sw/wml</A> 
+| and the validator was <A  HREF="http://validator.w3.org/">http://validator.w3.org/</A>
+| 
+| The main problem was it doesn't like the name field in 
+| a &lt;IMG&gt; tag.
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00896" HREF="msg00896.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="00909" HREF="msg00909.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></strong>, <em>From:</em> Florian Hars</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00894.shtml">Re: define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00896.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00894.shtml">Re: define-container, preserve and -Dvarname</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00896.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00895"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00895"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

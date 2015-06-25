@@ -1,0 +1,115 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: feature query -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sun, 28 May 2000 23:07:10 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000528224754.24519A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20000528141741.D30017@ummagumma -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail33.shtml#01646">Date Index</a>][<a href="thrd35.shtml#01646">Thread Index</a>]<br>
+[<A HREF="msg01645.shtml">Date Prev</A>][<A HREF="msg01647.shtml">Date Next</A>][<A HREF="msg01641.shtml">Thread Prev</A>][<A HREF="msg01648.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: feature query</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sun, 28 May 2000 23:06:58 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Sun, 28 May 2000, Tom Gilbert wrote:
+
+&gt; Sorry, me again. (so many questions).
+&gt; 
+&gt; Is it possible to import content from an external program during Pass
+&gt; 1? I know I can import stuff using ePerl, but that stuff would have to
+&gt; be pre-marked-up, as it wouldn't go through pass 2 (macro expansion).
+[...]
+&gt; &lt;verbatim&gt;
+&gt; #import `fortune`
+&gt; &lt;/verbatim&gt;
+
+Good idea, i will implement it if there is no objection (with #include
+instead of #import).
+
+Note that you can do it yourself with the -P flag: 
+  wml -P ./wml-import.pl file.wml
+---------------- wml-import.pl ----------------
+#!/usr/bin/perl
+while ($line = &lt;&gt;) {
+    if ($line =~ m|^#import `(.*)`$|) {
+        print qx/$1/;
+    } else {
+        print $line;
+    }
+}
+1;
+------------ end of wml-import.pl -------------
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01648" HREF="msg01648.shtml">Re: feature query</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01641" HREF="msg01641.shtml">feature query</A></strong>, <em>From:</em> Tom Gilbert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01645.shtml">Re: possible bug in &lt;box&gt; ?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01647.shtml">Re: possible bug in &lt;box&gt; ?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01641.shtml">feature query</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01648.shtml">Re: feature query</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail33.shtml#01646"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd35.shtml#01646"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

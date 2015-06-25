@@ -1,0 +1,164 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Proposed changes for pass 1 wml_p1_ipp -->
+<!--X-From-R13: Tenam Yavcc <sxavccNenvaobj.fghqbet.ghjvra.np.ng> -->
+<!--X-Date: Fri, 4 Feb 2000 08:12:57 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.3.96.1000203144853.5551A&#45;101000@rainbow.studorg.tuwien.ac.at -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: src00003.src -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail27.shtml#01334">Date Index</a>][<a href="thrd28.shtml#01334">Thread Index</a>]<br>
+[<A HREF="msg01336.shtml">Date Prev</A>][<A HREF="msg01335.shtml">Date Next</A>][<A HREF="msg01338.shtml">Thread Prev</A>][<A HREF="msg01339.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Proposed changes for pass 1 wml_p1_ipp</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Franz Knipp &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Feb 2000 15:49:02 +0100 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hello,
+
+while experimenting with pass 1 I found a strange behaviour in handling
+the comments - #include and variable substitution was done also their...
+
+Furthermore, I'd some ideas to improve the new #include tag.
+
+I've attached a diff -u ;-) to the original
+wml-1.7.4/wml_backend/p1_ipp/ipp.src.
+
+Use it:
+
+$ patch ipp.src diff.ipp.src
+
+The changes:
+
+I'll start with the good ones:
+
+*  If you include files with the #include 'pattern' tag, there are three
+variables which are set to the complete file name (with path and
+extension) of itself, the previous and the next file: INCLUDE_SRC,
+INCLUDE_PREV, INCLUDE_NEXT. These variables are available with e. g.
+$(INCLUDE_SRC). If you want to use them in the further passes, you have to
+assign variables like &lt;set-var INCLUDE_SRC=$(INCLUDE_SRC).
+
+*  Comment blocks are now really comment blocks, that means that no
+#include, #use, #depend, variable substition and so on is performed on
+that block. This is true for # line comments and /* */ C-style comments.
+
+*  The handling of comments is now done in another part and should be
+faster than previos (therefore I deleted the warning in the man page).
+
+*  Silent Assign Methods: to assign variables without writing themselves
+to the output (file) I've invented the following "variable substitutions":
+
+   $(name:!value)  Silent Assign: name = value, also if name is yet
+                     definied
+
+   $(name:~value)  Silent Assign when Unset
+
+And now, the bad news:
+
+*  Because C-style comments are handled in another way now, they cannot
+longer be nested. With this patch wml behaves like the standard cpp.
+
+*  Another caveat is therefore the handling of /* which you'll find often
+as dirname/*.ext. In the #include, #use and #depend directives you don't
+have to care about it, you should not use comments there (comments which
+start and end at this line are deleted properly, but you must not mix them 
+with something like dirname/*.ext, this could fail). In the rest
+of the file (except it is protected against pass 1) you've to escape them
+with a leading backslash like \/* and \*/. After pass 1 you'll find there
+a nice /* and */.
+
+*  Keep in mind that the #include directives are not longer executed in a
+C-style comment block (I think that's more logic than executing them).
+
+I think, these disadvantages will concern only a few sites... (I hope
+none). The real critical point is the handling of existing `/*' if they're
+unprotected against pass 1. But a simple 
+
+$ grep -r "/\*" *
+
+will show, if you are using them in one of your files. You will have to
+escape them only if they're not on an #include, #use or #depend line.
+
+I hope you'll find the errors in my source, maybe my solution is not that
+practicable as I think.
+
+To Denis (I think this is your first name): I've updated the documentation
+part ;-) That's necessary for me to keep in mind my changes ;-))
+
+To Carsten: may I make a link to your page on my wml page?
+
+To all who don't know yet: after applying the patch you only have to
+
+$ make &amp;&amp; make install-core
+
+in the wml-1.7.4 directory (faster than a full install).
+
+Greetings, 
+
+Franz
+
+--------------------------------------------------------------------------
+Franz KNIPP                                               +34 65 44 26 555 
+C/ Poeta Ricard Sanmarti, 4-10                            E-46020 Valencia
+<A  HREF="http://www.knipp.org/franz/">http://www.knipp.org/franz/</A>                                franz@knipp.org
+--------------------------------------------------------------------------
+</PRE>
+<P><A HREF="src00003.src" >diff.ipp.src</A></P>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01339" HREF="msg01339.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></strong>, <em>From:</em> Denis Barbier</li>
+<li><strong><A NAME="01345" HREF="msg01345.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></strong>, <em>From:</em> Carsten Wartmann</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01336.shtml">BUG REPORT for wmk</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01335.shtml">Re: BUG REPORT: Test-Suite 100% failed on Debian 2.1</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01338.shtml">Re: BUG REPORT for wmk</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01339.shtml">Re: Proposed changes for pass 1 wml_p1_ipp</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail27.shtml#01334"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd28.shtml#01334"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

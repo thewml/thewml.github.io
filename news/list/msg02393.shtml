@@ -1,0 +1,144 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Attributes / variables delimiters -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 27 Sep 2001 00:14:17 +0200 (MET DST) -->
+<!--X-Message-Id: 20010927002439.A13046@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010926142908.CBC6D10E05@itesec.hsc.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail48.shtml#02393">Date Index</a>][<a href="thrd48.shtml#02393">Thread Index</a>]<br>
+[<A HREF="msg02392.shtml">Date Prev</A>][<A HREF="msg02394.shtml">Date Next</A>][<A HREF="msg02392.shtml">Thread Prev</A>][<A HREF="msg02394.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Attributes / variables delimiters</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 27 Sep 2001 00:24:39 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Wed, Sep 26, 2001 at 04:29:51PM +0200, Ghislaine Labouret wrote:
+&gt; Hello,
+&gt; 
+&gt; What could I use to delimit tag attributes when the content of those
+&gt; attributes is rather complicated and already contain spaces, double
+&gt; quotes, equal signs, language slices...? 
+&gt; 
+&gt; So far I am using double quotes (&lt;MYTAG attr1="stuff" attr2="other
+&gt; stuff"&gt;), but I think it would make things easier if I could switch to
+&gt; some character not used elsewhere. I have a page using a tag with rather
+&gt; complicated attributes and nested stuff which does not compile,
+&gt; certainly because some attributes don't go through set-var correctly.
+&gt; 
+&gt; I tried using &lt;attributes-quote %attributes&gt; to keep the double quotes
+&gt; around, but that does not work within set-var:
+
+Hi,
+
+Mp4h gobbles double quotes in attributes, and the &lt;attributes-quote&gt;
+only role is to put them back when you want to print HTML attributes.
+So this is not the right tool here.
+
+If mp4h is confused by long and complex constructs, it may be a bug in
+your pages or in mp4h, and it would be nice to have your example to add
+it to the mp4h torture suite ;)
+Could you put some sources online which demonstrate this problem?
+
+Maybe the easiest solution is to replace some attributes by container
+tags, e.g.
+  #   &lt;auxvar&gt; is to prevent name clash
+  &lt;define-tag auxvar&gt;_x_%0&lt;/define-tag&gt;
+  &lt;define-tag attr endtag="required" whitespace="delete"&gt;
+    &lt;preserve name&gt;
+    &lt;set-var %attributes&gt;
+    &lt;set-var &lt;auxvar &lt;get-var name&gt;&gt;=%body&gt;
+    &lt;restore name&gt;
+  &lt;/define-tag&gt;
+  &lt;define-tag get-attr whitespace="delete"&gt;
+    &lt;preserve name&gt;
+    &lt;set-var %attributes&gt;
+    &lt;get-var &lt;auxvar &lt;get-var name&gt;&gt;&gt;
+    &lt;restore name&gt;
+  &lt;/define-tag&gt;
+  &lt;define-tag mytag endtag="required"&gt;
+    &lt;preserve &lt;auxvar attr1&gt; &lt;auxvar attr2&gt;&gt;
+    %body
+    Here attr1 is: &lt;get-attr name=attr1&gt;
+    And  attr2 is: &lt;get-attr name=attr2&gt;
+    &lt;restore &lt;auxvar attr1&gt; &lt;auxvar attr2&gt;&gt;
+  &lt;/define-tag&gt;
+  &lt;mytag&gt;
+    &lt;attr name="attr1"&gt;
+      blah " blah blah [E:x:]
+    &lt;/attr&gt;
+    &lt;attr name="attr2"&gt;
+      blah blah blah
+    &lt;/attr&gt;
+  &lt;/mytag&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02394" HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02392" HREF="msg02392.shtml">Attributes / variables delimiters</A></strong>, <em>From:</em> Ghislaine Labouret</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02392.shtml">Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02392.shtml">Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02394.shtml">Re: Attributes / variables delimiters</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail48.shtml#02393"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd48.shtml#02393"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,105 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4 -->
+<!--X-From-R13: qnivqNcnanavk.pbz -->
+<!--X-Date: Mon, 21 Aug 2000 10:18:59 +0200 (MET DST) -->
+<!--X-Message-Id: 200008202241.AAA14238@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail38.shtml#01896">Date Index</a>][<a href="thrd38.shtml#01896">Thread Index</a>]<br>
+[<A HREF="msg01895.shtml">Date Prev</A>][<A HREF="msg01897.shtml">Date Next</A>][<A HREF="msg01903.shtml">Thread Prev</A>][<A HREF="msg01898.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Mon, 21 Aug 2000 00:41:51 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.2
+Operating System: Caldera OpenLinux eDesktop 2.4
+
+Problem Description:
+| Problem with make.  All my other builds that use gdbm find it OK:
+| 
+| ===&gt; wml_backend/p3_eperl (all)
+| make[2]: Entering directory `/home/david/new/wml-2.0.2/wml_backend/p3_eperl'
+| gcc -rdynamic  -L/usr/lib/perl5/5.00503/i386-linux/CORE  -o eperl eperl_main.o eperl_perl5.o eperl_parse.o eperl_pp.o eperl_sys.o eperl_http.o eperl_getopt.o eperl_debug.o eperl_config.o eperl_version.o eperl_readme.o eperl_license.o eperl_logo.o eperl_powered.o /usr/lib/perl5/5.00503/i386-linux/auto/DynaLoader/DynaLoader.a -lperl -lnsl -lndbm -lgdbm -ldb -ldl -lm -lc -lposix -lcrypt 
+| /usr/i386-linux/bin/ld: cannot find -lgdbm
+| make[2]: *** [eperl] Error 1
+| make[2]: Leaving directory `/home/david/new/wml-2.0.2/wml_backend/p3_eperl'
+| make[1]: *** [all] Error 1
+| make[1]: Leaving directory `/home/david/new/wml-2.0.2/wml_backend'
+| make: *** [all] Error 1
+| [root@volcan wml-2.0.2]# ldconfig -p | grep gdbm
+|         libgdbm.so.2.0 (libc6) =&gt; /usr/lib/libgdbm.so.2.0
+|         libgdbm.so.2 (libc6) =&gt; /usr/lib/libgdbm.so.2
+|         libgdbm.so.1 (libc5) =&gt; /usr/lib/gnulibc1/libgdbm.so.1
+|         libgdbm.so.1 (libc5) =&gt; /opt/kde/lib/gnulibc1/libgdbm.so.1
+|         libgdbm.so.1 (libc6) =&gt; /usr/lib/libgdbm.so.1
+| 
+| Thanx,
+| 
+| David A. Bandel
+| david@pananix.com
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="01898" HREF="msg01898.shtml">Re: [BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</A></strong>, <em>From:</em> Roland Rosenfeld</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01895.shtml">Problems with href</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01897.shtml">slice 1.3.6 hangs on a file</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01903.shtml">Re: Problems with href</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01898.shtml">Re: [BUG REPORT] WML 2.0.2, Caldera OpenLinux eDesktop 2.4</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail38.shtml#01896"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd38.shtml#01896"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

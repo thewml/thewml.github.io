@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: WML or PERL&#45;Bug? (was: Re: perl version output of configure?) -->
+<!--X-From-R13: Okry Prpxreg <efr&#45;jzyNqrhkpurinhk.bet> -->
+<!--X-Date: Thu, 12 Jul 2001 16:13:19 +0200 (MET DST) -->
+<!--X-Message-Id: 20010712155109.F10318@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20010711154211.E12681@fsinfo.cs.uni&#45;sb.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail46.shtml#02290">Date Index</a>][<a href="thrd46.shtml#02290">Thread Index</a>]<br>
+[<A HREF="msg02289.shtml">Date Prev</A>][<A HREF="msg02291.shtml">Date Next</A>][<A HREF="msg02289.shtml">Thread Prev</A>][<A HREF="msg02284.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>WML or PERL-Bug? (was: Re: perl version output of configure?)</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Axel Beckert &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 12 Jul 2001 15:51:10 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi!
+
+Axel Beckert wrote:
+&gt; After having (solved, I hope) some libperl.so problems, 
+
+Well, actually I had solved them without knowing it. And then those
+problems appeared again today. I guess, it's an PERL/locale bug, but
+I'm not so sure:
+
+[The first two lines after "wml" are input, the rest is the output on STDERR.]
+
+1050/0 axel@kathrin:pts/2 15:43 [~] &gt; wml
+#use wml::std::box
+^D
+ePerl:Error: Perl parsing error (interpreter rc=255)
+
+---- Contents of STDERR channel: ---------
+DynaLoader object version 1.04 does not match $DynaLoader::VERSION 1 at /usr/local/lib/perl5/5.6.1/sun4-solaris/DynaLoader.pm line 100.
+Compilation failed in require at /usr/local/lib/wml/perl/lib/sun4-solaris/IO.pm line 5.
+Compilation failed in require at /usr/local/lib/wml/perl/lib/sun4-solaris/IO/Handle.pm line 241.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/sun4-solaris/IO/Handle.pm line 241.
+Compilation failed in require at /usr/local/lib/wml/perl/lib/sun4-solaris/IO/Seekable.pm line 51.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/sun4-solaris/IO/Seekable.pm line 51.
+Compilation failed in require at /usr/local/lib/wml/perl/lib/sun4-solaris/IO/File.pm line 112.
+BEGIN failed--compilation aborted at /usr/local/lib/wml/perl/lib/sun4-solaris/IO/File.pm line 112.
+Compilation failed in require at /usr/local/lib/perl5/5.6.1/FileHandle.pm line 9.
+Compilation failed in require at /usr/local/lib/wml/perl/lib/sun4-solaris/WML/GD.pm line 7.
+Compilation failed in require at /tmp/wml.19300.tmp2 line 214.
+BEGIN failed--compilation aborted at /tmp/wml.19300.tmp2 line 214.
+------------------------------------------
+** WML:Break: Error in Pass 3 (rc=74).
+1051/1 axel@kathrin:pts/2 15:44 [~] &gt; 
+
+This problem does not occur, if I unset LC_*, which here currently
+default to 
+
+LC_COLLATE=de.ISO8859-15
+LC_CTYPE=de.ISO8859-15
+LC_MESSAGES=de
+LC_MONETARY=de.ISO8859-15
+LC_NUMERIC=de.ISO8859-15
+LC_TIME=de.ISO8859-15
+
+I could imagine, it's a "string comparison of 'locale'd floating point
+values" problem or something like that.
+
+		Regards, Axel
+-- 
+Axel Beckert - abe@cs.uni-sb.de - <A  HREF="http://abe.home.pages.de/">http://abe.home.pages.de/</A>
+Student of Computer Science, University of Saarland (Germany)
+Artificial Intelligence Laboratory (AI Lab), Prof. Dr. W. Wahlster;
+WWW-/FTP-Administrator IBFI Schloﬂ Dagstuhl; Students Representative CS
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02283" HREF="msg02283.shtml">perl version output of configure?</A></strong>, <em>From:</em> Axel Beckert</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02289.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02291.shtml">Re: Web page margins</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02289.shtml">Re: perl version output of configure?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02284.shtml">Variables between sites</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail46.shtml#02290"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd46.shtml#02290"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

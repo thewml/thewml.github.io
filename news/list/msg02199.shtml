@@ -1,0 +1,172 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [BUG REPORT] WML 2.0.2, Linux 2.0.36 -->
+<!--X-From-R13: Olzrevp.Bbhynva[nhonagNwvcb.pbz@AEBO[BZSOES -->
+<!--X-Date: Sat, 14 Apr 2001 15:59:02 +0200 (MET DST) -->
+<!--X-Message-Id: 200104101545.RAA00542@opensource.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail44.shtml#02199">Date Index</a>][<a href="thrd44.shtml#02199">Thread Index</a>]<br>
+[<A HREF="msg02198.shtml">Date Prev</A>][<A HREF="msg02200.shtml">Date Next</A>][<A HREF="msg02197.shtml">Thread Prev</A>][<A HREF="msg02201.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[BUG REPORT] WML 2.0.2, Linux 2.0.36</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: nospam@thanx</LI>
+<LI><em>Date</em>: Tue, 10 Apr 2001 17:45:49 +0200 (MET DST)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+BUG REPORT
+
+Package: WML 2.0.2
+Operating System: Linux 2.0.36
+
+Problem Description:
+| Short Description :   when a source file contains a
+| &lt;protect 9&gt; zone, its code is never dumped on
+| STDOUT if ones want to dump on STDOUT and on
+| a classical outputfile.
+| 
+| 
+| [nota. I checked more recent versions of WML (&gt;2.02)
+| and the bug listed below is still there]
+| 
+| Long Description, and hack :
+| 
+| Try to wml this file :
+| -------------------%&lt;---------------
+| #!wml --outputfile=ALL:- --outputfile=ALL:protect9.html 
+| 
+| aaa
+| 
+| &lt;protect pass=9&gt;
+| bbb
+| &lt;/protect&gt;
+| -------------------%&lt;---------------
+| 
+| This gives :
+| 
+| ----------------------
+| % wml protect9.wml 
+| aaa
+| -=P[000000]=-
+| % more protect9.html 
+| aaa
+| 
+| bbb
+| %
+| ----------------------
+| 
+| See what happens ? The &lt;protect 9&gt; part dumped
+| to STDOUT get never unprotected.
+| 
+| This happens only when one wants a STDOUT &amp;&amp; one
+| or more classical outputfiles in the same run.
+| This is due to the fact that in the wml frontend,
+| the subroutine ProcessOutfiles does not treat STDOUT
+| fairly, imho : STDOUT is not included in the
+| @outfiles array.
+| 
+| A first (working) hack is to :
+| 
+| 1. create a new variable before ProcessOutFiles :
+| $tmpstdout = "$tmpdir/wml.$$.tmpstdout" . $src_suffix;
+| 
+| 2. in ProcessOutFiles, defer the build of $out
+| after the if clauses :
+| 
+| #$out .= " -o '".&amp;quotearg($o)."'"; # before hack
+| $prepout = " -o '".&amp;quotearg($o)."'"; # after hack
+| .
+| .
+| .
+| if...elsif...else
+| $out .= $prepout; # after hack
+| 
+| 3. in each if/elsif part, treat the STDOUT (aka
+| '-') case. For instance :
+| 
+| if ($o =~ m|^([_A-Z0-9*~!+u%n\-\\^x()@]+):(.+)\@(.+)$|) {
+|   push(@outfiles, $2) if ($2 ne '-');
+|   if ($2 eq '-') {push(@outfiles, $tmpstdout); 
+|                   $prepout =~ s|^ -o '([_A-Z0-9*~!+u%n\-\\^x()@]+):(.+)\@(.+)'$| -o '$1:$tmpstdout\@$3'|;} 
+|         }
+|   }
+| 
+| 4. don't forget to dump on STDOUT then unlink $tmpstdout
+| when time comes, ie just after &amp;unlink_tmp(); at the end
+| of the wml script :
+| 
+| if (-e $tmpstdout) 
+| {
+|     # dump it to STDOUT then unlink
+|     open(TMP, $tmpstdout);
+|     while (&lt;TMP&gt;) {
+|         print $_;
+|     }
+|     close(TMP);
+|     
+|     unlink($tmpstdout);
+| }
+| 
+| 
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02201" HREF="msg02201.shtml">Re: [BUG REPORT] WML 2.0.2, Linux 2.0.36</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02198.shtml">Re: Parsing WML to insert records into database</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02200.shtml">[BUG REPORT] WML 2.0.6, cygwin 1.1.8</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02197.shtml">Re: Is there a limit to the length of the shebang line</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02201.shtml">Re: [BUG REPORT] WML 2.0.2, Linux 2.0.36</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail44.shtml#02199"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd44.shtml#02199"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

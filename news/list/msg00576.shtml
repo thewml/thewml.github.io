@@ -1,0 +1,138 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: gfont installation problem -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Tue, 13 Apr 1999 17:30:07 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990413172211.12698B&#45;100000@imacs.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.05.9904131630560.22047&#45;100000@gtt&#45;ixs.lth.rwth&#45;aachen.de -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail12.shtml#00576">Date Index</a>][<a href="thrd13.shtml#00576">Thread Index</a>]<br>
+[<A HREF="msg00575.shtml">Date Prev</A>][<A HREF="msg00577.shtml">Date Next</A>][<A HREF="msg00575.shtml">Thread Prev</A>][<A HREF="msg00577.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: gfont installation problem</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Tue, 13 Apr 1999 17:24:31 +0200 (PMT)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Tue, 13 Apr 1999, Stephan Petersen wrote:
+
+&gt; Hi there,
+&gt; 
+&gt; I downloaded gfont (V1.0.2) and tried to install it, but ./configure
+&gt; aborts with:
+&gt; 
+&gt; checking for Perl language... expr: syntax error
+&gt; built v5.004_04
+&gt; configure: error: required program perl'' not found
+
+Hi Stephan,
+
+Go under gfont-1.0.2 and type
+   patch -p1 &lt; the_name_of_the_patch_below
+
+Denis
+
+--- gfont-1.0.2/configure	Tue Sep 16 11:30:35 1997
++++ gfont-1.0.2/configure	Fri Dec 18 13:19:55 1998
+@@ -805,7 +805,7 @@
+     for perl in perl5 perl miniperl; do
+          if test -x "$dir/$perl"; then
+              perl="$dir/$perl"
+-             version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/ with.*//'`
++             version=`$perl -v | grep version | sed -e 's/.* version //' -e 's/_.*//'`
+              versionnum="`echo $version | sed -e 's/\.//g' -e 's/_//g'`"
+              versionnum=`expr $versionnum - $c`
+              echo "$versionnum $version $perl" &gt;&gt;$TMPFILE
+--- gfont-1.0.2/gfont_mkgdf_all	Fri Sep  5 21:21:52 1997
++++ gfont-1.0.2/gfont_mkgdf_all	Tue Dec 29 12:13:14 1998
+@@ -1,5 +1,5 @@
+-#!/sw/bin/perl
+-eval 'exec /sw/bin/perl -S $0 ${1+"$@"}'
++#!/usr/bin/perl
++eval 'exec /usr/bin/perl -S $0 ${1+"$@"}'
+     if $running_under_some_shell;
+ ##
+ ##  mkgdf_pre -- Pregenerate GdF Files from Fontmap
+@@ -12,10 +12,10 @@
+ use vars qw($mkgdf $fontmap $gdfdir $tmpgdfdir);
+ use vars qw(@FONT, $font);
+ 
+-$mkgdf     = "/sw/pkg/gfont/lib/exec/gfont_mkgdf";
+-$fontmap   = "/sw/pkg/gfont/lib/etc/Fontmap";
+-$gdfdir    = "/sw/pkg/gfont/lib/gdf";
+-$tmpgdfdir = "/sw/var/gfont/";
++$mkgdf     = "/usr/lib/gfont/exec/gfont_mkgdf";
++$fontmap   = "/usr/lib/gfont/etc/Fontmap";
++$gdfdir    = "/usr/lib/gfont/gdf";
++$tmpgdfdir = "/usr/lib/gfont/gdf";
+ 
+ sub system {
+     my ($cmd) = @_;
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00577" HREF="msg00577.shtml">Re: gfont installation problem</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00574" HREF="msg00574.shtml">gfont installation problem</A></strong>, <em>From:</em> Stephan Petersen</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00575.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00577.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00575.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00577.shtml">Re: gfont installation problem</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail12.shtml#00576"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd13.shtml#00576"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

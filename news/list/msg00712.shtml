@@ -1,0 +1,136 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: [ANNOUNCE] WML 1.7.0 -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 3 Jun 1999 15:42:30 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990603151932.12510A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail15.shtml#00712">Date Index</a>][<a href="thrd15.shtml#00712">Thread Index</a>]<br>
+[<A HREF="msg00711.shtml">Date Prev</A>][<A HREF="msg00713.shtml">Date Next</A>][<A HREF="msg00711.shtml">Thread Prev</A>][<A HREF="msg00714.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>[ANNOUNCE] WML 1.7.0</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 3 Jun 1999 15:36:33 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+WML version 1.7.0 
+=================
+
+  I am glad to announce the new WML 1.7.0 release is available at
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/">http://www.engelschall.com/sw/wml/distrib/</A>
+
+  Concise list of changes between 1.6.8 and 1.7.0:
+    *) Enhance documentation (30-May-1999)
+    *) Check epilog and prolog filters (27-May-1999)
+    *) Improve WMk (26-May-1999)
+    *) Clean Makefiles (21-May-1999)
+    *) y2k fixes (20-May-1999)
+    *) Variable definitions (14-May-1999)
+    *) Enhanced wml and wmk (11-May-1999)
+    *) Import HTML-Clean 0.7 (11-May-1999)
+    *) Update Perl modules (11-May-1999)
+    *) Import tidy15apr99 (11-May-1999)
+    *) Enhanced wml::des::imgbg (10-May-1999)
+    *) Import slice-1.3.2 (10-May-1999)
+    *) Add tests (9-May-1999)
+    *) Fix wml_backend/p3_eperl/eperl_sys.c (7-May-1999)
+    *) Enhanced wml::des::navbar (7-May-1999)
+    *) Enhanced wml::std::lang (10-Apr-1999)
+    *) Enhanced time dependancy checks for wmk (29-Mar-1999)
+    *) Added wml_contrib/navbar-FH.wml (26-Mar-1999)
+    *) Automatic dependancy generation (18-Mar-1999)
+    *) Fixed cleanup (16-Mar-1999)
+    *) Fixed wml_p9_slice (16-Mar-1999)
+    *) Enhanced wml::std::tags (16-Mar-1999)
+    *) Changed bootstrapping (16-Mar-1999)
+    *) Easier multi-lingual interface (16-Mar-1999)
+    *) Fixed ipp (12-Mar-1999)
+    *) Fixed wmd (21-Feb-1999)
+    *) Enhanced wml::std::toc (18-Feb-1999)
+    *) Cleaned up wml_p2_mhc (16-Feb-1999)
+    *) Upgrade of metahtml.txt (09-Feb-1999)
+    *) Make wml_p2_mhc documentation automatic (08-Feb-1999)
+    *) Added doc in wml_include/std/logo.src (03-Feb-1999)
+    *) Fixed configuration (03-Feb-1999)
+    *) Upgrade of mhc (19-Jan-1999)
+    *) Renamed wml_docs/wml_tags.L.core (18-Jan-1999)
+    *) Added doc in wml_include/des/typography.src (18-Jan-1999)
+    *) Fixed a bug with perl threads (18-Jan-1999)
+    *) Fixed the Meta-HTML Autoconfiguration (17-Jan-1999)
+
+  A more detailed list can be found at
+     <A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-1.7.0/ChangeLog">http://www.engelschall.com/sw/wml/distrib/wml-1.7.0/ChangeLog</A>
+
+  I would like to thank all contributors for their help.
+
+  Regards
+    Denis
+
+--
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00714" HREF="msg00714.shtml">Re: [ANNOUNCE] WML 1.7.0</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+<li><strong><A NAME="00725" HREF="msg00725.shtml">[ANNOUNCE] WML 1.7.1</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00711.shtml">1.6.8 or 1.7.0 What's the latest version?</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00713.shtml">Re: trouble installing wml</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00711.shtml">1.6.8 or 1.7.0 What's the latest version?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00714.shtml">Re: [ANNOUNCE] WML 1.7.0</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.shtml#00712"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd15.shtml#00712"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

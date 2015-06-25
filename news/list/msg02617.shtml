@@ -1,0 +1,141 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: RE: WML under Windows... -->
+<!--X-From-R13: "Rneely Ezvgu" <RneelyNDnqvb&#45;npgvir.arg.nh> -->
+<!--X-Date: Thu, 20 Jun 2002 06:26:30 +0200 (MET DST) -->
+<!--X-Message-Id: 002301c217f6$1a9cea00$4601a8c0@DELL8000 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20020619230533.GA1506@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail53.shtml#02617">Date Index</a>][<a href="thrd53.shtml#02617">Thread Index</a>]<br>
+[<A HREF="msg02616.shtml">Date Prev</A>][<A HREF="msg02618.shtml">Date Next</A>][<A HREF="msg02616.shtml">Thread Prev</A>][<A HREF="msg02618.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>RE: WML under Windows...</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: &quot;Darryl Smith&quot; &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 20 Jun 2002 11:01:50 +1000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Dennis
+
+Thanks. This helped me compile WML with ePERL under Cygwin under
+Windows. There was a problem with STRIP not being able to find the file
+(Compiled programs have an EXE extension which is hidden most of the
+time. Strip does not know this and will not find the file. Commenting
+out worked).
+
+Now the issue is the WML_INCLUDE. Files such as wml::des::imgbg.pod
+cannot be created since the ":" cannot be in the filename even under
+CYGWIN. Any ideas
+
+Thanks
+
+Darryl
+
+---------
+Darryl Smith, VK2TDS   POBox 169 Ingleburn NSW 2565 Australia
+Mobile Number 0412 929 634 [+61 4 12 929 634 International] 
+Darryl@radio-active.net.au | www.radio-active.net.au  
+
+-----Original Message-----
+From: owner-sw-wml@engelschall.com [<A  HREF="mailto:owner-sw-wml@engelschall.com">mailto:owner-sw-wml@engelschall.com</A>]
+On Behalf Of Denis Barbier
+Sent: Thursday, 20 June 2002 9:06 AM
+To: sw-wml@engelschall.com
+Subject: Re: WML under Windows...
+
+
+On Sun, Jun 09, 2002 at 08:46:43PM +1000, Darryl Smith wrote:
+&gt; Sorry... The editor copied more than I thought... Anyway I am getting 
+&gt; the following errors...
+&gt; 
+&gt; I have got gFont, and with a slight modification I have got all the 
+&gt; other passes to run. P3 is the one that will not run.
+&gt; 
+&gt; $ make
+&gt; gcc -g -O2 -O2 -DPERL_USE_SAFE_PUTENV -fno-strict-aliasing 
+&gt; -I/usr/local/include -I/usr/lib/perl5/5.6.1/cygwin-multi/CORE -I. -c 
+&gt; eperl_perl5.c
+&gt; eperl_perl5.c: In function `Perl5_XSInit':
+&gt; eperl_perl5.c:58: `my_perl' undeclared (first use in this function)
+&gt; eperl_perl5.c:58: (Each undeclared identifier is reported only once
+&gt; eperl_perl5.c:58: for each function it appears in.)
+&gt; eperl_perl5.c:58: warning: passing arg 3 of `Perl_newXS' from
+[snip]
+
+Hi Darryl,
+
+could you try this patch and let me know if it works for you?
+
+It would be wonderful if someone with good knowledge of Perl threads
+could review ePerl sources.
+
+-- 
+Denis Barbier
+WML Maintainer
+
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="02618" HREF="msg02618.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="02616" HREF="msg02616.shtml">Re: WML under Windows...</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg02616.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg02618.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg02616.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg02618.shtml">Re: WML under Windows...</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail53.shtml#02617"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd53.shtml#02617"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

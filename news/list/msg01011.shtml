@@ -1,0 +1,103 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Ouput directory other than source directory -->
+<!--X-From-R13: Tevgm Lnhpxre <mnhpxreNrr.rgum.pu> -->
+<!--X-Date: Thu, 30 Sep 1999 16:41:45 +0200 (MET DST) -->
+<!--X-Message-Id: m1iu4s4g2r.fsf@foobar.ee.ethz.ch -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 199909301411.QAA09095@ns.inetcom.loc -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail21.shtml#01011">Date Index</a>][<a href="thrd20.shtml#01011">Thread Index</a>]<br>
+[<A HREF="msg01010.shtml">Date Prev</A>][<A HREF="msg01012.shtml">Date Next</A>][<A HREF="msg01010.shtml">Thread Prev</A>][<A HREF="msg01013.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Ouput directory other than source directory</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Fritz Zaucker &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: 30 Sep 1999 16:41:32 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Jan Holler &lt;jh@inetcom.ch&gt; writes:
+
+&gt; &gt; The Debian web site currently uses "make install" to copy all the *.html
+&gt; &gt; files etc. to a different directory.  Two reasons that I can think of are:
+ 
+&gt; I use "mirror.pl" a perlscript to copy the changed files
+&gt; via ftp to the web-server. It is configurable. You can
+&gt; exclude filepatterns from mirroring, e.g. .wml
+&gt; So it does not matter to have .html and .wml files mixed up.
+
+I use rsync for this as it only copies whatever files are modified.
+
+BTW, I do not exclude the wml files from copying to the web server as
+this way people can actually look at them if they want to know how the
+site was done in WML.
+
+Cheers,
+Fritz
+
+-- 
+Dr. Fritz Zaucker, Head IT Support Group
+Department of Electrical Engineering,  Federal Institute of Technology
+ETZ J97, Gloriastrasse 35, 8092 Zurich, Switzerland
+Tel.: +41-1-632-5241 Fax: +41-1-632-1194 <A  HREF="http://ee-staff.ethz.ch/~zaucker/">http://ee-staff.ethz.ch/~zaucker/</A>
+E-mail: zaucker@ee.ethz.ch (see home page for PGP key)
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01010" HREF="msg01010.shtml">Re: Ouput directory other than source directory</A></strong>, <em>From:</em> Jan Holler</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01010.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01012.shtml">Re: Solution to &quot;Problems with Install.pm&quot; (now really solved)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01010.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01013.shtml">Re: Ouput directory other than source directory</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.shtml#01011"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.shtml#01011"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

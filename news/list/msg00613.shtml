@@ -1,0 +1,99 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: Bug in gfont? -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Thu, 6 May 1999 12:53:54 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990506124033.873A&#45;100000@liszt.polytechnique.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.990506093813.1838B&#45;100000@hasecke.hasecke -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail13.shtml#00613">Date Index</a>][<a href="thrd14.shtml#00613">Thread Index</a>]<br>
+[<A HREF="msg00612.shtml">Date Prev</A>][<A HREF="msg00614.shtml">Date Next</A>][<A HREF="msg00610.shtml">Thread Prev</A>][<A HREF="msg00614.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: Bug in gfont?</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 6 May 1999 12:48:08 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+On Thu, 6 May 1999, Jan Ulrich Hasecke wrote:
+
+&gt; I had the same problem. I use &lt;big&gt; and gfont-created headlines
+&gt; with slices, so that from one source a german file and an english
+&gt; file are created. My poor-mans solution: I set no GFONT_BASE
+&gt; variable and let all images live in the same dir as the
+&gt; text-files.
+
+Hi Jan Ulrich,
+
+GFONT_BASE has nothing to do with slices, so i don't understand your
+problem.
+
+Could you send a small example?
+
+Denis
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00614" HREF="msg00614.shtml">Re: Bug in gfont?</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="00610" HREF="msg00610.shtml">Re: Bug in gfont?</A></strong>, <em>From:</em> Jan Ulrich Hasecke</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00612.shtml">Re: New WML-generated website: www.modssl.org</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00614.shtml">Re: Bug in gfont?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00610.shtml">Re: Bug in gfont?</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00614.shtml">Re: Bug in gfont?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail13.shtml#00613"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.shtml#00613"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

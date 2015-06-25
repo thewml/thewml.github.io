@@ -1,0 +1,130 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: New include files -->
+<!--X-From-R13: Rravf Pneovre <oneovreNvznpf.cbylgrpuavdhr.se> -->
+<!--X-Date: Sat, 21 Aug 1999 01:05:04 +0200 (MET DST) -->
+<!--X-Message-Id: Pine.LNX.3.96.990821002433.7388A&#45;100000@localhost -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail18.shtml#00898">Date Index</a>][<a href="thrd19.shtml#00898">Thread Index</a>]<br>
+[<A HREF="msg00897.shtml">Date Prev</A>][<A HREF="msg00899.shtml">Date Next</A>][<A HREF="msg00914.shtml">Thread Prev</A>][<A HREF="msg00899.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>New include files</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Denis Barbier &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Sat, 21 Aug 1999 01:03:49 +0200 (CET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Hi WMLers,
+
+i have uploaded 2 new include files, in a new directory devoted to
+modularity.
+
+The first one is wml::mod::MakeMaker, which is strongly inspired by the
+ExtUtils::MakeMaker Perl module. My intention is to ease distribution of
+unofficial WML modules, and maybe one day we will have a CWAN ;-)
+
+Suppose for instance that John Smith is a Gimp guru and he wrote
+Gimp scripts in WML macros in files called logo.wml, button.wml and 
+margin.wml. He wants to distribute his work. He has to
+ 1) Create an empty directory $workdir.
+ 2) Copy logo.wml button.wml and margin.wml into $workdir/gimp
+ 3) Rename these files with the .wml suffix replaced by .src
+ 4) Write documentation into those files, 
+ 5) Create this Makefile.wml file in $workdir:
+#!wml -o Makefile
+#include 'MakeMaker.src'
+&lt;write-makefile
+    package="js-gimp"
+    version="0.60"
+    modules="gimp/logo.js gimp/button.js gimp/margin.js"
+&gt;
+ 6) Write a README.
+
+And that's all. After that, he runs ``wml Makefile.wml; make dist'' and
+a js-gimp-0.60.tar.gz is ready to go to the web.
+
+After downloading this archive, someone else runs
+   wml Makefile.wml; make; make install
+and John's modules js::gimp::logo, js::gimp::button and js::gimp::margin
+go to ...lib/wml/include/gimp/
+
+But to create such a distribution, John needs the Ralf's GNU shtool
+&lt;URL:<A  HREF="http://www.gnu.org/software/shtool/">http://www.gnu.org/software/shtool/</A>&gt; and my (freshly released)
+tarcust &lt;URL:<A  HREF="http://www.engelschall.com/sw/tarcust/distrib/">http://www.engelschall.com/sw/tarcust/distrib/</A>&gt;.
+As you see, the web area is under construction, and if John Smith could
+help me to design a nice logo, it would be great ;-)
+
+The second file is wml::mod::version, which provides the &lt;require&gt; tag
+to make sure WML is new enough to compile some files. If you use 
+features appeared in wml-1.7.2, you could put &lt;require 1.7.2&gt; to make
+sure your pages will gracefully fail with an explicit message when
+trying to compile on another machine running wml-1.6.8.
+
+The final version of these files will be in the 21-08-1999 06am snapshot,
+ &lt;URL:<A  HREF="http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_include/mod/">http://www.engelschall.com/sw/wml/distrib/wml-SNAP/wml_include/mod/</A>&gt;
+
+-- 
+Denis Barbier
+WML Maintainer
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<li><strong><A NAME="00899" HREF="msg00899.shtml">Re: New include files</A></strong>, <em>From:</em> Ralf S. Engelschall</li>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00897.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00899.shtml">Re: New include files</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00914.shtml">Re: [BUG REPORT] WML 1.7.2, Linux 2.2.10</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00899.shtml">Re: New include files</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.shtml#00898"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd19.shtml#00898"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->

@@ -1,0 +1,111 @@
+<!-- MHonArc v2.4.6 -->
+<!--X-Subject: Re: <rollover> question -->
+<!--X-From-R13: Egrcuna Brgrefra <fcNtgg.ygu.ejgu&#45;nnpura.qr> -->
+<!--X-Date: Thu, 6 Jan 2000 11:14:36 +0100 (MET) -->
+<!--X-Message-Id: Pine.LNX.4.10.10001061056300.1766&#45;100000@gtt&#45;ws7.lth.rwth&#45;aachen.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.3.96.1000105162758.1986A&#45;100000@imacs.polytechnique.fr -->
+<!--X-Head-End-->
+<!--#include file="header.inc" -->
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="mail26.shtml#01268">Date Index</a>][<a href="thrd26.shtml#01268">Thread Index</a>]<br>
+[<A HREF="msg01267.shtml">Date Prev</A>][<A HREF="msg01269.shtml">Date Next</A>][<A HREF="msg01267.shtml">Thread Prev</A>][<A HREF="msg01269.shtml">Thread Next</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<H1>Re: &lt;rollover&gt; question</H1>
+<HR>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>From</em>: Stephan Petersen &lt;nospam@thanx&gt;</LI>
+<LI><em>Date</em>: Thu, 6 Jan 2000 10:59:32 +0100 (MET)</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+
+Hi Denis,
+
+thanks for your reply!
+
+&gt; &gt; Am I using the rollover tag incorrectly, or what could be the reason for
+&gt; &gt; this?
+&gt; 
+&gt; There is a typo in your code ;)
+&gt; Try instead
+&gt;   &lt;rollover name="ecfp2" src="img/ecfp2.gif" oversrc="img/ecfp2_a.gif"&gt;
+
+Ooooooooooooooooops :-) Silly me! Thanks for the pointer, I swear I
+checked it a million times, I must have been bug-eyed :-)
+
+&gt; &gt; Also, is there away to avoid having a link associated with the rollover? I
+&gt; &gt; just want to have the effect, but no link. As a workaround it's possible
+&gt; &gt; to link to the same page, but is there a more elegant way?
+&gt; 
+&gt; Good suggestion. I suppose that adding href="#" does the job, but it
+&gt; should be the case when no url is set.
+
+True, it does work with the "#". Although you still get it as a hint.
+
+All the best,
+Stephan
+
+--
+Stephan Petersen                           sp@gtt.lth.rwth-aachen.de
+
+&gt;-=-=-=- Visit GTT's Technical Thermochemistry Web Page at =-=-=-=-&lt;
+&gt;-=-=-=-      <A  HREF="http://gttserv.lth.rwth-aachen.de/gtt/">http://gttserv.lth.rwth-aachen.de/gtt/</A>       =-=-=-=-&lt;
+
+______________________________________________________________________
+Website META Language (WML)                www.engelschall.com/sw/wml/
+Official Support Mailing List                   sw-wml@engelschall.com
+Automated List Manager                       majordomo@engelschall.com
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<li><strong><A NAME="01267" HREF="msg01267.shtml">Re: &lt;rollover&gt; question</A></strong>, <em>From:</em> Denis Barbier</li>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg01267.shtml">Re: &lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg01269.shtml">[wml::des::navbar] Selected underlined but still selectable?</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg01267.shtml">Re: &lt;rollover&gt; question</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg01269.shtml">[wml::des::navbar] Selected underlined but still selectable?</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail26.shtml#01268"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd26.shtml#01268"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+<!--#include file="footer.inc" -->
